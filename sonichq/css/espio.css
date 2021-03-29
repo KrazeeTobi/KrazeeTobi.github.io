@@ -1,0 +1,29 @@
+body {background-image:url(/sonichq/images/backgrounds/EspioGrayBG.gif)}
+a {color:#00cc00;}
+
+.itemtable{
+background-color:ffffff; layer-background-color:ffffff; font-family:Arial; font-size:10pt;
+}
+
+.titlebar a {color:ffffff; font-weight:bold}
+.titlebar {
+background-color:#940999; layer-background-color:#9409cc;
+padding-left:4; width:100%; font-family:Arial; font-size:10pt; color:white;
+}
+
+.itemtext {
+border-left:4 solid B3B3B3; border-right:4 solid B3B3B3;
+padding-left:4; padding-right:4;
+font-family:Arial; font-size:10pt; color:black;
+}
+
+.sidebar {
+background-color:black; layer-background-color:black;
+margin-left:4; padding-left:4; padding-right:4;
+font-family:Arial; font-size:10pt; color:white;
+}
+
+.menu {background-color:black;layer-background-color:black;font-size:12;font-family:arial;color:#00cc00;}
+.menu a {color:#00cc00;text-decoration:none}
+.menu a:hover {color:#e04fe0;text-decoration:none}
+a.menu {color:#00cc00;text-decoration:none}
