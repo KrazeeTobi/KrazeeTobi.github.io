@@ -1,0 +1,2398 @@
+Archive member included       because of file (symbol)
+
+../data/Titles/libTitlesGFX.a(Start_Copy.o)
+                              release/StartUp.o (Start_Copy_Palette)
+../data/Titles/libTitlesGFX.a(Start_THQ.o)
+                              release/Fade.o (Start_THQ_Character)
+../data/Titles/libTitlesGFX.a(Start_Nick.o)
+                              release/Fade.o (Start_Nick_Character)
+../data/Titles/libTitlesGFX.a(Start_Climax.o)
+                              release/Fade.o (Start_Climax_Character)
+../data/Titles/libTitlesGFX.a(libFontGame.o)
+                              release/Scroll_Engine.o (libFontGame_Char)
+../data/Titles/libTitlesGFX.a(libFontMenu.o)
+                              release/Titles.o (libFontMenu_Char)
+../data/Titles/libTitlesGFX.a(menuback.o)
+                              release/Titles.o (menuback_Palette)
+../data/Titles/libTitlesGFX.a(PasswordIcons.o)
+                              release/Titles.o (PasswordIcons_Char)
+../data/Titles/libTitlesGFX.a(HubMap.o)
+                              release/Hub.o (HubMap_Palette)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL0301.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL0301_BACK)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL0302.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL0302_BACK)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL0303.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL0303_BACK)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL0304.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL0304_BACK)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL0305.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL0305_BACK)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL0306.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL0306_BACK)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL0401.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL0401_BACK)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL0402.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL0402_BACK)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL0403.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL0403_BACK)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL0404.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL0404_BACK)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL0405.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL0405_BACK)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL0406.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL0406_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0101.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0101_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0102.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0102_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0103.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0103_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0104.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0104_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0201.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0201_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0202.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0202_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0203.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0203_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0204.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0204_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0205.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0205_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0301.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0301_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0302.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0302_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0303.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0303_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0304.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0304_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0305.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0305_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0306.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0306_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0401.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0401_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0402.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0402_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0403.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0403_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0404.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0404_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0405.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0405_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0406.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0406_BACK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL0407.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL0407_BACK)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL03_TILEBANK.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL03_TILEBANK)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL04_TILEBANK.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL04_TILEBANK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL01_TILEBANK.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL01_TILEBANK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL02_TILEBANK.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL02_TILEBANK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL03_TILEBANK.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL03_TILEBANK)
+../data/Maps/libMaps.a(CHAPTER04_LEVEL04_TILEBANK.o)
+                              release/Scroll_Engine.o (CHAPTER04_LEVEL04_TILEBANK)
+../data/Maps/libMaps.a(CHAPTER05_LEVEL0202.o)
+                              release/Scroll_Engine.o (CHAPTER05_LEVEL0202_BACK)
+../data/Maps/libMaps.a(CHAPTER05_LEVEL0203.o)
+                              release/Scroll_Engine.o (CHAPTER05_LEVEL0203_BACK)
+../data/Maps/libMaps.a(CHAPTER05_LEVEL0204.o)
+                              release/Scroll_Engine.o (CHAPTER05_LEVEL0204_BACK)
+../data/Maps/libMaps.a(CHAPTER05_LEVEL0205.o)
+                              release/Scroll_Engine.o (CHAPTER05_LEVEL0205_BACK)
+../data/Maps/libMaps.a(CHAPTER05_LEVEL0301.o)
+                              release/Scroll_Engine.o (CHAPTER05_LEVEL0301_BACK)
+../data/Maps/libMaps.a(CHAPTER05_LEVEL0302.o)
+                              release/Scroll_Engine.o (CHAPTER05_LEVEL0302_BACK)
+../data/Maps/libMaps.a(CHAPTER05_LEVEL0303.o)
+                              release/Scroll_Engine.o (CHAPTER05_LEVEL0303_BACK)
+../data/Maps/libMaps.a(CHAPTER05_LEVEL0304.o)
+                              release/Scroll_Engine.o (CHAPTER05_LEVEL0304_BACK)
+../data/Maps/libMaps.a(CHAPTER05_LEVEL0305.o)
+                              release/Scroll_Engine.o (CHAPTER05_LEVEL0305_BACK)
+../data/Maps/libMaps.a(CHAPTER06_LEVEL0101.o)
+                              release/Scroll_Engine.o (CHAPTER06_LEVEL0101_BACK)
+../data/Maps/libMaps.a(CHAPTER06_LEVEL0102.o)
+                              release/Scroll_Engine.o (CHAPTER06_LEVEL0102_BACK)
+../data/Maps/libMaps.a(CHAPTER06_LEVEL0301.o)
+                              release/Scroll_Engine.o (CHAPTER06_LEVEL0301_BACK)
+../data/Maps/libMaps.a(CHAPTER06_LEVEL0302.o)
+                              release/Scroll_Engine.o (CHAPTER06_LEVEL0302_BACK)
+../data/Maps/libMaps.a(CHAPTER05_LEVEL02_TILEBANK.o)
+                              release/Scroll_Engine.o (CHAPTER05_LEVEL02_TILEBANK)
+../data/Maps/libMaps.a(CHAPTER05_LEVEL03_TILEBANK.o)
+                              release/Scroll_Engine.o (CHAPTER05_LEVEL03_TILEBANK)
+../data/Maps/libMaps.a(CHAPTER06_LEVEL01_TILEBANK.o)
+                              release/Scroll_Engine.o (CHAPTER06_LEVEL01_TILEBANK)
+../data/Maps/libMaps.a(CHAPTER06_LEVEL03_TILEBANK.o)
+                              release/Scroll_Engine.o (CHAPTER06_LEVEL03_TILEBANK)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL0101.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL0101_BACK)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL0102.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL0102_BACK)
+../data/Maps/libMaps.a(CHAPTER03_LEVEL01_TILEBANK.o)
+                              release/Scroll_Engine.o (CHAPTER03_LEVEL01_TILEBANK)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Stand.o)
+                              release/Game.o (Stand_Palette)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(StandJump1.o)
+                              release/SprEng_Animate.o (StandJump1_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(StandJump2.o)
+                              release/SprEng_Animate.o (StandJump2_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(StandJump3.o)
+                              release/SprEng_Animate.o (StandJump3_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk1.o)
+                              release/SprEng_Animate.o (Walk1_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk2.o)
+                              release/SprEng_Animate.o (Walk2_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk3.o)
+                              release/SprEng_Animate.o (Walk3_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk4.o)
+                              release/SprEng_Animate.o (Walk4_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk5.o)
+                              release/SprEng_Animate.o (Walk5_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk6.o)
+                              release/SprEng_Animate.o (Walk6_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk7.o)
+                              release/SprEng_Animate.o (Walk7_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk8.o)
+                              release/SprEng_Animate.o (Walk8_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk9.o)
+                              release/SprEng_Animate.o (Walk9_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run1.o)
+                              release/SprEng_Animate.o (Run1_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run2.o)
+                              release/SprEng_Animate.o (Run2_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run3.o)
+                              release/SprEng_Animate.o (Run3_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run4.o)
+                              release/SprEng_Animate.o (Run4_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run5.o)
+                              release/SprEng_Animate.o (Run5_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run6.o)
+                              release/SprEng_Animate.o (Run6_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run7.o)
+                              release/SprEng_Animate.o (Run7_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run8.o)
+                              release/SprEng_Animate.o (Run8_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run9.o)
+                              release/SprEng_Animate.o (Run9_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run10.o)
+                              release/SprEng_Animate.o (Run10_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run11.o)
+                              release/SprEng_Animate.o (Run11_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run12.o)
+                              release/SprEng_Animate.o (Run12_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run13.o)
+                              release/SprEng_Animate.o (Run13_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run14.o)
+                              release/SprEng_Animate.o (Run14_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run15.o)
+                              release/SprEng_Animate.o (Run15_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run16.o)
+                              release/SprEng_Animate.o (Run16_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn1.o)
+                              release/SprEng_Animate.o (RunTurn1_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn2.o)
+                              release/SprEng_Animate.o (RunTurn2_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn3.o)
+                              release/SprEng_Animate.o (RunTurn3_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn4.o)
+                              release/SprEng_Animate.o (RunTurn4_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn5.o)
+                              release/SprEng_Animate.o (RunTurn5_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn6.o)
+                              release/SprEng_Animate.o (RunTurn6_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn7.o)
+                              release/SprEng_Animate.o (RunTurn7_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn8.o)
+                              release/SprEng_Animate.o (RunTurn8_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn9.o)
+                              release/SprEng_Animate.o (RunTurn9_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunJump1.o)
+                              release/SprEng_Animate.o (RunJump1_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunJump2.o)
+                              release/SprEng_Animate.o (RunJump2_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunJump3.o)
+                              release/SprEng_Animate.o (RunJump3_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(JumpTop.o)
+                              release/SprEng_Animate.o (JumpTop_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce1.o)
+                              release/SprEng_Animate.o (ButtBounce1_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce2.o)
+                              release/SprEng_Animate.o (ButtBounce2_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce3.o)
+                              release/SprEng_Animate.o (ButtBounce3_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce4.o)
+                              release/SprEng_Animate.o (ButtBounce4_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce5.o)
+                              release/SprEng_Animate.o (ButtBounce5_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate1.o)
+                              release/SprEng_Animate.o (Karate1_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate2.o)
+                              release/SprEng_Animate.o (Karate2_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate3.o)
+                              release/SprEng_Animate.o (Karate3_Char)
+../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate4.o)
+                              release/SprEng_Animate.o (Karate4_Char)
+../data/Sprites/Misc/libMisc_Sprs.a(Patrick.o)
+                              release/SprEng_Animate.o (Patrick_Char)
+../data/Sprites/Misc/libMisc_Sprs.a(Platform1.o)
+                              release/SprEng_Animate.o (Platform1_Char)
+C:/projects/agb/lib/libagbsyscall.a(AgbSysCpuSet.o)
+                              Sound/m4aLib.o (CpuSet)
+C:/PROGRA~1/Cygnus/thumbelf-000512/H-i686-cygwin32/thumb-elf/lib/libc.a(strlen.o)
+                              release/Text_Sys.o (strlen)
+C:/PROGRA~1/Cygnus/thumbelf-000512/h-i686-cygwin32/lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_call_via_rX.o)
+                              Sound/m4aLib.o (_call_via_r1)
+C:/PROGRA~1/Cygnus/thumbelf-000512/h-i686-cygwin32/lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_divsi3.o)
+                              release/Main.o (__divsi3)
+C:/PROGRA~1/Cygnus/thumbelf-000512/h-i686-cygwin32/lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_dvmd_tls.o)
+                              C:/PROGRA~1/Cygnus/thumbelf-000512/h-i686-cygwin32/lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_divsi3.o) (__div0)
+
+Allocating common symbols
+Common symbol       size              file
+
+map_y_size_pixels_bg1
+                    0x4               release/Game.o
+numFreeObjects      0x4               release/Game.o
+ScreenDelay         0x4               release/StartUp.o
+m4a_sound           0xfb0             Sound/m4aLib.o
+ObjectFreeList      0x190             release/Game.o
+map_ypos            0x4               release/Game.o
+pAction_MapWidth    0x4               release/Game.o
+gPushScrollY        0x4               release/Game.o
+gTimer              0x4               release/Main.o
+Lives               0x4               release/Game.o
+pMid_Map            0x4               release/Game.o
+map_x_size_pixels_bg1
+                    0x4               release/Game.o
+map_y_size_tiles_bg2
+                    0x4               release/Game.o
+map_y_size_tiles_bg1
+                    0x4               release/Game.o
+pMid_MapHeight      0x4               release/Game.o
+map_x_size_tiles_bg2
+                    0x4               release/Game.o
+gKeyTap             0x4               release/Main.o
+v_phase             0x4               release/Main.o
+Bg3_ScreenDat       0x800             release/Game.o
+gFade               0x4               release/Game.o
+m4a_mplay000        0x40              Sound/SoundDat.o
+ExtMPlyJmpTbl       0x90              Sound/m4aLib.o
+Spatualas           0x4               release/Game.o
+ObjectOAMBuffer     0x800             release/Game.o
+pCollision_Map      0x4               release/Game.o
+ObjectUsedList      0x190             release/Game.o
+Title               0x4               release/Titles.o
+CurrentScreen       0x4               release/StartUp.o
+gGameState          0x4               release/Main.o
+rasttable           0x100             release/Main.o
+old_map_xpos_bg2    0x4               release/Game.o
+pTiles              0x4               release/Game.o
+object_table        0x2580            release/Game.o
+pAction_MapHeight   0x4               release/Game.o
+map_y_size_pixels_bg2
+                    0x4               release/Game.o
+CanSkip             0x4               release/StartUp.o
+mapyoffset          0x4               release/Hub.o
+pBack_Map           0x4               release/Game.o
+map_x_size_tiles_bg1
+                    0x4               release/Game.o
+m4a_cgbchn          0x100             Sound/m4aLib.o
+gSpriteMosaic       0x4               release/Game.o
+numUsedObjects      0x4               release/Game.o
+Continues           0x4               release/Game.o
+map_xpos            0x4               release/Game.o
+IntrMainBuf         0x800             release/Main.o
+mapxoffset          0x4               release/Hub.o
+gGameParams         0x4               release/Main.o
+pNextFreeObject     0x4               release/Game.o
+old_map_ypos_bg1    0x4               release/Game.o
+gOAMOffset          0x4               release/Game.o
+pAction_Map         0x4               release/Game.o
+Password_Buffer     0x8               release/Titles.o
+pMid_MapWidth       0x4               release/Game.o
+Bg1_ScreenDat       0x800             release/Game.o
+gPushScrollX        0x4               release/Game.o
+IntrCheck           0x4               release/Main.o
+old_map_xpos_bg1    0x4               release/Game.o
+old_map_ypos_bg2    0x4               release/Game.o
+Bg2_ScreenDat       0x800             release/Game.o
+pNextUsedObject     0x4               release/Game.o
+Level               0x4               release/Game.o
+ScreenDat           0x500             release/Text_Sys.o
+m4a_memacc_area     0x10              Sound/SoundDat.o
+map_x_size_pixels_bg2
+                    0x4               release/Game.o
+gKeyInput           0x4               release/Main.o
+g_pObject           0x4               release/Game.o
+gFadeLevel          0x4               release/Game.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD release/Crt0.o
+LOAD release/Game.o
+LOAD release/Main.o
+LOAD release/Titles.o
+LOAD release/Random.o
+LOAD release/StartUp.o
+LOAD release/Scroll_Engine.o
+LOAD release/SprEng_Control.o
+LOAD release/SprEng_Animate.o
+LOAD release/SprEng_Display.o
+LOAD release/SprEng_Common.o
+LOAD release/SprEng_SpongeBob.o
+LOAD release/SprEng_Platforms.o
+LOAD release/SprEng_Patrick.o
+LOAD release/Sinecos.o
+LOAD release/Contours.o
+LOAD release/Text_Sys.o
+LOAD release/Collision.o
+LOAD release/Hub.o
+LOAD release/Fade.o
+LOAD Sound/m4aLib.o
+LOAD Sound/SoundDat.o
+LOAD Sound/s1.o
+LOAD Sound/s2.o
+LOAD Sound/s3.o
+LOAD Sound/s4.o
+LOAD Sound/s5.o
+LOAD Sound/s6.o
+LOAD Sound/s7.o
+LOAD Sound/s8.o
+LOAD Sound/s9.o
+LOAD Sound/sa.o
+LOAD Sound/sb.o
+LOAD Sound/sc.o
+LOAD Sound/sd.o
+LOAD Sound/se.o
+LOAD Sound/sf.o
+LOAD Sound/sg.o
+LOAD Sound/sh.o
+LOAD Sound/si.o
+LOAD Sound/sj.o
+LOAD Sound/sk.o
+LOAD Sound/sl.o
+LOAD Sound/sm.o
+LOAD Sound/sn.o
+LOAD Sound/so.o
+LOAD Sound/sp.o
+LOAD Sound/sq.o
+LOAD Sound/sr.o
+LOAD Sound/ss.o
+LOAD Sound/st.o
+LOAD Sound/su.o
+LOAD Sound/chp1lvl2.o
+LOAD ../data/Titles/libTitlesGFX.a
+LOAD ../data/Maps/libMaps.a
+LOAD ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a
+LOAD ../data/Sprites/Misc/libMisc_Sprs.a
+LOAD C:/projects/agb/lib/libagbsyscall.a
+LOAD C:/PROGRA~1/Cygnus/thumbelf-000512/H-i686-cygwin32/thumb-elf/lib/libc.a
+LOAD C:/PROGRA~1/Cygnus/thumbelf-000512/H-i686-cygwin32/thumb-elf/lib/libg.a
+LOAD C:/PROGRA~1/Cygnus/thumbelf-000512/H-i686-cygwin32/thumb-elf/lib/libiberty.a
+LOAD C:/PROGRA~1/Cygnus/thumbelf-000512/H-i686-cygwin32/thumb-elf/lib/libm.a
+LOAD C:/PROGRA~1/Cygnus/thumbelf-000512/H-i686-cygwin32/thumb-elf/lib/libstdc++.a
+LOAD C:/projects/agb/lib/libagbbackup.a
+LOAD C:/projects/agb/lib/libagbir.a
+LOAD C:/projects/agb/lib/libagbsyscall.a
+LOAD C:/projects/agb/lib/libisagbprn.a
+LOAD C:/PROGRA~1/Cygnus/thumbelf-000512/H-i686-cygwin32/thumb-elf/lib/libtermcap.a
+LOAD C:/projects/agb/src/bin/prev/agb/mlib/libmpr.a
+LOAD C:/projects/agb/src/bin/prev/agb/mlib/libutl.a
+LOAD ../data/Titles/libTitlesGFX.a
+LOAD ../data/Maps/libMaps.a
+LOAD ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a
+LOAD ../data/Sprites/Misc/libMisc_Sprs.a
+Address of section .text set to 0x8000000
+Address of section .bss set to 0x3000000
+                0x00008000                .=0x8000
+
+.interp
+ *(.interp)
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x08000000     0x85d0
+ *(.text)
+ .text          0x08000000      0x1d0 release/Crt0.o
+                0x08000000                _start
+                0x080000c0                start_vector
+                0x080000fc                intr_main
+ .text          0x080001d0      0x298 release/Game.o
+                0x08000210                MainGame
+                0x08000290                InitPalettes
+                0x080001d0                InitGame
+ .text          0x08000468      0x244 release/Main.o
+                0x0800067c                IntrDummy
+                0x08000680                ReadJoypad
+                0x08000618                WaitVBlank
+                0x08000468                InitSystem
+                0x08000548                AgbMain
+ .text          0x080006ac     0x10b4 release/Titles.o
+                0x0800090c                MainTitles
+                0x080006ac                InitTitles
+ .text          0x08001760       0xb8 release/Random.o
+                0x080017ac                GenRand
+                0x080017d8                InitRand
+ .text          0x08001818      0x158 release/StartUp.o
+                0x08001818                InitStartUpScreens
+                0x080018f8                MainStartUpScreens
+ .text          0x08001970     0x2048 release/Scroll_Engine.o
+                0x08003650                BuildScreen
+                0x08003588                SetBgTextControl
+                0x08001970                InitScroll
+                0x08003760                Scroll2Position
+                0x0800370c                UpdateScroll
+                0x080035b0                SetDispControl
+ .text          0x080039b8      0x288 release/SprEng_Control.o
+                0x08003ac8                ObjectClear
+                0x080039b8                ObjectControl1
+                0x08003b7c                ObjectPut1
+                0x08003bdc                ObjectPut2
+                0x08003b44                ObjectGet1
+                0x08003a6c                ObjectInit
+                0x08003c3c                SpriteControl00
+                0x080039e4                ObjectControl2
+                0x08003b88                ObjectGet2
+ .text          0x08003c40       0x90 release/SprEng_Animate.o
+                0x08003c40                ObjectAnimate
+ .text          0x08003cd0      0x498 release/SprEng_Display.o
+                0x08004128                ObjectOff
+                0x08003cd0                ObjectDisplay
+ .text          0x08004168      0x21c release/SprEng_Common.o
+                0x08004300                ClearOAMBuffer
+                0x08004168                InitSprites
+                0x08004364                UpdateOAMRam
+ .text          0x08004384      0x8e0 release/SprEng_SpongeBob.o
+                0x08004384                SpriteControl01
+ .text          0x08004c64       0x74 release/SprEng_Platforms.o
+                0x08004c64                SpriteControl02
+ .text          0x08004cd8       0x54 release/SprEng_Patrick.o
+                0x08004cd8                SpriteControl03
+ .text          0x08004d2c       0x48 release/Sinecos.o
+                0x08004d5c                FixInverse
+                0x08004d2c                FixMul
+                0x08004d44                FixDiv
+ .text          0x08004d74      0x260 release/Contours.o
+                0x08004d74                CheckContour
+ .text          0x08004fd4      0x484 release/Text_Sys.o
+                0x08005264                PutText
+                0x080053f4                ClearTextLayer
+                0x08004fd4                PutTextBox
+ .text          0x08005458      0x184 release/Collision.o
+                0x08005474                CheckCollision
+                0x08005458                SB2MovingPlats
+ .text          0x080055dc      0x1b8 release/Hub.o
+                0x08005698                MainHub
+                0x080055dc                InitHub
+ .text          0x08005794      0xc1c release/Fade.o
+                0x08005880                NextMenuSetUp
+                0x080057f0                FadeIn
+                0x08005794                FadeOut
+ .text          0x080063b0     0x2104 Sound/m4aLib.o
+                0x080076c8                SoundVSyncOff_rev01
+                0x08007538                SampFreqSet_rev01
+                0x080063b0                umul3232H32
+                0x080072f0                MPlayExtender
+                0x08007674                SoundClear_rev01
+                0x08008448                ply_xsust
+                0x0800742c                Clear64byte_rev
+                0x08008434                ply_xdeca
+                0x08007414                MusicPlayerJumpTableCopy
+                0x0800840c                ply_xtype
+                0x08007fec                MPlayVolumeControl
+                0x080077f8                MPlayStart_rev01
+                0x080067e8                SoundMainBTM
+                0x0800849c                ply_xswee
+                0x08007744                SoundVSyncOn_rev01
+                0x08007298                m4aMPlayFadeOut
+                0x08007780                MPlayOpen_rev01
+                0x08006cc0                TrackStop_rev01
+                0x0800726c                m4aMPlayAllContinue
+                0x08008420                ply_xatta
+                0x08007a20                MidiKey2CgbFr
+                0x08008470                ply_xiecv
+                0x08007200                m4aSongNumContinue
+                0x080081c4                MPlayLFOSpeedSet
+                0x08007028                DummyFunc
+                0x08007048                MPlayFadeOut
+                0x08006f34                ply_endtie_rev01
+                0x08007260                m4aMPlayContinue
+                0x08007fc4                MPlayTempoControl
+                0x080078ec                FadeOutBody_rev01
+                0x08007ac8                CgbOscOff
+                0x080083b0                ply_xxx
+                0x08006fc4                MidiKey2fr
+                0x080070f4                m4aSoundMain
+                0x080083c4                ply_xwave
+                0x0800796c                TrkVolPitSet_rev01
+                0x08007100                m4aSongNumStart
+                0x08006f9c                ply_lfos_rev01
+                0x0800702c                MPlayContinue
+                0x08006fb0                ply_mod_rev01
+                0x08008054                MPlayPitchControl
+                0x08008130                MP_clear_modM
+                0x08006a60                MPlayMain_rev01
+                0x08006d34                ply_note_rev01
+                0x08007440                SoundInit_rev01
+                0x0800712c                m4aSongNumStartOrChange
+                0x08008150                MPlayModDepthSet
+                0x08007178                m4aSongNumStartOrContinue
+                0x08007b80                CgbSound
+                0x080078ac                MPlayStop_rev01
+                0x080084b0                DummyFunc_rev
+                0x08008390                ply_xcmd
+                0x080075dc                SoundMode_rev01
+                0x080080c8                MPlayPanpotControl
+                0x08007418                ClearChain_rev
+                0x08006a14                SoundVSync_rev01
+                0x08007068                m4aSoundInit
+                0x0800847c                ply_xiecl
+                0x08008488                ply_xleng
+                0x080072a8                m4aMPlayImmInit
+                0x08008238                ply_memacc
+                0x080063c0                SoundMain
+                0x08006444                SoundMainRAM
+                0x08007234                m4aMPlayAllStop
+                0x08007b18                CgbModVol
+                0x080067e8                Clear64byte
+                0x080071cc                m4aSongNumStop
+                0x08006850                MPlyJmpTblCopy
+                0x0800845c                ply_xrele
+ .text          0x080084b4        0x4 C:/projects/agb/lib/libagbsyscall.a(AgbSysCpuSet.o)
+                0x080084b4                CpuSet
+ .text          0x080084b8       0x44 C:/PROGRA~1/Cygnus/thumbelf-000512/H-i686-cygwin32/thumb-elf/lib/libc.a(strlen.o)
+                0x080084b8                strlen
+ .text          0x080084fc       0x3c C:/PROGRA~1/Cygnus/thumbelf-000512/h-i686-cygwin32/lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_call_via_rX.o)
+                0x08008504                _call_via_r2
+                0x08008514                _call_via_r6
+                0x08008510                _call_via_r5
+                0x08008508                _call_via_r3
+                0x08008528                _call_via_fp
+                0x0800851c                _call_via_r8
+                0x08008518                _call_via_r7
+                0x080084fc                _call_via_r0
+                0x08008524                _call_via_sl
+                0x08008530                _call_via_sp
+                0x08008520                _call_via_r9
+                0x0800850c                _call_via_r4
+                0x08008500                _call_via_r1
+                0x0800852c                _call_via_ip
+                0x08008534                _call_via_lr
+ .text          0x08008538       0x94 C:/PROGRA~1/Cygnus/thumbelf-000512/h-i686-cygwin32/lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_divsi3.o)
+                0x08008538                __divsi3
+ .text          0x080085cc        0x4 C:/PROGRA~1/Cygnus/thumbelf-000512/h-i686-cygwin32/lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_dvmd_tls.o)
+                0x080085cc                __div0
+ *(.text.*)
+ *(.stub)
+ *(.gnu.warning)
+ *(.gnu.linkonce.t*)
+ *(.glue_7t)
+ *(.glue_7)
+                0x080085d0                _etext=.
+                0x080085d0                PROVIDE (etext, .)
+
+.fini
+ *(.fini)
+
+.rodata         0x080085d0    0x2c680
+ *(.rodata)
+ .rodata        0x080085d0        0x4 release/Game.o
+                0x080085d0                Speech_Bubble_Palette
+ .rodata        0x080085d4       0x38 release/Main.o
+                0x080085d4                IntrTable
+ .rodata        0x0800860c       0x10 release/Titles.o
+                0x08008612                PasswordIconOffsetTable
+                0x0800860c                Text_Palette
+ .rodata        0x0800861c      0x280 release/Sinecos.o
+                0x0800861c                SinCosTable
+ .rodata        0x0800889c       0x48 release/Contours.o
+                0x080088d4                Contour08
+                0x080088b4                Contour04
+                0x080088a4                Contour02
+                0x080088dc                Contour09
+                0x080088bc                Contour05
+                0x080088ac                Contour03
+                0x080088c4                Contour06
+                0x0800889c                Contour01
+                0x080088cc                Contour07
+ .rodata        0x080088e4      0x100 release/Text_Sys.o
+                0x080088e4                TextTileTable
+ .rodata        0x080089e4      0x2d8 Sound/m4aLib.o
+                0x08008b28                FreqTable
+                0x08008bf4                CgbFrTable
+                0x080089e4                MPlyJmpTbl
+                0x08008c48                Cgb3vol
+                0x08008a74                ScaleTable
+                0x08008c8c                xcmd_tbl
+                0x08008c58                clock_tbl_rev01
+                0x08008b70                CgbScTable
+                0x08008c0c                NoiseTable
+                0x08008b58                pcmVBtbl_rev
+ .rodata        0x08008cbc      0x180 Sound/SoundDat.o
+                0x08008cbc                voicegroup000
+                0x08008e24                mplay_table
+                0x08008e30                song_table
+ .rodata        0x08008e3c      0x954 Sound/s1.o
+                0x08008e3c                s1
+ .rodata        0x08009790     0x1be4 Sound/s2.o
+                0x08009790                s2
+ .rodata        0x0800b374      0x954 Sound/s3.o
+                0x0800b374                s3
+ .rodata        0x0800bcc8      0xa70 Sound/s4.o
+                0x0800bcc8                s4
+ .rodata        0x0800c738      0x2b4 Sound/s5.o
+                0x0800c738                s5
+ .rodata        0x0800c9ec      0x378 Sound/s6.o
+                0x0800c9ec                s6
+ .rodata        0x0800cd64      0xd04 Sound/s7.o
+                0x0800cd64                s7
+ .rodata        0x0800da68     0x1258 Sound/s8.o
+                0x0800da68                s8
+ .rodata        0x0800ecc0      0x758 Sound/s9.o
+                0x0800ecc0                s9
+ .rodata        0x0800f418      0x958 Sound/sa.o
+                0x0800f418                sa
+ .rodata        0x0800fd70      0x548 Sound/sb.o
+                0x0800fd70                sb
+ .rodata        0x080102b8      0x928 Sound/sc.o
+                0x080102b8                sc
+ .rodata        0x08010be0      0xa54 Sound/sd.o
+                0x08010be0                sd
+ .rodata        0x08011634      0x694 Sound/se.o
+                0x08011634                se
+ .rodata        0x08011cc8      0x760 Sound/sf.o
+                0x08011cc8                sf
+ .rodata        0x08012428      0x2a8 Sound/sg.o
+                0x08012428                sg
+ .rodata        0x080126d0      0x6d0 Sound/sh.o
+                0x080126d0                sh
+ .rodata        0x08012da0       0x30 Sound/si.o
+                0x08012da0                si
+ .rodata        0x08012dd0      0x62c Sound/sj.o
+                0x08012dd0                sj
+ .rodata        0x080133fc      0x714 Sound/sk.o
+                0x080133fc                sk
+ .rodata        0x08013b10      0x9e4 Sound/sl.o
+                0x08013b10                sl
+ .rodata        0x080144f4      0xce0 Sound/sm.o
+                0x080144f4                sm
+ .rodata        0x080151d4      0x6a0 Sound/sn.o
+                0x080151d4                sn
+ .rodata        0x08015874     0x1320 Sound/so.o
+                0x08015874                so
+ .rodata        0x08016b94      0x534 Sound/sp.o
+                0x08016b94                sp
+ .rodata        0x080170c8      0x5c0 Sound/sq.o
+                0x080170c8                sq
+ .rodata        0x08017688      0x280 Sound/sr.o
+                0x08017688                sr
+ .rodata        0x08017908      0x388 Sound/ss.o
+                0x08017908                ss
+ .rodata        0x08017c90      0x48c Sound/st.o
+                0x08017c90                st
+ .rodata        0x0801811c      0x460 Sound/su.o
+                0x0801811c                su
+ .rodata        0x0801857c     0x1d24 Sound/chp1lvl2.o
+                0x0801a288                chp1lvl2
+ .rodata        0x0801a2a0     0x2170 ../data/Titles/libTitlesGFX.a(Start_Copy.o)
+                0x0801a4a0                Start_Copy_Character
+                0x0801bf60                Start_Copy_Map
+                0x0801a2a0                Start_Copy_Palette
+ .rodata        0x0801c410     0x19b0 ../data/Titles/libTitlesGFX.a(Start_THQ.o)
+                0x0801c410                Start_THQ_Palette
+                0x0801d910                Start_THQ_Map
+                0x0801c610                Start_THQ_Character
+ .rodata        0x0801ddc0     0x1a70 ../data/Titles/libTitlesGFX.a(Start_Nick.o)
+                0x0801ddc0                Start_Nick_Palette
+                0x0801f380                Start_Nick_Map
+                0x0801dfc0                Start_Nick_Character
+ .rodata        0x0801f830     0x1170 ../data/Titles/libTitlesGFX.a(Start_Climax.o)
+                0x080204f0                Start_Climax_Map
+                0x0801f830                Start_Climax_Palette
+                0x0801fa30                Start_Climax_Character
+ .rodata        0x080209a0     0x1800 ../data/Titles/libTitlesGFX.a(libFontGame.o)
+                0x080209a0                libFontGame_Char
+ .rodata        0x080221a0     0x1800 ../data/Titles/libTitlesGFX.a(libFontMenu.o)
+                0x080221a0                libFontMenu_Char
+ .rodata        0x080239a0      0x7b0 ../data/Titles/libTitlesGFX.a(menuback.o)
+                0x08023ca0                menuback_Map
+                0x08023ba0                menuback_Character
+                0x080239a0                menuback_Palette
+ .rodata        0x08024150      0xc00 ../data/Titles/libTitlesGFX.a(PasswordIcons.o)
+                0x08024150                PasswordIcons_Char
+ .rodata        0x08024d50     0x2b00 ../data/Titles/libTitlesGFX.a(HubMap.o)
+                0x08024f50                HubMap_Character
+                0x08024d50                HubMap_Palette
+                0x08026850                HubMap_Map
+ .rodata        0x08027850      0x600 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Stand.o)
+                0x08027a50                Stand_Char
+                0x08027850                Stand_Palette
+ .rodata        0x08027e50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(StandJump1.o)
+                0x08027e50                StandJump1_Char
+ .rodata        0x08028250      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(StandJump2.o)
+                0x08028250                StandJump2_Char
+ .rodata        0x08028650      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(StandJump3.o)
+                0x08028650                StandJump3_Char
+ .rodata        0x08028a50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk1.o)
+                0x08028a50                Walk1_Char
+ .rodata        0x08028e50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk2.o)
+                0x08028e50                Walk2_Char
+ .rodata        0x08029250      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk3.o)
+                0x08029250                Walk3_Char
+ .rodata        0x08029650      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk4.o)
+                0x08029650                Walk4_Char
+ .rodata        0x08029a50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk5.o)
+                0x08029a50                Walk5_Char
+ .rodata        0x08029e50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk6.o)
+                0x08029e50                Walk6_Char
+ .rodata        0x0802a250      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk7.o)
+                0x0802a250                Walk7_Char
+ .rodata        0x0802a650      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk8.o)
+                0x0802a650                Walk8_Char
+ .rodata        0x0802aa50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk9.o)
+                0x0802aa50                Walk9_Char
+ .rodata        0x0802ae50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run1.o)
+                0x0802ae50                Run1_Char
+ .rodata        0x0802b250      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run2.o)
+                0x0802b250                Run2_Char
+ .rodata        0x0802b650      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run3.o)
+                0x0802b650                Run3_Char
+ .rodata        0x0802ba50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run4.o)
+                0x0802ba50                Run4_Char
+ .rodata        0x0802be50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run5.o)
+                0x0802be50                Run5_Char
+ .rodata        0x0802c250      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run6.o)
+                0x0802c250                Run6_Char
+ .rodata        0x0802c650      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run7.o)
+                0x0802c650                Run7_Char
+ .rodata        0x0802ca50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run8.o)
+                0x0802ca50                Run8_Char
+ .rodata        0x0802ce50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run9.o)
+                0x0802ce50                Run9_Char
+ .rodata        0x0802d250      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run10.o)
+                0x0802d250                Run10_Char
+ .rodata        0x0802d650      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run11.o)
+                0x0802d650                Run11_Char
+ .rodata        0x0802da50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run12.o)
+                0x0802da50                Run12_Char
+ .rodata        0x0802de50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run13.o)
+                0x0802de50                Run13_Char
+ .rodata        0x0802e250      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run14.o)
+                0x0802e250                Run14_Char
+ .rodata        0x0802e650      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run15.o)
+                0x0802e650                Run15_Char
+ .rodata        0x0802ea50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run16.o)
+                0x0802ea50                Run16_Char
+ .rodata        0x0802ee50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn1.o)
+                0x0802ee50                RunTurn1_Char
+ .rodata        0x0802f250      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn2.o)
+                0x0802f250                RunTurn2_Char
+ .rodata        0x0802f650      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn3.o)
+                0x0802f650                RunTurn3_Char
+ .rodata        0x0802fa50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn4.o)
+                0x0802fa50                RunTurn4_Char
+ .rodata        0x0802fe50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn5.o)
+                0x0802fe50                RunTurn5_Char
+ .rodata        0x08030250      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn6.o)
+                0x08030250                RunTurn6_Char
+ .rodata        0x08030650      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn7.o)
+                0x08030650                RunTurn7_Char
+ .rodata        0x08030a50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn8.o)
+                0x08030a50                RunTurn8_Char
+ .rodata        0x08030e50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn9.o)
+                0x08030e50                RunTurn9_Char
+ .rodata        0x08031250      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunJump1.o)
+                0x08031250                RunJump1_Char
+ .rodata        0x08031650      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunJump2.o)
+                0x08031650                RunJump2_Char
+ .rodata        0x08031a50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunJump3.o)
+                0x08031a50                RunJump3_Char
+ .rodata        0x08031e50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(JumpTop.o)
+                0x08031e50                JumpTop_Char
+ .rodata        0x08032250      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce1.o)
+                0x08032250                ButtBounce1_Char
+ .rodata        0x08032650      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce2.o)
+                0x08032650                ButtBounce2_Char
+ .rodata        0x08032a50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce3.o)
+                0x08032a50                ButtBounce3_Char
+ .rodata        0x08032e50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce4.o)
+                0x08032e50                ButtBounce4_Char
+ .rodata        0x08033250      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce5.o)
+                0x08033250                ButtBounce5_Char
+ .rodata        0x08033650      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate1.o)
+                0x08033650                Karate1_Char
+ .rodata        0x08033a50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate2.o)
+                0x08033a50                Karate2_Char
+ .rodata        0x08033e50      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate3.o)
+                0x08033e50                Karate3_Char
+ .rodata        0x08034250      0x400 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate4.o)
+                0x08034250                Karate4_Char
+ .rodata        0x08034650      0x400 ../data/Sprites/Misc/libMisc_Sprs.a(Patrick.o)
+                0x08034650                Patrick_Char
+ .rodata        0x08034a50      0x200 ../data/Sprites/Misc/libMisc_Sprs.a(Platform1.o)
+                0x08034a50                Platform1_Char
+ *(.rodata.*)
+ *(.gnu.linkonce.r*)
+
+.rodata1
+ *(.rodata1)
+                0x08034d50                .=(ALIGN(0x100)+(.&0xff))
+
+.data           0x08034d50   0x22e338
+ *(.data)
+ .data          0x08034d50      0x160 release/SprEng_Animate.o
+                0x08034e6c                Patrick
+                0x08034e1c                SB_RunJumpLand_Anim
+                0x08034d68                SB_StandJumpLand_Anim
+                0x08034e74                Platform1
+                0x08034e4c                SB_Karate_Anim
+                0x08034e0c                SB_RunJump_Anim
+                0x08034e2c                SB_JumpTop_Anim
+                0x08034de4                SB_RunTurn_Anim
+                0x08034da0                SB_Run_Anim
+                0x08034d78                SB_Walk_Anim
+                0x08034d50                SB_Stand_Anim
+                0x08034e7c                Anim_List
+                0x08034e34                SB_ButtBounce_Anim
+                0x08034d58                SB_StandJump_Anim
+ .data          0x08034eb0      0x368 release/Text_Sys.o
+                0x08035008                SFXVOL
+                0x08034efc                YES
+                0x080351d0                PCT90
+                0x080351b8                PCT85
+                0x08034f00                NO
+                0x08035188                PCT75
+                0x080350b0                PCT30
+                0x08034ec8                PRESSSTART
+                0x08034ff0                MUSICVOL
+                0x08034f34                PASSWORD
+                0x08034fa8                CONTA
+                0x08035158                PCT65
+                0x08035200                PCT100
+                0x08035020                PCT0
+                0x08034ee0                COPYRIGHT
+                0x08035170                PCT70
+                0x08035140                PCT60
+                0x08034f60                OPTION
+                0x08034f4c                PASSWORD2
+                0x080351e8                PCT95
+                0x08035110                PCT50
+                0x08034fc0                CONTB
+                0x08034eb0                GAMENAME
+                0x08034f04                MENU
+                0x080351a0                PCT80
+                0x080350f8                PCT45
+                0x08035068                PCT15
+                0x080350c8                PCT35
+                0x08034ef8                OK
+                0x08035098                PCT25
+                0x080350e0                PCT40
+                0x08035050                PCT10
+                0x08035080                PCT20
+                0x08034f90                CONTROLLER
+                0x08035038                PCT5
+                0x08034f1c                NEWGAME
+                0x08035128                PCT55
+                0x08034fd8                SOUND
+                0x08034f78                CREDITS
+ .data          0x08035218     0x954c ../data/Maps/libMaps.a(CHAPTER03_LEVEL0301.o)
+                0x0803521c                CHAPTER03_LEVEL0301_BACK
+                0x08035a1c                CHAPTER03_LEVEL0301_MID_WIDTH
+                0x08035a20                CHAPTER03_LEVEL0301_MID
+                0x08035218                CHAPTER03_LEVEL0301_BACK_WIDTH
+                0x0803c262                CHAPTER03_LEVEL0301_COLLISION_HEIGHT
+                0x0803785e                CHAPTER03_LEVEL0301_ACTION_HEIGHT
+                0x0803c260                CHAPTER03_LEVEL0301_COLLISION_WIDTH
+                0x08037860                CHAPTER03_LEVEL0301_ACTION
+                0x08035a1e                CHAPTER03_LEVEL0301_MID_HEIGHT
+                0x0803521a                CHAPTER03_LEVEL0301_BACK_HEIGHT
+                0x0803785c                CHAPTER03_LEVEL0301_ACTION_WIDTH
+                0x0803c264                CHAPTER03_LEVEL0301_COLLISION
+ .data          0x0803e764     0x954c ../data/Maps/libMaps.a(CHAPTER03_LEVEL0302.o)
+                0x0803ef6c                CHAPTER03_LEVEL0302_MID
+                0x0803e768                CHAPTER03_LEVEL0302_BACK
+                0x0803e764                CHAPTER03_LEVEL0302_BACK_WIDTH
+                0x0803e766                CHAPTER03_LEVEL0302_BACK_HEIGHT
+                0x080457ac                CHAPTER03_LEVEL0302_COLLISION_WIDTH
+                0x08040dac                CHAPTER03_LEVEL0302_ACTION
+                0x080457b0                CHAPTER03_LEVEL0302_COLLISION
+                0x08040da8                CHAPTER03_LEVEL0302_ACTION_WIDTH
+                0x080457ae                CHAPTER03_LEVEL0302_COLLISION_HEIGHT
+                0x0803ef6a                CHAPTER03_LEVEL0302_MID_HEIGHT
+                0x0803ef68                CHAPTER03_LEVEL0302_MID_WIDTH
+                0x08040daa                CHAPTER03_LEVEL0302_ACTION_HEIGHT
+ .data          0x08047cb0     0x3428 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0303.o)
+                0x080484b6                CHAPTER03_LEVEL0303_MID_HEIGHT
+                0x0804a628                CHAPTER03_LEVEL0303_COLLISION
+                0x0804a626                CHAPTER03_LEVEL0303_COLLISION_HEIGHT
+                0x08047cb4                CHAPTER03_LEVEL0303_BACK
+                0x08047cb2                CHAPTER03_LEVEL0303_BACK_HEIGHT
+                0x080484b8                CHAPTER03_LEVEL0303_MID
+                0x080490c0                CHAPTER03_LEVEL0303_ACTION_WIDTH
+                0x080490c4                CHAPTER03_LEVEL0303_ACTION
+                0x080484b4                CHAPTER03_LEVEL0303_MID_WIDTH
+                0x080490c2                CHAPTER03_LEVEL0303_ACTION_HEIGHT
+                0x08047cb0                CHAPTER03_LEVEL0303_BACK_WIDTH
+                0x0804a624                CHAPTER03_LEVEL0303_COLLISION_WIDTH
+ .data          0x0804b0d8     0x3428 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0304.o)
+                0x0804b8e0                CHAPTER03_LEVEL0304_MID
+                0x0804c4ec                CHAPTER03_LEVEL0304_ACTION
+                0x0804c4e8                CHAPTER03_LEVEL0304_ACTION_WIDTH
+                0x0804da50                CHAPTER03_LEVEL0304_COLLISION
+                0x0804da4c                CHAPTER03_LEVEL0304_COLLISION_WIDTH
+                0x0804b0da                CHAPTER03_LEVEL0304_BACK_HEIGHT
+                0x0804b0d8                CHAPTER03_LEVEL0304_BACK_WIDTH
+                0x0804b8de                CHAPTER03_LEVEL0304_MID_HEIGHT
+                0x0804c4ea                CHAPTER03_LEVEL0304_ACTION_HEIGHT
+                0x0804b8dc                CHAPTER03_LEVEL0304_MID_WIDTH
+                0x0804da4e                CHAPTER03_LEVEL0304_COLLISION_HEIGHT
+                0x0804b0dc                CHAPTER03_LEVEL0304_BACK
+ .data          0x0804e500     0x98f8 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0305.o)
+                0x08050bf0                CHAPTER03_LEVEL0305_ACTION_WIDTH
+                0x080557f8                CHAPTER03_LEVEL0305_COLLISION
+                0x080557f6                CHAPTER03_LEVEL0305_COLLISION_HEIGHT
+                0x0804ed08                CHAPTER03_LEVEL0305_MID
+                0x0804ed04                CHAPTER03_LEVEL0305_MID_WIDTH
+                0x0804ed06                CHAPTER03_LEVEL0305_MID_HEIGHT
+                0x0804e504                CHAPTER03_LEVEL0305_BACK
+                0x08050bf4                CHAPTER03_LEVEL0305_ACTION
+                0x08050bf2                CHAPTER03_LEVEL0305_ACTION_HEIGHT
+                0x0804e500                CHAPTER03_LEVEL0305_BACK_WIDTH
+                0x0804e502                CHAPTER03_LEVEL0305_BACK_HEIGHT
+                0x080557f4                CHAPTER03_LEVEL0305_COLLISION_WIDTH
+ .data          0x08057df8     0xa4bc ../data/Maps/libMaps.a(CHAPTER03_LEVEL0306.o)
+                0x0805f972                CHAPTER03_LEVEL0306_COLLISION_HEIGHT
+                0x080585fe                CHAPTER03_LEVEL0306_MID_HEIGHT
+                0x080585fc                CHAPTER03_LEVEL0306_MID_WIDTH
+                0x08057df8                CHAPTER03_LEVEL0306_BACK_WIDTH
+                0x08058600                CHAPTER03_LEVEL0306_MID
+                0x0805f974                CHAPTER03_LEVEL0306_COLLISION
+                0x0805f970                CHAPTER03_LEVEL0306_COLLISION_WIDTH
+                0x0805a6ec                CHAPTER03_LEVEL0306_ACTION_WIDTH
+                0x0805a6f0                CHAPTER03_LEVEL0306_ACTION
+                0x0805a6ee                CHAPTER03_LEVEL0306_ACTION_HEIGHT
+                0x08057dfa                CHAPTER03_LEVEL0306_BACK_HEIGHT
+                0x08057dfc                CHAPTER03_LEVEL0306_BACK
+ .data          0x080622b4     0x6c48 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0401.o)
+                0x080622b6                CHAPTER03_LEVEL0401_BACK_HEIGHT
+                0x080622b8                CHAPTER03_LEVEL0401_BACK
+                0x08062abc                CHAPTER03_LEVEL0401_MID
+                0x08064230                CHAPTER03_LEVEL0401_ACTION
+                0x08067562                CHAPTER03_LEVEL0401_COLLISION_HEIGHT
+                0x08062ab8                CHAPTER03_LEVEL0401_MID_WIDTH
+                0x08067560                CHAPTER03_LEVEL0401_COLLISION_WIDTH
+                0x0806422e                CHAPTER03_LEVEL0401_ACTION_HEIGHT
+                0x08067564                CHAPTER03_LEVEL0401_COLLISION
+                0x080622b4                CHAPTER03_LEVEL0401_BACK_WIDTH
+                0x0806422c                CHAPTER03_LEVEL0401_ACTION_WIDTH
+                0x08062aba                CHAPTER03_LEVEL0401_MID_HEIGHT
+ .data          0x08068efc     0x218c ../data/Maps/libMaps.a(CHAPTER03_LEVEL0402.o)
+                0x08068f00                CHAPTER03_LEVEL0402_BACK
+                0x08069702                CHAPTER03_LEVEL0402_MID_HEIGHT
+                0x0806aac6                CHAPTER03_LEVEL0402_COLLISION
+                0x08069f40                CHAPTER03_LEVEL0402_ACTION_HEIGHT
+                0x0806aac2                CHAPTER03_LEVEL0402_COLLISION_WIDTH
+                0x08068efc                CHAPTER03_LEVEL0402_BACK_WIDTH
+                0x08069f3e                CHAPTER03_LEVEL0402_ACTION_WIDTH
+                0x08069704                CHAPTER03_LEVEL0402_MID
+                0x08069700                CHAPTER03_LEVEL0402_MID_WIDTH
+                0x08069f42                CHAPTER03_LEVEL0402_ACTION
+                0x08068efe                CHAPTER03_LEVEL0402_BACK_HEIGHT
+                0x0806aac4                CHAPTER03_LEVEL0402_COLLISION_HEIGHT
+ .data          0x0806b088     0x8bc8 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0403.o)
+                0x0806b088                CHAPTER03_LEVEL0403_BACK_WIDTH
+                0x0806d532                CHAPTER03_LEVEL0403_ACTION
+                0x080719ee                CHAPTER03_LEVEL0403_COLLISION_WIDTH
+                0x0806d530                CHAPTER03_LEVEL0403_ACTION_HEIGHT
+                0x0806b08c                CHAPTER03_LEVEL0403_BACK
+                0x080719f0                CHAPTER03_LEVEL0403_COLLISION_HEIGHT
+                0x0806b88c                CHAPTER03_LEVEL0403_MID_WIDTH
+                0x080719f2                CHAPTER03_LEVEL0403_COLLISION
+                0x0806b08a                CHAPTER03_LEVEL0403_BACK_HEIGHT
+                0x0806b890                CHAPTER03_LEVEL0403_MID
+                0x0806b88e                CHAPTER03_LEVEL0403_MID_HEIGHT
+                0x0806d52e                CHAPTER03_LEVEL0403_ACTION_WIDTH
+ .data          0x08073c50     0x6718 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0404.o)
+                0x08074456                CHAPTER03_LEVEL0404_MID_HEIGHT
+                0x08074454                CHAPTER03_LEVEL0404_MID_WIDTH
+                0x08075b3c                CHAPTER03_LEVEL0404_ACTION_HEIGHT
+                0x08078b56                CHAPTER03_LEVEL0404_COLLISION_WIDTH
+                0x08073c54                CHAPTER03_LEVEL0404_BACK
+                0x08073c50                CHAPTER03_LEVEL0404_BACK_WIDTH
+                0x08078b5a                CHAPTER03_LEVEL0404_COLLISION
+                0x08074458                CHAPTER03_LEVEL0404_MID
+                0x08075b3a                CHAPTER03_LEVEL0404_ACTION_WIDTH
+                0x08075b3e                CHAPTER03_LEVEL0404_ACTION
+                0x08078b58                CHAPTER03_LEVEL0404_COLLISION_HEIGHT
+                0x08073c52                CHAPTER03_LEVEL0404_BACK_HEIGHT
+ .data          0x0807a368     0x6f50 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0405.o)
+                0x0807f7fe                CHAPTER03_LEVEL0405_COLLISION_WIDTH
+                0x0807ab6c                CHAPTER03_LEVEL0405_MID_WIDTH
+                0x0807a36c                CHAPTER03_LEVEL0405_BACK
+                0x0807a368                CHAPTER03_LEVEL0405_BACK_WIDTH
+                0x0807ab6e                CHAPTER03_LEVEL0405_MID_HEIGHT
+                0x0807f802                CHAPTER03_LEVEL0405_COLLISION
+                0x0807c290                CHAPTER03_LEVEL0405_ACTION_WIDTH
+                0x0807f800                CHAPTER03_LEVEL0405_COLLISION_HEIGHT
+                0x0807c292                CHAPTER03_LEVEL0405_ACTION_HEIGHT
+                0x0807c294                CHAPTER03_LEVEL0405_ACTION
+                0x0807ab70                CHAPTER03_LEVEL0405_MID
+                0x0807a36a                CHAPTER03_LEVEL0405_BACK_HEIGHT
+ .data          0x080812b8     0x6e8c ../data/Maps/libMaps.a(CHAPTER03_LEVEL0406.o)
+                0x08081abc                CHAPTER03_LEVEL0406_MID_WIDTH
+                0x08081abe                CHAPTER03_LEVEL0406_MID_HEIGHT
+                0x080812bc                CHAPTER03_LEVEL0406_BACK
+                0x080812b8                CHAPTER03_LEVEL0406_BACK_WIDTH
+                0x080866da                CHAPTER03_LEVEL0406_COLLISION
+                0x080831fe                CHAPTER03_LEVEL0406_ACTION_WIDTH
+                0x080866d8                CHAPTER03_LEVEL0406_COLLISION_HEIGHT
+                0x08083202                CHAPTER03_LEVEL0406_ACTION
+                0x080866d6                CHAPTER03_LEVEL0406_COLLISION_WIDTH
+                0x080812ba                CHAPTER03_LEVEL0406_BACK_HEIGHT
+                0x08081ac0                CHAPTER03_LEVEL0406_MID
+                0x08083200                CHAPTER03_LEVEL0406_ACTION_HEIGHT
+ .data          0x08088144    0x10ee4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0101.o)
+                0x08088144                CHAPTER04_LEVEL0101_BACK_WIDTH
+                0x0808bbca                CHAPTER04_LEVEL0101_ACTION
+                0x0808894c                CHAPTER04_LEVEL0101_MID
+                0x0809495c                CHAPTER04_LEVEL0101_COLLISION_HEIGHT
+                0x08088146                CHAPTER04_LEVEL0101_BACK_HEIGHT
+                0x0808894a                CHAPTER04_LEVEL0101_MID_HEIGHT
+                0x0809495e                CHAPTER04_LEVEL0101_COLLISION
+                0x08088948                CHAPTER04_LEVEL0101_MID_WIDTH
+                0x0808bbc8                CHAPTER04_LEVEL0101_ACTION_HEIGHT
+                0x0808bbc6                CHAPTER04_LEVEL0101_ACTION_WIDTH
+                0x08088148                CHAPTER04_LEVEL0101_BACK
+                0x0809495a                CHAPTER04_LEVEL0101_COLLISION_WIDTH
+ .data          0x08099028    0x1964c ../data/Maps/libMaps.a(CHAPTER04_LEVEL0102.o)
+                0x080aba2a                CHAPTER04_LEVEL0102_COLLISION
+                0x0809902c                CHAPTER04_LEVEL0102_BACK
+                0x0809e194                CHAPTER04_LEVEL0102_ACTION_HEIGHT
+                0x0809982e                CHAPTER04_LEVEL0102_MID_HEIGHT
+                0x0809e192                CHAPTER04_LEVEL0102_ACTION_WIDTH
+                0x0809902a                CHAPTER04_LEVEL0102_BACK_HEIGHT
+                0x0809e196                CHAPTER04_LEVEL0102_ACTION
+                0x08099028                CHAPTER04_LEVEL0102_BACK_WIDTH
+                0x080aba26                CHAPTER04_LEVEL0102_COLLISION_WIDTH
+                0x080aba28                CHAPTER04_LEVEL0102_COLLISION_HEIGHT
+                0x08099830                CHAPTER04_LEVEL0102_MID
+                0x0809982c                CHAPTER04_LEVEL0102_MID_WIDTH
+ .data          0x080b2674     0xbc1c ../data/Maps/libMaps.a(CHAPTER04_LEVEL0103.o)
+                0x080bb2a2                CHAPTER04_LEVEL0103_COLLISION
+                0x080bb29e                CHAPTER04_LEVEL0103_COLLISION_WIDTH
+                0x080b2e78                CHAPTER04_LEVEL0103_MID_WIDTH
+                0x080b2e7c                CHAPTER04_LEVEL0103_MID
+                0x080b2678                CHAPTER04_LEVEL0103_BACK
+                0x080bb2a0                CHAPTER04_LEVEL0103_COLLISION_HEIGHT
+                0x080b52c6                CHAPTER04_LEVEL0103_ACTION_HEIGHT
+                0x080b52c8                CHAPTER04_LEVEL0103_ACTION
+                0x080b2e7a                CHAPTER04_LEVEL0103_MID_HEIGHT
+                0x080b52c4                CHAPTER04_LEVEL0103_ACTION_WIDTH
+                0x080b2676                CHAPTER04_LEVEL0103_BACK_HEIGHT
+                0x080b2674                CHAPTER04_LEVEL0103_BACK_WIDTH
+ .data          0x080be290    0x13c18 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0104.o)
+                0x080ccb60                CHAPTER04_LEVEL0104_COLLISION
+                0x080ccb5c                CHAPTER04_LEVEL0104_COLLISION_WIDTH
+                0x080c24ca                CHAPTER04_LEVEL0104_ACTION_HEIGHT
+                0x080c24c8                CHAPTER04_LEVEL0104_ACTION_WIDTH
+                0x080bea98                CHAPTER04_LEVEL0104_MID
+                0x080c24cc                CHAPTER04_LEVEL0104_ACTION
+                0x080be292                CHAPTER04_LEVEL0104_BACK_HEIGHT
+                0x080bea94                CHAPTER04_LEVEL0104_MID_WIDTH
+                0x080ccb5e                CHAPTER04_LEVEL0104_COLLISION_HEIGHT
+                0x080bea96                CHAPTER04_LEVEL0104_MID_HEIGHT
+                0x080be294                CHAPTER04_LEVEL0104_BACK
+                0x080be290                CHAPTER04_LEVEL0104_BACK_WIDTH
+ .data          0x080d1ea8     0xdbf0 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0201.o)
+                0x080d5200                CHAPTER04_LEVEL0201_ACTION_WIDTH
+                0x080dc266                CHAPTER04_LEVEL0201_COLLISION_HEIGHT
+                0x080d1eac                CHAPTER04_LEVEL0201_BACK
+                0x080d1eaa                CHAPTER04_LEVEL0201_BACK_HEIGHT
+                0x080d26ae                CHAPTER04_LEVEL0201_MID_HEIGHT
+                0x080d5204                CHAPTER04_LEVEL0201_ACTION
+                0x080dc268                CHAPTER04_LEVEL0201_COLLISION
+                0x080d26b0                CHAPTER04_LEVEL0201_MID
+                0x080d1ea8                CHAPTER04_LEVEL0201_BACK_WIDTH
+                0x080d5202                CHAPTER04_LEVEL0201_ACTION_HEIGHT
+                0x080dc264                CHAPTER04_LEVEL0201_COLLISION_WIDTH
+                0x080d26ac                CHAPTER04_LEVEL0201_MID_WIDTH
+ .data          0x080dfa98     0xd5f8 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0202.o)
+                0x080e029c                CHAPTER04_LEVEL0202_MID_WIDTH
+                0x080e2c94                CHAPTER04_LEVEL0202_ACTION
+                0x080e99e6                CHAPTER04_LEVEL0202_COLLISION_HEIGHT
+                0x080e2c92                CHAPTER04_LEVEL0202_ACTION_HEIGHT
+                0x080e02a0                CHAPTER04_LEVEL0202_MID
+                0x080e99e8                CHAPTER04_LEVEL0202_COLLISION
+                0x080e99e4                CHAPTER04_LEVEL0202_COLLISION_WIDTH
+                0x080e029e                CHAPTER04_LEVEL0202_MID_HEIGHT
+                0x080dfa9a                CHAPTER04_LEVEL0202_BACK_HEIGHT
+                0x080dfa98                CHAPTER04_LEVEL0202_BACK_WIDTH
+                0x080dfa9c                CHAPTER04_LEVEL0202_BACK
+                0x080e2c90                CHAPTER04_LEVEL0202_ACTION_WIDTH
+ .data          0x080ed090     0xeff4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0203.o)
+                0x080ed898                CHAPTER04_LEVEL0203_MID
+                0x080ed092                CHAPTER04_LEVEL0203_BACK_HEIGHT
+                0x080f06de                CHAPTER04_LEVEL0203_ACTION_HEIGHT
+                0x080ed896                CHAPTER04_LEVEL0203_MID_HEIGHT
+                0x080f82a4                CHAPTER04_LEVEL0203_COLLISION
+                0x080f06dc                CHAPTER04_LEVEL0203_ACTION_WIDTH
+                0x080ed094                CHAPTER04_LEVEL0203_BACK
+                0x080ed894                CHAPTER04_LEVEL0203_MID_WIDTH
+                0x080f06e0                CHAPTER04_LEVEL0203_ACTION
+                0x080ed090                CHAPTER04_LEVEL0203_BACK_WIDTH
+                0x080f82a0                CHAPTER04_LEVEL0203_COLLISION_WIDTH
+                0x080f82a2                CHAPTER04_LEVEL0203_COLLISION_HEIGHT
+ .data          0x080fc084     0xebd8 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0204.o)
+                0x080fc086                CHAPTER04_LEVEL0204_BACK_HEIGHT
+                0x08106f98                CHAPTER04_LEVEL0204_COLLISION_WIDTH
+                0x080fc888                CHAPTER04_LEVEL0204_MID_WIDTH
+                0x08106f9c                CHAPTER04_LEVEL0204_COLLISION
+                0x080ff614                CHAPTER04_LEVEL0204_ACTION_WIDTH
+                0x080fc088                CHAPTER04_LEVEL0204_BACK
+                0x080fc88c                CHAPTER04_LEVEL0204_MID
+                0x08106f9a                CHAPTER04_LEVEL0204_COLLISION_HEIGHT
+                0x080fc88a                CHAPTER04_LEVEL0204_MID_HEIGHT
+                0x080fc084                CHAPTER04_LEVEL0204_BACK_WIDTH
+                0x080ff616                CHAPTER04_LEVEL0204_ACTION_HEIGHT
+                0x080ff618                CHAPTER04_LEVEL0204_ACTION
+ .data          0x0810ac5c    0x182d8 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0205.o)
+                0x0810faea                CHAPTER04_LEVEL0205_ACTION_WIDTH
+                0x0811c86e                CHAPTER04_LEVEL0205_COLLISION_WIDTH
+                0x0810ac5e                CHAPTER04_LEVEL0205_BACK_HEIGHT
+                0x0810ac60                CHAPTER04_LEVEL0205_BACK
+                0x0810faec                CHAPTER04_LEVEL0205_ACTION_HEIGHT
+                0x0811c870                CHAPTER04_LEVEL0205_COLLISION_HEIGHT
+                0x0810ac5c                CHAPTER04_LEVEL0205_BACK_WIDTH
+                0x0810b462                CHAPTER04_LEVEL0205_MID_HEIGHT
+                0x0810b460                CHAPTER04_LEVEL0205_MID_WIDTH
+                0x0811c872                CHAPTER04_LEVEL0205_COLLISION
+                0x0810faee                CHAPTER04_LEVEL0205_ACTION
+                0x0810b464                CHAPTER04_LEVEL0205_MID
+ .data          0x08122f34     0x27f8 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0301.o)
+                0x0812410c                CHAPTER04_LEVEL0301_ACTION
+                0x08122f38                CHAPTER04_LEVEL0301_BACK
+                0x08124fcc                CHAPTER04_LEVEL0301_COLLISION
+                0x08122f34                CHAPTER04_LEVEL0301_BACK_WIDTH
+                0x08122f36                CHAPTER04_LEVEL0301_BACK_HEIGHT
+                0x08123738                CHAPTER04_LEVEL0301_MID_WIDTH
+                0x0812373a                CHAPTER04_LEVEL0301_MID_HEIGHT
+                0x0812410a                CHAPTER04_LEVEL0301_ACTION_HEIGHT
+                0x0812373c                CHAPTER04_LEVEL0301_MID
+                0x08124fc8                CHAPTER04_LEVEL0301_COLLISION_WIDTH
+                0x08124fca                CHAPTER04_LEVEL0301_COLLISION_HEIGHT
+                0x08124108                CHAPTER04_LEVEL0301_ACTION_WIDTH
+ .data          0x0812572c     0x1d70 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0302.o)
+                0x08126688                CHAPTER04_LEVEL0302_ACTION
+                0x08126684                CHAPTER04_LEVEL0302_ACTION_WIDTH
+                0x08126686                CHAPTER04_LEVEL0302_ACTION_HEIGHT
+                0x08126fec                CHAPTER04_LEVEL0302_COLLISION
+                0x0812572e                CHAPTER04_LEVEL0302_BACK_HEIGHT
+                0x0812572c                CHAPTER04_LEVEL0302_BACK_WIDTH
+                0x08125f34                CHAPTER04_LEVEL0302_MID
+                0x08126fe8                CHAPTER04_LEVEL0302_COLLISION_WIDTH
+                0x08125f30                CHAPTER04_LEVEL0302_MID_WIDTH
+                0x08126fea                CHAPTER04_LEVEL0302_COLLISION_HEIGHT
+                0x08125730                CHAPTER04_LEVEL0302_BACK
+                0x08125f32                CHAPTER04_LEVEL0302_MID_HEIGHT
+ .data          0x0812749c     0x32a4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0303.o)
+                0x08129d08                CHAPTER04_LEVEL0303_COLLISION_WIDTH
+                0x0812749c                CHAPTER04_LEVEL0303_BACK_WIDTH
+                0x081288a2                CHAPTER04_LEVEL0303_ACTION_HEIGHT
+                0x08129d0c                CHAPTER04_LEVEL0303_COLLISION
+                0x08127ca2                CHAPTER04_LEVEL0303_MID_HEIGHT
+                0x081274a0                CHAPTER04_LEVEL0303_BACK
+                0x081288a4                CHAPTER04_LEVEL0303_ACTION
+                0x08127ca0                CHAPTER04_LEVEL0303_MID_WIDTH
+                0x081288a0                CHAPTER04_LEVEL0303_ACTION_WIDTH
+                0x08127ca4                CHAPTER04_LEVEL0303_MID
+                0x0812749e                CHAPTER04_LEVEL0303_BACK_HEIGHT
+                0x08129d0a                CHAPTER04_LEVEL0303_COLLISION_HEIGHT
+ .data          0x0812a740     0x2da4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0304.o)
+                0x0812af48                CHAPTER04_LEVEL0304_MID
+                0x0812ba5a                CHAPTER04_LEVEL0304_ACTION_HEIGHT
+                0x0812cc08                CHAPTER04_LEVEL0304_COLLISION_WIDTH
+                0x0812a742                CHAPTER04_LEVEL0304_BACK_HEIGHT
+                0x0812ba5c                CHAPTER04_LEVEL0304_ACTION
+                0x0812cc0c                CHAPTER04_LEVEL0304_COLLISION
+                0x0812af44                CHAPTER04_LEVEL0304_MID_WIDTH
+                0x0812cc0a                CHAPTER04_LEVEL0304_COLLISION_HEIGHT
+                0x0812af46                CHAPTER04_LEVEL0304_MID_HEIGHT
+                0x0812ba58                CHAPTER04_LEVEL0304_ACTION_WIDTH
+                0x0812a740                CHAPTER04_LEVEL0304_BACK_WIDTH
+                0x0812a744                CHAPTER04_LEVEL0304_BACK
+ .data          0x0812d4e4     0x34d0 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0305.o)
+                0x0812e9ac                CHAPTER04_LEVEL0305_ACTION_WIDTH
+                0x0812dcea                CHAPTER04_LEVEL0305_MID_HEIGHT
+                0x0812ff04                CHAPTER04_LEVEL0305_COLLISION_WIDTH
+                0x0812e9ae                CHAPTER04_LEVEL0305_ACTION_HEIGHT
+                0x0812dcec                CHAPTER04_LEVEL0305_MID
+                0x0812d4e8                CHAPTER04_LEVEL0305_BACK
+                0x0812d4e6                CHAPTER04_LEVEL0305_BACK_HEIGHT
+                0x0812e9b0                CHAPTER04_LEVEL0305_ACTION
+                0x0812ff08                CHAPTER04_LEVEL0305_COLLISION
+                0x0812d4e4                CHAPTER04_LEVEL0305_BACK_WIDTH
+                0x0812ff06                CHAPTER04_LEVEL0305_COLLISION_HEIGHT
+                0x0812dce8                CHAPTER04_LEVEL0305_MID_WIDTH
+ .data          0x081309b4     0x1a34 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0306.o)
+                0x081311ba                CHAPTER04_LEVEL0306_MID_HEIGHT
+                0x081311bc                CHAPTER04_LEVEL0306_MID
+                0x081311b8                CHAPTER04_LEVEL0306_MID_WIDTH
+                0x081309b4                CHAPTER04_LEVEL0306_BACK_WIDTH
+                0x08132004                CHAPTER04_LEVEL0306_COLLISION_WIDTH
+                0x08132006                CHAPTER04_LEVEL0306_COLLISION_HEIGHT
+                0x08131844                CHAPTER04_LEVEL0306_ACTION_WIDTH
+                0x08131846                CHAPTER04_LEVEL0306_ACTION_HEIGHT
+                0x081309b8                CHAPTER04_LEVEL0306_BACK
+                0x08131848                CHAPTER04_LEVEL0306_ACTION
+                0x08132008                CHAPTER04_LEVEL0306_COLLISION
+                0x081309b6                CHAPTER04_LEVEL0306_BACK_HEIGHT
+ .data          0x081323e8     0xd5d0 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0401.o)
+                0x081355a0                CHAPTER04_LEVEL0401_ACTION_WIDTH
+                0x081323ec                CHAPTER04_LEVEL0401_BACK
+                0x081323ea                CHAPTER04_LEVEL0401_BACK_HEIGHT
+                0x081355a4                CHAPTER04_LEVEL0401_ACTION
+                0x0813c308                CHAPTER04_LEVEL0401_COLLISION
+                0x08132bf0                CHAPTER04_LEVEL0401_MID
+                0x0813c306                CHAPTER04_LEVEL0401_COLLISION_HEIGHT
+                0x08132bee                CHAPTER04_LEVEL0401_MID_HEIGHT
+                0x08132bec                CHAPTER04_LEVEL0401_MID_WIDTH
+                0x081323e8                CHAPTER04_LEVEL0401_BACK_WIDTH
+                0x0813c304                CHAPTER04_LEVEL0401_COLLISION_WIDTH
+                0x081355a2                CHAPTER04_LEVEL0401_ACTION_HEIGHT
+ .data          0x0813f9b8     0x7c04 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0402.o)
+                0x08145806                CHAPTER04_LEVEL0402_COLLISION_WIDTH
+                0x08141ca4                CHAPTER04_LEVEL0402_ACTION_HEIGHT
+                0x0813f9ba                CHAPTER04_LEVEL0402_BACK_HEIGHT
+                0x08141ca2                CHAPTER04_LEVEL0402_ACTION_WIDTH
+                0x0813f9b8                CHAPTER04_LEVEL0402_BACK_WIDTH
+                0x08141ca6                CHAPTER04_LEVEL0402_ACTION
+                0x081401be                CHAPTER04_LEVEL0402_MID_HEIGHT
+                0x0813f9bc                CHAPTER04_LEVEL0402_BACK
+                0x0814580a                CHAPTER04_LEVEL0402_COLLISION
+                0x081401c0                CHAPTER04_LEVEL0402_MID
+                0x081401bc                CHAPTER04_LEVEL0402_MID_WIDTH
+                0x08145808                CHAPTER04_LEVEL0402_COLLISION_HEIGHT
+ .data          0x081475bc     0x7c04 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0403.o)
+                0x081475be                CHAPTER04_LEVEL0403_BACK_HEIGHT
+                0x08147dc2                CHAPTER04_LEVEL0403_MID_HEIGHT
+                0x081498a6                CHAPTER04_LEVEL0403_ACTION_WIDTH
+                0x081498a8                CHAPTER04_LEVEL0403_ACTION_HEIGHT
+                0x08147dc0                CHAPTER04_LEVEL0403_MID_WIDTH
+                0x081498aa                CHAPTER04_LEVEL0403_ACTION
+                0x08147dc4                CHAPTER04_LEVEL0403_MID
+                0x0814d40e                CHAPTER04_LEVEL0403_COLLISION
+                0x0814d40a                CHAPTER04_LEVEL0403_COLLISION_WIDTH
+                0x081475bc                CHAPTER04_LEVEL0403_BACK_WIDTH
+                0x081475c0                CHAPTER04_LEVEL0403_BACK
+                0x0814d40c                CHAPTER04_LEVEL0403_COLLISION_HEIGHT
+ .data          0x0814f1c0     0x7c04 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0404.o)
+                0x081514ac                CHAPTER04_LEVEL0404_ACTION_HEIGHT
+                0x0814f9c6                CHAPTER04_LEVEL0404_MID_HEIGHT
+                0x0814f9c4                CHAPTER04_LEVEL0404_MID_WIDTH
+                0x0814f9c8                CHAPTER04_LEVEL0404_MID
+                0x0814f1c0                CHAPTER04_LEVEL0404_BACK_WIDTH
+                0x0814f1c2                CHAPTER04_LEVEL0404_BACK_HEIGHT
+                0x081514aa                CHAPTER04_LEVEL0404_ACTION_WIDTH
+                0x08155012                CHAPTER04_LEVEL0404_COLLISION
+                0x0815500e                CHAPTER04_LEVEL0404_COLLISION_WIDTH
+                0x081514ae                CHAPTER04_LEVEL0404_ACTION
+                0x08155010                CHAPTER04_LEVEL0404_COLLISION_HEIGHT
+                0x0814f1c4                CHAPTER04_LEVEL0404_BACK
+ .data          0x08156dc4     0x3b20 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0405.o)
+                0x081575cc                CHAPTER04_LEVEL0405_MID
+                0x08159c64                CHAPTER04_LEVEL0405_COLLISION
+                0x08156dc8                CHAPTER04_LEVEL0405_BACK
+                0x08156dc6                CHAPTER04_LEVEL0405_BACK_HEIGHT
+                0x081575c8                CHAPTER04_LEVEL0405_MID_WIDTH
+                0x0815835e                CHAPTER04_LEVEL0405_ACTION_HEIGHT
+                0x081575ca                CHAPTER04_LEVEL0405_MID_HEIGHT
+                0x0815835c                CHAPTER04_LEVEL0405_ACTION_WIDTH
+                0x08158360                CHAPTER04_LEVEL0405_ACTION
+                0x08159c62                CHAPTER04_LEVEL0405_COLLISION_HEIGHT
+                0x08159c60                CHAPTER04_LEVEL0405_COLLISION_WIDTH
+                0x08156dc4                CHAPTER04_LEVEL0405_BACK_WIDTH
+ .data          0x0815a8e4     0x3b20 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0406.o)
+                0x0815a8e4                CHAPTER04_LEVEL0406_BACK_WIDTH
+                0x0815b0ea                CHAPTER04_LEVEL0406_MID_HEIGHT
+                0x0815d782                CHAPTER04_LEVEL0406_COLLISION_HEIGHT
+                0x0815d784                CHAPTER04_LEVEL0406_COLLISION
+                0x0815b0ec                CHAPTER04_LEVEL0406_MID
+                0x0815be7c                CHAPTER04_LEVEL0406_ACTION_WIDTH
+                0x0815a8e8                CHAPTER04_LEVEL0406_BACK
+                0x0815be80                CHAPTER04_LEVEL0406_ACTION
+                0x0815d780                CHAPTER04_LEVEL0406_COLLISION_WIDTH
+                0x0815b0e8                CHAPTER04_LEVEL0406_MID_WIDTH
+                0x0815a8e6                CHAPTER04_LEVEL0406_BACK_HEIGHT
+                0x0815be7e                CHAPTER04_LEVEL0406_ACTION_HEIGHT
+ .data          0x0815e404     0x49a0 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0407.o)
+                0x0815fc66                CHAPTER04_LEVEL0407_ACTION
+                0x0815ec0a                CHAPTER04_LEVEL0407_MID_HEIGHT
+                0x0815fc64                CHAPTER04_LEVEL0407_ACTION_HEIGHT
+                0x08161d3a                CHAPTER04_LEVEL0407_COLLISION
+                0x0815ec0c                CHAPTER04_LEVEL0407_MID
+                0x0815e404                CHAPTER04_LEVEL0407_BACK_WIDTH
+                0x0815fc62                CHAPTER04_LEVEL0407_ACTION_WIDTH
+                0x0815ec08                CHAPTER04_LEVEL0407_MID_WIDTH
+                0x08161d36                CHAPTER04_LEVEL0407_COLLISION_WIDTH
+                0x0815e408                CHAPTER04_LEVEL0407_BACK
+                0x0815e406                CHAPTER04_LEVEL0407_BACK_HEIGHT
+                0x08161d38                CHAPTER04_LEVEL0407_COLLISION_HEIGHT
+ .data          0x08162da4     0xb580 ../data/Maps/libMaps.a(CHAPTER03_LEVEL03_TILEBANK.o)
+                0x08162da4                CHAPTER03_LEVEL03_TILEBANK
+                0x0816e124                CHAPTER03_LEVEL03_TILEPALETTE
+ .data          0x0816e324     0x6680 ../data/Maps/libMaps.a(CHAPTER03_LEVEL04_TILEBANK.o)
+                0x0816e324                CHAPTER03_LEVEL04_TILEBANK
+                0x081747a4                CHAPTER03_LEVEL04_TILEPALETTE
+ .data          0x081749a4     0x9040 ../data/Maps/libMaps.a(CHAPTER04_LEVEL01_TILEBANK.o)
+                0x081749a4                CHAPTER04_LEVEL01_TILEBANK
+                0x0817d7e4                CHAPTER04_LEVEL01_TILEPALETTE
+ .data          0x0817d9e4     0x5c00 ../data/Maps/libMaps.a(CHAPTER04_LEVEL02_TILEBANK.o)
+                0x081833e4                CHAPTER04_LEVEL02_TILEPALETTE
+                0x0817d9e4                CHAPTER04_LEVEL02_TILEBANK
+ .data          0x081835e4     0x5e40 ../data/Maps/libMaps.a(CHAPTER04_LEVEL03_TILEBANK.o)
+                0x081835e4                CHAPTER04_LEVEL03_TILEBANK
+                0x08189224                CHAPTER04_LEVEL03_TILEPALETTE
+ .data          0x08189424     0xac00 ../data/Maps/libMaps.a(CHAPTER04_LEVEL04_TILEBANK.o)
+                0x08193e24                CHAPTER04_LEVEL04_TILEPALETTE
+                0x08189424                CHAPTER04_LEVEL04_TILEBANK
+ .data          0x08194024     0x7164 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0202.o)
+                0x081960e0                CHAPTER05_LEVEL0202_ACTION_WIDTH
+                0x081960e2                CHAPTER05_LEVEL0202_ACTION_HEIGHT
+                0x081996a4                CHAPTER05_LEVEL0202_COLLISION_WIDTH
+                0x0819482a                CHAPTER05_LEVEL0202_MID_HEIGHT
+                0x08194828                CHAPTER05_LEVEL0202_MID_WIDTH
+                0x0819482c                CHAPTER05_LEVEL0202_MID
+                0x081960e4                CHAPTER05_LEVEL0202_ACTION
+                0x081996a8                CHAPTER05_LEVEL0202_COLLISION
+                0x08194028                CHAPTER05_LEVEL0202_BACK
+                0x08194026                CHAPTER05_LEVEL0202_BACK_HEIGHT
+                0x081996a6                CHAPTER05_LEVEL0202_COLLISION_HEIGHT
+                0x08194024                CHAPTER05_LEVEL0202_BACK_WIDTH
+ .data          0x0819b188     0xb9b8 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0203.o)
+                0x081a3c74                CHAPTER05_LEVEL0203_COLLISION_HEIGHT
+                0x0819b98e                CHAPTER05_LEVEL0203_MID_HEIGHT
+                0x081a3c72                CHAPTER05_LEVEL0203_COLLISION_WIDTH
+                0x0819b98c                CHAPTER05_LEVEL0203_MID_WIDTH
+                0x0819b18c                CHAPTER05_LEVEL0203_BACK
+                0x0819b990                CHAPTER05_LEVEL0203_MID
+                0x0819deda                CHAPTER05_LEVEL0203_ACTION_WIDTH
+                0x0819b18a                CHAPTER05_LEVEL0203_BACK_HEIGHT
+                0x081a3c76                CHAPTER05_LEVEL0203_COLLISION
+                0x0819dedc                CHAPTER05_LEVEL0203_ACTION_HEIGHT
+                0x0819b188                CHAPTER05_LEVEL0203_BACK_WIDTH
+                0x0819dede                CHAPTER05_LEVEL0203_ACTION
+ .data          0x081a6b40     0x9210 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0204.o)
+                0x081a9118                CHAPTER05_LEVEL0204_ACTION_WIDTH
+                0x081ad93e                CHAPTER05_LEVEL0204_COLLISION
+                0x081a7348                CHAPTER05_LEVEL0204_MID
+                0x081ad93a                CHAPTER05_LEVEL0204_COLLISION_WIDTH
+                0x081a6b42                CHAPTER05_LEVEL0204_BACK_HEIGHT
+                0x081a911a                CHAPTER05_LEVEL0204_ACTION_HEIGHT
+                0x081a7344                CHAPTER05_LEVEL0204_MID_WIDTH
+                0x081ad93c                CHAPTER05_LEVEL0204_COLLISION_HEIGHT
+                0x081a6b40                CHAPTER05_LEVEL0204_BACK_WIDTH
+                0x081a911c                CHAPTER05_LEVEL0204_ACTION
+                0x081a6b44                CHAPTER05_LEVEL0204_BACK
+                0x081a7346                CHAPTER05_LEVEL0204_MID_HEIGHT
+ .data          0x081afd50     0x65d0 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0205.o)
+                0x081afd54                CHAPTER05_LEVEL0205_BACK
+                0x081b4b60                CHAPTER05_LEVEL0205_COLLISION
+                0x081b0554                CHAPTER05_LEVEL0205_MID_WIDTH
+                0x081b0556                CHAPTER05_LEVEL0205_MID_HEIGHT
+                0x081b0558                CHAPTER05_LEVEL0205_MID
+                0x081afd52                CHAPTER05_LEVEL0205_BACK_HEIGHT
+                0x081b4b5e                CHAPTER05_LEVEL0205_COLLISION_HEIGHT
+                0x081b1bd8                CHAPTER05_LEVEL0205_ACTION_WIDTH
+                0x081b1bdc                CHAPTER05_LEVEL0205_ACTION
+                0x081afd50                CHAPTER05_LEVEL0205_BACK_WIDTH
+                0x081b4b5c                CHAPTER05_LEVEL0205_COLLISION_WIDTH
+                0x081b1bda                CHAPTER05_LEVEL0205_ACTION_HEIGHT
+ .data          0x081b6320     0xb820 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0301.o)
+                0x081b8ec6                CHAPTER05_LEVEL0301_ACTION_HEIGHT
+                0x081b6324                CHAPTER05_LEVEL0301_BACK
+                0x081bec6c                CHAPTER05_LEVEL0301_COLLISION_HEIGHT
+                0x081bec6a                CHAPTER05_LEVEL0301_COLLISION_WIDTH
+                0x081b6322                CHAPTER05_LEVEL0301_BACK_HEIGHT
+                0x081b6b26                CHAPTER05_LEVEL0301_MID_HEIGHT
+                0x081b6b28                CHAPTER05_LEVEL0301_MID
+                0x081b6320                CHAPTER05_LEVEL0301_BACK_WIDTH
+                0x081bec6e                CHAPTER05_LEVEL0301_COLLISION
+                0x081b6b24                CHAPTER05_LEVEL0301_MID_WIDTH
+                0x081b8ec4                CHAPTER05_LEVEL0301_ACTION_WIDTH
+                0x081b8ec8                CHAPTER05_LEVEL0301_ACTION
+ .data          0x081c1b40     0xb6a4 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0302.o)
+                0x081ca3ac                CHAPTER05_LEVEL0302_COLLISION
+                0x081c1b42                CHAPTER05_LEVEL0302_BACK_HEIGHT
+                0x081ca3aa                CHAPTER05_LEVEL0302_COLLISION_HEIGHT
+                0x081c2344                CHAPTER05_LEVEL0302_MID_WIDTH
+                0x081c473c                CHAPTER05_LEVEL0302_ACTION
+                0x081c473a                CHAPTER05_LEVEL0302_ACTION_HEIGHT
+                0x081c4738                CHAPTER05_LEVEL0302_ACTION_WIDTH
+                0x081c1b40                CHAPTER05_LEVEL0302_BACK_WIDTH
+                0x081ca3a8                CHAPTER05_LEVEL0302_COLLISION_WIDTH
+                0x081c2348                CHAPTER05_LEVEL0302_MID
+                0x081c1b44                CHAPTER05_LEVEL0302_BACK
+                0x081c2346                CHAPTER05_LEVEL0302_MID_HEIGHT
+ .data          0x081cd1e4     0x77c0 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0303.o)
+                0x081cd9ec                CHAPTER05_LEVEL0303_MID
+                0x081cf316                CHAPTER05_LEVEL0303_ACTION
+                0x081cd9e8                CHAPTER05_LEVEL0303_MID_WIDTH
+                0x081d2cc8                CHAPTER05_LEVEL0303_COLLISION_HEIGHT
+                0x081d2cc6                CHAPTER05_LEVEL0303_COLLISION_WIDTH
+                0x081cd1e4                CHAPTER05_LEVEL0303_BACK_WIDTH
+                0x081cd1e6                CHAPTER05_LEVEL0303_BACK_HEIGHT
+                0x081cf312                CHAPTER05_LEVEL0303_ACTION_WIDTH
+                0x081cd9ea                CHAPTER05_LEVEL0303_MID_HEIGHT
+                0x081d2cca                CHAPTER05_LEVEL0303_COLLISION
+                0x081cd1e8                CHAPTER05_LEVEL0303_BACK
+                0x081cf314                CHAPTER05_LEVEL0303_ACTION_HEIGHT
+ .data          0x081d49a4     0x7f78 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0304.o)
+                0x081d6bd8                CHAPTER05_LEVEL0304_ACTION_WIDTH
+                0x081d49a4                CHAPTER05_LEVEL0304_BACK_WIDTH
+                0x081daa08                CHAPTER05_LEVEL0304_COLLISION
+                0x081d49a6                CHAPTER05_LEVEL0304_BACK_HEIGHT
+                0x081d6bdc                CHAPTER05_LEVEL0304_ACTION
+                0x081d51aa                CHAPTER05_LEVEL0304_MID_HEIGHT
+                0x081d51ac                CHAPTER05_LEVEL0304_MID
+                0x081d51a8                CHAPTER05_LEVEL0304_MID_WIDTH
+                0x081d49a8                CHAPTER05_LEVEL0304_BACK
+                0x081daa06                CHAPTER05_LEVEL0304_COLLISION_HEIGHT
+                0x081d6bda                CHAPTER05_LEVEL0304_ACTION_HEIGHT
+                0x081daa04                CHAPTER05_LEVEL0304_COLLISION_WIDTH
+ .data          0x081dc91c     0x9810 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0305.o)
+                0x081dc91e                CHAPTER05_LEVEL0305_BACK_HEIGHT
+                0x081dc91c                CHAPTER05_LEVEL0305_BACK_WIDTH
+                0x081df0a4                CHAPTER05_LEVEL0305_ACTION_WIDTH
+                0x081dd124                CHAPTER05_LEVEL0305_MID
+                0x081dc920                CHAPTER05_LEVEL0305_BACK
+                0x081e3ba8                CHAPTER05_LEVEL0305_COLLISION_WIDTH
+                0x081dd120                CHAPTER05_LEVEL0305_MID_WIDTH
+                0x081df0a8                CHAPTER05_LEVEL0305_ACTION
+                0x081df0a6                CHAPTER05_LEVEL0305_ACTION_HEIGHT
+                0x081e3baa                CHAPTER05_LEVEL0305_COLLISION_HEIGHT
+                0x081dd122                CHAPTER05_LEVEL0305_MID_HEIGHT
+                0x081e3bac                CHAPTER05_LEVEL0305_COLLISION
+ .data          0x081e612c     0x81e8 ../data/Maps/libMaps.a(CHAPTER06_LEVEL0101.o)
+                0x081ec3d2                CHAPTER06_LEVEL0101_COLLISION_HEIGHT
+                0x081e6934                CHAPTER06_LEVEL0101_MID
+                0x081ec3d0                CHAPTER06_LEVEL0101_COLLISION_WIDTH
+                0x081e612c                CHAPTER06_LEVEL0101_BACK_WIDTH
+                0x081e612e                CHAPTER06_LEVEL0101_BACK_HEIGHT
+                0x081e6130                CHAPTER06_LEVEL0101_BACK
+                0x081e854e                CHAPTER06_LEVEL0101_ACTION_HEIGHT
+                0x081e6930                CHAPTER06_LEVEL0101_MID_WIDTH
+                0x081e6932                CHAPTER06_LEVEL0101_MID_HEIGHT
+                0x081e8550                CHAPTER06_LEVEL0101_ACTION
+                0x081ec3d4                CHAPTER06_LEVEL0101_COLLISION
+                0x081e854c                CHAPTER06_LEVEL0101_ACTION_WIDTH
+ .data          0x081ee314    0x24168 ../data/Maps/libMaps.a(CHAPTER06_LEVEL0102.o)
+                0x081eeb1a                CHAPTER06_LEVEL0102_MID_HEIGHT
+                0x081f4fb4                CHAPTER06_LEVEL0102_ACTION_WIDTH
+                0x0820883c                CHAPTER06_LEVEL0102_COLLISION
+                0x081eeb18                CHAPTER06_LEVEL0102_MID_WIDTH
+                0x081f4fb6                CHAPTER06_LEVEL0102_ACTION_HEIGHT
+                0x081ee316                CHAPTER06_LEVEL0102_BACK_HEIGHT
+                0x081ee314                CHAPTER06_LEVEL0102_BACK_WIDTH
+                0x0820883a                CHAPTER06_LEVEL0102_COLLISION_HEIGHT
+                0x081ee318                CHAPTER06_LEVEL0102_BACK
+                0x081eeb1c                CHAPTER06_LEVEL0102_MID
+                0x08208838                CHAPTER06_LEVEL0102_COLLISION_WIDTH
+                0x081f4fb8                CHAPTER06_LEVEL0102_ACTION
+ .data          0x0821247c    0x129b8 ../data/Maps/libMaps.a(CHAPTER06_LEVEL0301.o)
+                0x08212c82                CHAPTER06_LEVEL0301_MID_HEIGHT
+                0x082163cc                CHAPTER06_LEVEL0301_ACTION_WIDTH
+                0x08220014                CHAPTER06_LEVEL0301_COLLISION
+                0x082163d0                CHAPTER06_LEVEL0301_ACTION
+                0x08212c84                CHAPTER06_LEVEL0301_MID
+                0x08212c80                CHAPTER06_LEVEL0301_MID_WIDTH
+                0x082163ce                CHAPTER06_LEVEL0301_ACTION_HEIGHT
+                0x0821247e                CHAPTER06_LEVEL0301_BACK_HEIGHT
+                0x08212480                CHAPTER06_LEVEL0301_BACK
+                0x08220012                CHAPTER06_LEVEL0301_COLLISION_HEIGHT
+                0x0821247c                CHAPTER06_LEVEL0301_BACK_WIDTH
+                0x08220010                CHAPTER06_LEVEL0301_COLLISION_WIDTH
+ .data          0x08224e34    0x12f28 ../data/Maps/libMaps.a(CHAPTER06_LEVEL0302.o)
+                0x08224e36                CHAPTER06_LEVEL0302_BACK_HEIGHT
+                0x0822563a                CHAPTER06_LEVEL0302_MID_HEIGHT
+                0x0822563c                CHAPTER06_LEVEL0302_MID
+                0x08224e34                CHAPTER06_LEVEL0302_BACK_WIDTH
+                0x08228dfa                CHAPTER06_LEVEL0302_ACTION_HEIGHT
+                0x08228df8                CHAPTER06_LEVEL0302_ACTION_WIDTH
+                0x08225638                CHAPTER06_LEVEL0302_MID_WIDTH
+                0x08232d8e                CHAPTER06_LEVEL0302_COLLISION_WIDTH
+                0x08232d92                CHAPTER06_LEVEL0302_COLLISION
+                0x08232d90                CHAPTER06_LEVEL0302_COLLISION_HEIGHT
+                0x08224e38                CHAPTER06_LEVEL0302_BACK
+                0x08228dfc                CHAPTER06_LEVEL0302_ACTION
+ .data          0x08237d5c     0xa540 ../data/Maps/libMaps.a(CHAPTER05_LEVEL02_TILEBANK.o)
+                0x08237d5c                CHAPTER05_LEVEL02_TILEBANK
+                0x0824209c                CHAPTER05_LEVEL02_TILEPALETTE
+ .data          0x0824229c     0xadc0 ../data/Maps/libMaps.a(CHAPTER05_LEVEL03_TILEBANK.o)
+                0x0824ce5c                CHAPTER05_LEVEL03_TILEPALETTE
+                0x0824229c                CHAPTER05_LEVEL03_TILEBANK
+ .data          0x0824d05c     0x87c0 ../data/Maps/libMaps.a(CHAPTER06_LEVEL01_TILEBANK.o)
+                0x0825561c                CHAPTER06_LEVEL01_TILEPALETTE
+                0x0824d05c                CHAPTER06_LEVEL01_TILEBANK
+ .data          0x0825581c     0x32c0 ../data/Maps/libMaps.a(CHAPTER06_LEVEL03_TILEBANK.o)
+                0x0825581c                CHAPTER06_LEVEL03_TILEBANK
+                0x082588dc                CHAPTER06_LEVEL03_TILEPALETTE
+ .data          0x08258adc     0x25bc ../data/Maps/libMaps.a(CHAPTER03_LEVEL0101.o)
+                0x0825a9c0                CHAPTER03_LEVEL0101_COLLISION_HEIGHT
+                0x08258ade                CHAPTER03_LEVEL0101_BACK_HEIGHT
+                0x0825a9c2                CHAPTER03_LEVEL0101_COLLISION
+                0x08259c12                CHAPTER03_LEVEL0101_ACTION
+                0x082592e0                CHAPTER03_LEVEL0101_MID_WIDTH
+                0x082592e4                CHAPTER03_LEVEL0101_MID
+                0x0825a9be                CHAPTER03_LEVEL0101_COLLISION_WIDTH
+                0x08258ae0                CHAPTER03_LEVEL0101_BACK
+                0x08259c0e                CHAPTER03_LEVEL0101_ACTION_WIDTH
+                0x08259c10                CHAPTER03_LEVEL0101_ACTION_HEIGHT
+                0x082592e2                CHAPTER03_LEVEL0101_MID_HEIGHT
+                0x08258adc                CHAPTER03_LEVEL0101_BACK_WIDTH
+ .data          0x0825b098     0x2670 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0102.o)
+                0x0825b8a0                CHAPTER03_LEVEL0102_MID
+                0x0825b89e                CHAPTER03_LEVEL0102_MID_HEIGHT
+                0x0825c202                CHAPTER03_LEVEL0102_ACTION_HEIGHT
+                0x0825b89c                CHAPTER03_LEVEL0102_MID_WIDTH
+                0x0825d006                CHAPTER03_LEVEL0102_COLLISION_HEIGHT
+                0x0825b09c                CHAPTER03_LEVEL0102_BACK
+                0x0825c200                CHAPTER03_LEVEL0102_ACTION_WIDTH
+                0x0825c204                CHAPTER03_LEVEL0102_ACTION
+                0x0825b098                CHAPTER03_LEVEL0102_BACK_WIDTH
+                0x0825d008                CHAPTER03_LEVEL0102_COLLISION
+                0x0825b09a                CHAPTER03_LEVEL0102_BACK_HEIGHT
+                0x0825d004                CHAPTER03_LEVEL0102_COLLISION_WIDTH
+ .data          0x0825d708     0x5980 ../data/Maps/libMaps.a(CHAPTER03_LEVEL01_TILEBANK.o)
+                0x08262e88                CHAPTER03_LEVEL01_TILEPALETTE
+                0x0825d708                CHAPTER03_LEVEL01_TILEBANK
+ *(.data.*)
+ *(.gnu.linkonce.d*)
+
+.data1
+ *(.data1)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.got
+ *(.got.plt)
+ *(.got)
+
+.dynamic
+ *(.dynamic)
+
+.sdata
+ *(.sdata)
+                0x08263088                _edata=.
+                0x08263088                PROVIDE (edata, .)
+                0x08263088                __bss_start=.
+                0x08263088                __bss_start__=.
+
+.sbss
+ *(.sbss)
+ *(.scommon)
+
+.bss            0x03000000     0x2330
+ *(.dynbss)
+ *(.bss)
+ .bss           0x03000000       0xe4 release/Random.o
+ .bss           0x030000e4        0x4 release/Fade.o
+ .bss           0x030000e8      0x280 Sound/SoundDat.o
+ release/Main.o(COMMON)
+ *fill*         0x03000368        0x8
+ COMMON         0x03000370      0x91c release/Main.o
+                                  0x0 (size before relaxing)
+                0x03000370                gTimer
+                0x03000374                gKeyTap
+                0x03000378                v_phase
+                0x0300037c                gGameState
+                0x03000380                rasttable
+                0x03000480                IntrMainBuf
+                0x03000c80                gGameParams
+                0x03000c84                IntrCheck
+                0x03000c88                gKeyInput
+ *fill*         0x03000c8c        0x4
+ COMMON         0x03000c90      0x500 release/Text_Sys.o
+                                  0x0 (size before relaxing)
+                0x03000c90                ScreenDat
+ COMMON         0x03001190        0x8 release/Hub.o
+                                  0x0 (size before relaxing)
+                0x03001190                mapyoffset
+                0x03001194                mapxoffset
+ *fill*         0x03001198        0x8
+ COMMON         0x030011a0     0x1140 Sound/m4aLib.o
+                                  0x0 (size before relaxing)
+                0x030011a0                m4a_sound
+                0x03002150                ExtMPlyJmpTbl
+                0x030021e0                m4a_cgbchn
+ COMMON         0x030022e0       0x50 Sound/SoundDat.o
+                                  0x0 (size before relaxing)
+                0x030022e0                m4a_mplay000
+                0x03002320                m4a_memacc_area
+
+.bss1           0x03002330        0x0
+                0x03002330                __load_start_bss1=LOADADDR(.bss1)
+                0x03002330                __load_stop_bss1=(LOADADDR(.bss1)+SIZEOF(.bss1))
+
+.bss2           0x03002330     0x4994 load address 0x03002330
+ release/Scroll_Engine.o(COMMON)
+ release/Game.o(COMMON)
+ COMMON         0x03002330     0x4974 release/Game.o
+                                  0x0 (size before relaxing)
+                0x03002330                map_y_size_pixels_bg1
+                0x03002334                numFreeObjects
+                0x03002340                ObjectFreeList
+                0x030024d0                map_ypos
+                0x030024d4                pAction_MapWidth
+                0x030024d8                gPushScrollY
+                0x030024dc                Lives
+                0x030024e0                pMid_Map
+                0x030024e4                map_x_size_pixels_bg1
+                0x030024e8                map_y_size_tiles_bg2
+                0x030024ec                map_y_size_tiles_bg1
+                0x030024f0                pMid_MapHeight
+                0x030024f4                map_x_size_tiles_bg2
+                0x03002500                Bg3_ScreenDat
+                0x03002d00                gFade
+                0x03002d04                Spatualas
+                0x03002d10                ObjectOAMBuffer
+                0x03003510                pCollision_Map
+                0x03003520                ObjectUsedList
+                0x030036b0                old_map_xpos_bg2
+                0x030036b4                pTiles
+                0x030036c0                object_table
+                0x03005c40                pAction_MapHeight
+                0x03005c44                map_y_size_pixels_bg2
+                0x03005c48                pBack_Map
+                0x03005c4c                map_x_size_tiles_bg1
+                0x03005c50                gSpriteMosaic
+                0x03005c54                numUsedObjects
+                0x03005c58                Continues
+                0x03005c5c                map_xpos
+                0x03005c60                pNextFreeObject
+                0x03005c64                old_map_ypos_bg1
+                0x03005c68                gOAMOffset
+                0x03005c6c                pAction_Map
+                0x03005c70                pMid_MapWidth
+                0x03005c80                Bg1_ScreenDat
+                0x03006480                gPushScrollX
+                0x03006484                old_map_xpos_bg1
+                0x03006488                old_map_ypos_bg2
+                0x03006490                Bg2_ScreenDat
+                0x03006c90                pNextUsedObject
+                0x03006c94                Level
+                0x03006c98                map_x_size_pixels_bg2
+                0x03006c9c                g_pObject
+                0x03006ca0                gFadeLevel
+ release/Titles.o(COMMON)
+ *fill*         0x03006ca4        0x4
+ COMMON         0x03006ca8       0x10 release/Titles.o
+                                  0x0 (size before relaxing)
+                0x03006ca8                Title
+                0x03006cb0                Password_Buffer
+ release/StartUp.o(COMMON)
+ COMMON         0x03006cb8        0xc release/StartUp.o
+                                  0x0 (size before relaxing)
+                0x03006cb8                ScreenDelay
+                0x03006cbc                CurrentScreen
+                0x03006cc0                CanSkip
+                0x03002330                __load_start_bss2=LOADADDR(.bss2)
+                0x03006cc4                __load_stop_bss2=(LOADADDR(.bss2)+SIZEOF(.bss2))
+                0x03006cc4                .=(ADDR(.bss1)+(SIZEOF(.bss1)7SIZEOF(.bss2)))
+                0x03006cc4                .=ALIGN(0x4)
+                0x03006cc4                _end=.
+                0x03006cc4                _bss_end__=.
+                0x03006cc4                __bss_end__=.
+                0x03006cc4                PROVIDE (end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x20
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 C:/PROGRA~1/Cygnus/thumbelf-000512/H-i686-cygwin32/thumb-elf/lib/libc.a(strlen.o)
+
+.debug_pubnames
+                0x00000000     0x60c7
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x55 ../data/Titles/libTitlesGFX.a(Start_Copy.o)
+ .debug_pubnames
+                0x00000055       0x52 ../data/Titles/libTitlesGFX.a(Start_THQ.o)
+ .debug_pubnames
+                0x000000a7       0x55 ../data/Titles/libTitlesGFX.a(Start_Nick.o)
+ .debug_pubnames
+                0x000000fc       0x5b ../data/Titles/libTitlesGFX.a(Start_Climax.o)
+ .debug_pubnames
+                0x00000157       0x27 ../data/Titles/libTitlesGFX.a(libFontGame.o)
+ .debug_pubnames
+                0x0000017e       0x27 ../data/Titles/libTitlesGFX.a(libFontMenu.o)
+ .debug_pubnames
+                0x000001a5       0x4f ../data/Titles/libTitlesGFX.a(menuback.o)
+ .debug_pubnames
+                0x000001f4       0x29 ../data/Titles/libTitlesGFX.a(PasswordIcons.o)
+ .debug_pubnames
+                0x0000021d       0x49 ../data/Titles/libTitlesGFX.a(HubMap.o)
+ .debug_pubnames
+                0x00000266      0x1b4 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0301.o)
+ .debug_pubnames
+                0x0000041a      0x1b4 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0302.o)
+ .debug_pubnames
+                0x000005ce      0x1b4 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0303.o)
+ .debug_pubnames
+                0x00000782      0x1b4 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0304.o)
+ .debug_pubnames
+                0x00000936      0x1b4 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0305.o)
+ .debug_pubnames
+                0x00000aea      0x1b4 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0306.o)
+ .debug_pubnames
+                0x00000c9e      0x1b4 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0401.o)
+ .debug_pubnames
+                0x00000e52      0x1b4 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0402.o)
+ .debug_pubnames
+                0x00001006      0x1b4 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0403.o)
+ .debug_pubnames
+                0x000011ba      0x1b4 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0404.o)
+ .debug_pubnames
+                0x0000136e      0x1b4 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0405.o)
+ .debug_pubnames
+                0x00001522      0x1b4 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0406.o)
+ .debug_pubnames
+                0x000016d6      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0101.o)
+ .debug_pubnames
+                0x0000188a      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0102.o)
+ .debug_pubnames
+                0x00001a3e      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0103.o)
+ .debug_pubnames
+                0x00001bf2      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0104.o)
+ .debug_pubnames
+                0x00001da6      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0201.o)
+ .debug_pubnames
+                0x00001f5a      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0202.o)
+ .debug_pubnames
+                0x0000210e      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0203.o)
+ .debug_pubnames
+                0x000022c2      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0204.o)
+ .debug_pubnames
+                0x00002476      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0205.o)
+ .debug_pubnames
+                0x0000262a      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0301.o)
+ .debug_pubnames
+                0x000027de      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0302.o)
+ .debug_pubnames
+                0x00002992      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0303.o)
+ .debug_pubnames
+                0x00002b46      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0304.o)
+ .debug_pubnames
+                0x00002cfa      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0305.o)
+ .debug_pubnames
+                0x00002eae      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0306.o)
+ .debug_pubnames
+                0x00003062      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0401.o)
+ .debug_pubnames
+                0x00003216      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0402.o)
+ .debug_pubnames
+                0x000033ca      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0403.o)
+ .debug_pubnames
+                0x0000357e      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0404.o)
+ .debug_pubnames
+                0x00003732      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0405.o)
+ .debug_pubnames
+                0x000038e6      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0406.o)
+ .debug_pubnames
+                0x00003a9a      0x1b4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0407.o)
+ .debug_pubnames
+                0x00003c4e       0x53 ../data/Maps/libMaps.a(CHAPTER03_LEVEL03_TILEBANK.o)
+ .debug_pubnames
+                0x00003ca1       0x53 ../data/Maps/libMaps.a(CHAPTER03_LEVEL04_TILEBANK.o)
+ .debug_pubnames
+                0x00003cf4       0x53 ../data/Maps/libMaps.a(CHAPTER04_LEVEL01_TILEBANK.o)
+ .debug_pubnames
+                0x00003d47       0x53 ../data/Maps/libMaps.a(CHAPTER04_LEVEL02_TILEBANK.o)
+ .debug_pubnames
+                0x00003d9a       0x53 ../data/Maps/libMaps.a(CHAPTER04_LEVEL03_TILEBANK.o)
+ .debug_pubnames
+                0x00003ded       0x53 ../data/Maps/libMaps.a(CHAPTER04_LEVEL04_TILEBANK.o)
+ .debug_pubnames
+                0x00003e40      0x1b4 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0202.o)
+ .debug_pubnames
+                0x00003ff4      0x1b4 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0203.o)
+ .debug_pubnames
+                0x000041a8      0x1b4 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0204.o)
+ .debug_pubnames
+                0x0000435c      0x1b4 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0205.o)
+ .debug_pubnames
+                0x00004510      0x1b4 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0301.o)
+ .debug_pubnames
+                0x000046c4      0x1b4 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0302.o)
+ .debug_pubnames
+                0x00004878      0x1b4 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0303.o)
+ .debug_pubnames
+                0x00004a2c      0x1b4 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0304.o)
+ .debug_pubnames
+                0x00004be0      0x1b4 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0305.o)
+ .debug_pubnames
+                0x00004d94      0x1b4 ../data/Maps/libMaps.a(CHAPTER06_LEVEL0101.o)
+ .debug_pubnames
+                0x00004f48      0x1b4 ../data/Maps/libMaps.a(CHAPTER06_LEVEL0102.o)
+ .debug_pubnames
+                0x000050fc      0x1b4 ../data/Maps/libMaps.a(CHAPTER06_LEVEL0301.o)
+ .debug_pubnames
+                0x000052b0      0x1b4 ../data/Maps/libMaps.a(CHAPTER06_LEVEL0302.o)
+ .debug_pubnames
+                0x00005464       0x53 ../data/Maps/libMaps.a(CHAPTER05_LEVEL02_TILEBANK.o)
+ .debug_pubnames
+                0x000054b7       0x53 ../data/Maps/libMaps.a(CHAPTER05_LEVEL03_TILEBANK.o)
+ .debug_pubnames
+                0x0000550a       0x53 ../data/Maps/libMaps.a(CHAPTER06_LEVEL01_TILEBANK.o)
+ .debug_pubnames
+                0x0000555d       0x53 ../data/Maps/libMaps.a(CHAPTER06_LEVEL03_TILEBANK.o)
+ .debug_pubnames
+                0x000055b0      0x1b4 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0101.o)
+ .debug_pubnames
+                0x00005764      0x1b4 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0102.o)
+ .debug_pubnames
+                0x00005918       0x53 ../data/Maps/libMaps.a(CHAPTER03_LEVEL01_TILEBANK.o)
+ .debug_pubnames
+                0x0000596b       0x33 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Stand.o)
+ .debug_pubnames
+                0x0000599e       0x26 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(StandJump1.o)
+ .debug_pubnames
+                0x000059c4       0x26 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(StandJump2.o)
+ .debug_pubnames
+                0x000059ea       0x26 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(StandJump3.o)
+ .debug_pubnames
+                0x00005a10       0x21 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk1.o)
+ .debug_pubnames
+                0x00005a31       0x21 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk2.o)
+ .debug_pubnames
+                0x00005a52       0x21 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk3.o)
+ .debug_pubnames
+                0x00005a73       0x21 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk4.o)
+ .debug_pubnames
+                0x00005a94       0x21 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk5.o)
+ .debug_pubnames
+                0x00005ab5       0x21 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk6.o)
+ .debug_pubnames
+                0x00005ad6       0x21 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk7.o)
+ .debug_pubnames
+                0x00005af7       0x21 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk8.o)
+ .debug_pubnames
+                0x00005b18       0x21 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk9.o)
+ .debug_pubnames
+                0x00005b39       0x20 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run1.o)
+ .debug_pubnames
+                0x00005b59       0x20 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run2.o)
+ .debug_pubnames
+                0x00005b79       0x20 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run3.o)
+ .debug_pubnames
+                0x00005b99       0x20 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run4.o)
+ .debug_pubnames
+                0x00005bb9       0x20 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run5.o)
+ .debug_pubnames
+                0x00005bd9       0x20 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run6.o)
+ .debug_pubnames
+                0x00005bf9       0x20 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run7.o)
+ .debug_pubnames
+                0x00005c19       0x20 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run8.o)
+ .debug_pubnames
+                0x00005c39       0x20 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run9.o)
+ .debug_pubnames
+                0x00005c59       0x21 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run10.o)
+ .debug_pubnames
+                0x00005c7a       0x21 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run11.o)
+ .debug_pubnames
+                0x00005c9b       0x21 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run12.o)
+ .debug_pubnames
+                0x00005cbc       0x21 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run13.o)
+ .debug_pubnames
+                0x00005cdd       0x21 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run14.o)
+ .debug_pubnames
+                0x00005cfe       0x21 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run15.o)
+ .debug_pubnames
+                0x00005d1f       0x21 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run16.o)
+ .debug_pubnames
+                0x00005d40       0x24 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn1.o)
+ .debug_pubnames
+                0x00005d64       0x24 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn2.o)
+ .debug_pubnames
+                0x00005d88       0x24 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn3.o)
+ .debug_pubnames
+                0x00005dac       0x24 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn4.o)
+ .debug_pubnames
+                0x00005dd0       0x24 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn5.o)
+ .debug_pubnames
+                0x00005df4       0x24 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn6.o)
+ .debug_pubnames
+                0x00005e18       0x24 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn7.o)
+ .debug_pubnames
+                0x00005e3c       0x24 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn8.o)
+ .debug_pubnames
+                0x00005e60       0x24 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn9.o)
+ .debug_pubnames
+                0x00005e84       0x24 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunJump1.o)
+ .debug_pubnames
+                0x00005ea8       0x24 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunJump2.o)
+ .debug_pubnames
+                0x00005ecc       0x24 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunJump3.o)
+ .debug_pubnames
+                0x00005ef0       0x23 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(JumpTop.o)
+ .debug_pubnames
+                0x00005f13       0x27 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce1.o)
+ .debug_pubnames
+                0x00005f3a       0x27 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce2.o)
+ .debug_pubnames
+                0x00005f61       0x27 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce3.o)
+ .debug_pubnames
+                0x00005f88       0x27 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce4.o)
+ .debug_pubnames
+                0x00005faf       0x27 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce5.o)
+ .debug_pubnames
+                0x00005fd6       0x23 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate1.o)
+ .debug_pubnames
+                0x00005ff9       0x23 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate2.o)
+ .debug_pubnames
+                0x0000601c       0x23 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate3.o)
+ .debug_pubnames
+                0x0000603f       0x23 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate4.o)
+ .debug_pubnames
+                0x00006062       0x23 ../data/Sprites/Misc/libMisc_Sprs.a(Patrick.o)
+ .debug_pubnames
+                0x00006085       0x25 ../data/Sprites/Misc/libMisc_Sprs.a(Platform1.o)
+ .debug_pubnames
+                0x000060aa       0x1d C:/PROGRA~1/Cygnus/thumbelf-000512/H-i686-cygwin32/thumb-elf/lib/libc.a(strlen.o)
+
+.debug_info     0x00000000   0x1320ad
+ *(.debug_info)
+ .debug_info    0x00000000     0x27a3 ../data/Titles/libTitlesGFX.a(Start_Copy.o)
+ .debug_info    0x000027a3     0x279f ../data/Titles/libTitlesGFX.a(Start_THQ.o)
+ .debug_info    0x00004f42     0x27a3 ../data/Titles/libTitlesGFX.a(Start_Nick.o)
+ .debug_info    0x000076e5     0x27ab ../data/Titles/libTitlesGFX.a(Start_Climax.o)
+ .debug_info    0x00009e90     0x2739 ../data/Titles/libTitlesGFX.a(libFontGame.o)
+ .debug_info    0x0000c5c9     0x2739 ../data/Titles/libTitlesGFX.a(libFontMenu.o)
+ .debug_info    0x0000ed02     0x2799 ../data/Titles/libTitlesGFX.a(menuback.o)
+ .debug_info    0x0001149b     0x273d ../data/Titles/libTitlesGFX.a(PasswordIcons.o)
+ .debug_info    0x00013bd8     0x2793 ../data/Titles/libTitlesGFX.a(HubMap.o)
+ .debug_info    0x0001636b     0x2957 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0301.o)
+ .debug_info    0x00018cc2     0x2957 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0302.o)
+ .debug_info    0x0001b619     0x2957 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0303.o)
+ .debug_info    0x0001df70     0x2957 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0304.o)
+ .debug_info    0x000208c7     0x2957 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0305.o)
+ .debug_info    0x0002321e     0x2957 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0306.o)
+ .debug_info    0x00025b75     0x2957 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0401.o)
+ .debug_info    0x000284cc     0x2957 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0402.o)
+ .debug_info    0x0002ae23     0x2957 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0403.o)
+ .debug_info    0x0002d77a     0x2957 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0404.o)
+ .debug_info    0x000300d1     0x2957 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0405.o)
+ .debug_info    0x00032a28     0x2957 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0406.o)
+ .debug_info    0x0003537f     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0101.o)
+ .debug_info    0x00037cd6     0x295a ../data/Maps/libMaps.a(CHAPTER04_LEVEL0102.o)
+ .debug_info    0x0003a630     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0103.o)
+ .debug_info    0x0003cf87     0x295a ../data/Maps/libMaps.a(CHAPTER04_LEVEL0104.o)
+ .debug_info    0x0003f8e1     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0201.o)
+ .debug_info    0x00042238     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0202.o)
+ .debug_info    0x00044b8f     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0203.o)
+ .debug_info    0x000474e6     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0204.o)
+ .debug_info    0x00049e3d     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0205.o)
+ .debug_info    0x0004c794     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0301.o)
+ .debug_info    0x0004f0eb     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0302.o)
+ .debug_info    0x00051a42     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0303.o)
+ .debug_info    0x00054399     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0304.o)
+ .debug_info    0x00056cf0     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0305.o)
+ .debug_info    0x00059647     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0306.o)
+ .debug_info    0x0005bf9e     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0401.o)
+ .debug_info    0x0005e8f5     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0402.o)
+ .debug_info    0x0006124c     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0403.o)
+ .debug_info    0x00063ba3     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0404.o)
+ .debug_info    0x000664fa     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0405.o)
+ .debug_info    0x00068e51     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0406.o)
+ .debug_info    0x0006b7a8     0x2957 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0407.o)
+ .debug_info    0x0006e0ff     0x277f ../data/Maps/libMaps.a(CHAPTER03_LEVEL03_TILEBANK.o)
+ .debug_info    0x0007087e     0x277f ../data/Maps/libMaps.a(CHAPTER03_LEVEL04_TILEBANK.o)
+ .debug_info    0x00072ffd     0x277f ../data/Maps/libMaps.a(CHAPTER04_LEVEL01_TILEBANK.o)
+ .debug_info    0x0007577c     0x277f ../data/Maps/libMaps.a(CHAPTER04_LEVEL02_TILEBANK.o)
+ .debug_info    0x00077efb     0x277f ../data/Maps/libMaps.a(CHAPTER04_LEVEL03_TILEBANK.o)
+ .debug_info    0x0007a67a     0x277f ../data/Maps/libMaps.a(CHAPTER04_LEVEL04_TILEBANK.o)
+ .debug_info    0x0007cdf9     0x2957 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0202.o)
+ .debug_info    0x0007f750     0x2957 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0203.o)
+ .debug_info    0x000820a7     0x2957 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0204.o)
+ .debug_info    0x000849fe     0x2957 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0205.o)
+ .debug_info    0x00087355     0x2957 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0301.o)
+ .debug_info    0x00089cac     0x2957 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0302.o)
+ .debug_info    0x0008c603     0x2957 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0303.o)
+ .debug_info    0x0008ef5a     0x2957 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0304.o)
+ .debug_info    0x000918b1     0x2957 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0305.o)
+ .debug_info    0x00094208     0x2957 ../data/Maps/libMaps.a(CHAPTER06_LEVEL0101.o)
+ .debug_info    0x00096b5f     0x295a ../data/Maps/libMaps.a(CHAPTER06_LEVEL0102.o)
+ .debug_info    0x000994b9     0x2957 ../data/Maps/libMaps.a(CHAPTER06_LEVEL0301.o)
+ .debug_info    0x0009be10     0x2957 ../data/Maps/libMaps.a(CHAPTER06_LEVEL0302.o)
+ .debug_info    0x0009e767     0x277f ../data/Maps/libMaps.a(CHAPTER05_LEVEL02_TILEBANK.o)
+ .debug_info    0x000a0ee6     0x277f ../data/Maps/libMaps.a(CHAPTER05_LEVEL03_TILEBANK.o)
+ .debug_info    0x000a3665     0x277f ../data/Maps/libMaps.a(CHAPTER06_LEVEL01_TILEBANK.o)
+ .debug_info    0x000a5de4     0x277f ../data/Maps/libMaps.a(CHAPTER06_LEVEL03_TILEBANK.o)
+ .debug_info    0x000a8563     0x2957 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0101.o)
+ .debug_info    0x000aaeba     0x2957 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0102.o)
+ .debug_info    0x000ad811     0x277f ../data/Maps/libMaps.a(CHAPTER03_LEVEL01_TILEBANK.o)
+ .debug_info    0x000aff90     0x276a ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Stand.o)
+ .debug_info    0x000b26fa     0x2742 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(StandJump1.o)
+ .debug_info    0x000b4e3c     0x2742 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(StandJump2.o)
+ .debug_info    0x000b757e     0x2742 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(StandJump3.o)
+ .debug_info    0x000b9cc0     0x2738 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk1.o)
+ .debug_info    0x000bc3f8     0x2738 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk2.o)
+ .debug_info    0x000beb30     0x2738 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk3.o)
+ .debug_info    0x000c1268     0x2738 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk4.o)
+ .debug_info    0x000c39a0     0x2738 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk5.o)
+ .debug_info    0x000c60d8     0x2738 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk6.o)
+ .debug_info    0x000c8810     0x2738 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk7.o)
+ .debug_info    0x000caf48     0x2738 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk8.o)
+ .debug_info    0x000cd680     0x2738 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk9.o)
+ .debug_info    0x000cfdb8     0x2736 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run1.o)
+ .debug_info    0x000d24ee     0x2736 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run2.o)
+ .debug_info    0x000d4c24     0x2736 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run3.o)
+ .debug_info    0x000d735a     0x2736 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run4.o)
+ .debug_info    0x000d9a90     0x2736 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run5.o)
+ .debug_info    0x000dc1c6     0x2736 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run6.o)
+ .debug_info    0x000de8fc     0x2736 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run7.o)
+ .debug_info    0x000e1032     0x2736 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run8.o)
+ .debug_info    0x000e3768     0x2736 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run9.o)
+ .debug_info    0x000e5e9e     0x2738 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run10.o)
+ .debug_info    0x000e85d6     0x2738 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run11.o)
+ .debug_info    0x000ead0e     0x2738 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run12.o)
+ .debug_info    0x000ed446     0x2738 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run13.o)
+ .debug_info    0x000efb7e     0x2738 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run14.o)
+ .debug_info    0x000f22b6     0x2738 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run15.o)
+ .debug_info    0x000f49ee     0x2738 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run16.o)
+ .debug_info    0x000f7126     0x273e ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn1.o)
+ .debug_info    0x000f9864     0x273e ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn2.o)
+ .debug_info    0x000fbfa2     0x273e ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn3.o)
+ .debug_info    0x000fe6e0     0x273e ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn4.o)
+ .debug_info    0x00100e1e     0x273e ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn5.o)
+ .debug_info    0x0010355c     0x273e ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn6.o)
+ .debug_info    0x00105c9a     0x273e ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn7.o)
+ .debug_info    0x001083d8     0x273e ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn8.o)
+ .debug_info    0x0010ab16     0x273e ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn9.o)
+ .debug_info    0x0010d254     0x273e ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunJump1.o)
+ .debug_info    0x0010f992     0x273e ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunJump2.o)
+ .debug_info    0x001120d0     0x273e ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunJump3.o)
+ .debug_info    0x0011480e     0x273c ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(JumpTop.o)
+ .debug_info    0x00116f4a     0x2744 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce1.o)
+ .debug_info    0x0011968e     0x2744 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce2.o)
+ .debug_info    0x0011bdd2     0x2744 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce3.o)
+ .debug_info    0x0011e516     0x2744 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce4.o)
+ .debug_info    0x00120c5a     0x2744 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce5.o)
+ .debug_info    0x0012339e     0x273c ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate1.o)
+ .debug_info    0x00125ada     0x273c ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate2.o)
+ .debug_info    0x00128216     0x273c ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate3.o)
+ .debug_info    0x0012a952     0x273c ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate4.o)
+ .debug_info    0x0012d08e     0x2737 ../data/Sprites/Misc/libMisc_Sprs.a(Patrick.o)
+ .debug_info    0x0012f7c5     0x273b ../data/Sprites/Misc/libMisc_Sprs.a(Platform1.o)
+ .debug_info    0x00131f00      0x1ad C:/PROGRA~1/Cygnus/thumbelf-000512/H-i686-cygwin32/thumb-elf/lib/libc.a(strlen.o)
+
+.debug_abbrev   0x00000000     0x60d3
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0xe2 ../data/Titles/libTitlesGFX.a(Start_Copy.o)
+ .debug_abbrev  0x000000e2       0xe2 ../data/Titles/libTitlesGFX.a(Start_THQ.o)
+ .debug_abbrev  0x000001c4       0xe2 ../data/Titles/libTitlesGFX.a(Start_Nick.o)
+ .debug_abbrev  0x000002a6       0xe2 ../data/Titles/libTitlesGFX.a(Start_Climax.o)
+ .debug_abbrev  0x00000388       0xca ../data/Titles/libTitlesGFX.a(libFontGame.o)
+ .debug_abbrev  0x00000452       0xca ../data/Titles/libTitlesGFX.a(libFontMenu.o)
+ .debug_abbrev  0x0000051c       0xd1 ../data/Titles/libTitlesGFX.a(menuback.o)
+ .debug_abbrev  0x000005ed       0xca ../data/Titles/libTitlesGFX.a(PasswordIcons.o)
+ .debug_abbrev  0x000006b7       0xe2 ../data/Titles/libTitlesGFX.a(HubMap.o)
+ .debug_abbrev  0x00000799       0xc3 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0301.o)
+ .debug_abbrev  0x0000085c       0xc3 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0302.o)
+ .debug_abbrev  0x0000091f       0xc3 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0303.o)
+ .debug_abbrev  0x000009e2       0xc3 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0304.o)
+ .debug_abbrev  0x00000aa5       0xc3 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0305.o)
+ .debug_abbrev  0x00000b68       0xc3 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0306.o)
+ .debug_abbrev  0x00000c2b       0xc3 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0401.o)
+ .debug_abbrev  0x00000cee       0xc3 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0402.o)
+ .debug_abbrev  0x00000db1       0xc3 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0403.o)
+ .debug_abbrev  0x00000e74       0xc3 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0404.o)
+ .debug_abbrev  0x00000f37       0xc3 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0405.o)
+ .debug_abbrev  0x00000ffa       0xc3 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0406.o)
+ .debug_abbrev  0x000010bd       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0101.o)
+ .debug_abbrev  0x00001180       0xd4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0102.o)
+ .debug_abbrev  0x00001254       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0103.o)
+ .debug_abbrev  0x00001317       0xd4 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0104.o)
+ .debug_abbrev  0x000013eb       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0201.o)
+ .debug_abbrev  0x000014ae       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0202.o)
+ .debug_abbrev  0x00001571       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0203.o)
+ .debug_abbrev  0x00001634       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0204.o)
+ .debug_abbrev  0x000016f7       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0205.o)
+ .debug_abbrev  0x000017ba       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0301.o)
+ .debug_abbrev  0x0000187d       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0302.o)
+ .debug_abbrev  0x00001940       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0303.o)
+ .debug_abbrev  0x00001a03       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0304.o)
+ .debug_abbrev  0x00001ac6       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0305.o)
+ .debug_abbrev  0x00001b89       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0306.o)
+ .debug_abbrev  0x00001c4c       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0401.o)
+ .debug_abbrev  0x00001d0f       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0402.o)
+ .debug_abbrev  0x00001dd2       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0403.o)
+ .debug_abbrev  0x00001e95       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0404.o)
+ .debug_abbrev  0x00001f58       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0405.o)
+ .debug_abbrev  0x0000201b       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0406.o)
+ .debug_abbrev  0x000020de       0xc3 ../data/Maps/libMaps.a(CHAPTER04_LEVEL0407.o)
+ .debug_abbrev  0x000021a1       0xdb ../data/Maps/libMaps.a(CHAPTER03_LEVEL03_TILEBANK.o)
+ .debug_abbrev  0x0000227c       0xdb ../data/Maps/libMaps.a(CHAPTER03_LEVEL04_TILEBANK.o)
+ .debug_abbrev  0x00002357       0xdb ../data/Maps/libMaps.a(CHAPTER04_LEVEL01_TILEBANK.o)
+ .debug_abbrev  0x00002432       0xdb ../data/Maps/libMaps.a(CHAPTER04_LEVEL02_TILEBANK.o)
+ .debug_abbrev  0x0000250d       0xdb ../data/Maps/libMaps.a(CHAPTER04_LEVEL03_TILEBANK.o)
+ .debug_abbrev  0x000025e8       0xdb ../data/Maps/libMaps.a(CHAPTER04_LEVEL04_TILEBANK.o)
+ .debug_abbrev  0x000026c3       0xc3 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0202.o)
+ .debug_abbrev  0x00002786       0xc3 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0203.o)
+ .debug_abbrev  0x00002849       0xc3 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0204.o)
+ .debug_abbrev  0x0000290c       0xc3 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0205.o)
+ .debug_abbrev  0x000029cf       0xc3 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0301.o)
+ .debug_abbrev  0x00002a92       0xc3 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0302.o)
+ .debug_abbrev  0x00002b55       0xc3 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0303.o)
+ .debug_abbrev  0x00002c18       0xc3 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0304.o)
+ .debug_abbrev  0x00002cdb       0xc3 ../data/Maps/libMaps.a(CHAPTER05_LEVEL0305.o)
+ .debug_abbrev  0x00002d9e       0xc3 ../data/Maps/libMaps.a(CHAPTER06_LEVEL0101.o)
+ .debug_abbrev  0x00002e61       0xd4 ../data/Maps/libMaps.a(CHAPTER06_LEVEL0102.o)
+ .debug_abbrev  0x00002f35       0xc3 ../data/Maps/libMaps.a(CHAPTER06_LEVEL0301.o)
+ .debug_abbrev  0x00002ff8       0xc3 ../data/Maps/libMaps.a(CHAPTER06_LEVEL0302.o)
+ .debug_abbrev  0x000030bb       0xdb ../data/Maps/libMaps.a(CHAPTER05_LEVEL02_TILEBANK.o)
+ .debug_abbrev  0x00003196       0xdb ../data/Maps/libMaps.a(CHAPTER05_LEVEL03_TILEBANK.o)
+ .debug_abbrev  0x00003271       0xdb ../data/Maps/libMaps.a(CHAPTER06_LEVEL01_TILEBANK.o)
+ .debug_abbrev  0x0000334c       0xdb ../data/Maps/libMaps.a(CHAPTER06_LEVEL03_TILEBANK.o)
+ .debug_abbrev  0x00003427       0xc3 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0101.o)
+ .debug_abbrev  0x000034ea       0xc3 ../data/Maps/libMaps.a(CHAPTER03_LEVEL0102.o)
+ .debug_abbrev  0x000035ad       0xdb ../data/Maps/libMaps.a(CHAPTER03_LEVEL01_TILEBANK.o)
+ .debug_abbrev  0x00003688       0xd1 ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Stand.o)
+ .debug_abbrev  0x00003759       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(StandJump1.o)
+ .debug_abbrev  0x00003823       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(StandJump2.o)
+ .debug_abbrev  0x000038ed       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(StandJump3.o)
+ .debug_abbrev  0x000039b7       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk1.o)
+ .debug_abbrev  0x00003a81       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk2.o)
+ .debug_abbrev  0x00003b4b       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk3.o)
+ .debug_abbrev  0x00003c15       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk4.o)
+ .debug_abbrev  0x00003cdf       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk5.o)
+ .debug_abbrev  0x00003da9       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk6.o)
+ .debug_abbrev  0x00003e73       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk7.o)
+ .debug_abbrev  0x00003f3d       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk8.o)
+ .debug_abbrev  0x00004007       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Walk9.o)
+ .debug_abbrev  0x000040d1       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run1.o)
+ .debug_abbrev  0x0000419b       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run2.o)
+ .debug_abbrev  0x00004265       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run3.o)
+ .debug_abbrev  0x0000432f       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run4.o)
+ .debug_abbrev  0x000043f9       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run5.o)
+ .debug_abbrev  0x000044c3       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run6.o)
+ .debug_abbrev  0x0000458d       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run7.o)
+ .debug_abbrev  0x00004657       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run8.o)
+ .debug_abbrev  0x00004721       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run9.o)
+ .debug_abbrev  0x000047eb       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run10.o)
+ .debug_abbrev  0x000048b5       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run11.o)
+ .debug_abbrev  0x0000497f       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run12.o)
+ .debug_abbrev  0x00004a49       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run13.o)
+ .debug_abbrev  0x00004b13       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run14.o)
+ .debug_abbrev  0x00004bdd       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run15.o)
+ .debug_abbrev  0x00004ca7       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Run16.o)
+ .debug_abbrev  0x00004d71       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn1.o)
+ .debug_abbrev  0x00004e3b       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn2.o)
+ .debug_abbrev  0x00004f05       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn3.o)
+ .debug_abbrev  0x00004fcf       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn4.o)
+ .debug_abbrev  0x00005099       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn5.o)
+ .debug_abbrev  0x00005163       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn6.o)
+ .debug_abbrev  0x0000522d       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn7.o)
+ .debug_abbrev  0x000052f7       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn8.o)
+ .debug_abbrev  0x000053c1       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunTurn9.o)
+ .debug_abbrev  0x0000548b       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunJump1.o)
+ .debug_abbrev  0x00005555       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunJump2.o)
+ .debug_abbrev  0x0000561f       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(RunJump3.o)
+ .debug_abbrev  0x000056e9       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(JumpTop.o)
+ .debug_abbrev  0x000057b3       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce1.o)
+ .debug_abbrev  0x0000587d       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce2.o)
+ .debug_abbrev  0x00005947       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce3.o)
+ .debug_abbrev  0x00005a11       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce4.o)
+ .debug_abbrev  0x00005adb       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(ButtBounce5.o)
+ .debug_abbrev  0x00005ba5       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate1.o)
+ .debug_abbrev  0x00005c6f       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate2.o)
+ .debug_abbrev  0x00005d39       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate3.o)
+ .debug_abbrev  0x00005e03       0xca ../data/Sprites/SpongeBob/libSpongeBob_Sprs.a(Karate4.o)
+ .debug_abbrev  0x00005ecd       0xca ../data/Sprites/Misc/libMisc_Sprs.a(Patrick.o)
+ .debug_abbrev  0x00005f97       0xca ../data/Sprites/Misc/libMisc_Sprs.a(Platform1.o)
+ .debug_abbrev  0x00006061       0x72 C:/PROGRA~1/Cygnus/thumbelf-000512/H-i686-cygwin32/thumb-elf/lib/libc.a(strlen.o)
+
+.debug_line     0x00000000      0x19d
+ *(.debug_line)
+ .debug_line    0x00000000      0x19d C:/PROGRA~1/Cygnus/thumbelf-000512/H-i686-cygwin32/thumb-elf/lib/libc.a(strlen.o)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.stack          0x00080000        0x0
+                0x00080000                _stack=.
+ *(.stack)
+LOAD C:/PROGRA~1/Cygnus/thumbelf-000512/h-i686-cygwin32/lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a
+OUTPUT(SBSPants_Release.elf elf32-littlearm)
+
+.bss.code       0x03006cc4      0x400
+ .bss.code      0x03006cc4      0x400 Sound/m4aLib.o
+                0x03006cc4                SoundMainBuf

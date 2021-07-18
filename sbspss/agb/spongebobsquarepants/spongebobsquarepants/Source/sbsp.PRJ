@@ -1,0 +1,137 @@
+[Project ID]
+Signature=UE Proj: v.1
+
+[Files - C]
+0=Game.c
+1=Main.c
+2=Random.c
+3=Scroll_Engine.c
+4=Sinecos.c
+5=SprEng_Animate.c
+6=SprEng_Common.c
+7=SprEng_Control.c
+8=SprEng_Display.c
+9=SprEng_Misc1.c
+10=SprEng_Misc2.c
+11=SprEng_Misc3.c
+12=SprEng_SpongeBob.c
+13=StartUp.c
+14=Text_Sys.c
+15=Titles.c
+
+[Project Information]
+Project Directory=C:\Projects\AGB\Projects\spongebobsquarepants\Source\
+Use Relative Directory=1
+Relative to Project File=1
+Project Wordfile=
+
+[Files - h]
+0=Game.h
+1=Includes.h
+2=Main.h
+3=Random.h
+4=Scroll_Engine.h
+5=Sinecos.h
+6=SprEng_Animate.h
+7=SprEng_Common.h
+8=SprEng_Control.h
+9=SprEng_Display.h
+10=StartUp.h
+11=Text_Sys.h
+12=Titles.h
+13=TitlesData.h
+
+[Files - lan]
+0=American.lan
+1=English.lan
+2=French.lan
+3=German.lan
+4=Spanish.lan
+
+[Files - arm]
+0=Crt0.s
+1=Rom_Header.s
+
+[Open Files]
+Open File0=C:\Projects\AGB\Projects\robot wars demo\source\Game.c
+Open File Pos0=2719
+Open File Line0=1599
+Open File Window Pos0=0,1,-1,-1,-4,-23,44,44,793,655
+Open File1=C:\Projects\AGB\Projects\robot wars demo\source\SprEng_Animate.h
+Open File Pos1=0
+Open File Line1=0
+Open File Window Pos1=0,1,-1,-1,-4,-23,66,66,819,681
+Open File2=C:\Projects\AGB\Projects\robot wars demo\source\SprEng_Animate.c
+Open File Pos2=3796
+Open File Line2=0
+Open File Window Pos2=0,1,-1,-1,-4,-23,88,88,841,703
+Open File3=C:\plap
+Open File Pos3=0
+Open File Line3=0
+Open File Window Pos3=2,3,-1,-1,-4,-23,66,66,775,788
+Open File4=
+Open File Pos4=0
+Open File Line4=0
+Open File Window Pos4=0,1,-1,-1,-4,-23,220,220,973,835
+Open File5=C:\Projects\AGB\Projects\spongebobsquarepants\Source\Main.c
+Open File Pos5=0
+Open File Line5=4480
+Open File Window Pos5=0,1,-1,-1,-4,-23,242,242,995,857
+Open File6=C:\Projects\AGB\Projects\spongebobsquarepants\Source\Game.c
+Open File Pos6=11447
+Open File Line6=10342
+Open File Window Pos6=0,1,-1,-1,-4,-23,264,264,1017,879
+Open File7=C:\mirc\logs\able\#rareroms.newnet.20010316.log
+Open File Pos7=43836
+Open File Line7=46890
+Open File Window Pos7=2,3,-1,-1,-4,-23,286,286,1039,901
+Open File8=
+Open File Pos8=0
+Open File Line8=0
+Open File Window Pos8=0,1,-1,-1,-4,-23,198,198,970,782
+Open File9=C:\Projects\AGB\Projects\spongebobsquarepants\Source\SprEng_Display.c
+Open File Pos9=0
+Open File Line9=0
+Open File Window Pos9=0,1,-1,-1,-4,-23,220,220,992,804
+Open File10=C:\Projects\AGB\Projects\spongebobsquarepants\Source\SprEng_Misc1.c
+Open File Pos10=0
+Open File Line10=0
+Open File Window Pos10=0,1,-1,-1,-4,-23,242,242,1014,826
+Open File11=C:\Projects\AGB\Projects\spongebobsquarepants\Source\SprEng_Misc2.c
+Open File Pos11=0
+Open File Line11=0
+Open File Window Pos11=0,1,-1,-1,-4,-23,264,264,1036,848
+Open File12=C:\Projects\AGB\Projects\spongebobsquarepants\Source\SprEng_Misc3.c
+Open File Pos12=0
+Open File Line12=0
+Open File Window Pos12=0,1,-1,-1,-4,-23,0,0,772,584
+Open File13=C:\Projects\AGB\Projects\spongebobsquarepants\Source\SprEng_SpongeBob.c
+Open File Pos13=0
+Open File Line13=0
+Open File Window Pos13=0,1,-1,-1,-4,-23,22,22,794,606
+Open File14=C:\Projects\AGB\Projects\spongebobsquarepants\Source\StartUp.c
+Open File Pos14=0
+Open File Line14=0
+Open File Window Pos14=0,1,-1,-1,-4,-23,44,44,816,628
+Open File15=C:\Projects\AGB\Projects\spongebobsquarepants\Source\Text_Sys.c
+Open File Pos15=0
+Open File Line15=0
+Open File Window Pos15=0,1,-1,-1,-4,-23,66,66,838,650
+Open File16=C:\Projects\AGB\Projects\spongebobsquarepants\Source\Titles.c
+Open File Pos16=0
+Open File Line16=0
+Active File Index=3
+Open File Window Pos16=2,3,-1,-1,-4,-23,88,88,860,672
+Open File17=
+Active File Display Mode=3
+
+[File View]
+Current Select=C:\Projects\AGB\Projects\robot wars demo\source\SprEng_Display.h
+
+[Group]
+0=arm
+1=C
+2=h
+3=lan
+5=
+

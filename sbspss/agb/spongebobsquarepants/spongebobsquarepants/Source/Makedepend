@@ -1,0 +1,399 @@
+Main.o : Main.c Includes.h C:/projects/agb/include/Agb.h \
+ C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h Titles.h Scroll_Engine.h \
+ StartUp.h Sinecos.h Hub.h
+Game.o : Game.c Includes.h C:/projects/agb/include/Agb.h \
+ C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h Scroll_Engine.h SprEng_Common.h \
+ SprEng_Control.h SprEng_Animate.h SprEng_Display.h Text_Sys.h \
+ Collision.h Fade.h
+Titles.o : Titles.c Includes.h C:/projects/agb/include/Agb.h \
+ C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h Titles.h TitlesData.h SineCos.h \
+ Random.h Text_Sys.h Scroll_Engine.h StartUp.h Hub.h Fade.h
+Random.o : Random.c Includes.h C:/projects/agb/include/Agb.h \
+ C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h Random.h
+StartUp.o : StartUp.c Includes.h C:/projects/agb/include/Agb.h \
+ C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h StartUp.h Titles.h TitlesData.h \
+ Text_Sys.h Scroll_Engine.h Fade.h
+Scroll_Engine.o : Scroll_Engine.c Includes.h \
+ C:/projects/agb/include/Agb.h C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h SprEng_Common.h Scroll_Engine.h \
+ Text_Sys.h
+SprEng_Control.o : SprEng_Control.c Includes.h \
+ C:/projects/agb/include/Agb.h C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h SprEng_Common.h SprEng_Control.h \
+ SprEng_Animate.h SprEng_Display.h
+SprEng_Animate.o : SprEng_Animate.c Includes.h \
+ C:/projects/agb/include/Agb.h C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h Scroll_Engine.h SprEng_Common.h \
+ SprEng_Control.h SprEng_Animate.h SprEng_Display.h SineCos.h
+SprEng_Display.o : SprEng_Display.c Includes.h \
+ C:/projects/agb/include/Agb.h C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h Scroll_Engine.h SprEng_Common.h \
+ SprEng_Control.h SprEng_Animate.h SprEng_Display.h SineCos.h
+SprEng_Common.o : SprEng_Common.c Includes.h \
+ C:/projects/agb/include/Agb.h C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h Scroll_Engine.h SprEng_Common.h \
+ SprEng_Control.h SprEng_Animate.h SprEng_Display.h
+SprEng_SpongeBob.o : SprEng_SpongeBob.c Includes.h \
+ C:/projects/agb/include/Agb.h C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h SprEng_Common.h SprEng_Control.h \
+ Scroll_Engine.h Contours.h
+SprEng_NPC.o : SprEng_NPC.c Includes.h C:/projects/agb/include/Agb.h \
+ C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h Scroll_Engine.h SprEng_Common.h \
+ SprEng_Control.h Contours.h
+SprEng_Platforms.o : SprEng_Platforms.c Includes.h \
+ C:/projects/agb/include/Agb.h C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h Scroll_Engine.h SprEng_Common.h \
+ SprEng_Control.h Contours.h
+SprEng_Monsters.o : SprEng_Monsters.c Includes.h \
+ C:/projects/agb/include/Agb.h C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h Scroll_Engine.h SprEng_Common.h \
+ SprEng_Control.h Contours.h
+Sinecos.o : Sinecos.c Includes.h C:/projects/agb/include/Agb.h \
+ C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h SineCos.h
+Contours.o : Contours.c Includes.h C:/projects/agb/include/Agb.h \
+ C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h SprEng_Common.h SprEng_Control.h \
+ Scroll_Engine.h Contours.h
+Text_Sys.o : Text_Sys.c Includes.h C:/projects/agb/include/Agb.h \
+ C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h Text_Sys.h English.lan \
+ American.lan
+Collision.o : Collision.c Includes.h C:/projects/agb/include/Agb.h \
+ C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h SprEng_Common.h SprEng_Control.h \
+ Scroll_Engine.h Collision.h
+Hub.o : Hub.c Includes.h C:/projects/agb/include/Agb.h \
+ C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h Hub.h Text_Sys.h Scroll_Engine.h \
+ SprEng_Control.h SprEng_Display.h Titles.h TitlesData.h Fade.h
+Fade.o : Fade.c Includes.h C:/projects/agb/include/Agb.h \
+ C:/projects/agb/include/AgbTypes.h \
+ C:/projects/agb/include/AgbDefine.h \
+ C:/projects/agb/include/AgbMemoryMap.h \
+ C:/projects/agb/include/AgbMacro.h \
+ C:/projects/agb/include/AgbSystemCall.h \
+ C:/projects/agb/include/AgbSound.h \
+ C:/projects/agb/include/AgbMultiBoot.h \
+ C:/projects/agb/include/IsAgbPrint.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/stdio.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/_ansi.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/config.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stddef.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/include/stdarg.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/sys/reent.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/time.h \
+ C:\PROGRA~1\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/include/machine/types.h \
+ Main.h Game.h ../Sound/out/m4aLib.h Titles.h TitlesData.h Text_Sys.h \
+ Scroll_Engine.h StartUp.h Hub.h

@@ -1,0 +1,76 @@
+// SpongeBob SquarePants (AGB)
+// English Language File
+// (c) 2000/1 R Duff
+
+#ifndef _ENG_LAN
+#define _ENG_LAN
+
+//note to translators - use UPPER case only - foriegn characters are ok but need to be UPPER case only
+
+u8 GAMENAME[]	= "SPONGEBOB SQUAREPANTS";
+u8 PRESSSTART[] = "~PRESS START BUTTON~";
+u8 COPYRIGHT[]	= "(C) 2001 NICKELODEON";
+u8 OK[] 	= "OK";
+u8 YES[] 	= "YES";
+u8 NO[] 	= "NO";
+u8 MUSICON[]		= "~~~~~~~~~ON~~~~~~~~~";
+u8 MUSICOFF[]	= "~~~~~~~~~OFF~~~~~~~~";
+u8 MENU[] 	= "~~~~~MAIN MENU~~~~~~";
+u8 NEWGAME[]    = "~~~START NEW GAME~~~";
+u8 PASSWORD[]   = "~~~~LEVEL SELECT~~~~";
+u8 PASSWORD2[]  = "ENTER A PASSWORD";
+u8 OPTION[]     = "~~~~OPTIONS MENU~~~~";
+u8 CREDITS[]    = "~~~~~~CREDITS~~~~~~~";
+u8 CONTROLLER[] = "~CONTROLLER OPTIONS~";
+u8 CONTA[]      = "A JUMP      B ATTACK";
+u8 CONTB[]      = "B JUMP      A ATTACK";
+u8 SOUND[]      = "~~~SOUND OPTIONS~~~~";
+u8 MUSICVOL[]   = "~~~~~~~~MUSIC~~~~~~~";
+u8 SFXVOL[]     = "~~~~~~~VOLUME++~~~~~"; 
+u8 PCT0[]       = "~~~~~~~~~~~~~~~~~~~~";
+u8 PCT5[]       = "|~~~~~~~~~~~~~~~~~~~";
+u8 PCT10[]      = "||~~~~~~~~~~~~~~~~~~";
+u8 PCT15[]      = "|||~~~~~~~~~~~~~~~~~";
+u8 PCT20[]      = "||||~~~~~~~~~~~~~~~~";
+u8 PCT25[]      = "|||||~~~~~~~~~~~~~~~";
+u8 PCT30[]      = "||||||~~~~~~~~~~~~~~";
+u8 PCT35[]      = "|||||||~~~~~~~~~~~~~";
+u8 PCT40[]      = "||||||||~~~~~~~~~~~~";
+u8 PCT45[]      = "|||||||||~~~~~~~~~~~";
+u8 PCT50[]      = "||||||||||~~~~~~~~~~";
+u8 PCT55[]      = "|||||||||||~~~~~~~~~";
+u8 PCT60[]      = "||||||||||||~~~~~~~~";
+u8 PCT65[]      = "|||||||||||||~~~~~~~";
+u8 PCT70[]      = "||||||||||||||~~~~~~";
+u8 PCT75[]      = "|||||||||||||||~~~~~";
+u8 PCT80[]      = "||||||||||||||||~~~~";
+u8 PCT85[]      = "|||||||||||||||||~~~";
+u8 PCT90[]      = "||||||||||||||||||~~";
+u8 PCT95[]      = "|||||||||||||||||||~";
+u8 PCT100[]     = "||||||||||||||||||||";
+u8 CHAP11[]	= "Chapter 1 Level 1";
+u8 CHAP12[]	= "Chapter 1 Level 2";
+u8 CHAP13[]	= "Chapter 1 Level 3";
+u8 CHAP14[]	= "Chapter 1 Level 4";
+u8 CHAP21[]	= "Chapter 2 Level 1";
+u8 CHAP22[]	= "Chapter 2 Level 2";
+u8 CHAP23[]	= "Chapter 2 Level 3";
+u8 CHAP24[]	= "Chapter 2 Level 4";
+u8 CHAP31[]	= "Chapter 3 Level 1";
+u8 CHAP32[]	= "Chapter 3 Level 2";
+u8 CHAP33[]	= "Chapter 3 Level 3";
+u8 CHAP34[]	= "Chapter 3 Level 4";
+u8 CHAP41[]	= "Chapter 4 Level 1";
+u8 CHAP42[]	= "Chapter 4 Level 2";
+u8 CHAP43[]	= "Chapter 4 Level 3";
+u8 CHAP44[]	= "Chapter 4 Level 4";
+u8 CHAP51[]	= "Chapter 5 Level 1";
+u8 CHAP52[]	= "Chapter 5 Level 2";
+u8 CHAP53[]	= "Chapter 5 Level 3";
+u8 CHAP54[]	= "Chapter 5 Level 4";
+u8 CHAP61[]	= "Chapter 6 Level 1";
+u8 CHAP62[]	= "Chapter 6 Level 2";
+u8 CHAP63[]	= "Chapter 6 Level 3";
+u8 CHAP64[]	= "Chapter 6 Level 4";
+
+#endif

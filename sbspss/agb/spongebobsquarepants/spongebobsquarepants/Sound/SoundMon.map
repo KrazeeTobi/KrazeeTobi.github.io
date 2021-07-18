@@ -1,0 +1,1272 @@
+Archive member included       because of file (symbol)
+
+c:\projects\agb\lib/libagbsyscall.a(AgbSysCpuSet.o)
+                              m4aLib.o (CpuSet)
+c:\projects\agb\lib/libagbsyscall.a(AgbSysMidiKey2Freq.o)
+                              C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o (MidiKey2Freq)
+C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_call_via_rX.o)
+                              m4aLib.o (_call_via_r1)
+C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_divsi3.o)
+                              m4aLib.o (__divsi3)
+C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_dvmd_tls.o)
+                              C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_divsi3.o) (__div0)
+C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_udivsi3.o)
+                              C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o (__udivsi3)
+C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_umodsi3.o)
+                              C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o (__umodsi3)
+
+Allocating common symbols
+Common symbol       size              file
+
+c_bit               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+m4a_sound           0xfb0             m4aLib.o
+p_rev               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+p_bit               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+c_mvg               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+AvrLinC             0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+c_mvo               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+w_midibuf           0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+vcount              0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+m4a_mplay000        0x40              SoundDat.o
+ExtMPlyJmpTbl       0x90              m4aLib.o
+Cont                0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+xcmdn               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+MaxLin              0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+c_mch               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+AvrLinT             0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+r_midibuf           0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+Trg                 0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+c_rev               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+sysex               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+m4a_cgbchn          0x100             m4aLib.o
+MaxChnC             0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+c_song              0x10              C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+c_fre               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+KeySpd              0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+p_mch               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+m4a_mplay001        0x40              SoundDat.o
+midibuf             0x100             C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+IntrMainBuf         0x800             C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+MaxChn              0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+c_mpr               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+midi_ma             0x40              C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+midi_ta             0x500             C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+runst               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+KeyRep              0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+OamBak              0x400             C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+m4a_memacc_area     0x10              SoundDat.o
+p_song              0x10              C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+p_fre               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+BgBak               0x800             C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+CurtCurs            0x4               C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD C:\Projects\AGB\Projects\spongebobsquarepants\Sound\crt0.o
+LOAD m4aLib.o
+LOAD C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+LOAD C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SndMonDat.o
+LOAD SoundDat.o
+LOAD inst01.o
+LOAD inst02.o
+LOAD inst03.o
+LOAD inst04.o
+LOAD inst05.o
+LOAD inst06.o
+LOAD inst07.o
+LOAD inst08.o
+LOAD inst09.o
+LOAD inst0a.o
+LOAD inst0b.o
+LOAD inst0c.o
+LOAD inst0d.o
+LOAD inst0e.o
+LOAD inst0f.o
+LOAD inst10.o
+LOAD inst11.o
+LOAD inst12.o
+LOAD inst13.o
+LOAD inst14.o
+LOAD inst15.o
+LOAD inst16.o
+LOAD inst17.o
+LOAD inst18.o
+LOAD inst19.o
+LOAD inst1a.o
+LOAD inst1b.o
+LOAD inst1c.o
+LOAD inst1d.o
+LOAD inst1e.o
+LOAD inst1f.o
+LOAD inst20.o
+LOAD inst21.o
+LOAD inst22.o
+LOAD inst23.o
+LOAD inst24.o
+LOAD inst25.o
+LOAD inst26.o
+LOAD inst27.o
+LOAD inst28.o
+LOAD inst29.o
+LOAD inst2a.o
+LOAD inst2b.o
+LOAD inst2c.o
+LOAD inst2d.o
+LOAD inst2e.o
+LOAD inst2f.o
+LOAD inst30.o
+LOAD inst31.o
+LOAD inst32.o
+LOAD inst33.o
+LOAD inst34.o
+LOAD inst35.o
+LOAD inst36.o
+LOAD inst37.o
+LOAD inst38.o
+LOAD inst39.o
+LOAD inst3a.o
+LOAD inst3b.o
+LOAD inst3c.o
+LOAD inst3d.o
+LOAD inst3e.o
+LOAD inst3f.o
+LOAD inst40.o
+LOAD inst41.o
+LOAD inst42.o
+LOAD inst43.o
+LOAD inst44.o
+LOAD inst45.o
+LOAD inst46.o
+LOAD inst47.o
+LOAD inst48.o
+LOAD inst49.o
+LOAD inst4a.o
+LOAD inst4b.o
+LOAD inst4c.o
+LOAD inst4d.o
+LOAD inst4e.o
+LOAD inst4f.o
+LOAD inst50.o
+LOAD inst51.o
+LOAD inst52.o
+LOAD inst53.o
+LOAD inst54.o
+LOAD inst55.o
+LOAD inst56.o
+LOAD inst57.o
+LOAD inst58.o
+LOAD inst59.o
+LOAD inst5a.o
+LOAD inst5b.o
+LOAD inst5c.o
+LOAD inst5d.o
+LOAD inst5e.o
+LOAD inst5f.o
+LOAD inst60.o
+LOAD inst61.o
+LOAD inst62.o
+LOAD inst63.o
+LOAD inst64.o
+LOAD inst65.o
+LOAD inst66.o
+LOAD inst67.o
+LOAD snd_anmf.o
+LOAD snd_bblw.o
+LOAD snd_bbou.o
+LOAD snd_blam.o
+LOAD snd_boun.o
+LOAD snd_corl.o
+LOAD snd_eat.o
+LOAD snd_elec.o
+LOAD snd_impc.o
+LOAD snd_jfsh.o
+LOAD snd_jump.o
+LOAD snd_krte.o
+LOAD snd_move.o
+LOAD snd_net.o
+LOAD snd_satk.o
+LOAD snd_saw.o
+LOAD snd_splt.o
+LOAD snd_squk.o
+LOAD snd_tndr.o
+LOAD snd_watr.o
+LOAD snd_whsh.o
+LOAD snd_zlau.o
+LOAD ch1_1_2.o
+LOAD ch1_3.o
+LOAD ch1_4.o
+LOAD ch1_b.o
+LOAD ch2_1_3.o
+LOAD ch2_2.o
+LOAD ch2_4.o
+LOAD ch2_b.o
+LOAD ch3_1.o
+LOAD ch3_2_3.o
+LOAD ch3_4.o
+LOAD ch3_b1.o
+LOAD ch3_b2.o
+LOAD ch4_1.o
+LOAD ch4_2_4.o
+LOAD ch4_3.o
+LOAD ch4_b.o
+LOAD ch5_1_3.o
+LOAD ch5_2.o
+LOAD ch5_4.o
+LOAD ch5_b.o
+LOAD ch6_b_t.o
+LOAD ch6_g.o
+LOAD ch6_r_s.o
+LOAD ch6_top.o
+LOAD gameover.o
+LOAD options.o
+LOAD titlemusic.o
+LOAD zfx00.o
+LOAD zfx01.o
+LOAD zfx02.o
+LOAD zfx03.o
+LOAD zfx04.o
+LOAD zfx05.o
+LOAD zfx06.o
+LOAD zfx07.o
+LOAD zfx08.o
+LOAD zfx09.o
+LOAD zfx10.o
+LOAD zfx11.o
+LOAD zfx12.o
+LOAD zfx13.o
+LOAD zfx14.o
+LOAD zfx15.o
+LOAD zfx16.o
+LOAD zfx17.o
+LOAD zfx18.o
+LOAD zfx19.o
+LOAD zfx20.o
+LOAD zfx21.o
+LOAD zfx22.o
+LOAD zfx23.o
+LOAD zfx24.o
+LOAD zfx25.o
+LOAD zfx26.o
+LOAD zfx27.o
+LOAD zfx28.o
+LOAD zfx29.o
+LOAD zfx30.o
+LOAD zfx31.o
+LOAD zfx32.o
+LOAD zfx33.o
+LOAD zfx34.o
+LOAD zfx35.o
+LOAD zfx36.o
+LOAD zfx37.o
+LOAD zfx38.o
+LOAD zfx39.o
+LOAD zfx40.o
+LOAD zfx41.o
+LOAD zfx42.o
+LOAD zfx43.o
+LOAD zfx44.o
+LOAD zfx45.o
+LOAD zfx46.o
+LOAD zfx47.o
+LOAD zfx48.o
+LOAD zfx49.o
+LOAD zfx50.o
+LOAD zfx51.o
+LOAD zfx52.o
+LOAD zfx53.o
+LOAD zfx54.o
+LOAD zfx55.o
+LOAD zfx56.o
+LOAD zfx57.o
+LOAD zfx58.o
+LOAD zfx59.o
+LOAD zfx60.o
+LOAD zfx61.o
+LOAD zfx62.o
+LOAD zfx63.o
+LOAD zfx64.o
+LOAD zfx65.o
+LOAD zfx66.o
+LOAD zfx67.o
+LOAD zfx68.o
+LOAD zfx69.o
+LOAD zfx70.o
+LOAD zfx71.o
+LOAD zfx72.o
+LOAD zfx73.o
+LOAD zfx74.o
+LOAD zfx75.o
+LOAD zfx76.o
+LOAD zfx77.o
+LOAD zfx78.o
+LOAD zfx79.o
+LOAD zfx80.o
+LOAD zfx81.o
+LOAD zfx82.o
+LOAD zfx83.o
+LOAD zfx84.o
+LOAD zfx85.o
+LOAD zfx86.o
+LOAD zfx87.o
+LOAD zfx88.o
+LOAD zfx89.o
+LOAD zfx90.o
+LOAD zfx91.o
+LOAD c:\projects\agb\lib/libagbsyscall.a
+LOAD C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a
+LOAD C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/lib/libg.a
+LOAD C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/lib/libc.a
+LOAD C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a
+Address of section .text set to 0x8000000
+Address of section .bss set to 0x3000000
+                0x00008000                .=0x8000
+
+.interp
+ *(.interp)
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x08000000     0x3b58
+ *(.text)
+ .text          0x08000000      0x1d0 C:\Projects\AGB\Projects\spongebobsquarepants\Sound\crt0.o
+                0x080001d0                seg_m4aLib_top
+                0x08000000                _start
+                0x080000c0                start_vector
+                0x080000fc                intr_main
+ .text          0x080001d0     0x2104 m4aLib.o
+                0x080014e8                SoundVSyncOff_rev01
+                0x08001358                SampFreqSet_rev01
+                0x080001d0                umul3232H32
+                0x08001110                MPlayExtender
+                0x08001494                SoundClear_rev01
+                0x08002268                ply_xsust
+                0x0800124c                Clear64byte_rev
+                0x08002254                ply_xdeca
+                0x08001234                MusicPlayerJumpTableCopy
+                0x0800222c                ply_xtype
+                0x08001e0c                MPlayVolumeControl
+                0x08001618                MPlayStart_rev01
+                0x08000608                SoundMainBTM
+                0x080022bc                ply_xswee
+                0x08001564                SoundVSyncOn_rev01
+                0x080010b8                m4aMPlayFadeOut
+                0x080015a0                MPlayOpen_rev01
+                0x08000ae0                TrackStop_rev01
+                0x0800108c                m4aMPlayAllContinue
+                0x08002240                ply_xatta
+                0x08001840                MidiKey2CgbFr
+                0x08002290                ply_xiecv
+                0x08001020                m4aSongNumContinue
+                0x08001fe4                MPlayLFOSpeedSet
+                0x08000e48                DummyFunc
+                0x08000e68                MPlayFadeOut
+                0x08000d54                ply_endtie_rev01
+                0x08001080                m4aMPlayContinue
+                0x08001de4                MPlayTempoControl
+                0x0800170c                FadeOutBody_rev01
+                0x080018e8                CgbOscOff
+                0x080021d0                ply_xxx
+                0x08000de4                MidiKey2fr
+                0x08000f14                m4aSoundMain
+                0x080021e4                ply_xwave
+                0x0800178c                TrkVolPitSet_rev01
+                0x08000f20                m4aSongNumStart
+                0x08000dbc                ply_lfos_rev01
+                0x08000e4c                MPlayContinue
+                0x08000dd0                ply_mod_rev01
+                0x08001e74                MPlayPitchControl
+                0x08001f50                MP_clear_modM
+                0x08000880                MPlayMain_rev01
+                0x08000b54                ply_note_rev01
+                0x08001260                SoundInit_rev01
+                0x08000f4c                m4aSongNumStartOrChange
+                0x08001f70                MPlayModDepthSet
+                0x08000f98                m4aSongNumStartOrContinue
+                0x080019a0                CgbSound
+                0x080016cc                MPlayStop_rev01
+                0x080022d0                DummyFunc_rev
+                0x080021b0                ply_xcmd
+                0x080013fc                SoundMode_rev01
+                0x08001ee8                MPlayPanpotControl
+                0x08001238                ClearChain_rev
+                0x08000834                SoundVSync_rev01
+                0x08000e88                m4aSoundInit
+                0x0800229c                ply_xiecl
+                0x080022a8                ply_xleng
+                0x080010c8                m4aMPlayImmInit
+                0x08002058                ply_memacc
+                0x080001e0                SoundMain
+                0x08000264                SoundMainRAM
+                0x08001054                m4aMPlayAllStop
+                0x08001938                CgbModVol
+                0x08000608                Clear64byte
+                0x08000fec                m4aSongNumStop
+                0x08000670                MPlyJmpTblCopy
+                0x0800227c                ply_xrele
+ .text          0x080022d4     0x1670 C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+                0x080029cc                IntrDummy
+                0x08002f80                ModeWrite
+                0x080029b8                VBlankIntr
+                0x08002c5c                ValueWrite
+                0x080032e0                MidiInputMain
+                0x080022d4                seg_m4aLib_end
+                0x080032c8                unReadMidi
+                0x08002954                KeyRead
+                0x08003038                MidiWrite
+                0x08003230                MidiInIntr
+                0x08002d80                SongWrite
+                0x08003908                MidiAllStop
+                0x080029d0                ValueChange
+                0x080022d8                _MPlayFadeOut
+                0x08002c34                StrWrite
+                0x080031fc                MidiPortInit
+                0x080030dc                MidiInputInit
+                0x08002cf0                ValueWriteHex
+                0x08003290                ReadMidi
+                0x080022dc                AgbMain
+ .text          0x08003944        0x4 c:\projects\agb\lib/libagbsyscall.a(AgbSysCpuSet.o)
+                0x08003944                CpuSet
+ .text          0x08003948        0x4 c:\projects\agb\lib/libagbsyscall.a(AgbSysMidiKey2Freq.o)
+                0x08003948                MidiKey2Freq
+ .text          0x0800394c       0x3c C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_call_via_rX.o)
+                0x08003954                _call_via_r2
+                0x08003964                _call_via_r6
+                0x08003960                _call_via_r5
+                0x08003958                _call_via_r3
+                0x08003978                _call_via_fp
+                0x0800396c                _call_via_r8
+                0x08003968                _call_via_r7
+                0x0800394c                _call_via_r0
+                0x08003974                _call_via_sl
+                0x08003980                _call_via_sp
+                0x08003970                _call_via_r9
+                0x0800395c                _call_via_r4
+                0x08003950                _call_via_r1
+                0x0800397c                _call_via_ip
+                0x08003984                _call_via_lr
+ .text          0x08003988       0x94 C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_divsi3.o)
+                0x08003988                __divsi3
+ .text          0x08003a1c        0x4 C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_dvmd_tls.o)
+                0x08003a1c                __div0
+ .text          0x08003a20       0x78 C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_udivsi3.o)
+                0x08003a20                __udivsi3
+ .text          0x08003a98       0xc0 C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_umodsi3.o)
+                0x08003a98                __umodsi3
+ *(.text.*)
+ *(.stub)
+ *(.gnu.warning)
+ *(.gnu.linkonce.t*)
+ *(.glue_7t)
+ *(.glue_7)
+                0x08003b58                _etext=.
+                0x08003b58                PROVIDE (etext, .)
+
+.fini
+ *(.fini)
+
+.rodata         0x08003b58    0x600fc
+ *(.rodata)
+ .rodata        0x08003b58        0x4 C:\Projects\AGB\Projects\spongebobsquarepants\Sound\crt0.o
+                0x08003b5c                seg_m4aLib_rodata_top
+ .rodata        0x08003b5c      0x2d8 m4aLib.o
+                0x08003ca0                FreqTable
+                0x08003d6c                CgbFrTable
+                0x08003b5c                MPlyJmpTbl
+                0x08003dc0                Cgb3vol
+                0x08003bec                ScaleTable
+                0x08003e04                xcmd_tbl
+                0x08003dd0                clock_tbl_rev01
+                0x08003ce8                CgbScTable
+                0x08003d84                NoiseTable
+                0x08003cd0                pcmVBtbl_rev
+ .rodata        0x08003e34     0x13c0 C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+                0x08005188                IntrTable
+                0x08004380                OamData_Sample
+                0x08003e34                seg_m4aLib_rodata_end
+                0x08003e50                CurP
+                0x08004388                PlttData_Sample
+                0x08003e36                FreTbl
+                0x08004588                CharData_Sample
+                0x08003e80                BgScData_Sample
+ .rodata        0x080051f4      0x1e4 C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SndMonDat.o
+                0x080053d4                app_vgrp_table
+                0x080053d8                seg_rodata_top
+                0x080051f4                app_song_table
+ .rodata        0x080053d8      0x9b8 SoundDat.o
+                0x080053d8                voicegroup000
+                0x080059b4                mplay_table
+                0x080059cc                song_table
+ .rodata        0x08005d90      0x6c8 inst01.o
+                0x08005d90                inst01
+ .rodata        0x08006458     0x1440 inst02.o
+                0x08006458                inst02
+ .rodata        0x08007898      0x6c8 inst03.o
+                0x08007898                inst03
+ .rodata        0x08007f60      0x798 inst04.o
+                0x08007f60                inst04
+ .rodata        0x080086f8      0x1fc inst05.o
+                0x080086f8                inst05
+ .rodata        0x080088f4      0x288 inst06.o
+                0x080088f4                inst06
+ .rodata        0x08008b7c      0x974 inst07.o
+                0x08008b7c                inst07
+ .rodata        0x080094f0     0x1440 inst08.o
+                0x080094f0                inst08
+ .rodata        0x0800a930      0x28c inst09.o
+                0x0800a930                inst09
+ .rodata        0x0800abbc      0x370 inst0a.o
+                0x0800abbc                inst0a
+ .rodata        0x0800af2c      0x3dc inst0b.o
+                0x0800af2c                inst0b
+ .rodata        0x0800b308      0x6a8 inst0c.o
+                0x0800b308                inst0c
+ .rodata        0x0800b9b0      0x748 inst0d.o
+                0x0800b9b0                inst0d
+ .rodata        0x0800c0f8      0x4cc inst0e.o
+                0x0800c0f8                inst0e
+ .rodata        0x0800c5c4      0x560 inst0f.o
+                0x0800c5c4                inst0f
+ .rodata        0x0800cb24      0x1f4 inst10.o
+                0x0800cb24                inst10
+ .rodata        0x0800cd18      0x4f4 inst11.o
+                0x0800cd18                inst11
+ .rodata        0x0800d20c      0x470 inst12.o
+                0x0800d20c                inst12
+ .rodata        0x0800d67c      0x528 inst13.o
+                0x0800d67c                inst13
+ .rodata        0x0800dba4      0x734 inst14.o
+                0x0800dba4                inst14
+ .rodata        0x0800e2d8      0x92c inst15.o
+                0x0800e2d8                inst15
+ .rodata        0x0800ec04     0x1464 inst16.o
+                0x0800ec04                inst16
+ .rodata        0x08010068      0x3cc inst17.o
+                0x08010068                inst17
+ .rodata        0x08010434      0x430 inst18.o
+                0x08010434                inst18
+ .rodata        0x08010864      0x19c inst19.o
+                0x08010864                inst19
+ .rodata        0x08010a00      0x28c inst1a.o
+                0x08010a00                inst1a
+ .rodata        0x08010c8c      0x350 inst1b.o
+                0x08010c8c                inst1b
+ .rodata        0x08010fdc      0x334 inst1c.o
+                0x08010fdc                inst1c
+ .rodata        0x08011310      0x470 inst1d.o
+                0x08011310                inst1d
+ .rodata        0x08011780      0x4f0 inst1e.o
+                0x08011780                inst1e
+ .rodata        0x08011c70      0x4e8 inst1f.o
+                0x08011c70                inst1f
+ .rodata        0x08012158      0x28c inst20.o
+                0x08012158                inst20
+ .rodata        0x080123e4      0x208 inst21.o
+                0x080123e4                inst21
+ .rodata        0x080125ec      0x5ec inst22.o
+                0x080125ec                inst22
+ .rodata        0x08012bd8      0x534 inst23.o
+                0x08012bd8                inst23
+ .rodata        0x0801310c      0x28c inst24.o
+                0x0801310c                inst24
+ .rodata        0x08013398     0x1470 inst25.o
+                0x08013398                inst25
+ .rodata        0x08014808      0x610 inst26.o
+                0x08014808                inst26
+ .rodata        0x08014e18      0x45c inst27.o
+                0x08014e18                inst27
+ .rodata        0x08015274     0x146c inst28.o
+                0x08015274                inst28
+ .rodata        0x080166e0     0x1468 inst29.o
+                0x080166e0                inst29
+ .rodata        0x08017b48      0x320 inst2a.o
+                0x08017b48                inst2a
+ .rodata        0x08017e68      0x91c inst2b.o
+                0x08017e68                inst2b
+ .rodata        0x08018784     0x1470 inst2c.o
+                0x08018784                inst2c
+ .rodata        0x08019bf4      0x3fc inst2d.o
+                0x08019bf4                inst2d
+ .rodata        0x08019ff0     0x1464 inst2e.o
+                0x08019ff0                inst2e
+ .rodata        0x0801b454      0x5b0 inst2f.o
+                0x0801b454                inst2f
+ .rodata        0x0801ba04      0xa04 inst30.o
+                0x0801ba04                inst30
+ .rodata        0x0801c408      0x624 inst31.o
+                0x0801c408                inst31
+ .rodata        0x0801ca2c      0x6d8 inst32.o
+                0x0801ca2c                inst32
+ .rodata        0x0801d104      0x43c inst33.o
+                0x0801d104                inst33
+ .rodata        0x0801d540      0x5f0 inst34.o
+                0x0801d540                inst34
+ .rodata        0x0801db30      0x5c4 inst35.o
+                0x0801db30                inst35
+ .rodata        0x0801e0f4      0x650 inst36.o
+                0x0801e0f4                inst36
+ .rodata        0x0801e744      0x404 inst37.o
+                0x0801e744                inst37
+ .rodata        0x0801eb48      0x460 inst38.o
+                0x0801eb48                inst38
+ .rodata        0x0801efa8      0x3c4 inst39.o
+                0x0801efa8                inst39
+ .rodata        0x0801f36c      0x3fc inst3a.o
+                0x0801f36c                inst3a
+ .rodata        0x0801f768      0x644 inst3b.o
+                0x0801f768                inst3b
+ .rodata        0x0801fdac     0x145c inst3c.o
+                0x0801fdac                inst3c
+ .rodata        0x08021208      0x4c8 inst3d.o
+                0x08021208                inst3d
+ .rodata        0x080216d0      0x20c inst3e.o
+                0x080216d0                inst3e
+ .rodata        0x080218dc      0x540 inst3f.o
+                0x080218dc                inst3f
+ .rodata        0x08021e1c      0x7e4 inst40.o
+                0x08021e1c                inst40
+ .rodata        0x08022600      0x230 inst41.o
+                0x08022600                inst41
+ .rodata        0x08022830      0xab4 inst42.o
+                0x08022830                inst42
+ .rodata        0x080232e4     0x19d8 inst43.o
+                0x080232e4                inst43
+ .rodata        0x08024cbc      0x714 inst44.o
+                0x08024cbc                inst44
+ .rodata        0x080253d0     0x183c inst45.o
+                0x080253d0                inst45
+ .rodata        0x08026c0c     0x15f0 inst46.o
+                0x08026c0c                inst46
+ .rodata        0x080281fc      0x370 inst47.o
+                0x080281fc                inst47
+ .rodata        0x0802856c      0x528 inst48.o
+                0x0802856c                inst48
+ .rodata        0x08028a94      0x4e0 inst49.o
+                0x08028a94                inst49
+ .rodata        0x08028f74      0x5e4 inst4a.o
+                0x08028f74                inst4a
+ .rodata        0x08029558     0x154c inst4b.o
+                0x08029558                inst4b
+ .rodata        0x0802aaa4     0x145c inst4c.o
+                0x0802aaa4                inst4c
+ .rodata        0x0802bf00      0x3f4 inst4d.o
+                0x0802bf00                inst4d
+ .rodata        0x0802c2f4      0x838 inst4e.o
+                0x0802c2f4                inst4e
+ .rodata        0x0802cb2c      0x70c inst4f.o
+                0x0802cb2c                inst4f
+ .rodata        0x0802d238      0x378 inst50.o
+                0x0802d238                inst50
+ .rodata        0x0802d5b0      0xd58 inst51.o
+                0x0802d5b0                inst51
+ .rodata        0x0802e308      0x64c inst52.o
+                0x0802e308                inst52
+ .rodata        0x0802e954      0xc7c inst53.o
+                0x0802e954                inst53
+ .rodata        0x0802f5d0     0x1070 inst54.o
+                0x0802f5d0                inst54
+ .rodata        0x08030640      0x210 inst55.o
+                0x08030640                inst55
+ .rodata        0x08030850      0x3e0 inst56.o
+                0x08030850                inst56
+ .rodata        0x08030c30      0x510 inst57.o
+                0x08030c30                inst57
+ .rodata        0x08031140      0xab4 inst58.o
+                0x08031140                inst58
+ .rodata        0x08031bf4      0x98c inst59.o
+                0x08031bf4                inst59
+ .rodata        0x08032580      0x380 inst5a.o
+                0x08032580                inst5a
+ .rodata        0x08032900     0x156c inst5b.o
+                0x08032900                inst5b
+ .rodata        0x08033e6c     0x1480 inst5c.o
+                0x08033e6c                inst5c
+ .rodata        0x080352ec      0x4dc inst5d.o
+                0x080352ec                inst5d
+ .rodata        0x080357c8      0x28c inst5e.o
+                0x080357c8                inst5e
+ .rodata        0x08035a54      0x250 inst5f.o
+                0x08035a54                inst5f
+ .rodata        0x08035ca4      0x28c inst60.o
+                0x08035ca4                inst60
+ .rodata        0x08035f30      0x46c inst61.o
+                0x08035f30                inst61
+ .rodata        0x0803639c      0x7a0 inst62.o
+                0x0803639c                inst62
+ .rodata        0x08036b3c      0x308 inst63.o
+                0x08036b3c                inst63
+ .rodata        0x08036e44      0x470 inst64.o
+                0x08036e44                inst64
+ .rodata        0x080372b4      0xb88 inst65.o
+                0x080372b4                inst65
+ .rodata        0x08037e3c      0x654 inst66.o
+                0x08037e3c                inst66
+ .rodata        0x08038490      0x400 inst67.o
+                0x08038490                inst67
+ .rodata        0x08038890     0x1a0c snd_anmf.o
+                0x08038890                snd_anmf
+ .rodata        0x0803a29c      0xd58 snd_bblw.o
+                0x0803a29c                snd_bblw
+ .rodata        0x0803aff4      0x7e4 snd_bbou.o
+                0x0803aff4                snd_bbou
+ .rodata        0x0803b7d8     0x23e8 snd_blam.o
+                0x0803b7d8                snd_blam
+ .rodata        0x0803dbc0      0x8e4 snd_boun.o
+                0x0803dbc0                snd_boun
+ .rodata        0x0803e4a4     0x1224 snd_corl.o
+                0x0803e4a4                snd_corl
+ .rodata        0x0803f6c8      0xcac snd_eat.o
+                0x0803f6c8                snd_eat
+ .rodata        0x08040374      0xba0 snd_elec.o
+                0x08040374                snd_elec
+ .rodata        0x08040f14      0x914 snd_impc.o
+                0x08040f14                snd_impc
+ .rodata        0x08041828      0xa1c snd_jfsh.o
+                0x08041828                snd_jfsh
+ .rodata        0x08042244      0x6c8 snd_jump.o
+                0x08042244                snd_jump
+ .rodata        0x0804290c      0x554 snd_krte.o
+                0x0804290c                snd_krte
+ .rodata        0x08042e60     0x139c snd_move.o
+                0x08042e60                snd_move
+ .rodata        0x080441fc      0x654 snd_net.o
+                0x080441fc                snd_net
+ .rodata        0x08044850      0xe74 snd_satk.o
+                0x08044850                snd_satk
+ .rodata        0x080456c4      0xcdc snd_saw.o
+                0x080456c4                snd_saw
+ .rodata        0x080463a0      0xd30 snd_splt.o
+                0x080463a0                snd_splt
+ .rodata        0x080470d0      0x654 snd_squk.o
+                0x080470d0                snd_squk
+ .rodata        0x08047724     0x118c snd_tndr.o
+                0x08047724                snd_tndr
+ .rodata        0x080488b0     0x1c08 snd_watr.o
+                0x080488b0                snd_watr
+ .rodata        0x0804a4b8     0x15ac snd_whsh.o
+                0x0804a4b8                snd_whsh
+ .rodata        0x0804ba64     0x15a4 snd_zlau.o
+                0x0804ba64                snd_zlau
+ .rodata        0x0804d008     0x16d0 ch1_1_2.o
+                0x0804e6c0                ch1_1_2
+ .rodata        0x0804e6d8     0x1d38 ch1_3.o
+                0x080503f8                ch1_3
+ .rodata        0x08050410      0xc5c ch1_4.o
+                0x08051054                ch1_4
+ .rodata        0x0805106c      0x784 ch1_b.o
+                0x080517d8                ch1_b
+ .rodata        0x080517f0     0x10cc ch2_1_3.o
+                0x080528a4                ch2_1_3
+ .rodata        0x080528bc     0x1310 ch2_2.o
+                0x08053bb4                ch2_2
+ .rodata        0x08053bcc      0xdb0 ch2_4.o
+                0x08054964                ch2_4
+ .rodata        0x0805497c      0x124 ch2_b.o
+                0x08054a88                ch2_b
+ .rodata        0x08054aa0      0xb2c ch3_1.o
+                0x080555b4                ch3_1
+ .rodata        0x080555cc     0x1538 ch3_2_3.o
+                0x08056aec                ch3_2_3
+ .rodata        0x08056b04      0xde0 ch3_4.o
+                0x080578cc                ch3_4
+ .rodata        0x080578e4      0x19c ch3_b1.o
+                0x08057a68                ch3_b1
+ .rodata        0x08057a80      0x45c ch3_b2.o
+                0x08057ec4                ch3_b2
+ .rodata        0x08057edc     0x165c ch4_1.o
+                0x08059520                ch4_1
+ .rodata        0x08059538     0x1bac ch4_2_4.o
+                0x0805b0cc                ch4_2_4
+ .rodata        0x0805b0e4      0xdb8 ch4_3.o
+                0x0805be84                ch4_3
+ .rodata        0x0805be9c      0x474 ch4_b.o
+                0x0805c2f8                ch4_b
+ .rodata        0x0805c310      0xec0 ch5_1_3.o
+                0x0805d1b8                ch5_1_3
+ .rodata        0x0805d1d0      0xd48 ch5_2.o
+                0x0805df00                ch5_2
+ .rodata        0x0805df18     0x18ac ch5_4.o
+                0x0805f7ac                ch5_4
+ .rodata        0x0805f7c4      0x2dc ch5_b.o
+                0x0805fa88                ch5_b
+ .rodata        0x0805faa0      0x848 ch6_b_t.o
+                0x080602d0                ch6_b_t
+ .rodata        0x080602e8      0xb1c ch6_g.o
+                0x08060dec                ch6_g
+ .rodata        0x08060e04      0xd84 ch6_r_s.o
+                0x08061b70                ch6_r_s
+ .rodata        0x08061b88      0x508 ch6_top.o
+                0x08062078                ch6_top
+ .rodata        0x08062090      0x1dc gameover.o
+                0x08062254                gameover
+ .rodata        0x0806226c      0x2f4 options.o
+                0x08062548                options
+ .rodata        0x08062560      0x9a8 titlemusic.o
+                0x08062ef0                titlemusic
+ .rodata        0x08062f08       0x1c zfx00.o
+                0x08062f18                zfx00
+ .rodata        0x08062f24       0x1c zfx01.o
+                0x08062f34                zfx01
+ .rodata        0x08062f40       0x1c zfx02.o
+                0x08062f50                zfx02
+ .rodata        0x08062f5c       0x1c zfx03.o
+                0x08062f6c                zfx03
+ .rodata        0x08062f78       0x1c zfx04.o
+                0x08062f88                zfx04
+ .rodata        0x08062f94       0x1c zfx05.o
+                0x08062fa4                zfx05
+ .rodata        0x08062fb0       0x20 zfx06.o
+                0x08062fc4                zfx06
+ .rodata        0x08062fd0       0x1c zfx07.o
+                0x08062fe0                zfx07
+ .rodata        0x08062fec       0x28 zfx08.o
+                0x08063008                zfx08
+ .rodata        0x08063014       0x34 zfx09.o
+                0x0806303c                zfx09
+ .rodata        0x08063048       0x28 zfx10.o
+                0x08063064                zfx10
+ .rodata        0x08063070       0x1c zfx11.o
+                0x08063080                zfx11
+ .rodata        0x0806308c       0x1c zfx12.o
+                0x0806309c                zfx12
+ .rodata        0x080630a8       0x1c zfx13.o
+                0x080630b8                zfx13
+ .rodata        0x080630c4       0x1c zfx14.o
+                0x080630d4                zfx14
+ .rodata        0x080630e0       0x1c zfx15.o
+                0x080630f0                zfx15
+ .rodata        0x080630fc       0x1c zfx16.o
+                0x0806310c                zfx16
+ .rodata        0x08063118       0x40 zfx17.o
+                0x0806314c                zfx17
+ .rodata        0x08063158       0x1c zfx18.o
+                0x08063168                zfx18
+ .rodata        0x08063174       0x20 zfx19.o
+                0x08063188                zfx19
+ .rodata        0x08063194       0x2c zfx20.o
+                0x080631b4                zfx20
+ .rodata        0x080631c0       0x28 zfx21.o
+                0x080631dc                zfx21
+ .rodata        0x080631e8       0x38 zfx22.o
+                0x08063214                zfx22
+ .rodata        0x08063220       0x1c zfx23.o
+                0x08063230                zfx23
+ .rodata        0x0806323c       0x38 zfx24.o
+                0x08063268                zfx24
+ .rodata        0x08063274       0x24 zfx25.o
+                0x0806328c                zfx25
+ .rodata        0x08063298       0x1c zfx26.o
+                0x080632a8                zfx26
+ .rodata        0x080632b4       0x28 zfx27.o
+                0x080632d0                zfx27
+ .rodata        0x080632dc       0x20 zfx28.o
+                0x080632f0                zfx28
+ .rodata        0x080632fc       0x1c zfx29.o
+                0x0806330c                zfx29
+ .rodata        0x08063318       0x1c zfx30.o
+                0x08063328                zfx30
+ .rodata        0x08063334       0x38 zfx31.o
+                0x08063360                zfx31
+ .rodata        0x0806336c       0x20 zfx32.o
+                0x08063380                zfx32
+ .rodata        0x0806338c       0x34 zfx33.o
+                0x080633b4                zfx33
+ .rodata        0x080633c0       0x38 zfx34.o
+                0x080633ec                zfx34
+ .rodata        0x080633f8       0x28 zfx35.o
+                0x08063414                zfx35
+ .rodata        0x08063420       0x1c zfx36.o
+                0x08063430                zfx36
+ .rodata        0x0806343c       0x20 zfx37.o
+                0x08063450                zfx37
+ .rodata        0x0806345c       0x30 zfx38.o
+                0x08063480                zfx38
+ .rodata        0x0806348c       0x30 zfx39.o
+                0x080634b0                zfx39
+ .rodata        0x080634bc       0x28 zfx40.o
+                0x080634d8                zfx40
+ .rodata        0x080634e4       0x24 zfx41.o
+                0x080634fc                zfx41
+ .rodata        0x08063508       0x28 zfx42.o
+                0x08063524                zfx42
+ .rodata        0x08063530       0x20 zfx43.o
+                0x08063544                zfx43
+ .rodata        0x08063550       0x20 zfx44.o
+                0x08063564                zfx44
+ .rodata        0x08063570       0x20 zfx45.o
+                0x08063584                zfx45
+ .rodata        0x08063590       0x30 zfx46.o
+                0x080635b4                zfx46
+ .rodata        0x080635c0       0x1c zfx47.o
+                0x080635d0                zfx47
+ .rodata        0x080635dc       0x1c zfx48.o
+                0x080635ec                zfx48
+ .rodata        0x080635f8       0x30 zfx49.o
+                0x0806361c                zfx49
+ .rodata        0x08063628       0x20 zfx50.o
+                0x0806363c                zfx50
+ .rodata        0x08063648       0x28 zfx51.o
+                0x08063664                zfx51
+ .rodata        0x08063670       0x1c zfx52.o
+                0x08063680                zfx52
+ .rodata        0x0806368c       0x1c zfx53.o
+                0x0806369c                zfx53
+ .rodata        0x080636a8       0x44 zfx54.o
+                0x080636e0                zfx54
+ .rodata        0x080636ec       0x20 zfx55.o
+                0x08063700                zfx55
+ .rodata        0x0806370c       0x58 zfx56.o
+                0x08063758                zfx56
+ .rodata        0x08063764       0x3c zfx57.o
+                0x08063794                zfx57
+ .rodata        0x080637a0       0x34 zfx58.o
+                0x080637c8                zfx58
+ .rodata        0x080637d4       0x20 zfx59.o
+                0x080637e8                zfx59
+ .rodata        0x080637f4       0x20 zfx60.o
+                0x08063808                zfx60
+ .rodata        0x08063814       0x2c zfx61.o
+                0x08063834                zfx61
+ .rodata        0x08063840       0x20 zfx62.o
+                0x08063854                zfx62
+ .rodata        0x08063860       0x2c zfx63.o
+                0x08063880                zfx63
+ .rodata        0x0806388c       0x34 zfx64.o
+                0x080638b4                zfx64
+ .rodata        0x080638c0       0x30 zfx65.o
+                0x080638e4                zfx65
+ .rodata        0x080638f0       0x1c zfx66.o
+                0x08063900                zfx66
+ .rodata        0x0806390c       0x20 zfx67.o
+                0x08063920                zfx67
+ .rodata        0x0806392c       0x1c zfx68.o
+                0x0806393c                zfx68
+ .rodata        0x08063948       0x1c zfx69.o
+                0x08063958                zfx69
+ .rodata        0x08063964       0x1c zfx70.o
+                0x08063974                zfx70
+ .rodata        0x08063980       0x20 zfx71.o
+                0x08063994                zfx71
+ .rodata        0x080639a0       0x1c zfx72.o
+                0x080639b0                zfx72
+ .rodata        0x080639bc       0x1c zfx73.o
+                0x080639cc                zfx73
+ .rodata        0x080639d8       0x20 zfx74.o
+                0x080639ec                zfx74
+ .rodata        0x080639f8       0x20 zfx75.o
+                0x08063a0c                zfx75
+ .rodata        0x08063a18       0x28 zfx76.o
+                0x08063a34                zfx76
+ .rodata        0x08063a40       0x44 zfx77.o
+                0x08063a78                zfx77
+ .rodata        0x08063a84       0x1c zfx78.o
+                0x08063a94                zfx78
+ .rodata        0x08063aa0       0x20 zfx79.o
+                0x08063ab4                zfx79
+ .rodata        0x08063ac0       0x1c zfx80.o
+                0x08063ad0                zfx80
+ .rodata        0x08063adc       0x1c zfx81.o
+                0x08063aec                zfx81
+ .rodata        0x08063af8       0x1c zfx82.o
+                0x08063b08                zfx82
+ .rodata        0x08063b14       0x20 zfx83.o
+                0x08063b28                zfx83
+ .rodata        0x08063b34       0x24 zfx84.o
+                0x08063b4c                zfx84
+ .rodata        0x08063b58       0x20 zfx85.o
+                0x08063b6c                zfx85
+ .rodata        0x08063b78       0x34 zfx86.o
+                0x08063ba0                zfx86
+ .rodata        0x08063bac       0x1c zfx87.o
+                0x08063bbc                zfx87
+ .rodata        0x08063bc8       0x24 zfx88.o
+                0x08063be0                zfx88
+ .rodata        0x08063bec       0x20 zfx89.o
+                0x08063c00                zfx89
+ .rodata        0x08063c0c       0x20 zfx90.o
+                0x08063c20                zfx90
+ .rodata        0x08063c2c       0x24 zfx91.o
+                0x08063c44                zfx91
+ *(.rodata.*)
+ .rodata.end    0x08063c50        0x4 C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SndMonDat.o
+                0x08063c50                seg_rodata_end
+ *(.gnu.linkonce.r*)
+
+.rodata1
+ *(.rodata1)
+                0x08063d54                .=(ALIGN(0x100)+(.&0xff))
+
+.data           0x08063d54        0x0
+ *(.data)
+ *(.data.*)
+ *(.gnu.linkonce.d*)
+
+.data1
+ *(.data1)
+
+.ctors
+ EXCLUDE_FILE ( *crtend.o )*(.ctors)
+ *(SORT(.ctors.*))
+ *crtend(.ctors)
+
+.dtors
+ EXCLUDE_FILE ( *crtend.o )*(.dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+
+.got
+ *(.got.plt)
+ *(.got)
+
+.dynamic
+ *(.dynamic)
+
+.sdata
+ *(.sdata)
+ *(.sdata.*)
+                0x08063d54                _edata=.
+                0x08063d54                PROVIDE (edata, .)
+                0x08063d54                __bss_start=.
+                0x08063d54                __bss_start__=.
+
+.sbss
+ *(.sbss)
+ *(.scommon)
+
+.bss            0x03000000     0x33a0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x03000000      0x2d0 SoundDat.o
+ *(.bss.*)
+ .bss.code      0x030002d0      0x400 m4aLib.o
+                0x030002d0                SoundMainBuf
+ *(COMMON)
+ COMMON         0x030006d0     0x1140 m4aLib.o
+                                  0x0 (size before relaxing)
+                0x030006d0                m4a_sound
+                0x03001680                ExtMPlyJmpTbl
+                0x03001710                m4a_cgbchn
+ COMMON         0x03001810     0x1af4 C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.o
+                                  0x0 (size before relaxing)
+                0x03001810                c_bit
+                0x03001814                p_rev
+                0x03001818                p_bit
+                0x0300181c                c_mvg
+                0x03001820                AvrLinC
+                0x03001824                c_mvo
+                0x03001828                w_midibuf
+                0x0300182c                vcount
+                0x03001830                Cont
+                0x03001834                xcmdn
+                0x03001838                MaxLin
+                0x0300183c                c_mch
+                0x03001840                AvrLinT
+                0x03001844                r_midibuf
+                0x03001848                Trg
+                0x0300184c                c_rev
+                0x03001850                sysex
+                0x03001854                MaxChnC
+                0x03001860                c_song
+                0x03001870                c_fre
+                0x03001874                KeySpd
+                0x03001878                p_mch
+                0x03001880                midibuf
+                0x03001980                IntrMainBuf
+                0x03002180                MaxChn
+                0x03002184                c_mpr
+                0x03002190                midi_ma
+                0x030021d0                midi_ta
+                0x030026d0                runst
+                0x030026d4                KeyRep
+                0x030026e0                OamBak
+                0x03002ae0                p_song
+                0x03002af0                p_fre
+                0x03002b00                BgBak
+                0x03003300                CurtCurs
+ *fill*         0x03003304        0xc
+ COMMON         0x03003310       0x90 SoundDat.o
+                                  0x0 (size before relaxing)
+                0x03003310                m4a_mplay000
+                0x03003350                m4a_mplay001
+                0x03003390                m4a_memacc_area
+                0x030033a0                .=ALIGN(0x4)
+                0x030033a0                .=ALIGN(0x4)
+                0x030033a0                _end=.
+                0x030033a0                _bss_end__=.
+                0x030033a0                __bss_end__=.
+                0x030033a0                PROVIDE (end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.stack          0x00080000        0x0
+                0x00080000                _stack=.
+ *(.stack)
+OUTPUT(C:\Projects\AGB\Projects\spongebobsquarepants\Sound\SoundMon.elf elf32-littlearm)

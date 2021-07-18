@@ -1,0 +1,127 @@
+;Codewright Project File (do not remove or modify this line)
+[ProjInit]
+ProjSetConfigFlags=0x00010140
+ProjCheckPath='C:\Projects\Gameboy\4Climax\SBSPants\Source\\'
+
+[Files]
+C:\Projects\Gameboy\4Climax\SBSPants\Source\Crt0.s
+C:\Projects\Gameboy\4Climax\SBSPants\Source\Game.c
+C:\Projects\Gameboy\4Climax\SBSPants\Source\Game.h
+C:\Projects\Gameboy\4Climax\SBSPants\Source\Includes.h
+C:\Projects\Gameboy\4Climax\SBSPants\Source\Main.c
+C:\Projects\Gameboy\4Climax\SBSPants\Source\Main.h
+C:\Projects\Gameboy\4Climax\SBSPants\Source\Rom_Header.s
+C:\Projects\Gameboy\4Climax\SBSPants\Source\Scroll_Engine.c
+C:\Projects\Gameboy\4Climax\SBSPants\Source\Scroll_Engine.h
+C:\Projects\Gameboy\4Climax\SBSPants\Source\Sinecos.c
+C:\Projects\Gameboy\4Climax\SBSPants\Source\Sinecos.h
+C:\Projects\Gameboy\4Climax\SBSPants\Source\SprEng_Common.c
+C:\Projects\Gameboy\4Climax\SBSPants\Source\SprEng_Common.h
+C:\Projects\Gameboy\4Climax\SBSPants\Source\SprEng_Control.c
+C:\Projects\Gameboy\4Climax\SBSPants\Source\SprEng_Control.h
+C:\Projects\Gameboy\4Climax\SBSPants\Source\SprEng_Display.c
+C:\Projects\Gameboy\4Climax\SBSPants\Source\SprEng_Display.h
+C:\Projects\Gameboy\4Climax\SBSPants\Source\Titles.c
+C:\Projects\Gameboy\4Climax\SBSPants\Source\Titles.h
+C:\Projects\Gameboy\4Climax\SBSPants\Source\TitlesData.h
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_Animate.c
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_Animate.h
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_SpongeBob.c
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Contours.c
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Contours.h
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\American.lan
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\English.lan
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\French.lan
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\German.lan
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Spanish.lan
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Text_Sys.c
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Text_Sys.h
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_Patrick.c
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_Platforms.c
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\StartUp.c
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\StartUp.h
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Collision.c
+C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Collision.h
+
+[State]
+SysSetCwd='C:\Projects\Gameboy\4Climax\SBSPants\Source'
+SrchSetFlags=0x041220ba
+FileSortMode=0x0
+StateWindowFrame=0,0,768,519,0x624935fa
+_StateWindow=22,22,681,381,0x00100018,'C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Game.c',26,154,244,4,20,12,46,26,126,176,8,4294967295,4294967295,1,11,'',13,0,48,0,10,281,0,0,538,252,249,439,1,400,0,26,26,26,26,538,538,538,538,26,80,0,253,224,14,433,1,208,1,6
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_SpongeBob.c',0x0400048e,175,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_Platforms.c',0x0400048e,38,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\StartUp.c',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_Patrick.c',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\English.lan',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Game.c',0x0400048e,439,1,25,'5 9','',0x0,'',1,72,1
+_StateBuffer='C:\Temp\Spongey Stuff\Exits.c',0x0400048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Collision.c',0x0400048e,84,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Collision.h',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Text_Sys.c',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Crt0.s',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Rom_Header.s',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Scroll_Engine.h',0x0400048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\TitlesData.h',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\StartUp.h',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Game.h',0x0400048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Includes.h',0x0400048e,19,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_Display.h',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Main.h',0x0400048e,22,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Titles.h',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_Control.h',0x0400048e,93,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_Common.h',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Sinecos.h',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Sinecos.c',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Titles.c',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Main.c',0x0400048e,102,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_Control.c',0x0400048e,66,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_Common.c',0x0400048e,44,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Scroll_Engine.c',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_Animate.h',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\Projects\Gameboy\4Climax\SBSPants\Source\Makefile',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_Animate.c',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_Display.c',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Contours.h',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Text_Sys.h',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Contours.c',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateHistory=FILELIST,'C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\English.lan','C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_Platforms.c','C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\SprEng_Patrick.c','C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\StartUp.h','C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\StartUp.c','C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Collision.c','C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\SOURCE\Collision.h','C:\Temp\Spongey Stuff\level.c','C:\Temp\Spongey Stuff\Exits.c'
+_StateHistory=SEARCH,'flipX','gPushScroll','gPushScrollY','LookSpeed','pAO->sp_size','oam_ptr','COLLISION_TILE_8','LCD_HEIGHT','Tilebank','TileBank'
+_StateHistory=REPLACE,'','LOOKSPEED','OAM_Ptr','TILEBANK'
+_StateHistory=XSYMBOL,'BuildScreen','UpdateScroll','Scroll2Position','SetBgTextControl','SCREEN_X_CHARS','TEMPOFFSET','PARALLAX_HEIGHT_ADJUST','WaitVBlank','InitScroll','ObjectControl2'
+_StateHistory=EDITFILE,'C:\Projects\Gameboy\4Climax\SBSPants\Source\Makefile','C:\Temp\Spongey Stuff\level.c','C:\Temp\Spongey Stuff\Exits.c'
+
+[Editor]
+VCSProject='"$/SpongeBob/Source", CAAAAAAA'
+VCSProjectPath='\DARKSTAR\Projects\SpongeBobAGB\agbvss,'
+VCSProjectLocalPath='C:\PROJECTS\GAMEBOY\4CLIMAX\SBSPANTS\Source'
+ClipboardSetTermStr='\r\n',0
+ClipboardEnableTermStr=1
+ClipboardSetSepStr='\r\n',0
+ClipboardEnableSepStr=1
+ScrapSetCount=1
+
+[Compiler]
+TagSetFile=''
+BrowseSetFile=''
+CompilerNewExt=.htm
+CompilerNewExt=.pas
+CompilerNewExt=.ini
+CompilerNewExt=.html
+CompilerNewExt=.txt
+TagSetCmd='${HOME}${WTAGS} -oc -d -t${TAGFILE}.tag -p${TAGFILE}.ptg',0x8000060
+
+[VersionControl:PVCS]
+VCSSetCmd=VCS_CHECKIN_ID,'put -n -T@%Q -M@%Q %b%e',0x8000040
+VCSSetCmd=VCS_CHECKINLOCK_ID,'put -n -T@%Q -M@%Q -l %b%e',0x8000040
+VCSSetCmd=VCS_CHECKOUT_ID,'get -y %b%e',0x8000040
+VCSSetCmd=VCS_CHECKOUTLOCK_ID,'get -y -l %b%e',0x8000040
+VCSSetCmd=VCS_CHECKLOCK_ID,'vcs -y -l %b%e',0x8000040
+VCSSetCmd=VCS_CHECKUNLOCK_ID,'vcs -y -u %b%e',0x8000040
+VCSSetCmd=VCS_CHECKLABEL_ID,'vcs -y -v"${VCSLABEL}" %b%e',0x8000040
+VCSSetCmd=VCS_CHECKLOG_ID,'vlog %b%e',0x8000040
+VCSSetCmd=VCS_CHECKPROP_ID,'vlog -b %b%e',0x8000040
+VCSSetCmd=VCS_CHECKDIFF_ID,'vdiff -r %b%e',0x8000040
+VCSSetCmd=VCS_CHECKMENU_ID,'pvcsvmwn',0x8000000
+VCSSetCmd=VCS_ADD_ID,'vcs -i -t@%Q %b%e',0x8000040
+VCSSetCmd=VCS_REMOVE_ID,'del /f %b%{??v|___}e',0x8000040
