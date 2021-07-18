@@ -1,0 +1,555 @@
+==================================
+ ZSNES Frequently Asked Questions
+==================================
+
+SOUND COMPATIBILITY ISSUES:
+อออออออออออออออออออออออออออ
+Q : How come I don't get any sound?
+Q : Why is zsnes giving me an error that it can't support stereo sound?
+Q : When do you think you'll support GUS/PAS sound cards?
+Q : I get a sound initialization error using my SB Live! (or any other PCI
+    card)  How do I fix it?
+
+TRANSPARENCY ISSUES:
+ออออออออออออออออออออ
+Q : Are there transparencies in ZSNES?
+Q : How do you enable transparencies?
+Q : There is this layer of fog blocking my view.  What's wrong?
+
+COMPATIBILITY ISSUES:
+อออออออออออออออออออออ
+Q : Why doesn't *name of game* work on zsnes?
+Q : Can you get *name of game* working by the next release?
+Q : Why is *name of game* not working in v.*version #* of zsnes?  It
+    was working before.
+Q : When do you think you will emulate the *DSP/SFX/C4* chip?  My favorite
+    game *name of game with chip* won't run without it.
+Q : This game tells me that it is not compatible with the MultiTap (or an
+    external device attached).  What should I do?
+Q : How do I improve the compatibility of ZSNES?
+Q : How come Mario RPG doesn't work?
+
+SPEED ISSUES:
+อออออออออออออ
+Q : Why is zsnes slow?
+Q : How do I speed up zsnes?
+Q : Can you please make zsnes faster?
+Q : Can you implement dynamic recompilation into zsnes?
+Q : Why does the game slow down even though I'm using auto frame rate and
+    the FPS is pretty high?
+
+KEYBOARD/JOYSTICK ISSUES:
+อออออออออออออออออออออออออ
+Q : Why can't I press more than 2 keys at a time?
+Q : How come my sidewinder pad doesn't work?
+Q : How come the graphics are really screwed up?
+Q : Why doesn't my Gamepad Pro work?
+Q : Why doesn't my joystick work anymore?
+Q : How come my joystick keeps holding in one direction?
+Q : How do I use both my Keyboard and Joystick for the 1st player like v0.400?
+Q : How come the joystick doesn't work in v0.635 when it worked in v0.400?
+
+IN-GAME SOUND ISSUES:
+อออออออออออออออออออออ
+Q : Why is the sound in zsnes not very good?
+Q : Why does ZSNES produce a lot of static?
+Q : How come stereo is reversed?
+
+CHEAT ISSUES:
+อออออออออออออ
+Q : How come the game genie codes don't work?  They used to work in v.400.
+Q : How do I use .CHT files?
+
+FREEZING/CRASHING ISSUES:
+อออออออออออออออออออออออออ
+Q : How come ZSNES freezes when I run it under pure dos?
+Q : When I load a ROM, how come ZSNES crashes?
+Q : How come zsnes freezes when it tries to enter the GUI?
+
+MISC:
+อออออ
+Q : How does the auto .IPS patching feature work?
+Q : Does the modem mode work well?
+Q : Does the IPX support work well?
+Q : What is the difference between ZSNES v0.???a and v0.???c?
+Q : Where do I get the games?
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+************* SOUND COMPATIBILITY ISSUES: *************
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : How come I don't get any sound?
+
+A : There could be several situations :
+
+    1.) You haven't enabled sound.  You can enable sound by either :
+        - Editing zsnes.cfg using by notepad or edit.exe and changing
+          Sound = 0 to Sound = 1
+        - Running zsnes through the commandline -s
+    2.) Try ZSNES Version a instead of c (eg.  If you have ZSNES v0.900c,
+          download ZSNES v0.900a)
+    3.) Your windows 95 doesn't create a SET BLASTER string.  To verify this,
+          type SET in DOS and look for a string starting with BLASTER=
+          If such a string exists, then this is not your problem.
+    4.) You don't have a SB2.0 compatible sound card.  If this is your
+          case, then there is nothing you can do at the moment.  ZSNES
+          uses auto-initialization mode for sound which requires SB2.0+
+    5.) Your SB IRQ conflicts with another device.  If this is the case,
+          read the following message below from lil of Emulation Camp.
+          Thanks to lil for this great message!
+    6.) Zsnes doesn't like your sound card
+
+
+*------ Start Message -------------------------------------------*
+
+Posted by lil of Emulation Camp the 02/21/98 at 21:21
+
+          It's well known that alot of us, myself included, have
+          had problems getting sound to work in zsnes. No matter
+          what options we use, stereo, force 8-bit, sound rate,
+          nothing changes. Well at long last I present the
+          solution to all our problems. :-)
+
+          I will explain how I got it working today. I have a
+          sound blaster 64 awe (not gold) so my example should
+          work for everyone else, if it doesn't, don't complain
+          to me, I'm not a hardware guru.
+
+          First, its not a totally a problem with the zsnes code.
+          It's more of a hardware configuration problem. All you
+          have to is change the IRQ of your sound card to 5 and
+          it should work.
+
+          If you don't know how to do that, here's how to do it
+          in Windows 95:
+
+            1. Press Start, goto Settings, and select Control
+               Panel.
+            2. Double Click the System icon
+            3. Click the Device Manager tab on the System
+               Properties screen
+            4. In the list box, double click on Sound, video, and
+               game controllers
+            5. Double click on the sound blaster driver in the
+               sub-list
+            6. Click on the Resources tab in the Properties
+               screen
+            7. Double Click on Interrupt Request in the list box
+            8. In the Value box, change the number to 05
+               (zero+five). This is hexadecimal so don't forget
+               to put the zero.
+            9. If it says theres a conflict in the Conflict
+               Information Box you've got a problem, otherwise
+               click Ok and reboot your computer, sound should
+               work when you run zsnes. (Assuming you have sound
+               enabled in the zsnes.cfg or use the -s parameter
+               on the command-line.)
+           10. If you do have a conflict you can try changing the
+               IRQ of the device thats already using irq 5 using
+               the same steps listed above, but its dangerous if
+               you don't know what you are doing. In fact, i had
+               my modem on 5, moved it to 4 which conflicted with
+               my mouse, so when I got on the internet my mouse
+               froze. My modem only works on irq 4 and 5 when its
+               in com 3, so I had to open up the case and move
+               the modem to com 2, which ran on the unused irq 3.
+               And I had to search for new hardware in Windows of
+               course. I don't suggest moving hardware around if
+               you aren't experienced with computers.
+           11. You may need to edit your autoexec.bat at the DOS
+               Prompt. This is what my blaster line looks like
+               and yours should look similar if you did what I
+               did.
+
+                    SET BLASTER=A220 I5 D1 H5 P330 E620 T6
+
+               The only thing you need to change is the I5
+               because that tells you what IRQ you are using.
+               (Which was just changed to five.)
+           12. Close all windows and reboot when your done.
+
+          I hope that's enough explanation to get it working for
+          you. Its worked for two others already, so it appears
+          to be a feasible solution. Just don't forget to change
+          that zsnes.cfg file! ^_^
+
+          zsknight and _Demo_: Feel free to put this info in the
+          next zsnes readme.
+
+          Thanks goes out to GB for helping me with the device
+          setup.
+
+          - lil of Emulation Camp
+
+*------ End Message ---------------------------------------------*
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Why is zsnes giving me an error that it can't support stereo sound?
+    I have an SB Pro/Compatible which has stereo sound.
+
+A : Zsnes doesn't support 8-bit stereo sound.  You need a 100% SB16 compatible
+    card to support stereo.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : When do you think you'll support GUS/PAS sound cards?
+
+A : We've considered implementing those sound cards, but a lack of time
+    and also by the fact that we haven't really touched those cards before
+    prevents us from implementing it.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : I get a sound initialization error using my SB Live! (or any other PCI
+    card)  How do I fix it?
+
+A : Here is a solution : (Thanks CyberGodz for the post on the wwwboard!)
+
+SB Live uses what is known as a NMI or Non Maskable Interrupt to emulate
+SB 16 sound. Don't ask me exactly what it does (it's a type of IRQ) but
+that is pretty much all it is good for.
+
+The problem is that many boards either lack NMI support or don't have it
+enabled. (No NMI = No Dos Support)
+
+To try and solve this problem do the following :
+
+1. Check your BIOS. If there is an option for RAM Parity Checking ENABLE IT.
+It usually turns on NMI support. If there is something that says NMI turn it
+on
+
+2. If you don't find anything in your BIOS, then go to your motherboards
+website and download the latest BIOS flash. Install it and try your dos
+sound. (You may still have to enable the stuff in the BIOS after)
+
+3. Failing the first two things you will either have to get a new
+motherboard or install a SB 16, or other Compatable sound card alongside
+the Live. Just attach a cable from the Line Out of the SB 16 to the Line In
+of the Live. Enable line in on the mixer of your SB Live and it should route
+the sound through the old sound card. (Don't use the SPDIF to connect the
+cards if you have one. Wave sound dosn't pass through SPDIF only MIDI)
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+************* TRANSPARENCY ISSUES: *************
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Are there transparencies in ZSNES?
+
+A : Yes.  Transparencies are in zsnes.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : How do you enable transparencies?
+
+A:  You first need a vesa 2.0 driver for dos.  SDD6.0+ should include a file
+    called univbe.exe in its directory.  Run it under dos, then run zsnes.exe
+    using -v 3 or -v 5 (or run it under a 65536 color video mode).  Running
+    with transparencies on is definitely slower because of the extra math
+    equations, memory, and video space involved.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : There is this layer of fog blocking my view.  What's wrong?
+
+A : You need to either enable transparencies (see above) or you can
+    disable certain backgrounds by pressing the 1,2,3, or 4 keys.  If
+    you get lost while pressing those keys, press 6 to re-enable all
+    the backgrounds.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+************* COMPATIBILITY ISSUES: *************
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Why doesn't *name of game* work on zsnes?
+
+A : Getting the compatibility higher is a very hard task to do.  We're always
+    trying to get more games working.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Can you get *name of game* working by the next release?
+
+A : We're always trying, but we can never guarantee a specific game will be
+    working because of the difficulties involved in bug fixing.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Why is *name of game* not working in v.*version #* of zsnes?  It
+    was working before.
+
+A : Whenever we change something in the emulation, whether it's optimisation
+    or bug fixes, it is always likely to have caused a problem elsewhere.
+    Usually, these problems aren't discovered until after a release.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : When do you think you will emulate the *DSP/SFX/C4* chip?  My favorite
+    game *name of game with chip* won't run without it.
+
+A : We will consider emulating extra chips only if decent information on
+    those chips are found.  However, even if we find info on them, we
+    cannot guarantee to be able to implement them.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : This game tells me that it is not compatible with the MultiTap.
+    What should I do?
+
+A : Set both Player 3 and Player 4's input device to 'None'
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : How do I improve the compatibility of ZSNES?
+
+A : Turning on sound helps a lot here.  If you can't enable sound, run
+    zsnes using the commandlines -s and -dd.  Also, try to keep the % of
+    execution at 100%.  If a game still doesn't work, try tweaking
+    the percentage of execution to both 120% or 80% in zsnes.cfg.  If
+    that still doesn't work, then it's either a corrupt rom, a game that
+    requires a special chip, or a bug in zsnes.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : How come Mario RPG doesn't work?
+
+A : If the emulator crashes, then your rom file is corrupt.  If it only
+    displays a blank screen, then you need to enable sound (or use -s -dd
+    as the commandlines when running zsnes under dos)
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+************* SPEED ISSUES: *************
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Why is zsnes slow?
+
+A : Emulating a snes is slow because it is a complex system.  Also, zsnes
+    is using a line by line engine which is slow, but should be accurate.
+    You can try switching to the tile/line engine which can be accessed by
+    pressing '8', but the engine itself is quite limited in the number of
+    features it supports and isn't supported in all graphic resolutions.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : How do I speed up zsnes?
+
+A : If you have a lower end system such as a 486, you can use -Q to speed up
+    emulation with sound enabled.  The drawback is that you get lower
+    quality sound which can get sometimes get annoying.  Running zsnes
+    under pure dos instead of in a windows box would help for low-end systems.
+    Also try running zsnes using the new graphics engine which should give
+    a decent speed increase, but the lack of features that it supports
+    prevents certain games to look correct.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Can you please make zsnes faster?
+
+A : We're always trying and there are still a lot of room left for
+    optimisation, but a lack of time keeps us from implementing them.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Can you implement dynamic recompilation into zsnes?
+
+A : There is no plans to implement it since it doesn't seem necessary.
+    The snes only uses a 3mhz cpu compared to say a 33mhz on a playstation
+    or a 93mhz on an n64.  Implementing a dynamic recompilation engine will
+    be hard work and won't improve performance by much.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Why does the game slow down even though I'm using auto frame rate and
+    the FPS is pretty high?
+
+A : A game slows down like that when it executes its code beyond the speed of
+    cpu emulation that zsnes currently handles.  To reduce such slowdowns,
+    increase the percentage of execution by using either -p or editing
+    zsnes.cfg.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+************* KEYBOARD/JOYSTICK ISSUES: *************
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Why can't I press more than 2 keys at a time?
+
+A : It's mainly the limitation of the PC Keyboard.  If you want to press
+    more than 2 keys at a time, either use a joystick or change the keyboard
+    keys around until you find a combination where you can press more than
+    2 keys at a time.  Another technique that works is to set multiple
+    buttons to a single key.  That way, pressing that key presses multiple
+    buttons at the same time.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : How come my sidewinder pad doesn't work?
+
+A : Try pressing the mode button twice when in zsnes.  If that didn't work,
+    then try each of the following :
+      - Disable the Win9x Sidewinder Profiler
+      - Fully disable the Win9x Sidewinder Drivers by going to
+        Control Panel/Game Controllers.  Then remove the sidewinder
+        (Thanks Scarlet-Slider for this info!)
+      - Run zsnes under pure dos
+      - Try clicking Sidewinder Fix in the Options menu of the GUI
+      - Make sure your sidewinder is plugged in and not broken
+    Then try pressing the mode button twice
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : How come the graphics are really screwed up?
+
+A : You probabily have the New Graphics Engine enabled.  Just disable it
+    in the options menu.  If not, then it's a problem with the emulation.
+    You can try running the game using -p 80 or -p 120 in DOS to see if
+    it fixes it, but it might not be the solution.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Why doesn't my Gamepad Pro work?
+
+A : First, be sure to have your Gamepad Pro set on 'GrIP' mode.  Then
+    set the input device as Gamepad Pro P0
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Why doesn't my joystick work anymore?
+
+A : You might have accidently clicked the 'Use Joystick Port 209' check box.
+    Just uncheck it.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : How come my joystick keeps holding in one direction?
+
+A : That happens when you hold a direction when ZSNES starts up.
+    If that happens, then exit ZSNES and reload to recalibrate.  Clicking
+    on SET in the input device window also calibrates the joystick, but
+    it also resets the controls to the default joystick settings.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : How do I use both my Keyboard and Joystick for the 1st player like
+    v0.400?
+
+A : In the GUI, enter the CONFIG -> OPTIONS menu.  Then check
+    'USE Pl1/2 AS Pl3/4'.  Once you've done that, Player 3 controls
+    will control Player 1 so if you have joystick set on Player 1,
+    set Player 3 as keyboard.  This disables multitap emulation however.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : How come the joystick doesn't work in v0.600+ when it worked in v0.400?
+
+A : You're probabily setting the controls from zsnes.cfg.  Because of the
+    many changes of the controller routines from v0.400 to v0.600, joystick
+    definition cannot be changed from the configuration file anymore.  Either
+    change it from the GUI, use commandlines, or import a .cfg file generated
+    from zsnes v0.400 or less with the joystick changes.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+************* IN-GAME SOUND ISSUES: *************
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Why is the sound in zsnes not very good?
+
+A : It's because zsnes is still lacking some sound features.  Also, avoid
+    enabling the sound buffer since that degrades the sound.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Why does ZSNES produce a lot of static?
+
+A : Try reducing your sampling rate or disable stereo sound
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : How come stereo is reversed?
+
+A : Click on the box by 'Reverse Stereo' in the Sound configuration in the
+    GUI
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+************* CHEAT ISSUES: *************
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : How come the game genie codes don't work?  They used to work in v.400.
+
+A : You probabily didn't insert the '-'.  Otherwise, try clicking on the FIX
+    button once while the highlight is over the code.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : How do I use .CHT files?
+
+A : Copy the .CHT file to the ROM Directory or if you have a save
+    directory defined, copy it to the Save Directory.  Then rename
+    the .CHT file if necessary so that the filename before the . matches
+    the ROM file.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+************* FREEZING/CRASHING ISSUES: *************
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : How come ZSNES freezes when I run it under pure dos?
+
+A : Try loading your mouse driver or run zsnes using -j.  For the most
+    compatible result, use the Microsoft Mouse driver if possible
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : When I load a ROM, how come ZSNES crashes?
+
+A : It could be that ZSNES doesn't recognize your sound configuration
+    so to fix it, disable sound or try changing your sound configuration.
+    It could also be that the ROM you're loading isn't compatible with
+    ZSNES.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : How come zsnes freezes when it tries to enter the GUI?
+
+A : Run zsnes using the commandline -j
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+************* MISC: *************
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : How does the auto .IPS patching feature work?
+
+A : The auto .IPS feature works by copying the .IPS file to the directory
+    of your ROM file or if you have a save directory defined, then the
+    .IPS file goes into the save directory.  Next, rename the .IPS file
+    so that it matches filename (eg.  If your ROM filename is THISGAME.SMC,
+    then your .IPS filename is THISGAME.IPS.)
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Does the modem mode work well?
+
+A : It should work quite well.  It is recommended that both sides has
+    a modem that uses a 16550a UART, otherwise the game may go out of sync.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Does the IPX support work well?
+
+A : No.  It does not work very well unless you have a very fast LAN.
+    Otherwise, the game will easily go out of sync.  We will try to address
+    this problem in the future.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : What is the difference between ZSNES v0.???a and v0.???c?
+
+A : ZSNES v0.???a lacks DSP1 support (eg. Mario Kart), IPX support (Netplay),
+    and .ZIP support.  However, there are less hardware compatibility
+    problems with ZSNES v0.???a and also a lower memory requirement.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+Q : Where do I get the games?
+
+A : The ZSNES Team will *NOT* provide any games or any links to games.
+
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
