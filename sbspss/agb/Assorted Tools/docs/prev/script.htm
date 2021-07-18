@@ -1,0 +1,517 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../html/agb.css">
+		<!-- Edited by Ron D. 1/7/2000 -->
+		<title>The script format</title>
+	</head>
+
+	<body>
+		<h2>About Scripts</h2>
+		<p><font color="red">This section explains how to describe scripts to view a variety of animations.</font></p>
+		<h3>Composition</h3>
+		<p>Each object is in chunk format.<br>
+		</p>
+		<p>The script is composed of a header chunk and a variety of object chunks.<br>
+		</p>
+		<h3>Chunk Format</h3>
+		<pre>Node type &quot;node name&quot;
+{
+    Variable name value;
+    ...
+}</pre>
+		<h3>Header Chunk</h3>
+		<pre>Header
+{
+    Objects &quot;obj1&quot;;
+    ObjectPalette &quot;pal1&quot;;
+    BGs &quot;bg1&quot;;
+    BGPalette &quot;bgpal&quot;;
+}
+//
+//  Specifies active objects and default palettes
+//
+//    Parameters:
+//  Objects    Active objects.
+//  ObjectPalette    Default palette for objects.
+//  BGs        Active BGs
+//  BGPalette        Default palette for BG.
+//
+//    Node description:
+//  Specifies the root object and root BG to preview
+//</pre>
+		<h3>Chunk Types and Explanations</h3>
+		<p><font color="red">In the following explanations, variables that are &quot;not implemented&quot; are not reflected in the Previewer, even when they are specified.</font></p>
+		<p><a href="#disp_object"><b>Display Group</b></a><br>
+		</p>
+		<ul>
+			<li><a href="#object">Object</a><br>
+			<li><a href="#background">Background</a><br>
+		</ul>
+		<p><a href="#type_image"><b>Image Group</b></a><br>
+		</p>
+		<ul>
+			<li><a href="#image">Image</a><br>
+			<li><a href="#palette">Palette</a><br>
+			<li><a href="#character">Character</a><br>
+			<li><a href="#mapimage">MapImage</a><br>
+			<li><a href="#mapcharacter">MapCharacter</a><br>
+		</ul>
+		<p><a href="#type_animation"><b>Animation Group</b></a><br>
+		</p>
+		<ul>
+			<li><a href="#animation">Animation</a><br>
+			<li><a href="#switch">Switch</a><br>
+			<li><a href="#multiswitch">MultiSwitch</a><br>
+			<li><a href="#flipbook">Flipbook</a><br>
+			<li><a href="#rotation">Rotation</a><br>
+			<li><a href="#scale">Scale</a><br>
+			<li><a href="#offset">Offset</a><br>
+			<li><a href="#move">Move</a><br>
+			<li><a href="#paletteanimation">PaletteAnimation</a><br>
+		</ul>
+		<pre><a name="disp_object"></a>----------------------- Display group --------------------------
+
+<a name="object"></a>
+Object &quot;obj1&quot;
+{
+    Width   16;
+    Height  16;
+    PaletteNumber  0;
+    Flip     0;
+    Mode     0;
+    Image   &quot;im1&quot;;
+    Offset  0 0;
+    MaxTime 20;
+    MaxState 6;
+    Animation &quot;anim1&quot;;
+    Children &quot;obj2&quot;;
+}
+//
+//  Specifies an object
+//
+//    Parameters:
+//  Width     The width of the object.  If omitted, the node width 
+//           specified by &quot;Image&quot; is used.
+//  Height    The height of the object.  If omitted, the same as above.
+//  PaletteNumber  The palette number.  If omitted, becomes 0.
+//               If not a 4bit image, forcibly set to 0. 
+//  Flip      Object reversal.  If omitted, becomes 0.
+//               0 : Do not flip
+//               1 : Flip right-left
+//               2 : Flip up-down
+//               3 : Flip both horizontally and vertically
+//  Mode      Specifies the mode of the object.  If omitted, becomes 0.
+//               0 : Normal mode
+//               1 : Semi-transparent or translucent
+//               2 : Object window
+//            (<b>Not implemented</b>)
+//  Image     The default image node.  Cannot be omitted.
+//          The 0th picture in this node becomes the default character.
+//           Specifies an image or a character.
+//  Offset    The relative position of the object.
+//           Used when child nodes are used (<b>Not implemented</b>)
+//  MaxTime   Sets the maximum time for the animation.
+//  MaxState  Specifies the number of animations.
+//  Animation Specifies the animation node
+//  Children  Child objects (<b>Not implemented</b>)
+//
+//    Node description:
+//  Specifies sprites.
+//  Switching states in the program also switches the animation.
+//
+
+<a name="background"></a>
+Background &quot;map1&quot;
+{
+    MapImage &quot;map_im1&quot;;
+    MapCharacter &quot;map_ch1&quot;;
+    Start 0 0;
+    Loop &quot;on&quot; &quot;on&quot;;
+    VramSize 256 256;
+    MaxTime 0;
+    MaxState 0;
+    Children ;
+}
+//
+//  Specifies BG.
+//
+//    Parameters:
+//  MapImage  Map configuration data node.
+//  MapCharacter  Map character node.
+//  Start     Map's starting position.  00 if omitted.  
+//  Loop      Specifies whether to loop the map horizontally 
+//            and vertically (<b>not implemented</b>) 
+//  VramSize   Specifies the Vram width and height.  256 256 if omitted.
+//            <font color="red">Use width of 256 for text BG or problems will arise</font>
+//  MaxTime   Sets the maximum time for the animation.
+//  MaxState  Specifies the number of animations.
+//  Children  Child nodes.  Specifies animation and switch (<b>not implemented</b>).
+//
+//    Node description:
+//  Specifies BG.
+//
+
+<a name="type_image"></a>
+----------------------- Image group --------------------------
+
+<a name="image"></a>
+Image &quot;img1&quot; (<b>not implemented</b>)
+{
+    Width 16;
+    Height 16
+    BitCount 8
+    Images  5,4,13,24,...,
+}
+//
+//  Specifies an image
+//
+//    Parameters:
+//  Width     Image width.
+//  Height    Image height.
+//  BitCount  Number of bits per dot.  Presently supports 4,8,16.
+//  Images    The image data.  Cannot be omitted.
+//
+//    Node description:
+//  This node normally processes values that are output during a dump.
+//  
+//
+
+
+<a name="palette"></a>
+Palette &quot;pal1&quot;
+{
+    NumOfColors 16;
+    Files  &quot;image1.bmp&quot;
+           &quot;image2.bmp&quot;
+           &quot;image3.bmp&quot;
+           &quot;image4.bmp&quot;
+           &quot;image5.bmp&quot;;
+}
+//
+//  Specifies the palette
+//
+//    Parameters:
+//  NumOfColors Specifies the number of colors. The default is 256.
+//  Files       Specifies the input files.
+//              Currently supports .bmp and .act files.
+//
+//    Node description:
+//  Reads palette from file and outputs as image node.
+//  NumOfColors also indicates the amount of change during a palette animation. 
+//
+
+
+<a name="character"></a>
+Character &quot;ch1&quot;
+{
+    Width 16;
+    Height 16;
+    BitCount 8;
+    Files  &quot;image1.bmp&quot;
+           &quot;image2.bmp&quot;
+           &quot;image3.bmp&quot;
+           &quot;image4.bmp&quot;
+           &quot;image5.bmp&quot;;
+}
+//
+//  Specifies a character
+//
+//    Parameters:
+//  Width     Specifies the per-image width.
+//  Height    Specifies the per-image height.
+//  BitCount  Specifies the bit depth of the image.
+//  Files     Specifies the input files.
+//            Currently supports .bmp files.
+//
+//     Node description:
+//   Specifies objects and BG characters.
+//   If Width and Height are omitted, their values are set
+//  to the width and height of the first file.
+//   If BitCount is omitted, it is determined from .bmp.
+//   Output as an image node.
+//
+
+
+<a name="mapimage"></a>
+MapImage &quot;map_im1&quot;
+{
+    Mode &quot;Text&quot;;
+    PaletteNumber 12;
+    Files &quot;sample/bg1.bmp&quot;;
+}
+//
+//  Specifies the BG data
+//
+//    Parameters:
+//  Mode      Specifies the BG mode.
+//           When you specify &quot;Text&quot; it becomes text mode.
+//  Files     Specifies the input files.
+//            Currently supports .bmp files.
+//
+//    Node description:
+//  Specifies the map configuration data.
+//  If it is a 256-color image, entering
+//         Mode &quot;Text&quot;;
+//  sets it to text mode.  Omitting this 
+//  sets it to scaling-rotation mode.
+//  If it is a 16-color image, you can
+//  specify the palette number by entering
+//   PaletteNumber 10;
+//  
+//  Output as an image node.
+//
+
+
+<a name="mapcharacter"></a>
+MapCharacter &quot;map_ch1&quot;
+{
+    Files &quot;sample/bg1.bmp&quot;;
+}
+//
+//  Specifies a BG character
+//
+//    Parameters:
+//  Files     Specifies the input files.
+//            Presently supports .bmp files.
+//
+//    Node description:
+//  Specifies the map configuration data.
+//  This differs from Character in that the width and height are set to 8*8.
+//  Also, the bit depth is determined from the file.
+//  Output as an image node.
+//
+
+
+<a name="type_animation"></a>
+--------------------- Animation group ------------------------
+
+<a name="animation"></a>
+Animation &quot;anim1&quot;
+{
+    Children
+<spacer type="horizontal" size="42">&quot;m_sw1&quot;
+<spacer type="horizontal" size="42">&quot;m_sw2&quot;
+<spacer type="horizontal" size="42">&quot;sw1&quot;;
+}
+//
+//  Defines an animation.
+//
+//    Parameters:
+//  Children    Specifies the animation evaluation node
+//
+//    Node description
+//  Specifies the node for evaluating animations
+//
+
+
+<a name="switch"></a>
+Switch &quot;sw1&quot;
+{
+    States
+<spacer type="horizontal" size="42">0 &quot;rotation0&quot;
+<spacer type="horizontal" size="42">1 &quot;rotation1&quot;
+<spacer type="horizontal" size="42">2 &quot;rotation2&quot;
+<spacer type="horizontal" size="42">3 &quot;rotation3&quot;;
+}
+//
+//  Specifies a switch
+//
+//    Parameters:
+//  States    State and evaluation node combination
+//
+//    Node description:
+//  Used to switch evaluation nodes depending on the state
+//
+
+
+<a name="multiswitch"></a>
+MultiSwitch &quot;multi_sw1&quot;
+{
+    Case 1 &quot;rotation1&quot;;
+    Case 2 &quot;scale1&quot;;
+    Case 3 &quot;offset1&quot;;
+    Case 4 &quot;move1&quot;;
+    Case 5 &quot;move2&quot;;
+}
+//
+//  Specifies switches
+//
+//    Parameters:
+//  Case    State and evaluation mode combination
+//
+//   Node explanation:
+//  A fortified version of &quot;Switch.&quot; Can relate numerous
+//  evaluation nodes to one state. 
+//
+
+
+<a name="flipbook"></a>
+FlipBook &quot;fb1&quot;
+{
+    MaxTime 20;
+    Image &quot;image1&quot;;
+    Keys
+<spacer type="horizontal" size="42"> 0  0 0
+<spacer type="horizontal" size="42"> 4  5 0
+<spacer type="horizontal" size="42"> 8  4 0
+<spacer type="horizontal" size="42">12  5 1
+<spacer type="horizontal" size="42">16  7 0;
+}
+//
+//  Specifies a flip book animation.
+//
+//   Parameters:
+//  MaxTime    Animation loop time
+//  Image      Image data
+//  Keys       Animation keys
+//            In order: Time, Frame, Flip
+//
+//    Node description:
+//  Flip book animation.  
+//  Also supports flip data. 1: horizontal 2: vertical 3: flip both ways
+//  In the above example, there is a horizontal flip when time = 12
+//
+
+
+<a name="rotation"></a>
+Rotation &quot;rot1&quot;
+{
+    Type &quot;Linear&quot;;
+    MaxTime 20;
+    Keys
+<spacer type="horizontal" size="42"> 0  0
+<spacer type="horizontal" size="42">10  180
+<spacer type="horizontal" size="42">19  359;
+}
+//
+//  Specifies a rotation animation
+//
+//    Parameters:
+//  Type       The animation types are &quot;Const&quot; and &quot;Linear&quot;
+//  MaxTime    Animation loop time
+//  Keys       Animation keys. The order is: time, angle
+//            
+//
+//    Node description:
+//  Specifies a rotation animation.  When &quot;Linear&quot; is set as the
+// animation type, the angle is linearly interpolated.
+//  Set the angle to a value below 360 degrees.
+//
+
+
+<a name="scale"></a>
+Scale &quot;scl1&quot;
+{
+    Type &quot;Linear&quot;;
+    MaxTime 20;
+    Keys
+<spacer type="horizontal" size="42"> 0  1.0  1.0
+<spacer type="horizontal" size="42">10  1.5  1.5
+<spacer type="horizontal" size="42">19  2.0  2.0;
+}
+//
+//  Specifies a scale animation
+//
+//    Parameters:
+//  Type       The animation types are &quot;Const&quot; and &quot;Linear&quot;
+//  MaxTime    Animation loop time
+//  Keys       Animation keys.  The order is: time, magnification
+//            ratio in X direction, magnification ratio in Y direction
+//            
+//
+//    Node description:
+//  Specifies a scale animation.
+//  When the Type is &quot;Linear&quot; the magnification ratio is
+//  linearly interpolated.
+//  Due to the AGB specifications, parts may not be displayed when
+//  the magnification is greater than 2x.
+//
+
+
+<a name="offset"></a>
+Offset &quot;ofs1&quot;
+{
+    Type &quot;Linear&quot;;
+    MaxTime 20;
+    Keys
+<spacer type="horizontal" size="42"> 0  0  0
+<spacer type="horizontal" size="42">10 -3  0
+<spacer type="horizontal" size="42">19  0 -3;
+}
+//
+//  Specifies an offset animation
+//
+//    Parameters: 
+//  Type       The animation types are &quot;Const&quot; and &quot;Linear&quot;
+//  MaxTime    Animation loop time
+//  Keys       Animation keys.  The order is: time, amount of change 
+//            in X direction, amount of change in Y direction.
+//
+//    Node description:
+//  In this animation, the relative position of the animation is changed.
+//  It is affected by scaling and rotation.
+//  When the Type is &quot;Linear&quot; the amount of change is linearly interpolated.
+//  The numerical value can be specified in decimal fraction units.
+//
+
+
+<a name="move"></a>
+Move &quot;mv1&quot;
+{
+    Type &quot;Const&quot;;
+    MaxTime 20;
+    Keys
+<spacer type="horizontal" size="42"> 0  0  0
+<spacer type="horizontal" size="42">10 -3  0
+<spacer type="horizontal" size="42">19  0 -3;
+}
+//
+//  Specifies a move animation
+//
+//    Parameters:
+//  Type       The animation types are &quot;Const&quot; and &quot;Linear&quot;
+//  MaxTime    Animation loop time
+//  Keys       Animation keys.  The order is: time, speed in X
+//            direction, speed in Y direction
+//
+//    Node description:
+//  In this animation, the position is directly altered.
+//  It is not affected by scaling and rotation.
+//  When Type is &quot;Const&quot; the animation has uniform velocity, and
+// when &quot;Linear&quot; it has uniform ally accelerated motion.
+//  The numerical value can be specified in decimal fraction units.
+//
+
+
+<a name="paletteanimation"></a>
+PaletteAnimation &quot;palanim1&quot;
+{
+    MaxTime 20;
+    Palette &quot;palette1&quot;;
+    Keys
+<spacer type="horizontal" size="42"> 0  0
+<spacer type="horizontal" size="42"> 4  5
+<spacer type="horizontal" size="42"> 8  4
+<spacer type="horizontal" size="42">12  5
+<spacer type="horizontal" size="42">16  7;
+}
+//
+//  Specifies a palette animation
+//
+//    Parameters:
+//  MaxTime    Animation loop time
+//  Palette    Palette data
+//  Keys       Animation keys.  The order is: time, index
+//
+//    Node description:
+//  The animation that replaces palettes.
+//  The index is the number of the palette used in the palette node.
+//</pre>
+		<h3>Notes</h3>
+		<p>Some of the chunk variables can be omitted. Each variable must be ended with a semicolon. When specifying a number of elements, do not separate them with commas.
+	</body>
+
+	<br>
+	<br>
+</html>

@@ -1,0 +1,51 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../html/agb.css">
+		<!-- Edited by Ron D. 1/7/2000 -->
+		<title>bmp2prev</title>
+	</head>
+
+	<body>
+		<h2>bmp2prev<font size="3"> [Tool Command]</font></h2>
+		<p><font color="red">Creates a script in order to preview an image. </font></p>
+		<h3>Syntax</h3>
+		<pre><code>bmp2prev [-c] bitmap bitmap ...</code></pre>
+		<h3>Description</h3>
+		<p>Creates a script in order to preview one or a number of bitmaps. The width and height of the image must be 8, 16, 32 or 64 dots, though the width and height do not need to be the same size. This command is called from <a href="imgview.htm"><tt>imgview.sh</tt></a>.</p>
+		<p>The command arguments are described below:</p>
+		<dl>
+			<dt><b>input-file<br>
+			</b>
+			<dd>Specifies the input bitmap file.
+			<dt><b>-o output-file<br>
+			</b>
+			<dd>Specifies the name of the output file.
+			<dt><b>-c color<br>
+			</b>
+			<dd>Sets the background color.<br>
+			<br>
+			The background color can be described in one of three ways:<br>
+			<br>
+			(1) By describing the red, green, and blue elements.<br>
+			<spacer type="horizontal" size="20">For example, red is 255,0,0 and cyan is 0,255,255.<br>
+			<spacer type="horizontal" size="20">There must not be any spaces before or after the commas.<br>
+			<spacer type="horizontal" size="20">Values of 0 can be omitted, so you could also write<br>
+			<spacer type="horizontal" size="20">red as 255,, and cyan as ,255,255.<br>
+			<br>
+			(2) By using a 6-digit hexadecimal, starting with 0x.<br>
+			<spacer type="horizontal" size="20">For example, red is 0xff0000, green is 0x00ff00<br>
+			<spacer type="horizontal" size="20">and blue is 0x0000ff.<br>
+			<br>
+			(3) By using a single word to describe the color. For example, the word for the color &quot;red&quot; is <tt>red</tt>.<br>
+			<spacer type="horizontal" size="20">The following 8 words are presently supported:<br>
+			<spacer type="horizontal" size="20">black, white, red, green, blue, yellow, purple, and cyan.<br>
+			<spacer type="horizontal" size="20">Only lower-case text is supported.<br>
+		</dl>
+		<h3>Notes</h3>
+		<p>Be careful about the restrictions on bitmap size. This command is for creating a script, so you cannot directly preview the image. You must use <a href="prevcl.htm"><tt>prevcl</tt></a> to convert the output file into a C language source file, then incorporate this into the Previewer source files to create an AGB execution file. These tasks are executed inside <a href="imgview.htm"><tt>imgview.sh</tt></a>.
+	</body>
+
+	<br>
+	<br>
+</html>

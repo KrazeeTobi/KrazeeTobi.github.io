@@ -1,0 +1,31 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../html/agb.css">
+		<!-- Edited by Ron D. 12/17/1999 -->
+		<title>agbparts</title>
+	</head>
+
+	<body>
+		<h2>agbparts<font size="3"> [Tool Command]</font></h2>
+		<p><font color="red">Divides out parts from a Bitmap assembled from 8x8-dot parts.</font></p>
+		<h3>Syntax</h3>
+		<pre>
+<code>agbparts [-f] -o output-file input-file</code>
+</pre>
+		<h3>Description</h3>
+		<p>If you input a Bitmap image assembled from 8x8-dot parts, the image will be disassembled into parts and optimized (identical parts counted as one), and then Bitmaps of the parts will be output.</p>
+		<p>The command arguments are described below:</p>
+		<dl>
+			<dt><b>-o output-file<br>
+			</b>
+			<dd>Specifies the bitmap filename for output
+			<dt><b>-f<br>
+			</b>
+			<dd>Parts flipped vertically or horizontally are treated as identical. This argument is set automatically if a 4bit Bitmap is input.
+		</dl>
+		<h3>Notes</h3>
+		<p>Supports the 4bit, 4bit RLE-compressed, 8bit and 8bit RLE-compressed image formats. Parts are constructed in the order in which they appear. Parts are treated as separate entities even if they differ by only one dot. After the command is executed, a message is displayed in the console saying something like: &quot;Number of characters used: 200.&quot; Please reference this information when creating maps.
+	</body>
+
+</html>

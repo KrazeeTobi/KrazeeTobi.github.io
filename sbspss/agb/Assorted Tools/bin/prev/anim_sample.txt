@@ -1,0 +1,67 @@
+
+MultiSwitch "multi_sw1"
+{
+    Case 1 "rot1";
+    Case 2 "scl1";
+    Case 3 "ofs1";
+    Case 4 "move1";
+    Case 5 "move2";
+}
+
+Rotation "rot1"
+{
+    Type "Linear";
+    MaxTime 60;
+    Keys
+	 0  0
+	30  180
+	60  359;
+}
+
+Scale "scl1"
+{
+    Type "Linear";
+    MaxTime 60;
+    Keys
+	 0  1.0  1.0
+	15  2.0  0.5
+	30  1.0  1.0
+	45  0.5  2.0
+	60  1.0  1.0;
+}
+
+Offset "ofs1"
+{
+    Type "Linear";
+    MaxTime 60;
+    Keys
+	 0  0   0
+	15  0  30
+	30 30   0
+	45 30 -30
+	60  0   0;
+}
+
+Move "move1"
+{
+    Type "Const";
+    MaxTime 60;
+    Keys
+	 0    2    0
+	15    0    2
+	30   -2    0
+	45    0   -2
+	60    0    0;
+}
+
+Move "move2"
+{
+    Type "Linear";
+    MaxTime 60;
+    Keys
+	 0    1    0
+	29    1   16
+	30   -1  -16
+	59   -1    0
+}
+

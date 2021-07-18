@@ -1,0 +1,60 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../html/agb.css">
+		<!-- Edited by Ron D. 1/7/2000 -->
+		<title>prevprep</title>
+	</head>
+
+	<body>
+		<h2>prevprep<font size="3"> [Tool Command]</font></h2>
+		<p><font color="red">The script preprocessor.</font></p>
+		<h3>Syntax</h3>
+		<pre><code>prevprep [-o/-D] script-file</code></pre>
+		<h3>Description</h3>
+		<p>The C language-like preprocessor. Supports the following tokens:<br>
+		<br>
+		#include &quot;filename&quot;<br>
+		#define<br>
+		#if<br>
+		#ifdef<br>
+		#ifndef<br>
+		#else<br>
+		#endif<br>
+		/*Comment*/<br>
+		//Comment<br>
+		<br>
+		However, you cannot continue to the<br>
+		next line by using <tt>\</tt> with <tt>#define</tt> etc.<br>
+		</p>
+		<p>The command arguments are described below:</p>
+		<dl>
+			<dt><b>script-file<br>
+			</b>
+			<dd>The text file describing the script. This file is analyzed, corrected to match the AGB format and then output as a C language source file.
+			<dt><b>-o output-file<br>
+			</b>
+			<dd>Specifies the name of the output file. If this argument is not specified, it is generated from standard output.
+			<dt><b>-D define_str<br>
+			</b>
+			<dd>Sets the <tt>#define</tt> define_str. For example, if you write <tt>-D DEBUG</tt> then DEBUG is set and <tt>#ifndef DEBUG</tt> ~ <tt>#endif</tt>(<tt>#else</tt>) will be ignored. If you want to DEFINE two or more, then you need to write it this way: <tt>-D aaa -D bbb</tt> etc.
+		</dl>
+		<h3>Notes</h3>
+		<p>With comments, everything enclosed inside <tt>/*</tt> ~ <tt>*/</tt> is processed as a single group, so <tt>/* aaa /* bbb */ ccc */</tt> is all treated as a comment (whereas in C language, <tt>ccc */</tt> would be left over and become an error).<br>
+		The same holds for <tt>#if</tt>: you can specify any amount and it will be processed appropriately.<br>
+		<br>
+		If you want to view the same animation in separate files, you can write <tt>#include &quot;animation filename&quot;</tt> so you do not have to describe the same animation over and over.<br>
+		<br>
+		Also, if you want to preview the same character with changed animation, it is convenient to write something like the following:<br>
+		<code><br>
+		#ifdef ANIM1<br>
+		... (Animation script)<br>
+		#endif<br>
+		#ifdef ANIM2<br>
+		... (Animation script)<br>
+		#endif<br>
+		...<br>
+		</code>
+	</body>
+
+</html>

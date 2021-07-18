@@ -1,0 +1,35 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../html/agb.css">
+		<!-- Edited by Ron D. 12/20/1999 -->
+		<title>Previewer - Samples</title>
+	</head>
+
+	<body bgcolor="white">
+		<h2>Previewer - Samples</h2>
+		<p>
+		<hr size="3">
+		<h3>1. Description</h3>
+		<p>A number of samples have been prepared in order to help you gain a better understanding of the Previewer. These include <tt>sample1.txt</tt>, <tt>sample2.txt</tt>, <tt>sample3.txt</tt>, <tt>sample4.txt</tt> and <tt>anim_sample.txt</tt> in the Previewer folder and the &quot;sample&quot; folder images.</p>
+		<h3>2. How to Use the Samples</h3>
+		<p><tt>sample1.txt</tt> -- A simple object sample<br>
+		<tt>sample2.txt</tt> -- This sample uses the include file<br>
+		<tt>sample3.txt</tt> -- A BG sample<br>
+		<tt>sample4.txt</tt> -- A composite sample of objects and BG<br>
+		</p>
+		<p>For <tt>sample1.txt</tt> and <tt>sample3.txt</tt>, enter separately as<br>
+		&gt;<tt>prev.sh sample1.txt</tt><br>
+		&gt;<tt>prev.sh sample3.txt</tt><br>
+		to make an <tt>agbprev.bin</tt> AGB execution file in the same folders, which you then send to the emulator.<br>
+		For <tt>sample2.txt</tt> and <tt>sample4.txt</tt>, first enter<br>
+		&gt;<tt>prevprep sample2.txt -o sample_tmp.txt</tt><br>
+		&gt;<tt>prevprep sample4.txt -o sample_tmp.txt</tt><br>
+		to pass through the preprocessor, and then execute<br>
+		&gt;<tt>prev.sh sample_tmp.txt</tt><br>
+		This command makes an <tt>agbprev.bin</tt> file as mentioned above, which you then send to the emulator.<br>
+		<br>
+		The latter two files reference <tt>anim_sample.txt</tt> for the animation data. The preprocessor incorporates this into the sample. The same file is referenced, so in sample2 and sample4 different characters are animated the same way.
+	</body>
+
+</html>

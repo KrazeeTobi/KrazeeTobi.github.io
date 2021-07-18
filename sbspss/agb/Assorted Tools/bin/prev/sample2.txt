@@ -1,0 +1,69 @@
+/* Sample */
+Header
+{
+    Objects "obj1";
+    ObjectPalette "pal1";
+}
+
+//
+//  Object
+//
+Object "obj1"
+{
+    Image   "ball";
+    MaxTime	60;
+    MaxState	6;
+    Animation "anim";
+}
+
+//
+//  Ball character
+//
+Character "ball"
+{
+    Width  16;
+    Height 16;
+    Files
+           "sample/ball.bmp";
+}
+
+//
+//  Palette
+//
+Palette "pal1"
+{
+    NumOfColors 256;
+    Files
+           "sample/ball.bmp";
+}
+
+Animation "anim"
+{
+    Children
+         "multi_sw1"
+         "sw1";
+}
+
+#include "anim_sample.txt"
+
+Switch "sw1"
+{
+    States
+	0 "fb1"
+	6 "fb1";
+}
+
+FlipBook "fb1"
+{
+    MaxTime 30;
+    Image "ball";
+    Keys
+         0  0 0
+         5  1 0
+        10  2 0
+        15  3 0
+        20  2 0
+        25  1 0
+        30  0 0;
+}
+

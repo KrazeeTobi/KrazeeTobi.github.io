@@ -1,0 +1,107 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../html/agb.css">
+		<!-- Edited by Ron D. 12/15/1999 -->
+		<title>Function samples: ALPHA BLEND FUNCTIONS</title>
+	</head>
+
+	<body>
+		<h2>Functional samples: ALPHA BLEND FUNCTIONS</h2>
+		<p><font color="red">This is a sample of alpha blend.</font></p>
+		<p>Source: <font color="blue"><tt>(AGBDIR)\src\samples\functional_sample\alphasm\</tt></font></p>
+		<h3>Description</h3>
+		<p>This is a sample of the alpha blend function.<br>
+		The display priority, going from high to low, is BG0 (red circle) -&gt; OBJ0 Yoshi (near center of screen) -&gt; BG1 (green circle) -&gt; OBJ1 Yoshi (toward top of screen) -&gt; BG2 (blue circle).<br>
+		The AGB alpha blend function blends the two (non-transparent) forward dots when they are set as blend object 1 and blend object 2. When more than two OBJ overlap, only the nearest dot becomes a blend object.<br>
+		When the three circles overlap on the screen, the the red and green circles become semi-transparent and the bottom-most blue circle is ignored.</p>
+		<h3>How to operate</h3>
+		<p>SELECT button ... Return to Title Menu.<br>
+		START button ... Change the blend settings.<br>
+		Alpha blend -&gt; OBJ only alpha -&gt; Normal but only semi-transparent OBJ are semi-transparent -&gt; Normal<br>
+		<br>
+		</p>
+		<ul>
+			<table border="1">
+				<tr>
+					<th rowspan="2">Screen Display</th>
+					<th rowspan="2">Blend Mode</th>
+					<th colspan="4">First Object</th>
+					<th colspan="4">Second Object</th>
+					<th rowspan="2">Comments</th>
+				</tr>
+				<tr>
+					<th>BG0</th>
+					<th>BG1</th>
+					<th>BG2</th>
+					<th>OBJ</th>
+					<th>BG0</th>
+					<th>BG1</th>
+					<th>BG2</th>
+					<th>OBJ</th>
+				</tr>
+				<tr>
+					<td>&quot;ALPHA&quot;</td>
+					<td>Alpha Blend</td>
+					<td align="center">O</td>
+					<td align="center">O</td>
+					<td align="center">O</td>
+					<td align="center">O</td>
+					<td align="center">O</td>
+					<td align="center">O</td>
+					<td align="center">O</td>
+					<td align="center">O</td>
+					<td>BG, OBJ semi-transparent</td>
+				</tr>
+				<tr>
+					<td>&quot;ALPHA OBJ&quot;</td>
+					<td>Alpha Blend</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td align="center">O</td>
+					<td align="center">O</td>
+					<td align="center">O</td>
+					<td align="center">O</td>
+					<td align="center">O</td>
+					<td>OBJ semi-transparent</td>
+				</tr>
+				<tr>
+					<td>&quot;NORMAL2ND&quot;</td>
+					<td>Normal</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td align="center">O</td>
+					<td align="center">O</td>
+					<td align="center">O</td>
+					<td align="center">O</td>
+					<td>Semi-transparent if semi-transparent OBJ</td>
+				</tr>
+				<tr>
+					<td>&quot;NORMAL&quot;</td>
+					<td>Normal</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>Nothing becomes semi-transparent</td>
+				</tr>
+			</table>
+		</ul>
+		<p><br>
+		START button while pressing B button ... Switch OBJ semi-transparency ON/OFF<br>
+		 Control Pad ... Move Yoshi 1<br>
+		 Control Pad while pressing A button ... Move Yoshi 0<br>
+		L button ... Make EVA -1 and EVB +1<br>
+		R button ... Make EVA +1 and EVB -1<br>
+		(EVA = coefficient for 1st (upper) object of alpha blend; EVB = coefficient for 2nd (lower) object of alpha blend)<br>
+	</body>
+<br><br>
+</html>
+</HTML>

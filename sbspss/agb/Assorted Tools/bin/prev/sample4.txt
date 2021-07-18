@@ -1,0 +1,136 @@
+
+Header
+{
+    Objects "obj1"
+            "obj1";
+    ObjectPalette "obj_pal";
+    BGs     "map1" "map2" "map3";
+    BGPalette "bg_pal";
+}
+
+Object "obj1"
+{
+    Image   "yoshi_hei";
+    MaxTime	60;
+    MaxState	6;
+    Animation	"anim";
+}
+
+Palette "obj_pal"
+{
+    NumOfColors 256;
+    Files
+          "sample/PS_hey1.bmp";
+}
+
+Character "yoshi_hei"
+{
+    Width 32;
+    Height 64;
+    Files
+           "sample/PS_hey1.bmp"
+           "sample/PS_hey2.bmp"
+           "sample/PS_hey3.bmp"
+           "sample/PS_hey4.bmp"
+           "sample/PS_hey5.bmp"
+           "sample/PS_hey6.bmp"
+           "sample/PS_hey7.bmp"
+           "sample/PS_hey8.bmp";
+}
+
+Animation "anim"
+{
+    Children
+         "multi_sw1"
+         "multi_sw2";
+}
+
+
+MultiSwitch "multi_sw2"
+{
+    Case 0 "fb1";
+    Case 6 "ofs1" "rot1";
+    Case 7 "fb1" "rot1" "scl1" "ofs1" "move1";
+}
+
+FlipBook "fb1"
+{
+    MaxTime 60;
+    Image "yoshi_hei";
+    Keys
+         0  0 0
+         4  1 0
+         8  2 0
+        12  3 0
+        16  4 0
+        20  5 0
+        24  6 0
+        28  7 0
+        32  6 0
+        36  5 0
+        40  4 0
+        48  3 0
+        52  2 0
+        56  1 0;
+}
+
+Background "map1"
+{
+    MapImage "map_im1";
+    MapCharacter "map_ch1";
+}
+
+Background "map2"
+{
+    MapImage "map_im2";
+    MapCharacter "map_ch2";
+}
+
+Background "map3"
+{
+    MapImage "map_im3";
+    MapCharacter "map_ch3";
+}
+
+MapImage "map_im1"
+{
+    Files "sample/bg1.bmp";
+}
+
+MapCharacter "map_ch1"
+{
+    Files "sample/bg1.bmp";
+}
+
+MapImage "map_im2"
+{
+    Mode "Text";
+    Files "sample/bg2.bmp";
+}
+
+MapCharacter "map_ch2"
+{
+    Files "sample/bg2.bmp";
+}
+
+MapImage "map_im3"
+{
+    Mode "Text";
+    PaletteNumber 15;
+    Files "sample/bg3.bmp";
+}
+
+MapCharacter "map_ch3"
+{
+    Files "sample/bg3.bmp";
+}
+
+Palette "bg_pal"
+{
+    NumOfColors 256;
+    Files
+          "sample/bg1.bmp"
+          "sample/bg3.bmp";
+}
+
+#include "anim_sample.txt"

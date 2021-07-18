@@ -1,0 +1,66 @@
+
+Header
+{
+    BGs     "map1" "map2" "map3";
+    BGPalette "bg_pal";
+}
+
+Background "map1"
+{
+    MapImage "map_im1";
+    MapCharacter "map_ch1";
+}
+
+Background "map2"
+{
+    MapImage "map_im2";
+    MapCharacter "map_ch2";
+}
+
+Background "map3"
+{
+    MapImage "map_im3";
+    MapCharacter "map_ch3";
+}
+
+MapImage "map_im1"
+{
+    Files "sample/bg1.bmp";
+}
+
+MapCharacter "map_ch1"
+{
+    Files "sample/bg1.bmp";
+}
+
+MapImage "map_im2"
+{
+    Mode "Text";
+    Files "sample/bg2.bmp";
+}
+
+MapCharacter "map_ch2"
+{
+    Files "sample/bg2.bmp";
+}
+
+MapImage "map_im3"
+{
+    Mode "Text";
+    PaletteNumber 15;
+    Files "sample/bg3.bmp";
+}
+
+MapCharacter "map_ch3"
+{
+    Files "sample/bg3.bmp";
+}
+
+Palette "bg_pal"
+{
+    NumOfColors 256;
+    Files
+          "sample/bg1.bmp"
+          "sample/bg3.bmp";
+}
+

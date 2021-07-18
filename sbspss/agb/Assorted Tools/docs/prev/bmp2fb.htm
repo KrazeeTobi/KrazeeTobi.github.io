@@ -1,0 +1,63 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../html/agb.css">
+		<!-- Edited by Ron D, 1/7/2000 -->
+		<title>bmp2fb</title>
+	</head>
+
+	<body>
+		<h2>bmp2fb<font size="3"> [Tool Command]</font></h2>
+		<p><font color="red">Creates a script in order to preview a flip book.</font></p>
+		<h3>Syntax</h3>
+		<pre><code>bmp2fb [-t/-r/-w/-h/-c/-o] bitmap bitmap ...</code></pre>
+		<h3>Explanation</h3>
+		<p>Creates a script so you can preview a flip book by inputing a number of bitmaps. This command is called from <a href="fbview.htm"><tt>fbview.sh</tt></a>.</p>
+		<p>The command arguments are described below:</p>
+		<dl>
+			<dt><b>input-file<br>
+			</b>
+			<dd>Specifies the input bitmap file.
+			<dt><b>-o output-file<br>
+			</b>
+			<dd>Specifies the name of the output file.
+			<dt><b>-t time<br>
+			</b>
+			<dd>Specifies the time until the next frame update in units of 1/60 second.
+			<dt><b>-w width<br>
+			</b>
+			<dd>Specifies the per-frame width when the input file contains a number of frames worth of images.
+			<dt><b>-h height<br>
+			</b>
+			<dd>Specifies the per-frame height when the input file contains a number of frames worth of images.
+			<dt><b>-r<br>
+			</b>
+			<dd>Playback in reverse after reaching the last frame of the animation.
+			<dt><b>-c color<br>
+			</b>
+			<dd>Sets the background color.<br>
+			<br>
+			The background color can be described in one of three ways:<br>
+			<br>
+			(1) By describing the red, green, blue elements.<br>
+			<spacer type="horizontal" size="20">For example, red is 255,0,0 and cyan is 0,255,255.<br>
+			<spacer type="horizontal" size="20">There must not be any spaces before or after the commas.<br>
+			<spacer type="horizontal" size="20">Values of 0 can be omitted, so you could also write<br>
+			<spacer type="horizontal" size="20">red as 255,, and cyan as ,255,255.<br>
+			<br>
+			(2) By using a 6-digit hexadecimal, starting with 0x.<br>
+			<spacer type="horizontal" size="20">For example, red is 0xff0000, green is 0x00ff00<br>
+			<spacer type="horizontal" size="20">and blue is 0x0000ff.<br>
+			<br>
+			(3) By using a single word to describe the color. For example, the word for the color &quot;red&quot; is <tt>red</tt>.<br>
+			<spacer type="horizontal" size="20">The following 8 words are presently supported:<br>
+			<spacer type="horizontal" size="20">black, white, red, green, blue, yellow, purple, and cyan.<br>
+			<spacer type="horizontal" size="20">Only lower-case text is supported.<br>
+		</dl>
+		<h3>Notes</h3>
+		<p>Images must be updated at a fixed interval in order for a flip book to be previewed with this command. The images are shown in the same sequence in which the bitmaps were specified. If one bitmap contains many frames, the frames are ordered from top-left to bottom-right. This command is for creating a script, so you cannot directly preview the flip book. You must use <a href="prevcl.htm"><tt>prevcl</tt></a> to convert the output file into a C language source file, then incorporate this into the Previewer source files to create an AGB execution file. These latter tasks are executed inside <a href="fbview.htm"><tt>fbview.sh</tt></a>.
+	</body>
+
+	<br>
+	<br>
+</html>
