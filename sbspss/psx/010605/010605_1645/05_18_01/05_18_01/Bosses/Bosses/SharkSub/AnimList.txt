@@ -1,0 +1,7 @@
+chomp
+# death
+# gethit
+# sprintclosed
+sprintopen
+swim
+swipe
