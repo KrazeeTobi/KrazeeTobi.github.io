@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>assert[macro for debugging diagnostics]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcabsinteger_absolute_value_magnit.html">Previous</A>|<A HREF="libcatexitrequest_execution_of_funct.html">Next</A>
+</P>
+
+<P><A NAME="off_100339"></A><A NAME="d3b121cd"></A><A NAME="off_100339"></A><A NAME="d3b121cd"></A><FONT SIZE=+3><FONT FACE="Courier New">assert
+<BR>
+</FONT><FONT FACE="Times New Roman">[macro for debugging diagnostics] </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>&lt;assert.h&gt;</FONT><FONT SIZE=-1> <BR>
+</FONT><FONT SIZE=+0>void</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>assert(int</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0><I>expression</I>); </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>DESCRIPTION <BR>
+</B>Use this macro, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>assert</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to embed debugging diagnostic statements in your programs. The argument,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>expression</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+should be an expression which evaluates to true (nonzero) when your program
+is working as you intended. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>expression</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">evaluates to false (zero), </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>assert</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">calls </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>abort</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+after first printing a message showing what failed and where, as in the
+following example. </FONT></FONT></P>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;</FONT><FONT SIZE=+1>Assertion failed: expression, file <I>filename</I>, line <I>lineno </I></FONT></FONT></PRE>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The macro is defined to permit
+you to turn off all uses of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>assert</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">at compile time by defining </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NDEBUG</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">as a preprocessor variable. If you
+do this, the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>assert</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">macro expands, as in the following
+example. </FONT></FONT></P>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;(void(0)) </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>assert</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">does not return a value. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>COMPLIANCE <BR>
+</B>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>assert</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">macro is required by ANSI, as is the
+behavior when </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NDEBUG</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is defined. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Supporting OS subroutines
+required (only if enabled): </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>close</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fstat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>getpid</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>isatty</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>kill</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>lseek</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>read</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sbrk</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>write</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+</BODY>
+</HTML>

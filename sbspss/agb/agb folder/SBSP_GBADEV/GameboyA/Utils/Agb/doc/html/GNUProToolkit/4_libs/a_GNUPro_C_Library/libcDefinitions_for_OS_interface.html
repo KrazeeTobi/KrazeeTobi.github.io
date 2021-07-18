@@ -1,0 +1,307 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Definitions for OS interface</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libmlibc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcSystem_Calls.html">Previous</A>|<A HREF="libcReentrant_covers_for_OS_subrouti.html">Next</A>
+<BR><A NAME="off_2031616"></A><A NAME="42b929e1"></A><FONT FACE="Futura Md BT"><FONT SIZE=+3>Definitions
+for OS interface&nbsp;</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+following discussions describe the complete set of system definitions (primarily
+subroutines) required.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The examples shown implement
+the minimal functionality required to allow </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to link, failing gracefully where OS services are not available. Graceful
+failure is permitted by returning an error code. A minor complication arises
+here: the C library must be compatible with development environments that
+supply fully functional versions of these subroutines. Such environments
+usually return error codes in a global </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>However, the GNUPro C library
+provides a <I>macro</I> definition for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in the header file, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+serving to support reentrant routines (see <FONT COLOR="#008000"><A HREF="libcReentrancy.html">Reentrancy</A></FONT>
+for more discussion). The bridge between these two interpretations of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is straightforward: the C library routines with OS interface calls capture
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+values returned globally, recording them in the appropriate field of the
+reentrancy structure (so that you can query them using the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+macro from ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).This
+mechanism becomes visible when you write stub routines for OS interfaces.
+You must include </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+then disable the macro, as in the following example.</FONT></FONT>
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>#include &lt;errno.h></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>#undef errno</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>extern int errno;</FONT></FONT></UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The examples in the following
+documentation include the following treatment of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;
+<UL>
+<UL>
+<UL>
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>_exit</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Exit a program without cleaning
+up files. If your system doesn’t provide this, it is best to avoid linking
+with subroutines that require it (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>exit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>system</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT>
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>close</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Close a file. Minimal implementation:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>int close(int file){</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; return -1;</FONT></FONT>
+<BR><FONT FACE="Arial"><FONT SIZE=+0>}</FONT></FONT></UL>
+
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>environ</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>A pointer to a list of environment
+variables and their values. For a minimal environment, this empty list
+is adequate:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>char *__env[1] = { 0 };</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>char **environ = __env;</FONT></FONT></UL>
+
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>execve</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Transfer control to a new
+process. Minimal implementation (for a system without processes):</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>#include &lt;errno.h></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>#undef errno</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>extern int errno;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>int execve(char *name, char
+**argv, char **env){</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; errno=ENOMEM;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; return -1;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>}</FONT></FONT></UL>
+
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>fork</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Create a new process. Minimal
+implementation (for a system without processes):</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>#include &lt;errno.h></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>#undef errno</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>extern int errno;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>int fork() {</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; errno=EAGAIN;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; return -1;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>}</FONT></FONT></UL>
+
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>fstat</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Status of an open file.
+For consistency with other minimal implementations in these examples, all
+files are regarded as character special devices. The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sys/stat.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+header file required is distributed in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+subdirectory for this C library.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>#include &lt;sys/stat.h></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>int fstat(int file, struct stat
+*st) {</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; st->st_mode = S_IFCHR;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; return 0;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>}</FONT></FONT></UL>
+
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>getpid</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Process-ID; this is sometimes
+used to generate strings unlikely to conflict with other processes. Minimal
+implementation, for a system without processes:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>int getpid() {</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; return 1;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>}</FONT></FONT></UL>
+
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>isatty</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Query whether output stream
+is a terminal. For consistency with the other minimal implementations,
+which only support output to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdout</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+this minimal implementation is suggested:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>int isatty(int file){</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; return 1;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>}</FONT></FONT></UL>
+
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>kill</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Send a signal. Minimal implementation:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>#include &lt;errno.h></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>#undef errno</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>extern int errno;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>int kill(int pid, int sig){</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; errno=EINVAL;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; return(-1);</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>}</FONT></FONT></UL>
+
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>link</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Establish a new name for
+an existing file. Minimal implementation:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>#include &lt;errno.h></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>#undef errno</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>extern int errno;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>int link(char *old, char *new){</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; errno=EMLINK;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; return -1;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>}</FONT></FONT></UL>
+
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>lseek</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Set position in a file.
+Minimal implementation:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>int lseek(int file, int ptr,
+int dir){</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; return 0;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>}</FONT></FONT></UL>
+
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>read</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Read from a file. Minimal
+implementation:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>int read(int file, char *ptr,
+int len){</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; return 0;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>}</FONT></FONT></UL>
+
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>sbrk</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Increase program data space.
+As </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>malloc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and related functions depend on this, it is useful to have a working implementation.
+The following suffices for a standalone system; it exploits the symbol
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>end</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+automatically defined by the GNU linker.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>Caddr_t sbrk(int incr){</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; extern char end;
+/*</FONT></FONT>
+<BR><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Defined by the linker.</FONT></FONT></I>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; */</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; static char *heap_end;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; char *prev_heap_end;</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; if (heap_end ==
+0) {</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+heap_end = &amp;end;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; }</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; prev_heap_end =
+heap_end;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; heap_end += incr;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; return (caddr_t)
+prev_heap_end;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>}</FONT></FONT></UL>
+
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>stat</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Status of a file (by name).
+Minimal implementation:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>int stat(char *file, struct
+stat *st) {</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; st->st_mode = S_IFCHR;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; return 0;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>}</FONT></FONT></UL>
+
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>times</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Timing information for current
+process. Minimal implementation:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>int times(struct tms *buf){</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; return -1;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>}</FONT></FONT></UL>
+
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>unlink</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Remove a file’s directory
+entry. Minimal implementation:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>#include &lt;errno.h></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>#undef errno</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>extern int errno;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>int unlink(char *name){</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; errno=ENOENT;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; return -1;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>}</FONT></FONT></UL>
+
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>wait</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Wait for a child process.
+Minimal implementation:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>#include &lt;errno.h></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>#undef errno</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>extern int errno;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>int wait(int *status) {</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; errno=ECHILD;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; return -1;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>}</FONT></FONT></UL>
+&nbsp;
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>write</FONT></FONT></B></LI>
+
+<BR><FONT SIZE=+1><FONT FACE="Times New Roman">Writes a character to a
+file. libc subroutines can use this system routine for output to all files,
+including </FONT><TT>stdout</TT><FONT FACE="Times New Roman"> by first
+using </FONT><TT>MISSING_SYSCALL_NAMES</TT><FONT FACE="Times New Roman">
+with </FONT><TT>target_cflags</TT><FONT FACE="Times New Roman"> in </FONT><TT>configure.in</TT><FONT FACE="Times New Roman">
+. If you need to generate any output (for instance, to a serial port for
+debugging), you should make your minimal write capable of accomplishing
+this objective. The following minimal implementation is an incomplete example;
+it relies on a writechar subroutine to actually perform the output (a subroutine
+not provided here since it is usually in assembler form as examples provided
+by your hardware manufacturer).</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+0>int write(int
+<I>file</I>, char *<I>ptr</I>, int <I>len</I>){</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+0>&nbsp;&nbsp;
+int todo;</FONT></FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; for (todo = 0; todo
+&lt; <I>len</I>; todo++) {</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; writechar(*ptr++);</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; }</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; return <I>len</I>;</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>}</FONT></FONT></UL>
+</UL>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libmlibc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcSystem_Calls.html">Previous</A>|<A HREF="libcReentrant_covers_for_OS_subrouti.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

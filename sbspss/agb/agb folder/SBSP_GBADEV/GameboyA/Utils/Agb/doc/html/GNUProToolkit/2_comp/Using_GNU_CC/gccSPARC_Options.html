@@ -1,0 +1,353 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>SPARC Options</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccV850.htm">Previous</a>|<a href="gccSystem_V_Options.html">Next</a>
+<br><a NAME="off_1442868"></a><a NAME="82dc8090"></a><font face="Futura Md BT"><font color="#000000"><font size=+3><b>SPARC
+options&nbsp;</b>&nbsp;</font></font></font>
+<hr SIZE=6 WIDTH="100%">
+<br><font face="Times New Roman"><font size=+1>The following </font></font><font face="Courier New"><font size=+0>-m</font></font><font face="Times New Roman"><font size=+1>
+switches are supported on the SPARC.</font></font>
+<ul>
+<dt>
+<font face="Courier New"><font size=+0>-mno-app-regs</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mapp-regs</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Specify </font></font><font face="Courier New"><font size=+0>-mapp-regs</font></font><font face="Times New Roman"><font size=+1>
+to generate output using the global registers 2 through 4, which the SPARC
+SVR4 Application Binary Interface (ABI) reserves for applications. This
+is the default.</font></font>
+<br><font face="Times New Roman"><font size=+1>To be fully SVR4 ABI compliant
+at the cost of some performance loss, specify </font></font><font face="Courier New"><font size=+0>-mno-app-regs</font></font><font face="Times New Roman"><font size=+1>.
+You should compile libraries and system software with this option.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mfpu</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mhard-float</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate output containing
+floating point instructions. This is the default.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-fpu</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-msoft-float</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate output containing
+library calls for floating point.</font></font>
+<br>&nbsp;
+<ul>&nbsp;<b><i><font face="Times New Roman"><font size=+1>Warning:</font></font></i></b>
+<br><font face="Times New Roman"><font size=+1>The requisite libraries
+are not available for all SPARC targets. Normally the facilities of the
+machine’s usual C compiler are used, but this cannot be done directly in
+cross-compilation. You must make your own arrangements to provide suitable
+library functions for cross-compilation. The embedded targets, </font></font><font face="Courier New"><font size=+0>sparc-*-aout</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>sparclite-*-*</font></font><font face="Times New Roman"><font size=+1>,
+do provide software floating point support.</font></font>
+<br>&nbsp;<font face="Courier New"><font size=+0>-msoft-float</font></font><font face="Times New Roman"><font size=+1>
+changes the calling convention in the output file; therefore, it is only
+useful if you compile <i>all</i> of a program with this option. In particular,
+you need to compile </font></font><font face="Courier New"><font size=+0>libgcc.a</font></font><font face="Times New Roman"><font size=+1>,
+the library that comes with GNU CC, with </font></font><font face="Courier New"><font size=+0>-msoft-float</font></font><font face="Times New Roman"><font size=+1>
+in order for this to work.</font></font></ul>
+</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mhard-quad-float</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate output containing
+quad-word (</font></font><font face="Courier New"><font size=+0>long double</font></font><font face="Times New Roman"><font size=+1>)
+floating point instructions.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-msoft-quad-float</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate output containing
+library calls for quad-word (</font></font><font face="Courier New"><font size=+0>long
+double</font></font><font face="Times New Roman"><font size=+1>) floating
+point instructions. The functions called are those specified in the SPARC
+ABI. This is the default.</font></font>
+<br><font face="Times New Roman"><font size=+1>As of this writing, there
+are no SPARC implementations that have hardware support for the quad-word
+floating point instructions. They all invoke a trap handler for one of
+these instructions, and then the trap handler emulates the effect of the
+instruction. Because of the trap handler overhead, this is much slower
+than calling the ABI library routines. Thus the </font></font><font face="Courier New"><font size=+0>-msoft-quad-float</font></font><font face="Times New Roman"><font size=+1>
+option is the default.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-epilogue</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mepilogue</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>With </font></font><font face="Courier New"><font size=+0>-mepilogue</font></font><font face="Times New Roman"><font size=+1>
+(the default), the compiler always emits code for function exit at the
+end of each function. Any function exit in the middle of the function (such
+as a return statement in C) will generate a jump to the exit code at the
+end of the function.</font></font>
+<br><font face="Times New Roman"><font size=+1>With </font></font><font face="Courier New"><font size=+0>-mno-epilogue</font></font><font face="Times New Roman"><font size=+1>,
+the compiler tries to emit exit code inline at every function exit.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-flat</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mflat</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>With </font></font><font face="Courier New"><font size=+0>-mflat</font></font><font face="Times New Roman"><font size=+1>,
+the compiler does not generate save/restore instructions and will use a
+<i>flat</i>
+or single register window calling convention. This model uses
+</font></font><font face="Courier New"><font size=+0>%i7</font></font><font face="Times New Roman"><font size=+1>
+as the frame pointer and is compatible with the normal register window
+model. Code from either may be intermixed. The local registers and the
+input registers (0-5) are still treated as “call saved” registers and will
+be saved on the stack as necessary.</font></font>
+<br><font face="Times New Roman"><font size=+1>With </font></font><font face="Courier New"><font size=+0>-mno-flat</font></font><font face="Times New Roman"><font size=+1>
+(the default), the compiler emits save/restore instructions (except for
+leaf functions) and is the normal mode of operation.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-unaligned-doubles</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-munaligned-doubles</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Assume that doubles have
+8 byte alignment. This is the default.</font></font>
+<br><font face="Times New Roman"><font size=+1>With </font></font><font face="Courier New"><font size=+0>-munaligned-doubles</font></font><font face="Times New Roman"><font size=+1>,
+GNU CC assumes that doubles have 8 byte alignment only if they are contained
+in another type, or if they have an absolute address.</font></font>
+<br><font face="Times New Roman"><font size=+1>Otherwise, it assumes they
+have 4 byte alignment. Specifying this option avoids some rare compatibility
+problems with code generated by other compilers. It is not the default
+because it results in a performance loss, especially for floating point
+code.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mv8</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-msparclite</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>These two options select
+variations on the SPARC architecture.</font></font>
+<br><font face="Times New Roman"><font size=+1>By default (unless specifically
+configured for the Fujitsu SPARClite), GCC generates code for the v7 variant
+of the SPARC architecture.</font></font>
+<br><font face="Courier New"><font size=+0>-mv8</font></font><font face="Times New Roman"><font size=+1>
+will give you SPARC v8 code. The only difference from v7 code is that the
+compiler emits the integer multiply and integer divide instructions which
+exist in SPARC v8 but not in SPARC v7.</font></font>
+<br><font face="Courier New"><font size=+0>-msparclite</font></font><font face="Times New Roman"><font size=+1>
+will give you SPARClite code. This adds the </font></font><font face="Courier New"><font size=+0>integer
+multiply</font></font><font face="Times New Roman"><font size=+1>, </font></font><font face="Courier New"><font size=+0>integer
+divide step</font></font><font face="Times New Roman"><font size=+1> and
+</font></font><font face="Courier New"><font size=+0>scan
+(ffs)</font></font><font face="Times New Roman"><font size=+1> instructions
+which exist in SPARClite but not in SPARC v7.</font></font>
+<br><font face="Times New Roman"><font size=+1>These options are deprecated
+and will be deleted in GNU CC 2.9. They have been replaced with </font></font><font face="Courier New"><font size=+0>-mcpu=xxx</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mcypress</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-msupersparc</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>These two options select
+the processor for which the code is optimized.</font></font>
+<br><font face="Times New Roman"><font size=+1>With </font></font><font face="Courier New"><font size=+0>-mcypress</font></font><font face="Times New Roman"><font size=+1>
+(the default), the compiler optimizes code for the Cypress CY7C602 chip,
+as used in the SparcStation/ SparcServer 3xx series. This is also appropriate
+for the older SparcStation 1, 2, IPX, etc.</font></font>
+<br><font face="Times New Roman"><font size=+1>With </font></font><font face="Courier New"><font size=+0>-msupersparc</font></font><font face="Times New Roman"><font size=+1>
+the compiler optimizes code for the SuperSparc CPU, as used in the SparcStation
+10, 1000 and 2000 series. This flag also enables use of the full SPARC
+v8 instruction set. These options are deprecated and will be deleted in
+GNU CC 2.9. They have been replaced with </font></font><font face="Courier New"><font size=+0>-mcpu=xxx</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mcpu=<i>cpu_type</i></font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Set architecture type and
+instruction scheduling parameters for machine type </font></font><i><font face="Courier New"><font size=+0>cpu_type</font></font></i><font face="Times New Roman"><font size=+1>.
+Supported values for </font></font><i><font face="Courier New"><font size=+0>cpu_type</font></font></i><font face="Times New Roman"><font size=+1>
+are </font></font><font face="Courier New"><font size=+0>common</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>cypress</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>v8</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>supersparc</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>sparclite</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>f930</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>f934</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>sparclet</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>90c701</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>v8plus</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>v9</font></font><font face="Times New Roman"><font size=+1>,
+and </font></font><font face="Courier New"><font size=+0>ultrasparc</font></font><font face="Times New Roman"><font size=+1>.
+Specifying ‘</font></font><font face="Courier New"><font size=+0>v9</font></font><font face="Times New Roman"><font size=+1>’
+is only supported on true 64-bit targets.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mtune=<i>cpu_type</i></font></font></dt>
+
+<dl>
+<dl><font face="Times New Roman"><font size=+1>Set the instruction scheduling
+parameters for machine type, </font></font><i><font face="Courier New"><font size=+0>cpu_type</font></font></i><font face="Times New Roman"><font size=+1>,
+but do not set the architecture type like </font></font><font face="Courier New"><font size=+0>-mcpu=<i>cpu_type</i></font></font><font face="Times New Roman"><font size=+1>
+would. The same values for </font></font><font face="Courier New"><font size=+0>-mcpu=<i>cpu_type
+</i></font></font><font face="Times New Roman"><font size=+1>are
+used for
+</font></font><font face="Courier New"><font size=+0>-mtune=<i>cpu_type</i></font></font><font face="Times New Roman"><font size=+1>,
+although the only useful values for those that select a particular CPU
+implementation: </font></font><font face="Courier New,Courier">cypress</font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New,Courier">supersparc</font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New,Courier">f930</font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New,Courier">f934</font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New,Courier">tsc701</font><font face="Times New Roman"><font size=+1>,
+and </font></font><font face="Courier New,Courier">ultrasparc</font><font face="Times New Roman"><font size=+1>.</font></font></dl>
+
+<dt>
+<font face="Courier New,Courier">-malign-loops=<i>num</i></font></dt>
+
+<dl><font face="Times New Roman"><font size=+1>Align loops to a 2 raised
+to a </font></font><i><font face="Courier New,Courier">num</font></i><font face="Times New Roman"><font size=+1>
+byte boundary. If </font></font><font face="Courier New,Courier">-malign-loops</font><font face="Times New Roman"><font size=+1>
+is not specified, the default is 2.</font></font></dl>
+
+<dt>
+<font face="Courier New,Courier">-malign-jumps=<i>num</i></font></dt>
+
+<dl><font face="Times New Roman"><font size=+1>Align instructions that
+are only jumped to a 2 raised to a </font></font><i><font face="Courier New,Courier">num</font></i><font face="Times New Roman"><font size=+1>
+byte boundary. If </font></font><font face="Courier New,Courier">-malign-jumps</font><font face="Times New Roman"><font size=+1>
+is not specified, the default is 2.</font></font></dl>
+
+<dt>
+<font face="Courier New,Courier">-malign-functions=<i>num</i></font></dt>
+
+<dl><font face="Times New Roman"><font size=+1>Align the start of functions
+to a 2 raised to a </font></font><i><font face="Courier New,Courier">num</font></i><font face="Times New Roman"><font size=+1>
+byte boundary. If </font></font><font face="Courier New,Courier">-malign-functions</font><font face="Times New Roman"><font size=+1>
+is not specified, the default is 2 if compiling for a 32-bit SPARC processor,
+and 5 if compiling for a 64-bit SPARC processor.</font></font></dl>
+</dl>
+</ul>
+<font face="Times New Roman"><font size=+1>The following </font></font><font face="Courier New"><font size=+0>-m</font></font><font face="Times New Roman"><font size=+1>
+switches are supported in addition to the previous switches on SPARCLET
+processor.</font></font>
+<dl>
+<ul>
+<dt>
+<font face="Courier New"><font size=+0>-mlittle-endian</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate code for a processor
+running in little-endian mode.</font></font></ul>
+<font face="Courier New"><font size=+0>-mlive-g0</font></font>
+<ul><font face="Times New Roman"><font size=+1>Treat register </font></font><font face="Courier New"><font size=+0>%g0</font></font><font face="Times New Roman"><font size=+1>
+as a normal register. GCC will continue to clobber it as necessary but
+will not assume it always reads as 0.</font></font></ul>
+<font face="Courier New"><font size=+0>-mbroken-saverestore</font></font>
+<ul><font face="Times New Roman"><font size=+1>Generate code that does
+not use non-trivial forms of the </font></font><font face="Courier New"><font size=+0>save</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>restore</font></font><font face="Times New Roman"><font size=+1>
+instructions. Early versions of the SPARCLET processor do not correctly
+handle </font></font><font face="Courier New"><font size=+0>save</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>restore</font></font><font face="Times New Roman"><font size=+1>
+instructions used with arguments. They correctly handle them used without
+arguments. A </font></font><font face="Courier New"><font size=+0>save</font></font><font face="Times New Roman"><font size=+1>
+instruction used without arguments increments the current window pointer
+but does not allocate a new stack frame. It is assumed that the window
+overflow trap handler will properly handle this case as will interrupt
+handlers.</font></font></ul>
+</ul>
+</dl>
+
+<dt>
+<font face="Times New Roman"><font size=+1>The following </font></font><font face="Courier New"><font size=+0>-m</font></font><font face="Times New Roman"><font size=+1>
+switches are supported in addition to the previous switches on SPARC V9
+processors in 64-bit environments.</font></font></dt>
+
+<ul>
+<dt>
+<font face="Courier New"><font size=+0>-mlittle-endian</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate code for a processor
+running in little-endian mode.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-m32</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-m64</font></font></dt>
+
+<ul><font face="Times New Roman,Times"><font size=+1>Generate code for
+a 32-bit or 64-bit environment. The 32-bit environment sets </font></font><font face="Courier New,Courier">int</font><font face="Times New Roman,Times"><font size=+1>,
+</font></font><font face="Courier New,Courier">long</font><font face="Times New Roman,Times"><font size=+1>
+and </font></font><font face="Courier New,Courier">pointer</font><font face="Times New Roman,Times"><font size=+1>
+to 32-bits. The 64-bit environment sets </font></font><font face="Courier New,Courier">int</font><font face="Times New Roman,Times"><font size=+1>
+to 32-bits and </font></font><font face="Courier New,Courier">long</font><font face="Times New Roman,Times"><font size=+1>
+and </font></font><font face="Courier New,Courier">pointer</font><font face="Times New Roman,Times"><font size=+1>
+to 64-bits.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mcmodel=medlow</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate code for the Medium/Low
+code model: the program must be linked in the low 32 bits of the address
+space. Pointers are still 64 bits. Programs can be statically or dynamically
+linked.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mcmodel=medmid</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate code for the Medium/Middle
+code model: the program must be linked in the low 44 bits of the address
+space, the text segment must be less than 2G bytes, and data segment must
+be within 2G of the text segment. Pointers are 64 bits.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mcmodel=medany</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate code for the Medium/Anywhere
+code model: the program may be linked anywhere in the address space, the
+text segment must be less than 2G bytes, and data segment must be within
+2G of the text segment. Pointers are 64 bits.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mcmodel=embmedany</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate code for the Medium/Anywhere
+code model for embedded systems: assume a 32-bit text and a 32-bit data
+segment, both starting anywhere (determined at link time). Register </font></font><font face="Courier New,Courier">%g4</font><font face="Times New Roman"><font size=+1>
+points to the base of the data segment. Pointers still 64 bits. Programs
+are statically linked, PIC is not supported.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mstack-bias</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-stack-bias</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>With </font></font><font face="Courier New"><font size=+0>-mstack-bias</font></font><font face="Times New Roman"><font size=+1>,
+GNU CC assumes that the stack pointer, and frame pointer, if present, are
+offset by </font></font><font face="Courier New"><font size=+0>-2047</font></font><font face="Times New Roman"><font size=+1>,
+which must be added back when making stack frame references. Otherwise,
+assume no such offset is present.</font></font></ul>
+</ul>
+
+<hr SIZE=3 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccV850.htm">Previous</a>|<a href="gccSystem_V_Options.html">Next</a></center>
+
+</body>
+</html>

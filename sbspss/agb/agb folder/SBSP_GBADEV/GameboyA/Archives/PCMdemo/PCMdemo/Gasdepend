@@ -1,0 +1,2 @@
+crt0.o:		crt0.s  c:/agb/include/AgbDefine.s \
+ c:/agb/include/AgbMacro.s c:/agb/include/AgbMemoryMap.s

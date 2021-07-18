@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Your program's arguments</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbStarting_your_program.html">Previous</A>|<A HREF="gdbYour_programs_environment.html">Next</A>
+<BR><A NAME="off_559888"></A><A NAME="b575010d"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Your
+program's arguments&nbsp;</FONT></FONT></FONT></B>
+<HR SIZE=3 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The arguments to your program
+can be specified by the arguments of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command. They are passed to a shell, which expands wildcard characters
+and performs redirection of I/O, and then to your program. Your </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SHELL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+environment variable (if it exists) specifies which shell GDB uses. If
+you do not define </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SHELL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+GDB uses </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/bin/sh</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with no arguments uses the same arguments used by the previous declaration
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or with those set by the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>args</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>set args</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Specify the arguments to
+be used the next time your program is run. If </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+args</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> has no arguments,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+executes your program with no arguments. Once you have run your program
+with arguments, using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+args</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> before the
+next </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the only way to run it again without arguments.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>show args</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Show the arguments to give
+your program when it is started.</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbStarting_your_program.html">Previous</A>|<A HREF="gdbYour_programs_environment.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

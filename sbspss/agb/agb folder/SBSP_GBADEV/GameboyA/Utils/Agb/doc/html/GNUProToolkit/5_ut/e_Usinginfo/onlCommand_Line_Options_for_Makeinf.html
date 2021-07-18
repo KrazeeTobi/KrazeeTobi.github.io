@@ -1,0 +1,245 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Command Line Options for Makeinfo</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="onlonl.html">Contents</A>|<A HREF="onlindex.html">Index</A>|<A HREF="onlControlling_Paragraph_Formats.html">Previous</A>|<A HREF="onlWhat_Makes_a_Valid_info_File.html">Next</A>
+<BR><A NAME="off_395854"></A><A NAME="5d2c26bd"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Command
+line options for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+2>Makeinfo</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>The
+following command line options are available for </FONT></FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makeinfo</FONT></FONT><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>.</FONT></FONT></FONT>
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-I <I>dir</I></FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Adds </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>dir</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to the directory search list for finding files which are included with
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>@include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command. By default, only the current directory is searched.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-D <I>var</I></FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Defines the Texinfo flag, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>var</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+This is equivalent to ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>@set</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>var</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in the Texinfo file.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-U <I>var</I></FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Makes the Texinfo flag, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>var</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+undefined. This is equivalent to ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>@clear
+<I>var</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ in
+the Texinfo file.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--error-limit num</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Sets the maximum number of errors
+that </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makeinfo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will print before exiting (on the assumption that continuing would be useless).
+The default number of errors printed before </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makeinfo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+gives up on processing the input file is 100.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--fill-column num</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Specifies the maximum right-hand
+edge of a line. Paragraphs that are filled will be filled to this width.
+The default value for fill-column is 72.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--footnote-style style</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Sets the footnote style to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>style</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>style</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+should either be ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>separate</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to have </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makeinfo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+create a separate node containing the footnotes which appear in the current
+node, or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>end</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to have </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makeinfo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+place the footnotes at the end of the current node.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--no-headers</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Suppress the generation of menus
+and node headers. This option is useful together with the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--output</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--no-split</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options (see following options) to produce a simple formatted file (suitable
+for printing on a dumb printer) from Texinfo source. If you do not have
+TEX, these two options may allow you to get readable hard copy.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--no-split</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Suppress the splitting stage
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makeinfo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+In general, large output files (where the size is greater than 70k bytes)
+are split into smaller subfiles, each one approximately 50k bytes.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If you specify ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--no-split</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makeinfo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will not split up the output file.</FONT></FONT></DT>
+</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>--no-pointer-validate</FONT></FONT>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--no-validate</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Suppress the validation phase
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makeinfo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Normally, after the file is processed, some consistency checks are made
+to ensure that cross references can be resolved, and so forth. See <FONT COLOR="#008000"><A HREF="onlWhat_Makes_a_Valid_info_File.html">What
+makes a valid </A></FONT></FONT></FONT><FONT COLOR="#008000"><A HREF="onlWhat_Makes_a_Valid_info_File.html"><B><FONT FACE="Courier New"><FONT SIZE=+0>info</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file?</FONT></FONT></A></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--no-warn</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Suppress the output of warning
+messages. This does not suppress the output of error messages, simply warnings.
+You might want this if the file you are creating has texinfo examples in
+it, and the nodes that are referenced don’t actually exist.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--no-number-footnotes</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Suppress the automatic numbering
+of footnotes. The default is to number each footnote sequentially in a
+single node, resetting the current footnote number to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+at the start of each node.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--output <I>file</I></FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-o <I>file</I></FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Specify that the output should
+be directed to </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>file
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>instead of
+the file name specified in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>@setfilename</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command found in the Texinfo source. </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>file
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>can be the
+special token ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+which specifies standard output.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--paragraph-indent <I>num</I></FONT></FONT></DT>
+
+<UL TYPE=SQUARE>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Sets the paragraph indentation
+to </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>num</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The value of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>num</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is interpreted as follows:</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></DT>
+
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>A value of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(or ‘none’) means not to change the existing indentation (in the source
+file) at the start of paragraphs.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>A value less than zero means
+to indent paragraph starts to column zero by deleting any existing indentation.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>A value greater than zero is
+the number of spaces to leave at the front of each paragraph start.</FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0></FONT></FONT>&nbsp;
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--reference-limit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>num</FONT></FONT></I></DT>
+
+<UL TYPE=SQUARE>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>When a node has many references
+in a single Texinfo file, this may indicate an error in the structure of
+the file. </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>num</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the number of times a given node may be referenced before </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makeinfo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+prints a warning message about it (with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>@prev</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>@next</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>@note</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+appearing in an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>@menu</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+for example).</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--verbose</FONT></FONT></DT>
+
+<UL TYPE=SQUARE>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Causes </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makeinfo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to inform you as to what it is doing. Normally </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makeinfo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+only outputs text if there are errors or warnings.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--version</FONT></FONT></DT>
+
+<UL TYPE=SQUARE>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Displays the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makeinfo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+version number.</FONT></FONT></DT>
+</UL>
+</UL>
+
+<DT>
+
+<HR SIZE=3 WIDTH="100%"></DT>
+
+<CENTER>
+<DT>
+<A HREF="#Top">Top</A>|<A HREF="onlonl.html">Contents</A>|<A HREF="onlindex.html">Index</A>|<A HREF="onlControlling_Paragraph_Formats.html">Previous</A>|<A HREF="onlWhat_Makes_a_Valid_info_File.html">Next</A></DT></CENTER>
+
+</BODY>
+</HTML>

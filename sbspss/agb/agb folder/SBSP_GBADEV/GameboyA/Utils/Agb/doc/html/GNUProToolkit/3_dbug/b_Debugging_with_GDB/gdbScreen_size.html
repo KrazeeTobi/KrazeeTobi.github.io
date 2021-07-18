@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Screen size</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbCommand_history.html">Previous</A>|<A HREF="gdbNumbers.html">Next</A>
+<BR><A NAME="off_263961"></A><A NAME="adf5470e"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3><B>Screen
+size&nbsp;</B>&nbsp;</FONT></FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Certain commands to GDB
+may produce large amounts of information output to the screen. To help
+you read all of it, GDB pauses and asks you for input at the end of each
+page of output. Use the </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Return</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+key when you want to continue the output, or type </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>q</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to discard the remaining output. Also, the screen width setting determines
+when to wrap lines of output. Depending on what is being printed, GDB tries
+to break the line at a readable place, rather than simply letting it overflow
+onto the following line.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Normally, GDB knows the size
+of the screen from the termcap data base together with the value of the
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>TERM</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+environment variable and the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stty
+rows</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stty
+cols</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> settings.
+If this is not correct, you can override it with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+height</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>width</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+commands:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>set height</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>lpp</FONT></FONT></I>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>show height</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>set width</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>cpl</FONT></FONT></I>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>show width</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>These </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+commands specify a screen height of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>lpp</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+lines and a screen width of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>cpl</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+characters. The associated </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>show</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+commands display the current settings. If you specify a height of zero
+lines, GDB does not pause during output no matter how long the output is.
+This is useful if output is to a file or to an editor buffer.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Likewise, you can specify
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set width</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to prevent GDB from wrapping its output.</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbCommand_history.html">Previous</A>|<A HREF="gdbNumbers.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,143 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Implicit Rule Search Algorithm</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeOldFashioned_Suffix_Rules.html">Previous</A>|<A HREF="makeUsing_make_to_Update_Archive_Fil.html">Next</A>
+<BR><A NAME="off_2359710"></A><A NAME="c5fa5033"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Implicit
+rule search algorithm</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+following is the procedure </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+uses for searching for an implicit rule for a target, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+This procedure is followed for each double-colon rule with no commands,
+for each target of ordinary rules none of which have commands, and for
+each dependency that is not the target of any rule. It is also followed
+recursively for dependencies that come from implicit rules, in the search
+for a chain of rules.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Suffix rules are not mentioned
+in this algorithm because suffix rules are converted to equivalent pattern
+rules once the makefiles have been read in. For an archive member target
+of the form, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>archive</I>(<I>member</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+the following algorithm is run twice, first using the entire target name,
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and, second, using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>(<I>member</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+as the target, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>if the first
+run found no rule.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Arial"><FONT SIZE=+1>1.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Split </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+into a directory part, called </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>d</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and the rest, called </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+For example, if </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>src/foo.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+then </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>d</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>src/</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n </FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>is
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=+1>2.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Make a list of all the pattern
+rules one of whose targets matches </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If the target pattern contains a slash, it is matched against </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+otherwise, against </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=+1>3.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If any rule in that list
+is not a match-anything rule, then remove all non-terminal match-anything
+rules from the list.</FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=+1>4.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Remove from the list all
+rules with no commands.</FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=+1>5.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>For each pattern rule in
+the list:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Arial"><FONT SIZE=+1>a.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Find the stem </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>s</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+which is the non-empty part of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>or </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+matched by the ‘%’ in the target pattern.</FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=+1>b.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Compute the dependency names
+by substituting </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>s</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’;
+if the target pattern does not contain a slash, append </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>d
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>to the front
+of each dependency name.</FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=+1>c.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Test whether all the dependencies
+exist or ought to exist. (If a file name is mentioned in the makefile as
+a target or as an explicit dependency, then we say it ought to exist.)</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If all dependencies exist
+or ought to exist, or there are no dependencies, then this rule applies.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Arial"><FONT SIZE=+1>6.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If no pattern rule has been
+found so far, try harder. For each pattern rule in the list:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Arial"><FONT SIZE=+1>a.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If the rule is terminal,
+ignore it and go on to the next rule.</FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=+1>b.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Compute the dependency names
+as before.</FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=+1>c.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Test whether all the dependencies
+exist or ought to exist.</FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=+1>d.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>For each dependency that
+does not exist, follow this algorithm recursively to see if the dependency
+can be made by an implicit rule.</FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=+1>e.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If all dependencies exist,
+ought to exist, or can be made by implicit rules, then this rule applies.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Arial"><FONT SIZE=+1>7.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If no implicit rule applies,
+the rule for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.DEFAULT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+if any, applies. In that case, give </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>the same commands
+that </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.DEFAULT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has. Otherwise, there are no commands for </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Once a rule that applies
+has been found, for each target pattern of the rule other than the one
+that matched </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in the pattern is replaced with </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>s</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and the resultant file name is stored until the commands to remake the
+target file, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+are executed. After these commands are executed, each of these stored file
+names are entered into the database and marked as having been updated and
+having the same update status as the file, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When the commands of a pattern
+rule are executed for </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the automatic variables are set corresponding to the target and dependencies.
+See <FONT COLOR="#008000"><A HREF="makeAutomatic_Variables.html">Automatic
+variables</A></FONT>.</FONT></FONT></UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeOldFashioned_Suffix_Rules.html">Previous</A>|<A HREF="makeUsing_make_to_Update_Archive_Fil.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

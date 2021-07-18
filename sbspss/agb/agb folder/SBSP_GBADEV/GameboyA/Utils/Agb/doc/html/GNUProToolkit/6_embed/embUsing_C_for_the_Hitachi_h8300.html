@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Using C++ for the Hitachi h8/300</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="emb.html">Contents</A>|<A HREF="embindex.html">Index</A>|<A HREF="embCompiling_for_Hitachi_h8300_targ.html">Previous</A>|<A HREF="embCompiler_options_for_the_Hitachi.html">Next</A>
+<BR><A NAME="off_263980"></A><A NAME="fb130355"></A><A NAME="off_263980"></A><A NAME="fb130355"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3><B>Using
+C++ for the Hitachi H8/300&nbsp;</B></FONT></FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>There
+is support for the C++ language. This support may in certain circumstances
+add up to 5K to the size of your executables.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The C++ support involves
+startup code that runs C++ initializers before </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>main()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is invoked. If you have a replacement for the file, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>crt0.o
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>(or if you call
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>main()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+you must call </FONT></FONT><FONT FACE="Courier New,Courier"><FONT SIZE=+0>__main()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+before calling </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>main()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You may need to run these
+C++ initializers even if you do not write in C++ yourself. This could happen,
+for instance, if you are linking against a third-party library which itself
+was written in C++. You may not be able to tell that it was written in
+C++ because you are calling it with C entry points prototyped in a C header
+file. Without these initializers, functions written in C++ may malfunction.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you are not using any
+third-party libraries, or are otherwise certain that you will not require
+any C++ constructors, you may suppress them by adding the following definition
+to your program.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>int __main() {}</FONT></FONT></PRE>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="emb.html">Contents</A>|<A HREF="embindex.html">Index</A>|<A HREF="embCompiling_for_Hitachi_h8300_targ.html">Previous</A>|<A HREF="embCompiler_options_for_the_Hitachi.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

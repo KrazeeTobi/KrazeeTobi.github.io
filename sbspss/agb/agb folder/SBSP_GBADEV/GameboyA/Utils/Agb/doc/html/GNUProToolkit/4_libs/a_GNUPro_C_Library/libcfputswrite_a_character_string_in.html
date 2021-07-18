@@ -1,0 +1,40 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>fputs[write a character string in a file or stream]</title>
+</head>
+<body>
+<a href="libc.html">Contents</a>|<a href="libcindex.html">Index</a>|<a href="libcfputcwrite_a_character_on_a_stre.html">Previous</a>|<a href="libcfreadread_array_elements_from_a_.html">Next</a>
+<p><a NAME="off_819200"></a><a NAME="15af58be"></a><a NAME="off_819200"></a><a NAME="15af58be"></a><font face="Courier New"><font size=+3>fputs</font></font>
+<br><font face="Times New Roman"><font size=+3>[write a character string
+in a file or stream]</font></font>
+<p><b><font face="Times New Roman"><font size=+1>SYNOPSIS</font></font></b>
+<br><font face="Courier New"><font size=+0>#include&lt;stdio.h></font></font>
+<br><font face="Courier New"><font size=+0>int</font><font size=-1> </font><font size=+0>fputs(constchar</font><font size=-1>
+</font><font size=+0>*<i>s</i>,FILE</font><font size=-1> </font><font size=+0>*<i>fp</i>);</font></font>
+<p><b><font face="Times New Roman"><font size=+1>DESCRIPTION</font></font></b>
+<br><font face="Courier New"><font size=+0>fputs </font></font><font face="Times New Roman"><font size=+1>writes
+the string at </font></font><i><font face="Courier New"><font size=+0>s
+</font></font></i><font face="Times New Roman"><font size=+1>(but without
+the trailing null) to the file or stream identified by </font></font><i><font face="Courier New"><font size=+0>fp</font></font></i><font face="Times New Roman"><font size=+1>.</font></font>
+<p><b><font face="Times New Roman"><font size=+1>RETURNS</font></font></b>
+<br><font face="Times New Roman"><font size=+1>If successful, the result
+is </font></font><font face="Courier New"><font size=+0>0</font></font><font face="Times New Roman"><font size=+1>;
+otherwise, the result is </font></font><font face="Courier New"><font size=+0>EOF</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<p><b><font face="Times New Roman"><font size=+1>COMPLIANCE</font></font></b>
+<br><font face="Times New Roman"><font size=+1>ANSI C</font></font><font face="Courier New"><font size=-1>
+</font></font><font face="Times New Roman"><font size=+1>requires </font></font><font face="Courier New"><font size=+0>fputs</font></font><font face="Times New Roman"><font size=+1>,
+but does not specify that the result on success must be </font></font><font face="Courier New"><font size=+0>0</font></font><font face="Times New Roman"><font size=+1>;
+any non-negative value is permitted.</font></font>
+<p><font face="Times New Roman"><font size=+1>Supporting OS subroutines
+required: </font></font><font face="Courier New"><font size=+0>close</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>fstat</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>isatty</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>lseek</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>read</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>sbrk</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>write</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+</body>
+</html>

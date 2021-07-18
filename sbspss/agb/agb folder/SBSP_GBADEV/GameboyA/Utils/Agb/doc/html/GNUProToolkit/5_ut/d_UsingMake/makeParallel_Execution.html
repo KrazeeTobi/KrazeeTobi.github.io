@@ -1,0 +1,97 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Parallel Execution</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeCommand_Execution.html">Previous</A>|<A HREF="makeErrors_in_Commands.html">Next</A>
+<BR><A NAME="off_853499"></A><A NAME="36e7b18a"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Parallel
+execution</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>GNU
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+knows how to execute several commands at once. Normally, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will execute only one command at a time, waiting for it to finish before
+executing the next. However, the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-j</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--jobs</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option tells </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to execute many commands simultaneously.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-j</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option is followed by an integer, this is the number of commands to execute
+at once; this is called the number of <I>job slots</I>.If there is nothing
+looking like an integer after the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-j</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option, there is no limit on the number of job slots. The default number
+of job slots is one which means serial execution (one thing at a time).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>One unpleasant consequence
+of running several commands simultaneously is that output from all of the
+commands comes when the commands send it, so messages from different commands
+may be interspersed.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Another problem is that two
+processes cannot both take input from the same device; so to make sure
+that only one command tries to take input from the terminal at once, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will invalidate the standard input streams of all but one running command.
+This means that attempting to read from standard input will usually be
+a fatal error (a ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>Broken
+pipe</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’ signal)
+for most child processes if there are several.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>It is unpredictable which
+command will have a valid standard input stream (which will come from the
+terminal, or wherever you redirect the standard input of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+The first command run will always get it first, and the first command started
+after that one finishes will get it next, and so on.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>We will change how this aspect
+of </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+works if we find a better alternative. In the mean time, you should <I>not</I>
+rely on any command using standard input at all if you are using the parallel
+execution feature; but if you are <I>not</I> using this feature, then standard
+input works normally in all commands.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If a command fails (i.e.,
+it is killed by a signal or exits with a nonzero status), and errors are
+not ignored for that command (see <FONT COLOR="#008000"><A HREF="makeErrors_in_Commands.html">Errors
+in commands</A></FONT>), the remaining command lines to remake the same
+target will not be run. If a command fails and the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-k</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--keep-going</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option was not given (see <FONT COLOR="#008000"><A HREF="makeSummary_of_Options.html">Summary
+of options</A></FONT>), </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+aborts execution. If </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+terminates for any reason (including a signal) with child processes running,
+it waits for them to finish before actually exiting.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When the system is heavily
+loaded, you will probably want to run fewer jobs than when it is lightly
+loaded. You can use the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option to tell </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to limit the number of jobs to run at once, based on the load average.
+The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--max-load</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option is followed by a floating-point number.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-l
+2.5</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> will not let
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+start more than one job if the load average is above 2.5. The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option with no following number removes the load limit, if one was given
+with a previous ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>More precisely, when </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+goes to start up a job, and it already has at least one job running, it
+checks the current load average; if it is not lower than the limit given
+with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+waits until the load average goes below that limit, or until all the other
+jobs finish. By default, there is no load limit.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeCommand_Execution.html">Previous</A>|<A HREF="makeErrors_in_Commands.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

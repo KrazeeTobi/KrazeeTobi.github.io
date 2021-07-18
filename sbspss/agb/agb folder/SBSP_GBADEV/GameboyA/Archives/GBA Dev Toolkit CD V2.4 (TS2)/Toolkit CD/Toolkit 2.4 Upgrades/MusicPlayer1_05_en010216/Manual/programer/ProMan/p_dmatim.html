@@ -1,0 +1,45 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<head><!-- Edited by Tracy B. 2/13/01-->
+
+<link rel="stylesheet" href="style.css">
+<title>Using DMA and Timers</title>
+</head>
+
+<body>
+
+<p><br>
+</p>
+
+<h2 ALIGN="CENTER">Using DMA and Timers</h2>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="p_dmatim">
+  <tr>
+    <td>The sound functions of this system occupy <b>DMA1</b>, <b>DMA2</b> and <b>TIMER 0</b>
+    of the AGB Hardware functions. For this reason, these hardware functions cannot be used by
+    programs that are not part of this system.<p>As for&nbsp; <b>DMA 2</b>, with some options
+    when creating a sound object, use by sound related functions can be prohibited.&nbsp; It
+    can be used by other programs. In this situation, the direct sound output is monaural and
+    the execution speed is faster.<br>
+    <br>
+    If you want to prevent sound from using DMA2, inform the sound engineer to <font
+    color="#000000">&quot;</font><font COLOR="#EE0000">add 'only_dma1 = 1' to the definition
+    file 'mks4agb.ini'</font>.&quot;<br>
+    </td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="link">
+  <tr>
+    <td><b>Next:</b> [<a HREF="p_sysrom.html"> Using Sound Code in System ROM</a>]<br>
+    <b>Back:</b> [<a HREF="p_limit.html">Maximum Processing Time for m4aSoundMain( )</a>] <br>
+    <b>Top  :</b> &nbsp[<a href="../p_index.html#p_dmatim">Table of Contents</a>]</td>
+  </tr>
+</table>
+</body>
+</html>

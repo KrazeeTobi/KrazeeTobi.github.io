@@ -1,0 +1,283 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>ARM Options</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccARC_options.html">Previous</a>|<a href="gccThumb_options.html">Next</a>
+<br><a NAME="off_1573995"></a><a NAME="e11afb77"></a><font face="Futura Md BT"><font color="#000000"><b><font size=+3>ARM
+options&nbsp;</font></b>&nbsp;</font></font>
+<hr SIZE=6 WIDTH="100%">
+<br><font face="Times New Roman"><font size=+1>The following ‘</font></font><font face="Courier New"><font size=+0>-m</font></font><font face="Times New Roman"><font size=+1>’
+options are defined for Advanced RISC Machines (ARM) architectures.</font></font>
+<dl>
+<dl>
+<dt>
+<font face="Courier New"><font size=+0>-mapcs-frame</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate a stack frame that
+is compliant with the ARM Procedure Call Standard for all functions, even
+if this is not strictly necessary for correct execution of the code. Specifying
+</font></font><font face="Courier New,Courier">-fomit-frame-pointer</font><font face="Times New Roman"><font size=+1>
+with this option will cause the stack frames not to be generated for leaf
+functions. The default is</font></font>
+<br><font face="Courier New,Courier">-mno-apcs-frame</font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mapcs</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>This is a synonym for </font></font><font face="Courier New"><font size=+0>-mapcs-frame</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mapcs-26</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate code for a processor
+running with a 26-bit program counter, and conforming to the function calling
+standards for the APCS 26-bit option. This option replaces the ‘</font></font><font face="Courier New"><font size=+0>-m2</font></font><font face="Times New Roman"><font size=+1>’
+and ‘</font></font><font face="Courier New"><font size=+0>-m3</font></font><font face="Times New Roman"><font size=+1>’
+options of previous releases of the compiler.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mapcs-32</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate code for a processor
+running with a 32-bit program counter, and conforming to the function calling
+standards for the APCS 32-bit option. This option replaces the ‘</font></font><font face="Courier New"><font size=+0>-m6</font></font><font face="Times New Roman"><font size=+1>’
+option of previous releases of the compiler.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mapcs-stack-check</font></font></dt>
+
+<dl><font face="Times New Roman,Times"><font size=+1>Generate code to check
+the amount of stack space available upon entry to every function (that
+actually uses some stack space). If there is insufficient space available
+then either the function, </font></font><font face="Courier New,Courier">__rt_stkovf_split_small</font><font face="Times New Roman,Times"><font size=+1>,
+or </font></font><font face="Courier New,Courier">__rt_stkovf_split_big</font><font face="Times New Roman,Times"><font size=+1>,
+will be called, depending upon the amount of stack space required. The
+run time system is required to provide these functions. The default is
+</font></font><font face="Courier New,Courier">-mno-apcs-stack-check</font><font face="Times New Roman,Times"><font size=+1>,
+since this produces smaller code.</font></font></dl>
+
+<dt>
+<font face="Courier New"><font size=+0>-mapcs-float</font></font></dt>
+
+<ul><font face="Times New Roman,Times"><font size=+1>Pass floating point
+arguments using the float point registers. This is one of the variants
+of the APCS. This option is reccommended if the target hardware has a floating
+point unit or if a lot of floating point arithmetic is going to be performed
+by the code. The default is </font></font><font face="Courier New,Courier">-mno-apcs-float</font><font face="Times New Roman,Times"><font size=+1>,
+since integer only</font></font>
+<br><font face="Times New Roman,Times"><font size=+1>code is slightly increased
+in size if </font></font><font face="Courier New,Courier">-mapcs-float</font><font face="Times New Roman,Times"><font size=+1>
+is used.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mapcs-reentrant</font></font></dt>
+
+<dl><font face="Times New Roman,Times"><font size=+1>Generate reentrant,
+position independent code. This is the equivalent to specifying the </font></font><font face="Courier New,Courier">-fpic</font><font face="Times New Roman,Times"><font size=+1>
+option. The default is </font></font><font face="Courier New,Courier">-mno-apcs-reentrant</font><font face="Times New Roman,Times"><font size=+1>.</font></font></dl>
+
+<dt>
+<font face="Courier New,Courier">-mthumb-interwork</font></dt>
+
+<dl><font face="Times New Roman,Times"><font size=+1>Generate code which
+supports calling between the ARM and THUMB instruction sets. Without this
+option the two instruction sets cannot be reliably used inside one program.
+The default is </font></font><font face="Courier New,Courier">-mno-thumb-interwork</font><font face="Times New Roman,Times"><font size=+1>,
+since slightly larger code is generated when </font></font><font face="Courier New,Courier">-mthumb-interwork</font><font face="Times New Roman,Times"><font size=+1>
+is specified.</font></font>
+<dl>&nbsp;</dl>
+</dl>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-sched-prolog</font></font></dt>
+
+<ul><font size=+1><font face="Times New Roman,Times">Prevent the reordering
+of instructions in the function prolog, or the merging of those instruction
+with the instructions in the function</font><font face="Times New Roman">’</font><font face="Times New Roman,Times">s
+body. This means that all functions will start with a recognizable set
+of instructions (or, in fact, one of a choice from a small set of different
+function prologues), and this information can be used to locate the start
+if functions inside an executable piece of code.</font></font>
+<br><font face="Times New Roman,Times"><font size=+1>The default is </font></font><font face="Courier New,Courier">-msched-prolog</font><font face="Times New Roman,Times"><font size=+1>.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mhard-float</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate output containing
+floating point instructions. This is the default.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-msoft-float</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate output containing
+library calls for floating point.</font></font>
+<br>&nbsp;
+<ul>&nbsp;<b><i><font face="Times New Roman"><font size=+1>Warning:</font></font></i></b>
+<br><font face="Times New Roman"><font size=+1>The requisite libraries
+are not available for all ARM targets. Normally the facilities of the machine’s
+usual C compiler are used, but this cannot be done directly in cross-compilation.
+You must make your own arrangements to provide suitable library functions
+for cross-compilation.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-msoft-float</font></font><font face="Times New Roman"><font size=+1>
+changes the calling convention in the output file; therefore, it is only
+useful if you compile all of a program with this option. In particular,
+you need to compile </font></font><font face="Courier New"><font size=+0>libgcc.a</font></font><font face="Times New Roman"><font size=+1>,
+the library that comes with GNU CC, with </font></font><font face="Courier New"><font size=+0>-msoft-float</font></font><font face="Times New Roman"><font size=+1>
+in order for this to work.</font></font></dt>
+</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mlittle-endian</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate code for a processor
+running in little-endian mode. This is the default for all standard configurations.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mbig-endian</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate code for a processor
+running in big-endian mode; the default is to compile code for a little-endian
+processor.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mwords-little-endian</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>This option only applies
+when generating code for big-endian processors. Generate code for a little-endian
+word order but a big-endian byte order. That is, a byte order of the form,
+</font></font><font face="Courier New"><font size=+0>32107654</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+</dl>
+
+<ul>
+<ul>
+<ul>
+<dt>
+<font face="Times New Roman"><font size=+1><i>Note</i>:</font></font></dt>
+
+<br><font face="Times New Roman"><font size=+1>This option should only
+be used if you require compatibility with code for big-endian ARM processors
+generated by versions of the compiler prior to 2.8.</font></font></ul>
+</ul>
+</ul>
+</dl>
+
+<ul>
+<dt>
+<font face="Courier New"><font size=+0>-mshort-load-bytes</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Do not try to load half-words
+(e.g., </font></font><font face="Courier New"><font size=+0>short</font></font><font face="Times New Roman"><font size=+1>)
+by loading a word from an unaligned address. For some targets the MMU is
+configured to trap unaligned loads; use this option to generate code that
+is safe in these environments.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-short-load-bytes</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Use unaligned word loads
+to load half-words (e.g., </font></font><font face="Courier New"><font size=+0>short</font></font><font face="Times New Roman"><font size=+1>’s).
+This option produces more efficient code, but the MMU is sometimes configured
+to trap these instructions.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mshort-load-words</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>This is a synonym for </font></font><font face="Courier New"><font size=+0>-mshort-load-bytes</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-short-load-words</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>This is a synonym for </font></font><font face="Courier New"><font size=+0>-mno-short-load-bytes</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mbsd</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>This option only applies
+to RISC iX. Emulate the native BSD-mode compiler. This is the default if
+</font></font><font face="Courier New"><font size=+0>-ansi</font></font><font face="Times New Roman"><font size=+1>
+is not specified.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mxopen</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>This option only applies
+to RISC iX. Emulate the native X/Open-mode compiler.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-symrename</font></font></dt>
+
+<dl>
+<dl><font face="Times New Roman"><font size=+1>This option only applies
+to RISC iX. Do not run the assembler post-processor, </font></font><font face="Courier New"><font size=+0>symrename</font></font><font face="Times New Roman"><font size=+1>,
+after code has been assembled. Normally it is necessary to modify some
+of the standard symbols in preparation for linking with the RISC iX C library;
+this option suppresses this pass. The post-processor is never run when
+the compiler is built for cross-compilation.</font></font></dl>
+
+<dt>
+<font face="Courier New,Courier">-mcpu=&lt;<i>name</i>></font></dt>
+
+<dl><font face="Times New Roman"><font size=+1>This speci es the name of
+the target ARM processor. GCC uses this name to determine what kind of
+instructions it can use when generating assembly code. The permissable
+replacements for </font></font><i><font face="Courier New,Courier">name</font></i><font face="Times New Roman"><font size=+1>
+are: arm2, arm250, arm3, arm6, arm60, arm600, arm610, arm620, arm7, arm7m,
+arm7d, arm7dm, arm7di, arm7dmi, arm70, arm700, arm700i, arm710, arm710c,
+arm7100, arm7500, arm7500fe, arm7tdmi, arm8, strongarm, strongarm110.</font></font></dl>
+
+<dt>
+<font face="Courier New,Courier">-march=&lt;<i>name</i>></font></dt>
+
+<dl><font face="Times New Roman"><font size=+1>This specifies the name
+of the target ARM architecture. GCC uses this name to determine what kind
+of instructions it can use when generating assembly code.</font></font>
+<br><font face="Times New Roman"><font size=+1>This option can be used
+in conjunction with or instead of the </font></font><font face="Courier New,Courier">-mcpu=</font><font face="Times New Roman"><font size=+1>
+option. The permissable replacements for </font></font><i><font face="Courier New,Courier">name</font></i><font face="Times New Roman"><font size=+1>
+are: armv2, armv2a, armv3, armv3m, armv4, armv4t.</font></font></dl>
+
+<dt>
+<font face="Courier New,Courier">-mfpe=&lt;<i>number</i>></font></dt>
+
+<dl><font face="Times New Roman"><font size=+1>This specifies the version
+of the floating point emulation available on the target. Permissable values
+for </font></font><i><font face="Courier New,Courier">number</font></i><font face="Times New Roman"><font size=+1>
+are 2 and 3.</font></font></dl>
+
+<dt>
+<font face="Courier New,Courier">-mstructure-size-boundary=&lt;<i>n</i>></font></dt>
+
+<dl><font face="Times New Roman"><font size=+1>The size of all structures
+and unions will be rounded up to a multiple of the number of bits set by
+this option. Permissable values for </font></font><i><font face="Courier New,Courier">n</font></i><font face="Times New Roman"><font size=+1>
+are 8 and 32. The default value varies for different toolchains. For the
+COFF targeted toolchain the default value is 8. Specifying the larger number
+can produced faster, more</font></font>
+<br><font face="Times New Roman"><font size=+1>efficient code, but can
+also increase the size of the program. The two values are potentially incompatible.
+Code compiled with one value cannot necessarily expect to work with code
+or libraries compiled with the other value, if they exchange information
+using structures or unions. Programmers are encouraged to use the 32 value
+as future versions of the toolchain may default to this value.</font></font></dl>
+
+<dt>
+<font face="Courier New,Courier">-mnop-fun-dllimport</font></dt>
+
+<dl><font face="Times New Roman"><font size=+1>Disable the support for
+the </font></font><i><font face="Courier New,Courier">dllimport</font></i><font face="Times New Roman"><font size=+1>
+attribute.</font></font></dl>
+</dl>
+</ul>
+
+<center>
+<hr SIZE=3 WIDTH="100%">
+<br><a href="#Top">Top</a>|<a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccARC_options.html">Previous</a>|<a href="gccThumb_options.html">Next</a></center>
+
+</body>
+</html>

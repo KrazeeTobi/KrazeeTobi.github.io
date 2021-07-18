@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Reentrancy Properties of libm</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libm.html">Contents</A>|<A HREF="libmindex.html">Index</A>|<A HREF="libmtanh_tanhfhyperbolic_tangent.html">Previous</A>
+<BR><A NAME="off_427427"></A><A NAME="a8766b5c"></A><A NAME="off_427427"></A><A NAME="a8766b5c"></A><A NAME="off_427427"></A><A NAME="a8766b5c"></A><A NAME="off_427427"></A><A NAME="a8766b5c"></A><A NAME="off_427427"></A><A NAME="a8766b5c"></A><FONT SIZE=+3><B><FONT FACE="Futura Md BT">Reentrancy
+properties of </FONT></B><FONT FACE="Courier New">libm</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>When
+a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function detects an exceptional case, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">may be set, the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>matherr</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">function may be called, and a error
+message may be written to the standard error stream. This behavior may
+not be reentrant.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>With reentrant C libraries
+like the GNUPro C library, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is a macro which expands to the per-thread
+error value. This makes it thread safe.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When the user provides his
+own </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>matherr</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">function, it must be reentrant for
+the math library as a whole to be reentrant.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In normal debugged programs,
+there are usually no math subroutine errors—and therefore no assignments
+to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and no </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>matherr</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">calls; in that situation, the math
+functions behave reentrantly.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"><A HREF="#Top">Top</A>|<A HREF="libm.html">Contents</A>|<A HREF="libmindex.html">Index</A>|<A HREF="libmtanh_tanhfhyperbolic_tangent.html">Previous</A></CENTER>
+
+</BODY>
+</HTML>

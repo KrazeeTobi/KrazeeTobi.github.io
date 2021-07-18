@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>vprintf, vfprintf, vsprintf[format argument list]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libctmpnam_tempnamname_for_a_tempora.html">Previous</A>|<A HREF="libcStrings_and_Memory_stringh.html">Next</A>
+</P>
+
+<P><A NAME="off_1343655"></A><A NAME="31428ff1"></A><A NAME="off_1343655"></A><A NAME="31428ff1"></A><A NAME="off_1343655"></A><A NAME="31428ff1"></A><A NAME="off_1343655"></A><A NAME="31428ff1"></A><A NAME="off_1343655"></A><A NAME="31428ff1"></A><A NAME="off_1343655"></A><A NAME="31428ff1"></A><A NAME="off_1343655"></A><A NAME="31428ff1"></A><FONT SIZE=+3><FONT FACE="Courier New">vprintf</FONT><FONT FACE="Times New Roman">,
+</FONT><FONT FACE="Courier New">vfprintf</FONT><FONT FACE="Times New Roman">,
+</FONT><FONT FACE="Courier New">vsprintf <BR>
+</FONT><FONT FACE="Times New Roman">[format argument list] </FONT></FONT></P>
+
+<PRE><B><FONT FACE="Times New Roman"><FONT SIZE=+2>SYNOPSIS 
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+1>#include &lt;stdio.h&gt; 
+#include &lt;stdarg.h&gt; 
+int vprintf(const char *<I>fmt</I>, va_list list); 
+int vfprintf(FILE *<I>fp</I>, const char *<I>fmt</I>, va_list list); 
+int vsprintf(char *<I>str</I>, const char *<I>fmt</I>, va_list list); 
+int _vprintf_r(void *<I>reent</I>, const char 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<I>fmt</I>, va_list list); 
+int _vfprintf_r(void *<I>reent</I>, FILE 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<I>fp</I>, const char *<I>fmt</I>, va_list list); 
+int _vsprintf_r(void *<I>reent</I>, char 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<I>str</I>, const char *<I>fmt</I>, va_list list); </FONT></FONT></PRE>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>vprintf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vfprintf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vsprintf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">are (respectively) variants of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>printf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fprintf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sprintf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+They differ only in allowing their caller to pass the variable argument
+list as a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>va_list</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">object (initialized by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>va_start</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+rather than directly accepting a variable number of arguments. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>RETURNS <BR>
+</B>The return values are consistent with the corresponding functions:
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vsprintf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">returns the number of bytes in the
+output string, save that the concluding </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NULL</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is not counted. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vprintf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vfprintf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">return the number of characters transmitted.
+If an error occurs, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vprintf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vfprintf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">return </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>EOF</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+No error returns occur for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vsprintf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>COMPLIANCE <BR>
+</B>ANSI C requires all three functions. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Supporting OS subroutines
+required: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>close</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fstat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>isatty</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>lseek</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>read</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sbrk</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>write</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+</BODY>
+</HTML>

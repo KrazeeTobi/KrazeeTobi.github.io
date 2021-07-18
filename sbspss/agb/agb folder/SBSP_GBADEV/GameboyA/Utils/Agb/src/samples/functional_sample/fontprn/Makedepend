@@ -1,0 +1,5 @@
+fontprn.o : fontprn.c C:/agb/include/Agb.h C:/agb/include/AgbTypes.h \
+ C:/agb/include/AgbDefine.h C:/agb/include/AgbMemoryMap.h \
+ C:/agb/include/AgbMacro.h C:/agb/include/AgbSystemCall.h \
+ C:/agb/include/AgbSound.h C:/agb/include/IsAgbPrint.h fontprn.h \
+ font8.h

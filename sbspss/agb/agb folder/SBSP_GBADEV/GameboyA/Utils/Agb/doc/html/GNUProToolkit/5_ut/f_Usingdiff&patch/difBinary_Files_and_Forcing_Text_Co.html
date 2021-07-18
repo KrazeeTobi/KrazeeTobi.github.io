@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Binary Files and Forcing Text Comparisons</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="dif.html">Contents</A>|<A HREF="difindex.html">Index</A>|<A HREF="difSummarizing_Which_Files_Differ.html">Previous</A>|<A HREF="difdiff_Output_Formats.html">Next</A>
+</P>
+
+<P><A NAME="off_196690"></A><A NAME="ed7553bf"></A><B><FONT FACE="Times New Roman"><FONT SIZE=+3>Binary
+Files and Forcing Text Comparisons </FONT></FONT></B></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+thinks that either of the two files it is comparing is binary (a non-text
+file), it normally treats that pair of files much as if the summary output
+format had been selected and reports only that the binary files are different.
+This is because line by line comparisons are usually not meaningful for
+binary files. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For more discussion, see
+the following documentation. </FONT></FONT></P>
+
+<UL TYPE=SQUARE>
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difHunks.html">Hunks</A></FONT>
+</FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difSuppressing_Differences_00000004.html">Suppressing
+Differences in Blank and Tab Spacing</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difSuppressing_Case_Differences.html">Suppressing
+Case Differences</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="difSuppressing_Differences_00000005.html">Suppressing
+Differences in Blank Lines </A></FONT></FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difSuppressing_Lines_Matching_a_Reg.html">Suppressing
+Lines Matching a Regular Expression</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difSummarizing_Which_Files_Differ.html">Summarizing
+Which Files Differ</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT COLOR="#008000"><A HREF="difdiff_Output_Formats.html"><B><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+Output Formats</FONT></FONT></A></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT></LI>
+</UL>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+determines whether a file is text or binary by checking the first few bytes
+in the file; the exact number of bytes is system dependent, but it is typically
+several thousand. If every character in that part of the file is non-null,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+considers the file to be text; otherwise it considers the file to be binary.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Sometimes you might want
+to force </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to consider files to be text. For example, you might be comparing text
+files that contain null characters; </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+would erroneously decide that those are non-text files. Or you might be
+comparing documents that are in a format used by a word processing system
+that uses null characters to indicate special formatting. You can force
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to consider all files to be text files, and compare them line by line,
+by using the '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+or '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--text</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+option. If the files you compare using this option do not in fact contain
+text, they will probably contain few newline characters, and the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+output will consist of hunks showing differences between long lines of
+whatever characters the files contain. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can also force </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to consider all files to be binary files, and report only whether they
+differ (but not how). Use the '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--brief</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+option for this. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In operating systems that
+distinguish between text and binary files, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+normally reads and writes all data as text. Use the '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--binary</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+option to force </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to read and write binary data instead. This option has no effect on a Posix-compliant
+system like GNU or traditional Unix. However, many personal computer operating
+systems represent the end of a line with a carriage return followed by
+a newline. On such systems, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+normally ignores these carriage returns on input and generates them at
+the end of each output line, but with the '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--binary</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+option </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+treats each carriage return as just another input character, and does not
+generate a carriage return at the end of each output line. This can be
+useful when dealing with non-text files that are meant to be interchanged
+with Posix-compliant systems. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you want to compare two
+files byte by byte, you can use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cmp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+program with the '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+option to show the values of each differing byte in the two files. With
+GNU </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cmp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+you can also use the '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+option to show the ASCII representation of those bytes. See <FONT COLOR="#008000"><A HREF="difInvoking_cmp.html">Invoking
+</A></FONT></FONT></FONT><B><FONT FACE="Courier New"><FONT COLOR="#008000"><FONT SIZE=+0><A HREF="difInvoking_cmp.html">cmp</A></FONT></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for more information. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff3</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+thinks that any of the files it is comparing is binary (a non-text file),
+it normally reports an error, because such comparisons are usually not
+useful. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff3</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+uses the same test as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to decide whether a file is binary. As with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+if the input files contain a few non-text characters but otherwise are
+like text files, you can force </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff3</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to consider all files to be text files and compare them line by line by
+using the '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+or '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--text</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+options. </FONT></FONT></P>
+
+</BODY>
+</HTML>

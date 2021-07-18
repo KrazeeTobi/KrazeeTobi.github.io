@@ -1,0 +1,159 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Generator" CONTENT="Microsoft Word 97">
+   <META NAME="Template" CONTENT="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>matherr[modifiable math error handler]</TITLE>
+</HEAD>
+<BODY LINK="#0000FF" VLINK="#800080">
+<A NAME="Top"></A><A HREF="libm.html">Contents</A>|<A HREF="libmindex.html">Index</A>|<A HREF="libmlog1p_log1pflog_of_1__x.html">Previous</A>|<A HREF="libmmodf_modffsplit_fractional_and_i.html">Next</A>
+
+<P><A NAME="off_328023"></A><A NAME="BM0d810629"></A><FONT FACE="Courier New"><FONT SIZE=+3>matherr</FONT><FONT SIZE=+4></FONT></FONT>
+<BR><FONT SIZE=+3>[modifiable math error handler]</FONT>
+
+<P><B><FONT SIZE=+1>SYNOPSIS</FONT></B>
+<BR><FONT FACE="Courier New">#include &lt;math.h></FONT>
+<BR><FONT FACE="Courier New">int matherr(struct exception *<I>e</I>);</FONT><B><FONT SIZE=+1></FONT></B>
+
+<P><B><FONT SIZE=+1>DESCRIPTION</FONT></B>
+<BR><FONT FACE="Courier New">matherr</FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT>is called whenever a math library function generates an error. You
+can replace </FONT><FONT FACE="Courier New">matherr</FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT>by your own subroutine to customize error treatment. The customized
+</FONT><FONT FACE="Courier New">matherr</FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT>must return 0 if it fails to resolve the error, and non-zero if
+the error is resolved.</FONT>
+
+<P><FONT SIZE=+1>When </FONT><FONT FACE="Courier New">matherr</FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT>returns a nonzero value, no error message is printed and the value
+of </FONT><FONT FACE="Courier New">errno</FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT>is not modified.</FONT>
+
+<P><FONT SIZE=+1>You can accomplish either or both of these things in your
+own </FONT><FONT FACE="Courier New">matherr</FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT>using the information passed in the structure </FONT><FONT FACE="Courier New">*<I>e</I></FONT><FONT SIZE=+1>.
+The following example shows the </FONT><FONT FACE="Courier New">exception</FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT>structure (defined in </FONT><FONT FACE="Courier New">math.h</FONT><FONT SIZE=+1>).</FONT>
+<DIR>
+<DIR>
+<PRE><FONT SIZE=+1>struct exception {&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int type;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char *name;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double arg1, arg2, retval;&nbsp;
+int err;&nbsp;
+};</FONT></PRE>
+</DIR>
+</DIR>
+<FONT SIZE=+1>The members of the exception structure have the following
+meanings.</FONT>
+<DIR>
+<DIR>
+<DIR>
+<LI>
+<B><FONT FACE="Courier New">type</FONT></B></LI>
+
+<DT>
+<FONT SIZE=+1>The type of mathematical error that occurred; macros encoding
+error types are also defined in </FONT><FONT FACE="Courier New">math.h</FONT><FONT SIZE=+1>.</FONT></DT>
+
+<LI>
+<B><FONT FACE="Courier New">name</FONT></B></LI>
+
+<DT>
+<FONT SIZE=+1>A pointer to a null-terminated string holding the name of
+the math library function where the error occurred.</FONT></DT>
+
+<LI>
+<B><FONT FACE="Courier New">arg1</FONT></B><FONT SIZE=+1>, </FONT><B><FONT FACE="Courier New">arg2</FONT></B></LI>
+
+<DT>
+<FONT SIZE=+1>The arguments which caused the error.</FONT></DT>
+
+<LI>
+<B><FONT FACE="Courier New">retval</FONT></B></LI>
+
+<DT>
+<FONT SIZE=+1>The error return value (what the calling function will return).</FONT></DT>
+
+<LI>
+<B><FONT FACE="Courier New">err</FONT></B></LI>
+
+<DT>
+<FONT SIZE=+1>If set to be non-zero, this is the new value assigned to
+</FONT><FONT FACE="Courier New">errno</FONT><FONT SIZE=+1>.</FONT></DT>
+</DIR>
+</DIR>
+</DIR>
+<FONT SIZE=+1>The error types defined in </FONT><FONT FACE="Courier New">math.h</FONT><FONT SIZE=+1>
+represent possible mathematical errors as follows.</FONT>
+<DL>
+<DIR>
+<UL>
+<UL>
+<LI>
+<B><FONT FACE="Courier New">DOMAIN</FONT></B></LI>
+
+<DT>
+<FONT SIZE=+1>An argument was not in the domain of the function; e.g.,
+</FONT><FONT FACE="Courier New">log(-1.0)</FONT><FONT SIZE=+1>.</FONT></DT>
+
+<LI>
+<B><FONT FACE="Courier New">SING</FONT></B></LI>
+
+<DT>
+<FONT SIZE=+1>The requested calculation would result in a singularity;
+e.g., </FONT><FONT FACE="Courier New">pow(0.0,-2.0)</FONT><FONT SIZE=+1>.</FONT></DT>
+
+<LI>
+<B><FONT FACE="Courier New">OVERFLOW</FONT></B></LI>
+
+<DT>
+<FONT SIZE=+1>A calculation would produce a result too large to represent;
+e.g., </FONT><FONT FACE="Courier New">exp(1000.0)</FONT><FONT SIZE=+1>.</FONT></DT>
+
+<LI>
+<B><FONT FACE="Courier New">UNDERFLOW</FONT></B></LI>
+
+<DT>
+<FONT SIZE=+1>A calculation would produce a result too small to represent;
+e.g., </FONT><FONT FACE="Courier New">exp(-1000.0)</FONT><FONT SIZE=+1>.</FONT></DT>
+
+<LI>
+<B><FONT FACE="Courier New">TLOSS</FONT></B></LI>
+
+<DT>
+<FONT SIZE=+1>Total loss of precision. The result would have no significant
+digits; e.g., </FONT><FONT FACE="Courier New">sin(10e70)</FONT><FONT SIZE=+1>.</FONT></DT>
+
+<LI>
+<B><FONT FACE="Courier New">PLOSS</FONT></B><FONT FACE="Courier"><FONT SIZE=+1></FONT></FONT></LI>
+
+<DT>
+<FONT SIZE=+1>Partial loss of precision.</FONT></DT>
+</UL>
+</UL>
+</DIR>
+</DL>
+<B><FONT SIZE=+1>RETURNS</FONT></B>
+<BR><FONT SIZE=+1>The library definition for </FONT><FONT FACE="Courier New">matherr</FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT>returns </FONT><FONT FACE="Courier New">0</FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT>in all cases. You can change the calling function’s result from
+a customized </FONT><FONT FACE="Courier New">matherr</FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT>by modifying </FONT><FONT FACE="Courier New">e->retval</FONT><FONT SIZE=+1>,
+which propagates backs to the caller. If </FONT><FONT FACE="Courier New">matherr</FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT>returns </FONT><FONT FACE="Courier New">0</FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT>(indicating that it was not able to resolve the error), the caller
+sets </FONT><FONT FACE="Courier New">errno</FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT>to an appropriate value, and prints an error message.</FONT><B><FONT SIZE=+1></FONT></B>
+
+<P><B><FONT SIZE=+1>COMPLIANCE</FONT></B>
+<BR><FONT FACE="Courier New">matherr</FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT>is not ANSI C.</FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libm.html">Contents</A>|<A HREF="libmindex.html">Index</A>|<A HREF="libmlog1p_log1pflog_of_1__x.html">Previous</A>|<A HREF="libmmodf_modffsplit_fractional_and_i.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

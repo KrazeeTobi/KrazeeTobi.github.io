@@ -1,0 +1,194 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Printing source lines</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbExamining_Source_Files.html">Previous</A>|<A HREF="gdbSearching_source_files.html">Next</A>
+<BR><A NAME="off_1246344"></A><A NAME="068a1445"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Printing
+source lines</FONT></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>To print
+lines from a source file, use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command (abbreviated </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+By default, ten lines are printed. There are several ways to specify what
+part of the file you want to print. The following are the forms of the
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command most commonly used.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>list <I>linenum</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print lines centered around
+line number, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>linenum</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+in the current source file.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>list function</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print lines centered around
+the beginning of function, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>function</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print more lines. If the
+last lines printed were printed with a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command, this prints lines following the last lines printed; however, if
+the last line printed was a solitary line printed as part of displaying
+a stack frame (see <FONT COLOR="#008000"><A HREF="gdbExamining_the_Stack.html">Examining
+the Stack</A></FONT>), this prints lines centered around that line.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>list -</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print lines just before
+the lines last printed.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>By default, GDB prints ten
+source lines with any of these forms of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command. You can change this using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+listsize</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>:</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>set listsize</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>count</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Make the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command display </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>count</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+source lines (unless the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+argument explicitly specifies some other number).</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>show listsize</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Display the number of lines
+that list prints.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Repeating a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command using the </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Return</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+key discards the argument, so it is equivalent to typing </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+This is more useful than listing the same lines again. An exception is
+made for an argument of ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’;
+that argument is preserved in repetition so that each repetition moves
+up in the source file.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>In general, the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command expects you to supply zero, one or two <I>linespecs</I>. Linespecs
+specify source lines; there are several ways of writing them but the effect
+is always to specify some source line. The following documentation describes
+the possible arguments for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>list <I>linespec</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Print lines centered around
+the line specified by </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>linespec</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>list <I>first</I>,<I>last</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Print lines from </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>first</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>last</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Both arguments are linespecs.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>list ,<I>last</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Print lines ending with
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>last</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>list <I>first</I>,</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Print lines starting with
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>first</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>list +</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Print lines just after the
+lines last printed.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>list -</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Print lines just before
+the lines last printed.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>As described for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in the previous descriptions.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The following are the ways
+of specifying a single source line—all the kinds of </FONT></FONT><I><FONT FACE="Courier New,Courier">linespec</FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0><I>number</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Specifies line </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>number
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>of the current
+source file. When a list command has two linespecs, this refers to the
+same source file as the first linespec.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>+<I>offset</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Specifies the line </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>offset</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+lines after the last line printed. When used as the second linespec in
+a list command that has two, this specifies the line </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>offset</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+lines down from the first linespec.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>-<I>offset</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Specifies the line </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>offset
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>lines before
+the last line printed.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0><I>filename</I>:<I>number</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Specifies line </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>number</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in the source file, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0><I>function</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Specifies the line that
+begins the body of the function, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>function</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+For instance, in C, this is the line with the open brace.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0><I>filename</I>:<I>function</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Specifies the line of the
+open-brace that begins the body of the function </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>function
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>in the file,
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+You only need the file name with a function name to avoid ambiguity when
+there are identically named functions in different source files.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>*<I>address</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Specifies the line containing
+the program address, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>address</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>address</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may be any expression.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbExamining_Source_Files.html">Previous</A>|<A HREF="gdbSearching_source_files.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

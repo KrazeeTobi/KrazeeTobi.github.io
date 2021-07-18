@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>configure options</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbSpecifying_names_for_hosts_and_t.html">Previous</A>|<A HREF="gdbControlling_GDB.html">Next</A>
+<BR><A NAME="off_197867"></A><A NAME="5c7e85c7"></A><FONT COLOR="#000000"><B><TT><FONT POINT-SIZE="24">configure</FONT></TT></B><FONT FACE="Futura Md BT"><FONT SIZE=+3>
+options&nbsp;&nbsp;</FONT></FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The following summary of
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options and arguments are useful for building GDB. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+also has several other options not listed here. See the info file, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure.info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+in the node, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>What
+Configure Does</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+for more explanation of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;
+<UL>
+<PRE><B><FONT FACE="Courier New"><FONT SIZE=+1>configure [--help]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [--prefix=</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+1><I>dir</I><B>]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [--srcdir=</B><I>dirname</I><B>]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [--norecursion][--rm]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [--target=</B><I>target</I><B>]</B> <I>host</I></FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You may introduce options with
+a single ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>-</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+rather than ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>--</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+if you prefer; but you may abbreviate option names if you use ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>--</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>--help</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Display a quick summary
+of how to invoke </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-prefix=<I>dir</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Configure the source to
+install programs and files under directory ‘</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>dir</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>--srcdir=<I>dirname</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use this option to make
+configurations in directories separate from the GDB source directories.
+Among other things, you can use this to build (or maintain) several configurations
+simultaneously, in separate directories.</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+writes configuration specific files in the current directory, but arranges
+for them to use the source in the directory </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>dirname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+creates directories under the working directory in parallel to the source
+directories below </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>dirname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B><I>Warning</I></B>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Using this option requires
+GNU </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or another </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+that implements the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>VPATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+feature; for more on the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>VPATH</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">
+option, see <A HREF="../../5_ut/d_UsingMake/make.html"><I>Using </I></A></FONT><TT><A HREF="../../5_ut/d_UsingMake/make.html">make</A></TT><FONT FACE="Times New Roman">
+in <B><I>GNUPro Utilities</I></B>.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>--norecursion</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Configure only the directory
+level where </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is executed; do not propagate configuration to subdirectories.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>--rm</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Remove files otherwise built
+during configuration.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>--target=<I>target</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Configure GDB for cross-debugging
+programs running on the specified </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>target</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Without this option, GDB is configured to debug programs that run on the
+same machine (</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>host</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+as GDB itself.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>There is no convenient way
+to generate a list of all available targets.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0><I>host</I>...</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Configure GDB to run on
+the specified </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>host</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+There is no convenient way to generate a list of all available hosts.</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+accepts other options, for compatibility with configuring other GNU tools
+recursively; but these are the only options that affect GDB or its supporting
+libraries.</FONT></FONT></UL>
+</UL>
+
+</BODY>
+</HTML>

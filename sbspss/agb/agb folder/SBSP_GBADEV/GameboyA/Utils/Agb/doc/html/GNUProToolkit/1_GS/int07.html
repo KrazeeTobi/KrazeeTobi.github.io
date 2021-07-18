@@ -1,0 +1,666 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title> Rebuilding from source</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<div CLASS="ChapterTitle"><a NAME="Top"></a><a NAME="pgfId=1001464"></a><a NAME="10433"></a><a href="gsTOC.html">Contents</a>|<a href="int06.html">Previous</a></div>
+
+<div CLASS="ChapterTitle"><font size=+3><font face="Futura Md BT">Rebuilding
+from source</font>&nbsp;</font>
+<hr SIZE=6 WIDTH="100%"></div>
+<a NAME="pgfId=1001371"></a><font size=+1>The following documentation explains
+how to rebuild the GNUPro tools using the binary files from source installation,
+and how to configure your system before you rebuild the binaries from source
+code for a specified toolchain.</font>
+<ul>
+<div CLASS="Label"><a NAME="pgfId=1002332"></a><b><font face="Arial,Helvetica"><font size=+1>IMPORTANT:</font></font></b></div>
+
+<div CLASS="Note"><a NAME="pgfId=1002345"></a><font size=+1>In the following
+documentation, <tt>gnupro-99r1</tt> is the input (as the current version
+of GNUPro Toolkit) to substitute for the variable, <i><tt>release_name</tt></i>.</font></div>
+</ul>
+
+<div CLASS="Body"><a NAME="pgfId=1001573"></a><font size=+1>You'll need
+to provide the following specifications when rebuilding:</font></div>
+
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li CLASS="Bullet">
+<a NAME="pgfId=1001372"></a><font size=+1>Where to install the binaries;
+see <a href="#Configuring_location">Configuring the location of the tools</a>.</font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1001376"></a><font size=+1>Which target system will run
+your final target machine's code; see <a href="#Configuring_when_using">Configuring
+when using an embedded target</a>.</font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1001636"></a><font size=+1>Preparing sources so that you
+get what you expect; see <a href="#Preparing_to_rebuild" CLASS="XRef">Preparing
+to rebuild source code files</a></font></li>
+
+<div CLASS="Body"><a NAME="pgfId=1002529"></a><font size=+1>Then see <a href="#Building_installing_bins" CLASS="XRef">Building
+and installing binaries</a>.</font></div>
+</ul>
+</ul>
+
+<div CLASS="Body"><a NAME="pgfId=1002537"></a><font size=+1>For any problems,
+see <a href="ins03.html#Access_web_support" CLASS="XRef">Accessing Cygnus
+Web Support</a> to report problems, and, also, see <a href="#Troubleshooting" CLASS="XRef">Troubleshooting
+the rebuilding process</a>, <a href="#configure_probs" CLASS="XRef">configure
+problem reporting</a>, and <a href="#build_probs" CLASS="XRef">build problem
+reporting</a>.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1002555"></a><font size=+1>Finally, see
+<a href="#Patching" CLASS="XRef">Patching</a>
+for details on correcting the problems.</font></div>
+
+<h3 CLASS="Heading1">
+<a NAME="Configuring_location"></a><a NAME="_Ref399658682"></a><a NAME="_Toc399660966"></a><a NAME="_Toc402167257"></a><b><i><font face="Times New Roman,Times"><font size=+2>Configuring
+the location of the tools</font></font></i></b></h3>
+
+<div CLASS="Body"><a NAME="pgfId=1001389"></a><font size=+1>The <tt>--prefix=</tt>
+option specifies the base installation path for the entire toolkit. In
+the following descriptions, the name of your current GNUPro software release
+is written in italics as <i><tt>release_name</tt></i>.</font></div>
+
+<ul TYPE=SQUARE>
+<li CLASS="Bullet">
+<a NAME="pgfId=1001390"></a><font size=+1>To install GNUPro Toolkit in
+<tt>/<i>yourdirectory</i>/cygnus/<i>release_name</i></tt>,
+use the following example's directive.</font></li>
+
+<ul>
+<div CLASS="CodeExample2"><a NAME="pgfId=1001649"></a><tt><font size=+1>--prefix=/<i>yourdirectory</i>/cygnus/<i>release_name</i></font></tt></div>
+</ul>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1001391"></a><font size=+1>To install GNUPro Toolkit in
+<tt>/usr/cygnus/<i>release_name</i></tt>,
+use the following example's directive.</font></li>
+
+<ul>
+<div CLASS="CodeExample2"><a NAME="pgfId=1001663"></a><tt><font size=+1>--prefix=/usr/cygnus/<i>release_name</i></font></tt></div>
+</ul>
+</ul>
+
+<div CLASS="Body"><a NAME="pgfId=1001392"></a><font size=+1>GNUPro binaries
+are typically located in <tt>/usr/cygnus/<i>release_name</i></tt>.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1001393"></a><font size=+1>To rebuild
+GNUPro Toolkit and install it in the same location as the Cygnus binaries,
+use the following input.</font></div>
+
+<ul>
+<ul>
+<div CLASS="CodeExample"><a NAME="pgfId=1001394"></a><tt><font size=+1>--prefix=/usr/cygnus/<i>release_name</i></font></tt></div>
+<tt><font size=+1>--exec-prefix=/usr/cygnus/<i>release_name</i>/H-<i>host</i></font></tt></ul>
+</ul>
+
+<div CLASS="Body"><a NAME="pgfId=1001395"></a><font size=+1><tt>--exec-prefix=</tt>is
+useful for sites with multiple host architectures in a networked, shared
+file system. See also <a href="#Multiple_host" CLASS="XRef">Multiple host
+builds</a>.&nbsp;<a NAME="pgfId=1002387"></a><i><tt>host</tt></i> stands
+for the canonical name describing the host. For instance, for a SPARC Solaris
+2.5 system, "<tt>sparc-sun-solaris2.5</tt>" is the canonical name. For
+a complete listing of the current hosts and their canonical naming conventions,
+see <a href="int01.html#Naming_hosts_&_targets" CLASS="XRef">Naming hosts
+and targets</a>.</font></div>
+
+<ul>
+<div CLASS="Label"><a NAME="pgfId=1001396"></a><b><font face="Arial,Helvetica"><font size=+1>Warning!</font></font></b></div>
+
+<div CLASS="Note"><a NAME="pgfId=1001397"></a><font size=+1>The values
+of both <tt>--prefix=</tt> and <tt>--exec-prefix=</tt> must be <b><i>absolute
+pathnames</i></b>.</font></div>
+</ul>
+
+<h3 CLASS="Heading1">
+<a NAME="Configuring_when_using"></a><a NAME="_Toc386877802"></a><a NAME="_Ref399658691"></a><a NAME="_Toc399660967"></a><a NAME="_Toc402167258"></a><b><i><font face="Times New Roman,Times"><font size=+2>Configuring
+when using an embedded target</font></font></i></b></h3>
+
+<div CLASS="Body"><a NAME="pgfId=1001403"></a><font size=+1>If you are
+targeting an embedded system, remember at configure time to specify the
+<tt>--target=</tt>
+option. The <tt>--target= </tt>option value is printed on the CD-ROM you
+receive from Cygnus. It will be a hyphenated string indicating target and
+output format.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1001598"></a><font size=+1>For example,
+<tt>m68k-elf</tt>
+or <tt>powerpc-eabi</tt> would be two such target names with their appropriate
+output file formats for, respectively, the Motorola 68000 family of processors
+and the PowerPC series of processors.</font></div>
+
+<ul>
+<div CLASS="Label"><a NAME="pgfId=1001404"></a><i><font size=+1>Note:</font></i></div>
+
+<div CLASS="Label"><a NAME="pgfId=1001601"></a><font size=+1>To build a
+native toolkit, do not use the <tt>--target=</tt> option. For instance,
+programs such as the GNU debugger or the GNU compiler will run on an IRIX
+5 system and output programs which also run on an IRIX 5 system. In this
+situation, the <tt>--target= </tt>option is unnecessary. <tt>configure</tt>
+will default to native configuration when using <tt>--target</tt>.</font></div>
+</ul>
+
+<ul>
+<div CLASS="Label"><a NAME="pgfId=1001405"></a><b><font face="Arial,Helvetica"><font size=+1>Warning!</font></font></b></div>
+
+<div CLASS="Note"><a NAME="pgfId=1001406"></a><font size=+1>For VxWorks
+users building a cross toolkit with the target board running the VxWorks
+from Wind River Systems, remember to add the <tt>--with-includes=</tt>
+command option to <tt>configure</tt>, designating the value for header
+files with your VxWorks distribution.</font></div>
+
+<div CLASS="Note"><a NAME="pgfId=1001407"></a><font size=+1>If the VxWorks
+tools are in <tt>/<i>yourdirectory</i>/wrs/vxworks-5.2/</tt>, then the
+header files are probably in the <tt>/<i>yourdirectory</i>/wrs/vxworks-5.2/h</tt>
+directory.</font></div>
+
+<div CLASS="Note"><a NAME="pgfId=1001408"></a><font size=+1>Add the <tt>--with-includes=/<i>yourdirectory</i>/wrs/vxworks-5.2/h
+</tt>command
+option when you use the <tt>configure</tt> input. If you do not add this
+command line option, your toolchain will not work.</font></div>
+</ul>
+
+<h3 CLASS="Heading1">
+<a NAME="Preparing_to_rebuild"></a><a NAME="_Toc386877803"></a><a NAME="_Ref399658700"></a><a NAME="_Toc399660968"></a><a NAME="_Toc402167259"></a><b><i><font face="Times New Roman,Times"><font size=+2>Preparing
+to rebuild source code files</font></font></i></b></h3>
+
+<div CLASS="Body"><a NAME="pgfId=1001414"></a><font size=+1>The first and
+most important step in preparing source code to run on your system is to
+configure it so that, when built, the program exhibits the behavior you
+expect. The configuration process automatically prepares a Makefile containing
+default and/or customized information for your site and for your system.
+If you are building for more than one platform, you must configure, compile,
+and install on each platform.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1001415"></a><font size=+1>Source code
+is normally in <tt>/usr/cygnus/<i>release_name</i>/src</tt> . Good practice
+is to configure and build the source in another directory; any other clean
+directory will do. In the following examples of commands, the path is from
+the <tt>/<i>yourdirectory</i>/cygnus</tt> directory.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1001711"></a><font size=+1>The build process
+may take hundreds of megabytes of disk space.</font></div>
+
+<ul>
+<div CLASS="Label"><a NAME="pgfId=1001416"></a><b><font face="Arial,Helvetica"><font size=+1>Warning!</font></font></b></div>
+
+<div CLASS="Note"><a NAME="pgfId=1001664"></a><b><i><font size=+1>Never
+build your toolkit in the source directory.</font></i></b>
+<br><font size=+1>Rebuilding in your source directory will overwrite Makefiles,
+prohibiting reconfiguration.</font></div>
+</ul>
+
+<div CLASS="Body"><a NAME="pgfId=1001417"></a><font size=+1>The default
+action for <tt>configure</tt> is to configure a native toolchain for the
+host on which you run the script. At minimum, specify <tt>--prefix=</tt>
+to point to your installation directory. For cross-compiler toolchains,
+you must also specify <tt>--target</tt>. The following examples use a directory
+for the build location with the following name.</font></div>
+
+<ul>
+<div CLASS="CodeExample"><a NAME="pgfId=1001613"></a><tt><font size=+1>/usr/cygnus/<i>release_name</i>/build</font></tt></div>
+</ul>
+
+<div CLASS="Body"><a NAME="pgfId=1002667"></a><font size=+1>To configure
+a native toolchain, use the following example.</font></div>
+
+<ul>
+<div CLASS="CodeExample"><a NAME="pgfId=1002668"></a><tt><font size=+1>&nbsp;
+mkdir /usr/cygnus/<i>release_name</i> /build</font></tt></div>
+<tt><font size=+1>&nbsp;&nbsp;&nbsp; cd&nbsp;&nbsp;&nbsp; /usr/cygnus/<i>release_name</i>
+/build</font></tt>
+<br><tt><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/usr/cygnus/<i>release_name</i>/src/configure</font></tt>
+<br><tt><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+--prefix=/<i>yourdirectory</i>/cygnus/<i>release_name</i></font></tt></ul>
+
+<div CLASS="Body"><a NAME="pgfId=1001418"></a><font size=+1>To configure
+a toolchain in <tt>/opt/cygnus</tt> for a Motorola 68000 target with ELF
+output file format, use the following example's steps.</font></div>
+
+<ul>
+<div CLASS="CodeExample"><a NAME="pgfId=1001419"></a><tt><font size=+1>mkdir&nbsp;
+/usr/cygnus/<i>release_name</i>/build</font></tt></div>
+<tt><font size=+1>&nbsp;cd&nbsp;&nbsp; /usr/cygnus/<i>release_name</i>/build</font></tt>
+<br><tt><font size=+1>&nbsp;/usr/cygnus/<i>release_name</i>/src/configure&nbsp;
+--target=m68k-elf\</font></tt>
+<br><tt><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --prefix=/<i>yourdirectory</i>/cygnus/<i>release_name</i></font></tt></ul>
+
+<ul>
+<div CLASS="Label"><a NAME="pgfId=1001422"></a><i><font size=+1>Note:</font></i></div>
+
+<div CLASS="Label"><a NAME="pgfId=1001423"></a><font size=+1><tt>--target=</tt>
+is only for cross development.<tt> --target=</tt> is unneccessary for native
+configuration. <tt>configure</tt> will default to native configuration
+when using <tt>--target</tt>.</font></div>
+</ul>
+
+<div CLASS="Body"><a NAME="pgfId=1001424"></a><font size=+1><b><i>Expect
+</i></b><tt>configure</tt><b><i>
+to take approximately 15-45 minutes to run, depending on the load of your
+build system, the toolchain being configured and the sources used.</i></b></font></div>
+
+<h3 CLASS="Heading1">
+<a NAME="Building_installing_bins"></a><a NAME="31007"></a><b><i><font face="Times New Roman,Times"><font size=+2>Building
+and installing binaries</font></font></i></b></h3>
+
+<div CLASS="BodyAfterHead"><a NAME="pgfId=1001742"></a><font size=+1>After
+you configure the toolchain, build and install the binary programs.&nbsp;</font><a NAME="marker=1001741"></a></div>
+
+<div CLASS="Body"><a NAME="pgfId=1001746"></a><font size=+1>For single
+host-target builds, see <a href="#Single_host" CLASS="XRef">Single host-target
+builds</a> for details.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1001750"></a><font size=+1>For multiple
+host builds, see <a href="#Multiple_host" CLASS="XRef">Multiple host builds</a>
+for details.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1001751"></a><font size=+1>Some vendor-supplied
+make programs do not build the toolkit correctly, so for simplicity, use
+GNU <tt>make</tt> to rebuild from source. A precompiled copy of GNU <tt>make</tt>
+is in GNUPro Toolkit.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1001753"></a><a NAME="_Toc386877805"></a><font size=+1>If
+you are not familiar with <tt>make</tt>, see in <a href="../5_ut/d_UsingMake/make.html"><i>Using
+</i><tt>make</tt></a>
+in <b><i>GNUPro Utilities</i></b>.</font></div>
+
+<h4 CLASS="Heading2">
+<a NAME="Single_host"></a><a NAME="_Ref399658852"></a><a NAME="_Toc399660970"></a><a NAME="_Toc402167261"></a><b><i><font face="Times New Roman,Times"><font size=+2>Single
+host-target builds</font></font></i></b></h4>
+
+<div CLASS="Body"><a NAME="pgfId=1001758"></a><font size=+1>In the following
+example, a copy of GNU <tt>make</tt> is in <tt>/usr/local/bin</tt> and
+is called <tt>make</tt>.</font></div>
+
+<ol>
+<div CLASS="Numbered"><b><font size=+1>1.&nbsp;<a NAME="pgfId=1001759"></a><i>Move
+to the build directory, using instructions like the following input.</i></font></b></div>
+
+<ol>
+<ol>
+<div CLASS="CodeExample2"><a NAME="pgfId=1001760"></a><tt><font size=+1>cd
+/usr/cygnus/<i>release_name</i>/build</font></tt></div>
+</ol>
+</ol>
+</ol>
+
+<div CLASS="BodyListFollow">
+<ul><b><font size=+1>2.&nbsp;<a NAME="pgfId=1001761"></a><i>Then, use the
+following instruction to run <tt>make</tt> .</i></font></b></ul>
+</div>
+
+<ul>
+<ul>
+<div CLASS="CodeExample2">
+<ul><a NAME="pgfId=1001762"></a><tt><font size=+1>/usr/local/bin/make all</font></tt></ul>
+</div>
+</ul>
+</ul>
+
+<div CLASS="NumberedNext">
+<ul>
+<ul><a NAME="pgfId=1001763"></a><font size=+1>This takes a while to complete.</font>
+<br><font size=+1></font>&nbsp;</ul>
+<b><font size=+1>3. <i>When</i> </font></b><font size=+1><tt>make all</tt><b><i>
+finishes, install the tools with the following input.</i></b></font></ul>
+</div>
+
+<ul>
+<ul>
+<div CLASS="CodeExample2">
+<ul><a NAME="pgfId=1001764"></a><tt><font size=+1>/usr/local/bin/make install</font></tt></ul>
+</div>
+</ul>
+</ul>
+
+<div CLASS="NumberedNext">
+<ul>
+<ul><a NAME="pgfId=1001765"></a><font size=+1>When you have verified that
+your toolchain is functioning properly, you may remove the <tt>build</tt>
+directory to conserve disk space.</font></ul>
+</ul>
+</div>
+
+<h4 CLASS="Heading2">
+<a NAME="Multiple_host"></a><a NAME="_Toc386877806"></a><a NAME="_Ref389013938"></a><a NAME="_Ref389884438"></a><a NAME="_Ref389884451"></a><a NAME="_Ref399658844"></a><a NAME="_Toc399660971"></a><a NAME="_Toc402167262"></a><b><i><font face="Times New Roman,Times"><font size=+2>Multiple
+host builds</font></font></i></b></h4>
+
+<div CLASS="Body"><a NAME="pgfId=1001774"></a><font size=+1>GNUPro Toolkit
+is designed for a kind of multiple-host&nbsp;<a NAME="marker=1002427"></a>environment.
+Set up the tools this way by adding a --<tt>exec-prefix=</tt> command line
+option to <tt>configure</tt> when configuring the toolkit. This then allows
+having a directory named <tt>/usr/cygnus/release_name</tt>, with multiple
+hosts and target versions in one place.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1002416"></a><font size=+1>The host-specific
+files will then be in <tt>/usr/cygnus/release_name/H-<i>hostspec</i></tt>.
+<i><tt>hostspec</tt></i>
+stands for the canonical name describing the host. For instance, for a
+SPARC Solaris 2.5 system, "<tt>sparc-sun-solaris2.5</tt>" is the canonical
+name.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1001776"></a><font size=+1>Consider, then,
+using the GNUPro tools. A compiler, for whatever target it addresses, is
+a host-specific program, meaning that it only runs on one host system.
+A help file is host-independent and it is independent of its host system.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1002402"></a><font size=+1>So, imagine
+you have, for instance, Motorola 68000 systems and IBM PowerPC running
+AIX 4.2 on one network. There is support for native compilers on both systems,
+and you want a single <tt>/usr/cygnus </tt>directory that can be NFS-mounted
+on all of your machines. You should then use the following process.</font></div>
+
+<ol>
+<div CLASS="Numbered"><font size=+1>1.&nbsp;<a NAME="pgfId=1001777"></a>Place
+all the programs that run on Motorola 60000 systems using the ELF object
+file format in the following location.</font></div>
+</ol>
+
+<div CLASS="CodeExample2">
+<ul>
+<ul><a NAME="pgfId=1001778"></a><tt><font size=+1>/usr/cygnus/release_name/H-
+m68k-elf</font></tt></ul>
+</ul>
+</div>
+
+<div CLASS="NumberedNext">
+<ul><font size=+1>2.&nbsp;<a NAME="pgfId=1001779"></a>Then, place all the
+programs that run on PowerPC systems in the following location.</font></ul>
+</div>
+
+<div CLASS="CodeExample2">
+<ul>
+<ul><a NAME="pgfId=1001780"></a><tt><font size=+1>/usr/cygnus/release_name/H-powerpc-ibm-aix4.2</font></tt></ul>
+</ul>
+</div>
+
+<ul>
+<div CLASS="Body"><a NAME="pgfId=1001781"></a><font size=+1>This shares
+the <tt>man</tt> pages, text configuration files, and other files for GNUPro
+Toolkit.</font></div>
+</ul>
+
+<h3 CLASS="Heading1">
+<a NAME="Troubleshooting"></a><a NAME="36759"></a><b><i><font face="Times New Roman,Times"><font size=+2>Troubleshooting
+the rebuilding process</font></font></i></b></h3>
+
+<div CLASS="BodyAfterHead"><a NAME="pgfId=1001806"></a><font size=+1>The
+following documentation discusses warnings or error messages that may display
+during your build process. Each message has a troubleshooting approach
+accompanying it for resolution of the problem that you're addressing.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1002308"></a><font size=+1>If the cause
+of the problem is still not clear, send in a problem report. For a complete
+description of the automatic problem reporting system, see <a href="ins03.html" CLASS="XRef">How
+to report problems</a> and, to report a problem, see <a href="ins03.html#Access_web_support" CLASS="XRef">Accessing
+Cygnus Web Support</a>.</font></div>
+
+<h4 CLASS="Heading2">
+<a NAME="Errors_warnings"></a><a NAME="_Ref399656184"></a><a NAME="_Toc399660973"></a><a NAME="_Toc402167264"></a><b><i><font face="Times New Roman,Times"><font size=+2>Error
+messages and warnings</font></font></i></b></h4>
+
+<div CLASS="Body"><a NAME="pgfId=1001811"></a><font size=+1>The following
+warnings or error messages may display.</font></div>
+
+<div CLASS="BodyHang1">
+<blockquote><a NAME="pgfId=1001812"></a><b><tt><font size=+1>Make: Fatal
+error: Don't know how to make target foo.c</font></tt></b></blockquote>
+</div>
+
+<blockquote><font size=+1>The most likely problem is that you are not using
+GNU
+<tt>make</tt>.</font></blockquote>
+
+<ul><font size=+1>Use the <tt>--version</tt> option for telling which version
+you are running; if you have this error message, run the command, <tt>make
+--version</tt>.</font><font size=+1></font>
+<p><font size=+1>If you are not using GNU <tt>make</tt>, the <tt>make</tt>
+program will not recognize the <tt>--version</tt> option.</font></ul>
+
+<div CLASS="BodyHang1">
+<blockquote><a NAME="pgfId=1001813"></a><b><tt><font size=+1>Incorrect
+compiler used</font></tt></b></blockquote>
+</div>
+
+<ul><font size=+1>When <tt>configure</tt> runs, it looks for an appropriate
+compiler, first <tt>gcc</tt>, then <tt>cc</tt>. If neither of these is
+correct, specify the name of the compiler at configuration time. We recommend
+that you always build with the GNU compiler, using the <tt>gcc</tt> command.
+Specify the compiler by setting the <tt>$CC</tt> environment variable before
+running <tt>configure</tt>. The following example is the input for the
+appropriate path for the GCC compiler.</font>
+<br>&nbsp;
+<ul><a NAME="pgfId=1002459"></a><tt><font size=+1>/usr/cygnus/gnupro-99r1/bin/gcc</font></tt></ul>
+
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1001814"></a><font size=+1>With a C shell, use a command
+similar to the following example's input (where <tt>/<i>yourdirectory</i>/<i>vendor</i>/bin/</tt>
+is the path of the compiler, <i><tt>not-your-usual-</tt>cc</i>).</font></li>
+</ul>
+</ul>
+
+<ul>
+<ul TYPE=SQUARE>
+<ul>
+<div CLASS="CodeExample2"><a NAME="pgfId=1001815"></a><tt><font size=+1>set
+CC /<i>yourdirectory</i>/vendor/bin/<i>not-your-usual-cc</i></font></tt></div>
+<tt><font size=+1>configure</font></tt>
+<br><b><tt><font size=+1>...</font></tt></b>
+<br><tt><font size=+1>make</font></tt></ul>
+
+<li CLASS="Bullet2">
+<a NAME="pgfId=1001816"></a><font size=+1>With a Bourne shell (<tt>/bin/sh</tt>
+) or a Korn shell, use the following example's input (where <tt>/<i>yourdirectory</i>/<i>vendor</i>/bin/</tt>
+is the path of the compiler, <i><tt>not-your-usual-cc</tt></i>).</font></li>
+
+<ul>
+<div CLASS="CodeExample2"><a NAME="pgfId=1001817"></a><tt><font size=+1>CC=<i>
+</i>/<i>yourdirectory</i>/<i>vendor</i>/bin/<i>not-your-usual-cc</i></font></tt></div>
+<tt><font size=+1>export CC</font></tt>
+<br><tt><font size=+1>configure</font></tt>
+<br><tt><font size=+1>...</font></tt>
+<br><tt><font size=+1>make</font></tt></ul>
+</ul>
+</ul>
+
+<div CLASS="BodyListFollow"><a NAME="pgfId=1001818"></a><font size=+1>If
+you still experience configuration problems, first try to rerun <tt>configure</tt>
+by adding the command line option, <tt>--verbose</tt>. It's best to redirect
+the output to a log file while running this process.</font></div>
+
+<ul TYPE=SQUARE>
+<li CLASS="Bullet2">
+<a NAME="pgfId=1001819"></a><font size=+1>With a C shell, use a command
+similar to the following example's input.</font></li>
+
+<ul>
+<div CLASS="CodeExample2">&nbsp;
+<br><a NAME="pgfId=1001820"></a><tt><font size=+1>configure --verbose ...
+>&amp; configure.out</font></tt></div>
+</ul>
+
+<li CLASS="Bullet2">
+<a NAME="pgfId=1001821"></a><font size=+1>With a Bourne shell, use the
+following example's input.</font></li>
+
+<ul TYPE=SQUARE>
+<div CLASS="CodeExample2">&nbsp;
+<br><a NAME="pgfId=1001822"></a><tt><font size=+1>configure --verbose ...
+>configure.out 2>&amp;1</font></tt></div>
+</ul>
+</ul>
+
+<div CLASS="BodyListFollow2"><a NAME="pgfId=1001823"></a><font size=+1>Some
+seemingly unrelated problems arise after applying patches or making other
+changes. For instance, sometimes file dependencies get confused. With any
+trouble you have building, an easy step to take is to remove your build
+directory completely and then rebuild in an empty build directory, using
+input like the following example (where <tt>/<i>release_name</i></tt> is
+the version name of the GNUPro Toolkit which you are using).</font></div>
+
+<ul>
+<div CLASS="CodeExample2"><a NAME="pgfId=1001824"></a><tt><font size=+1>rm
+-rf /usr/cygnus/<i>release_name</i>/build</font></tt></div>
+<tt><font size=+1>mkdir /usr/cygnus/<i>release_name</i>/build</font></tt></ul>
+
+<div CLASS="BodyListFollow"><a NAME="pgfId=1001825"></a><font size=+1>For
+more information on installing GNUPro Toolkit, see <a href="ins01.html" CLASS="XRef">Installing
+GNUPro Toolkit</a>.</font></div>
+
+<div CLASS="BodyListFollow"><a NAME="pgfId=1001827"></a><a NAME="_Ref363579585"></a><font size=+1>If
+it's not obvious which part of the toolkit is failing, check the last line
+in the log that begins "<tt>Configuring...</tt>" such as with the debugging
+tool, GDB, where you'd see the status message, "<tt>Configuring gdb...</tt>"
+before <tt>configure</tt> stops.</font></div>
+
+<div CLASS="BodyListFollow"><a NAME="pgfId=1001828"></a><font size=+1><tt>configure</tt>
+also creates a <tt>config.log</tt> file in each sub-directory in which
+it runs tests. Check the end of the <tt>config.log</tt> that failed for
+specific information about what went wrong. The last page (25-30 lines)
+of this file should be plenty, but if in doubt, send the entire file. For
+help, contact Cygnus. For information on contacting Cygnus technical support,
+see <a href="gsfront.html#How_to_contact_Cygnus" CLASS="XRef">How to contact
+Cygnus</a>.</font></div>
+
+<h3 CLASS="Heading1">
+<a NAME="pgfId=1001848"></a><a NAME="configure_probs"></a><font size=+2><tt>configure</tt><b><i><font face="Times New Roman,Times">
+problem reporting</font></i></b></font></h3>
+
+<div CLASS="Body"><a NAME="pgfId=1002281"></a><font size=+1>If the cause
+of the problem is still not clear, send in a problem report.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1002284"></a><font size=+1>For a complete
+description of the automatic problem reporting system, see <a href="ins03.html" CLASS="XRef">How
+to report problems</a>.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1001849"></a><font size=+1>If your configuration
+problems are still confusing, send in the <tt>configure</tt> file's top-level
+<tt>config.status</tt> file. This file shows which command line options
+were used to configure the toolkit.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1001850"></a><font size=+1><tt>config.status</tt>
+(assuming the example pathnames we've used) should be in the <tt>/usr/cygnus/<i>release_name</i>/build/config.status</tt>
+directory.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1001851"></a><font size=+1>The <tt>--verbose</tt>
+option for <tt>configure</tt> produces the entire output from the last
+directory. For instance, if <tt>configure</tt> fails in the <tt>gas</tt>
+directory, send in everything after the line which reads "<tt>Configuring
+gas...</tt>" and, if in doubt, send us a copy of all the output generated
+by <tt>configure --verbose</tt>; so that Cygnus technical support staff
+can more easily determine the problem and quickly resolve it.</font></div>
+
+<h3 CLASS="Heading1">
+<a NAME="pgfId=1001853"></a><a NAME="build_probs"></a><b><font size=+2><tt>build</tt><i><font face="Times New Roman,Times">
+problem reporting</font></i></font></b></h3>
+
+<div CLASS="Body"><a NAME="pgfId=1001854"></a><font size=+1>If your build
+problems are still confusing, report the <tt>build</tt> problem (see <a href="ins03.html#Access_web_support" CLASS="XRef">Accessing
+Cygnus Web Support</a>).</font></div>
+
+<ul>
+<ul>
+<div CLASS="Label"><a NAME="pgfId=1001855"></a><b><font face="Arial,Helvetica"><font size=+1>IMPORTANT:</font></font></b></div>
+
+<div CLASS="Note"><a NAME="pgfId=1001856"></a><font size=+1><i>Use "</i><tt>build</tt><i>"
+for your category when creating a new problem's report.</i></font></div>
+</ul>
+</ul>
+
+<div CLASS="Body"><a NAME="pgfId=1001857"></a><font size=+1>First, verify
+that you're using GNU <tt>make</tt>, using the process outlined in the
+examples with the "<tt>Make: Fatal error: Don't know how to make target
+foo.c</tt> " error (see <a href="#Errors_warnings" CLASS="XRef">Error messages
+and warnings</a>).</font></div>
+
+<div CLASS="Body">&nbsp;
+<br><a NAME="pgfId=1001861"></a><font size=+1>Cygnus Support staff representatives
+need the following information when you report the problem.</font></div>
+
+<ul TYPE=SQUARE>
+<li CLASS="Bullet">
+<a NAME="pgfId=1001862"></a><font size=+1>Send the top-level <tt>config.status</tt>
+file. This file will indicate which command line options were used to configure
+the toolkit. Using the example pathnames that we've used, find the file
+at <tt>/usr/cygnus/release_name/build/config.status</tt>.</font></li>
+
+<div CLASS="Bullet"><font size=+1></font></div>&nbsp;
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1001863"></a><font size=+1>Send the output of the <tt>make</tt>
+command that is failing. Only the output from the last directory is probably
+useful, just as with a <tt>configure</tt> problem report. If in doubt,
+send the entire output from <tt>make</tt> and Cygnus technical support
+staff will determine the problem and resolve it.</font></li>
+</ul>
+
+<h3 CLASS="Heading1">
+<a NAME="Patching"></a><a NAME="19952"></a><b><i><font face="Times New Roman,Times"><font size=+2>Patching</font></font></i></b></h3>
+
+<div CLASS="BodyAfterHead"><a NAME="pgfId=1002068"></a><font size=+1>After
+submitting a problem's report to Cygnus, your solution is known as a <b><i>patch<a NAME="marker=1002069"></a></i></b>.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1002070"></a><font size=+1>To apply a
+patch to your source code, you will need to move to the source directory
+(using the shell commandline declarations,<tt> cd</tt> into the <tt>src</tt>
+directory). The full default pathname for the source directory is <tt>/usr/cygnus/<i>release_name</i>/src.
+</tt>Save
+the patch as a file, such as <tt>/tmp/patch</tt>, and run the <tt>patch</tt>
+program.</font></div>
+
+<ul>
+<ul>
+<div CLASS="CodeExample2"><a NAME="pgfId=1002071"></a><tt><font size=+1>patch
+-p &lt; /tmp/patch</font></tt></div>
+</ul>
+</ul>
+
+<div CLASS="Body"><a NAME="pgfId=1002072"></a><font size=+1>You do not
+need to edit out all the non-patch text from the file, <tt>/tmp/patch</tt>
+. The <tt>patch</tt> program will recognize where the real patch begins.</font></div>
+
+<ul>
+<div CLASS="Label"><a NAME="pgfId=1002073"></a><b><font face="Arial,Helvetica"><font size=+1>IMPORTANT:</font></font></b></div>
+
+<div CLASS="Note"><a NAME="pgfId=1002074"></a><font size=+1>Do not cut-and-paste
+the patch with a windowing system like X-Windows; tab characters are important
+and they are usually not preserved correctly when using cut-and-pasting
+methods.</font></div>
+</ul>
+
+<div CLASS="Body"><a NAME="pgfId=1002081"></a><font size=+1>See also <a href="../5_ut/f_Usingdiff&patch/difInvoking_patch.html">Invoking
+<tt>patch</tt></a>
+and <a href="../5_ut/f_Usingdiff&patch/difOptions_to_patch.html">Options
+to <tt>patch</tt></a> in <a href="../5_ut/f_Usingdiff&patch/dif.html"><i>Using
+</i><tt>diff</tt>
+<i>&amp; </i><tt>patch</tt></a> in <b><i>GNUPro Utilities</i></b>. If the
+patch is rejected, there will be a filename ending in '<tt>.rej</tt>' in
+the source directory; for instance, if the patch was for a file in the
+'<tt>src/gcc/reload.c</tt> ' path, and the patch was rejected, '<tt>src/gcc/reload.c.rej</tt>'
+is the rejection found there. Although it will take a while to run, you
+can search all files for a rejected patch with a command like the following
+example.</font></div>
+
+<ul>
+<ul>
+<div CLASS="CodeExample2"><a NAME="pgfId=1002082"></a><tt><font size=+1>find
+. -name '*.rej' -print</font></tt></div>
+</ul>
+</ul>
+
+<div CLASS="Body"><a NAME="pgfId=998356"></a>
+<hr SIZE=6 WIDTH="100%"></div>
+
+<center><a href="#Top">Top</a>|<a href="gsTOC.html">Contents</a>|<a href="int06.html">Previous</a></center>
+
+</body>
+</html>

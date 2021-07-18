@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Complex Numbers</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccDoubleWord_Integers.html">Previous</A>|<A HREF="gccArrays_of_Length_Zero.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_3409189"></A><A NAME="cf054fd7"></A><B><FONT SIZE=+3>Complex
+numbers&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GNU C supports complex data
+types. You can declare both complex integer types and complex floating
+types, using the keyword,</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+__complex__.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__complex__double
+x;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ declares ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+as a variable whose real part and imaginary part are both of type </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>double.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__complex__short
+int y;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ declares
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>y</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to have real and imaginary parts of type </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>short
+int</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>; this is not
+likely to be useful, but it shows that the set of complex types is complete.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To write a constant with
+a complex data type, use the suffix ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>i</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>j</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+(either one; they are equivalent).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>2.5fi</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+has type</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0> __complex__float</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>3i</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+has type</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__complex__int</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Such a constant always has a pure imaginary value, but you can form any
+complex value you like by adding one to a real constant.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To extract the real part
+of a complex-valued expression </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>exp</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+write </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__real__<I>exp</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Likewise, use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__imag__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to extract the imaginary part.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The tilde operator, (</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+2>˜</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+performs complex conjugation when used on a value with a complex type.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>GNU CC can allocate complex
+automatic variables in a noncontiguous fashion; it’s even possible for
+the real part to be in a register while the imaginary part is on the stack
+(or vice-versa). None of the supported debugging info formats has a way
+to represent noncontiguous allocation like this, so GNU CC describes a
+noncontiguous complex variable as if it were two separate variables of
+noncomplex type. If the variable’s actual name is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the two fictitious variables are named </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo$real</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo$imag</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+You can examine and set these two fictitious variables with your debugger.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>A future version of GDB will
+know how to recognize such pairs and treat them as a single variable with
+a complex type.</FONT></FONT>
+</BODY>
+</HTML>

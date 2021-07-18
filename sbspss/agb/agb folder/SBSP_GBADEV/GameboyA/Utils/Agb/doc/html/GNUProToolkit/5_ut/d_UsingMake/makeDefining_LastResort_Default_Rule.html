@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Defining Last-Resort Default Rules</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeCanceling_Implicit_Rules.html">Previous</A>|<A HREF="makeOldFashioned_Suffix_Rules.html">Next</A>
+<BR><A NAME="off_2295251"></A><A NAME="f689aea5"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Defining
+last-resort default rules</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>You
+can define a last-resort implicit rule by writing a terminal match-anything
+pattern rule with no dependencies (see <FONT COLOR="#008000"><A HREF="makeMatchAnything_Pattern_Rules.html">Match-anything
+pattern rules</A></FONT>). This is just like any other pattern rule; the
+only thing special about it is that it will match any target. So such a
+rule’s commands are used for all targets and dependencies that have no
+commands of their own and for which no other implicit rule applies.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, when testing
+a makefile, you might not care if the source files contain real data, only
+that they exist. Then you might do the following.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>%::</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+touch $@</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This causes all the source
+files needed (as dependencies) to be created automatically.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can instead define commands
+to be used for targets for which there are no rules at all, even ones which
+don’t specify commands. You do this by writing a rule for the target, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.DEFAULT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Such a rule’s commands are used for all dependencies which do not appear
+as targets in any explicit rule, and for which no implicit rule applies.
+Naturally, there is no </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.DEFAULT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+rule unless you write one.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.DEFAULT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with no commands or dependencies like: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.DEFAULT:</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the commands previously stored for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.DEFAULT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are cleared. Then </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+acts as if you had never defined </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.DEFAULT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+at all.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you do not want a target
+to get the commands from a match-anything pattern rule or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.DEFAULT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+but you also do not want any commands to be run for the target, you can
+give it empty commands (see <FONT COLOR="#008000"><A HREF="makeUsing_Empty_Commands.html">Using
+empty commands</A></FONT>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can use a last-resort
+rule to override part of another makefile (see <FONT COLOR="#008000"><A HREF="makeOverriding_Part_of_Another_Makef.html">Overriding
+part of another makefile</A></FONT>).</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeCanceling_Implicit_Rules.html">Previous</A>|<A HREF="makeOldFashioned_Suffix_Rules.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

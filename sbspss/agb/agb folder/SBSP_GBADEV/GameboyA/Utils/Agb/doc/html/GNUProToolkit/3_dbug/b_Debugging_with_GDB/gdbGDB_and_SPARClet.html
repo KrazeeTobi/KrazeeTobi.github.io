@@ -1,0 +1,170 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>GDB and SPARClet</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbGDB_and_VxWorks.html">Previous</a>|<a href="gdbGDB_and_Hitachi_microprocessors.html">Next</a>
+<br><a NAME="off_2786070"></a><a NAME="3fee103c"></a><b><font face="Futura Md BT"><font size=+3>GDB
+and SPARClet</font></font></b>
+<br>
+<hr SIZE=3 WIDTH="100%"><font face="Times New Roman"><font size=+1>GDB
+enables developers to debug tasks running on SPARClet targets from a Unix
+host. GDB uses code that runs on both the Unix host and on the SPARClet
+target. GDB is installed and executed on the Unix host. The following documentation
+discusses using GDB with SPARClet targets.</font></font>
+<ul>
+<ul>
+<ul>
+<li>
+<font size=+1><a href="#Setting_file"><font face="Times New Roman">Setting
+</font><tt>file</tt><font face="Times New Roman">
+to debug</font></a></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1><a href="#Connecting_SPARClet">Connecting
+to SPARClet</a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1><a href="#download">SPARClet
+download</a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1><a href="#Running">Running and
+debugging</a></font></font></li>
+</ul>
+</ul>
+</ul>
+
+<ul><font face="Courier New"><font size=+0>timeout args</font></font>
+<ul><font face="Times New Roman"><font size=+1>GDB now supports the option,
+</font></font><font face="Courier New"><font size=+0>remotetimeout</font></font><font face="Times New Roman"><font size=+1>.
+This option is set by the user; </font></font><i><font face="Courier New"><font size=+0>args</font></font></i><font face="Times New Roman"><font size=+1>
+represents the number of seconds GDB waits for responses.</font></font>
+<br><font face="Times New Roman"><font size=+1>When compiling for debugging,
+include the option, </font></font><font face="Courier New"><font size=+0>-g</font></font><font face="Times New Roman"><font size=+1>,
+to get debug information and the option, </font></font><font face="Courier New"><font size=+0>-Ttext</font></font><font face="Times New Roman"><font size=+1>,
+to relocate the program to where you wish to load it on the target. You
+may also want to add the option, </font></font><font face="Courier New"><font size=+0>-n</font></font><font face="Times New Roman"><font size=+1>,
+or the option, </font></font><font face="Courier New"><font size=+0>-N</font></font><font face="Times New Roman"><font size=+1>,
+in order to reduce the size of the sections. Use the following command
+input as an example.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0>sparclet-aout-gcc prog.c -Ttext
+0x12010000 -g -o prog -N</font></font></ul>
+<font face="Times New Roman"><font size=+1>You can use </font></font><font face="Courier New"><font size=+0>objdump</font></font><font face="Times New Roman"><font size=+1>
+to verify that the addresses are what you intended.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0>sparclet-aout-objdump --headers
+--syms prog</font></font></ul>
+</ul>
+</ul>
+<font face="Times New Roman"><font size=+1>Once you have set your Unix
+execution search path to find GDB, you are ready to run GDB. From your
+Unix host, run </font></font><font face="Courier New"><font size=+0>gdb</font></font><font face="Times New Roman"><font size=+1>
+(or </font></font><font face="Courier New"><font size=+0>sparclet-aout-gdb</font></font><font size=+1><font face="Times New Roman">,
+depending on your installation). GDB shows its prompt </font><b><tt>(gdbslet)</tt></b><font face="Times New Roman">.</font></font>
+<p><a NAME="Setting_file"></a><b><i><font face="Times New Roman"><font size=+2>Setting
+</font></font></i><font face="Courier New"><font size=+1>file</font></font><i><font face="Times New Roman"><font size=+2>
+to debug</font></font></i></b>
+<p><font face="Times New Roman"><font size=+1>The GDB command, </font></font><font face="Courier New"><font size=+0>file</font></font><font face="Times New Roman"><font size=+1>,
+lets you choose which program to debug as the following example shows.
+GDB then attempts to read the symbol table of </font></font><i><font face="Courier New"><font size=+0>prog</font></font></i><font size=+1>,
+the program that you designate at the prompt, <b><tt>(gdbslet)</tt></b><font face="Times New Roman">.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0>file <i>prog</i></font></font></ul>
+<font face="Times New Roman"><font size=+1>GDB locates the file by searching
+the directories listed in the command search path. If the file was compiled
+with debug information (using the option, </font></font><font face="Courier New"><font size=+0>-g</font></font><font face="Times New Roman"><font size=+1>),
+source files will be searched as well. GDB locates the source files by
+searching the directories listed in the directory search path (see <font color="#008000"><a href="gdbYour_programs_environment.html">Your
+program’s environment</a></font>). If it fails to find a file, it displays
+a message such as: </font></font><b><font face="Courier New"><font size=+0>prog:
+No such file or directory</font></font></b><font face="Times New Roman"><font size=+1>.</font></font>
+<p><font face="Times New Roman"><font size=+1>When this happens, add the
+appropriate directories to the search paths with the GDB commands, </font></font><font face="Courier New"><font size=+0>path</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>dir</font></font><font face="Times New Roman"><font size=+1>,
+and execute the </font></font><font face="Courier New"><font size=+0>target</font></font><font face="Times New Roman"><font size=+1>
+command again.</font></font>
+<p><a NAME="Connecting_SPARClet"></a><b><i><font face="Times New Roman"><font size=+2>Connecting
+to SPARClet</font></font></i></b>
+<p><font face="Times New Roman"><font size=+1>The GDB command, </font></font><font face="Courier New"><font size=+0>target</font></font><font face="Times New Roman"><font size=+1>,
+lets you connect to a SPARClet target. To connect to a target on serial
+port called </font></font><font face="Courier New"><font size=+0>ttya</font></font><font face="Times New Roman"><font size=+1>,
+use the following command at the SPARClet GDB prompt, </font></font><b><font face="Courier New"><font size=+0>gdbslet</font></font></b><font face="Times New Roman"><font size=+1>.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0>target sparclet /dev/ttya</font></font></ul>
+<font face="Times New Roman"><font size=+1>GDB displays messages like the
+following output.</font></font>
+<br>&nbsp;
+<ul><b><font face="Courier New"><font size=+0>Remote target sparclet connected
+to /dev/ttya</font></font></b>
+<br><b><font face="Courier New"><font size=+0>main () at ../prog.c:3</font></font></b>
+<br><b><font face="Courier New"><font size=+0>Connected to ttya.</font></font></b></ul>
+<a NAME="download"></a><b><i><font face="Times New Roman"><font size=+2>SPARClet
+download</font></font></i></b>
+<p><font face="Times New Roman"><font size=+1>Once connected to the SPARClet
+target, you can use the GDB </font></font><font face="Courier New"><font size=+0>load</font></font><font face="Times New Roman"><font size=+1>
+command to download the file from the host to the target. The file name
+and load offset should be given as arguments to the </font></font><font face="Courier New"><font size=+0>load</font></font><font face="Times New Roman"><font size=+1>
+command. Since the file format is </font></font><font face="Courier New"><font size=+0>a.out</font></font><font face="Times New Roman"><font size=+1>,
+the program must be loaded to the starting address. You can use the binary
+utility, </font></font><font face="Courier New"><font size=+0>objdump</font></font><font face="Times New Roman"><font size=+1>,
+to find out what this value is. The load offset is an offset which is added
+to the </font></font><font face="Courier New"><font size=+0>vma</font></font><font size=+1><font face="Times New Roman">
+(virtual memory address) of each of the file’s sections. For instance,
+if the program, prog, was</font><font face="Arial"> </font><font face="Times New Roman">linked
+to text address, 0x1201000, with data at 0x12010160 and bss at 0x12010170,
+in GDB, use the command, </font></font><font face="Courier New"><font size=+0>load
+prog 0x12010000</font></font><font face="Times New Roman"><font size=+1>,
+at the prompt, </font></font><b><font face="Courier New"><font size=+0>(gdbslet)</font></font></b><font face="Times New Roman"><font size=+1>.</font></font>
+<p><font face="Times New Roman"><font size=+1>You’ll then see the following
+output.</font></font>
+<p><b><font face="Courier New"><font size=+0>Loading section .text, size
+0xdb0 vma 0x12010000</font></font></b>
+<p><font face="Times New Roman"><font size=+1>If the code is loaded at
+a different address than that to which the program was linked, you may
+need to use the </font></font><font face="Courier New"><font size=+0>section</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>add-symbol-file</font></font><font face="Times New Roman"><font size=+1>
+commands to tell GDB where to map the symbol table.</font></font>
+<p><a NAME="Running"></a><b><i><font face="Times New Roman"><font size=+2>Running
+and debugging</font></font></i></b>
+<p><font face="Times New Roman"><font size=+1>Now begin debugging the task
+using any of GDB’s commands: </font></font><font face="Courier New"><font size=+0>b</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>step</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>run</font></font><font face="Times New Roman"><font size=+1>,
+and so on (for help with GDB commands, use the command, </font></font><font face="Courier New"><font size=+0>help</font></font><font face="Times New Roman"><font size=+1>).
+The following example shows what you’d do and see for execution control.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0>b main</font></font>
+<br><b><font face="Courier New"><font size=+0>Breakpoint 1 at 0x12010000:
+file prog.c, line 3.</font></font></b></ul>
+<font face="Times New Roman"><font size=+1>This instruction sets a breakpoint
+at line 3 for the file. Then you use the command, </font></font><font face="Courier New"><font size=+0>run</font></font><font face="Times New Roman"><font size=+1>.
+The following is an example of what you’d then see.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0>run</font></font></ul>
+<font face="Times New Roman"><font size=+1>The following is an example
+of the output from GDB you’d then see.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0><b>Starting program: </b><i>prog</i></font></font>
+<br><b><font face="Courier New"><font size=+0>Breakpoint 1, main (argc=1,
+argv=0xeffff21c) at prog.c:3</font></font></b>
+<br><b><font face="Courier New"><font size=+0>3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+char *symarg = 0;</font></font></b></ul>
+<font face="Times New Roman"><font size=+1>Then, at your prompt, use the
+command, </font></font><font face="Courier New"><font size=+0>step</font></font><font face="Times New Roman"><font size=+1>,
+to set the next breakpoint at 4. The following is an example of what you’d
+then see.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0>step</font></font>
+<br><b><font face="Courier New"><font size=+0>4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+char *execarg = "hello!";</font></font></b></ul>
+
+<hr SIZE=3 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbGDB_and_VxWorks.html">Previous</a>|<a href="gdbGDB_and_Hitachi_microprocessors.html">Next</a></center>
+
+</body>
+</html>

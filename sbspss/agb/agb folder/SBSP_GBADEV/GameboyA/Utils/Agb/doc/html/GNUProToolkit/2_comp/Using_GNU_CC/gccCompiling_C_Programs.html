@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Compiling C++ Programs</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccOptions_Controlling_the_Kind_of_.html">Previous</A>|<A HREF="gccOptions_Controlling_C_Dialect.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_560013"></A><A NAME="dd0ae4cc"></A><B><FONT SIZE=+3>Compiling
+C++ programs&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>C++ source files conventionally
+use one of the suffixes ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.C</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.cc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cpp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.cxx</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’;
+preprocessed C++ files use the suffix ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.ii</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+GNU CC recognizes files with these names and compiles them as C++ programs
+even if you call the compiler the same way as for compiling C programs
+(usually with the name </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gcc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>However, C++ programs often
+require class libraries as well as a compiler that understands the C++
+language—and under some circumstances, you might want to compile programs
+from standard input, or otherwise without a suffix that flags them as C++
+programs. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>g++</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a program that calls GNU CC with the default language set to C++, and
+automatically specifies linking against the GNU class library </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libg++.</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+On many systems, the script </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>g++</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is also installed with the name </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>c++.</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+Prior to release 2 of the compiler, there was a separate </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>g++</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+compiler. That version was based on GNU CC, but not integrated with it.
+Versions of</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0> g++</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>1.xx</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+version number—for example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>g++</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+version 1.37 or 1.42—are much less reliable than the versions integrated
+with GCC 2. Moreover, combining G++ </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>1.xx</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with a version 2 GCC will simply not work.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When you compile C++ programs,
+you may specify many of the same command-line options that you use for
+compiling programs in any language; or command-line options meaningful
+for C and related languages; or options that are meaningful only for C++
+programs.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>See <A HREF="gccOptions_Controlling_C_Dialect.html">Options
+controlling C dialect</A> for explanations of options for languages related
+to C or explanations of options that are meaningful only for C++ programs.</FONT></FONT>
+</BODY>
+</HTML>

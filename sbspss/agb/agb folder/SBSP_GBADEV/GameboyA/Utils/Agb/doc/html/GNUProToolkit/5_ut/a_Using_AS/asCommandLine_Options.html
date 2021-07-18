@@ -1,0 +1,97 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Command-Line Options</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asError_and_Warning_Messages.html">Previous</A>|<A HREF="asEnable_Listings_adhlns.html">Next</A>
+<BR><A NAME="off_166437"></A><A NAME="853c893b"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Command-line
+options</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#000000">The
+following documentation describes command-line options available in all
+versions of the GNU assembler; see also </FONT><FONT COLOR="#008000"><A HREF="asMachine_Dependent_Features.html">Machine
+dependent features</A></FONT><FONT COLOR="#000000"> for options specific
+to particular machine architectures.</FONT></FONT></FONT>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<LI>
+<FONT COLOR="#008000"><A HREF="asEnable_Listings_adhlns.html"><FONT FACE="Times New Roman"><FONT SIZE=+1>Enable
+listings: </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>-a[dhlns]</FONT></FONT></B></A></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><B><FONT FACE="Courier New"><FONT COLOR="#008000"><A HREF="asD.html">-D</A></FONT></FONT></B><FONT FACE="Times New Roman"></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asWork_Faster_f.html"><FONT FACE="Times New Roman">Work
+faster: </FONT><B><FONT FACE="Courier New">-f</FONT></B></A></FONT><FONT FACE="Times New Roman"></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asinclude_search_path_I_path.html"><FONT FACE="Times New Roman">.include
+search path: </FONT><B><FONT FACE="Courier New">-I</FONT></B><FONT FACE="Times New Roman">
+</FONT><B><I><FONT FACE="Courier New">path</FONT></I></B></A></FONT><FONT FACE="Times New Roman"></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asDifference_Tables_K.html"><FONT FACE="Times New Roman">Difference
+tables: </FONT><B><FONT FACE="Courier New">-K</FONT></B></A></FONT><FONT FACE="Times New Roman"></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asInclude_Local_Labels_L.html"><FONT FACE="Times New Roman">Include
+local labels: </FONT><B><FONT FACE="Courier New">-L</FONT></B></A></FONT><FONT FACE="Times New Roman"></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asAssemble_in_MRI_Compatibility_Mo.html"><FONT FACE="Times New Roman">Assemble
+in MRI compatibility mode: </FONT><B><FONT FACE="Courier New">-M</FONT></B></A></FONT><FONT FACE="Times New Roman"></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asName_the_Object_File_o.html"><FONT FACE="Times New Roman">Name
+the object file: </FONT><B><FONT FACE="Courier New">-o</FONT></B></A></FONT><FONT FACE="Times New Roman"></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asJoin_Data_and_Text_Sections_R.html"><FONT FACE="Times New Roman">Join
+data and text sections: </FONT><B><FONT FACE="Courier New">-R</FONT></B></A></FONT><FONT FACE="Times New Roman"></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asDisplay_Assembly_Statistics_stat.html"><FONT FACE="Times New Roman">Display
+assembly statistics: </FONT><B><FONT FACE="Courier New">--statistics</FONT></B></A></FONT><FONT FACE="Times New Roman"></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asAnnounce_Version_v.html"><FONT FACE="Times New Roman">Announce
+version: </FONT><B><FONT FACE="Courier New">-v</FONT></B></A></FONT><FONT FACE="Times New Roman"></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asSuppress_Warnings_W.html"><FONT FACE="Times New Roman">Suppress
+warnings: </FONT><B><FONT FACE="Courier New">-W</FONT></B></A></FONT><FONT FACE="Times New Roman"></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asGenerate_Object_File_in_Spite_of.html"><FONT FACE="Times New Roman">Generate
+object file in spite of errors: </FONT><B><FONT FACE="Courier New">-Z</FONT></B></A></FONT><FONT FACE="Times New Roman"></FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>If you
+are invoking </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+using the GNU C compiler (version 2), you can use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-Wa</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option to pass arguments through to the assembler. The assembler arguments
+must be separated from each other (and the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-Wa</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+by commas. Use the following for example.</FONT></FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>gcc -c -g -O -Wa,-alh,-L file.c</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>This input
+emits a listing to standard output with high-level and assembly source.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Usually
+you do not need to use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-Wa</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+mechanism, since many compiler command-line options are automatically passed
+to the assembler by the compiler. (You can call the GNU compiler driver
+with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-v</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option to see precisely what options it passes to each compilation pass,
+including the assembler.)</FONT></FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asError_and_Warning_Messages.html">Previous</A>|<A HREF="asEnable_Listings_adhlns.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

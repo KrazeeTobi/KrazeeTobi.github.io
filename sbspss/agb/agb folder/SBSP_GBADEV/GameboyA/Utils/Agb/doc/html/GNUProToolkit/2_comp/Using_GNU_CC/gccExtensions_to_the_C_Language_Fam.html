@@ -1,0 +1,233 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Extensions to the C Language Family</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccRunning_protoize.html">Previous</a>|<a href="gccStatements_and_Declarations_in_E.html">Next</a>
+<br><a NAME="off_3181068"></a><a NAME="58481b4c"></a><font face="Futura Md BT"><font color="#000000"><b><font size=+3>Extensions
+to the C language family&nbsp;</font></b>&nbsp;</font></font>
+<hr SIZE=6 WIDTH="100%">
+<br><font face="Times New Roman"><font size=+1>GNU C provides several language
+features not found in ANSI standard C. (The option, ‘</font></font><font face="Courier New"><font size=+0>-pedantic</font></font><font face="Times New Roman"><font size=+1>’,
+directs GNU CC to print a warning message if any of these features is used.)
+To test for the availability of these features in conditional compilation,
+check for a predefined macro, </font></font><font face="Courier New"><font size=+0>__GNUC__</font></font><font face="Times New Roman"><font size=+1>,
+which is always defined under GNU CC.</font></font>
+<p><font face="Times New Roman"><font size=+1>These extensions are available
+in C and Objective C. Most of the extensions are also available in C++.
+See <a href="gccExtensions_to_the_C_Language.html">Extensions to the C++
+language</a> for extensions that apply <b><i>only</i></b> to C++.</font></font>
+<p><font face="Times New Roman"><font size=+1>See the following documentation
+for more specific discussion regarding extensions to the C language family.</font></font>
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccStatements_and_Declarations_in_E.html">Statements
+and declarations in expressions</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccLocally_Declared_Labels.html">Locally
+declared labels</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccLabels_as_Values.html">Labels
+as values</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccNested_Functions.html">Nested
+functions</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccConstructing_Function_Calls.html">Constructing
+function calls</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccNaming_an_Expressions_Type.html">Naming
+an expression’s type</a></font></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="gccReferring_to_a_Type_with_typeof.html"><font face="Times New Roman">Referring
+to a type with </font><b><font face="Courier New">typeof</font></b></a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccGeneralized_Lvalues.html">Generalized
+Lvalues</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccConditionals_with_Omitted_Operan.html">Conditionals
+with omitted operands</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccDoubleWord_Integers.html">Double-word
+integers</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccComplex_Numbers.html">Complex
+numbers</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccArrays_of_Length_Zero.html">Arrays
+of length zero</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccArrays_of_Variable_Length.html">Arrays
+of variable length</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccMacros_with_Variable_Numbers_of_.html">Macros
+with variable number of arguments</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccNonLvalue_Arrays_May_Have_Subscr.html">Non-Lvalue
+arrays may have subscripts</a></font></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="gccArithmetic_on_void_and_FunctionP.html"><font face="Times New Roman">Arithmetic
+on </font><b><font face="Courier New">void-</font></b><font face="Times New Roman">
+and function-pointers</font></a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccNonConstant_Initializers.html">Non-constant
+initializers</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccConstructor_Expressions.html">Constructor
+expressions</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccLabeled_Elements_in_Initializers.html">Labeled
+elements in initializers</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccCase_Ranges.html">Case
+ranges</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccCast_to_a_Union_Type.html">Cast
+to a union yype</a></font></font></font></i></li>
+</ul>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccDeclaring_Attributes_of_Function.html">Declaring
+attributes of functions</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccPrototypes_and_OldStyle_Function.html">Prototypes
+and old-style function definitions</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccCompiling_Functions_for_Interrup.html">Compiling
+functions for interrupt calls</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccC_Style_Comments.html">C++
+style comments</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccDollar_Signs_in_Identifier_Names.html">Dollar
+signs in identifier names</a></font></font></font></i></li>
+
+<li>
+<i><font color="#008000"><font size=+1><a href="gccThe_Character_ESC_in_Constants.html"><font face="Times New Roman">The
+</font><b><font face="Courier New">ESC</font></b><font face="Times New Roman">
+character in constants</font></a></font></font></i></li>
+</ul>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccInquiring_on_Alignment_of_Types_.html">Inquiring
+on alignment of types or variables</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccSpecifying_Attributes_of_Variabl.html">Specifying
+attributes of variables</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccSpecifying_Attributes_of_Types.html">Specifying
+attributes of types</a></font></font></font></i></li>
+</ul>
+
+<li>
+<font color="#008000"><font size=+1><a href="gccAn_inline_Function_is_As_Fast_As.html"><font face="Times New Roman">An
+</font><b><font face="Courier New">inline</font></b><font face="Times New Roman">
+function is as fast as a macro</font></a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccAssembler_Instructions_with_C_Ex.html">Assembler
+instructions with C expression operands</a></font></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="gccConstraints_for_asm_Operands.html"><font face="Times New Roman">Constraints
+for </font><b><font face="Courier New">asm</font></b><font face="Times New Roman">
+operands</font></a></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccSimple_Constraints.html">Simple
+constraints</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccMultiple_Alternative_Constraints.html">Multiple
+alternative constraints</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccConstraint_Modifier_Characters.html">Constraint
+modifier characters</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccConstraints_for_Particular_Machi.html">Constraints
+for particular machines</a></font></font></font></i></li>
+</ul>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccControlling_Names_Used_in_Assemb.html">Controlling
+names used in assembler code</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccVariables_in_Specified_Registers.html">Variables
+in specified registers</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccDefining_Global_Register_Variabl.html">Defining
+global register variables</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccSpecifying_Registers_for_Local_V.html">Specifying
+registers for local variables</a></font></font></font></i></li>
+</ul>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccAlternate_Keywords.html">Alternate
+keywords</a></font></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="gccIncomplete_enum_Types.html"><font face="Times New Roman">Incomplete
+</font><b><font face="Courier New">enum</font></b><font face="Times New Roman">
+types</font></a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccFunction_Names_as_Strings.html">Function
+namers as strings</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccGetting_the_Return_or_Frame_Addr.html">Getting
+the return or frame address of a function</a></font></font></font></i></li>
+</ul>
+</ul>
+</ul>
+
+<center>
+<hr SIZE=3 WIDTH="100%">
+<br><a href="#Top">Top</a>|<a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccRunning_protoize.html">Previous</a>|<a href="gccStatements_and_Declarations_in_E.html">Next</a></center>
+
+<ul TYPE=SQUARE>&nbsp;</ul>
+
+</body>
+</html>

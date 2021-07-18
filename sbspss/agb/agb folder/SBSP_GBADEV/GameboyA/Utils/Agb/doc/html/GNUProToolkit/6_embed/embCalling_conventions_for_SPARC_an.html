@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Calling conventions for SPARC and SPARClite targets</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="emb.html">Contents</A>|<A HREF="embindex.html">Index</A>|<A HREF="embAssembler_options_for_SPARC.html">Previous</A>|<A HREF="embDebugging_on_SPARC_and_SPARClite.html">Next</A>
+<BR><A NAME="off_1015808"></A><A NAME="c61c01f1"></A><A NAME="off_1015808"></A><A NAME="c61c01f1"></A><A NAME="off_1015808"></A><A NAME="c61c01f1"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Calling
+conventions for SPARC and SPARClite targets&nbsp;</FONT></FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>SPARC
+passes the first six words of arguments in registers, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>R8</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>R13</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+All remaining arguments are stored in a reserved block on the stack, last
+to first, so that the lowest numbered argument not passed in a register
+is at the lowest address in the stack. The registers are always filled,
+so a double word argument starting in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>R13</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+would have the most significant word in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>R13</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and the least significant word on the stack.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Function return values are
+stored in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>R8</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Register, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>R0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is hardwired so that it always has the value, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>R14</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>R15</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+have reserved uses. Registers, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>R1
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>through </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>R7</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+can be used for temporary values.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When a function is compiled
+with the default options, it must return with registers, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>R16</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>R29</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+unchanged.</FONT></FONT>
+<BR>&nbsp;
+<UL><B><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Functions compiled with
+different calling conventions cannot be run together without some care.</FONT></FONT></UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="emb.html">Contents</A>|<A HREF="embindex.html">Index</A>|<A HREF="embAssembler_options_for_SPARC.html">Previous</A>|<A HREF="embDebugging_on_SPARC_and_SPARClite.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

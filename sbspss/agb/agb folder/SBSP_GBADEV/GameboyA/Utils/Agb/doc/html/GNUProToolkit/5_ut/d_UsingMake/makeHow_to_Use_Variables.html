@@ -1,0 +1,120 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>How to Use Variables</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeUsing_Empty_Commands.html">Previous</A>|<A HREF="makeBasics_of_Variable_References.html">Next</A>
+<BR><A NAME="off_1114112"></A><A NAME="33439aa0"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>How
+to use variables</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>A <I>variable</I>
+is a name defined in a makefile to represent a string of text, called the
+variable’s <I>value</I>. These values are substituted by explicit request
+into targets, dependencies, commands, and other parts of the makefile.
+In some other versions of </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+variables are called <I>macros</I>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>See the following documentation
+for more discussion.</FONT></FONT>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="makeBasics_of_Variable_References.html">Basics
+of variable references</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="makeThe_Two_Flavors_of_Variables.html">The
+two flavors of variables</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="makeAdvanced_Features_for_Reference_.html">Advanced
+features for reference to variables</A></FONT></FONT></FONT></LI>
+
+<UL TYPE=SQUARE>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="makeSubstitution_References.html">Substitution
+references</A></FONT></FONT></FONT></I></LI>
+
+<LI>
+<I><FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="makeComputed_Variable_Names.html">Computed
+variable Names</A></FONT></FONT></FONT></I></LI>
+</UL>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="makeHow_Variables_Get_Their_Values.html">How
+variables get their values</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="makeSetting_Variables.html">Setting
+variables</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="makeAppending_More_Text_to_Variables.html">Appending
+more text to variables</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT COLOR="#008000"><A HREF="makeThe_override_Directive.html"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>override</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive</FONT></FONT></A></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="makeDefining_Variables_Verbatim.html">Defining
+variables verbatim</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="makeVariables_from_the_Environment.html">Variables
+from the environment</A></FONT></FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Variables and functions in all
+parts of a makefile are expanded when read, except for the shell commands
+in rules, the right-hand sides of variable definitions using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+and the bodies of variable definitions using the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>define</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Variables can represent lists
+of file names, options to pass to compilers, programs to run, directories
+to look in for source files, directories to write output in, or anything
+else you can imagine.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>A variable name may be any
+sequence of characters not containing ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>:</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+or leading or trailing whitespace. However, variable names containing characters
+other than letters, numbers, and underscores should be avoided because
+they may be given special meanings in the future, and with some shells
+they cannot be passed through the environment to a sub-</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(see <FONT COLOR="#008000"><A HREF="makeCommunicating_Variables_to_a_Sub.html">Communicating
+variables to a sub-</A></FONT></FONT></FONT><B><FONT FACE="Courier New"><FONT COLOR="#008000"><FONT SIZE=+0><A HREF="makeCommunicating_Variables_to_a_Sub.html">make</A></FONT></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Variable names are case-sensitive.
+The names ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>FOO</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+all refer to different variables.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>It is traditional to use
+uppercase letters in variable names, but we recommend using lowercase letters
+for variable names that serve internal purposes in the makefile, and reserving
+uppercase for parameters that control implicit rules or for parameters
+that the user should override with command options (see <FONT COLOR="#008000"><A HREF="makeOverriding_Variables.html">Overriding
+variables</A></FONT>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>A few variables have names
+that are a single punctuation character or just a few characters. These
+are the automatic variables, and they have particular specialized uses.
+See <FONT COLOR="#008000"><A HREF="makeAutomatic_Variables.html">Automatic
+variables</A></FONT>.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeUsing_Empty_Commands.html">Previous</A>|<A HREF="makeBasics_of_Variable_References.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

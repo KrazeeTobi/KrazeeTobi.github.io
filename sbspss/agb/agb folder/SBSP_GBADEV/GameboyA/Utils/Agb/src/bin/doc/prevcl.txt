@@ -1,0 +1,114 @@
+------------------------------------------------------------
+============================================================
+        prevcl.exe
+============================================================
+------------------------------------------------------------
+
+Tool that outputs Previewer Script as C Language Source and
+Binary.
+
+------------------------------------------------------------
+============================================================
+Role and connection of each file
+============================================================
+------------------------------------------------------------
+ * Class that manages
+------------------------------------------------------------
+prevcl.l c_access.h c_access.cpp
+
+    prevcl.l describes by using lexical analysis language flex.
+    It analyzes token and calls appropriate subroutine 
+    (described in c_access.h , cpp).
+    c_access communicates between C language and C++ language.
+    It adds token to token_list.
+
+token_list.h token_list.cpp
+
+    Literally, it manages token with list structure.
+    Flag comes on when it first finds "{", and node is analyzed when it 
+    finds "}".  Analysis of node takes place when the number of "{" matches 
+    the number of "}".
+
+nodemagic.h nodemagic.cpp
+
+    It manages Magic, which distinguishes node.
+    This function distinguishes magic by assigning number 0 - *
+    depending on node.  This is because it uses a table when calling the 
+    function from the AGB side.
+    When analyzing the node, it first analyzes the node name 
+    (Object Animation, etc.), then calls Create function, depending on magic
+    and creates node.
+
+nodemanager.h nodemanager.cpp
+
+    It manages nodes by name.  All nodes are managed by this class.
+    When analyzing node, nodemanager calls the node of nodemagic
+    and creates node, then calls analysis function of node and registers it.
+
+prev_util.h prev_util.cpp
+
+    This is a utility for previewer.  It supports syntactic analysis.
+
+----------------------------------------------------------------
+ * Class that handles node
+----------------------------------------------------------------
+
+agbnode.h agbnode.cpp
+
+    This is the basic form of each node.  All nodes inherit this node.
+    For member functions, there are Synctactic Analysis Function, 
+    File Load Function, Binary Output Function, C Source Output Function,
+    Text Output Function, Size Acquisition Function and Structure Name 
+    Acquisition Function.  Text Output Function is not yet in use, because 
+    it was created based on the idea that reading binary and returning 
+    as script would be useful in the future.
+
+screenheader.h screenheader.cpp
+
+    This is a class that displays header chunk.  As this class has a complicated
+    output content, its inside is complicated as well.
+
+ndobject.h ndobject.cpp
+ndbackground.h ndbackground.cpp
+
+    Each function is the class that displays Object and BG node accordingly.
+    On the AGB side, this is processed by node_object and node_background.
+
+ndimage.h ndimage.cpp
+ndmapcharacter.h ndmapcharacter.cpp
+ndmapimage.h ndmapimage.cpp
+ndcharacter.h ndcharacter.cpp
+ndpalette.h ndpalette.cpp
+
+    Above are all the image nodes that inherited ndimage.
+    Image node is defined as an array of a certain form that has width and height.
+    Other than ndimage, they readme files, but the content is same as such tools
+    as act2agb, bmp2bin, agbparts and bmp2map.
+    On the AGB side, this is processed by node_image.
+
+ndanimation.h ndanimation.cpp
+switch.h switch.cpp
+multi_switch.h multi_switch.cpp
+
+    These are the nodes that specify animation and the nodes that
+    display animation switching.
+    On the AGB side, this is processed by node_animation.
+
+agbanimnode.h agbanimnode.cpp
+move_animation.h move_animation.cpp
+offset_animation.h offset_animation.cpp
+scale_animation.h scale_animation.cpp
+rotate_animation.h rotate_animation.cpp
+flipbook.h flipbook.cpp
+palette_animation.h palette_animation.cpp
+
+    These are nodes that display animation.  They all inherited agbanimnode.
+    These are key frame animation and are divided into the class that displays
+    key and the animation class.
+
+nodeinfo.h nodeinfo.cpp
+
+    This function is used to register the object with node to child.
+    It becomes possible to find ID simply by registering name.
+
+

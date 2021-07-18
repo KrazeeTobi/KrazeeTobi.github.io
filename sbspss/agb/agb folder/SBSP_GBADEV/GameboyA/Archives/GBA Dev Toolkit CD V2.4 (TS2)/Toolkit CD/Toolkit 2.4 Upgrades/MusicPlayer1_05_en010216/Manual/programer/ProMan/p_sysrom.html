@@ -1,0 +1,55 @@
+<!DOCTYPE html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<link rel="stylesheet" href="style.css">
+<style TYPE="text/css">
+	<!--
+		H2 { color: black}
+		TABLE { border:0; padding:5; margin:1 }
+		TD { color:#303050; background-color:white }
+	-->
+	</style>
+<title>Using Sound Code in System ROM</title>
+</head>
+
+<body>
+
+<h2 align="center">Using Sound Code in System ROM</h2>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="dousa">
+  <tr>
+    <td>In the Game Boy Advance System ROM, a sound program is included and is responsible for
+    things like startup sound. By using a portion of the sound program with this system, the programs in
+    Game Pak ROM and Internal RAM can be minimized.<br>
+    <br>
+    However, the following restrictions and differences exist:<br>
+    &nbsp;&nbsp;<font COLOR="#FF00">-Slower speed than Internal RAM execution version (sys_rom
+    = 0)</font><br>
+    &nbsp;&nbsp;<font COLOR="#FF00">-Cannot limit the processing time of m4aSoundMain( )</font><br>
+    &nbsp;&nbsp;<font COLOR="#FF00">-Must use 2 channels for DMA</font><br>
+    &nbsp;&nbsp;<font COLOR="#FF00">-Operates only with Development AGB (TS4) and later.</font><br>
+    <br>
+    If you want to use the sound code in the System ROM, tell the sound engineer to <font
+    COLOR="#FF00">&quot;Add sys_rom = 1 to the definition file mks4agb.ini.&quot;<br>
+    </font></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="link">
+  <tr>
+    <td><b>Next:</b>[ <a HREF="p_linker.html">Example of Linker Script</a> ]<br>
+    <b>Back:</b>[ <a HREF="p_dmatim.html">Using DMA and Timers</a> ]<br>
+    <b>Top  &nbsp;:</b>[ <a HREF="../p_index.html#Programmer's Manual">Table of Contents</a> ]<br>
+    </td>
+  </tr>
+</table>
+
+<p><br>
+</p>
+</body>
+</html>

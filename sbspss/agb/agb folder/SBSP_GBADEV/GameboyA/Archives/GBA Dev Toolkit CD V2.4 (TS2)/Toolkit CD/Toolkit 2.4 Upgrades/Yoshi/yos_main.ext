@@ -1,0 +1,14 @@
+//======================================================
+//    yos_main.ext
+//    Main External File of Sample Yoshi
+//
+//    Copyright (C) 1999,NINTENDO Co.,Ltd.
+//======================================================
+
+#ifndef __YOS_MAIN_EXT
+#define __YOS_MAIN_EXT
+
+extern gMainVal		gMain;
+extern IntrFuncp IntrTable[15];
+
+#endif//__YOS_MAIN_EXT

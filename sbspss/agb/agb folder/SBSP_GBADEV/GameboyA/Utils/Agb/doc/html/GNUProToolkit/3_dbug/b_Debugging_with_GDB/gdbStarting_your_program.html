@@ -1,0 +1,106 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Starting your program</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbCompiling_for_debugging.html">Previous</A>|<A HREF="gdbYour_programs_arguments.html">Next</A>
+<BR><A NAME="off_557056"></A><A NAME="81d3647b"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Starting
+your program</FONT></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<BR><FONT SIZE=+1>The following documentation discusses running GDB.</FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command to start your program under GDB. You must first specify the program
+name (except on VxWorks) with an argument to GDB (see <FONT COLOR="#008000"><A HREF="gdbGetting_In_and_Out_of_GDB.html">Getting
+in and out of GDB</A></FONT>), or by using the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>exec-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command (see <FONT COLOR="#008000"><A HREF="gdbCommands_to_specify_files.html">Commands
+to specify files</A></FONT>).</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If you are running your
+program in an execution environment that supports processes, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+creates an inferior process and makes that process run your program. (In
+environments without processes, run jumps to the start of your program.)</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The execution of a program
+is affected by certain information it receives from its superior. GDB provides
+ways to specify this information, which you must do <I>before</I> starting
+your program. (You can change it after starting your program, but such
+changes only affect your program the next time you start it.) This information
+may be divided into the following four categories.</FONT></FONT></UL>
+</UL>
+
+<UL>
+<UL>
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Arguments</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Specify the arguments to
+give your program as the arguments of the run command. If a shell is available
+on your target, the shell is used to pass the arguments, so that you may
+use normal conventions (such as wildcard expansion or variable substitution)
+in describing the arguments. In Unix systems, you can control which shell
+is used with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SHELL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+environment variable. See <FONT COLOR="#008000"><A HREF="gdbYour_programs_environment.html">Your
+program’s arguments</A></FONT>.</FONT></FONT>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Environment</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Your program normally inherits
+its environment from GDB, but you can use the GDB commands </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+environment</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> and
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>unset environment</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to change parts of the environment that affect your program.&nbsp; See
+<FONT COLOR="#008000"><A HREF="gdbYour_programs_environment.html">Your
+program’s environment</A></FONT>.</FONT></FONT>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Working directory</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Your program inherits its
+working directory from GDB. You can set the GDB working directory with
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cd</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command in GDB. See <FONT COLOR="#008000"><A HREF="gdbYour_programs_working_directory.html">Your
+program’s working directory</A></FONT>.</FONT></FONT>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Standard input and output</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Your program normally uses
+the same device for standard input and standard output as GDB is using.
+You can redirect input and output in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command line, or you can use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>tty</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command to set a different device for your program. See <FONT COLOR="#008000"><A HREF="gdbYour_programs_input_and_output.html">Your
+program’s input and output</A></FONT>.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<UL>
+<UL>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><B><I>Warning</I></B>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>While input and output redirection
+work, you cannot use pipes to pass the output of the program you are debugging
+to another program; if you attempt this, GDB is likely to wind up debugging
+the wrong program.</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When you issue the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command, your program begins to execute immediately. See <FONT COLOR="#008000"><A HREF="gdbStopping_and_Continuing.html">Stopping
+and continuing</A></FONT> for discussion of how to arrange for your program
+to stop. Once your program has stopped, you may call functions in your
+program, using the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>call</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+commands. See <FONT COLOR="#008000"><A HREF="gdbExamining_Data.html">Examining
+data</A></FONT>.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If the modification time
+of your symbol file has changed since the last time GDB read its symbols,
+GDB discards its symbol table, and reads it again. When it does this, GDB
+tries to retain your current breakpoints.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbCompiling_for_debugging.html">Previous</A>|<A HREF="gdbYour_programs_arguments.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

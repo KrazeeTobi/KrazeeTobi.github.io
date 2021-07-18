@@ -1,0 +1,6 @@
+crt0.o:   crt0.s rom_header.s MultiSioDefine.s \
+ \agb\include\AgbDefine.s \agb\include\AgbSyscallDefine.s \
+ \agb\include\AgbMacro.s  \agb\include\AgbMemoryMap.s
+MultiSioAsm.o:	MultiSioAsm.s MultiSioDefine.s \
+ \agb\include\AgbDefine.s \agb\include\AgbSyscallDefine.s \
+ \agb\include\AgbMacro.s  \agb\include\AgbMemoryMap.s

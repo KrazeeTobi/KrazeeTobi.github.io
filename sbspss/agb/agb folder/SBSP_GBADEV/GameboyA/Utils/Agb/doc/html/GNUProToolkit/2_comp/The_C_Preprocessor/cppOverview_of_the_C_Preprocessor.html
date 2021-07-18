@@ -1,0 +1,108 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Overview of the C Preprocessor</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="cpp.html">Contents</a>|<a href="cppindex.html">Index</a>|<a href="cppTransformations_Made_Globally.html">Next</a>
+<br><a NAME="off_33260"></a><a NAME="f3a92967"></a><a NAME="off_33260"></a><a NAME="f3a92967"></a><a NAME="off_33260"></a><a NAME="f3a92967"></a><a NAME="off_33260"></a><a NAME="f3a92967"></a><a NAME="off_33260"></a><a NAME="f3a92967"></a><a NAME="off_33260"></a><a NAME="f3a92967"></a><a NAME="off_33260"></a><a NAME="f3a92967"></a><a NAME="off_33260"></a><a NAME="f3a92967"></a><a NAME="off_33260"></a><a NAME="f3a92967"></a><a NAME="off_33260"></a><a NAME="f3a92967"></a><a NAME="off_33260"></a><a NAME="f3a92967"></a><a NAME="off_33260"></a><a NAME="f3a92967"></a><a NAME="off_33260"></a><a NAME="f3a92967"></a><a NAME="off_33260"></a><a NAME="f3a92967"></a><a NAME="off_33260"></a><a NAME="f3a92967"></a><a NAME="off_33260"></a><a NAME="f3a92967"></a><b><font face="Futura Md BT"><font color="#000000"><font size=+3>Overview
+of the C preprocessor</font></font></font></b>
+<hr SIZE=6 WIDTH="100%">
+<br><font color="#000000"><font size=+1><font face="Times New Roman">The
+C preprocessor is a <i>macro processor</i> that is used automatically by
+the C compiler to transform your program before actual compilation. It
+is called a macro processor because it allows you to define macros, which
+are brief abbreviations for longer constructs. The following documentation
+details the C preprocessor, </font><tt>cpp</tt><font face="Times New Roman">.</font></font></font>
+<ul TYPE=SQUARE>
+<li>
+<font size=+1><a href="#What_cpp_provides">What the C preprocessor provides</a></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="cppTransformations_Made_Globally.html">Transformations
+made globally</a></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="cppPreprocessing_Directives.html">Preprocessing
+directives</a></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="cppHeader_Files.html">Header
+files</a></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="cppMacros.html">Macros</a></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="cppConditionals.html">Conditionals</a></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="cppCombining_Source_Files.html">Combining
+source files</a></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="cppMiscellaneous_Preprocessing_Dire.html">Miscellaneous
+preprocessing directives</a></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="cppC_Preprocessor_Output.html">C
+preprocessor output</a></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="cppInvoking_the_C_Preprocessor.html">Invoking
+the C preprocessor</a></font></font></li>
+</ul>
+<font face="Times New Roman"><font color="#000000"><font size=+1></font></font></font><b><i><font size=+2></font></i></b>
+<p><a NAME="What_cpp_provides"></a><b><i><font face="Times New Roman"><font color="#000000"><font size=+2>What
+the C preprocessor provides</font></font></font></i></b><font face="Times New Roman"><font color="#000000"><font size=+1></font></font></font>
+<p><font face="Times New Roman"><font color="#000000"><font size=+1>The
+C preprocessor provides the following four separate facilities that you
+can use as you see fit.</font></font></font>
+<ul TYPE=SQUARE>
+<li>
+<b><i><font face="Times New Roman"><font size=+1>Inclusion of header files</font></font></i></b></li>
+
+<br><font face="Times New Roman"><font size=+1>These are files of declarations
+that can be substituted into your program.</font></font>
+<li>
+<b><i><font face="Times New Roman"><font size=+1>Macro expansion</font></font></i></b></li>
+
+<br><font face="Times New Roman"><font size=+1>You can define <i>macros</i>,
+which are abbreviations for arbitrary fragments of C code, and then the
+C preprocessor will replace the macros with their definitions throughout
+the program.</font></font>
+<li>
+<b><i><font face="Times New Roman"><font size=+1>Conditional compilation</font></font></i></b></li>
+
+<br><font face="Times New Roman"><font size=+1>Using special preprocessing
+directives, you can include or exclude parts of the program according to
+various conditions.</font></font>
+<li>
+<b><i><font face="Times New Roman"><font size=+1>Line control</font></font></i></b></li>
+
+<br><font face="Times New Roman"><font size=+1>If you use a program to
+combine or rearrange source files into an intermediate file which is then
+compiled, you can use line control to inform the compiler of each source
+line’s origin.</font></font></ul>
+<font face="Times New Roman"><font color="#000000"><font size=+1>C preprocessors
+vary in some details. This manual discusses the GNU C preprocessor, the
+C Compatible Compiler Preprocessor. The GNU C preprocessor provides a superset
+of the features of ANSI Standard C.</font></font></font>
+<p><font color="#000000"><font face="Times New Roman"><font size=+1>ANSI
+Standard C requires the rejection of many harmless constructs commonly
+used by today’s C programs. Such incompatibility would be inconvenient
+for users, so the GNU C preprocessor is configured to accept these constructs
+by default. To get ANSI Standard C, you must use the options </font></font><font face="Courier New"><font size=+0>-trigraphs</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>-undefand
+-pedantic</font></font><font face="Times New Roman"><font size=+1>, but,
+in practice, the consequences of having strict ANSI Standard C make it
+undesirable to do this. See </font></font></font><font face="Times New Roman"><font size=+1><font color="#008000"><a href="cppInvoking_the_C_Preprocessor.html">Invoking
+the C preprocessor</a></font><font color="#000000">.</font></font></font>
+<br>
+<hr SIZE=3 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="cpp.html">Contents</a>|<a href="cppindex.html">Index</a>|<a href="cppTransformations_Made_Globally.html">Next</a></center>
+
+</body>
+</html>

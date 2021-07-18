@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>mktime[convert time to arithmetic representation]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libclocaltimeconvert_time_to_local_r.html">Previous</A>|<A HREF="libcstrftimeflexible_calendar_time_f.html">Next</A>
+</P>
+
+<P><A NAME="off_1835008"></A><A NAME="eab8196e"></A><A NAME="off_1835008"></A><A NAME="eab8196e"></A><FONT SIZE=+3><FONT FACE="Courier New">mktime
+<BR>
+</FONT><FONT FACE="Times New Roman">[convert time to arithmetic representation]
+</FONT></FONT></P>
+
+<PRE><B><FONT FACE="Times New Roman"><FONT SIZE=+2>SYNOPSIS 
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+1>#include &lt;time.h&gt; 
+time_t mktime(struct tm *<I>timp</I>); </FONT></FONT></PRE>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>mktime</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+assumes the time at </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>timp
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>is a local
+time, and converts its representation from the traditional representation
+defined by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>tm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+into a representation suitable for arithmetic. </FONT></FONT></P>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>localtime</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the inverse of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mktime</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>RETURNS <BR>
+</B>If the contents of the structure at </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>timp</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+do not form a valid calendar time representation, the result is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Otherwise, the result is the time, converted to a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>time_t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+value. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>COMPLIANCE <BR>
+</B>ANSI C requires </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mktime</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>mktime</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+requires no supporting OS subroutines. </FONT></FONT></P>
+
+</BODY>
+</HTML>

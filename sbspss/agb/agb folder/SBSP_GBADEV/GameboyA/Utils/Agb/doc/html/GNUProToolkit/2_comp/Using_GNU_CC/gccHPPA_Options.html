@@ -1,0 +1,197 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>HPPA Options</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccSH_Options.html">Previous</A>|<A HREF="gccIBM_RS6000_and_PowerPC_Options.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_1998960"></A><A NAME="421e45f8"></A><B><FONT SIZE=+3>HPPA
+options&nbsp;</FONT></B>&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The following ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-m</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options are defined for the HPPA family of computers.</FONT></FONT>
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mpa-risc-1-0</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate code for a PA 1.0
+processor.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mpa-risc-1-1</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate code for a PA 1.1
+processor.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mbig-switch</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>Generate code suitable
+for big switch tables. Use this option only if the assembler/linker complain
+about out of range branches within a switch table.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mjump-in-delay</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Fill delay slots of function
+calls with unconditional jump instructions by modifying the return pointer
+for the function call to be the target of the conditional jump.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mdisable-fpregs</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Prevent floating point registers
+from being used in any manner. This is necessary for compiling kernels
+which perform lazy context switching of floating point registers. If you
+use this option and attempt to perform floating point operations, the compiler
+will abort.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mdisable-indexing</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Prevent the compiler from
+using indexing address modes. This avoids some rather obscure problems
+when compiling MIG generated code under MACH.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-space-regs</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate code that assumes
+the target has no space registers.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This allows GCC to generate
+faster indirect calls and use unscaled index address modes.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Such code is suitable for level
+0 PA systems and kernels.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mfast-indirect-calls</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate code that assumes
+calls never cross space boundaries. This allows GCC to emit code which
+performs faster indirect calls.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This option will not work in
+the presense of shared libraries or nested functions.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mspace</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Optimize for space rather
+than execution time. Currently this only enables out of line function prologues
+and epilogues. This option is incompatible with PIC code generation and
+profiling.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mlong-load-store</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate 3-instruction load
+and store sequences as sometimes required by the HPUX 10 linker. This is
+equivalent to the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+k</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option to the HP compilers.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mportable-runtime</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use the portable calling
+conventions proposed by HP for ELF systems.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mgas</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Enable the use of assembler
+directives only GAS understands.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mschedule=<I>cpu type</I></FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Schedule code according
+to the constraints for the machine type </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>cpu
+type</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>. The
+choices for </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>cpu</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>type </FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>are
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>700</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for 7</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>0
+machines, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>7100</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for 7</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>5
+machines, and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>7100</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for 7</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>2
+machines. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>7100</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the default for </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>cpu
+type</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>7100LC</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+scheduling information is incomplete and using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>7100LC</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+often leads to bad schedules. For now it’s probably best to use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>7100</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instead of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>7100LC</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for the 7</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>2
+machines.</FONT></FONT>
+<BR>&nbsp;</UL>
+</UL>
+</UL>
+
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mlinker-opt</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Enable the optimization
+pass in the HPUX linker.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>This makes symbolic debugging
+impossible. It also triggers a bug in the HPUX 8 and HPUX 9 linkers in
+which they give bogus error messages when linking some programs.</FONT></FONT>
+<BR>&nbsp;</UL>
+</UL>
+</UL>
+
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-msoft-float</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate output containing
+library calls for floating point.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL><B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Warning:</FONT></FONT></I></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The requisite libraries
+are not available for all HPPA targets. Normally the facilities of the
+machine’s usual C compiler are used, but this cannot be done directly in
+cross-compilation. You must make your own arrangements to provide suitable
+library functions for cross-compilation. The embedded target </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>hppa1.1-*-pro</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does provide software floating point support.</FONT></FONT>
+<BR>&nbsp;</UL>
+&nbsp;
+<BR>&nbsp;<FONT FACE="Courier New"><FONT SIZE=+0>-msoft-float</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+changes the calling convention in the output file; therefore, it is only
+useful if you compile <I>all</I> of a program with this option. In particular,
+you need to compile </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the library that comes with GNU CC, with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-msoft-float</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in order for this to work.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccSH_Options.html">Previous</A>|<A HREF="gccIBM_RS6000_and_PowerPC_Options.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

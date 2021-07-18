@@ -1,0 +1,743 @@
+Archive member included       because of file (symbol)
+
+d:/nintendo/agb/agblib/lib/libagbsyscall.a(AgbSyscall.o)
+                              Main.o (RegisterRamReset)
+d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbEeprom.o)
+                              EepromTest.o (SetEepromTimerIntr)
+d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o)
+                              FlashTest.o (ProgramFlashSector)
+d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_LE39FW512.o)
+                              d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o) (defaultFlash)
+d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_MX29L512.o)
+                              d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o) (MX29L512)
+d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_AT29LV512.o)
+                              d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o) (AT29LV512_lib)
+d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbSramFast.o)
+                              SramTest.o (WriteSramFast)
+mylib/libmyfunc.a(bg.o)       Main.o (InitBg)
+mylib/libmyfunc.a(obj.o)      Main.o (SetOamBuffer)
+mylib/libmyfunc.a(sound.o)    mylib/libmyfunc.a(obj.o) (snd_csrMove)
+mylib/libmyfunc.a(stdSub.o)   Main.o (key)
+mylib/libmyfunc.a(sincos.o)   mylib/libmyfunc.a(stdSub.o) (SIN)
+D:\NINTENDO\AGB\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_call_via_rX.o)
+                              Main.o (_call_via_r0)
+D:\NINTENDO\AGB\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_udivsi3.o)
+                              mylib/libmyfunc.a(bg.o) (__udivsi3)
+D:\NINTENDO\AGB\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_umodsi3.o)
+                              mylib/libmyfunc.a(bg.o) (__umodsi3)
+D:\NINTENDO\AGB\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_dvmd_tls.o)
+                              D:\NINTENDO\AGB\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_udivsi3.o) (__div0)
+
+Allocating common symbols
+Common symbol       size              file
+
+ReadSramFast        0x4               d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbSramFast.o)
+IntrTable           0x38              Main.o
+ActiveProcess       0x4               Main.o
+pollingSR           0x4               d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o)
+ProgramFlashSector  0x4               d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o)
+flash               0x4               d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o)
+key                 0x1c              mylib/libmyfunc.a(stdSub.o)
+VerifySramFast      0x4               d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbSramFast.o)
+flash_remainder     0x4               d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o)
+EraseFlashChip      0x4               d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o)
+EraseFlashSector    0x4               d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD crt0.o
+LOAD Main.o
+LOAD Data.o
+LOAD MemDump.o
+LOAD SramTest.o
+LOAD FlashTest.o
+LOAD EepromTest.o
+LOAD d:/nintendo/agb/agblib/lib/libagbsyscall.a
+LOAD d:/nintendo/agb/agblib/lib/libisagbprn.a
+LOAD d:/nintendo/agb/agblib/lib/libagbbackup.a
+LOAD mylib/libmyfunc.a
+LOAD D:\NINTENDO\AGB\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a
+LOAD D:\NINTENDO\AGB\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/lib/libg.a
+LOAD D:\NINTENDO\AGB\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/lib/libc.a
+LOAD D:\NINTENDO\AGB\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a
+Address of section .text set to 0x8000000
+Address of section .bss set to 0x3000000
+                0x00008000                .=0x8000
+
+.interp
+ *(.interp)
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x08000000     0x77d4
+ *(.text)
+ .text          0x08000000      0x1d8 crt0.o
+                0x08000000                _start
+                0x080000c0                start_vector
+                0x080000fc                intr_main
+ .text          0x080001d8      0x298 Main.o
+                0x0800046c                IntrDummy
+                0x08000300                InitMainSequence
+                0x080003ac                MainSequence
+                0x08000440                ReturnMain
+                0x0800045c                VblankIntr
+                0x080001d8                AgbMain
+ .text          0x08000470      0x3f8 MemDump.o
+                0x08000570                InitMemDump
+                0x08000470                InitMemSelect
+                0x080004e0                MemSelect
+                0x08000760                DrawAdressLine
+                0x08000680                MemDump
+                0x080007a0                DumpData
+ .text          0x08000868      0x244 SramTest.o
+                0x0800099c                WriteSramAllArea
+                0x08000914                SramTest
+                0x08000868                InitSramTest
+                0x08000a58                SetSramWritePattern
+ .text          0x08000aac      0x360 FlashTest.o
+                0x08000b90                FlashTest
+                0x08000dac                SetFlashWritePattern
+                0x08000c18                ProgramFlashAllArea
+                0x08000aac                InitFlashTest
+ .text          0x08000e0c      0x2dc EepromTest.o
+                0x08000ea0                EepromTest
+                0x08000e0c                InitEepromTest
+                0x08000f28                ProgramEepromAllArea
+                0x08001090                SetEepromWritePattern
+ .text          0x080010e8       0xd8 d:/nintendo/agb/agblib/lib/libagbsyscall.a(AgbSyscall.o)
+                0x08001138                BitUnPack
+                0x0800116c                SoundBiasChange
+                0x08001124                ArcTan2
+                0x08001160                Diff8bitUnFilterWram
+                0x0800119c                MusicPlayerOpen
+                0x08001168                Diff16bitUnFilter
+                0x08001190                SoundDriverVSyncOff
+                0x08001180                SoundDriverMode
+                0x080011a4                MusicPlayerStop
+                0x080010e8                SoftReset
+                0x08001164                Diff8bitUnFilterVram
+                0x0800117c                SoundDriverInit
+                0x08001102                VBlankIntrWait
+                0x0800115c                RLUnCompVram
+                0x08001176                SoundBiasReset
+                0x08001134                ObjAffineSet
+                0x0800112c                CpuFastSet
+                0x08001198                MidiKey2Freq
+                0x080011a0                MusicPlayerStart
+                0x080010fc                IntrWait
+                0x08001116                DivRemArm
+                0x08001158                RLUnCompWram
+                0x08001110                DivRem
+                0x08001120                ArcTan
+                0x080010f8                RegisterRamReset
+                0x080011a8                MusicPlayerContinue
+                0x08001130                BgAffineSet
+                0x0800118c                SoundChannelClear
+                0x08001170                SoundBiasSet
+                0x08001194                SoundDriverVSyncOn
+                0x08001108                Div
+                0x08001188                SoundDriverVSync
+                0x080011ac                MusicPlayerFadeOut
+                0x0800113c                LZ77UnCompWram
+                0x08001184                SoundDriverMain
+                0x080011b0                MultiBoot
+                0x08001128                CpuSet
+                0x0800110c                DivArm
+                0x08001154                HuffUnComp
+                0x0800111c                Sqrt
+                0x08001140                LZ77UnCompVram
+ .text          0x080011c0      0x584 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbEeprom.o)
+                0x080013b0                ReadEepromDword
+                0x080012d0                StopEepromTimer
+                0x080011f8                SetEepromTimerIntr
+                0x0800132c                Dma3Transmit
+                0x080011c0                EepromTimerIntr
+                0x080016a4                VerifyEepromDword
+                0x08001248                StartEepromTimer
+                0x08001504                ProgramEepromDword
+ .text          0x08001744      0x770 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o)
+                0x0800190c                FlashTimerIntr
+                0x08001994                StartFlashTimer
+                0x08001b1c                PollingSR_COMMON
+                0x08001a98                ReadFlash1
+                0x08001bec                ReadFlash_Core
+                0x08001d84                VerifyFlashSector
+                0x08001744                ReadFlashID
+                0x08001838                IdentifyFlash
+                0x08001ab0                SetReadFlash1
+                0x08001944                SetFlashTimerIntr
+                0x08001d20                VerifyFlashSector_Core
+                0x08001a3c                StopFlashTimer
+                0x08001c24                ReadFlash
+ .text          0x08001eb4      0x43c d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_LE39FW512.o)
+                0x08001f58                EraseFlashSector_LE
+                0x08002024                ProgramFlashByte_LE
+                0x08001eb4                EraseFlashChip_LE
+                0x08002074                ProgramFlashSector_LE
+                0x08002284                VerifyFlashCoreFF
+                0x080022c4                VerifyFlashErase
+ .text          0x080022f0      0x108 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_MX29L512.o)
+                0x080022f0                ProgramFlashSector_MX
+ .text          0x080023f8      0x474 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_AT29LV512.o)
+                0x08002674                ProgramFlashSector_AT
+                0x08002730                ProgramFlash4KB_AT
+                0x080023f8                EraseFlashChip_AT
+                0x0800249c                EraseFlashSector_AT
+                0x08002574                EraseFlash4KB_AT
+ .text          0x0800286c      0x218 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbSramFast.o)
+                0x0800286c                ReadSramFast_Core
+                0x0800291c                VerifySramFast_Core
+                0x08002984                SetSramFastFunc
+                0x080028c4                WriteSramFast
+ .text          0x08002a84     0x2b98 mylib/libmyfunc.a(bg.o)
+                0x08005348                DrawUIntOnBgx
+                0x08002d58                DisableBgSecurity
+                0x08003108                GetBgxBuffer
+                0x08003024                GetBgMode
+                0x08003d18                GetBgxCharBaseAdr
+                0x08003ee0                GetBgxAreaOver
+                0x0800317c                GetBgxBuffSize
+                0x0800363c                GetFlameBuff
+                0x08003c78                SetBgxCharBaseAdr
+                0x0800404c                SetBgxPosY
+                0x08003dfc                GetBgxPriority
+                0x08005508                DrawSIntOnBgx
+                0x08004c3c                CheckParagraph
+                0x080037e4                GetBgxScreenBaseBlock
+                0x08003e4c                SetBgxAreaOver
+                0x0800383c                SetBgxScreenBaseAdr
+                0x08003fc8                RelativeScrollBgxPosX
+                0x080039e0                SetBgxMosaicEnable
+                0x08003c24                GetBgxCharBaseBlock
+                0x08004778                CalcRbgxReferenceStartPos
+                0x08002d7c                SetBgMode
+                0x08003754                SetBgxScreenBaseBlock
+                0x080030b8                SetBgxBuffRenewal
+                0x08003930                SetMosaicEnable
+                0x0800367c                SetScreenSize
+                0x080040e8                RelativeScrollBgxPosY
+                0x08004a38                RotateZoomRbgx
+                0x08003b48                GetBgxColorMode
+                0x08003f90                GetBgxPosX
+                0x08004b9c                SetParagraph
+                0x08004ed8                DrawAsciiStringOnBgx
+                0x080033ac                TrmScreenDataToBgxBufferByFunc
+                0x080042dc                CalcRbgxAffineValue
+                0x08003ab8                SetBgxColorMode
+                0x080036fc                GetScreenSize
+                0x08005230                DrawHalfByteHexOnBgx
+                0x080034c8                ClearBgxScreenRect
+                0x08003418                TrmScreenDataToBgxBuffer
+                0x080031b8                ClearBgxBuffer
+                0x08002a84                InitBg
+                0x08003a70                GetBgxMosaicEnable
+                0x080035fc                SetFlameBuff
+                0x080032f8                DmaAllBgxBuffer
+                0x0800501c                DrawHexOnBgx
+                0x0800416c                SetRbgxHVflip
+                0x080041ec                SetRbgxTheta
+                0x08003b90                SetBgxCharBaseBlock
+                0x08004240                SetRbgxMagnify
+                0x08003054                SetBgxBuffer
+                0x08003250                DmaBgxBuffer
+                0x08003f2c                SetBgxPosX
+                0x08003140                GetBgxBuffPointer
+                0x080040b0                GetBgxPosY
+                0x08002d2c                EnableBgSecurity
+                0x08003d6c                SetBgxPriority
+                0x080038d8                GetBgxScreenBaseAdr
+                0x08004d74                DrawAsciiCharOnBgx
+ .text          0x0800561c      0x590 mylib/libmyfunc.a(obj.o)
+                0x080056b0                SetOamBufferRenewal
+                0x08005960                CheckCursorPos
+                0x08005878                SetCursorChar
+                0x0800564c                DmaOamBuffer
+                0x080059b0                CheckCursorPosRange
+                0x0800561c                SetOamBuffer
+                0x08005818                DeleteCursor
+                0x08005a0c                MoveAndAnimeCursor
+                0x080056dc                SetCursorStatus
+                0x08005900                GetCurosrPosOnBg
+ .text          0x08005bac       0x68 mylib/libmyfunc.a(sound.o)
+                0x08005bac                SetSound
+ .text          0x08005c14     0x1a48 mylib/libmyfunc.a(stdSub.o)
+                0x080060c8                ReadKey
+                0x080069ac                DrawNowInputHexData
+                0x08006300                ClearVram
+                0x0800646c                TrmCharData
+                0x08005e00                AddRapidKey
+                0x0800613c                ChangeTask
+                0x08006ff8                DrawNowToggleSwitchChar
+                0x080061ac                CalcAffineValue
+                0x08006374                ClearOam
+                0x08005f40                ReadKeyPlus
+                0x080063dc                ClearPalette
+                0x08005d10                SetKeyRapid
+                0x08005e6c                ShiftInterval
+                0x08006ba8                DrawNowSelectString
+                0x08006194                ExecuteTask
+                0x080065f4                SetInputHexData
+                0x08005ce4                SetKeyRapidEnable
+                0x0800717c                DrawNowToggleSwitchString
+                0x08007438                DrawNowAllSetting
+                0x08007330                ClearNowAllSetting
+                0x08006630                InputHexData
+                0x08005c14                WaitHblank
+                0x08006290                ClearWram
+                0x08005e34                SubRapidKey
+                0x0800754c                InitSetFunc
+                0x08006518                TrmPaletteData
+                0x08006c9c                ToggleSwitch
+                0x08006a88                SelectStrings
+                0x08005c74                WaitPressKey
+ .text          0x0800765c       0x3c D:\NINTENDO\AGB\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_call_via_rX.o)
+                0x08007664                _call_via_r2
+                0x08007674                _call_via_r6
+                0x08007670                _call_via_r5
+                0x08007668                _call_via_r3
+                0x08007688                _call_via_fp
+                0x0800767c                _call_via_r8
+                0x08007678                _call_via_r7
+                0x0800765c                _call_via_r0
+                0x08007684                _call_via_sl
+                0x08007690                _call_via_sp
+                0x08007680                _call_via_r9
+                0x0800766c                _call_via_r4
+                0x08007660                _call_via_r1
+                0x0800768c                _call_via_ip
+                0x08007694                _call_via_lr
+ .text          0x08007698       0x78 D:\NINTENDO\AGB\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_udivsi3.o)
+                0x08007698                __udivsi3
+ .text          0x08007710       0xc0 D:\NINTENDO\AGB\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_umodsi3.o)
+                0x08007710                __umodsi3
+ .text          0x080077d0        0x4 D:\NINTENDO\AGB\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_dvmd_tls.o)
+                0x080077d0                __div0
+ *(.text.*)
+ *(.stub)
+ *(.gnu.warning)
+ *(.gnu.linkonce.t*)
+ *(.glue_7t)
+ *(.glue_7)
+                0x080077d4                _etext=.
+                0x080077d4                PROVIDE (etext, .)
+
+.fini
+ *(.fini)
+
+.rodata         0x080077d4     0x4440
+ *(.rodata)
+ .rodata        0x080077d4       0x98 Main.o
+ .rodata        0x0800786c     0x3200 Data.o
+                0x08007a6c                mychar
+                0x0800786c                textPaletteData
+ .rodata        0x0800aa6c       0xb4 MemDump.o
+ .rodata        0x0800ab20      0x104 SramTest.o
+ .rodata        0x0800ac24      0x158 FlashTest.o
+ .rodata        0x0800ad7c       0xe8 EepromTest.o
+ .rodata        0x0800ae64       0x50 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbEeprom.o)
+ .rodata        0x0800aeb4       0xa4 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o)
+ .rodata        0x0800af58       0x98 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_LE39FW512.o)
+                0x0800af70                defaultFlash
+                0x0800af9c                LE39FW512
+ .rodata        0x0800aff0       0x90 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_MX29L512.o)
+                0x0800b020                MX29L512
+                0x0800b04c                MN63F805MNP
+ .rodata        0x0800b080       0x98 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_AT29LV512.o)
+                0x0800b098                AT29LV512_lib
+                0x0800b0c4                AT29LV512_org
+ .rodata        0x0800b118       0x34 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbSramFast.o)
+ .rodata        0x0800b14c      0x100 mylib/libmyfunc.a(bg.o)
+ .rodata        0x0800b24c       0x38 mylib/libmyfunc.a(obj.o)
+ .rodata        0x0800b284       0xb4 mylib/libmyfunc.a(sound.o)
+                0x0800b284                snd_csrMove
+                0x0800b296                snd_select
+                0x0800b29c                snd_ok
+                0x0800b290                snd_parent
+                0x0800b28a                snd_child
+ .rodata        0x0800b338       0xdc mylib/libmyfunc.a(stdSub.o)
+                0x0800b338                keyArray
+ .rodata        0x0800b414      0x800 mylib/libmyfunc.a(sincos.o)
+                0x0800b414                SIN
+                0x0800b614                COS
+                0x0800b814                ASIN
+                0x0800ba14                ACOS
+ *(.rodata.*)
+ *(.gnu.linkonce.r*)
+
+.rodata1
+ *(.rodata1)
+                0x0800bd14                .=(ALIGN(0x100)+(.&0xff))
+
+.data           0x0800bd14        0x0
+ *(.data)
+ *(.data.*)
+ *(.gnu.linkonce.d*)
+
+.data1
+ *(.data1)
+
+.ctors
+ EXCLUDE_FILE ( *crtend.o )*(.ctors)
+ *(SORT(.ctors.*))
+ *crtend(.ctors)
+
+.dtors
+ EXCLUDE_FILE ( *crtend.o )*(.dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+
+.got
+ *(.got.plt)
+ *(.got)
+
+.dynamic
+ *(.dynamic)
+
+.sdata
+ *(.sdata)
+ *(.sdata.*)
+                0x0800bd14                _edata=.
+                0x0800bd14                PROVIDE (edata, .)
+                0x0800bd14                __bss_start=.
+                0x0800bd14                __bss_start__=.
+
+.sbss
+ *(.sbss)
+ *(.scommon)
+
+.bss            0x03000000     0x198c
+ *(.dynbss)
+ *(.bss)
+ .bss           0x03000000     0x1404 Main.o
+ *fill*         0x03001404        0x4
+ .bss           0x03001408      0x230 MemDump.o
+ .bss           0x03001638        0x4 SramTest.o
+ .bss           0x0300163c        0x4 FlashTest.o
+ .bss           0x03001640        0x4 EepromTest.o
+ .bss           0x03001644       0x10 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbEeprom.o)
+ .bss           0x03001654       0x18 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o)
+ *fill*         0x0300166c        0x4
+ .bss           0x03001670      0x120 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbSramFast.o)
+ .bss           0x03001790      0x134 mylib/libmyfunc.a(bg.o)
+ *fill*         0x030018c4        0x4
+ .bss           0x030018c8       0x18 mylib/libmyfunc.a(obj.o)
+ .bss           0x030018e0       0x24 mylib/libmyfunc.a(stdSub.o)
+ *(.bss.*)
+ *(COMMON)
+ *fill*         0x03001904        0xc
+ COMMON         0x03001910       0x3c Main.o
+                                  0x0 (size before relaxing)
+                0x03001910                IntrTable
+                0x03001948                ActiveProcess
+ COMMON         0x0300194c       0x18 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o)
+                                  0x0 (size before relaxing)
+                0x0300194c                pollingSR
+                0x03001950                ProgramFlashSector
+                0x03001954                flash
+                0x03001958                flash_remainder
+                0x0300195c                EraseFlashChip
+                0x03001960                EraseFlashSector
+ COMMON         0x03001964        0x8 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbSramFast.o)
+                                  0x0 (size before relaxing)
+                0x03001964                ReadSramFast
+                0x03001968                VerifySramFast
+ *fill*         0x0300196c        0x4
+ COMMON         0x03001970       0x1c mylib/libmyfunc.a(stdSub.o)
+                                  0x0 (size before relaxing)
+                0x03001970                key
+                0x0300198c                .=ALIGN(0x4)
+                0x0300198c                .=ALIGN(0x4)
+                0x0300198c                _end=.
+                0x0300198c                _bss_end__=.
+                0x0300198c                __bss_end__=.
+                0x0300198c                PROVIDE (end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x1e0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 Main.o
+ .debug_aranges
+                0x00000020       0x20 MemDump.o
+ .debug_aranges
+                0x00000040       0x20 SramTest.o
+ .debug_aranges
+                0x00000060       0x20 FlashTest.o
+ .debug_aranges
+                0x00000080       0x20 EepromTest.o
+ .debug_aranges
+                0x000000a0       0x20 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbEeprom.o)
+ .debug_aranges
+                0x000000c0       0x20 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o)
+ .debug_aranges
+                0x000000e0       0x20 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_LE39FW512.o)
+ .debug_aranges
+                0x00000100       0x20 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_MX29L512.o)
+ .debug_aranges
+                0x00000120       0x20 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_AT29LV512.o)
+ .debug_aranges
+                0x00000140       0x20 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbSramFast.o)
+ .debug_aranges
+                0x00000160       0x20 mylib/libmyfunc.a(bg.o)
+ .debug_aranges
+                0x00000180       0x20 mylib/libmyfunc.a(obj.o)
+ .debug_aranges
+                0x000001a0       0x20 mylib/libmyfunc.a(sound.o)
+ .debug_aranges
+                0x000001c0       0x20 mylib/libmyfunc.a(stdSub.o)
+
+.debug_pubnames
+                0x00000000      0xf0d
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x90 Main.o
+ .debug_pubnames
+                0x00000090       0x31 Data.o
+ .debug_pubnames
+                0x000000c1       0x6e MemDump.o
+ .debug_pubnames
+                0x0000012f       0x5d SramTest.o
+ .debug_pubnames
+                0x0000018c       0x63 FlashTest.o
+ .debug_pubnames
+                0x000001ef       0x67 EepromTest.o
+ .debug_pubnames
+                0x00000256       0xb8 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbEeprom.o)
+ .debug_pubnames
+                0x0000030e      0x177 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o)
+ .debug_pubnames
+                0x00000485       0xbc d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_LE39FW512.o)
+ .debug_pubnames
+                0x00000541       0x49 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_MX29L512.o)
+ .debug_pubnames
+                0x0000058a       0xaa d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_AT29LV512.o)
+ .debug_pubnames
+                0x00000634       0x8a d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbSramFast.o)
+ .debug_pubnames
+                0x000006be      0x4a1 mylib/libmyfunc.a(bg.o)
+ .debug_pubnames
+                0x00000b5f       0xda mylib/libmyfunc.a(obj.o)
+ .debug_pubnames
+                0x00000c39       0x66 mylib/libmyfunc.a(sound.o)
+ .debug_pubnames
+                0x00000c9f      0x23a mylib/libmyfunc.a(stdSub.o)
+ .debug_pubnames
+                0x00000ed9       0x34 mylib/libmyfunc.a(sincos.o)
+
+.debug_info     0x00000000    0x39300
+ *(.debug_info)
+ .debug_info    0x00000000     0x3987 Main.o
+ .debug_info    0x00003987     0x273e Data.o
+ .debug_info    0x000060c5     0x3b0a MemDump.o
+ .debug_info    0x00009bcf     0x388d SramTest.o
+ .debug_info    0x0000d45c     0x3996 FlashTest.o
+ .debug_info    0x00010df2     0x38b1 EepromTest.o
+ .debug_info    0x000146a3     0x31bf d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbEeprom.o)
+ .debug_info    0x00017862     0x37b0 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o)
+ .debug_info    0x0001b012     0x337e d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_LE39FW512.o)
+ .debug_info    0x0001e390     0x312d d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_MX29L512.o)
+ .debug_info    0x000214bd     0x332d d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_AT29LV512.o)
+ .debug_info    0x000247ea     0x2feb d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbSramFast.o)
+ .debug_info    0x000277d5     0x483f mylib/libmyfunc.a(bg.o)
+ .debug_info    0x0002c014     0x3559 mylib/libmyfunc.a(obj.o)
+ .debug_info    0x0002f56d     0x3102 mylib/libmyfunc.a(sound.o)
+ .debug_info    0x0003266f     0x4602 mylib/libmyfunc.a(stdSub.o)
+ .debug_info    0x00036c71     0x268f mylib/libmyfunc.a(sincos.o)
+
+.debug_abbrev   0x00000000     0x1c10
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x1c9 Main.o
+ .debug_abbrev  0x000001c9       0xd1 Data.o
+ .debug_abbrev  0x0000029a      0x1d1 MemDump.o
+ .debug_abbrev  0x0000046b      0x1de SramTest.o
+ .debug_abbrev  0x00000649      0x1d1 FlashTest.o
+ .debug_abbrev  0x0000081a      0x1d1 EepromTest.o
+ .debug_abbrev  0x000009eb      0x15e d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbEeprom.o)
+ .debug_abbrev  0x00000b49      0x21d d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o)
+ .debug_abbrev  0x00000d66      0x195 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_LE39FW512.o)
+ .debug_abbrev  0x00000efb      0x17e d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_MX29L512.o)
+ .debug_abbrev  0x00001079      0x195 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_AT29LV512.o)
+ .debug_abbrev  0x0000120e      0x185 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbSramFast.o)
+ .debug_abbrev  0x00001393      0x240 mylib/libmyfunc.a(bg.o)
+ .debug_abbrev  0x000015d3      0x1b8 mylib/libmyfunc.a(obj.o)
+ .debug_abbrev  0x0000178b      0x17f mylib/libmyfunc.a(sound.o)
+ .debug_abbrev  0x0000190a      0x243 mylib/libmyfunc.a(stdSub.o)
+ .debug_abbrev  0x00001b4d       0xc3 mylib/libmyfunc.a(sincos.o)
+
+.debug_line     0x00000000     0x4df4
+ *(.debug_line)
+ .debug_line    0x00000000      0x34e Main.o
+ .debug_line    0x0000034e      0x4d2 MemDump.o
+ .debug_line    0x00000820      0x319 SramTest.o
+ .debug_line    0x00000b39      0x397 FlashTest.o
+ .debug_line    0x00000ed0      0x356 EepromTest.o
+ .debug_line    0x00001226      0x436 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbEeprom.o)
+ .debug_line    0x0000165c      0x533 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFlash.o)
+ .debug_line    0x00001b8f      0x3c2 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_LE39FW512.o)
+ .debug_line    0x00001f51      0x179 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_MX29L512.o)
+ .debug_line    0x000020ca      0x3ea d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbFl_AT29LV512.o)
+ .debug_line    0x000024b4      0x1c8 d:/nintendo/agb/agblib/lib/libagbbackup.a(AgbSramFast.o)
+ .debug_line    0x0000267c     0x13a5 mylib/libmyfunc.a(bg.o)
+ .debug_line    0x00003a21      0x37e mylib/libmyfunc.a(obj.o)
+ .debug_line    0x00003d9f       0xe4 mylib/libmyfunc.a(sound.o)
+ .debug_line    0x00003e83      0xf71 mylib/libmyfunc.a(stdSub.o)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.stack          0x00080000        0x0
+                0x00080000                _stack=.
+ *(.stack)
+OUTPUT(blib_sample.elf elf32-littlearm)

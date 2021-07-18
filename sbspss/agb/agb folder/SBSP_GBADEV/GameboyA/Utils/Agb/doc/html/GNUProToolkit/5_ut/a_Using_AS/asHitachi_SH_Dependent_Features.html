@@ -1,0 +1,229 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Hitachi SH Dependent Features</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asHPPA_Dependent_Features.html">Previous</A>|<A HREF="asIntel_960_Dependent_Features.html">Next</A>
+<BR><A NAME="off_1344937"></A><A NAME="a83f06f8"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Hitachi
+SH dependent features</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>See
+the following documentation for the Hitachi SH architecture’s features
+and options for the assembler.</FONT></FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asHitachi_SH_Dependent_Features.html#1bfe485e">Options
+for SH</A></FONT><FONT COLOR="#000000"></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asHitachi_SH_Dependent_Features.html#e1899e41">Syntax
+for SH</A></FONT><FONT COLOR="#000000"></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asHitachi_SH_Dependent_Features.html#dc9edda3">Special
+characters for SH</A></FONT><FONT COLOR="#000000"></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asHitachi_SH_Dependent_Features.html#ca40a135">Register
+names for SH</A></FONT><FONT COLOR="#000000"></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asHitachi_SH_Dependent_Features.html#23a8829e">Addressing
+modes for SH</A></FONT><FONT COLOR="#000000"></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asHitachi_SH_Dependent_Features.html#54cacdca">Floating
+point for SH</A></FONT><FONT COLOR="#000000"></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asHitachi_SH_Dependent_Features.html#0461ad4b">Machine
+directives for SH</A></FONT><FONT COLOR="#000000"></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asHitachi_SH_Dependent_Features.html#a3c3a26f">Opcodes
+for SH</A></FONT><FONT COLOR="#000000"></FONT></FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<A NAME="1bfe485e"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Options
+for SH</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has no additional command-line options for the Hitachi SH family.</FONT></FONT></FONT>
+
+<P><A NAME="e1899e41"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Syntax
+for SH</FONT></FONT></I></B>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>The
+following documentation refers to the syntax for the Hitachi SH.</FONT></FONT></FONT>
+
+<P><A NAME="dc9edda3"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Special
+characters for SH</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>!</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the line comment character.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>You
+can use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instead of a newline to separate statements.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Since
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has no special meaning, you may use it in symbol names.</FONT></FONT></FONT>
+
+<P><A NAME="ca40a135"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Register
+names for SH</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>You
+can use the predefined symbols ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r3</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r4</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r5</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r6</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r7</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r8</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r9</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r10</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r11</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r12</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r13</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r14</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r15</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to refer to the SH registers.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>The
+SH also has the following control registers.</FONT></FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>pr</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Procedure register (holds
+return address)</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>pc</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Program counter</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>mach</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>macl</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>High and low multiply accumulator
+registers</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>sr</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Status register</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>gbr</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>global</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Base register</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>vbr</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Vector base register (for
+interrupt vectors)</FONT></FONT></UL>
+</UL>
+
+
+<P><A NAME="23a8829e"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Addressing
+modes for SH</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+understands the following addressing modes for the SH. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>R<I>n</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in the following refers to any of the numbered registers, but not the control
+registers.</FONT></FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>R<I>n</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Register direct</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>@R<I>n</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Register indirect</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>@-R<I>n</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Register indirect with pre-decrement</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>@R<I>n</I>+</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Register indirect with post-increment</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>@(<I>disp</I>, R<I>n</I>)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Register indirect with displacement</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>@(R0, R<I>n</I>)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Register indexed</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>@(<I>disp</I>, GBR)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>GBR offset</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>@(R0, GBR)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>GBR indexed</FONT></FONT></UL>
+
+
+<P><I><FONT FACE="Courier New"><FONT SIZE=+0>addr</FONT></FONT></I>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>@(<I>disp</I>, PC)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>PC relative address (for
+branch or for addressing memory)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+implementation allows you to use the simpler form, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>addr</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+anywhere a PC relative address is called for; the alternate form is supported
+for compatibility with other assemblers.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>#<I>imm</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Immediate data</FONT></FONT></UL>
+</UL>
+
+
+<P><A NAME="54cacdca"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Floating
+point for SH</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+SH family has no hardware floating point, but the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.float</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive generates IEEE floating-point numbers for compatibility with
+other development tools.</FONT></FONT></FONT>
+
+<P><A NAME="0461ad4b"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Machine
+directives for SH</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has no machine-dependent directives for the SH.</FONT></FONT></FONT>
+
+<P><A NAME="a3c3a26f"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Opcodes
+for SH</FONT></FONT></I></B>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>For
+detailed information on the SH machine instruction set, see <B><I>SH-Microcomputer
+User’s Manual</I></B> (Hitachi Micro Systems, Inc.).</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+implements all the standard SH opcodes. No additional pseudo-instructions
+are needed on this family. Note, however, that because </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+supports a simpler form of PC-relative addressing, you may simply use&nbsp;
+(for example) the following declaration.</FONT></FONT></FONT>
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>mov.l bar,r0</FONT></FONT></UL>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Other
+assemblers might require an explicit displacement to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+from the program counter:</FONT></FONT></FONT>
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>mov.l @(<I>disp</I>, PC)</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asHPPA_Dependent_Features.html">Previous</A>|<A HREF="asIntel_960_Dependent_Features.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

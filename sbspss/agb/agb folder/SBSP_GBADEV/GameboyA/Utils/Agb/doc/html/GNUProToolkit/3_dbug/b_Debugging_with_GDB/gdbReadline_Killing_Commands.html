@@ -1,0 +1,56 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Readline Killing Commands</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbReadline_Movement_Commands.html">Previous</a>|<a href="gdbReadline_Arguments.html">Next</a>
+<br><a NAME="off_3181236"></a><a NAME="772fbb20"></a><b><font face="Futura Md BT"><font size=+3>Readline
+killing commands</font></font></b>
+<br>
+<hr SIZE=3 WIDTH="100%"><font face="Times New Roman"><font size=+1><i>Killing</i>
+text means to delete the text from the line, but to save it away for later
+use, usually by <i>yanking</i> it back into the line. If the description
+for a command says that it ‘kills’ text, then you can be sure that you
+can get the text back in a different (or the same) place later. The following
+commands are for killing text.</font></font>
+<ul><b><font face="Arial"><font size=+0>C-k</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Kill the text from the current
+cursor position to the end of the line.</font></font></ul>
+<b><font face="Arial"><font size=+0>M-d</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Kill from the cursor to
+the end of the current word, or if between words, to the end of the next
+word.</font></font></ul>
+<b><font face="Arial"><font size=+0>M-Delete</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Kill from the cursor to
+the start of the previous word, or if between words, to the start of the
+previous word.</font></font></ul>
+<b><font face="Arial"><font size=+0>C-w</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Kill from the cursor to
+the previous whitespace.</font></font>
+<br><font face="Times New Roman"><font size=+1>This is different than </font></font><b><font face="Arial"><font size=+0>M-Delete</font></font></b><font face="Times New Roman"><font size=+1>
+because the word boundaries differ.</font></font>
+<br><font face="Times New Roman"><font size=+1>And, here is how to yank
+the text back into the line.</font></font></ul>
+<b><font face="Arial"><font size=+0>C-y</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Yank the most recently killed
+text back into the buffer at the cursor.</font></font></ul>
+<b><font face="Arial"><font size=+0>M-y</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Rotate the kill-ring, and
+yank the new top. You can only do this if the prior command is </font></font><b><font face="Arial"><font size=+0>C-y</font></font></b><font face="Times New Roman"><font size=+1>
+or </font></font><b><font face="Arial"><font size=+0>M-y</font></font></b><font face="Times New Roman"><font size=+1>.</font></font>
+<br><font face="Times New Roman"><font size=+1>When you use a kill command,
+the text is saved in a <i>kill-ring</i>. Any number of consecutive kills
+save all of the killed text together, so that when you yank it back, you
+get it in one clean sweep. The kill ring is not line specific; the text
+that you killed on a previously typed line is available to be yanked back
+later, when you are typing another line.</font></font></ul>
+</ul>
+
+<hr SIZE=3 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbReadline_Movement_Commands.html">Previous</a>|<a href="gdbReadline_Arguments.html">Next</a></center>
+
+</body>
+</html>

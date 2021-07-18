@@ -1,0 +1,47 @@
+.SFILES    =   crt0_demo.s  MultiSioAsm.s
+.CFILES    =   demo_main.c data.c \
+               MultiSio.c
+.OFILES    =   $(.SFILES:.s=.o) $(.CFILES:.c=.o)
+
+AGBINC	=	$(AGBDIR)/include
+AGBLIB	=	$(AGBDIR)/lib
+ASFLAGS    =          -I$(AGBINC) -mthumb-interwork
+CFLAGS     =   -g -O2 -I$(AGBINC) -mthumb-interwork \
+               -nostdlib #-DNDEBUG
+LDFLAGS    +=  -Map $(MAPFILE) -nostartfiles \
+               -Ttext 0x02010000 -Tbss 0x03000000 \
+               -L$(AGBLIB) -lagbsyscall -lisagbprn
+
+DEPENDFILE =   demo.dep
+MAPFILE    =   demo.map
+TARGET_ELF =   demo.elf
+TARGET_BIN =   demo.bin
+
+
+default:
+	@$(MAKE) -f MakefileDemo $(TARGET_BIN)
+
+$(TARGET_BIN): $(TARGET_ELF)
+	objcopy -v -O binary $< $@
+
+$(TARGET_ELF): $(.OFILES) Makefile $(DEPENDFILE)
+	@echo > $(MAPFILE)
+	$(CC) -g -o $@ $(.OFILES) -Wl,$(LDFLAGS)
+
+
+.PHONY: all clean depend
+
+
+all:    clean $(TARGET_BIN)
+
+clean:
+	-rm $(.OFILES) $(DEPENDFILE) $(MAPFILE) $(TARGET_ELF) $(TARGET_BIN)
+
+depend:
+	$(CC) $(CFLAGS) -M $(.CFILES) > $(DEPENDFILE)
+
+$(DEPENDFILE): 
+	$(CC) $(CFLAGS) -M $(.CFILES) > $(DEPENDFILE)
+
+include GasdependDemo
+include $(DEPENDFILE)

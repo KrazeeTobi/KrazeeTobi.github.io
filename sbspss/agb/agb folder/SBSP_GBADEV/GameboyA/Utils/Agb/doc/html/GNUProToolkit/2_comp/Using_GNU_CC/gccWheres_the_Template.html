@@ -1,0 +1,187 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Where's the Template?</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccDeclarations_and_Definitions_in_.html">Previous</A>|<A HREF="gccType_Abstraction_using_Signature.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_4424921"></A><A NAME="5bd28724"></A><FONT SIZE=+3><B>Where</B>’<B>s
+the template?&nbsp;</B></FONT>&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>C++ templates are the first
+language feature to require more intelligence from the environment than
+one usually finds on a UNIX system. Somehow the compiler and linker have
+to make sure that each template instance occurs exactly once in the executable
+if it is needed, and not at all otherwise.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>There are two basic approaches
+to this problem, which we will refer to as the <I>Borland model</I> and
+the <I>Cfront model</I>.</FONT></FONT>
+<BR>&nbsp;
+<UL><B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Borland model</FONT></FONT></I></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Borland C++ solved the template
+instantiation problem by adding the code equivalent of common blocks to
+their linker; template instances are emitted in each translation unit that
+uses them, and they are collapsed together at run time. The advantage of
+this model is that the linker only has to consider the object files themselves;
+there is no external complexity to worry about. This disadvantage is that
+compilation time is increased because the template code is being compiled
+repeatedly. Code written for this model tends to include definitions of
+all member templates in the header file, since they must be seen to be
+compiled.</FONT></FONT></UL>
+</UL>
+
+<UL><B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Cfront model</FONT></FONT></I></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The AT&amp;T C++ translator,
+“Cfront”, solved the template instantiation problem by creating the notion
+of a template repository, an automatically maintained place where template
+instances are stored. As individual object files are built, notes are placed
+in the repository to record where templates and potential type arguments
+were seen so that the subsequent instantiation step knows where to find
+them. At link time, any needed instances are generated and linked in. The
+advantages of this model are more optimal compilation speed and the ability
+to use the system linker; to implement the Borland model a compiler vendor
+also needs to replace the linker. The disadvantages are vastly increased
+complexity, and thus potential for error; theoretically, this should be
+just as transparent, but in practice it has been very difficult to build
+multiple programs in one directory and one program in multiple directories
+using Cfront. Code written for this model tends to separate definitions
+of non-inline member templates into a separate file, which is magically
+found by the link preprocessor when a template needs to be instantiated.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Currently, G++ implements
+neither automatic model. In the mean time, you have several options for
+dealing with template instantiations.</FONT></FONT>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Compile your template-using
+code with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-frepo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+The compiler will generate files with the extension ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.rpo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+listing all of the template instantiations used in the corresponding object
+files which could be instantiated there; the link wrapper, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>collect2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+will then update the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.rpo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+files to tell the compiler where to place those instantiations and rebuild
+any affected object files. The link-time overhead is negligible after the
+first pass, as the compiler will continue to place the instantiations in
+the same files.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This is your best option for
+application code written for the Borland model, as it will just work. Code
+written for the Cfront model will need to be modified so that the template
+definitions are available at one or more points of instantiation; usually
+this is as simple as adding </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include
+&lt;tmethods.cc></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to the end of each template header.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>For library code, if you want
+the library to provide all of the template instantiations it needs, just
+try to link all of its object files together; the link will fail, but cause
+the instantiations to be generated as a side effect. Be warned, however,
+that this may cause conflicts if multiple libraries try to provide the
+same instantiations. For greater control, use explicit instantiation as
+described in the next option.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Compile your code with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fno-implicit-templates</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">’
+to disable the implicit generation of template instances, and explicitly
+instantiate all the ones you use. This approach requires more knowledge
+of exactly which instances you need than do the others, but it’s less mysterious
+and allows greater control. You can scatter the explicit instantiations
+throughout your program, perhaps putting them in the translation units
+where the instances are used or the translation units that define the templates
+themselves; you can put all of the explicit instantiations you need into
+one big file; or you can create small files for each of the instances you
+need, like the following examples define,</FONT><FONT FACE="Arial"> </FONT><FONT FACE="Times New Roman">and
+create a template instantiation library from those files.</FONT></FONT></LI>
+
+<UL>
+<PRE><FONT SIZE=+1><FONT FACE="Courier New">#include "Foo.h"</FONT><FONT FACE="Times New Roman">&nbsp;
+</FONT><FONT FACE="Courier New">#include "Foo.cc"</FONT><FONT FACE="Times New Roman">&nbsp;
+
+</FONT><FONT FACE="Courier New">template class Foo&lt;int>;&nbsp;
+template ostream&amp; operator &lt;&lt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (ostream&amp;, const Foo&lt;int>&amp;);</FONT></FONT></PRE>
+</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If you are using Cfront-model
+code, you can probably get away with not using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fno-implicit-templates</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+when compiling files that don’t ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+the member template definitions. If you use one big file to do the instantiations,
+you may want to compile it without ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fno-implicit-templates</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+so you get all of the instances required by your explicit instantiations
+(but not by any other files) without having to specify them as well.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>G++ has extended the template
+instantiation syntax outlined in the Working Paper to allow forward declaration
+of explicit instantiations, explicit instantiation of members of template
+classes and instantiation of the compiler support data for a template class
+(i.e., the vtable) without instantiating any of its members as the following
+example shows.</FONT></FONT></DT>
+
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>extern template int max (int, int);&nbsp;
+template void Foo&lt;int>::f ();&nbsp;
+inline template class Foo&lt;int>;</FONT></FONT></PRE>
+</UL>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Do nothing. Pretend G++ does
+implement automatic instantiation management. Code written for the Borland
+model will work fine, but each translation unit will contain instances
+of each of the templates it uses. In a large program, this can lead to
+an unacceptable amount of code duplication.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Add ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+interface</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ to
+all files containing template definitions. For each of these files, add
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma implementation
+"filename"</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ to
+the top of some ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.C</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+file which ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’s
+it. Then compile everything with</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fexternal-templates</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The templates will then only be expanded in the translation unit which
+implements them (i.e., the translation unit has a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+implementation</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+line for the file where they live); all other files will use external references.
+If you’re lucky, everything should work properly. If you get undefined
+symbol errors, you need to make sure that each template instance which
+is used in the program is used in the file which implements that template.
+If you don’t have any use for a particular instance in that file, you can
+just instantiate it explicitly, using the syntax from the C++ working paper.</FONT></FONT></LI>
+
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>template class A&lt;int>;&nbsp;
+template ostream&amp; operator &lt;&lt; (ostream&amp;, const A&lt;int>&amp;);</FONT></FONT></PRE>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This strategy will work with
+code written for either model. If you are using code written for the Cfront
+model, the file containing a class template and the file containing its
+member templates should be implemented in the same translation unit.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>A slight variation on this approach
+is to use the flag </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-falt-external-templates</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instead; this flag causes template instances to be emitted in the translation
+unit that implements the header where they are first instantiated, rather
+than the one which implements the file where the templates are defined.
+This header must be the same in all translation units, or things are likely
+to break.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>See <A HREF="gccDeclarations_and_Definitions_in_.html">Declarations
+and definitions in one header</A> for more discussion of these pragmas.</FONT></FONT></DT>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccDeclarations_and_Definitions_in_.html">Previous</A>|<A HREF="gccType_Abstraction_using_Signature.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

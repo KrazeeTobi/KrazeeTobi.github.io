@@ -1,0 +1,131 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>binutils, the GNU binary utilities</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embld_the_GNU_linker.html">Previous</a>|<a href="embgdb_the_debugging_tool.html">Next</a>
+<br><a NAME="off_65774"></a><a NAME="1ed9ecaf"></a><a NAME="off_65774"></a><a NAME="1ed9ecaf"></a><a NAME="off_65774"></a><a NAME="1ed9ecaf"></a><a NAME="off_65774"></a><a NAME="1ed9ecaf"></a><a NAME="off_65774"></a><a NAME="1ed9ecaf"></a><a NAME="off_65774"></a><a NAME="1ed9ecaf"></a><a NAME="off_65774"></a><a NAME="1ed9ecaf"></a><a NAME="off_65774"></a><a NAME="1ed9ecaf"></a><a NAME="off_65774"></a><a NAME="1ed9ecaf"></a><a NAME="off_65774"></a><a NAME="1ed9ecaf"></a><a NAME="off_65774"></a><a NAME="1ed9ecaf"></a><a NAME="off_65774"></a><a NAME="1ed9ecaf"></a><a NAME="off_65774"></a><a NAME="1ed9ecaf"></a><b><tt><font color="#000000"><font point-size="26">binutil</font><font size=+3>s</font></font></tt><font face="Futura Md BT"><font color="#000000"><font size=+3>,
+the GNU binary utilities&nbsp;</font></font></font></b>
+<hr SIZE=6 WIDTH="100%">
+<br><font color="#000000"><font face="Times New Roman"><font size=+1>The
+following are the binary utilities, although they are not included on all
+hosts: </font></font><b><font face="Courier New"><font size=+0>ar</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>nm</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>objcopy</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>objdump</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>ranlib</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New,Courier">readelf</font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New,Courier">size</font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New,Courier">strings</font></b><font face="Times New Roman"><font size=+1>,
+and </font></font><b><font face="Courier New,Courier">strip</font></b><font face="Times New Roman"><font size=+1>.
+There are three binary utilities that are for use with Cygwin, the porting
+layer application for Win32 development: </font></font><b><font face="Courier New,Courier">addr2line</font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New,Courier">windres</font></b><font face="Times New Roman"><font size=+1>,
+and </font></font><b><font face="Courier New,Courier">dlltool</font></b><font face="Times New Roman"><font size=+1>.</font></font></font>
+<p><font color="#000000"><font face="Times New Roman"><font size=+1>For
+more information on </font></font><font face="Courier New"><font size=+0>binutils</font></font><font size=+1><font face="Times New Roman">,
+see </font></font></font><font size=+1><a href="../5_ut/c_Usingbinutils/bin.html"><i><font face="Times New Roman">Using
+</font></i><tt>binutils</tt></a><font face="Times New Roman"><font color="#000000">
+in
+<b><i>GNUPro Utilities.</i></b></font></font></font>
+<p><font color="#000000"><font face="Times New Roman"><font size=+1>The
+most important of these utilities are </font></font><b><font face="Courier New"><font size=+0>objcopy</font></font></b><font face="Times New Roman"><font size=+1>
+and </font></font><b><font face="Courier New"><font size=+0>objdump</font></font></b><font face="Times New Roman"><font size=+1>.</font></font></font>
+<ul><font face="Courier New"><font size=+0>objcopy</font></font>
+<ul><font face="Times New Roman"><font size=+1>A few ROM monitors, such
+as </font></font><font face="Courier New"><font size=+0>a.out</font></font><font face="Times New Roman"><font size=+1>,
+load executable binary images, and, consequently, most load an S-record.
+An S-record is a printable ASCII representation of an executable binary
+image.</font></font>
+<p><font face="Times New Roman"><font size=+1>S-records are suitable both
+for building ROM images for standalone boards and for downloading images
+to embedded systems. Use the following example’s input for this process.</font></font>
+<ul>
+<ul>
+<pre><font face="Courier New"><font size=+1>objcopy -O srec <i>infile outfile</i></font></font></pre>
+</ul>
+</ul>
+<i><font face="Courier New"><font size=+0>infile</font></font></i><font face="Times New Roman"><font size=+1>
+in the previous example’s input is the executable binary filename, and
+</font></font><i><font face="Courier New"><font size=+0>outfile</font></font></i><font face="Times New Roman"><font size=+1>
+is the filename for the S-record.</font></font>
+<p><font face="Times New Roman"><font size=+1>Most PROM burners also read
+S-records or some similar format. Use the following example’s input to
+get a list of supported object file types for your architecture.</font></font>
+<ul>
+<ul>
+<pre><font face="Courier New"><font size=+1>objdump -i</font></font></pre>
+</ul>
+</ul>
+<font face="Times New Roman"><font size=+1>For more information on S-records,
+see the discussions for </font></font><font face="Courier New"><font size=+0>FORMAT
+<i>output-format</i></font></font><font size=+1><font face="Times New Roman">
+in <a href="../5_ut/b_Usingld/ldMRI_Compatible_Script_Files.html">MRI compatible
+script files</a> and the general discussion of <a href="../5_ut/b_Usingld/ldBFD.html">BFD</a>
+in <a href="../5_ut/b_Usingld/ld.html"><i>Using </i></a></font><tt><a href="../5_ut/b_Usingld/ld.html">ld</a></tt><font face="Times New Roman">
+in <b><i>GNUPro Utilities</i></b>. For more discussion of making an executable
+binary image, see </font></font><b><font face="Courier New"><font size=+0><a href="../5_ut/c_Usingbinutils/binobjcopy.html">objcopy</a></font></font></b><font size=+1><font face="Times New Roman">
+in <a href="../5_ut/c_Usingbinutils/bin.html"><i>Using</i> </a></font><tt><a href="../5_ut/c_Usingbinutils/bin.html">binutils</a></tt><font face="Times New Roman">
+in <b><i>GNUPro Utilities</i></b>.</font></font></ul>
+<font face="Courier New"><font size=+0>objdump</font></font>
+<ul><font face="Courier New"><font size=+0>objdump</font></font><font face="Times New Roman"><font size=+1>
+displays information about one or more object files. The options control
+what particular information to display. This information is mostly useful
+to programmers who are working on the compilation tools, as opposed to
+programmers who just want their program to compile and work.</font></font>
+<p><font face="Times New Roman"><font size=+1>When specifying archives,
+</font></font><font face="Courier New"><font size=+0>objdump</font></font><font face="Times New Roman"><font size=+1>
+shows information on each of the member object files. </font></font><i><font face="Courier New"><font size=+0>objfile...</font></font></i><font face="Times New Roman"><font size=+1>
+are the object files to be examined. See </font></font><a href="../5_ut/c_Usingbinutils/binobjdump.html"><font face="Courier New,Courier">objdump</font><font size=+1><font face="Times New Roman">
+utility</font></font></a><font size=+1><font face="Times New Roman"> in
+<a href="../5_ut/c_Usingbinutils/bin.html"><i>Using</i> </a></font><tt><a href="../5_ut/c_Usingbinutils/bin.html">binutils</a></tt><font face="Times New Roman">
+in <b><i>GNUPro Utilities</i></b>.</font></font>
+<br>&nbsp;</ul>
+</ul>
+<font face="Times New Roman"><font size=+1>A few of the more useful options
+for commands are: </font></font><font face="Courier New"><font size=+0>-d</font></font><font face="Times New Roman"><font size=+1>,</font></font><font face="Courier New"><font size=+0>
+-disassemble</font></font><font face="Times New Roman"><font size=+1> and
+</font></font><font face="Courier New"><font size=+0>-prefix-addresses</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<ul><font face="Times New Roman"><font size=+1></font></font>&nbsp;
+<dt>
+<font face="Courier New"><font size=+0>-d</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>--disassemble</font></font></dt>
+
+<ul>
+<dt>
+<font face="Times New Roman"><font size=+1>Displays the aseembler mnemonics
+for the machine instructions from </font></font><i><font face="Courier New"><font size=+0>objfile</font></font></i><font face="Times New Roman"><font size=+1>.
+Only disassembles those sections that are expected to contain instructions.</font></font></dt>
+
+<dt>
+<font face="Times New Roman"><font size=+1></font></font></dt>
+</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>--prefix-addresses</font></font></dt>
+
+<ul>
+<dt>
+<font face="Times New Roman"><font size=+1>For disassembling, prints the
+complete address on each line, starting each output line with the address
+it’s disassembling. This is the older disassembly format. Otherwise, you
+only get raw opcodes.</font></font></dt>
+</ul>
+</ul>
+
+<center>
+<dt>
+
+<hr SIZE=3 WIDTH="100%"></dt></center>
+
+<center>
+<dt>
+<a href="#Top">Top</a>|<a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embld_the_GNU_linker.html">Previous</a>|<a href="embgdb_the_debugging_tool.html">Next</a></dt></center>
+
+</body>
+</html>

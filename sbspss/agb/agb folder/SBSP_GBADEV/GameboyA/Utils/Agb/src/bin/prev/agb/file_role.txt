@@ -1,0 +1,71 @@
+File structure of Previewer
+
+prev---agb---agbprev  Previewer
+        |-minc        Library include files
+        |-mlib        Library
+        |-mlibsrc
+            |-mpr     Node Evaluation Library
+            |-utl     Utilities
+
+agbprev Folder------------------------
+
+main.c - Main part of previewer
+         Initializes application and carries out all controller processing.
+
+prevobj.c - Object processing section of Previewer
+            Conducts controller processing of object and Node Evaluation call.
+
+prevbg.c - BG process section of Previewer
+           Conducts BG Controller processing and Node Evaluation call.
+
+prevdata.c - Preview data
+             Output by prevcl.exe
+
+mlibsrc folder------------------------
+
+mpr folder---------------
+
+background.c   Functions that handle background structures.
+
+bgmanage.c     Conducts setting of background, adjustment of parameters and transfers.
+
+ch_alloc.c     Obtains character number. If the character number range that can 
+               use this engine is specified, the unused numbers can be obtained. 
+        
+datatrans.c    Functions for data transfer.  Carries out data transfer at once when a 
+               data transfer is registered and transfer function is called.  There 
+               are DMA and rectangle area transfers.
+
+mpr.c          There are initializations and V Blank Functions that should be called 
+               at the beginning of the loop.
+
+node.c         Besides defining the node structure, this conducts analysis of the initial 
+               stage of the node and calls the node evaluation function.
+
+node_animation.c Animation Evaluation Functions.
+                 Evaluates Switch, MultiSwitch, Scale, Rotation, Move, Offset,
+                 Flipbool, and PaletteAnimation
+               
+node_background.c  Evaluation function of Background node.
+
+node_image.c    The image here is the 2D image that has width and height.
+                Not only character data, but also BG data and Palette data use this.
+                The first address can be obtained by using such information as the size 
+                of one image, which image is used, and the coordinates.
+
+node_object.c   Evaluation Function of Object Node.
+
+object.c        Handle object structure.
+
+objmanage.c     Registers object, calculates scaling/rotation, and sorts OAM into an 
+                appropriate order.
+
+
+
+utl Folder--------------
+
+controller.c Handles controller processing
+
+util.c       Useful functions
+
+

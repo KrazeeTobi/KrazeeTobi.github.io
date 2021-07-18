@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Statements and Declarations in Expressions</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccExtensions_to_the_C_Language_Fam.html">Previous</A>|<A HREF="gccLocally_Declared_Labels.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_3213014"></A><A NAME="3c8cc2d2"></A><B><FONT SIZE=+3>Statements
+and Declarations in Expressions&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>A compound statement enclosed
+in parentheses may appear as an expression in GNU C. This allows you to
+use loops, switches, and local variables within an expression.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Recall that a compound statement
+is a sequence of statements surrounded by braces; in the following construct,
+parentheses go around the braces.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>({ int y = foo (); int z;&nbsp;
+&nbsp;&nbsp;&nbsp; if (y > 0) z = y;&nbsp;
+&nbsp;&nbsp;&nbsp; else z = - y;&nbsp;
+&nbsp;&nbsp;&nbsp; z; })</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The previous construct is a
+valid (though slightly more complex than necessary) expression for the
+absolute value of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The last thing in the compound
+statement should be an expression followed by a semicolon;&nbsp; the value
+of this subexpression serves as the value of the entire construct. (If
+you use some other kind of statement last within the braces, the construct
+has type </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>void</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and thus effectively no value.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This feature is especially
+useful in making macro definitions “safe” (so that they evaluate each operand
+exactly once). For example, the “maximum” function is commonly defined
+as a macro in standard C as follows.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define max(a,b) ((a) > (b) ? (a) : (b))</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>But this definition computes
+either ‘</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+‘or ‘</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>b</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>twice, with bad
+results if the operand has side effects. In GNU C, if you know the type
+of the operands (in the following example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+you can define the macro safely as follows.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define maxint(a,b) \&nbsp;
+&nbsp;&nbsp; ({int _a = (a), _b = (b); _a > _b ? _a : _b; })</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Embedded statements are not
+allowed in constant expressions, such as the value of an enumeration constant,
+the width of a bit field, or the initial value of a static variable.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you don’t know the type
+of the operand, you can still do this, but you must use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>typeof</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(see <A HREF="gccReferring_to_a_Type_with_typeof.html">Referring to a type
+with </A></FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0><A HREF="gccReferring_to_a_Type_with_typeof.html">typeof</A></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+or type naming (see <A HREF="gccNaming_an_Expressions_Type.html">Naming
+an expression’s type</A>).</FONT></FONT>
+</BODY>
+</HTML>

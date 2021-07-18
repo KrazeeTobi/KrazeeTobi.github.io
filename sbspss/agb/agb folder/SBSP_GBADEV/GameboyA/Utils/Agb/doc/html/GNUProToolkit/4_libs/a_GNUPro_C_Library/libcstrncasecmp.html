@@ -1,0 +1,40 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <meta name="Author" content="Frederick Geers">
+   <title>strncasecmp [case insensitive character string compare]</title>
+</head>
+<body>
+<a href="libc.html">Contents</a>|<a href="libcindex.html">Index</a>|<a href="libcstrlwr.html">Previous</a>|<a href="libcstrupr.html">Next</a>
+<p><a NAME="strncasecmp"></a><font face="Courier New"><font size=+3>strncasecmp</font></font>
+<br><font face="Times New Roman"><font size=+3>[case insensitive character
+string compare]</font></font>
+<pre><b><font face="Times New Roman"><font size=+2>SYNOPSIS&nbsp;
+</font></font></b><font face="Courier New"><font size=+1>#include &lt;string.h>&nbsp;
+int strncasecmp(const char *<i>a</i>, const char *<i>b</i>, size_t <i>length</i>);</font></font></pre>
+<b><font face="Times New Roman"><font size=+1>DESCRIPTION</font></font></b>
+<br><font size=+1><font face="Courier New">strncasecmp</font><font face="Times New Roman">
+compares up to length characters from the string at </font><i><font face="Courier New">a</font></i><font face="Times New Roman">
+to the string at </font><i><font face="Courier New">b</font></i><font face="Times New Roman">
+in a case-insensitive manner.</font></font>
+<p><b><font face="Times New Roman"><font size=+1>RETURNS</font></font></b>
+<br><font size=+1><font face="Times New Roman">If </font><font face="Courier New,Courier">*a</font><font face="Times New Roman">
+sorts lexicographically after </font><font face="Courier New,Courier">*<i>b</i></font><font face="Times New Roman">
+(after both are converted to upper case), </font><font face="Courier New">strncasecmp</font><font face="Times New Roman">
+returns a number greater than zero. If the two strings are equivalent,
+</font><font face="Courier New">strncasecmp</font><font face="Times New Roman">
+returns zero. If </font><font face="Courier New,Courier">*<i>a</i></font><font face="Times New Roman">
+sorts lexicographically before </font><font face="Courier New,Courier">*<i>b</i></font><font face="Times New Roman">,
+</font><font face="Courier New">strncasecmp</font><font face="Times New Roman">
+returns a number less than zero.</font></font>
+<p><b><font face="Times New Roman"><font size=+1>COMPLIANCE</font></font></b>
+<br><font size=+1><font face="Courier New">strncasecmp</font><font face="Times New Roman">
+is in the Berkeley Software Distribution.</font></font>
+<p><font size=+1><font face="Courier New">strncasecmp</font><font face="Times New Roman">
+requires no supporting OS subroutines. It uses </font><font face="Courier New,Courier">tolower()
+</font><font face="Times New Roman">from
+elsewhere in this library.</font></font>
+</body>
+</html>

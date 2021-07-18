@@ -1,0 +1,16 @@
+[Version]
+Signature="$CHICAGO$"
+Provider=%INTSYS%
+Class=Unknown
+ClassGUID={4d36e97e-e325-11ce-bfc1-08002be10318}
+
+[Det.Modules]
+msdet=*
+
+[msdet]
+DetectProcessor=Processor,ispd.inf,1,BUS_ALL,RISK_NONE,
+
+[strings]
+INTSYS="INTELLIGENT SYSTEMS Co.,Ltd."
+DetectProcessor="Processor Device"
+Processor="Processor Device"

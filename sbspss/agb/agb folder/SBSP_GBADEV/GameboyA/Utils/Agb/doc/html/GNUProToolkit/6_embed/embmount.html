@@ -1,0 +1,147 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <title> mount</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<div CLASS="Heading5"><a NAME="Top"></a><a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embmkpasswd.html">Previous</a>|<a href="embps.html">Next</a></div>
+
+<div CLASS="Heading5"><tt><font size=+3></font></tt></div>
+
+
+<p CLASS="Heading5"><tt><font size=+3>mount</font></tt>
+<hr SIZE=5 WIDTH="100%">
+<div CLASS="Label"><b></b></div>&nbsp;
+
+<div CLASS="Label"><b><font size=+1>USAGE</font></b></div>
+
+<blockquote>
+<pre CLASS="CodeExample2"><font size=+1>mount [-bf] &lt;<i>dospath</i>> &lt;<i>unixpath</i>></font></pre>
+
+<pre><font size=+1>mount --reset</font></pre>
+
+<pre><font size=+1>mount</font></pre>
+
+<pre><font size=+1>&nbsp;&nbsp; -b&nbsp;&nbsp;&nbsp;&nbsp; text files are equivalent to binary files</font></pre>
+
+<pre><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (newline = \n)</font></pre>
+
+<pre><font size=+1>&nbsp;&nbsp; -f&nbsp;&nbsp;&nbsp;&nbsp; force mount, don't warn about missing mount</font></pre>
+
+<pre><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; point directories</font></pre>
+</blockquote>
+<font size=+1></font>
+<div CLASS="Note"><b><font size=+1>DESCRIPTION</font></b></div>
+
+<br><font size=+1>To reset the mount table use: <tt>mount --reset</tt>.</font>
+<div CLASS="Note"><font size=+1>The <tt>mount</tt> program is used to map
+your drives and shares onto the simulated POSIX directory tree, much like
+as is done by the POSIX <tt>mount</tt> command. This is very similar to
+the DOS <tt>join</tt> command, in that it makes your drive letters appear
+as subdirectories somewhere else. In POSIX operating systems (like Linux<i>
+tm</i> ), there is no concept of drives, nor drive letters. All absolute
+paths begin with a slash instead of&nbsp; “<tt>c:</tt>” and all file systems
+appear as subdirectories (for example, you might buy a new disk and make
+it be the <tt>/disk2</tt> directory). This practice is simulated by Cygwin
+to assist in porting POSIX programs to Windows.</font></div>
+<font size=+1></font>
+
+<p CLASS="Note"><font size=+1>Normally, you'd just give the DOS/Windows
+equivalent path and where you want it to show up in the simulated POSIX
+tree, like the following example’s declarations.</font>
+<br><font size=+1></font>&nbsp;
+<blockquote>
+<pre CLASS="CodeExample2"><font size=+1>C:\Cygnus> mount c:\ /</font></pre>
+
+<pre><font size=+1>C:\Cygnus> mount c:\Cygnus\gnupro-98r2\bin /bin</font></pre>
+
+<pre><font size=+1>C:\Cygnus> mount d:\ /usr/data</font></pre>
+
+<pre><font size=+1>C:\Cygnus> mount e:\mystuff /mystuff</font></pre>
+
+<pre><font size=+1></font></pre>
+
+<pre><font size=+1>bash$ mount 'c:\' /</font></pre>
+</blockquote>
+<font size=+1></font>
+<div CLASS="Note"><font size=+1>Since native paths use backslashes, and
+backslashes are special in most POSIX-like shells (like bash), you need
+to properly quote them if you are using such a shell.</font></div>
+<font size=+1></font>
+
+<p CLASS="Note"><font size=+1>There are many opinions on what the proper
+set of mounts is, and the appropriate one for you depends on how closely
+you want to simulate a POSIX environment, whether you mix Windows and Cygwin
+programs, and how many drive letters you are using. If you want to be very
+POSIX-like, you may want to use declarations like the following example
+shows.</font>
+<br><font size=+1></font>&nbsp;
+<blockquote>
+<pre CLASS="CodeExample2"><font size=+1>C:\> mount c:\Cygnus\gnupro-99r1 /</font></pre>
+
+<pre><font size=+1>C:\> mount c:\ /c</font></pre>
+
+<pre><font size=+1>C:\> mount d:\ /d</font></pre>
+
+<pre><font size=+1>C:\> mount e:\ /cdrom</font></pre>
+</blockquote>
+<font size=+1></font>
+<div CLASS="Note"><font size=+1>However, if you mix Windows and Cygwin
+programs a lot, you might want to create an <i>identity</i> mapping, so
+that conversions between the two (see the cygpath command) can be eliminated;
+for instance, you could use declarations like the following example shows.</font></div>
+
+<br><font size=+1></font>&nbsp;
+<blockquote>
+<pre CLASS="CodeExample2"><font size=+1>C:\> mount c:\ \</font></pre>
+
+<pre><font size=+1>C:\> mount d:\foo /foo</font></pre>
+
+<pre><font size=+1>C:\> mount d:\bar /bar</font></pre>
+
+<pre><font size=+1>C:\> mount e:\grill /grill</font></pre>
+
+<pre><font size=+1></font></pre>
+</blockquote>
+
+<div CLASS="Note"><font size=+1>Repeat this process for all top-level subdirectories
+on all drives, but then you’d always have the top-level directories available
+as the same names in both systems.</font></div>
+<font size=+1></font>
+
+<p CLASS="Note"><font size=+1>The <tt>-b</tt> and <tt>-t</tt> options change
+the default text file type for files found in that <i>mount point</i>.
+The default is text, which means that Cygwin will automatically convert
+files between the POSIX text style (each line ends with the <tt>NL</tt>
+character) and the Windows text style (each line ends with a <tt>CR</tt>
+character and an <tt>LF</tt> character, or <tt>CRLF</tt>) as needed. The
+program can, and should, explicitly specify text or binary file access
+as needed, but not all do.</font><font size=+1></font>
+
+<p CLASS="Note"><font size=+1>If your programs are properly written with
+the differentiation between text and binary files, the default (<tt>-t</tt>)
+is a good choice. You must use <tt>-t</tt> if you are going to mix files
+between Cygwin and Windows programs, since Windows programs will always
+use the <tt>CRLF</tt> format.</font><font size=+1></font>
+
+<p CLASS="Note"><font size=+1>If you are mounting a remote filesystem from
+a Unix machine, use <tt>-b</tt>, as the text files found there will normally
+be <tt>NL</tt> format anyway, and you would want any files put there by
+Cygwin programs to be stored in a format that the Unix machine will understand.</font><font size=+1></font>
+
+<p CLASS="Note"><font size=+1>If you just type <tt>mount</tt> with no parameters,
+the program will display the current mount table for you. Using <tt>--reset</tt>
+will reset the mount table to its default set of entries, which may include
+floppy, tape or other drives.</font><font size=+1></font>
+
+<p CLASS="Note"><font size=+1>You do not need to set up mounts for most
+devices in the POSIX <tt>/dev</tt> directory (like <tt>/dev/null</tt>)
+as these are simulated automatically within Cygwin.</font>
+<center>
+<hr SIZE=5 WIDTH="100%">
+<br><a href="#Top">Top</a>|<a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embmkpasswd.html">Previous</a>|<a href="embps.html">Next</a></center>
+
+</body>
+</html>

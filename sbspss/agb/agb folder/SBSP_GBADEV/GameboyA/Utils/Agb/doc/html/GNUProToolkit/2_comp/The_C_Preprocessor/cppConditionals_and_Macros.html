@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Conditionals and Macros</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppKeeping_Deleted_Code_for_Future_.html">Previous</A>|<A HREF="cppAssertions.html">Next</A>
+<BR><A NAME="off_753664"></A><A NAME="e798dc5d"></A><A NAME="off_753664"></A><A NAME="e798dc5d"></A><A NAME="off_753664"></A><A NAME="e798dc5d"></A><A NAME="off_753664"></A><A NAME="e798dc5d"></A><A NAME="off_753664"></A><A NAME="e798dc5d"></A><A NAME="off_753664"></A><A NAME="e798dc5d"></A><A NAME="off_753664"></A><A NAME="e798dc5d"></A><A NAME="off_753664"></A><A NAME="e798dc5d"></A><A NAME="off_753664"></A><A NAME="e798dc5d"></A><A NAME="off_753664"></A><A NAME="e798dc5d"></A><A NAME="off_753664"></A><A NAME="e798dc5d"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Conditionals
+and macros</FONT></FONT></FONT></B>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Conditionals
+are useful in connection with macros or assertions, be-cause those are
+the only ways that an expression’s value can vary from one compilation
+to another. A </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#if</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive whose expression uses no macros or assertions is equivalent to
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#if1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#if0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+you might as well determine which one, by computing the value of the expression
+yourself, and then simplify the program.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>For
+example, what follows is a conditional statement that tests the expression
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>BUFSIZE==1020</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+where </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>BUFSIZE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+must be a macro.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#if BUFSIZE == 1020&nbsp;
+&nbsp;&nbsp; printf ("Large buffers!\n");&nbsp;
+#endif /* BUFSIZE is large */</FONT></FONT></PRE>
+</UL>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Note:</FONT></FONT></I>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Programmers often wish they
+could test the size of a variable or data type in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#if</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+but this does not work. The preprocessor does not understand </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sizeof</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or typedef names, or even the type keywords such as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.)</FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+special operator </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>defined</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is used in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#if</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+expressions to test whether a certain name is defined as a macro. Either
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>defined</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>name</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>defined(<I>name</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is an expression whose value is 1 if </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>name</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is defined as macro at the current point in the program, and 0 otherwise.
+For the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>defined</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+operator it makes no difference what the definition of the macro is; all
+that matters is whether there is a definition, as in the following example.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#if defined (vax) || defined (ns16000)</FONT></FONT></PRE>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>This statement
+would succeed if either of the names </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vax</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ns16000</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is defined as a macro. You can test the same condition using assertions
+(see </FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="cppAssertions.html">Assertions</A></FONT><FONT COLOR="#000000">),
+like the following example.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#if #cpu (vax) || #cpu (ns16000)</FONT></FONT></PRE>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>If a macro
+is defined and later undefined with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#undef</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+subsequent use of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>defined</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+operator returns 0, because the name is no longer defined. If the macro
+is defined again with another </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#define</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>defined</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will recommence returning 1.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Conditionals
+that test whether just one name is defined are very common, so there are
+two special short conditional directives for this case.</FONT></FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>#ifdef</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>name</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is equivalent to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#if
+defined (<I>name</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>#ifndef</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>name</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is equivalent to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#if
+! defined (<I>name</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></LI>
+</UL>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Macro
+definitions can vary between compilations for several reasons.</FONT></FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Some macros are predefined on
+each kind of machine. For example, on a Vax, the name </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vax</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a predefined macro. On other machines, it would not be defined.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Many more macros are defined
+by system header files. Different systems and machines define different
+macros, or give them different values. It is useful to test these macros
+with conditionals to avoid using a system feature on a machine where it
+is not implemented.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Macros are a common way of allowing
+users to customize a program for different machines or applications. For
+example, the macro </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>BUFSIZE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+might be defined in a configuration file for your program that is included
+as a header file in each source file. You would use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>BUFSIZE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in a preprocessing conditional in order to generate different code depending
+on the chosen configuration.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Macros can be defined or undefined
+with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-D</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-U</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command options when you compile the program. You can arrange to compile
+the same source file into two different programs by choosing a macro name
+to specify which program you want, writing conditionals to test whether
+or how this macro is defined, and then controlling the state of the macro
+with compiler command options. See <A HREF="cppInvoking_the_C_Preprocessor.html">Invoking
+the C preprocessor</A>.</FONT></FONT></LI>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppKeeping_Deleted_Code_for_Future_.html">Previous</A>|<A HREF="cppAssertions.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

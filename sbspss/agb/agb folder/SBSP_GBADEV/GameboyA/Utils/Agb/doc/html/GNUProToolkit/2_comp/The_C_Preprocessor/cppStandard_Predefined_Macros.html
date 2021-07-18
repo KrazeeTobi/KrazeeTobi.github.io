@@ -1,0 +1,228 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Standard Predefined Macros</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppPredefined_Macros.html">Previous</A>|<A HREF="cppNonstandard_Predefined_Macros.html">Next</A>
+<BR><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><A NAME="off_297071"></A><A NAME="c8885776"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><B><FONT SIZE=+3>Standard
+predefined macros&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+standard predefined macros are available with the same meanings regardless
+of the machine or operating system on which you are using GNU C. Their
+names all start and end with double underscores. Those preceding </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__GNUC__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in the following documentation are standardized by ANSI C; the rest are
+GNU C extensions.</FONT></FONT></FONT>
+<BR>&nbsp;
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__FILE__</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This macro expands to the
+name of the current input file, in the form of a C string constant. The
+precise name returned is the one that was specified in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or as the input file name argument.</FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__LINE__</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This macro expands to the
+current input line number, in the form of a decimal integer constant. While
+we call it a predefined macro, it’s a pretty strange macro, since its “definition”
+changes with each new line of source code.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__FILE__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are useful in generating an error message to report an inconsistency detected
+by the program; the <FONT COLOR="#000000">message can state the source
+line at which the inconsistency was detected. Use the following output
+as an example.</FONT></FONT></FONT></DT>
+
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>fprintf (stderr, "Internal error:"&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "negative string length"&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "%d at %s, line %d.", length, __FILE__, __LINE__);</FONT></FONT></PRE>
+</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>A </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive changes the expansions of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__FILE__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__LINE__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to correspond to the included file. At the end of that file, when processing
+resumes on the input file that contained the #include directive, the expansions
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__FILE__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__LINE__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+revert to the values they had before the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(but </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__LINE__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is then incremented by one as processing moves to the line after the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The expansions of both </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__FILE__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__LINE__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are altered if a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#line</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive is used. See <FONT COLOR="#008000"><A HREF="cppCombining_Source_Files.html">Combining
+source files</A></FONT><FONT COLOR="#000000">.</FONT></FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__DATE__</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This macro expands to a
+string constant that describes the date on which the preprocessor is being
+run. The string constant contains eleven characters and looks like </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>"Jan
+29 1987"</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>"Apr
+1 1905"</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__TIME__</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This macro expands to a
+string constant that describes the time at which the preprocessor is being
+run. The string constant contains eight characters and looks like </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>"23:59:01"</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__STDC__</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This macro expands to the
+constant </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to signify that this is ANSI Standard C. (Whether that is actually true
+depends on what C compiler will operate on the output from the preprocessor.)</FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__STDC_VERSION__</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This macro expands to the
+C Standard’s version number, a long integer constant of the form </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>yyyymmL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+where </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>yyyy</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are the year and month of the Standard version. This signifies which version
+of the C Standard the preprocessor conforms to. Like </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__STDC__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+whether this version number is accurate for the entire implementation depends
+on what C compiler will operate on the output from the preprocessor.</FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__GNUC__</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This macro is defined if
+and only if this is GNU C. This macro is defined only when the entire GNU
+C compiler is in use; if you invoke the preprocessor directly, _</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>_GNUC__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is undefined. The value identifies the major version number of GNU CC (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for GNU CC version 1, which is now obsolete, and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for version 2).</FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__GNUC_MINOR__</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The macro contains the minor
+version number of the compiler. This can be used to work around differences
+between different releases of the compiler (for example, if gcc 2.6.3 is
+known to support a feature, you can test for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__GNUC__
+> 2 || (__GNUC__ == 2 &amp;&amp; __GNUC_MINOR__ >= 6))</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The last number, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>3</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+denotes the bugfix level of the compiler; no macro contains this value.</FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__GNUG__</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The GNU C compiler defines
+this when the compilation language is C++; use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__GNUG__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to distinguish between GNU C and GNU C++.</FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__cplusplus</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The draft ANSI standard
+for C++ <I>used to</I> require predefining this variable. Though it is
+no longer required, GNU C++ continues to define it, as do other popular
+C++ compilers. You can use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__cplusplus</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to test whether a header is compiled by a C compiler or a C++ compiler.</FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__STRICT_ANSI__</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>GNU C defines this macro
+if and only if the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-ansi</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+switch was specified when GNU C was invoked. Its definition is the null
+string. This macro exists primarily to direct certain GNU header files
+not to define certain traditional Unix constructs which are incompatible
+with ANSI C.</FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__BASE_FILE__</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This macro expands to the
+name of the main input file, in the form of a C string constant. This is
+the source file that was specified as an argument when the C compiler was
+invoked.</FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__INCLUDE_LEVEL__</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This macro expands to a
+decimal integer constant that represents the depth of nesting in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+files. The value of this macro increments on every </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive and decremented at every end of file. For input files specified
+by command line arguments, the nesting level is zero.</FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__VERSION__</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This macro expands to a
+string which describes the version number of GNU C. The string is normally
+a sequence of decimal numbers separated by periods, such as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>"2.6.0"</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__OPTIMIZE__</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>GNU CC defines this macro
+in optimizing compilations. It causes certain GNU header files to define
+alternative macro defin<FONT COLOR="#000000">itions for some system library
+functions. You should not refer to or test the definition of this macro
+unless you make very sure that programs will execute with the same effect
+regardless.</FONT></FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__CHAR_UNSIGNED__</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>GNU C defines this macro<FONT COLOR="#000000">
+if and only if the data type </FONT></FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>char</FONT></FONT><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>
+is unsigned on the target machine. It exists to cause the standard header
+file, </FONT></FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>limit.h</FONT></FONT><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>,
+to work correctly. You should not refer to this macro yourself; instead,
+refer to the standard macros defined in </FONT></FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>limit.h</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman"><FONT COLOR="#000000">.
+The preprocessor uses this macro to determine whether or not to sign-extend
+large character constants written in octal; see </FONT><FONT COLOR="#008000"><A HREF="cppThe__if__Directive.html">The
+</A></FONT></FONT><FONT COLOR="#008000"><A HREF="cppThe__if__Directive.html"><B><FONT FACE="Courier New">#if</FONT></B>
+directive</A></FONT><FONT COLOR="#000000">.</FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__REGISTER_PREFIX__</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This macro expands to a
+string (not a string constant) describing the prefix applied to CPU registers
+in assembler code. You can use it to write assembler code that is usable
+in multiple environments. For example, in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>m68k-aout</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+environment, it expands to the null string, and in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>m68k-coff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+environment, it expands to the string, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>__USER_LABEL_PREFIX__</FONT></FONT></DT>
+
+<UL><FONT COLOR="#000000"><FONT SIZE=+1><FONT FACE="Times New Roman">Similar
+to </FONT><TT>__REGISTER_PREFIX__</TT><FONT FACE="Times New Roman">, this
+macro describes the prefix applied to user generated labels in assembler
+code. For example, in the </FONT></FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>m68k-aout</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman"><FONT COLOR="#000000">
+environment, it expands to the string, </FONT></FONT><TT>_</TT><FONT FACE="Times New Roman"><FONT COLOR="#000000">,
+but in the </FONT></FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>m68k-coff</FONT></FONT><FONT COLOR="#000000"><FONT SIZE=+1><FONT FACE="Times New Roman">
+environment, it expands to the null string. This does not work with the
+</FONT><TT>-mno-underscores</TT><FONT FACE="Times New Roman"> option that
+the i386 OSF/rose and m88k targets provide, nor with the </FONT><TT>-mcall*</TT><FONT FACE="Times New Roman">
+options of the rs6000 System V Release 4 target.</FONT></FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppPredefined_Macros.html">Previous</A>|<A HREF="cppNonstandard_Predefined_Macros.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

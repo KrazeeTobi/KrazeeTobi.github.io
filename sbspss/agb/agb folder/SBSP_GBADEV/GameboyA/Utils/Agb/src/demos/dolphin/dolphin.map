@@ -1,0 +1,1604 @@
+Archive member included       because of file (symbol)
+
+C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_call_via_rX.o)
+                              main.o (_call_via_r0)
+C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_divsi3.o)
+                              main.o (__divsi3)
+C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_dvmd_tls.o)
+                              C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_divsi3.o) (__div0)
+
+Allocating common symbols
+Common symbol       size              file
+
+Oam                 0x480             main.o
+hz                  0x4               main.o
+player              0x48              player.o
+v_phase             0x4               main.o
+Sky                 0x34              bg.o
+Cont                0x4               main.o
+state               0x4               main.o
+DisplayArea         0x4               bg.o
+rasttable           0x100             main.o
+Light               0x34              bg.o
+Trg                 0x4               main.o
+player_awa          0x60              player.o
+wave2nd             0xc               bg.o
+OceanA              0x34              bg.o
+fukiya              0x40              enemy.o
+sora_xPos           0x4               bg.o
+counter             0x4               main.o
+IntrMainBuf         0x800             main.o
+Sango_ScreenDat     0x800             bg.o
+UmiA_ScreenDat      0x800             bg.o
+amp_r               0x4               main.o
+IntrCheck           0x4               main.o
+offset              0x4               main.o
+Bg2_ScreenDat       0x800             bg.o
+ring                0x280             ring.o
+Coral               0x34              bg.o
+OceanB              0x34              bg.o
+awa                 0x140             enemy.o
+ocean_xPos          0x4               bg.o
+Sky_ScreenDat       0x800             bg.o
+dEnemy              0x2f8             enemy.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD crt0.o
+LOAD main.o
+LOAD player.o
+LOAD player_dat.o
+LOAD enemy.o
+LOAD enemy_dat.o
+LOAD game_dat.o
+LOAD bg.o
+LOAD hitcheck.o
+LOAD ring.o
+LOAD obj/r_kihon0.o
+LOAD obj/r_kihon1.o
+LOAD obj/r_kihon2.o
+LOAD obj/r_kihon3.o
+LOAD obj/r_kihon4.o
+LOAD obj/r_kihon5.o
+LOAD obj/r_kihon6.o
+LOAD obj/r_kihon7.o
+LOAD obj/r_up0.o
+LOAD obj/r_up1.o
+LOAD obj/r_up2.o
+LOAD obj/r_up3.o
+LOAD obj/r_up4.o
+LOAD obj/r_up5.o
+LOAD obj/r_up6.o
+LOAD obj/r_up7.o
+LOAD obj/r_up8.o
+LOAD obj/r_go_up0.o
+LOAD obj/r_go_up1.o
+LOAD obj/r_go_up2.o
+LOAD obj/r_go_up3.o
+LOAD obj/r_go_up4.o
+LOAD obj/r_go_up5.o
+LOAD obj/r_go_up6.o
+LOAD obj/r_go_up7.o
+LOAD obj/r_down0.o
+LOAD obj/r_down1.o
+LOAD obj/r_down2.o
+LOAD obj/r_down3.o
+LOAD obj/r_down4.o
+LOAD obj/r_down5.o
+LOAD obj/r_down6.o
+LOAD obj/r_down7.o
+LOAD obj/r_down8.o
+LOAD obj/r_go_down0.o
+LOAD obj/r_go_down1.o
+LOAD obj/r_go_down2.o
+LOAD obj/r_go_down3.o
+LOAD obj/r_go_down4.o
+LOAD obj/r_go_down5.o
+LOAD obj/r_go_down6.o
+LOAD obj/r_go_down7.o
+LOAD obj/r_jump0.o
+LOAD obj/r_jump1.o
+LOAD obj/r_jump2.o
+LOAD obj/r_jump3.o
+LOAD obj/r_jump4.o
+LOAD obj/r_jump5.o
+LOAD obj/r_jump6.o
+LOAD obj/r_jump7.o
+LOAD obj/r_jump8.o
+LOAD obj/r_jump9.o
+LOAD obj/r_jump10.o
+LOAD obj/r_attack1.o
+LOAD obj/r_attack2.o
+LOAD obj/r_attack3.o
+LOAD obj/r_attack4.o
+LOAD obj/r_attack5.o
+LOAD obj/r_attack6.o
+LOAD obj/r_attack7.o
+LOAD obj/o_kihon001.o
+LOAD obj/o_kihon002.o
+LOAD obj/o_kihon003.o
+LOAD obj/o_kihon004.o
+LOAD obj/o_kihon005.o
+LOAD obj/o_kihon006.o
+LOAD obj/o_kihon007.o
+LOAD obj/o_kihon008.o
+LOAD obj/o_kihon009.o
+LOAD obj/o_kihon010.o
+LOAD obj/o_kougeki000.o
+LOAD obj/o_kougeki001.o
+LOAD obj/o_kougeki002.o
+LOAD obj/o_kougeki003.o
+LOAD obj/o_kougeki004.o
+LOAD obj/o_kougeki005.o
+LOAD obj/o_kougeki006.o
+LOAD obj/o_kougeki007.o
+LOAD obj/o_kougeki008.o
+LOAD obj/o_kougeki009.o
+LOAD obj/o_kougeki010.o
+LOAD obj/o_kougeki011.o
+LOAD obj/o_kougeki012.o
+LOAD obj/o_kougeki013.o
+LOAD obj/o_kougeki014.o
+LOAD obj/o_kougeki015.o
+LOAD obj/o_kougeki016.o
+LOAD obj/o_kougeki017.o
+LOAD obj/o_kougeki018.o
+LOAD obj/o_kougeki019.o
+LOAD obj/o_kougeki020.o
+LOAD obj/o_yarare000.o
+LOAD obj/o_yarare001.o
+LOAD obj/o_yarare002.o
+LOAD obj/o_yarare003.o
+LOAD obj/o_yarare004.o
+LOAD obj/o_yarare005.o
+LOAD obj/o_yarare006.o
+LOAD obj/o_yarare007.o
+LOAD obj/o_yarare008.o
+LOAD obj/o_yarare009.o
+LOAD obj/o_yarare010.o
+LOAD obj/o_yarare011.o
+LOAD obj/o_yarare012.o
+LOAD obj/o_yarare013.o
+LOAD obj/o_yarare014.o
+LOAD obj/o_yarare015.o
+LOAD obj/o_yarare016.o
+LOAD obj/o_yarare017.o
+LOAD obj/o_yarare018.o
+LOAD obj/o_yarare019.o
+LOAD obj/o_yarare020.o
+LOAD obj/o_fukiya000.o
+LOAD obj/awa.o
+LOAD obj/ring_32_64_left.o
+LOAD obj/ring_32_64_right.o
+LOAD bg_parts/umia_.o
+LOAD bg_parts/umi_ab_256x512.o
+LOAD bg_parts/sango1024x256.o
+LOAD bg_parts/sora.o
+LOAD bg_parts/light4.o
+LOAD bg_parts/wave2nd1.o
+LOAD bg_parts/wave2nd2.o
+LOAD bg_parts/wave2nd3.o
+LOAD C:/agb/lib//libagbsyscall.a
+LOAD C:/agb/lib//libisagbprn.a
+LOAD C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a
+LOAD C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/lib/libg.a
+LOAD C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/lib/libc.a
+LOAD C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a
+Address of section .text set to 0x8000000
+Address of section .bss set to 0x3000000
+                0x00008000                .=0x8000
+
+.interp
+ *(.interp)
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x08000000     0x2e18
+ *(.text)
+ .text          0x08000000      0x1d0 crt0.o
+                0x08000000                _start
+                0x080000c0                start_vector
+                0x080000fc                intr_main
+ .text          0x080001d0      0x368 main.o
+                0x080003d4                IntrDammy
+                0x080003d0                VCountIntr
+                0x080002bc                VBlankIntr
+                0x080004b4                GameMain
+                0x08000370                HBlankIntr
+                0x080003d8                KeyRead
+                0x08000404                GameInit
+                0x080004e0                GameOver
+                0x080001d0                AgbMain
+ .text          0x08000538      0xcf8 player.o
+                0x08000ca4                Action3
+                0x08000f6c                Player_attack_anm
+                0x08000fe8                Player_head_attack_anm
+                0x08000cc0                PlayerAnim
+                0x08000638                DrawPlayer
+                0x08000538                InitPlayer
+                0x0800103c                Ajust_Light_Reflection
+                0x08000d44                Player_kihon_idle_anm
+                0x080010a8                InitPlayer_Awa
+                0x08000f00                Player_idle_anm
+                0x080010fc                CreatePlayer_Awa
+                0x08000aa0                ChangeWaterSpeed
+                0x080011a0                DrawPlayer_Awa
+                0x08000ce0                Player_kihon_anm
+                0x08000da8                Player_updown_anm
+                0x08000fe4                Player_move_rl_anm
+                0x08000984                MovePlayer
+                0x080010a4                BlinkPlayer
+                0x080010cc                Player_AwaProc
+                0x08000ca8                InitPlayerAnim
+                0x0800089c                PlayerActionControl
+                0x08000b50                Action1
+                0x08001140                Player_AwaMove
+                0x08000e90                Player_jump_anm
+                0x080005e4                PlayerProc
+                0x080008fc                Chang_Dir
+                0x080007cc                RestrictPlayerPosition
+                0x08000c00                JumpPlayer
+ .text          0x08001230      0x944 enemy.o
+                0x080017c8                DrawEnemy
+                0x08001488                DeadCheckEnemy
+                0x08001618                ShellAnim
+                0x0800188c                InitAwa
+                0x080018c4                AwaProc
+                0x0800187c                EraseEnemy
+                0x08001968                DrawAwa
+                0x080018f4                CreateAwa
+                0x080017c4                ShellDeadAnim
+                0x080013f4                HitCheck_Enemy
+                0x0800142c                HitEnemy
+                0x08001a04                InitFukiya
+                0x080015cc                LcdCheckEnemy
+                0x08001230                InitEnemy
+                0x0800164c                ShellBaseAnim
+                0x08001568                DeadMove
+                0x08001524                MoveShell1
+                0x08001a3c                FukiyaProc
+                0x080014ec                ControlEnemyMove
+                0x0800175c                ShellDamageAnim
+                0x08001564                ShellAttackMove
+                0x080016d0                ShellAttackAnim
+                0x080012ec                EnemyProc
+                0x08001abc                FukiyaMove
+                0x0800134c                CreateTeki
+                0x08001a6c                CreateFukiya
+                0x0800192c                AwaMove
+                0x08001560                MoveShell2
+                0x08001ad4                DrawFukiya
+ .text          0x08001b74      0xbc8 bg.o
+                0x08002624                DeleteOceanB
+                0x08002140                CoralRight
+                0x0800225c                DrawLight
+                0x08001df8                Init_Sky_ScreenDat
+                0x08002380                OceanA_Idle
+                0x08002440                DeleteOceanA
+                0x08001b8c                Anm_wave2nd
+                0x08001ea8                DeleteSky
+                0x080023e8                DrawOceanA
+                0x08001c5c                Change_Bg_VRAM
+                0x080021c0                CoralLeft
+                0x08001ef8                SoraRight
+                0x080022c0                DeleteLight
+                0x08001c38                BgProc
+                0x08002344                InitOceanAScreenDat
+                0x08002640                OceanB_Up
+                0x08002258                InitLightScreenDat
+                0x08002568                InitOceanB
+                0x080025a0                InitOceanBScreenDat
+                0x08002038                InitCoralScreenDat
+                0x08002244                CoralUpDown
+                0x08001f78                SoraLeft
+                0x08001ffc                InitCoral
+                0x08001bdc                InitBg
+                0x08001b74                initwave2nd
+                0x08002078                DrawCoral
+                0x08002248                InitLight
+                0x080024f4                OceanA_Down
+                0x08001cac                UpdateBg
+                0x0800230c                InitOceanA
+                0x080026bc                OceanB_Down
+                0x080025dc                DrawOceanB
+                0x08001e38                DrawSky
+                0x08002480                OceanA_Up
+                0x08001dc0                InitSky
+                0x080020f0                DeleteCoral
+ .text          0x0800273c      0x34c hitcheck.o
+                0x0800285c                Ring2Dolphin
+                0x080029b0                RingPass
+                0x0800273c                Fukiya2Dolphin
+                0x08002794                Dolphin2Enemy
+ .text          0x08002a88      0x2bc ring.o
+                0x08002d40                RingHit
+                0x08002a88                InitRing
+                0x08002bcc                DrawRing
+                0x08002d04                RingPassed
+                0x08002cd8                RingNormal
+                0x08002b94                CreateRing
+                0x08002af4                RingProc
+                0x08002b60                RingStateControl
+ .text          0x08002d44       0x3c C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_call_via_rX.o)
+                0x08002d4c                _call_via_r2
+                0x08002d5c                _call_via_r6
+                0x08002d58                _call_via_r5
+                0x08002d50                _call_via_r3
+                0x08002d70                _call_via_fp
+                0x08002d64                _call_via_r8
+                0x08002d60                _call_via_r7
+                0x08002d44                _call_via_r0
+                0x08002d6c                _call_via_sl
+                0x08002d78                _call_via_sp
+                0x08002d68                _call_via_r9
+                0x08002d54                _call_via_r4
+                0x08002d48                _call_via_r1
+                0x08002d74                _call_via_ip
+                0x08002d7c                _call_via_lr
+ .text          0x08002d80       0x94 C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_divsi3.o)
+                0x08002d80                __divsi3
+ .text          0x08002e14        0x4 C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_dvmd_tls.o)
+                0x08002e14                __div0
+ *(.text.*)
+ *(.stub)
+ *(.gnu.warning)
+ *(.gnu.linkonce.t*)
+ *(.glue_7t)
+ *(.glue_7)
+                0x08002e18                _etext=.
+                0x08002e18                PROVIDE (etext, .)
+
+.fini
+ *(.fini)
+
+.rodata         0x08002e18    0x743c4
+ *(.rodata)
+ .rodata        0x08002e18       0x3c main.o
+                0x08002e18                IntrTable
+ .rodata        0x08002e54       0x30 enemy.o
+                0x08002e54                Oam_def
+                0x08002e6c                Oam_8x8dot
+                0x08002e64                Oam_16x16dot
+                0x08002e5c                Oam_32x32dot
+ .rodata        0x08002e84       0x10 game_dat.o
+                0x08002e8c                OamData_Sample
+                0x08002e84                Oam_16x8dot
+ .rodata        0x08002e94        0x8 ring.o
+                0x08002e94                Oam_32x64dot
+ .rodata        0x08002e9c     0x1200 obj/r_kihon0.o
+                0x0800309c                r_kihon0_Char
+                0x08002e9c                r_kihon0_Palette
+ .rodata        0x0800409c     0x1200 obj/r_kihon1.o
+                0x0800429c                r_kihon1_Char
+                0x0800409c                r_kihon1_Palette
+ .rodata        0x0800529c     0x1200 obj/r_kihon2.o
+                0x0800529c                r_kihon2_Palette
+                0x0800549c                r_kihon2_Char
+ .rodata        0x0800649c     0x1200 obj/r_kihon3.o
+                0x0800669c                r_kihon3_Char
+                0x0800649c                r_kihon3_Palette
+ .rodata        0x0800769c     0x1200 obj/r_kihon4.o
+                0x0800769c                r_kihon4_Palette
+                0x0800789c                r_kihon4_Char
+ .rodata        0x0800889c     0x1200 obj/r_kihon5.o
+                0x08008a9c                r_kihon5_Char
+                0x0800889c                r_kihon5_Palette
+ .rodata        0x08009a9c     0x1200 obj/r_kihon6.o
+                0x08009a9c                r_kihon6_Palette
+                0x08009c9c                r_kihon6_Char
+ .rodata        0x0800ac9c     0x1200 obj/r_kihon7.o
+                0x0800ae9c                r_kihon7_Char
+                0x0800ac9c                r_kihon7_Palette
+ .rodata        0x0800be9c     0x1200 obj/r_up0.o
+                0x0800c09c                r_up0_Char
+                0x0800be9c                r_up0_Palette
+ .rodata        0x0800d09c     0x1200 obj/r_up1.o
+                0x0800d29c                r_up1_Char
+                0x0800d09c                r_up1_Palette
+ .rodata        0x0800e29c     0x1200 obj/r_up2.o
+                0x0800e29c                r_up2_Palette
+                0x0800e49c                r_up2_Char
+ .rodata        0x0800f49c     0x1200 obj/r_up3.o
+                0x0800f49c                r_up3_Palette
+                0x0800f69c                r_up3_Char
+ .rodata        0x0801069c     0x1200 obj/r_up4.o
+                0x0801069c                r_up4_Palette
+                0x0801089c                r_up4_Char
+ .rodata        0x0801189c     0x1200 obj/r_up5.o
+                0x0801189c                r_up5_Palette
+                0x08011a9c                r_up5_Char
+ .rodata        0x08012a9c     0x1200 obj/r_up6.o
+                0x08012c9c                r_up6_Char
+                0x08012a9c                r_up6_Palette
+ .rodata        0x08013c9c     0x1200 obj/r_up7.o
+                0x08013c9c                r_up7_Palette
+                0x08013e9c                r_up7_Char
+ .rodata        0x08014e9c     0x1200 obj/r_up8.o
+                0x0801509c                r_up8_Char
+                0x08014e9c                r_up8_Palette
+ .rodata        0x0801609c     0x1200 obj/r_go_up0.o
+                0x0801629c                r_go_up0_Char
+                0x0801609c                r_go_up0_Palette
+ .rodata        0x0801729c     0x1200 obj/r_go_up1.o
+                0x0801729c                r_go_up1_Palette
+                0x0801749c                r_go_up1_Char
+ .rodata        0x0801849c     0x1200 obj/r_go_up2.o
+                0x0801849c                r_go_up2_Palette
+                0x0801869c                r_go_up2_Char
+ .rodata        0x0801969c     0x1200 obj/r_go_up3.o
+                0x0801989c                r_go_up3_Char
+                0x0801969c                r_go_up3_Palette
+ .rodata        0x0801a89c     0x1200 obj/r_go_up4.o
+                0x0801a89c                r_go_up4_Palette
+                0x0801aa9c                r_go_up4_Char
+ .rodata        0x0801ba9c     0x1200 obj/r_go_up5.o
+                0x0801bc9c                r_go_up5_Char
+                0x0801ba9c                r_go_up5_Palette
+ .rodata        0x0801cc9c     0x1200 obj/r_go_up6.o
+                0x0801ce9c                r_go_up6_Char
+                0x0801cc9c                r_go_up6_Palette
+ .rodata        0x0801de9c     0x1200 obj/r_go_up7.o
+                0x0801e09c                r_go_up7_Char
+                0x0801de9c                r_go_up7_Palette
+ .rodata        0x0801f09c     0x1200 obj/r_down0.o
+                0x0801f29c                r_down0_Char
+                0x0801f09c                r_down0_Palette
+ .rodata        0x0802029c     0x1200 obj/r_down1.o
+                0x0802029c                r_down1_Palette
+                0x0802049c                r_down1_Char
+ .rodata        0x0802149c     0x1200 obj/r_down2.o
+                0x0802149c                r_down2_Palette
+                0x0802169c                r_down2_Char
+ .rodata        0x0802269c     0x1200 obj/r_down3.o
+                0x0802269c                r_down3_Palette
+                0x0802289c                r_down3_Char
+ .rodata        0x0802389c     0x1200 obj/r_down4.o
+                0x0802389c                r_down4_Palette
+                0x08023a9c                r_down4_Char
+ .rodata        0x08024a9c     0x1200 obj/r_down5.o
+                0x08024a9c                r_down5_Palette
+                0x08024c9c                r_down5_Char
+ .rodata        0x08025c9c     0x1200 obj/r_down6.o
+                0x08025c9c                r_down6_Palette
+                0x08025e9c                r_down6_Char
+ .rodata        0x08026e9c     0x1200 obj/r_down7.o
+                0x08026e9c                r_down7_Palette
+                0x0802709c                r_down7_Char
+ .rodata        0x0802809c     0x1200 obj/r_down8.o
+                0x0802809c                r_down8_Palette
+                0x0802829c                r_down8_Char
+ .rodata        0x0802929c     0x1200 obj/r_go_down0.o
+                0x0802949c                r_go_down0_Char
+                0x0802929c                r_go_down0_Palette
+ .rodata        0x0802a49c     0x1200 obj/r_go_down1.o
+                0x0802a69c                r_go_down1_Char
+                0x0802a49c                r_go_down1_Palette
+ .rodata        0x0802b69c     0x1200 obj/r_go_down2.o
+                0x0802b69c                r_go_down2_Palette
+                0x0802b89c                r_go_down2_Char
+ .rodata        0x0802c89c     0x1200 obj/r_go_down3.o
+                0x0802c89c                r_go_down3_Palette
+                0x0802ca9c                r_go_down3_Char
+ .rodata        0x0802da9c     0x1200 obj/r_go_down4.o
+                0x0802da9c                r_go_down4_Palette
+                0x0802dc9c                r_go_down4_Char
+ .rodata        0x0802ec9c     0x1200 obj/r_go_down5.o
+                0x0802ec9c                r_go_down5_Palette
+                0x0802ee9c                r_go_down5_Char
+ .rodata        0x0802fe9c     0x1200 obj/r_go_down6.o
+                0x0803009c                r_go_down6_Char
+                0x0802fe9c                r_go_down6_Palette
+ .rodata        0x0803109c     0x1200 obj/r_go_down7.o
+                0x0803109c                r_go_down7_Palette
+                0x0803129c                r_go_down7_Char
+ .rodata        0x0803229c     0x1200 obj/r_jump0.o
+                0x0803229c                r_jump0_Palette
+                0x0803249c                r_jump0_Char
+ .rodata        0x0803349c     0x1200 obj/r_jump1.o
+                0x0803369c                r_jump1_Char
+                0x0803349c                r_jump1_Palette
+ .rodata        0x0803469c     0x1200 obj/r_jump2.o
+                0x0803469c                r_jump2_Palette
+                0x0803489c                r_jump2_Char
+ .rodata        0x0803589c     0x1200 obj/r_jump3.o
+                0x08035a9c                r_jump3_Char
+                0x0803589c                r_jump3_Palette
+ .rodata        0x08036a9c     0x1200 obj/r_jump4.o
+                0x08036c9c                r_jump4_Char
+                0x08036a9c                r_jump4_Palette
+ .rodata        0x08037c9c     0x1200 obj/r_jump5.o
+                0x08037e9c                r_jump5_Char
+                0x08037c9c                r_jump5_Palette
+ .rodata        0x08038e9c     0x1200 obj/r_jump6.o
+                0x08038e9c                r_jump6_Palette
+                0x0803909c                r_jump6_Char
+ .rodata        0x0803a09c     0x1200 obj/r_jump7.o
+                0x0803a29c                r_jump7_Char
+                0x0803a09c                r_jump7_Palette
+ .rodata        0x0803b29c     0x1200 obj/r_jump8.o
+                0x0803b49c                r_jump8_Char
+                0x0803b29c                r_jump8_Palette
+ .rodata        0x0803c49c     0x1200 obj/r_jump9.o
+                0x0803c69c                r_jump9_Char
+                0x0803c49c                r_jump9_Palette
+ .rodata        0x0803d69c     0x1200 obj/r_jump10.o
+                0x0803d89c                r_jump10_Char
+                0x0803d69c                r_jump10_Palette
+ .rodata        0x0803e89c     0x1200 obj/r_attack1.o
+                0x0803ea9c                r_attack1_Char
+                0x0803e89c                r_attack1_Palette
+ .rodata        0x0803fa9c     0x1200 obj/r_attack2.o
+                0x0803fa9c                r_attack2_Palette
+                0x0803fc9c                r_attack2_Char
+ .rodata        0x08040c9c     0x1200 obj/r_attack3.o
+                0x08040c9c                r_attack3_Palette
+                0x08040e9c                r_attack3_Char
+ .rodata        0x08041e9c     0x1200 obj/r_attack4.o
+                0x0804209c                r_attack4_Char
+                0x08041e9c                r_attack4_Palette
+ .rodata        0x0804309c     0x1200 obj/r_attack5.o
+                0x0804309c                r_attack5_Palette
+                0x0804329c                r_attack5_Char
+ .rodata        0x0804429c     0x1200 obj/r_attack6.o
+                0x0804429c                r_attack6_Palette
+                0x0804449c                r_attack6_Char
+ .rodata        0x0804549c     0x1200 obj/r_attack7.o
+                0x0804569c                r_attack7_Char
+                0x0804549c                r_attack7_Palette
+ .rodata        0x0804669c      0x600 obj/o_kihon001.o
+                0x0804689c                o_kihon001_Char
+                0x0804669c                o_kihon001_Palette
+ .rodata        0x08046c9c      0x600 obj/o_kihon002.o
+                0x08046c9c                o_kihon002_Palette
+                0x08046e9c                o_kihon002_Char
+ .rodata        0x0804729c      0x600 obj/o_kihon003.o
+                0x0804729c                o_kihon003_Palette
+                0x0804749c                o_kihon003_Char
+ .rodata        0x0804789c      0x600 obj/o_kihon004.o
+                0x0804789c                o_kihon004_Palette
+                0x08047a9c                o_kihon004_Char
+ .rodata        0x08047e9c      0x600 obj/o_kihon005.o
+                0x0804809c                o_kihon005_Char
+                0x08047e9c                o_kihon005_Palette
+ .rodata        0x0804849c      0x600 obj/o_kihon006.o
+                0x0804849c                o_kihon006_Palette
+                0x0804869c                o_kihon006_Char
+ .rodata        0x08048a9c      0x600 obj/o_kihon007.o
+                0x08048a9c                o_kihon007_Palette
+                0x08048c9c                o_kihon007_Char
+ .rodata        0x0804909c      0x600 obj/o_kihon008.o
+                0x0804929c                o_kihon008_Char
+                0x0804909c                o_kihon008_Palette
+ .rodata        0x0804969c      0x600 obj/o_kihon009.o
+                0x0804969c                o_kihon009_Palette
+                0x0804989c                o_kihon009_Char
+ .rodata        0x08049c9c      0x600 obj/o_kihon010.o
+                0x08049e9c                o_kihon010_Char
+                0x08049c9c                o_kihon010_Palette
+ .rodata        0x0804a29c      0x600 obj/o_kougeki000.o
+                0x0804a49c                o_kougeki000_Char
+                0x0804a29c                o_kougeki000_Palette
+ .rodata        0x0804a89c      0x600 obj/o_kougeki001.o
+                0x0804aa9c                o_kougeki001_Char
+                0x0804a89c                o_kougeki001_Palette
+ .rodata        0x0804ae9c      0x600 obj/o_kougeki002.o
+                0x0804ae9c                o_kougeki002_Palette
+                0x0804b09c                o_kougeki002_Char
+ .rodata        0x0804b49c      0x600 obj/o_kougeki003.o
+                0x0804b49c                o_kougeki003_Palette
+                0x0804b69c                o_kougeki003_Char
+ .rodata        0x0804ba9c      0x600 obj/o_kougeki004.o
+                0x0804ba9c                o_kougeki004_Palette
+                0x0804bc9c                o_kougeki004_Char
+ .rodata        0x0804c09c      0x600 obj/o_kougeki005.o
+                0x0804c29c                o_kougeki005_Char
+                0x0804c09c                o_kougeki005_Palette
+ .rodata        0x0804c69c      0x600 obj/o_kougeki006.o
+                0x0804c69c                o_kougeki006_Palette
+                0x0804c89c                o_kougeki006_Char
+ .rodata        0x0804cc9c      0x600 obj/o_kougeki007.o
+                0x0804cc9c                o_kougeki007_Palette
+                0x0804ce9c                o_kougeki007_Char
+ .rodata        0x0804d29c      0x600 obj/o_kougeki008.o
+                0x0804d29c                o_kougeki008_Palette
+                0x0804d49c                o_kougeki008_Char
+ .rodata        0x0804d89c      0x600 obj/o_kougeki009.o
+                0x0804da9c                o_kougeki009_Char
+                0x0804d89c                o_kougeki009_Palette
+ .rodata        0x0804de9c      0x600 obj/o_kougeki010.o
+                0x0804e09c                o_kougeki010_Char
+                0x0804de9c                o_kougeki010_Palette
+ .rodata        0x0804e49c      0x600 obj/o_kougeki011.o
+                0x0804e69c                o_kougeki011_Char
+                0x0804e49c                o_kougeki011_Palette
+ .rodata        0x0804ea9c      0x600 obj/o_kougeki012.o
+                0x0804ea9c                o_kougeki012_Palette
+                0x0804ec9c                o_kougeki012_Char
+ .rodata        0x0804f09c      0x600 obj/o_kougeki013.o
+                0x0804f29c                o_kougeki013_Char
+                0x0804f09c                o_kougeki013_Palette
+ .rodata        0x0804f69c      0x600 obj/o_kougeki014.o
+                0x0804f69c                o_kougeki014_Palette
+                0x0804f89c                o_kougeki014_Char
+ .rodata        0x0804fc9c      0x600 obj/o_kougeki015.o
+                0x0804fe9c                o_kougeki015_Char
+                0x0804fc9c                o_kougeki015_Palette
+ .rodata        0x0805029c      0x600 obj/o_kougeki016.o
+                0x0805029c                o_kougeki016_Palette
+                0x0805049c                o_kougeki016_Char
+ .rodata        0x0805089c      0x600 obj/o_kougeki017.o
+                0x08050a9c                o_kougeki017_Char
+                0x0805089c                o_kougeki017_Palette
+ .rodata        0x08050e9c      0x600 obj/o_kougeki018.o
+                0x0805109c                o_kougeki018_Char
+                0x08050e9c                o_kougeki018_Palette
+ .rodata        0x0805149c      0x600 obj/o_kougeki019.o
+                0x0805169c                o_kougeki019_Char
+                0x0805149c                o_kougeki019_Palette
+ .rodata        0x08051a9c      0x600 obj/o_kougeki020.o
+                0x08051c9c                o_kougeki020_Char
+                0x08051a9c                o_kougeki020_Palette
+ .rodata        0x0805209c      0x600 obj/o_yarare000.o
+                0x0805229c                o_yarare000_Char
+                0x0805209c                o_yarare000_Palette
+ .rodata        0x0805269c      0x600 obj/o_yarare001.o
+                0x0805289c                o_yarare001_Char
+                0x0805269c                o_yarare001_Palette
+ .rodata        0x08052c9c      0x600 obj/o_yarare002.o
+                0x08052c9c                o_yarare002_Palette
+                0x08052e9c                o_yarare002_Char
+ .rodata        0x0805329c      0x600 obj/o_yarare003.o
+                0x0805349c                o_yarare003_Char
+                0x0805329c                o_yarare003_Palette
+ .rodata        0x0805389c      0x600 obj/o_yarare004.o
+                0x0805389c                o_yarare004_Palette
+                0x08053a9c                o_yarare004_Char
+ .rodata        0x08053e9c      0x600 obj/o_yarare005.o
+                0x0805409c                o_yarare005_Char
+                0x08053e9c                o_yarare005_Palette
+ .rodata        0x0805449c      0x600 obj/o_yarare006.o
+                0x0805469c                o_yarare006_Char
+                0x0805449c                o_yarare006_Palette
+ .rodata        0x08054a9c      0x600 obj/o_yarare007.o
+                0x08054c9c                o_yarare007_Char
+                0x08054a9c                o_yarare007_Palette
+ .rodata        0x0805509c      0x600 obj/o_yarare008.o
+                0x0805509c                o_yarare008_Palette
+                0x0805529c                o_yarare008_Char
+ .rodata        0x0805569c      0x600 obj/o_yarare009.o
+                0x0805569c                o_yarare009_Palette
+                0x0805589c                o_yarare009_Char
+ .rodata        0x08055c9c      0x600 obj/o_yarare010.o
+                0x08055e9c                o_yarare010_Char
+                0x08055c9c                o_yarare010_Palette
+ .rodata        0x0805629c      0x600 obj/o_yarare011.o
+                0x0805649c                o_yarare011_Char
+                0x0805629c                o_yarare011_Palette
+ .rodata        0x0805689c      0x600 obj/o_yarare012.o
+                0x08056a9c                o_yarare012_Char
+                0x0805689c                o_yarare012_Palette
+ .rodata        0x08056e9c      0x600 obj/o_yarare013.o
+                0x08056e9c                o_yarare013_Palette
+                0x0805709c                o_yarare013_Char
+ .rodata        0x0805749c      0x600 obj/o_yarare014.o
+                0x0805749c                o_yarare014_Palette
+                0x0805769c                o_yarare014_Char
+ .rodata        0x08057a9c      0x600 obj/o_yarare015.o
+                0x08057c9c                o_yarare015_Char
+                0x08057a9c                o_yarare015_Palette
+ .rodata        0x0805809c      0x600 obj/o_yarare016.o
+                0x0805809c                o_yarare016_Palette
+                0x0805829c                o_yarare016_Char
+ .rodata        0x0805869c      0x600 obj/o_yarare017.o
+                0x0805869c                o_yarare017_Palette
+                0x0805889c                o_yarare017_Char
+ .rodata        0x08058c9c      0x600 obj/o_yarare018.o
+                0x08058e9c                o_yarare018_Char
+                0x08058c9c                o_yarare018_Palette
+ .rodata        0x0805929c      0x600 obj/o_yarare019.o
+                0x0805929c                o_yarare019_Palette
+                0x0805949c                o_yarare019_Char
+ .rodata        0x0805989c      0x600 obj/o_yarare020.o
+                0x0805989c                o_yarare020_Palette
+                0x08059a9c                o_yarare020_Char
+ .rodata        0x08059e9c      0x280 obj/o_fukiya000.o
+                0x08059e9c                o_fukiya000_Palette
+                0x0805a09c                o_fukiya000_Char
+ .rodata        0x0805a11c      0x240 obj/awa.o
+                0x0805a31c                awa_Char
+                0x0805a11c                awa_Palette
+ .rodata        0x0805a35c      0xa00 obj/ring_32_64_left.o
+                0x0805a35c                ring_32_64_left_Palette
+                0x0805a55c                ring_32_64_left_Char
+ .rodata        0x0805ad5c      0xa00 obj/ring_32_64_right.o
+                0x0805ad5c                ring_32_64_right_Palette
+                0x0805af5c                ring_32_64_right_Char
+ .rodata        0x0805b75c     0x1680 bg_parts/umia_.o
+                0x0805bddc                umia__Map
+                0x0805b75c                umia__Palette
+                0x0805b95c                umia__Character
+ .rodata        0x0805cddc     0x7f80 bg_parts/umi_ab_256x512.o
+                0x0805cddc                umi_ab_256x512_Palette
+                0x08063d5c                umi_ab_256x512_Map
+                0x0805cfdc                umi_ab_256x512_Character
+ .rodata        0x08064d5c     0x5fc0 bg_parts/sango1024x256.o
+                0x08064d5c                sango1024x256_Palette
+                0x08064f5c                sango1024x256_Character
+                0x08068d1c                sango1024x256_Map
+ .rodata        0x0806ad1c     0x8c00 bg_parts/sora.o
+                0x0807291c                sora_Map
+                0x0806af1c                sora_Character
+                0x0806ad1c                sora_Palette
+ .rodata        0x0807391c     0x2fc0 bg_parts/light4.o
+                0x080760dc                light4_Map
+                0x0807391c                light4_Palette
+                0x08073b1c                light4_Character
+ .rodata        0x080768dc      0x300 bg_parts/wave2nd1.o
+                0x08076adc                wave2nd1_Char
+                0x080768dc                wave2nd1_Palette
+ .rodata        0x08076bdc      0x300 bg_parts/wave2nd2.o
+                0x08076ddc                wave2nd2_Char
+                0x08076bdc                wave2nd2_Palette
+ .rodata        0x08076edc      0x300 bg_parts/wave2nd3.o
+                0x08076edc                wave2nd3_Palette
+                0x080770dc                wave2nd3_Char
+ *(.rodata.*)
+ *(.gnu.linkonce.r*)
+
+.rodata1
+ *(.rodata1)
+                0x080772dc                .=(ALIGN(0x100)+(.&0xff))
+
+.data           0x080772dc      0xf5c
+ *(.data)
+ .data          0x080772dc       0x38 main.o
+ .data          0x08077314       0x5c player.o
+ .data          0x08077370      0x3c4 player_dat.o
+                0x080774f4                rick_normal_move_pat
+                0x08077410                r_down_pixel_tbl
+                0x080773f8                r_attack_pixel_tbl
+                0x080773d8                r_kihon_idle_pixel_tbl
+                0x0807768c                rick_attack_pat
+                0x08077548                rick_kihon_idle_pat
+                0x080775a8                rick_jump_anm_pat
+                0x080773c0                r_kihon_pixel_tbl
+                0x080776a4                rick_kihon_fast_pat
+                0x08077434                r_up_down_pixel_tbl
+                0x080774a8                r_jump_pixel_tbl
+                0x080776d0                rick_jump_pat
+ .data          0x08077734       0x5c enemy.o
+                0x08077784                anm_state
+ .data          0x08077790      0x3c0 enemy_dat.o
+                0x08077914                shell_yarare_pix_tbl
+                0x08077b00                enemy_Oam_Data
+                0x08077968                shell_yarare_anm_pat
+                0x08077858                shell_attack_pix_tbl
+                0x080777e0                shell_base_pix_tbl
+                0x08077a10                shell_map_dat
+                0x08077808                shell_base_anm_pat
+                0x080778ac                shell_attack_anm_pat
+ .data          0x08077b50      0x500 game_dat.o
+                0x08077d50                cos_tbl
+                0x08077b50                sin_tbl
+                0x08077f50                sintable
+ .data          0x08078050       0x60 bg.o
+                0x08078080                wave2nd_pat
+ .data          0x080780b0       0x5c hitcheck.o
+ .data          0x0807810c      0x12c ring.o
+                0x08078148                ring_map_dat
+ *(.data.*)
+ *(.gnu.linkonce.d*)
+
+.data1
+ *(.data1)
+
+.ctors
+ EXCLUDE_FILE ( *crtend.o )*(.ctors)
+ *(SORT(.ctors.*))
+ *crtend(.ctors)
+
+.dtors
+ EXCLUDE_FILE ( *crtend.o )*(.dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+
+.got
+ *(.got.plt)
+ *(.got)
+
+.dynamic
+ *(.dynamic)
+
+.sdata
+ *(.sdata)
+ *(.sdata.*)
+                0x08078238                _edata=.
+                0x08078238                PROVIDE (edata, .)
+                0x08078238                __bss_start=.
+                0x08078238                __bss_start__=.
+
+.sbss
+ *(.sbss)
+ *(.scommon)
+
+.bss            0x03000000     0x36b0
+ *(.dynbss)
+ *(.bss)
+ *(.bss.*)
+ *(COMMON)
+ COMMON         0x03000000      0xdac main.o
+                                  0x0 (size before relaxing)
+                0x03000000                Oam
+                0x03000480                hz
+                0x03000484                v_phase
+                0x03000488                Cont
+                0x0300048c                state
+                0x03000490                rasttable
+                0x03000590                Trg
+                0x03000594                counter
+                0x030005a0                IntrMainBuf
+                0x03000da0                amp_r
+                0x03000da4                IntrCheck
+                0x03000da8                offset
+ *fill*         0x03000dac        0x4
+ COMMON         0x03000db0       0xb0 player.o
+                                  0x0 (size before relaxing)
+                0x03000db0                player
+                0x03000e00                player_awa
+ COMMON         0x03000e60      0x478 enemy.o
+                                  0x0 (size before relaxing)
+                0x03000e60                fukiya
+                0x03000ea0                awa
+                0x03000fe0                dEnemy
+ *fill*         0x030012d8        0x8
+ COMMON         0x030012e0     0x2150 bg.o
+                                  0x0 (size before relaxing)
+                0x030012e0                Sky
+                0x03001314                DisplayArea
+                0x03001320                Light
+                0x03001360                wave2nd
+                0x03001370                OceanA
+                0x030013a4                sora_xPos
+                0x030013b0                Sango_ScreenDat
+                0x03001bb0                UmiA_ScreenDat
+                0x030023b0                Bg2_ScreenDat
+                0x03002bb0                Coral
+                0x03002bf0                OceanB
+                0x03002c24                ocean_xPos
+                0x03002c30                Sky_ScreenDat
+ COMMON         0x03003430      0x280 ring.o
+                                  0x0 (size before relaxing)
+                0x03003430                ring
+                0x030036b0                .=ALIGN(0x4)
+                0x030036b0                .=ALIGN(0x4)
+                0x030036b0                _end=.
+                0x030036b0                _bss_end__=.
+                0x030036b0                __bss_end__=.
+                0x030036b0                PROVIDE (end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xc0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 main.o
+ .debug_aranges
+                0x00000020       0x20 player.o
+ .debug_aranges
+                0x00000040       0x20 enemy.o
+ .debug_aranges
+                0x00000060       0x20 bg.o
+ .debug_aranges
+                0x00000080       0x20 hitcheck.o
+ .debug_aranges
+                0x000000a0       0x20 ring.o
+
+.debug_pubnames
+                0x00000000     0x294e
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x11d main.o
+ .debug_pubnames
+                0x0000011d      0x248 player.o
+ .debug_pubnames
+                0x00000365      0x121 player_dat.o
+ .debug_pubnames
+                0x00000486      0x241 enemy.o
+ .debug_pubnames
+                0x000006c7       0xc9 enemy_dat.o
+ .debug_pubnames
+                0x00000790       0x5a game_dat.o
+ .debug_pubnames
+                0x000007ea      0x313 bg.o
+ .debug_pubnames
+                0x00000afd       0x55 hitcheck.o
+ .debug_pubnames
+                0x00000b52       0xb2 ring.o
+ .debug_pubnames
+                0x00000c04       0x39 obj/r_kihon0.o
+ .debug_pubnames
+                0x00000c3d       0x39 obj/r_kihon1.o
+ .debug_pubnames
+                0x00000c76       0x39 obj/r_kihon2.o
+ .debug_pubnames
+                0x00000caf       0x39 obj/r_kihon3.o
+ .debug_pubnames
+                0x00000ce8       0x39 obj/r_kihon4.o
+ .debug_pubnames
+                0x00000d21       0x39 obj/r_kihon5.o
+ .debug_pubnames
+                0x00000d5a       0x39 obj/r_kihon6.o
+ .debug_pubnames
+                0x00000d93       0x39 obj/r_kihon7.o
+ .debug_pubnames
+                0x00000dcc       0x33 obj/r_up0.o
+ .debug_pubnames
+                0x00000dff       0x33 obj/r_up1.o
+ .debug_pubnames
+                0x00000e32       0x33 obj/r_up2.o
+ .debug_pubnames
+                0x00000e65       0x33 obj/r_up3.o
+ .debug_pubnames
+                0x00000e98       0x33 obj/r_up4.o
+ .debug_pubnames
+                0x00000ecb       0x33 obj/r_up5.o
+ .debug_pubnames
+                0x00000efe       0x33 obj/r_up6.o
+ .debug_pubnames
+                0x00000f31       0x33 obj/r_up7.o
+ .debug_pubnames
+                0x00000f64       0x33 obj/r_up8.o
+ .debug_pubnames
+                0x00000f97       0x39 obj/r_go_up0.o
+ .debug_pubnames
+                0x00000fd0       0x39 obj/r_go_up1.o
+ .debug_pubnames
+                0x00001009       0x39 obj/r_go_up2.o
+ .debug_pubnames
+                0x00001042       0x39 obj/r_go_up3.o
+ .debug_pubnames
+                0x0000107b       0x39 obj/r_go_up4.o
+ .debug_pubnames
+                0x000010b4       0x39 obj/r_go_up5.o
+ .debug_pubnames
+                0x000010ed       0x39 obj/r_go_up6.o
+ .debug_pubnames
+                0x00001126       0x39 obj/r_go_up7.o
+ .debug_pubnames
+                0x0000115f       0x37 obj/r_down0.o
+ .debug_pubnames
+                0x00001196       0x37 obj/r_down1.o
+ .debug_pubnames
+                0x000011cd       0x37 obj/r_down2.o
+ .debug_pubnames
+                0x00001204       0x37 obj/r_down3.o
+ .debug_pubnames
+                0x0000123b       0x37 obj/r_down4.o
+ .debug_pubnames
+                0x00001272       0x37 obj/r_down5.o
+ .debug_pubnames
+                0x000012a9       0x37 obj/r_down6.o
+ .debug_pubnames
+                0x000012e0       0x37 obj/r_down7.o
+ .debug_pubnames
+                0x00001317       0x37 obj/r_down8.o
+ .debug_pubnames
+                0x0000134e       0x3d obj/r_go_down0.o
+ .debug_pubnames
+                0x0000138b       0x3d obj/r_go_down1.o
+ .debug_pubnames
+                0x000013c8       0x3d obj/r_go_down2.o
+ .debug_pubnames
+                0x00001405       0x3d obj/r_go_down3.o
+ .debug_pubnames
+                0x00001442       0x3d obj/r_go_down4.o
+ .debug_pubnames
+                0x0000147f       0x3d obj/r_go_down5.o
+ .debug_pubnames
+                0x000014bc       0x3d obj/r_go_down6.o
+ .debug_pubnames
+                0x000014f9       0x3d obj/r_go_down7.o
+ .debug_pubnames
+                0x00001536       0x37 obj/r_jump0.o
+ .debug_pubnames
+                0x0000156d       0x37 obj/r_jump1.o
+ .debug_pubnames
+                0x000015a4       0x37 obj/r_jump2.o
+ .debug_pubnames
+                0x000015db       0x37 obj/r_jump3.o
+ .debug_pubnames
+                0x00001612       0x37 obj/r_jump4.o
+ .debug_pubnames
+                0x00001649       0x37 obj/r_jump5.o
+ .debug_pubnames
+                0x00001680       0x37 obj/r_jump6.o
+ .debug_pubnames
+                0x000016b7       0x37 obj/r_jump7.o
+ .debug_pubnames
+                0x000016ee       0x37 obj/r_jump8.o
+ .debug_pubnames
+                0x00001725       0x37 obj/r_jump9.o
+ .debug_pubnames
+                0x0000175c       0x39 obj/r_jump10.o
+ .debug_pubnames
+                0x00001795       0x3b obj/r_attack1.o
+ .debug_pubnames
+                0x000017d0       0x3b obj/r_attack2.o
+ .debug_pubnames
+                0x0000180b       0x3b obj/r_attack3.o
+ .debug_pubnames
+                0x00001846       0x3b obj/r_attack4.o
+ .debug_pubnames
+                0x00001881       0x3b obj/r_attack5.o
+ .debug_pubnames
+                0x000018bc       0x3b obj/r_attack6.o
+ .debug_pubnames
+                0x000018f7       0x3b obj/r_attack7.o
+ .debug_pubnames
+                0x00001932       0x3d obj/o_kihon001.o
+ .debug_pubnames
+                0x0000196f       0x3d obj/o_kihon002.o
+ .debug_pubnames
+                0x000019ac       0x3d obj/o_kihon003.o
+ .debug_pubnames
+                0x000019e9       0x3d obj/o_kihon004.o
+ .debug_pubnames
+                0x00001a26       0x3d obj/o_kihon005.o
+ .debug_pubnames
+                0x00001a63       0x3d obj/o_kihon006.o
+ .debug_pubnames
+                0x00001aa0       0x3d obj/o_kihon007.o
+ .debug_pubnames
+                0x00001add       0x3d obj/o_kihon008.o
+ .debug_pubnames
+                0x00001b1a       0x3d obj/o_kihon009.o
+ .debug_pubnames
+                0x00001b57       0x3d obj/o_kihon010.o
+ .debug_pubnames
+                0x00001b94       0x41 obj/o_kougeki000.o
+ .debug_pubnames
+                0x00001bd5       0x41 obj/o_kougeki001.o
+ .debug_pubnames
+                0x00001c16       0x41 obj/o_kougeki002.o
+ .debug_pubnames
+                0x00001c57       0x41 obj/o_kougeki003.o
+ .debug_pubnames
+                0x00001c98       0x41 obj/o_kougeki004.o
+ .debug_pubnames
+                0x00001cd9       0x41 obj/o_kougeki005.o
+ .debug_pubnames
+                0x00001d1a       0x41 obj/o_kougeki006.o
+ .debug_pubnames
+                0x00001d5b       0x41 obj/o_kougeki007.o
+ .debug_pubnames
+                0x00001d9c       0x41 obj/o_kougeki008.o
+ .debug_pubnames
+                0x00001ddd       0x41 obj/o_kougeki009.o
+ .debug_pubnames
+                0x00001e1e       0x41 obj/o_kougeki010.o
+ .debug_pubnames
+                0x00001e5f       0x41 obj/o_kougeki011.o
+ .debug_pubnames
+                0x00001ea0       0x41 obj/o_kougeki012.o
+ .debug_pubnames
+                0x00001ee1       0x41 obj/o_kougeki013.o
+ .debug_pubnames
+                0x00001f22       0x41 obj/o_kougeki014.o
+ .debug_pubnames
+                0x00001f63       0x41 obj/o_kougeki015.o
+ .debug_pubnames
+                0x00001fa4       0x41 obj/o_kougeki016.o
+ .debug_pubnames
+                0x00001fe5       0x41 obj/o_kougeki017.o
+ .debug_pubnames
+                0x00002026       0x41 obj/o_kougeki018.o
+ .debug_pubnames
+                0x00002067       0x41 obj/o_kougeki019.o
+ .debug_pubnames
+                0x000020a8       0x41 obj/o_kougeki020.o
+ .debug_pubnames
+                0x000020e9       0x3f obj/o_yarare000.o
+ .debug_pubnames
+                0x00002128       0x3f obj/o_yarare001.o
+ .debug_pubnames
+                0x00002167       0x3f obj/o_yarare002.o
+ .debug_pubnames
+                0x000021a6       0x3f obj/o_yarare003.o
+ .debug_pubnames
+                0x000021e5       0x3f obj/o_yarare004.o
+ .debug_pubnames
+                0x00002224       0x3f obj/o_yarare005.o
+ .debug_pubnames
+                0x00002263       0x3f obj/o_yarare006.o
+ .debug_pubnames
+                0x000022a2       0x3f obj/o_yarare007.o
+ .debug_pubnames
+                0x000022e1       0x3f obj/o_yarare008.o
+ .debug_pubnames
+                0x00002320       0x3f obj/o_yarare009.o
+ .debug_pubnames
+                0x0000235f       0x3f obj/o_yarare010.o
+ .debug_pubnames
+                0x0000239e       0x3f obj/o_yarare011.o
+ .debug_pubnames
+                0x000023dd       0x3f obj/o_yarare012.o
+ .debug_pubnames
+                0x0000241c       0x3f obj/o_yarare013.o
+ .debug_pubnames
+                0x0000245b       0x3f obj/o_yarare014.o
+ .debug_pubnames
+                0x0000249a       0x3f obj/o_yarare015.o
+ .debug_pubnames
+                0x000024d9       0x3f obj/o_yarare016.o
+ .debug_pubnames
+                0x00002518       0x3f obj/o_yarare017.o
+ .debug_pubnames
+                0x00002557       0x3f obj/o_yarare018.o
+ .debug_pubnames
+                0x00002596       0x3f obj/o_yarare019.o
+ .debug_pubnames
+                0x000025d5       0x3f obj/o_yarare020.o
+ .debug_pubnames
+                0x00002614       0x3f obj/o_fukiya000.o
+ .debug_pubnames
+                0x00002653       0x2f obj/awa.o
+ .debug_pubnames
+                0x00002682       0x47 obj/ring_32_64_left.o
+ .debug_pubnames
+                0x000026c9       0x49 obj/ring_32_64_right.o
+ .debug_pubnames
+                0x00002712       0x46 bg_parts/umia_.o
+ .debug_pubnames
+                0x00002758       0x61 bg_parts/umi_ab_256x512.o
+ .debug_pubnames
+                0x000027b9       0x5e bg_parts/sango1024x256.o
+ .debug_pubnames
+                0x00002817       0x43 bg_parts/sora.o
+ .debug_pubnames
+                0x0000285a       0x49 bg_parts/light4.o
+ .debug_pubnames
+                0x000028a3       0x39 bg_parts/wave2nd1.o
+ .debug_pubnames
+                0x000028dc       0x39 bg_parts/wave2nd2.o
+ .debug_pubnames
+                0x00002915       0x39 bg_parts/wave2nd3.o
+
+.debug_info     0x00000000   0x14ae39
+ *(.debug_info)
+ .debug_info    0x00000000     0x3725 main.o
+ .debug_info    0x00003725     0x435d player.o
+ .debug_info    0x00007a82     0x3ce7 player_dat.o
+ .debug_info    0x0000b769     0x427c enemy.o
+ .debug_info    0x0000f9e5     0x3d84 enemy_dat.o
+ .debug_info    0x00013769     0x2d10 game_dat.o
+ .debug_info    0x00016479     0x4160 bg.o
+ .debug_info    0x0001a5d9     0x3a29 hitcheck.o
+ .debug_info    0x0001e002     0x362b ring.o
+ .debug_info    0x0002162d     0x265d obj/r_kihon0.o
+ .debug_info    0x00023c8a     0x265d obj/r_kihon1.o
+ .debug_info    0x000262e7     0x265d obj/r_kihon2.o
+ .debug_info    0x00028944     0x265d obj/r_kihon3.o
+ .debug_info    0x0002afa1     0x265d obj/r_kihon4.o
+ .debug_info    0x0002d5fe     0x265d obj/r_kihon5.o
+ .debug_info    0x0002fc5b     0x265d obj/r_kihon6.o
+ .debug_info    0x000322b8     0x265d obj/r_kihon7.o
+ .debug_info    0x00034915     0x2654 obj/r_up0.o
+ .debug_info    0x00036f69     0x2654 obj/r_up1.o
+ .debug_info    0x000395bd     0x2654 obj/r_up2.o
+ .debug_info    0x0003bc11     0x2654 obj/r_up3.o
+ .debug_info    0x0003e265     0x2654 obj/r_up4.o
+ .debug_info    0x000408b9     0x2654 obj/r_up5.o
+ .debug_info    0x00042f0d     0x2654 obj/r_up6.o
+ .debug_info    0x00045561     0x2654 obj/r_up7.o
+ .debug_info    0x00047bb5     0x2654 obj/r_up8.o
+ .debug_info    0x0004a209     0x265d obj/r_go_up0.o
+ .debug_info    0x0004c866     0x265d obj/r_go_up1.o
+ .debug_info    0x0004eec3     0x265d obj/r_go_up2.o
+ .debug_info    0x00051520     0x265d obj/r_go_up3.o
+ .debug_info    0x00053b7d     0x265d obj/r_go_up4.o
+ .debug_info    0x000561da     0x265d obj/r_go_up5.o
+ .debug_info    0x00058837     0x265d obj/r_go_up6.o
+ .debug_info    0x0005ae94     0x265d obj/r_go_up7.o
+ .debug_info    0x0005d4f1     0x265a obj/r_down0.o
+ .debug_info    0x0005fb4b     0x265a obj/r_down1.o
+ .debug_info    0x000621a5     0x265a obj/r_down2.o
+ .debug_info    0x000647ff     0x265a obj/r_down3.o
+ .debug_info    0x00066e59     0x265a obj/r_down4.o
+ .debug_info    0x000694b3     0x265a obj/r_down5.o
+ .debug_info    0x0006bb0d     0x265a obj/r_down6.o
+ .debug_info    0x0006e167     0x265a obj/r_down7.o
+ .debug_info    0x000707c1     0x265a obj/r_down8.o
+ .debug_info    0x00072e1b     0x2663 obj/r_go_down0.o
+ .debug_info    0x0007547e     0x2663 obj/r_go_down1.o
+ .debug_info    0x00077ae1     0x2663 obj/r_go_down2.o
+ .debug_info    0x0007a144     0x2663 obj/r_go_down3.o
+ .debug_info    0x0007c7a7     0x2663 obj/r_go_down4.o
+ .debug_info    0x0007ee0a     0x2663 obj/r_go_down5.o
+ .debug_info    0x0008146d     0x2663 obj/r_go_down6.o
+ .debug_info    0x00083ad0     0x2663 obj/r_go_down7.o
+ .debug_info    0x00086133     0x265a obj/r_jump0.o
+ .debug_info    0x0008878d     0x265a obj/r_jump1.o
+ .debug_info    0x0008ade7     0x265a obj/r_jump2.o
+ .debug_info    0x0008d441     0x265a obj/r_jump3.o
+ .debug_info    0x0008fa9b     0x265a obj/r_jump4.o
+ .debug_info    0x000920f5     0x265a obj/r_jump5.o
+ .debug_info    0x0009474f     0x265a obj/r_jump6.o
+ .debug_info    0x00096da9     0x265a obj/r_jump7.o
+ .debug_info    0x00099403     0x265a obj/r_jump8.o
+ .debug_info    0x0009ba5d     0x265a obj/r_jump9.o
+ .debug_info    0x0009e0b7     0x265d obj/r_jump10.o
+ .debug_info    0x000a0714     0x2660 obj/r_attack1.o
+ .debug_info    0x000a2d74     0x2660 obj/r_attack2.o
+ .debug_info    0x000a53d4     0x2660 obj/r_attack3.o
+ .debug_info    0x000a7a34     0x2660 obj/r_attack4.o
+ .debug_info    0x000aa094     0x2660 obj/r_attack5.o
+ .debug_info    0x000ac6f4     0x2660 obj/r_attack6.o
+ .debug_info    0x000aed54     0x2660 obj/r_attack7.o
+ .debug_info    0x000b13b4     0x2663 obj/o_kihon001.o
+ .debug_info    0x000b3a17     0x2663 obj/o_kihon002.o
+ .debug_info    0x000b607a     0x2663 obj/o_kihon003.o
+ .debug_info    0x000b86dd     0x2663 obj/o_kihon004.o
+ .debug_info    0x000bad40     0x2663 obj/o_kihon005.o
+ .debug_info    0x000bd3a3     0x2663 obj/o_kihon006.o
+ .debug_info    0x000bfa06     0x2663 obj/o_kihon007.o
+ .debug_info    0x000c2069     0x2663 obj/o_kihon008.o
+ .debug_info    0x000c46cc     0x2663 obj/o_kihon009.o
+ .debug_info    0x000c6d2f     0x2663 obj/o_kihon010.o
+ .debug_info    0x000c9392     0x2669 obj/o_kougeki000.o
+ .debug_info    0x000cb9fb     0x2669 obj/o_kougeki001.o
+ .debug_info    0x000ce064     0x2669 obj/o_kougeki002.o
+ .debug_info    0x000d06cd     0x2669 obj/o_kougeki003.o
+ .debug_info    0x000d2d36     0x2669 obj/o_kougeki004.o
+ .debug_info    0x000d539f     0x2669 obj/o_kougeki005.o
+ .debug_info    0x000d7a08     0x2669 obj/o_kougeki006.o
+ .debug_info    0x000da071     0x2669 obj/o_kougeki007.o
+ .debug_info    0x000dc6da     0x2669 obj/o_kougeki008.o
+ .debug_info    0x000ded43     0x2669 obj/o_kougeki009.o
+ .debug_info    0x000e13ac     0x2669 obj/o_kougeki010.o
+ .debug_info    0x000e3a15     0x2669 obj/o_kougeki011.o
+ .debug_info    0x000e607e     0x2669 obj/o_kougeki012.o
+ .debug_info    0x000e86e7     0x2669 obj/o_kougeki013.o
+ .debug_info    0x000ead50     0x2669 obj/o_kougeki014.o
+ .debug_info    0x000ed3b9     0x2669 obj/o_kougeki015.o
+ .debug_info    0x000efa22     0x2669 obj/o_kougeki016.o
+ .debug_info    0x000f208b     0x2669 obj/o_kougeki017.o
+ .debug_info    0x000f46f4     0x2669 obj/o_kougeki018.o
+ .debug_info    0x000f6d5d     0x2669 obj/o_kougeki019.o
+ .debug_info    0x000f93c6     0x2669 obj/o_kougeki020.o
+ .debug_info    0x000fba2f     0x2666 obj/o_yarare000.o
+ .debug_info    0x000fe095     0x2666 obj/o_yarare001.o
+ .debug_info    0x001006fb     0x2666 obj/o_yarare002.o
+ .debug_info    0x00102d61     0x2666 obj/o_yarare003.o
+ .debug_info    0x001053c7     0x2666 obj/o_yarare004.o
+ .debug_info    0x00107a2d     0x2666 obj/o_yarare005.o
+ .debug_info    0x0010a093     0x2666 obj/o_yarare006.o
+ .debug_info    0x0010c6f9     0x2666 obj/o_yarare007.o
+ .debug_info    0x0010ed5f     0x2666 obj/o_yarare008.o
+ .debug_info    0x001113c5     0x2666 obj/o_yarare009.o
+ .debug_info    0x00113a2b     0x2666 obj/o_yarare010.o
+ .debug_info    0x00116091     0x2666 obj/o_yarare011.o
+ .debug_info    0x001186f7     0x2666 obj/o_yarare012.o
+ .debug_info    0x0011ad5d     0x2666 obj/o_yarare013.o
+ .debug_info    0x0011d3c3     0x2666 obj/o_yarare014.o
+ .debug_info    0x0011fa29     0x2666 obj/o_yarare015.o
+ .debug_info    0x0012208f     0x2666 obj/o_yarare016.o
+ .debug_info    0x001246f5     0x2666 obj/o_yarare017.o
+ .debug_info    0x00126d5b     0x2666 obj/o_yarare018.o
+ .debug_info    0x001293c1     0x2666 obj/o_yarare019.o
+ .debug_info    0x0012ba27     0x2666 obj/o_yarare020.o
+ .debug_info    0x0012e08d     0x2665 obj/o_fukiya000.o
+ .debug_info    0x001306f2     0x264d obj/awa.o
+ .debug_info    0x00132d3f     0x2672 obj/ring_32_64_left.o
+ .debug_info    0x001353b1     0x2675 obj/ring_32_64_right.o
+ .debug_info    0x00137a26     0x2688 bg_parts/umia_.o
+ .debug_info    0x0013a0ae     0x26ad bg_parts/umi_ab_256x512.o
+ .debug_info    0x0013c75b     0x26a9 bg_parts/sango1024x256.o
+ .debug_info    0x0013ee04     0x2685 bg_parts/sora.o
+ .debug_info    0x00141489     0x268d bg_parts/light4.o
+ .debug_info    0x00143b16     0x2661 bg_parts/wave2nd1.o
+ .debug_info    0x00146177     0x2661 bg_parts/wave2nd2.o
+ .debug_info    0x001487d8     0x2661 bg_parts/wave2nd3.o
+
+.debug_abbrev   0x00000000     0x7127
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x1d1 main.o
+ .debug_abbrev  0x000001d1      0x21b player.o
+ .debug_abbrev  0x000003ec      0x16c player_dat.o
+ .debug_abbrev  0x00000558      0x1fc enemy.o
+ .debug_abbrev  0x00000754      0x15b enemy_dat.o
+ .debug_abbrev  0x000008af       0xfa game_dat.o
+ .debug_abbrev  0x000009a9      0x20b bg.o
+ .debug_abbrev  0x00000bb4      0x195 hitcheck.o
+ .debug_abbrev  0x00000d49      0x1e5 ring.o
+ .debug_abbrev  0x00000f2e       0xca obj/r_kihon0.o
+ .debug_abbrev  0x00000ff8       0xca obj/r_kihon1.o
+ .debug_abbrev  0x000010c2       0xca obj/r_kihon2.o
+ .debug_abbrev  0x0000118c       0xca obj/r_kihon3.o
+ .debug_abbrev  0x00001256       0xca obj/r_kihon4.o
+ .debug_abbrev  0x00001320       0xca obj/r_kihon5.o
+ .debug_abbrev  0x000013ea       0xca obj/r_kihon6.o
+ .debug_abbrev  0x000014b4       0xca obj/r_kihon7.o
+ .debug_abbrev  0x0000157e       0xca obj/r_up0.o
+ .debug_abbrev  0x00001648       0xca obj/r_up1.o
+ .debug_abbrev  0x00001712       0xca obj/r_up2.o
+ .debug_abbrev  0x000017dc       0xca obj/r_up3.o
+ .debug_abbrev  0x000018a6       0xca obj/r_up4.o
+ .debug_abbrev  0x00001970       0xca obj/r_up5.o
+ .debug_abbrev  0x00001a3a       0xca obj/r_up6.o
+ .debug_abbrev  0x00001b04       0xca obj/r_up7.o
+ .debug_abbrev  0x00001bce       0xca obj/r_up8.o
+ .debug_abbrev  0x00001c98       0xca obj/r_go_up0.o
+ .debug_abbrev  0x00001d62       0xca obj/r_go_up1.o
+ .debug_abbrev  0x00001e2c       0xca obj/r_go_up2.o
+ .debug_abbrev  0x00001ef6       0xca obj/r_go_up3.o
+ .debug_abbrev  0x00001fc0       0xca obj/r_go_up4.o
+ .debug_abbrev  0x0000208a       0xca obj/r_go_up5.o
+ .debug_abbrev  0x00002154       0xca obj/r_go_up6.o
+ .debug_abbrev  0x0000221e       0xca obj/r_go_up7.o
+ .debug_abbrev  0x000022e8       0xca obj/r_down0.o
+ .debug_abbrev  0x000023b2       0xca obj/r_down1.o
+ .debug_abbrev  0x0000247c       0xca obj/r_down2.o
+ .debug_abbrev  0x00002546       0xca obj/r_down3.o
+ .debug_abbrev  0x00002610       0xca obj/r_down4.o
+ .debug_abbrev  0x000026da       0xca obj/r_down5.o
+ .debug_abbrev  0x000027a4       0xca obj/r_down6.o
+ .debug_abbrev  0x0000286e       0xca obj/r_down7.o
+ .debug_abbrev  0x00002938       0xca obj/r_down8.o
+ .debug_abbrev  0x00002a02       0xca obj/r_go_down0.o
+ .debug_abbrev  0x00002acc       0xca obj/r_go_down1.o
+ .debug_abbrev  0x00002b96       0xca obj/r_go_down2.o
+ .debug_abbrev  0x00002c60       0xca obj/r_go_down3.o
+ .debug_abbrev  0x00002d2a       0xca obj/r_go_down4.o
+ .debug_abbrev  0x00002df4       0xca obj/r_go_down5.o
+ .debug_abbrev  0x00002ebe       0xca obj/r_go_down6.o
+ .debug_abbrev  0x00002f88       0xca obj/r_go_down7.o
+ .debug_abbrev  0x00003052       0xca obj/r_jump0.o
+ .debug_abbrev  0x0000311c       0xca obj/r_jump1.o
+ .debug_abbrev  0x000031e6       0xca obj/r_jump2.o
+ .debug_abbrev  0x000032b0       0xca obj/r_jump3.o
+ .debug_abbrev  0x0000337a       0xca obj/r_jump4.o
+ .debug_abbrev  0x00003444       0xca obj/r_jump5.o
+ .debug_abbrev  0x0000350e       0xca obj/r_jump6.o
+ .debug_abbrev  0x000035d8       0xca obj/r_jump7.o
+ .debug_abbrev  0x000036a2       0xca obj/r_jump8.o
+ .debug_abbrev  0x0000376c       0xca obj/r_jump9.o
+ .debug_abbrev  0x00003836       0xca obj/r_jump10.o
+ .debug_abbrev  0x00003900       0xca obj/r_attack1.o
+ .debug_abbrev  0x000039ca       0xca obj/r_attack2.o
+ .debug_abbrev  0x00003a94       0xca obj/r_attack3.o
+ .debug_abbrev  0x00003b5e       0xca obj/r_attack4.o
+ .debug_abbrev  0x00003c28       0xca obj/r_attack5.o
+ .debug_abbrev  0x00003cf2       0xca obj/r_attack6.o
+ .debug_abbrev  0x00003dbc       0xca obj/r_attack7.o
+ .debug_abbrev  0x00003e86       0xca obj/o_kihon001.o
+ .debug_abbrev  0x00003f50       0xca obj/o_kihon002.o
+ .debug_abbrev  0x0000401a       0xca obj/o_kihon003.o
+ .debug_abbrev  0x000040e4       0xca obj/o_kihon004.o
+ .debug_abbrev  0x000041ae       0xca obj/o_kihon005.o
+ .debug_abbrev  0x00004278       0xca obj/o_kihon006.o
+ .debug_abbrev  0x00004342       0xca obj/o_kihon007.o
+ .debug_abbrev  0x0000440c       0xca obj/o_kihon008.o
+ .debug_abbrev  0x000044d6       0xca obj/o_kihon009.o
+ .debug_abbrev  0x000045a0       0xca obj/o_kihon010.o
+ .debug_abbrev  0x0000466a       0xca obj/o_kougeki000.o
+ .debug_abbrev  0x00004734       0xca obj/o_kougeki001.o
+ .debug_abbrev  0x000047fe       0xca obj/o_kougeki002.o
+ .debug_abbrev  0x000048c8       0xca obj/o_kougeki003.o
+ .debug_abbrev  0x00004992       0xca obj/o_kougeki004.o
+ .debug_abbrev  0x00004a5c       0xca obj/o_kougeki005.o
+ .debug_abbrev  0x00004b26       0xca obj/o_kougeki006.o
+ .debug_abbrev  0x00004bf0       0xca obj/o_kougeki007.o
+ .debug_abbrev  0x00004cba       0xca obj/o_kougeki008.o
+ .debug_abbrev  0x00004d84       0xca obj/o_kougeki009.o
+ .debug_abbrev  0x00004e4e       0xca obj/o_kougeki010.o
+ .debug_abbrev  0x00004f18       0xca obj/o_kougeki011.o
+ .debug_abbrev  0x00004fe2       0xca obj/o_kougeki012.o
+ .debug_abbrev  0x000050ac       0xca obj/o_kougeki013.o
+ .debug_abbrev  0x00005176       0xca obj/o_kougeki014.o
+ .debug_abbrev  0x00005240       0xca obj/o_kougeki015.o
+ .debug_abbrev  0x0000530a       0xca obj/o_kougeki016.o
+ .debug_abbrev  0x000053d4       0xca obj/o_kougeki017.o
+ .debug_abbrev  0x0000549e       0xca obj/o_kougeki018.o
+ .debug_abbrev  0x00005568       0xca obj/o_kougeki019.o
+ .debug_abbrev  0x00005632       0xca obj/o_kougeki020.o
+ .debug_abbrev  0x000056fc       0xca obj/o_yarare000.o
+ .debug_abbrev  0x000057c6       0xca obj/o_yarare001.o
+ .debug_abbrev  0x00005890       0xca obj/o_yarare002.o
+ .debug_abbrev  0x0000595a       0xca obj/o_yarare003.o
+ .debug_abbrev  0x00005a24       0xca obj/o_yarare004.o
+ .debug_abbrev  0x00005aee       0xca obj/o_yarare005.o
+ .debug_abbrev  0x00005bb8       0xca obj/o_yarare006.o
+ .debug_abbrev  0x00005c82       0xca obj/o_yarare007.o
+ .debug_abbrev  0x00005d4c       0xca obj/o_yarare008.o
+ .debug_abbrev  0x00005e16       0xca obj/o_yarare009.o
+ .debug_abbrev  0x00005ee0       0xca obj/o_yarare010.o
+ .debug_abbrev  0x00005faa       0xca obj/o_yarare011.o
+ .debug_abbrev  0x00006074       0xca obj/o_yarare012.o
+ .debug_abbrev  0x0000613e       0xca obj/o_yarare013.o
+ .debug_abbrev  0x00006208       0xca obj/o_yarare014.o
+ .debug_abbrev  0x000062d2       0xca obj/o_yarare015.o
+ .debug_abbrev  0x0000639c       0xca obj/o_yarare016.o
+ .debug_abbrev  0x00006466       0xca obj/o_yarare017.o
+ .debug_abbrev  0x00006530       0xca obj/o_yarare018.o
+ .debug_abbrev  0x000065fa       0xca obj/o_yarare019.o
+ .debug_abbrev  0x000066c4       0xca obj/o_yarare020.o
+ .debug_abbrev  0x0000678e       0xc3 obj/o_fukiya000.o
+ .debug_abbrev  0x00006851       0xc3 obj/awa.o
+ .debug_abbrev  0x00006914       0xca obj/ring_32_64_left.o
+ .debug_abbrev  0x000069de       0xca obj/ring_32_64_right.o
+ .debug_abbrev  0x00006aa8       0xca bg_parts/umia_.o
+ .debug_abbrev  0x00006b72       0xdb bg_parts/umi_ab_256x512.o
+ .debug_abbrev  0x00006c4d       0xdb bg_parts/sango1024x256.o
+ .debug_abbrev  0x00006d28       0xdb bg_parts/sora.o
+ .debug_abbrev  0x00006e03       0xdb bg_parts/light4.o
+ .debug_abbrev  0x00006ede       0xc3 bg_parts/wave2nd1.o
+ .debug_abbrev  0x00006fa1       0xc3 bg_parts/wave2nd2.o
+ .debug_abbrev  0x00007064       0xc3 bg_parts/wave2nd3.o
+
+.debug_line     0x00000000     0x2f50
+ *(.debug_line)
+ .debug_line    0x00000000      0x386 main.o
+ .debug_line    0x00000386      0xdad player.o
+ .debug_line    0x00001133      0xae2 enemy.o
+ .debug_line    0x00001c15      0xcdc bg.o
+ .debug_line    0x000028f1      0x2ed hitcheck.o
+ .debug_line    0x00002bde      0x372 ring.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.stack          0x00080000        0x0
+                0x00080000                _stack=.
+ *(.stack)
+OUTPUT(dolphin.elf elf32-littlearm)

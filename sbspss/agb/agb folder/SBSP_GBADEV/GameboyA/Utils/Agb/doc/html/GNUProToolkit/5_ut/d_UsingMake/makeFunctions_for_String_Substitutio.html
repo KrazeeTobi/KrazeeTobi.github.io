@@ -1,0 +1,290 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Functions for String Substitution and Analysis</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeFunction_Call_Syntax.html">Previous</A>|<A HREF="makeFunctions_for_File_Names.html">Next</A>
+<BR><A NAME="off_1507576"></A><A NAME="db857374"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Functions
+for string substitution and analysis</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+following functions operate on strings.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>$(subst</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>from</I>,</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>to</I>,</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>text</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Performs a textual replacement
+on the text </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>:
+each occurrence of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>from
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>is replaced
+by </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>to</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The result is substituted for the function call.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(subst
+ee,EE,feet on the street)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+substitutes the string ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fEEt
+on the strEEt</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(patsubst</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>pattern</I>,</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>replacement</I>,
+<I>text</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Finds whitespace-separated
+words in </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text </FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>that
+match </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>pattern</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and replaces them with </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>replacement</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+In this string, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>pattern</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may contain a ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+which acts as a wildcard, matching any number of any characters within
+a word. If </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>replacement</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+also contains a ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+the ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is replaced by the text that matched the ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>pattern</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+characters in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>patsubst</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function invocations can be quoted with preceding backslashes (‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>\</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Backslashes that would otherwise
+quote ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+characters can be quoted with more backslashes. Backslashes that quote
+‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+characters or other backslashes are removed from the pattern before it
+compares file names or has a stem substituted into it. Backslashes that
+are not in danger of quoting ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+characters go unmolested.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, the pattern
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>the<B>\%</B>weird<B>\\%</B>pattern<B>\\</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+has ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>the<B>%</B>weird<B>\</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+preceding the operative ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+character, and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>pattern<B>\\</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+following it. The final two backslashes are left alone because they cannot
+affect any ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+character. Whitespace between words is folded into single space characters;
+leading and trailing whitespace is discarded.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(patsubst
+%.c,%.o,x.c.c bar.c)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+produces the value, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x.c.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bar.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Substitution references are a simpler way to get the effect of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>patsubst</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function (see <FONT COLOR="#008000"><A HREF="makeSubstitution_References.html">Substitution
+references</A></FONT>).</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>$(<I>var</I>: <I>pattern</I>=<I>replacement</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></UL>
+</UL>
+&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The previous example of
+a substitution reference is equivalent to the following example’s input.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>$(patsubst <I>pattern</I>,<I>replacement</I>,$(<I>var</I>))</FONT></FONT></UL>
+</UL>
+&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The second shorthand simplifies
+one of the most common uses of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>patsubst:</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+replacing the suffix at the end of file names.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>$(<I>var</I>:<I>suffix</I>=<I>replacement</I>)</FONT></FONT></UL>
+</UL>
+&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>is equivalent to</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>$(patsubst %<I>suffix</I>,%<I>replacement</I>,$(<I>var</I>))</FONT></FONT></UL>
+</UL>
+&nbsp;
+<UL><FONT SIZE=+1><FONT FACE="Times New Roman">For example, you might have
+a list of object files: </FONT><TT>objects = foo.o bar.o baz.o</TT><FONT FACE="Times New Roman"></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To get the list of corresponding
+source files, you could simply write:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>$(objects:.o=.c)</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>instead of using the general
+form:</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>$(patsubst %.o,%.c,$(objects))</FONT></FONT></UL>
+</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0></FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(strip</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>string</I>)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Removes leading and trailing
+whitespace from </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>string</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and replaces each internal sequence of one or more whitespace characters
+with a single space. Thus, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(strip
+a b c )</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ results
+in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a b c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>strip</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+can be very useful when used in conjunction with conditionals.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When comparing something
+with an empty string using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ifeq</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ifneq</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+you usually want a string of just whitespace to match the empty string
+(see <FONT COLOR="#008000"><A HREF="makeConditional_Parts_of_Makefiles.html">Conditional
+parts of makefiles</A></FONT>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Thus, the following may fail
+to have the desired results.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>.PHONY: all</FONT></FONT>
+<BR><FONT SIZE=+0><FONT FACE="Courier New">ifneq </FONT><FONT FACE="Times New Roman">“</FONT><FONT FACE="Courier New">$(needs_made)</FONT><FONT FACE="Times New Roman">”</FONT><FONT FACE="Courier New">
+</FONT><FONT FACE="Times New Roman">“”</FONT><FONT FACE="Courier New"></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>all: $(needs_made)</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>else</FONT></FONT>
+<BR><FONT SIZE=+0><FONT FACE="Courier New">all:;@echo </FONT><FONT FACE="Times New Roman">‘</FONT><FONT FACE="Courier New">Nothing
+to make!</FONT><FONT FACE="Times New Roman">’</FONT><FONT FACE="Courier New"></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>endif</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Replacing the variable reference,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(needs_made)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+with the function call ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(strip
+$(needs_made))</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ifneq</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive would make it more robust.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(findstring <I>find</I>,<I>in</I>)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Searches </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>in</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for an occurrence of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>find</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If it occurs, the value is </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>find</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+otherwise, the value is empty. You can use this function in a conditional
+to test for the presence of a specific substring in a given string.</FONT></FONT>
+<BR>&nbsp;</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Thus, the two following examples
+produce, respectively, the values ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and an empty string.</FONT></FONT>
+<UL>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(findstring a,a b c)</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>$(findstring a,b c)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>See <FONT COLOR="#008000"><A HREF="makeConditionals_that_Test_Flags.html">Conditions
+that test flags</A></FONT> for a practical application of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>findstring</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(filter <I>pattern</I> ...,<I>text</I>)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Removes all whitespace-separated
+words in </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+that <I>do not</I> match any of the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>pattern</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+words, returning only words that <I>do</I> match. The patterns are written
+using ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+just like the patterns used in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>patsubst</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>filter</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function can be used to separate out different types of strings (such as
+file names) in a variable. Consider the following, for example.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>sources := foo.c bar.c baz.s
+ugh.h</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>foo: $(sources)</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</B>cc $(filter %.c %.s,$(sources)) -o foo</FONT></FONT></UL>
+</UL>
+&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>With this statement, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+depends on ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bar.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>baz.s</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ugh.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+but only ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bar.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>baz.s</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+should be specified in the command to the compiler.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(filter-out <I>pattern</I> ...,<I>text</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Removes all whitespace-separated
+words in </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+that <I>do</I> match the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>pattern
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>words, returning
+only the words that <I>do not</I> match. This is the exact opposite of
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>filter</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function. Consider the following for example.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>objects=main1.o foo.o main2.o
+bar.o</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>mains=main1.o main2.o</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Given the previous lines,
+the following then generates a list which contains all the object files
+not in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mains</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(filter-out $(mains),$(objects))</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>$(sort <I>list</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Sorts the words of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in lexical order, removing duplicate words. The output is a list of words
+separated by single spaces.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Thus,</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+$(sort foo bar lose)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+returns the value, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bar
+foo lose</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Incidentally, since </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sort</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+removes duplicate words, you can use it for this purpose even if you don’t
+care about the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sort</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+order.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The following is a realistic
+example of the use of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>subst</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>patsubst</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Suppose that a makefile uses
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>VPATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+variable to specify a list of directories that make should search for dependency
+files (see </FONT></FONT><FONT COLOR="#008000"><A HREF="makeVPATH_Search_Path_for_All_Depend.html"><B><FONT FACE="Courier New"><FONT SIZE=+0>VPATH</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>:
+search path for all dependencies</FONT></FONT></A></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+The following example shows how to tell the C compiler to search for header
+files in the same list of directories. The value of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>VPATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a list of directories separated by colons, such as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>src:../headers</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+First, the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>subst</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function is used to change the colons to spaces:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>$(subst :, ,$(VPATH))</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This produces ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>src
+../headers</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’. Then,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>patsubst</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is used to turn each directory name into a ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-I</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+flag. These can be added to the value of the variable </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CFLAGS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+which is passed automatically to the C compiler, as in the following.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>override CFLAGS += $(patsubst
+%,-I%,$(subst :, ,$(VPATH)))</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The effect is to append the
+text, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-Isrc -I../headers</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+to the previously given value of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CFLAGS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>override</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive is used so that the new value is assigned even if the previous
+value of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CFLAGS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+was specified with a command argument (see <FONT COLOR="#008000"><A HREF="makeThe_override_Directive.html">The
+</A></FONT></FONT></FONT><FONT COLOR="#008000"><A HREF="makeThe_override_Directive.html"><B><FONT FACE="Courier New"><FONT SIZE=+0>override</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive</FONT></FONT></A></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeFunction_Call_Syntax.html">Previous</A>|<A HREF="makeFunctions_for_File_Names.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

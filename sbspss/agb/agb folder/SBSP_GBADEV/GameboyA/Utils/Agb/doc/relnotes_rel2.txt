@@ -1,0 +1,441 @@
+//*****************************************************************
+//     Release Notes: GameBoy Advance Developers Kit Version 2.0  *
+//     2000/6/7 relnotes_rel2.txt                                 *
+//     Copyright (C) 1999-2000 NINTENDO Co.,Ltd.                  *
+//*****************************************************************
+
+Overview:
+--------
+        GameBoy Advance Developers Kit Version 2.0 (AGBDevKit Release 2) has 
+	been remade for AGB target board TS2 (TS2). Therefore, please note it 
+	does not work with the previously released AGB target board, TS1.
+
+        Please download the latest IS-AGB-EMULATOR, IS-AGB-DEBUGGER, and 
+	IS-AGB-CHARACTER, which are compatible with TS2, from the NOA 
+	Engineering web site. 
+         
+          http://www.noa-engineering.com 
+
+        To learn how to change the source, please refer to the guide,
+        "/agb/doc/AGB-CPU-TS1toAGB-CPU-TS2.txt". GCC changes
+	    are described in "/agb/doc/GNUPro-98r2toGNUPro-99r1.txt".
+
+        Please see "/AGB/doc/AGB/AGB.htm" for details of each document.
+        Before you install, if necessary, erase under /AGB and under 
+	    /Program Files/Cygnus after backing up.  
+
+        
+Modified functions with TS2:
+---------------------------
+
+    Change in CPU internal Work RAM capacitiy  
+
+      Changed from 48 Kbytes to 32 Kbytes.
+
+    Deletion of IR communications function 
+
+      With Game Boy Color (CGB), IR communications function, which is a standard 
+      feature for the CGB unit, was deleted.  Therefore, this function does 
+      not work when CGB software uses the IR communications function.  
+
+    Changes in DMA function  
+
+      Added the decrement transfer function.   
+      Added a transfer function to CPU external Work RAM. 
+
+    Change in center coordinate for OBJ rotation.  
+
+      Changed from the center of dot to the boundary of dot. 
+
+    Change in OBJ type and specification method.  
+
+      Changed from 16 types to 12 types, and changed the specification method 
+      of OBJ.   
+
+
+New functions of TS2:
+--------------------
+
+    Addition of CPU external Work RAM.
+
+      A 256 Kbyte (2WAIT) CPU external Work RAM was added to AGB.  
+
+    Serial Communications Function 
+
+      16 bit multi-play communication function (can be used)
+  
+        When more than one person (2 - 4 people maximum) play with AGB (AGB mode),
+        this function is used.  It has a multiple simultaneous communication 
+	    function using the UART method.  
+
+        The special cable exclusively for AGB (optional accessory) is necessary. 
+
+        * With AGB (AGB mode), using the existing cable for Game Boy series is 
+	  prohibited.  
+
+      CGB compatible serial communications function (it is prohibited to use)  
+
+        With AGB (AGB mode or CGB compatible mode), it is used to communicate 
+	    with portable telephones.   
+        
+      UART communications function (not decided)
+
+        High-speed communications by UART method is possible.  
+        Special equipment or cable will be necessary to use this function; 
+	    however, they are not ready yet. 
+
+      General communications function (not decided)
+
+        By directly controlling communication terminal, communication with any 
+	    protocol is possible.  It is planned to control infrared adapter 
+	    (optional accessory) using this function.  Infrared adapter is currently
+	    being prepared.  
+
+      JOY Bus communications function (not decided)
+
+        Our standard JOY bus communication is possible.  
+        Special equipment or cable will be necessary to use this function; 
+	    however, they are not ready yet. 
+
+    AgbMultiBoot.h
+
+       A definition of multi play boot library was added.  
+
+
+New sample program:
+------------------
+
+    font_sample
+
+      Includes display samples using LC font by Sharp and each LC font.
+
+
+New demo program:
+----------------
+
+    dolphin
+      
+      Demo in which dolphin swims in the ocean. 
+      Swaying underwater is expressed by H-DMA, and ripples are reflected on the
+      dolphin by OBJ Window function.   
+      
+      * AGB does not emulate dolphin._:)
+
+
+New tools:
+---------
+
+    agbcomp
+
+      Compresses and outputs binary data.  Output file can be decompressed using
+      a library for decompressing defined by AgbSystemCall.h.   
+
+    
+
+Modified sample program:
+-----------------------
+
+    Overall sample programs 
+
+      All of sample programs have been modified due to the changes of compiler, 
+      header, and libraries.  For modifying method, please see the guide, 
+      "AGB-CPU-TS1-->How to Upgrade-AGB-CPU-TS2.txt", which uses a sample called
+      "simple."   
+
+Modified sample program:
+-----------------------
+
+    yoshi
+
+      All of demo samples have been modified due to the changes of compiler, 
+      header, and libraries.  Use this as a porting sample, and not as a working
+      sample, at this time (sound is not played).      
+
+
+Sample programs omitted this time:
+---------------------------------
+
+    Communications sample
+
+      Sample program to use the special cable for AGB is not included.  
+
+    Sound sample 
+
+      As the specifications of the sound driver included in the internal ROM of 
+      TS2 are changing, samples which use the sound driver are not included.  
+
+    Previewer
+
+      Sample to preview graphics by IS-AGB-EMULATOR is not included.  
+
+    * Above sample programs will be released via NOA Engineering Web Site later.
+
+
+Modified functions:
+------------------
+
+    AgbSystemCall.h
+
+      System calls have been modified considerably.  Do not use the sound driver
+      and sound library because different types from the final product are built
+      in the internal ROM. The library which is executed in CPU internal RAM 
+      will be released via our web site in late June.   
+
+      * However, there is a possibility of other changes.  
+
+       Addeded macros and functions 
+         SoftReset()
+         RegisterRamReset()
+         IntrWait()
+         VBlankIntrWait()
+         Sqrt()
+         ArcTan()
+         ArcTan2()
+         MultiBoot()
+         
+       Deleted macros and functions  
+         
+         IrqMaster_Disable()
+         IrqMaster_Enable()
+         FiqMaster_Enable()
+         SemiStop()
+         PauseRegRead()
+         OamSortSet()
+
+       Modified macros and functions 
+         FullStop() --> Stop()
+
+       Macros and functions that will be used later 
+         SoundDriverMode()
+         SoundDriverVSyncOff()
+         SoundDriverVSyncOn()
+         MidiKey2Freq()
+         MusicPlayerOpen()
+         MusicPlayerStart()
+         MusicPlayerStop()
+         MusicPlayerContinue()
+         MusicPlayerFadeOut()
+         
+    Agb.h
+
+       AgbMultiBoot.h was added.  
+
+    AgbDefine.h
+
+       Definitions of register & RAM, reset, and system calls were added.  
+
+       Method to specify OBJ in the definition of OAM was changed.  
+
+       The definition of color palette data was changed.  
+
+       Definitions of program, status, and register were changed.  
+
+       Definitions of interrupt request flag and interrupt enable flag were 
+       changed.  
+
+       The definition of SIO control was modified considerably.  
+
+       Definitions of JOY bus and control were added.  
+
+       Definitions of JOY bus and status were added.  
+
+       The definition of general use input/output control was added.  
+
+       The definition of DMA control was changed.  
+       
+    AgbMacro.h
+
+       Added macro 
+
+         IntrCheckSet()
+       
+    AgbMemoryMap.h  
+
+       Because External Work RAM (2M bit) was added for TS2, memory map and 
+       memory size, including the existing Work RAM, were changed.  
+       
+       Definitions of register and address were changed. 
+
+       Definitions of register and offset were changed.  
+
+       "Interrupt master enable flag", which had been assigned in the register 
+       IE was assigned to the new IME register.  Therefore, you need to set the 
+       new IME register (4000208h) to "1" when interrupting.  
+
+    AgbSound.h
+
+       The definition of the AGB standard sound driver was modified considerably.
+       However, it may change.
+
+    AgbTypes.h
+
+       PAUSE data structure was deleted.  
+
+       Interrupt request/enable flags structure was modified.  
+
+       OAM structure was modified.  
+
+       OAM sort set function parameter structure was deleted.  
+
+       Sound control structure was modified. 
+
+       Multi play SIO control structure was modified.  
+
+       General use SIO control structue was deleted.  
+
+       UART-SIO control structure was added. 
+
+       JOY bus communications control structure was added.  
+
+       JOY bus communication status structure was added. 
+
+       General use input/output control structure was added.  
+
+    /agb/lib
+     
+       The library was modified.  
+
+
+Fixed problems:
+--------------
+
+      Fixed the problem discovered when starting up TS1, the "Game Boy" logo was 
+      not rendered correctly, and sound was not played correctly.  
+ 
+      Fixed the problem discovered when the Halt function was used with TS1, DMA 
+      did not work correctly.  However, Stop (former Full Stop) and Halt 
+      will be the only usable functions.  
+
+      Fixed the problem that with TS1, due to the too low sampling frequency of 
+      PWM output circuit, jitter would occur and CGB compatible sound was not 
+      played with the intended frequency.    
+      
+
+Notes:
+-----
+
+      If you change an envelope or a sweep during operation and do not set the 
+      initial flag for DMG compatible sound, it does not work properly.  (With 
+      DMG, there was an instruction to set an initial flag; however, it operates
+      without being it being set.) 
+
+      When you start up DMA in the CPU internal RAM program, it will start after
+      the next command is executed.  Therefore, if you tried to change the 
+      destination using the CPU immediately after DMA was started, DMA would be 
+      started while reading/rewriting, and the DMA transfer data may be 
+      different from what was intended. This problem can be solved if you wait 
+      for the DMA to complete.  
+       
+
+Notes on communications:
+-----------------------
+
+      Communication between AGBs (2-4 people) is possible only for 16-bit multi 
+      play communication function using a special cable exclusively for AGB.   
+      Normal serial communication is prohibited.  
+
+      Serial communication between CGB and AGB (AGB mode) using the existing 
+      special cable for Game Boy series is not possible (it is prohibited).
+      However, when a CGB Game Pak is inserted into AGB, it is possible since it
+      works with CGB compatible mode.  
+
+      Existing CGB software with the IR function does not work with IR adapter 
+      for AGB (optional). 
+
+      AGB software that is programmed to communicate with CGB IR communication 
+      can be used for communication using an IR adapter for AGB (optional 
+      accessory).  
+
+      Communication between AGB (AGB mode) and Pocket Printer is not possible 
+      (it is prohibited). 
+
+
+Other notes:
+-----------
+
+    Cautions on back-up memory 
+
+      Basically, SRAM + battery cannot be used for back-up memory for AGB.  
+
+    Capacity of back-up memory 
+
+      256Kbit flash memory is no longer used.  From now on, you are to select 
+      from the following 3 types. The library will include minimum read/write 
+      functions.
+      
+      - 4Kbit-EEPROM (4kbit EEPROM)
+
+      - 512Kbit flash memory (512kbit, 8bit bus general use flash memory)
+
+      - 1Mbit flash memory DACS
+        (AD bus custom 1Mbit flash memory with security and patch functions.)
+
+    Release schedule for flash cartridge  
+
+      We will make an announcement about releases of Flash cartridge and Flash Gang Writer      on the NOA-Engineering web site (www.noa-engineering.com). 
+
+    Sound tool composition 
+
+      1) MIDI cartridge
+
+       MIDI cartridge exclusively for IS-AGB-EMULATOR which makes realtime 
+       playback from sequencers which are on the market possible.  
+       (Product Name: IS-AGB-MIDI)
+       One end is connected to the extension terminal of the IS-AGB-EMULATOR, and 
+       the other end is connected to the MIDI port of the existing sound card of
+       the PC (Mac) via existing MIDI cable. 
+   
+      2) NINTENDO Composer's Kit Music Player 2000 
+
+       Tool kit suite for AGB sound development. 
+       It consists of: 
+
+       MKS4AGB---Tool to convert AIFF and MIDI data together to be used for 
+                 Music Player AGB. 
+       Driver and library for Music Player for AGB 
+       AGB version sound sample (sound sample for which Wario appears on plane)
+       Tutorial manual (2 parts--for creater and for programmar)
+       MIDI sample tone generator 
+
+      3) AGB speaker  
+
+       The speaker equipped with TS2 is not a final product. 
+       Features of the AGB speaker have been changed considerably.  We will 
+       provide speakers in a housing (use CGB) so that volume adjustment can be 
+       done for game development. (limited release to sound developers only) 
+
+       
+      * It is possible to develop sound without MIDI cartridge (IS-AGB-MIDI); 
+        however, it is not efficient since realtime playback is not available.  
+
+    Time for releasing sound tools 
+
+      We will make announcements on releases of those tools on the NOA-Engineering
+      web site (www.noa-engineering.com). Please stay tuned.
+
+
+    IR adapter for AGB 
+
+      If you need an IR adapter for AGB for game planning, please contact 
+      "support@noa.com", as we will handle it case-by-case.   
+
+Terminology:
+-----------
+
+    JOY Bus communication  
+
+      Communicatiion standard for NINTENDO64 and Dolphin Controllers.  
+
+    AGB (AGB mode) 
+
+      A mode in which AGB program and AGB functions work when AGB Game Pak is 
+      inserted into AGB.  If described simply as AGB, it means this mode.  
+
+    AGB (CGB compatible mode)  
+
+      A compatible mode in which CGB compatible programs and CGB compatible 
+      functions work when a CGB compatible Game Pak is inserted into AGB.
+      Except for IR function, CGB accessories (printer and special cable for 
+      Game Boy series) can be used.  
+      * AGB functions and accessories exclusively for AGB cannot be used. 
+

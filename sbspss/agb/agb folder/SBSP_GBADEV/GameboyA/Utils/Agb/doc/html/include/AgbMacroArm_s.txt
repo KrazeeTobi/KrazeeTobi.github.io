@@ -1,0 +1,31 @@
+;********************************************************************
+;*          AgbMacroArm.s                                           *
+;*            AGB Standard Macro Functions (ARMASM)                 *
+;*                                                                  *
+;*          Copyright (C) 1999-2000 NINTENDO Co.,Ltd.               *
+;********************************************************************
+
+
+;--------------------------------------------------------------------
+;-                      System Call                                 -
+;--------------------------------------------------------------------
+
+    MACRO
+        SystemCall16 $No
+            swi    $No
+    MEND
+    MACRO
+        SystemCall32 $No
+            swi    $No <<  16
+    MEND
+
+    MACRO
+        Halt                $Bits    ; HALT
+            SystemCall$Bits 0
+    MEND
+    MACRO
+        Stop                $Bits    ; STOP
+            SystemCall$Bits 1
+    MEND
+
+

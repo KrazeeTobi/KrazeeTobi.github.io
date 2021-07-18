@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>isprint, isgraph[printable character predicates]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcislowerlowercase_character_predi.html">Previous</A>|<A HREF="libcispunctpunctuation_character_pre.html">Next</A>
+</P>
+
+<P><A NAME="off_558246"></A><A NAME="3b7c28a1"></A><A NAME="off_558246"></A><A NAME="3b7c28a1"></A><FONT SIZE=+3><FONT FACE="Courier New">isprint</FONT><FONT FACE="Times New Roman">,
+</FONT><FONT FACE="Courier New">isgraph <BR>
+</FONT><FONT FACE="Times New Roman">[printable character predicates] </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>&lt;ctype.h&gt;</FONT><FONT SIZE=-1> <BR>
+</FONT><FONT SIZE=+0>int</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>isprint(int</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0><I>c</I>);</FONT><FONT SIZE=-1> <BR>
+</FONT><FONT SIZE=+0>int</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>isgraph(int</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0><I>c</I>); </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>isprint</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is a macro which classifies ASCII integer
+values by table lookup. It is a predicate returning non-zero for printable
+characters, and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for other character arguments. It is defined only when </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>isascii(<I>c</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is true or </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>c</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>EOF</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can use a compiled subroutine
+instead of the macro definition by undefining either macro, using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#undef</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>isprint</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#undef</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>isgraph</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>isprint</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">returns non-zero if </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>c</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is a printing character, (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0x20</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>–</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0x7E</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>isgraph</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">behaves identically to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>isprint</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+except that the space character (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0x20</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+is excluded. </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>isprint</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>isgraph</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">are ANSI C. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>No supporting OS subroutines
+are required. </FONT></FONT></P>
+
+</BODY>
+</HTML>

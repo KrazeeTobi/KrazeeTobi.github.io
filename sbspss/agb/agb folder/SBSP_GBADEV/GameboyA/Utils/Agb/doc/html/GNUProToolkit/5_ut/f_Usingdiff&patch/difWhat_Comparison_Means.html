@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE>What Comparison Means</TITLE>
+</HEAD><BODY>
+<A HREF= "dif.html">Contents</A>|<A HREF= "difindex.html">Index</A>|<A HREF="difComparing_and_Merging_Files.html">Previous</A>|<A HREF="difHunks.html">Next</A>
+<P>
+<A NAME="off_98395"></A><A NAME="81f80f87"></A><FONT FACE="Times New Roman" SIZE="6"><B>What Comparison Means
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">There are several ways to think about the differences between two files. One
+way to think of the differences is as a series of lines that were deleted from,
+inserted in, or changed in one file to produce another file. </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> compares two files line by line, finds groups of lines that differ, and
+reports each group of differing lines. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difHunks.html">Hunks</A></FONT><FONT FACE="Times New Roman" SIZE="4"> for more documentation. It can report the differing lines in several formats,
+which have different purposes.
+<P>
+GNU </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> can show whether files are different without detailing the differences. It
+also provides ways to suppress certain kinds of differences that are not
+important to you. Most commonly, such differences are changes in the amount of white
+space between words or lines. </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> also provides ways to suppress differences in alphabetic case or in lines
+that match a regular expression that you provide. These options can accumulate;
+for example, you can ignore changes in both white space and alphabetic case. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSuppressing_Differences_00000004.html">Suppressing Differences in Blank and Tab Spacing</A></FONT><FONT FACE="Times New Roman" SIZE="4">, </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSuppressing_Differences_00000005.html">Suppressing Differences in Blank Lines</A></FONT><FONT FACE="Times New Roman" SIZE="4">, </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSuppressing_Case_Differences.html">Suppressing Case Differences</A></FONT><FONT FACE="Times New Roman" SIZE="4">, </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSuppressing_Lines_Matching_a_Reg.html">Suppressing Lines Matching a Regular Expression</A></FONT><FONT FACE="Times New Roman" SIZE="4"> and </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSummarizing_Which_Files_Differ.html">Summarizing Which Files Differ</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+Another way to think of the differences between two files is as a sequence of
+pairs of characters that can be either identical or different. For more, see </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difBinary_Files_and_Forcing_Text_Co.html">Binary Files and Forcing Text Comparisons</A></FONT><FONT FACE="Times New Roman" SIZE="4">. </FONT><FONT FACE="Courier New" SIZE="3">cmp</FONT><FONT FACE="Times New Roman" SIZE="4"> reports the differences between two files character by character, instead of
+line by line. As a result, it is more useful than </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> for comparing binary files. For text files, </FONT><FONT FACE="Courier New" SIZE="3">cmp</FONT><FONT FACE="Times New Roman" SIZE="4"> is useful mainly when you want to know only whether two files are identical. 
+<P>
+To illustrate the effect that considering changes character by character can
+have compared with considering them line by line, think of what happens if a
+single newline character is added to the beginning of a file. If that file is then
+compared with an otherwise identical file that lacks the newline at the
+beginning, </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> will report that a blank line has been added to the file, while </FONT><FONT FACE="Courier New" SIZE="3">cmp</FONT><FONT FACE="Times New Roman" SIZE="4"> will report that almost every character of the two files differs. For more,
+see </FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difdiff_Output_Formats.html">diff</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difdiff_Output_Formats.html"> Output Formats</A></FONT><FONT FACE="Times New Roman" SIZE="4"> and </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difMerging_with_patch.html">Merging with </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difMerging_with_patch.html">patch</A></B></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3">diff3</FONT><FONT FACE="Times New Roman" SIZE="4"> normally compares three input files line by line, finds groups of lines that
+differ, and reports each group of differing lines. Its output is designed to
+make it easy to inspect two different sets of changes to the same file.
+<P>
+</FONT></BODY>
+</HTML>

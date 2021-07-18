@@ -1,0 +1,582 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Modula-2</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbC_and_C.html">Previous</A>|<A HREF="gdbExamining_the_Symbol_Table.html">Next</A>
+<BR><A NAME="off_1966599"></A><A NAME="af15676d"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Modula-2</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+following documentation describes specific Modula-2 extensions for GDB.</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><A HREF="#Operators">Operators</A></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><A HREF="#Built-in_functions_procedures">Built-in
+functions and procedures</A></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><A HREF="#Constants">Constants</A></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><A HREF="#Modula-2_defaults">Modula-2
+defaults</A></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><A HREF="#Deviations">Deviations
+from standard Modula-2</A></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><A HREF="#Type_and_range_checks">Modula-2
+type and range checks</A></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><A HREF="#Scope_operators"><FONT FACE="Times New Roman">The
+scope operators, </FONT><B><TT>:: </TT></B><FONT FACE="Times New Roman">and
+</FONT><B><TT>.</TT></B></A></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><A HREF="#GDB_&_M2">GDB and
+Modula-2</A></FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The extensions made to GDB to
+support Modula-2 only support output from the GNU Modula-2 compiler (currently
+in development). Other Modula-2 compilers are not currently supported,
+and attempting to debug executables produced by them is most likely to
+give an error as GDB reads in the executable’s symbol table.</FONT></FONT>
+
+<P><A NAME="Operators"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Operators</FONT></FONT></I></B>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Operators must be defined
+on values of specific types. For instance, </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is defined on numbers and not on structures. Operators are often defined
+on groups of types. For the purposes of Modula-2, the following definitions
+hold.</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>Integral</I> types consist
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>INTEGER</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CARDINAL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and their subranges.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>Character</I> types consist
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CHAR</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and its subranges.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>Floating-point</I> types
+consist of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>REAL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>Pointer</I> types consist
+of anything declared as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>POINTER</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>TO</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>type</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>Scalar</I> types consist
+of all of the previous types.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>Set</I> types consist of
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SET</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>BITSET</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+types.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>Boolean</I> types consist
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>BOOLEAN</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The following operators are
+supported, and appear in order of increasing precedence.</FONT></FONT>
+<UL><B><FONT FACE="Courier New"><FONT SIZE=+0>,</FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Function argument or array
+index separator.</FONT></FONT></UL>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>:=</FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Assignment. The value of
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>var</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><B>:=</B><I>value
+</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>is </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>value</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>&lt;</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>></FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Less than, greater than
+on integral, floating-point, or enumerated types.</FONT></FONT></UL>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>&lt;=</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>>=</FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Less than, greater than,
+less than or equal to, greater than or equal to on integral, floating-point
+and enumerated types, or set inclusion on set types. Same precedence as
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>&lt;</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>=</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>&lt;></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>#</FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Equality and two ways of
+expressing inequality, valid on scalar types. Same precedence as </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>&lt;</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+In GDB scripts, only </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>&lt;></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is available for inequality, since </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>#</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+conflicts with the script comment character.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>IN</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set membership. Defined
+on set types and the types of their members. Same precedence as &lt;.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>OR</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Boolean disjunction. Defined
+on boolean types.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>AND</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>&amp;</FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Boolean conjuction. Defined
+on boolean types.</FONT></FONT></UL>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>@</FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The GDB “artificial array”
+operator (see <FONT COLOR="#008000"><A HREF="gdbExpressions.html">Expressions</A></FONT>).</FONT></FONT></UL>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>-</FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Addition and subtraction
+on integral and floating-point types, or union and difference on set types.</FONT></FONT></UL>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>*</FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Multiplication on integral
+and floating-point types, or set intersection on set types.</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>/</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Division on floating-point
+types, or symmetric set difference on set types. Same precedence as </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>*</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>DIV</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MOD</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Integer division and remainder.
+Defined on integral types. Same precedence as *.</FONT></FONT></UL>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>-</FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Negative. Defined on </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>INTEGER</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>REAL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+data.</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>ˆ</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Pointer dereferencing. Defined
+on pointer types.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>NOT</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Boolean negation. Defined
+on boolean types. Same precedence as ˆ.</FONT></FONT></UL>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>.</FONT></FONT></B>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>RECORD</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+field selector. Defined on </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>RECORD</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+data. Same precedence as ˆ.</FONT></FONT></UL>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>[]</FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Array indexing. Defined
+on </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ARRAY</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+data. Same precedence as ˆ.</FONT></FONT></UL>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>()</FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Procedure argument list.
+Defined on </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>PROCEDURE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+objects. Same precedence as </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>ˆ</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>:: </FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>and
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>.</FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB and Modula-2 scope operators.</FONT></FONT></UL>
+<B><I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></I></B>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B><I>Warning</I></B>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Sets and their operations
+are not yet supported, so GDB treats the use of the operator, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>IN</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or the use of operators, </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>-</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>*</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>/</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>=</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>&lt;></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>#</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>&lt;=</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>>=</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+, on sets as an error.</FONT></FONT></UL>
+<A NAME="Built-in_functions_procedures"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Built-in
+functions and procedures</FONT></FONT></I></B>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Modula-2 also makes available
+several built-in procedures and functions. In describing these, the following
+meta-variables are used:</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Represents an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ARRAY</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+variable.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>c</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Represents a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CHAR</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+constant or variable.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>i</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Represents a variable or
+constant of integral type.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>m</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Represents an identifier
+that belongs to a set. Generally used in the same function with the metavariable,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>s</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The type of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>s</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+should be </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SET OF</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>mtype </FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>(where
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>mtype </FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>is
+the type of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>m</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Represents a variable or
+constant of integral or floating-point type.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>r</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Represents a variable or
+constant of floating-point type.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Represents a type.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>v</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Represents a variable.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Represents a variable or
+constant of one of many types. See the explanation of the function for
+details.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>All Modula-2 built-in procedures
+also return a result, described in the following discussion.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>ABS(<I>n</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Returns the absolute value
+of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>CAP(<I>c</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>c
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>is a lower
+case letter, it returns its upper case equivalent, otherwise it returns
+its argument</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>CHR(<I>i</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Returns the character whose
+ordinal value is </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>i</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>DEC(<I>v</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Decrements the value in
+the variable, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>v</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Returns the new value.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>DEC(<I>v</I>, <I>i</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Decrements the value in
+the variable, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>v</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+by </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>i</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Returns the new value.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>EXCL(<I>m</I>, <I>s</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Removes the element, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>m</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+from the set, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>s</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Returns the new set.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>FLOAT(<I>i</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Returns the floating point
+equivalent of the integer, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>i</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>HIGH(<I>a</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Returns the index of the
+last member of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>INC(<I>v</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Increments the value in
+the variable, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>v</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Returns the new value.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>INC(<I>v</I>, <I>i</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Increments the value in
+the variable </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>v
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>by </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>i</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Returns the new value.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>INCL(<I>m</I>, <I>s</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Adds the element </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>m</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to the set </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>s</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+if it is not already there. Returns the new set.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>MAX(<I>t</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Returns the maximum value
+of the type </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>MIN(<I>t</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Returns the minimum value
+of the type </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>ODD(<I>i</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Returns boolean </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>TRUE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+if </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>i </FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>is
+an odd number.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>ORD(<I>x</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Returns the ordinal value
+of its argument. For example, the ordinal value of a character is its ASCII
+value (on machines supporting the ASCII character set). </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+must be of an ordered type, which include integral, character and enumerated
+types.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>SIZE(<I>x</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Returns the size of its
+argument. </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can be a variable or a type.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>TRUNC(<I>r</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Returns the integral part
+of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>r</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>VAL(<I>t</I>, <I>i</I>)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Returns the member of the
+type </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+whose ordinal value is </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>i</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+</UL>
+&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><B><I>Warning</I></B>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Sets and their operations
+are not yet supported, so GDB treats the use of procedures, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>INCL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>EXCL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+as an error.</FONT></FONT></UL>
+</UL>
+<A NAME="Constants"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Constants</FONT></FONT></I></B>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB allows you to express
+the constants of Modula-2 in the following ways:</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Integer constants are simply
+a sequence of digits. When used in an expression, a constant is interpreted
+to be type-compatible with the rest of the expression. Hexadecimal integers
+are specified by a trailing ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>H</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+and octal integers by a trailing ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>B</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Floating point constants appear
+as a sequence of digits, followed by a decimal point and another sequence
+of digits. An optional exponent can then be specified, in the form ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>E[+|-]<I>nnn</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+where ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>[+|-]<I>nnn</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is the desired exponent. All of the digits of the floating point constant
+must be valid decimal (base 10) digits.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Character constants consist
+of a single character enclosed by a pair of like quotes, either single
+(</FONT><FONT SIZE=+0>’</FONT><FONT SIZE=+1>) or double (</FONT><FONT SIZE=+0>”</FONT><FONT SIZE=+1>).
+They may also be expressed by their ordinal value (their ASCII value, usually)
+followed by a ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>C</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>String constants consist of
+a sequence of characters enclosed by a pair of like quotes, either single
+(</FONT><FONT SIZE=+0>’</FONT><FONT SIZE=+1>) or double (</FONT><FONT SIZE=+0>”</FONT><FONT SIZE=+1>).
+Escape sequences in the style of C are also allowed. See <FONT COLOR="#008000"><A HREF="gdbC_and_C.html#C_constants">C
+and C++ constants</A></FONT> for a brief explanation of escape sequences.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Enumerated constants consist
+of an enumerated identifier.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Boolean constants consist of
+the identifiers </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>TRUE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>FALSE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Pointer constants consist of
+integral values only.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Set constants are not yet supported.</FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<A NAME="Modula-2_defaults"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Modula-2
+defaults</FONT></FONT></I></B>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If type and range checking
+are set automatically by GDB, they both default to on whenever the working
+language changes to Modula-2. This happens regardless of whether you, or
+GDB, selected the working language.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you allow GDB to set the
+language automatically, then entering code compiled from a file whose name
+ends with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.mod</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+sets the working language to Modula-2. See <FONT COLOR="#008000"><A HREF="gdbSetting_the_working_language.html">Setting
+the working language</A></FONT> for further details.</FONT></FONT>
+
+<P><A NAME="Deviations"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Deviations
+from standard Modula-2</FONT></FONT></I></B>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>A few changes have been made
+to make Modula-2 programs easier to debug. This is done primarily via loosening
+its type strictness.</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Unlike in standard Modula-2,
+pointer constants can be formed by integers. This allows you to modify
+pointer variables during debugging. (In standard Modula-2, the actual address
+contained in a pointer variable is hidden from you; it can only be modified
+through direct assignment to another pointer variable or expression that
+returned a pointer.)</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>C escape sequences can be used
+in strings and characters to represent non-printable characters. GDB prints
+out strings with these escape sequences embedded. Single non-printable
+characters are printed using the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CHR(<I>nnn</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+format.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The assignment operator (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>:=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+returns the value of its right-hand argument.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>All built-in procedures both
+modify <I>and</I> return their argument.</FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<A NAME="Type_and_range_checks"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Modula-2
+type and range checks</FONT></FONT></I></B>
+<BR>&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><B><I>Warning</I></B>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>In this release, GDB does
+not yet perform type or range checking.</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>GDB considers two Modula-2 variables
+type equivalent if they have the following criteria.</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>They are of types that have
+been declared equivalent via a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>TYPE
+<I>t1</I> = <I>t2</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+statement</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>They have been declared on the
+same line.</FONT></FONT></LI>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>This is true of the GNU
+Modula-2 compiler, but it may not be true of other compilers.)</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>As long as type checking is
+enabled, any attempt to combine variables whose types are not equivalent
+is an error. Range checking is done on all mathematical operations, assignment,
+array index bounds, and all built-in functions and procedures.</FONT></FONT>
+
+<P><A NAME="Scope_operators"></A><B><FONT SIZE=+2><I><FONT FACE="Times New Roman">The
+scope operators, </FONT></I><FONT FACE="Courier New">::</FONT><I><FONT FACE="Times New Roman">
+and</FONT></I><FONT FACE="Courier New"> .</FONT></FONT></B>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>There are a few subtle differences
+between the Modula-2 scope operator (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+and the GDB scope operator (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>::</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+The two have similar syntax:</FONT></FONT>
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0><I>module</I> . <I>id</I></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0><I>scope</I> :: <I>id</I></FONT></FONT></UL>
+</UL>
+<I><FONT FACE="Courier New"><FONT SIZE=+0>scope</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the name of a module or a procedure, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>module</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the name of a module, and </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>id</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is any declared identifier within your program, except another module.
+Using the :: operator makes GDB search the scope specified by </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>scope</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for the identifier </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>id</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If it is not found in the specified </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>scope</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+then GDB searches all </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>scope</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>s
+enclosing the one specified by </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>scope</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Using the </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>.</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+operator makes GDB search the current scope for the identifier specified
+by </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>id</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+that was imported from the definition module specified by </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>module</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+With this operator, it is an error if the identifier, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>id</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+was not imported from definition module, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>module</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or if </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>id</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is not an identifier in </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>module</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><A NAME="GDB_&_M2"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>GDB
+and Modula-2</FONT></FONT></I></B>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Some GDB commands have little
+use when debugging Modula-2 programs. Five subcommands of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>show
+print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> apply specifically
+to C and C++:‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vtbl</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>demangle</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm-demangle</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>object</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+The first four apply to C++, and the last to the C </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+type, which has no direct analogue in Modula-2.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>@
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>operator (see
+<FONT COLOR="#008000"><A HREF="gdbExpressions.html">Expressions</A></FONT>),
+while available while using any language, is not useful with Modula-2.
+Its intent is to aid the debugging of <I>dynamic arrays</I>, which cannot
+be created in Modula-2 as they can in C or C++. However, because an address
+can be specified by an integral constant, the construct ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>{<I>type</I>}<I>adrexp</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is still useful. (see <FONT COLOR="#008000"><A HREF="gdbExpressions.html">Expressions</A></FONT>)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In GDB scripts, the Modula-2
+inequality operator # is interpreted as the beginning of a comment. Use
+&lt;> instead.</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbC_and_C.html">Previous</A>|<A HREF="gdbExamining_the_Symbol_Table.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,125 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Phony Targets</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeDirectory_Search_for_Link_Librar.html">Previous</A>|<A HREF="makeRules_without_Commands_or_Depend.html">Next</A>
+<BR><A NAME="off_559344"></A><A NAME="48f569cb"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Phony
+targets</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>A phony
+target is one that is not really the name of a file. It is just a name
+for some commands to be executed when you make an explicit request. There
+are two reasons to use a phony target: to avoid a conflict with a file
+of the same name, and to improve performance.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you write a rule whose
+commands will not create the target file, the commands will be executed
+every time the target comes up for remaking. Use the following, for example.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>clean:</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+rm *.o temp</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Because the </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>rm</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command does not create a file named ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>clean</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+probably no such file will ever exist. Therefore, the </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>rm</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command will be executed every time you use ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make
+clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The phony target will cease
+to work if anything ever does create a file named ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>clean</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in this directory. Since it has no dependencies, the file ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>clean</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+would inevitably be considered up to date, and its commands would not be
+executed. To avoid this problem, you can explicitly declare the target
+to be phony, using the special target, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.PHONY</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(see <FONT COLOR="#008000"><A HREF="makeSpecial_Builtin_Target_Names.html">Special
+built-in target names</A></FONT>), as in: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.PHONY
+: clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Once this is done, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make
+clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ will run
+the commands regardless of whether there is a file named ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Since it knows that phony targets do not name actual files that could be
+remade from other files, </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+skips the implicit rule search for phony targets (see <FONT COLOR="#008000"><A HREF="makeImplicit_Rules.html">Implicit
+rules</A></FONT>). This is why declaring a target phony is good for performance,
+even if you are not worried about the actual file existing.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Thus, you first write the
+line that states that </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>clean</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a phony target, then you write the rule, like the following example.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>.PHONY: clean</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>clean:</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+rm *.o temp</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>A phony target should not
+be a dependency of a real target file; if it is, its commands are run every
+time </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+goes to update that file. As long as a phony target is never a dependency
+of a real target, the phony target commands will be executed only when
+the phony target is a specified goal (see <FONT COLOR="#008000"><A HREF="makeArguments_to_Specify_the_Goals.html">Arguments
+to specify the goals</A></FONT>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Phony targets can have dependencies.
+When one directory contains multiple programs, it is most convenient to
+describe all of the programs in one makefile, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>./Makefile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Since the target remade by default will be the first one in the makefile,
+it is common to make this a phony target named ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>all</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and give it, as dependencies, all the individual programs. Use the following,
+for example.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>all : prog1 prog2 prog3</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>.PHONY : all</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>prog1 : prog1.o utils.o</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+cc -o prog1 prog1.o utils.o</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>prog2 : prog2.o</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+cc -o prog2 prog2.o</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>prog3 : prog3.o sort.o utils.o</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+cc -o prog3 prog3.o sort.o utils.o</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Now you can use just ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to remake all three programs, or specify as arguments the ones to remake
+(as in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make prog1
+prog3</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When one phony target is
+a dependency of another, it serves as a subroutine of the other. For instance,
+in the following example, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cleanall</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+will delete the object files, the difference files, and the file, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>program</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>.PHONY: cleanall cleanobj cleandiff</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>cleanall : cleanobj cleandiff</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+rm program</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>cleanobj :</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+rm *.o</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>cleandiff :</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+rm *.diff</FONT></FONT></UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeDirectory_Search_for_Link_Librar.html">Previous</A>|<A HREF="makeRules_without_Commands_or_Depend.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

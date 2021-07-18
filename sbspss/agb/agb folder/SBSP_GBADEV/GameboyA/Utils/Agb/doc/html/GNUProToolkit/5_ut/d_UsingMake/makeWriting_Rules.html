@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Writing Rules</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeOverriding_Part_of_Another_Makef.html">Previous</A>|<A HREF="makeRule_Syntax.html">Next</A>
+<BR><A NAME="off_394426"></A><A NAME="a3e50002"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Writing
+rules</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>A <I>rule</I>
+appears in the makefile and says when and how to remake cer-tain files,
+called the rule’s <I>targets</I> (most often only one per rule). It lists
+the other files that are the <I>dependencies</I> of the target, and <I>commands</I>
+to use to create or update the target.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The order of rules is not
+significant, except for determining the <I>default goal</I>: the target
+for </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to consider, if you do not otherwise specify one. The default goal is the
+target of the first rule in the first makefile. If the first rule has multiple
+targets, only the first target is taken as the default. There are two exceptions:
+a target starting with a period is not a default unless it contains one
+or more slashes, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+as well; and, a target that defines a pattern rule has no effect on the
+default goal. (See <FONT COLOR="#008000"><A HREF="makeDefining_and_Redefining_Pattern_.html">Defining
+and redefining pattern rules</A></FONT>.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Therefore, we usually write
+the makefile so that the first rule is the one for compiling the entire
+program or all the programs described by the makefile (often with a target
+called ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>all</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’).
+See <FONT COLOR="#008000"><A HREF="makeArguments_to_Specify_the_Goals.html">Arguments
+to specify the goals</A></FONT>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>See the following documentation
+for more discussion.</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeRule_Syntax.html">Rule
+syntax</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeUsing_Wildcard_Characters_in_Fil.html">Using
+wildcard characters in file names</A></FONT></FONT></FONT></LI>
+
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeWildcard_Examples.html">Wildcard
+examples</A></FONT></FONT></FONT></I></LI>
+
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makePitfalls_of_Using_Wildcards.html">Pitfalls
+of using wildcards</A></FONT></FONT></FONT></I></LI>
+
+<LI>
+<FONT COLOR="#008000"><A HREF="makeThe_Function_wildcard.html"><I><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+function, </FONT></FONT></I><B><FONT FACE="Courier New"><FONT SIZE=+0>wildcard</FONT></FONT></B></A></FONT><I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></I></LI>
+</UL>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeSearching_Directories_for_Depend.html">Searching
+directories for dependencies</A></FONT></FONT></FONT></LI>
+
+<UL>
+<LI>
+<FONT COLOR="#008000"><A HREF="makeVPATH_Search_Path_for_All_Depend.html"><B><FONT FACE="Courier New"><FONT SIZE=+0>VPATH</FONT></FONT></B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>:
+search path for all dependencies</FONT></FONT></I></A></FONT><I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></I></LI>
+
+<LI>
+<FONT COLOR="#008000"><A HREF="makeThe_vpath_Directive.html"><I><FONT FACE="Times New Roman"><FONT SIZE=+1>The</FONT></FONT></I><B><FONT FACE="Courier New"><FONT SIZE=+0>
+vpath</FONT></FONT></B><I><FONT FACE="Times New Roman"><FONT SIZE=+1> directive</FONT></FONT></I></A></FONT><I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></I></LI>
+
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeWriting_Shell_Commands_with_Dire.html">Writing
+shell commands with directory search</A></FONT></FONT></FONT></I></LI>
+
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeDirectory_Search_and_Implicit_Ru.html">Directory
+search and implicit rules</A></FONT></FONT></FONT></I></LI>
+
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeDirectory_Search_for_Link_Librar.html">Directory
+search for link libraries</A></FONT></FONT></FONT></I></LI>
+</UL>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makePhony_Targets.html">Phony
+targets</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeRules_without_Commands_or_Depend.html">Rules
+without commands or dependencies</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeEmpty_Target_Files_to_Record_Eve.html">Empty
+target files to record events</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeSpecial_Builtin_Target_Names.html">Special
+built-in target names</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeMultiple_Targets_in_a_Rule.html">Multiple
+targets in a rule</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeMultiple_Rules_for_One_Target.html">Multiple
+rules for one target</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeStatic_Pattern_Rules.html">Static
+pattern rules</A></FONT></FONT></FONT></LI>
+
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeSyntax_of_Static_Pattern_Rules.html">Syntax
+of static pattern rules</A></FONT></FONT></FONT></I></LI>
+
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeStatic_Pattern_Rules_versus_Impl.html">Static
+pattern rules versus implicit rules</A></FONT></FONT></FONT></I></LI>
+</UL>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeDoubleColon_Rules.html">Double-colon
+rules</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeGenerating_Dependencies_Automati.html">Generating
+dependencies automatically</A></FONT></FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeOverriding_Part_of_Another_Makef.html">Previous</A>|<A HREF="makeRule_Syntax.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

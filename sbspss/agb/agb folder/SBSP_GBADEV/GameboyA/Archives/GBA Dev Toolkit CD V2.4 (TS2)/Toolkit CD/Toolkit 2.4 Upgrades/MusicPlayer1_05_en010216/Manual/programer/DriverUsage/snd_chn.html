@@ -1,0 +1,132 @@
+<HEAD>
+	<link rel="stylesheet" type="text/css" href="../ProMan/style.css">
+                <!-- Edited by Matt P., 01/04/01 -->
+    <STYLE TYPE="text/css">
+	<!--
+		H2 { color:black; text-align:center }
+		H4 { color:#4169E1 }
+		TABLE { border:0; padding:5; margin:1 }
+		TD { color:#303050; background-color:white }
+	-->
+	</STYLE>
+
+	<TITLE>Explanation of Virtual Channel Structure "SoundChannel"</TITLE>
+</HEAD>
+
+<H2>Explanation of Virtual Channel Structure "SoundChannel"</H2>
+
+
+<HR WIDTH="600" ALIGN="CENTER">
+
+
+<TABLE WIDTH="600" ALIGN="CENTER" SUMMARY="sound_chn_param"><TR><TD>
+The element vchn[x] for structure SoundArea is the array for SoundChannel. It has all 12 channels. By setting an appropriate value for vchn[x] a direct sound is 
+produced, but if it exceeds the maximum setting in <font face=courier new>SoundDriverMode()</font> for simultaneously-produced sounds with these channels are ignored.<BR><BR>
+The elements for the structure SoundChannel are as follows.<BR><BR>
+<FONT COLOR="#008080"><B>
+&nbsp;&nbsp;u8 sf<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Status
+</B></FONT><BR>
+<BR>
+When starting sound production set 0x80, when doing a key off (start release) OR 0x40, and when stopping the sounds for an instant, set 0x00. If this is 0x00, that channel is stopped.<BR><BR><br>
+<FONT COLOR="#008080"><B>
+&nbsp;&nbsp;u8 ty<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Type
+</B></FONT><BR>
+<BR>
+During a normal sound this is 0x00. If the musical interval is not calculated and sound is produced at high speed this is set to 0x08.<BR> 
+<BR>
+<BR>
+<FONT COLOR="#008080"><B>
+&nbsp;&nbsp;u8 rv<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Right Volume<BR>
+&nbsp;&nbsp;u8 lv<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Left Volume</B></FONT><BR>
+<BR>
+The volume of sounds is set in the range of 0-255.<BR> 
+<BR>
+<BR>
+<FONT COLOR="#008080"><B>
+&nbsp;&nbsp;u8 at<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Attack
+</B></FONT><BR>
+<BR>
+The attack time is (255/(x)) * 1/60 second. Set in the range from 0-255.<BR> 
+<BR>
+<BR>
+<FONT COLOR="#008080"><B>
+&nbsp;&nbsp;u8 de<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Decay
+</B></FONT><BR><BR>
+The decay is (current volume) * ((x)/256) every 1/60 second. If it is less than or equal to the sustain volume, it transfers to sustain status.
+Set in the range from 0-255.<BR><BR><br>
+<FONT COLOR="#008080"><B>
+&nbsp;&nbsp;u8 su<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Sustain
+</B></FONT><BR>
+<BR>
+The sustain volume is set in the range of 0-255.<BR> 
+<BR>
+<BR>
+<FONT COLOR="#008080"><B>
+&nbsp;&nbsp;u8 re<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Release
+</B></FONT><BR>
+<BR>
+The release is (current volume) * ((x)/256) every 1/60 second. If it is less than or equal to the pseudo-echo volume, it transfers to psuedo-echo status. 
+Set in the range from 0-255.<BR> 
+<BR>
+<BR>
+<FONT COLOR="#008080"><B>
+&nbsp;&nbsp;u8 r1[4]<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Pseudo-Echo Volume ([4] is not number of elements, it is element #)
+<BR>&nbsp;&nbsp;u8 r1[5]<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Pseudo-Echo Length ([5] is not number of elements, it is element #)</B></FONT><BR>
+<BR>
+Pseudo-echo is a sound of fixed volume that is leftover for a fixed time after a release ends.
+Set the volume between 0-255 and the length between 0-127.
+The amount of time the sound remains is length multiplied by 1/60 second. Additionally, if you are going to use psuedo-echo (volume!=0), the length is counted down so you need to set 
+it again for every sound.<BR>
+<BR>
+<BR>
+<FONT COLOR="#008080"><B>
+&nbsp;&nbsp;u32 fr<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Frequency Calculation Value
+</B></FONT><BR>
+<BR>
+The requested value is set with the previously described function <font face=courier new>MidiKey2Freq()</font>.<BR> 
+<BR>
+<BR>
+<FONT COLOR="#008080"><B>
+&nbsp;&nbsp;WaveData *wp<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Waveform Pointer 
+</B></FONT>
+<BR><BR> 
+This sets the pointer to the waveform data structure described later.<BR>
+</TD></TR></TABLE><BR>
+
+
+<HR WIDTH="600" ALIGN="CENTER">
+
+
+<TABLE WIDTH="600" ALIGN="CENTER" SUMMARY="sound_chn_set"><TR><TD>
+<font color=black>The settings for the structure SoundChannel are done using the following process.<BR>
+<BR>
+&nbsp;&nbsp;(1) Set 0x00 for sf(Status).<BR>
+<BR>
+&nbsp;&nbsp;(2) Set ty(Type), rv(Right Volume), lv(Left Volume), at(Attack), de(Decay), su(Sustain),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;re(Release), r1[4](Pseudo-Echo Volume), r1[5](Pseudo-Echo Length), <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fr(Frequency Calculation Value), and wp(Waveform Pointer).<BR>
+<BR>
+&nbsp;&nbsp;(3) Set 0x80 for sf(Status) and start sounds.<BR>
+<BR>
+&nbsp;&nbsp;(4) To change volume while producing sounds, adjust rv(Right Volume) and lv(Left Volume).<BR>
+<BR>
+&nbsp;&nbsp;(5) To change the interval while producing sounds, adjust fr(Frequency Calculation Value).<BR>
+<BR>
+&nbsp;&nbsp;(6) If you OR 0x40 for sf(Status), a key off(release start) occurs.<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If nothing is done sf soon becomes 0x00 and the sound stops.<BR>
+<BR>
+&nbsp;&nbsp;(7)To stop the sound instantly, set 0x00 for sf(Status).<BR>
+<BR></font>
+If you are not going to use any sounds functions besides those described here, it is fine for the user to use the elements r1[6] - r1[15] and r3[1] - r3[5] for SoundChannel.
+</TD></TR></TABLE><BR>
+
+
+<HR WIDTH="600" ALIGN="CENTER">
+
+
+<CENTER><p>
+[ | <A HREF="snd_area.html">Back</A> | <A HREF="../p_index.html">Programmer's Manual Table of Contents</A> | <A HREF="u_index.html">Using the Sound Driver Table of Contents</A> | <A HREF="wav_dat.html">Next</A> | ]
+</center>
+
+
+

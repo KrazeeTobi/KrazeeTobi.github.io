@@ -1,0 +1,766 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!--
+Editors' comments:
+mm/dd/yy  Created by * using w2w 2.0
+mm/dd/yy Edited by * -->
+		<title>Sound</title>
+	</head>
+
+	<body>
+		<h1>
+		<h1><a name="T5"></a>10 Sound</h1>
+		</h1>
+		<p>In addition to 4 channels of CGB-compatible sound, AGB has 2 channels of direct sound.</p>
+		<p><b>1. Direct Sounds A and B</b></p>
+		<ul>
+			<p>Provides playback of linear 8-bit audio data.<br>
+			Uses the timer and DMA.</p>
+		</ul>
+		<p><b>2. Sound 1</b></p>
+		<ul>
+			<p>Allows generation of rectangular waveforms with sweep (frequency change) and envelope (volume change) functions.</p>
+		</ul>
+		<p><b>3. Sound 2</b></p>
+		<ul>
+			<p>Allows generation of rectangular waveforms with envelope functions.</p>
+		</ul>
+		<p><b>4. Sound 3</b></p>
+		<ul>
+			<p>Allows playback of any waveform recorded in waveform RAM.<br>
+			Waveform RAM in AGB has double the capacity of that in CGB.</p>
+		</ul>
+		<p><b>5. Sound 4</b></p>
+		<ul>
+			<p>Allows white noise generation.</p>
+		</ul>
+		<p></div></p>
+		<p>The synthesis ratio of sounds 1-4 to direct sound can be specified.</p>
+		<h2><b><a name="T6"></a>10.1 Sound Block Diagram</b></h2>
+		<p><img src="Image148.gif"></p>
+		<h2><b><a name="T7"></a>10.2 Direct Sounds A and B</b></h2>
+		<p>Direct sounds have 2 channels, A and B. Linear 8-bit audio data can be played back.</p>
+		<p>The audio data are set to a bias level of 00h and are 8-bit data (+127 <font size="3">to</font> -128), obtained by 2's complement.</p>
+		<p>Audio data are transferred sequentially to the sound FIFO (8-word capacity), using the sound FIFO transfer mode of DMA 1 and 2.</p>
+		<p>The sampling rate can be set to an arbitrary value using timers 0 and 1.</p>
+		<h3><b><a name="T8"></a>Sound FIFO Input Register</b></h3>
+		<p><img src="Image149.gif"></p>
+		<p><b>Sound Data</b></p>
+		<p>All sounds are PWM modulated (refer to 10.8 <a href="AGB_Programming_Manual_Part_3a.htm#T15">&quot;Sound PWM Control&quot;</a>) at the final portion of the Sound Circuit. Therefore, if you match the 8 bit audio data sampling frequency and the timer settings with the PWM modulation sampling frequency, a clean sound can be produced.</p>
+		<p>The following operations are repeated for direct sound.</p>
+		<p><b>Preparing to Use Direct Sound</b></p>
+		<ol>
+			<li>Using sound control register SGCNT0_H (refer to 10.7 &quot;Sound Control&quot;), select the timer channel to be used (0 or 1).
+			<li>Using sound control register SGCNT0_H, do a 0 clear with FIFO A and FIFO B, and initialize the sequencer.
+			<li>In cases of producing a sound immediately after starting the direct sound, write the first 8 bits of linear audio data to the FIFO with a CPU write.
+			<li>Specify the transfer mode for DMA 1 or 2 (see 12.2 <a href="AGB_Programming_Manual_Part_3c.htm#T25">&quot;DMA 1 and 2&quot;</a>).
+			<li>Specify the direct sound outputs settings in the sound control register.
+			<li>Start the timer.
+		</ol>
+		<p>With the preceding preparations, direct sound is executed as follows.</p>
+		<p><b>Direct Sound Execution</b></p>
+		<ol>
+			<li>When the specified timer overflows due to a count up, the audio data are passed from the FIFO to the sound circuit.
+			<li>If 4 words of data remain in the FIFO as the transfer count progresses, the FIFOs for direct sounds A and B output a data transfer request to the specified DMA channel.
+			<li>If the DMA channel receiving the request is in sound FIFO transfer mode, 4 words of data are provided to the sound FIFO (the DMA WORD COUNT is ignored).
+		</ol>
+		<ul>
+			<p>The preceding is repeated starting from 1.</p>
+		</ul>
+		<h2><b><a name="T9"></a>10.3 Sound 1</b></h2>
+		<p>Sound 1 is a circuit that generates rectangular waveforms with sweep (frequency change) and envelope (volume change) functions.</p>
+		<p>The contents of NR10, NR11, NR12, NR13, and NR14 for Sound 1, are based on those of CGB.</p>
+		<p><img src="Image7.gif" width="570" height="174"></p>
+		<p>SG10_L [d06-04] Sweep Time</p>
+		<ul>
+			<p>These bits specify the interval for frequency change.</p>
+		</ul>
+		<center>
+			<p>
+			<table width="339" border="1" cellspacing="0" cellpadding="3">
+				<tr>
+					<td width="36%" valign="top" bgcolor="white">
+						<center>
+							Setting&nbsp;</center>
+					</td>
+					<td width="64%" valign="top" bgcolor="white">
+						<center>
+							Sweep Time&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="36%" valign="top">
+						<center>
+							000&nbsp;</center>
+					</td>
+					<td width="64%" valign="top">
+						<center>
+							Sweep OFF&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="36%" valign="top">
+						<center>
+							001&nbsp;</center>
+					</td>
+					<td width="64%" valign="top">
+						<center>
+							1/f128 (7.8 ms)&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="36%" valign="top">
+						<center>
+							010&nbsp;</center>
+					</td>
+					<td width="64%" valign="top">
+						<center>
+							2/f128 (15.6 ms)&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="36%" valign="top">
+						<center>
+							011&nbsp;</center>
+					</td>
+					<td width="64%" valign="top">
+						<center>
+							3/f128 (23.4 ms)&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="36%" valign="top">
+						<center>
+							100&nbsp;</center>
+					</td>
+					<td width="64%" valign="top">
+						<center>
+							4/f128 (31.3 ms)&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="36%" valign="top">
+						<center>
+							101&nbsp;</center>
+					</td>
+					<td width="64%" valign="top">
+						<center>
+							5/f128 (39.1 ms)&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="36%" valign="top">
+						<center>
+							110&nbsp;</center>
+					</td>
+					<td width="64%" valign="top">
+						<center>
+							6/f128 (46.9 ms)&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="36%" valign="top">
+						<center>
+							111&nbsp;</center>
+					</td>
+					<td width="64%" valign="top">
+						<center>
+							7/f128 (54.7 ms)&nbsp;</center>
+					</td>
+				</tr>
+			</table>
+			</p>
+		</center>
+		<ul>
+			<p>(f128=128Hz)</p>
+		</ul>
+		<p>SG10_L [d03] Sweep Increase/Decrease</p>
+		<ul>
+			<p>Specifies whether the frequency increases or decreases.</p>
+			<p>When the sweep function is not used, the increase/decrease flag should be set to 1.</p>
+		</ul>
+		<p>SG10_L [d02-00] Number of Sweep Shifts</p>
+		<ul>
+			<p>Specifies the number of sweeps.</p>
+			<p>The frequency data with a single shift are determined according to the following formula, with <i>f<sub>(t)</sub></i><sub> </sub>signifying the frequency after a shift and <i>f<sub>(t-1)</sub></i><sub> </sub>the frequency before the shift.</p>
+		</ul>
+		<center>
+			<p><img src="Image8.gif" width="180" height="69"></p>
+		</center>
+		<ol start="2">
+			<p>If the addition according to this formula produces a value consisting of more than 11 bits, sound output is stopped and the Sound 1 ON flag (bit 0) of NR52 is reset.</p>
+			<p>With subtraction, if the subtrahend is less than 0, the pre-subtraction value is used. However, if the specified setting is 0, shifting does not occur and the frequency is unchanged.</p>
+		</ol>
+		<p><img src="Image9.gif" width="592" height="213"></p>
+		<p>SG10_H [d15-12] Envelope Initial-Value</p>
+		<ol start="2">
+			<p>Allows specification of any of 16 levels ranging from maximum to mute.</p>
+		</ol>
+		<p>SG10_H [d11] Envelope Increase/Decrease</p>
+		<ol start="2">
+			<p>Specifies whether to increase or decrease the volume.</p>
+		</ol>
+		<p>SG10_H [d10-08] Number of Envelope Steps</p>
+		<ol start="2">
+			<p>Sets the length of each step of envelope amplification or attenuation.</p>
+			<p>With <i>n</i> the specified value, the length of 1 step (<i>steptime</i>) is determined by the following formula.</p>
+		</ol>
+		<center>
+			<p><img src="Image10.gif" width="151" height="41"></p>
+		</center>
+		<ol start="2">
+			<p>When <i>n</i> = 0, the envelope function is turned off.</p>
+		</ol>
+		<p>SG10_H [d07-06] Waveform Duty Cycle</p>
+		<ol start="2">
+			<p>Specifies the proportion of amplitude peaks for the waveform.</p>
+		</ol>
+		<center>
+			<p><img src="Image11.gif" width="381" height="144"></p>
+		</center>
+		<p>SG10_H [d05-00] Sound Length</p>
+		<ol start="2">
+			<p>With <i>st</i> signifying the sound length, the length of the output sound is determined by the following formula.</p>
+		</ol>
+		<center>
+			<p><img src="Image12.gif" width="179" height="41"></p>
+		</center>
+		<p><img src="Image13.gif" width="575" height="125"></p>
+		<p>SG11 [d15] Initialization Flag</p>
+		<ol start="2">
+			<p>A setting of 1 causes Sound 1 to restart.</p>
+		</ol>
+		<p>SG11 [d14] Sound Length Flag</p>
+		<ol start="2">
+			<p>When 0, sound is continuously output.</p>
+			<p>When 1, sound is output for only the length of time specified for the sound length in NR11.</p>
+			<p>When sound output ends, the Sound 1 ON flag of NR52 is reset.</p>
+		</ol>
+		<p>SG11 [d10-00] Frequency Data</p>
+		<ol start="2">
+			<p>With <i>fdat</i> signifying the frequency, the output frequency (<i>f</i>) is determined by the following formula.</p>
+		</ol>
+		<center>
+			<p><img src="Image14.gif" width="196" height="44"></p>
+		</center>
+		<ol start="2">
+			<p>Thus, the specifiable range of frequencies is 64 to 131.1 KHz.</p>
+		</ol>
+		<p><b>[Sound 1 Usage Notes]</b></p>
+		<ol>
+			<li>When the sweep function is not used, the sweep time should be set to 0 and the sweep increase/decrease flag should be set to 1.<br>
+			<br>
+			<li>If the sweep increase/decrease flag of NR10 is set to 0, the number of sweep shifts set to a non-zero value, and sweep OFF mode set, sound production may be stopped.<br>
+			<br>
+			<li>When changing the contents of the envelope register (NR12) while a sound is executing (ON flag is 1), set the initial flag after setting the values in the envelope register.
+		</ol>
+		<h2><b><a name="T10"></a>10.4 Sound 2</b></h2>
+		<ol start="2">
+			<p>Sound 2 is a circuit that generates rectangular waveforms with envelope functions.</p>
+			<p>The contents of NR21, NR22, NR23, NR24 for Sound 2, are based on those of CGB.</p>
+		</ol>
+		<p><img src="Image15.gif" width="570" height="220"></p>
+		<p>SG20 [d15-12] Envelope Initial-Value</p>
+		<ol start="2">
+			<p>Allows specification of any one of 16 levels ranging from maximum to mute.</p>
+		</ol>
+		<p>SG20 [d11] Envelope Increase/Decrease</p>
+		<ol start="2">
+			<p>Specifies whether volume will increase or decrease.</p>
+		</ol>
+		<p>SG20 [d10-08] Number of Envelope Steps</p>
+		<ol start="2">
+			<p>Sets the length of 1 step of envelope amplification or attenuation.</p>
+			<p>With <i>n</i> signifying the value specified, the length of 1 step (<i>steptime</i>) is determined by the following formula.</p>
+		</ol>
+		<center>
+			<p><img src="Image10.gif" width="151" height="41"></p>
+		</center>
+		<ol start="2">
+			<p>When <i>n</i>=0, the envelope function is turned off.</p>
+		</ol>
+		<p>SG20 [d07-06] Waveform Duty Cycle</p>
+		<ol start="2">
+			<p>Specifies the proportion of waveform amplitude peaks.</p>
+		</ol>
+		<p>SG20 [d05-00] Sound Length</p>
+		<ol start="2">
+			<p>With <i>st</i> signifying the sound length data, the length of the output sound is determined by the following formula.</p>
+		</ol>
+		<center>
+			<p><img src="Image12.gif" width="179" height="41"></p>
+		</center>
+		<p><img src="Image16.gif" width="570" height="125"></p>
+		<p>SG21 [d15] Initialization Flag</p>
+		<ol start="2">
+			<p>A setting of 1 causes Sound 2 to be restarted.</p>
+		</ol>
+		<p>SG21 [d14] Sound Length</p>
+		<ol start="2">
+			<p>Continuous sound output with 0; with 1, sound output only for the time specified in the sound length data of NR21.</p>
+			<p>When sound output ends, the Sound 2 ON flag of NR52 is reset.</p>
+		</ol>
+		<p>SG21 [d10-00] Frequency Data</p>
+		<ol start="2">
+			<p>With <i>fdat</i> signifying the frequency data, the output frequency is determined by the following formula.</p>
+		</ol>
+		<center>
+			<p><img src="Image17.gif" width="211" height="45"></p>
+		</center>
+		<ol start="2">
+			<p>Thus, the frequency range that can be specified is 64 to 131.1 KHz.</p>
+		</ol>
+		<p><b>[Sound 2 Usage Note]</b></p>
+		<ol start="2">
+			<p>When changing the contents of the envelope register (NR22) while a sound is executing (ON flag is 1), set the initialization flag after specifying a value for the envelope register.</p>
+		</ol>
+		<h2><b><a name="T11"></a>10.5 Sound 3 </b></h2>
+		<ol start="2">
+			<p>The Sound 3 circuit outputs arbitrary waveforms and can automatically read waveform patterns (1 cycle) in waveform RAM and output them while modifying their length, frequency, and level.</p>
+			<p>The capacity of the waveform RAM of Sound 3 in AGB (total of 64 steps) is twice that in CGB, and can be used as 2 banks of 32 steps or as 64 steps.</p>
+			<p>In addition, a new output level of 3/4 output can now be selected.</p>
+		</ol>
+		<p><img src="Image18.gif" width="570" height="208"></p>
+		<p>SG30_L [d07] Sound Output Flag</p>
+		<ol start="2">
+			<p>Sound output stops when 0; sound output occurs when 1.</p>
+		</ol>
+		<p>SG30_L [d06] Waveform RAM Bank Specification</p>
+		<ol start="2">
+			<p>Two banks of waveform RAM are provided, banks 0 and 1. The Sound 3 circuit plays the waveform data in the specified bank.</p>
+			<p>When waveform RAM is accessed by the user, the bank not specified is accessed.</p>
+		</ol>
+		<p>SG30_L [d05] Waveform RAM Data Association Specification</p>
+		<ol start="2">
+			<p>When 0 is specified, 32-step waveform pattern is constructed under normal operation.</p>
+			<p>With a setting of 1, the data in the bank specified by NR30 [d06] (waveform RAM bank specification) is played, followed immediately by the data in the back bank.</p>
+			<p>The front bank 32 steps and the back bank 32 steps combine to form a waveform pattern with a total of 64 steps.</p>
+			<p><img src="Image19.gif" width="570" height="113"></p>
+		</ol>
+		<p>SG30_H [d15] Forced 3/4 Output Level Specification Flag</p>
+		<ol start="2">
+			<p>With 0 specified, the output level specified in NR32 [d14-13] is used.</p>
+			<p>A setting of 1 forces a 3/4 output level regardless of the setting in NR32 [d14-13].</p>
+		</ol>
+		<p>SG30_H [d14-13] Output Level Selection</p>
+		<ol start="2">
+			<p>The Sound 3 output-level selections are as shown in the following table.</p>
+			<div align="right">
+				<p>
+				<table width="541" border="1" cellspacing="0" cellpadding="3">
+					<tr>
+						<td width="22%" valign="top" bgcolor="white">
+							<center>
+								Setting&nbsp;</center>
+						</td>
+						<td width="78%" valign="top" bgcolor="white">
+							<center>
+								Output Level&nbsp;</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="22%" valign="top">
+							<center>
+								00&nbsp;</center>
+						</td>
+						<td width="78%" valign="top">Mute&nbsp;</td>
+					</tr>
+					<tr>
+						<td width="22%" valign="top">
+							<center>
+								01&nbsp;</center>
+						</td>
+						<td width="78%" valign="top">Outputs the waveform RAM data unmodified.&nbsp;</td>
+					</tr>
+					<tr>
+						<td width="22%" valign="top">
+							<center>
+								10&nbsp;</center>
+						</td>
+						<td width="78%" valign="top">Outputs the waveform RAM data with the contents right-shifted 1 bit (1/2).&nbsp;</td>
+					</tr>
+					<tr>
+						<td width="22%" valign="top">
+							<center>
+								11&nbsp;</center>
+						</td>
+						<td width="78%" valign="top">Outputs the waveform RAM data with the contents right-shifted 2 bits (1/4).&nbsp;</td>
+					</tr>
+				</table>
+				</p>
+			</ol>
+		</div>
+		<p>SG30_H [d07-00] Sound Length</p>
+		<ol start="2">
+			<p>The sound length is determined by the following formula, with <i>st</i> signifying the sound-length setting.</p>
+		</ol>
+		<center>
+			<p><img src="Image20.gif" width="187" height="41"></p>
+		</center>
+		<p><img src="Image21.gif" width="570" height="125"></p>
+		<p>SG31 [d15] Initialization Flag</p>
+		<ol start="2">
+			<p>When SG30_L[d07] is 1, a setting of 1 in this bit causes Sound 3 to restart.</p>
+		</ol>
+		<p>SG31 [d14] Sound Length Flag</p>
+		<ol start="2">
+			<p>When 0, sound is continuously output.</p>
+			<p>When 1, sound is output for only the length of time specified for the sound length in NR31.</p>
+			<p>When sound output ends, the Sound 2 ON flag of NR52 is reset.</p>
+		</ol>
+		<p>SG31 [d10-00] Frequency Data</p>
+		<ol start="2">
+			<p>With <i>fdat</i> signifying the frequency, the output frequency (<i>f</i>) is determined by the following formula.</p>
+		</ol>
+		<center>
+			<p><img src="Image22.gif" width="189" height="44"></p>
+		</center>
+		<ol start="2">
+			<p>Thus, the specifiable range of frequencies is 64 to 131.1 KHz.</p>
+		</ol>
+		<p><b>[Sound 3 Usage Note]</b></p>
+		<ol start="2">
+			<p>When changing the frequency during Sound 3 output, do not set the initialization flag. The contents of waveform RAM may be corrupted. With sounds 1, 2 , and 4, the initialization flag can be set without problems.</p>
+		</ol>
+		<h3><b><a name="T12"></a>Waveform RAM </b></h3>
+		<ol start="2">
+			<p>Waveform RAM consists of a 4-bit x 32-step waveform pattern. It has 2 banks, with [d06] of SG30_L used for bank specification.</p>
+			<p>The Sound 3 circuit plays the waveform data specified by the bank setting, while the waveform RAM not specified is the waveform RAM accessed by the user.</p>
+		</ol>
+		<p><img src="Image23.gif" width="589" height="442"></p>
+		<h2><b><a name="T13"></a>10.6 Sound 4</b></h2>
+		<ol start="2">
+			<p>Sound 4 is a circuit that generates white noise.</p>
+			<p>The contents of NR41, NR42, NR43, and NR44 for Sound 4 are based on those of CGB.</p>
+		</ol>
+		<center>
+			<p><img src="Image24.gif" width="570" height="220"></p>
+		</center>
+		<p>SG40 [d15-12] Envelope Initial-Value</p>
+		<ol start="2">
+			<p>Allows specification of any of 16 levels ranging from maximum to mute.</p>
+		</ol>
+		<p>SG40 [d11] Envelope Increase/Decrease</p>
+		<ol start="2">
+			<p>Specifies whether to increase or decrease the volume.</p>
+		</ol>
+		<p>SG40 [d10-08] Number of Envelope Steps</p>
+		<ol start="2">
+			<p>Sets the length of each step of envelope amplification or attenuation.</p>
+			<p>With <i>n</i> the specified value, the length of 1 step (<i>steptime</i>) is determined by the following formula.</p>
+		</ol>
+		<center>
+			<p><img src="Image10.gif" width="151" height="41"></p>
+		</center>
+		<ol start="2">
+			<p>When <i>n</i> = 0, the envelope function is turned off.</p>
+		</ol>
+		<p>SG40 [d05-00] Sound Length</p>
+		<ol start="2">
+			<p>With <i>st</i> signifying the sound length, the length of the output sound is determined by the following formula.</p>
+		</ol>
+		<center>
+			<p><img src="Image12.gif" width="179" height="41"></p>
+		</center>
+		<p><img src="Image25.gif" width="592" height="189"></p>
+		<p>SG41 [d15] Initialization Flag</p>
+		<ol start="2">
+			<p>A setting of 1 causes Sound 4 to be restarted.</p>
+		</ol>
+		<p>SG41 [d14] Sound Length</p>
+		<ol start="2">
+			<p>Continuous sound output with 0; with 1, sound output only for the time specified in the sound length data of NR41.</p>
+			<p>When sound output ends, the Sound 4 ON flag of NR52 is reset.</p>
+		</ol>
+		<p>SG41 [d07-04] Polynomial Counter Shift Clock Frequency Selection</p>
+		<ol start="2">
+			<p>With <i>n</i> signifying the specified value, the shift clock frequency (<i>shiftfreq</i>) is selected as shown in the following formula.</p>
+		</ol>
+		<center>
+			<p><img src="Image26.gif" width="278" height="41"></p>
+		</center>
+		<ol start="2">
+			<p>However, %1110 and %1111 are prohibited codes.</p>
+		</ol>
+		<p>SG41 [d03] Polynomial Counter Step Number Selection</p>
+		<ol start="2">
+			<p>A value of 0 selects 15 steps; 1 selects 7 steps.</p>
+		</ol>
+		<p>SG41 [d02-00] Dividing Ratio Frequency Selection</p>
+		<ol start="2">
+			<p>Selects a 14-step prescalar input clock to produce the shift clock for the polynomial counter.</p>
+			<p>With f=4.194304 MHz, selection is as shown in the following table.</p>
+		</ol>
+		<center>
+			<p>
+			<table width="315" border="1" cellspacing="0" cellpadding="3">
+				<tr>
+					<td width="31%" valign="top" bgcolor="white">
+						<center>
+							Setting&nbsp;</center>
+					</td>
+					<td width="69%" valign="top" bgcolor="white">
+						<center>
+							Dividing Ratio Frequency&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="31%" valign="top">
+						<center>
+							000&nbsp;</center>
+					</td>
+					<td width="69%" valign="top">
+						<center>
+							fx1/2<sup>3</sup>x2&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="31%" valign="top">
+						<center>
+							001&nbsp;</center>
+					</td>
+					<td width="69%" valign="top">
+						<center>
+							fx1/2<sup>3</sup>x1&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="31%" valign="top">
+						<center>
+							010&nbsp;</center>
+					</td>
+					<td width="69%" valign="top">
+						<center>
+							fx1/2<sup>3</sup>x(1/2)&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="31%" valign="top">
+						<center>
+							011&nbsp;</center>
+					</td>
+					<td width="69%" valign="top">
+						<center>
+							fx1/2<sup>3</sup>x(1/3)&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="31%" valign="top">
+						<center>
+							100&nbsp;</center>
+					</td>
+					<td width="69%" valign="top">
+						<center>
+							fx1/2<sup>3</sup>x(1/4)&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="31%" valign="top">
+						<center>
+							101&nbsp;</center>
+					</td>
+					<td width="69%" valign="top">
+						<center>
+							fx1/2<sup>3</sup>x(1/5)&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="31%" valign="top">
+						<center>
+							110&nbsp;</center>
+					</td>
+					<td width="69%" valign="top">
+						<center>
+							fx1/2<sup>3</sup>x(1/6)&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="31%" valign="top">
+						<center>
+							111&nbsp;</center>
+					</td>
+					<td width="69%" valign="top">
+						<center>
+							fx1/2<sup>3</sup>x(1/7)&nbsp;</center>
+					</td>
+				</tr>
+			</table>
+			</p>
+		</center>
+		<p><b>[Sound 4 Usage Note]</b></p>
+		<ol start="2">
+			<p>When changing the contents of the envelope register (NR22) while a sound is executing (ON flag is 1), set the initialization flag after specifying a value for the envelope register.</p>
+		</ol>
+		<h2><b><a name="T14"></a>10.7 Sound Control</b></h2>
+		<ol start="2">
+			<p>The output ratio for direct sound and sound can be set using the SGCNT0_H register. Final sound control can be achieved with the SGCNT0_L register.</p>
+			<p>NR50 and NR51 are each based on their counterparts in CGB.</p>
+		</ol>
+		<p><img src="Image27.gif" width="570" height="268"></p>
+		<p>SGCNT0_L [d15-12] L Output Flag for each Sound</p>
+		<ol start="2">
+			<p>No output of that sound to L when 0.</p>
+			<p>Output of that sound to L when 1.</p>
+		</ol>
+		<p>SGCNT0_L [d11-08] R Output Flag for each Sound</p>
+		<ol start="2">
+			<p>No output of that sound to R when 0.</p>
+			<p>Output of that sound to R when 1.</p>
+		</ol>
+		<p>SGCNT0_L [d06-04] L Output Level</p>
+		<ol start="2">
+			<p>L output level can be set to any of 8 levels.</p>
+			<p>However, there is no effect on direct sound.</p>
+		</ol>
+		<p>SGCNT0_L [d02-00] R Output Level</p>
+		<ol start="2">
+			<p>R output level can be set to any of 8 levels.</p>
+			<p>However, there is no effect on direct sound.</p>
+		</ol>
+		<p><img src="Image28.gif" width="583" height="286"></p>
+		<p>SGCNT1 [d07] All Sounds Operation Flag</p>
+		<ol start="2">
+			<p>The master flag that controls whether sound functions as a whole are operating.</p>
+			<p>A setting of 0 halts all sound functions including direct sound, producing a mute state.</p>
+			<p>In this situation, the contents of Sound related registers are reset.</p>
+			<p>A setting of 1 enables all sound functions.</p>
+		</ol>
+		<p>SGCNT1 [d03, d03, d01, d00] Sound Operation Flags</p>
+		<ol start="2">
+			<p>Each sound circuit's status can be referenced.</p>
+			<p>Each sound is set during output, and when in counter mode it is reset after the time passes which was set up with the length data.</p>
+		</ol>
+		<p><img src="Image29.gif" width="589" height="649"></p>
+		<p>SGCNT0_H [d15],[d11] FIFO Clear and Sequencer Reset for Each Direct Sound</p>
+		<ol start="2">
+			<p>With direct sound the sequencer counts the number of times data is transmitted from FIFO to the mixing circuit. A setting of 1 resets the FIFO and sequencer used for each direct sound. When this bit is read, 0 is returned.</p>
+		</ol>
+		<p>SGCNT0_H [d14],[d10] Timer Selection for Each Direct Sound</p>
+		<ol start="2">
+			<p>Specifies the timer used for each direct sound.</p>
+			<p>A setting of 0 selects timer 0, and 1 selects timer 1.</p>
+			<p>The same timer can be specified for both direct sounds (A and B).</p>
+		</ol>
+		<p>SGCNT0_H [d13],[d09] L Output for Each Direct Sound</p>
+		<ol start="2">
+			<p>Controls the output to L for each direct sound. A setting of 0 results in no output to L; a setting of 1 causes output to L.</p>
+		</ol>
+		<p>SGCNT0_H [d12],[d08] R Output for Each Direct Sound</p>
+		<ol start="2">
+			<p>Controls the output to R for each direct sound. A setting of 0 results in no output to R; a setting of 1 causes output to R.</p>
+		</ol>
+		<p>SGCNT0_H [d03],[d02] Output Ratio for Each Direct Sound</p>
+		<ol start="2">
+			<p>Selects the output level for each direct sound.</p>
+			<p>A setting of 0 produces output that is 1/2 of full range. A setting of 1 results in full-range output.</p>
+		</ol>
+		<p>SGCNT0_H [d01-00] Output Ratio for Synthesis of Sounds 1-4</p>
+		<ol start="2">
+			<p>Specifies the output level for the synthesis of sounds 1-4.</p>
+			<p>A setting of 00 results in output that is 1/4 of full range.</p>
+			<p>A setting of 01 results in output that is 1/2 of full range.</p>
+			<p>A setting of 10 results in full-range output.</p>
+			<p>A setting of 11 is a prohibited code.</p>
+		</ol>
+		<h2><b><a name="T15"></a>10.8 Sound PWM Control</b></h2>
+		<ol start="2">
+			<p>Bit modulation format PWM is used in the AGB sound circuit. When no sound is produced, the duty waveform is output, and bias voltage is provided. The PWM circuit is stopped when the setting for duty is 0h.</p>
+			<p><u>This register is used by system ROM. This can be the cause of errors, therefore be careful not to write to this register.</u></p>
+		</ol>
+		<center>
+			<p><font size="3"><img src="Image30.gif" width="581" height="128"></font></p>
+		</center>
+		<ol start="2">
+			<p>SG_BIAS[d15-14] Amplitude Resolution/Sampling Cycle</p>
+			<p>This sets the amplitude resolution and sampling cycle frequency during PWM modulation.</p>
+			<p>The DMG compatible sound is input at 4 bits/130.93KHz so in order to have accurate modulation the sampling frequency must be set high. Direct sound will arbitrarily decide the sampling frequency based on the timer setting. By using the sampling frequencies listed in the table below, an accurate modulation can be done. Thus, in order to increase authenticity of sound, the amplitude resolution needs to be set higher. When producing both compatible sound and direct sound, find a value that will work for both and set this.</p>
+			<div align="left">
+				<p>
+				<table width="279" border="1" cellspacing="0" cellpadding="3">
+					<tr>
+						<td width="22%" valign="top" bgcolor="white">
+							<center>
+								Setting&nbsp;</center>
+						</td>
+						<td width="30%" valign="top" bgcolor="white">
+							<center>
+								Amplitude Resolution&nbsp;</center>
+						</td>
+						<td valign="top" bgcolor="white" width="40%">
+							<center>
+								Sampling Frequency&nbsp;</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="22%" valign="top">
+							<center>
+								00&nbsp;</center>
+						</td>
+						<td width="30%" valign="top">
+							<center>
+								9bit&nbsp;</center>
+						</td>
+						<td width="40%" valign="top">
+							<center>
+								32.768KHz&nbsp;</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="22%" valign="top">
+							<center>
+								01&nbsp;</center>
+						</td>
+						<td width="30%" valign="top">
+							<center>
+								8bit&nbsp;</center>
+						</td>
+						<td width="40%" valign="top">
+							<center>
+								65.536KHz&nbsp;</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="22%" valign="top">
+							<center>
+								10&nbsp;</center>
+						</td>
+						<td width="30%" valign="top">
+							<center>
+								7bit&nbsp;</center>
+						</td>
+						<td width="40%" valign="top">
+							<center>
+								131.072KHz&nbsp;</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="22%" valign="top">
+							<center>
+								11&nbsp;</center>
+						</td>
+						<td width="30%" valign="top">
+							<center>
+								6bit&nbsp;</center>
+						</td>
+						<td width="40%" valign="top">
+							<center>
+								262.144KHz&nbsp;</center>
+						</td>
+					</tr>
+				</table>
+				</p>
+			</ol>
+		</div>
+		<center>
+			<p><b>PWM Conversion Image</b></p>
+		</center>
+		<p><font size="3"><img src="Image31.gif" width="590" height="175"></font></p>
+		<ol start="2">
+			<p>SG_BIAS[d09-00] Bias Level</p>
+			<p>This is used by system ROM. Please do not change this value, as it may cause errors.
+		</ol>
+	</body>
+
+</html>

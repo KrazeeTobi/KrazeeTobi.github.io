@@ -1,0 +1,130 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Operators and Default Streams</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioIntroduction_to_Iostreams.html">Previous</A>|<A HREF="libioStream_Classes.html">Next</A>
+<BR><A NAME="off_35371"></A><A NAME="2e557d99"></A><A NAME="off_35371"></A><A NAME="2e557d99"></A><A NAME="off_35371"></A><A NAME="2e557d99"></A><A NAME="off_35371"></A><A NAME="2e557d99"></A><A NAME="off_35371"></A><A NAME="2e557d99"></A><A NAME="off_35371"></A><A NAME="2e557d99"></A><A NAME="off_35371"></A><A NAME="2e557d99"></A><A NAME="off_35371"></A><A NAME="2e557d99"></A><A NAME="off_35371"></A><A NAME="2e557d99"></A><A NAME="off_35371"></A><A NAME="2e557d99"></A><A NAME="off_35371"></A><A NAME="2e557d99"></A><A NAME="off_35371"></A><A NAME="2e557d99"></A><A NAME="off_35371"></A><A NAME="2e557d99"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Operators
+and default streams</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+GNU Iostream library, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libio</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">,
+implements the standard input and output facilities for C</FONT><FONT FACE="Courier">++</FONT><FONT FACE="Times New Roman">.
+These facilities are roughly analogous (in their purpose and ubiquity,
+at least) with those defined by the C </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdio</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+functions.</FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Times New Roman">Although these definitions
+come from a library, rather than being part of the core language,” they
+are sufficiently central to be specified in the latest draft standard for
+C</FONT><FONT FACE="Courier">++</FONT><FONT FACE="Times New Roman">.</FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Times New Roman">You can use two operators
+defined in this library for basic input and output operations. They are
+familiar from any C</FONT><FONT FACE="Courier">++ </FONT><FONT FACE="Times New Roman">introductory
+text-book: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>&lt;&lt;
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>for output, and
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>>></FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">for input. (Think of data flowing in
+the direction of the “arrows.”)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>These operators are often
+used in conjunction with the following three streams that are open by default.</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">ostream </FONT></FONT><B><FONT FACE="Times New Roman">cout&nbsp;<BR>
+<I>Variable</I></FONT></B></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The standard output stream,
+analogous to the C </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdout</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<LI>
+<FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">ostream </FONT></FONT><B><FONT FACE="Times New Roman">cin&nbsp;<BR>
+<I>Variable</I></FONT></B></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The standard input stream,
+analogous to the C </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdin</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<LI>
+<FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">ostream </FONT></FONT><B><FONT FACE="Times New Roman">cerr&nbsp;<BR>
+<I>Variable</I></FONT></B></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>An alternative output stream
+for errors, analogous to the C </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stderr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR><FONT SIZE=+1><FONT FACE="Times New Roman">For example, the following
+example shows a bare-bones C</FONT><FONT FACE="Courier">++ </FONT><FONT FACE="Times New Roman">version
+of the traditional “</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>hello</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>”
+program using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>&lt;&lt;</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cout</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+</UL>
+</UL>
+</UL>
+
+<UL>
+<UL>
+<UL>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#include &lt;iostream.h>&nbsp;
+
+int main(int argc, char **argv)&nbsp;
+{&nbsp;
+&nbsp;&nbsp; cout &lt;&lt; "Well, hi there.\n";&nbsp;
+&nbsp;&nbsp; return 0;&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+</UL>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Casual use of these operators
+may be seductive, but—other than in writing throwaway code for your own
+use—it is not necessarily simpler than managing input and output in any
+other language. For example, robust code should check the state of the
+input and output streams between operations (for example, using the method,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>good</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+See also <A HREF="libioChecking_the_state_of_a_stream.html">Checking the
+state of a stream</A>. You may also need to adjust maximum input or output
+field widths, using manipulators like </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>setw</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>setprecision</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<UL><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">&lt;&lt;&nbsp;<BR>
+</FONT></FONT><FONT FACE="Times New Roman"><B><I>Operator</I></B> on <B>ostream</B></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Write output to an open
+output stream of class, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Defined by this library on any </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>object</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Arial">
+</FONT><FONT FACE="Times New Roman">of a C</FONT><FONT FACE="Arial">++
+</FONT><FONT FACE="Times New Roman">primitive type, and on other classes
+of the library. You can overload the definition for any of your own applications’
+classes.</FONT></FONT></UL>
+</UL>
+
+<UL>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Returns a reference to the
+implied argument, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*this</FONT></FONT><FONT SIZE=+1><FONT FACE="Arial">
+</FONT><FONT FACE="Times New Roman">(the open stream it writes on), permitting
+multiple inputs like the following statement.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+0>cout &lt;&lt; "The value of i is " &lt;&lt; i &lt;&lt; "\n";</FONT></FONT></PRE>
+</UL>
+</UL>
+<FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">>>&nbsp;<BR>
+</FONT></FONT><FONT FACE="Times New Roman"><B><I>Operator</I></B> on <B>istream</B></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Read input from an open
+input stream of class, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>istream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Defined by this library on primitive numeric, pointer, and string types;
+you can extend the definition for any of your own applications’ classes.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Returns a reference to the
+implied argument, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*this</FONT></FONT><FONT SIZE=+1><FONT FACE="Arial">
+</FONT><FONT FACE="Times New Roman">(the open stream it reads), permitting
+multiple inputs in one statement.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioIntroduction_to_Iostreams.html">Previous</A>|<A HREF="libioStream_Classes.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Statements</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asSymbols_in_as.html">Previous</A>|<A HREF="asConstants.html">Next</A>
+<BR><A NAME="off_361404"></A><A NAME="a0bdb5cc"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Statements</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>A
+statement ends at a newline character (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\n</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+or line separator character. (The line separator is usually (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+unless this conflicts with the comment character; for specific architectures
+with which this character usage pertains, see </FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asMachine_Dependent_Features.html">Machine
+dependent features</A></FONT><FONT COLOR="#000000">.) The newline or separator
+character is considered part of its preceding statement.</FONT></FONT></FONT>
+<BR>&nbsp;
+<UL><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Note:</FONT></FONT></I>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Newlines and separators
+within character constants are an exception: <I>they do not end statements</I>.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>It
+is an error to end any statement with end-of-file: the last character of
+any input file should be a newline.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>You
+may write a statement on more than one line if you put a backslash (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+immediately in front of any newlines within the statement. When </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+reads a backslashed newline both characters are ignored. You can even put
+backslashed newlines in the middle of symbol names without changing the
+meaning of your source program.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>An
+empty statement is allowed, and may include whitespace. It is ignored.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>A statement
+begins with zero or more labels, optionally followed by a key symbol which
+determines what kind of statement it is. The key symbol determines the
+syntax of the rest of the statement.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>If
+the symbol begins with a dot (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+then the statement is an assembler directive: typically valid for any computer.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>If
+the symbol begins with a letter the statement is an assembly language instruction:
+it assembles into a machine language <I>instruction</I>.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Different
+versions of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for different computers recognize different instructions. In fact, the
+same symbol may represent a different instruction in a different computer’s
+assembly language.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>A label
+is a symbol immediately followed by a colon (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>:</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+Whitespace before a label or after a colon is permitted, but you may not
+have whitespace between a label’s symbol and its colon. See </FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asLabels.html">Labels</A></FONT><FONT COLOR="#000000">.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>For
+HPPA targets, labels need not be immediately followed by a colon, but the
+definition of a label must begin in column zero, or the beginning of the
+line. This also implies that only one label may be defined on each line.
+Use the following statement as an example.</FONT></FONT></FONT>
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>label:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.directive&nbsp;&nbsp;&nbsp;&nbsp; followed by something</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>another_label:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+# This is an empty statement.</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Instruction&nbsp;&nbsp; operand_1, operand_2, ...</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asSymbols_in_as.html">Previous</A>|<A HREF="asConstants.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

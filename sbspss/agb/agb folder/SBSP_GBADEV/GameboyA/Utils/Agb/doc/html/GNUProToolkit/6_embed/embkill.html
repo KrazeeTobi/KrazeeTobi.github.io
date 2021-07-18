@@ -1,0 +1,130 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title> kill</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<div CLASS="Heading5"><a NAME="Top"></a><a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embcygpath.html">Previous</a>|<a href="embmkgroup.html">Next</a></div>
+
+<div CLASS="Heading5"><tt><font size=+3></font></tt></div>
+
+<div CLASS="Heading5"><tt><font size=+3>kill</font></tt>
+<hr SIZE=5 WIDTH="100%"></div>
+
+<h6 CLASS="Label">
+<font size=+1>USAGE</font></h6>
+
+<div CLASS="CodeExample2">
+<pre><font size=+1>kill [-sigN] pid1 [pid2 ...]</font></pre>
+</div>
+
+<h6 CLASS="Label">
+<font size=+1>DESCRIPTION</font></h6>
+
+<div CLASS="Note"><font size=+1>The <tt>kill</tt> program allows you to
+send arbitrary signals to other Cygwin programs. The usual purpose is to
+end a running program from some other window when the keystroke combination,
+<font face="Arial Narrow">Ctrl+C</font>,
+won't work, but you can also send program-specified signals such as <tt>SIGUSR1</tt>
+to trigger actions within the program, such as for enabling debugging or
+re-opening log files.</font></div>
+
+<div CLASS="Note"><font size=+1>Each program defines the signals they understand.</font></div>
+
+<div CLASS="Note"><font size=+1><tt>pid</tt>&nbsp; values are the Cygwin
+<i>process
+ID</i> values, not the Windows process ID values. To get a list of running
+programs and their Cygwin PIDs, use the Cygwin
+<tt>ps</tt> program (see
+<tt><a href="embps.html" CLASS="XRef">ps</a></tt>).</font></div>
+
+
+<p CLASS="Note"><font size=+1>To send a specific signal, use the <tt>-signN</tt>
+option, either with a signal number or a signal name (minus the <tt>SIG</tt>
+part), like the following examples specify.</font>
+<br>&nbsp;
+<pre CLASS="CodeExample2"><font size=+1>$ kill 123</font></pre>
+
+<pre><font size=+1>$ kill -1 123</font></pre>
+
+<pre><font size=+1>$ kill -HUP 123</font></pre>
+
+<div CLASS="Note"><font size=+1>The following list provides the available
+signals, their numbers, and some commentary on them; the file, <tt>&lt;sys/signal.h></tt>,
+is the official source of this information.</font></div>
+
+<br>&nbsp;
+<pre CLASS="CodeExample2"><font size=+1>SIGHUP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; hangup</font></pre>
+
+<pre><font size=+1>SIGINT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; interrupt</font></pre>
+
+<pre><font size=+1>SIGQUIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; quit</font></pre>
+
+<pre><font size=+1>SIGILL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; illegal instruction (not reset when caught)</font></pre>
+
+<pre><font size=+1>SIGTRAP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; trace trap (not reset when caught)</font></pre>
+
+<pre><font size=+1>SIGABRT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; used by abort</font></pre>
+
+<pre><font size=+1>SIGEMT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; EMT instruction</font></pre>
+
+<pre><font size=+1>SIGFPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; floating point exception</font></pre>
+
+<pre><font size=+1>SIGKILL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; kill (cannot be caught or ignored)</font></pre>
+
+<pre><font size=+1>SIGBUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; bus error</font></pre>
+
+<pre><font size=+1>SIGSEGV&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; segmentation violation</font></pre>
+
+<pre><font size=+1>SIGSYS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;&nbsp;&nbsp; bad argument to system call</font></pre>
+
+<pre><font size=+1>SIGPIPE&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp; write on a pipe with no one to read it</font></pre>
+
+<pre><font size=+1>SIGALRM&nbsp;&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp; alarm clock</font></pre>
+
+<pre><font size=+1>SIGTERM&nbsp;&nbsp;&nbsp;&nbsp; 15&nbsp;&nbsp;&nbsp; software termination signal from kill</font></pre>
+
+<pre><font size=+1>SIGURG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp; urgent condition on IO channel</font></pre>
+
+<pre><font size=+1>SIGSTOP&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp; sendable stop signal not from tty</font></pre>
+
+<pre><font size=+1>SIGTSTP&nbsp;&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; stop signal from tty</font></pre>
+
+<pre><font size=+1>SIGCONT&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp; continue a stopped process</font></pre>
+
+<pre><font size=+1>SIGCHLD&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; to parent on child stop or exit</font></pre>
+
+<pre><font size=+1>SIGCLD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp; System V name for SIGCHLD</font></pre>
+
+<pre><font size=+1>SIGTTIN&nbsp;&nbsp;&nbsp;&nbsp; 21&nbsp;&nbsp;&nbsp; to readers pgrp upon background tty read</font></pre>
+
+<pre><font size=+1>SIGTTOU&nbsp;&nbsp;&nbsp;&nbsp; 22&nbsp;&nbsp;&nbsp; like TTIN for output if (tp->t_local&amp;LTOSTOP)</font></pre>
+
+<pre><font size=+1>SIGIO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 23&nbsp;&nbsp;&nbsp; input/output possible signal</font></pre>
+
+<pre><font size=+1>SIGPOLL&nbsp;&nbsp;&nbsp;&nbsp; 23&nbsp;&nbsp;&nbsp; System V name for SIGIO</font></pre>
+
+<pre><font size=+1>SIGXCPU&nbsp;&nbsp;&nbsp;&nbsp; 24&nbsp;&nbsp;&nbsp; exceeded CPU time limit</font></pre>
+
+<pre><font size=+1>SIGXFSZ&nbsp;&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp; exceeded file size limit</font></pre>
+
+<pre><font size=+1>SIGVTALRM&nbsp;&nbsp; 26&nbsp;&nbsp;&nbsp; virtual time alarm</font></pre>
+
+<pre><font size=+1>SIGPROF&nbsp;&nbsp;&nbsp;&nbsp; 27&nbsp;&nbsp;&nbsp; profiling time alarm</font></pre>
+
+<pre><font size=+1>SIGWINCH&nbsp;&nbsp;&nbsp; 28&nbsp;&nbsp;&nbsp; window changed</font></pre>
+
+<pre><font size=+1>SIGLOST&nbsp;&nbsp;&nbsp;&nbsp; 29&nbsp;&nbsp;&nbsp; resource lost (eg, record-lock lost)</font></pre>
+
+<pre><font size=+1>SIGUSR1&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; user defined signal 1</font></pre>
+
+<pre><font size=+1>SIGUSR2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 31&nbsp;&nbsp;&nbsp; user defined signal 2</font></pre>
+
+<hr SIZE=5 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embcygpath.html">Previous</a>|<a href="embmkgroup.html">Next</a></center>
+
+</body>
+</html>

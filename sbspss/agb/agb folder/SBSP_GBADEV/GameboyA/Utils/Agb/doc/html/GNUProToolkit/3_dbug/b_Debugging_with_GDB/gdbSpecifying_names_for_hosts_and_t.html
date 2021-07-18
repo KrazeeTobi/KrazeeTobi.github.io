@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Specifying names for hosts and targets</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbCompiling_GDB_in_another_directo.html">Previous</A>|<A HREF="gdbconfigure_options.html">Next</A>
+<BR><A NAME="off_196608"></A><A NAME="a2e2c281"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><B><FONT SIZE=+3>Specifying
+names for hosts and targets&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The specifications used
+for hosts and targets in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+script are based on a three-part naming scheme, but some short predefined
+aliases are also supported. The full naming scheme encodes three pieces
+of information in the following pattern: </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>architecture-
+vendor- os</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, use the alias,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sun4</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+as a </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>host</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+argument, or as the value for target in a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--target=<I>target</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The equivalent full name
+is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sparc-sun-sunos4</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+script accompanying GDB does not provide any query facility to list all
+supported host and target names or aliases. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+calls the Bourne shell script, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>config.sub</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to map abbreviations to full names; you can read the script, if you wish,
+or you can use it to test your guesses on abbreviations, as in the following
+example. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>config.sub</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is in the GDB source directory.</FONT></FONT>
+<BR>&nbsp;
+<PRE><TT><FONT SIZE=+1><B>%</B> sh config.sub sun4</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>sparc-sun-sunos4.1.1</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>% sh config.sub sun3</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>m68k-sun-sunos4.1.1</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>% sh config.sub decstation</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>mips-dec-ultrix4.2</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>% sh config.sub hp300bsd</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>m68k-hp-bsd</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>% sh config.sub i386v</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>i386-unknown-sysv</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>% sh config.sub i786v</FONT></TT></PRE>
+
+<PRE><B><TT><FONT SIZE=+1>Invalid configuration ‘i786v’: machine ‘i786v’ not recognized</FONT></TT></B></PRE>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbCompiling_GDB_in_another_directo.html">Previous</A>|<A HREF="gdbconfigure_options.html">Next</A></CENTER>
+&nbsp;
+<BR>&nbsp;
+</BODY>
+</HTML>

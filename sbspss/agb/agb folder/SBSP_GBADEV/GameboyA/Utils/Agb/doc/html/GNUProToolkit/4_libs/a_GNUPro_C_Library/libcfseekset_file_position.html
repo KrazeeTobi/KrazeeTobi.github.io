@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>fseek[set file position]</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcfreopenopen_a_file_using_an_exis.html">Previous</A>|<A HREF="libcfsetposrestore_position_of_a_str.html">Next</A>
+
+<P><A NAME="off_821395"></A><A NAME="7d1c0324"></A><A NAME="off_821395"></A><A NAME="7d1c0324"></A><A NAME="off_821395"></A><A NAME="7d1c0324"></A><A NAME="off_821395"></A><A NAME="7d1c0324"></A><A NAME="off_821395"></A><A NAME="7d1c0324"></A><A NAME="off_821395"></A><A NAME="7d1c0324"></A><A NAME="off_821395"></A><A NAME="7d1c0324"></A><A NAME="off_821395"></A><A NAME="7d1c0324"></A><A NAME="off_821395"></A><A NAME="7d1c0324"></A><FONT FACE="Courier New"><FONT SIZE=+3>fseek</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+3>[set file position]</FONT></FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>&lt;stdio.h></FONT><FONT SIZE=-1></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>int</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>fseek(FILE</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>*<I>fp</I>,</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>long</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0><I>offset</I>,</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>int</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0><I>whence</I>)</FONT></FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Objects of type </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>FILE</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">can have a <I>position</I> that records
+how much of the file your program has already read. Many of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdio</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">functions depend on this position,
+and many change it as a side effect. You can use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fseek</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">to set the position for the file identified
+by </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>fp</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The value of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>offset</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">determines the new position, in one
+of three ways, selected by the value of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>whence</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">(defined as macros in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdio.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>SEEK_SET</FONT></FONT></LI>
+
+<BR><I><FONT FACE="Courier New"><FONT SIZE=+0>offset</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is the absolute file position (an offset
+from the beginning of the file) desired. </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>offset</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+must be positive.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>SEEK_CUR</FONT></FONT></LI>
+
+<BR><I><FONT FACE="Courier New"><FONT SIZE=+0>offset</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is relative to the current file position.
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>offset </FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>can
+meaningfully be either positive or negative.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>SEEK_END</FONT></FONT></LI>
+
+<BR><I><FONT FACE="Courier New"><FONT SIZE=+0>offset</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is relative to the current end of file.
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>offset</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">can meaningfully be either positive
+(to increase the size of the file) or negative.</FONT></FONT></UL>
+</UL>
+</UL>
+<FONT SIZE=+1><FONT FACE="Times New Roman">See </FONT><FONT FACE="Courier New"><FONT COLOR="#008000"><A HREF="libcftellreturn_position_in_a_stream.html">ftell</A></FONT></FONT><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">to determine the current file position.</FONT></FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>fseek</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">returns </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">when successful. If </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fseek</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">fails, the result is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>EOF</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The reason for failure is indicated in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>:
+either </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ESPIPE</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">(the stream identified by </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>fp</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">doesn’t support repositioning) or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>EINVAL</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">(invalid file position).</FONT></FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>ANSI C requires</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>fseek</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Supporting OS subroutines
+required: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>close</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fstat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>isatty</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>lseek</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>read</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sbrk</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>write</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcfreopenopen_a_file_using_an_exis.html">Previous</A>|<A HREF="libcfsetposrestore_position_of_a_str.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

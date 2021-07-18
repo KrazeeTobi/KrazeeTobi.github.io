@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE>Hunks</TITLE>
+</HEAD><BODY>
+<A HREF= "dif.html">Contents</A>|<A HREF= "difindex.html">Index</A>|<A HREF="difWhat_Comparison_Means.html">Previous</A>|<A HREF="difSuppressing_Differences_00000004.html">Next</A>
+<P>
+<A NAME="off_100862"></A><A NAME="0511c131"></A><FONT FACE="Times New Roman" SIZE="6"><B>Hunks
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">When comparing two files, </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> finds sequences of lines common to both files, interspersed with groups of
+differing lines called <I>hunks</I>. Comparing two identical files yields one sequence of common lines and no
+hunks, because no lines differ. Comparing two entirely different files yields no
+common lines and one large hunk that contains all lines of both files. In
+general, there are many ways to match up lines between two given files. </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> tries to minimize the total hunk size by finding large sequences of common
+lines interspersed with small hunks of differing lines. For example, suppose the
+file '</FONT><FONT FACE="Courier New" SIZE="3">F</FONT><FONT FACE="Times New Roman" SIZE="4">' contains the three lines '</FONT><FONT FACE="Courier New" SIZE="3">a</FONT><FONT FACE="Times New Roman" SIZE="4">', '</FONT><FONT FACE="Courier New" SIZE="3">b</FONT><FONT FACE="Times New Roman" SIZE="4">', '</FONT><FONT FACE="Courier New" SIZE="3">c</FONT><FONT FACE="Times New Roman" SIZE="4">', and the file '</FONT><FONT FACE="Courier New" SIZE="3">G</FONT><FONT FACE="Times New Roman" SIZE="4">' contains the same three lines in reverse order '</FONT><FONT FACE="Courier New" SIZE="3">c</FONT><FONT FACE="Times New Roman" SIZE="4">', '</FONT><FONT FACE="Courier New" SIZE="3">b</FONT><FONT FACE="Times New Roman" SIZE="4">', '</FONT><FONT FACE="Courier New" SIZE="3">a</FONT><FONT FACE="Times New Roman" SIZE="4">'. If </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> finds the line '</FONT><FONT FACE="Courier New" SIZE="3">c</FONT><FONT FACE="Times New Roman" SIZE="4">' as common, then the command '</FONT><FONT FACE="Courier New" SIZE="3">diff F</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3">G</FONT><FONT FACE="Times New Roman" SIZE="4">' produces this output:
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3"><B>1,2d0
+<BR>&lt; a 
+<BR>&lt; b 
+<BR>3a2,3 
+<BR>&gt; b 
+<BR>&gt; a
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">But if </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> notices the common line '</FONT><FONT FACE="Courier New" SIZE="3">b</FONT><FONT FACE="Times New Roman" SIZE="4">' instead, it produces this output:
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3"><B>1c1 
+<BR>&lt; a 
+<BR>--- 
+<BR>&gt; c 
+<BR>3c3 
+<BR>&lt; c 
+<BR>--- 
+<BR>&gt; a
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">It is also possible to find '</FONT><FONT FACE="Courier New" SIZE="3">a</FONT><FONT FACE="Times New Roman" SIZE="4">' as the common line. </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> does not always find an optimal matching between the files; it takes
+shortcuts to run faster. But its output is usually close to the shortest possible. You
+can adjust this tradeoff with the '</FONT><FONT FACE="Courier New" SIZE="3">--minimal</FONT><FONT FACE="Times New Roman" SIZE="4">' option (see </FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difdiff_Performance_Tradeoffs.html">diff</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difdiff_Performance_Tradeoffs.html"> Performance Tradeoffs</A></FONT><FONT FACE="Times New Roman" SIZE="4">).
+<P>
+</FONT></BODY>
+</HTML>

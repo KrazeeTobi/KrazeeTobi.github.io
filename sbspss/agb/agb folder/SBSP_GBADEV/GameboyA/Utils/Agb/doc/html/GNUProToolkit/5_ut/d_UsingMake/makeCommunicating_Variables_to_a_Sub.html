@@ -1,0 +1,156 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Communicating Variables to a Sub-make</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeHow_the_MAKE_Variable_Works.html">Previous</A>|<A HREF="makeCommunicating_Options_to_a_Subma.html">Next</A>
+<BR><A NAME="off_952650"></A><A NAME="1a17a1b2"></A><B><FONT SIZE=+3><FONT FACE="Futura Md BT">Communicating
+variables to a sub-</FONT><FONT FACE="Courier New">make</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Variable
+values of the top-level make can be passed to the sub-make through the
+environment by explicit request. These variables are defined in the sub-make
+as defaults, but do not override what is specified in the makefile used
+by the sub-</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+makefile unless you use the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-e</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+switch (see <FONT COLOR="#008000"><A HREF="makeSummary_of_Options.html">Summary
+of options</A></FONT>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To pass down, or <I>export</I>,
+a variable, </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+adds the variable and its value to the environment for running each command.
+The sub-</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,in
+turn, uses the environment to initialize its table of variable values.
+See <FONT COLOR="#008000"><A HREF="makeVariables_from_the_Environment.html">Variables
+from the environment</A></FONT>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Except by explicit request,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+exports a variable only if it is either defined in the environment initially
+or set on the command line, and if its name consists only of letters, numbers,
+and underscores.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Some shells cannot cope with
+environment variable names consisting of characters other than letters,
+numbers, and underscores. The special variables, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SHELL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MAKEFLAGS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+are always exported (unless you unexport them). </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MAKEFILES</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is exported if you set it to anything.</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+automatically passes down variable values that were defined on the command
+line, by putting them in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MAKEFLAGS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+variable. See <FONT COLOR="#008000"><A HREF="makeCommunicating_Variables_to_a_Sub.html">Communicating
+variables to a sub-</A></FONT></FONT></FONT><B><FONT FACE="Courier New"><FONT COLOR="#008000"><FONT SIZE=+0><A HREF="makeCommunicating_Variables_to_a_Sub.html">make</A></FONT></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Variables are <I>not</I>
+normally passed down if they were created by default by </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(see <FONT COLOR="#008000"><A HREF="makeVariables_Used_by_Implicit_Rules.html">Variables
+used by implicit rules</A></FONT>). The sub-</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will define these for itself.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you want to export specific
+variables to a sub-</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+use the export directive like: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>variable</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>...</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you want to prevent a
+variable from being exported, use the unexport directive, like: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>unexport</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>variable </I><B>...</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>As a convenience, you can
+define a variable and export it at the same time by using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>variable</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>= value</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(which has the same result as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>variable</I>
+=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>value</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+variable) and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>variable</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>:= value</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(which has the same result as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>variable</I>
+:= value export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>variable</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Likewise, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>variable</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+= value</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is just like </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>variable</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+= value export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>variable</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>See <FONT COLOR="#008000"><A HREF="makeAppending_More_Text_to_Variables.html">Appending
+more text to variables</A></FONT>. You may notice that the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>unexport</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directives work in make in the same way they work in the shell, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sh</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you want all variables
+to be exported by default, you can use export by itself: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+This tells </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+that variables which are not explicitly mentioned in an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>unexport</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive should be exported. Any variable given in an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>unexport</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive will still not be exported. If you use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+by itself to export variables by default, variables whose names contain
+characters other than alphanumerics and underscores will not be exported
+unless specifically mentioned in an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The behavior elicited by
+an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive by itself was the default in older versions of GNU </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If your makefiles depend on this behavior and you want to be compatible
+with old versions of </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+you can write a rule for the special target, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.EXPORT_ALL_VARIABLES</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+instead of using the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive. This will be ignored by old </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>s,
+while the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive will cause a syntax error.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Likewise, you can use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>unexport</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+by itself to tell make not to export variables by default. Since this is
+the default behavior, you would only need to do this if export had been
+used by itself earlier (in an included makefile, perhaps). You <B><I>cannot</I></B>
+use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>unexport</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+by themselves to have variables exported for some commands and not for
+others. The last </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>export</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>unexport</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive that appears by itself determines the behavior for the entire
+run of </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>As a special feature, the
+variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MAKELEVEL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is changed when it is passed down from level to level. This variable’s
+value is a string which is the depth of the level as a decimal number.
+The value is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+for the top-level make;‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+for a sub-</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+for a sub-sub-</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and so on. The incrementation happens when </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+sets up the environment for a command.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The main use of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MAKELEVEL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is to test it in a conditional directive (see <FONT COLOR="#008000"><A HREF="makeConditional_Parts_of_Makefiles.html">Conditional
+parts of makefiles</A></FONT>); this way you can write a makefile that
+behaves one way if run recursively and another way if run directly by you.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can use the variable,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MAKEFILES</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to cause all sub-make commands to use additional makefiles. The value of
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MAKEFILES</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a whitespace-separated list of file names. This variable, if defined
+in the outer-level makefile, is passed down through the environment; then
+it serves as a list of extra makefiles for the sub-</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to read before the usual or specified ones. See <FONT COLOR="#008000"><A HREF="makeThe_Variable_MAKEFILES.html">The
+variable, </A></FONT></FONT></FONT><B><FONT FACE="Courier New"><FONT COLOR="#008000"><FONT SIZE=+0><A HREF="makeThe_Variable_MAKEFILES.html">MAKEFILES</A></FONT></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeHow_the_MAKE_Variable_Works.html">Previous</A>|<A HREF="makeCommunicating_Options_to_a_Subma.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

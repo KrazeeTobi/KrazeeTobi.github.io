@@ -1,0 +1,409 @@
+Archive member included       because of file (symbol)
+
+C:/agb/lib/libagbsyscall.a(AgbSyscall.o)
+                              demo_main.o (RegisterRamReset)
+C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_call_via_rX.o)
+                              MultiSio.o (_call_via_r0)
+
+Allocating common symbols
+Common symbol       size              file
+
+UsrSendBuf          0x20              demo_main.o
+IntrTableBuf        0x38              demo_main.o
+Cont                0x4               demo_main.o
+IntrFuncBuf         0x110             MultiSio.o
+Trg                 0x4               demo_main.o
+SioFlags            0x4               demo_main.o
+IntrMainBuf         0x400             demo_main.o
+UsrRecvBuf          0x80              demo_main.o
+Ms                  0x290             MultiSio.o
+OamBak              0x400             demo_main.o
+RecvFuncBuf         0x50              MultiSio.o
+BgBak               0x800             demo_main.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD crt0_demo.o
+LOAD MultiSioAsm.o
+LOAD demo_main.o
+LOAD data.o
+LOAD MultiSio.o
+LOAD C:/agb/lib/libagbsyscall.a
+LOAD C:/agb/lib/libisagbprn.a
+LOAD C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a
+LOAD C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/lib/libg.a
+LOAD C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/lib/libc.a
+LOAD C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a
+Address of section .text set to 0x2010000
+Address of section .bss set to 0x3000000
+                0x00008000                .=0x8000
+
+.interp
+ *(.interp)
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x02010000      0x8a8
+ *(.text)
+ .text          0x02010000       0xf0 crt0_demo.o
+                0x02010000                _start
+                0x02010000                start_vector
+                0x0201003c                intr_main
+ .text          0x020100f0      0x144 MultiSioAsm.o
+                0x02010134                MultiSioIntr
+                0x020100f0                MultiSioRecvBufChange
+ .text          0x02010234      0x24c demo_main.o
+                0x02010450                IntrDummy
+                0x0201044c                VBlankIntr
+                0x02010234                DemoMain
+                0x02010454                KeyRead
+ .text          0x02010480      0x314 MultiSio.o
+                0x02010480                MultiSioInit
+                0x02010584                MultiSioMain
+                0x020106c0                MultiSioRecvDataCheck
+                0x02010674                MultiSioSendDataSet
+ .text          0x02010794       0xd8 C:/agb/lib/libagbsyscall.a(AgbSyscall.o)
+                0x020107e4                BitUnPack
+                0x02010818                SoundBiasChange
+                0x020107d0                ArcTan2
+                0x0201080c                Diff8bitUnFilterWram
+                0x02010848                MusicPlayerOpen
+                0x02010814                Diff16bitUnFilter
+                0x0201083c                SoundDriverVSyncOff
+                0x0201082c                SoundDriverMode
+                0x02010850                MusicPlayerStop
+                0x02010794                SoftReset
+                0x02010810                Diff8bitUnFilterVram
+                0x02010828                SoundDriverInit
+                0x020107ae                VBlankIntrWait
+                0x02010808                RLUnCompVram
+                0x02010822                SoundBiasReset
+                0x020107e0                ObjAffineSet
+                0x020107d8                CpuFastSet
+                0x02010844                MidiKey2Freq
+                0x0201084c                MusicPlayerStart
+                0x020107a8                IntrWait
+                0x020107c2                DivRemArm
+                0x02010804                RLUnCompWram
+                0x020107bc                DivRem
+                0x020107cc                ArcTan
+                0x020107a4                RegisterRamReset
+                0x02010854                MusicPlayerContinue
+                0x020107dc                BgAffineSet
+                0x02010838                SoundChannelClear
+                0x0201081c                SoundBiasSet
+                0x02010840                SoundDriverVSyncOn
+                0x020107b4                Div
+                0x02010834                SoundDriverVSync
+                0x02010858                MusicPlayerFadeOut
+                0x020107e8                LZ77UnCompWram
+                0x02010830                SoundDriverMain
+                0x0201085c                MultiBoot
+                0x020107d4                CpuSet
+                0x020107b8                DivArm
+                0x02010800                HuffUnComp
+                0x020107c8                Sqrt
+                0x020107ec                LZ77UnCompVram
+ .text          0x0201086c       0x3c C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_call_via_rX.o)
+                0x02010874                _call_via_r2
+                0x02010884                _call_via_r6
+                0x02010880                _call_via_r5
+                0x02010878                _call_via_r3
+                0x02010898                _call_via_fp
+                0x0201088c                _call_via_r8
+                0x02010888                _call_via_r7
+                0x0201086c                _call_via_r0
+                0x02010894                _call_via_sl
+                0x020108a0                _call_via_sp
+                0x02010890                _call_via_r9
+                0x0201087c                _call_via_r4
+                0x02010870                _call_via_r1
+                0x0201089c                _call_via_ip
+                0x020108a4                _call_via_lr
+ *(.text.*)
+ *(.stub)
+ *(.gnu.warning)
+ *(.gnu.linkonce.t*)
+ *(.glue_7t)
+ *(.glue_7)
+                0x020108a8                _etext=.
+                0x020108a8                PROVIDE (etext, .)
+
+.fini
+ *(.fini)
+
+.rodata         0x020108a8     0x2358
+ *(.rodata)
+ .rodata        0x020108a8       0x38 demo_main.o
+                0x020108a8                IntrTable
+ .rodata        0x020108e0     0x2320 data.o
+                0x02010de0                OamData_Sample
+                0x02010e00                PlttData_Sample
+                0x02011000                CharData_Sample
+                0x020108e0                BgScData_Sample
+ *(.rodata.*)
+ *(.gnu.linkonce.r*)
+
+.rodata1
+ *(.rodata1)
+                0x02012c00                .=(ALIGN(0x100)+(.&0xff))
+
+.data           0x02012c00        0x0
+ *(.data)
+ *(.data.*)
+ *(.gnu.linkonce.d*)
+
+.data1
+ *(.data1)
+
+.ctors
+ EXCLUDE_FILE ( *crtend.o )*(.ctors)
+ *(SORT(.ctors.*))
+ *crtend(.ctors)
+
+.dtors
+ EXCLUDE_FILE ( *crtend.o )*(.dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+
+.got
+ *(.got.plt)
+ *(.got)
+
+.dynamic
+ *(.dynamic)
+
+.sdata
+ *(.sdata)
+ *(.sdata.*)
+                0x02012c00                _edata=.
+                0x02012c00                PROVIDE (edata, .)
+                0x02012c00                __bss_start=.
+                0x02012c00                __bss_start__=.
+
+.sbss
+ *(.sbss)
+ *(.scommon)
+
+.bss            0x03000000     0x14e0
+ *(.dynbss)
+ *(.bss)
+ *(.bss.*)
+ *(COMMON)
+ COMMON         0x03000000     0x10f0 demo_main.o
+                                  0x0 (size before relaxing)
+                0x03000000                UsrSendBuf
+                0x03000020                IntrTableBuf
+                0x03000058                Cont
+                0x0300005c                Trg
+                0x03000060                SioFlags
+                0x03000070                IntrMainBuf
+                0x03000470                UsrRecvBuf
+                0x030004f0                OamBak
+                0x030008f0                BgBak
+ COMMON         0x030010f0      0x3f0 MultiSio.o
+                                  0x0 (size before relaxing)
+                0x030010f0                IntrFuncBuf
+                0x03001200                Ms
+                0x03001490                RecvFuncBuf
+                0x030014e0                .=ALIGN(0x4)
+                0x030014e0                .=ALIGN(0x4)
+                0x030014e0                _end=.
+                0x030014e0                _bss_end__=.
+                0x030014e0                __bss_end__=.
+                0x030014e0                PROVIDE (end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x40
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 demo_main.o
+ .debug_aranges
+                0x00000020       0x20 MultiSio.o
+
+.debug_pubnames
+                0x00000000      0x1b6
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0xc8 demo_main.o
+ .debug_pubnames
+                0x000000c8       0x61 data.o
+ .debug_pubnames
+                0x00000129       0x8d MultiSio.o
+
+.debug_info     0x00000000     0x948e
+ *(.debug_info)
+ .debug_info    0x00000000     0x3427 demo_main.o
+ .debug_info    0x00003427     0x2e14 data.o
+ .debug_info    0x0000623b     0x3253 MultiSio.o
+
+.debug_abbrev   0x00000000      0x3e2
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x172 demo_main.o
+ .debug_abbrev  0x00000172      0x101 data.o
+ .debug_abbrev  0x00000273      0x16f MultiSio.o
+
+.debug_line     0x00000000      0x54c
+ *(.debug_line)
+ .debug_line    0x00000000      0x238 demo_main.o
+ .debug_line    0x00000238      0x314 MultiSio.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.stack          0x00080000        0x0
+                0x00080000                _stack=.
+ *(.stack)
+OUTPUT(demo.elf elf32-littlearm)

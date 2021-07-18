@@ -1,0 +1,110 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Output formats</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbArtificial_arrays.html">Previous</A>|<A HREF="gdbExamining_memory.html">Next</A>
+<BR><A NAME="off_1411432"></A><A NAME="dd0db0d4"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Output
+formats</FONT></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>By default,
+GDB prints a value according to its data type. Sometimes this is not what
+you want. For example, you might want to print a number in hex, or a pointer
+in decimal. Or you might want to view data in memory at a certain address
+as a character string or as an instruction. To do these things, specify
+an <I>output format</I> when you print a value.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The simplest use of output
+formats is to say how to print a value already computed. This is done by
+starting the arguments of the print command with a slash and a format letter.
+The format letters supported are described in the following documentation.</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Regard the bits of the value
+as an integer, and print the integer in hexadecimal.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>d</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Print as integer in signed
+decimal.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>u</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Print as integer in unsigned
+decimal.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>o</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Print as integer in octal.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Print as integer in binary.
+The letter ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+stands for “two”</FONT><B><FONT SIZE=+2> </FONT></B><FONT SIZE=+1>(‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+cannot be used because these format letters are also used with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command, where ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+stands for “byte”; see <FONT COLOR="#008000"><A HREF="gdbExamining_memory.html">Examining
+memory</A></FONT>).</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Print as an address, both
+absolute in hexadecimal and as an offset from the nearest preceding symbol.
+You can use the following example’s form to discover where (in what function)
+an unknown address is located:</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0><B>(gdb) </B>p/a 0x54320</FONT></FONT>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>$3 = 0x54320 &lt;_initialize_vx+396></FONT></FONT></B></UL>
+</UL>
+</UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>c</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Regard as an integer and
+print it as a character constant.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>f</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Regard the bits of the value
+as a floating point number and print using typical floating point syntax.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, use ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>p/x
+$pc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>to print the program
+counter in hex (see <FONT COLOR="#008000"><A HREF="gdbRegisters.html">Registers</A></FONT>)</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>No
+space is required before the slash because command names in GDB cannot
+contain a slash.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>To reprint the last value
+in the value history with a different format, you can use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command with just a format and no expression. For example, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>p/x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+reprints the last value in hex.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbArtificial_arrays.html">Previous</A>|<A HREF="gdbExamining_memory.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

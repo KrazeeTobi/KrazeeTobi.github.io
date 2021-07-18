@@ -1,0 +1,151 @@
+<HTML>
+<HEAD>
+<TITLE>Options to patch</TITLE>
+</HEAD><BODY>
+<A HREF= "dif.html">Contents</A>|<A HREF= "difindex.html">Index</A>|<A HREF="difReject_File_Names.html">Previous</A>|<A HREF="difInvoking_sdiff.html">Next</A>
+<P>
+<A NAME="off_1246438"></A><A NAME="4c26a54d"></A><FONT FACE="Times New Roman" SIZE="6"><B>Options to </B></FONT><FONT FACE="Courier New" SIZE="5"><B>patch
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">Here is a summary of all of the options that </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> accepts. Older versions of patch do not accept long-named options or the '</FONT><FONT FACE="Courier New" SIZE="3">-t</FONT><FONT FACE="Times New Roman" SIZE="4">', '</FONT><FONT FACE="Courier New" SIZE="3">-E</FONT><FONT FACE="Times New Roman" SIZE="4">', or '</FONT><FONT FACE="Courier New" SIZE="3">-V</FONT><FONT FACE="Times New Roman" SIZE="4">' options. 
+<P>
+Multiple single-letter options that do not take an argument can be combined
+into a single command line argument (with only one dash). Brackets (</FONT><FONT FACE="Courier New" SIZE="3"><B>[</B></FONT><FONT FACE="Times New Roman" SIZE="4"> and </FONT><FONT FACE="Courier New" SIZE="3"><B>]</B></FONT><FONT FACE="Times New Roman" SIZE="4">) indicate that an option takes an optional argument.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-b</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>backup-suffix</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use </FONT><FONT FACE="Courier New" SIZE="3"><I>backup-suffix</I></FONT><FONT FACE="Times New Roman" SIZE="4"> as the backup extension instead of '</FONT><FONT FACE="Courier New" SIZE="3">.orig</FONT><FONT FACE="Times New Roman" SIZE="4">' or '</FONT><FONT FACE="Courier New" SIZE="3">˜</FONT><FONT FACE="Times New Roman" SIZE="4">'. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difBackup_File_Names.html">Backup File Names</A></FONT><FONT FACE="Times New Roman" SIZE="4"> .
+<P>
+ '</FONT><FONT FACE="Courier New" SIZE="3">-B</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>backup-prefix</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use </FONT><FONT FACE="Courier New" SIZE="3"><I>backup-prefix</I></FONT><FONT FACE="Times New Roman" SIZE="4"> as a prefix to the backup file name. If this option is specified, any '-b'
+option is ignored. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difBackup_File_Names.html">Backup File Names</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--batch</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Do not ask any questions. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difMessages_and_Questions_from_patc.html">Messages and Questions from </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difMessages_and_Questions_from_patc.html">patch</A></B></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-c</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>'</FONT><FONT FACE="Courier New" SIZE="3">--context</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Interpret the </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> file as a context </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4">. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSelecting_the_patch_Input_Format.html">Selecting the </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difSelecting_the_patch_Input_Format.html">patch</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSelecting_the_patch_Input_Format.html"> Input Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-d</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>directory</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>'</FONT><FONT FACE="Courier New" SIZE="3">--directory=</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>directory</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Makes directory </FONT><FONT FACE="Courier New" SIZE="3"><I>directory</I></FONT><FONT FACE="Times New Roman" SIZE="4"> the current directory for interpreting both file names in the patch file, and
+file names given as arguments to other options. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difApplying_Patches_in_Other_Direct.html">Applying Patches in Other Directories</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-D</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>name</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Make merged if-then-else output using format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difMerging_Files_with_Ifthenelse.html">Merging Files with </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difMerging_Files_with_Ifthenelse.html">If-then-else</A></B></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--debug=<I>number</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Set internal debugging flags. Of interest only to </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> patchers.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-e</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>'</FONT><FONT FACE="Courier New" SIZE="3">--ed</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Interpret the patch file as an </FONT><FONT FACE="Courier New" SIZE="3">ed</FONT><FONT FACE="Times New Roman" SIZE="4"> script. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSelecting_the_patch_Input_Format.html">Selecting the </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difSelecting_the_patch_Input_Format.html">patch</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSelecting_the_patch_Input_Format.html"> Input Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-E</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Remove output files that are empty after the patches have been applied. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difRemoving_Empty_Files.html">Removing Empty Files</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-f</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Assume that the user knows exactly what he or she is doing, and ask no
+questions. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difMessages_and_Questions_from_patc.html">Messages and Questions from </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difMessages_and_Questions_from_patc.html">patch</A></B></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-F</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Set the maximum fuzz factor to </FONT><FONT FACE="Courier New" SIZE="3"><I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4">. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difHelping_patch_Find_Inexact_Match.html">Helping </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difHelping_patch_Find_Inexact_Match.html">patch</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difHelping_patch_Find_Inexact_Match.html"> Find Inexact Matches</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--force</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Assume that the user knows exactly what he or she is doing, and ask no
+questions. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difMessages_and_Questions_from_patc.html">Messages and Questions from </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difMessages_and_Questions_from_patc.html">patch</A></B></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--forward</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Ignore patches that </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> thinks are reversed or already applied. See also '</FONT><FONT FACE="Courier New" SIZE="3">-R</FONT><FONT FACE="Times New Roman" SIZE="4">'. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difApplying_Reversed_Patches.html">Applying Reversed Patches</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--fuzz=<I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Set the maximum fuzz factor to </FONT><FONT FACE="Courier New" SIZE="3"><I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4">. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difHelping_patch_Find_Inexact_Match.html">Helping </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difHelping_patch_Find_Inexact_Match.html">patch</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difHelping_patch_Find_Inexact_Match.html"> Find Inexact Matches</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--help</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Print a summary of the options that </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> recognizes, then exit.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--ifdef=</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>name</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Make merged if-then-else output using format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difMerging_Files_with_Ifthenelse.html">Merging Files with </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difMerging_Files_with_Ifthenelse.html">If-then-else</A></B></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--ignore-white-space</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>'</FONT><FONT FACE="Courier New" SIZE="3">-l</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Let any sequence of white space in the patch file match any sequence of white
+space in the input file. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difApplying_Patches_with_Changed_Wh.html">Applying Patches with Changed White Space</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3"><B>-</B>n</FONT><FONT FACE="Times New Roman" SIZE="4">'
+<BR>'</FONT><FONT FACE="Courier New" SIZE="3">--normal</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Interpret the </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> file as a normal diff. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSelecting_the_patch_Input_Format.html">Selecting </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difSelecting_the_patch_Input_Format.html">patch</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSelecting_the_patch_Input_Format.html"> Input Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-N</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Ignore patches that </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> thinks are reversed or already applied. See also '</FONT><FONT FACE="Courier New" SIZE="3">-R</FONT><FONT FACE="Times New Roman" SIZE="4">'. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difApplying_Reversed_Patches.html">Applying Reversed Patches</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-o</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>output-file</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>'</FONT><FONT FACE="Courier New" SIZE="3">--output=<I>output-file</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use </FONT><FONT FACE="Courier New" SIZE="3"><I>output-file</I></FONT><FONT FACE="Times New Roman" SIZE="4"> as the output file name. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difInvoking_patch.html">Invoking </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difInvoking_patch.html">patch</A></B></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-p[<I>number</I>]</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Set the file name strip count to </FONT><FONT FACE="Courier New" SIZE="3"><I>number</I></FONT><FONT FACE="Times New Roman" SIZE="4">. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difApplying_Patches_in_Other_Direct.html">Applying Patches in Other Directories</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--prefix=<I>backup-prefix</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use </FONT><FONT FACE="Courier New" SIZE="3"><I>backup-prefix</I></FONT><FONT FACE="Times New Roman" SIZE="4"> as a prefix to the backup file name. If this option is specified, any '</FONT><FONT FACE="Courier New" SIZE="3"><I>-</I>b</FONT><FONT FACE="Times New Roman" SIZE="4">' option is ignored. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difBackup_File_Names.html">Backup File Names</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--quiet</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Work silently unless an error occurs. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difMessages_and_Questions_from_patc.html">Messages and Questions from </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difMessages_and_Questions_from_patc.html">patch</A></B></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-r <I>reject-file</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use </FONT><FONT FACE="Courier New" SIZE="3"><I>reject-file</I></FONT><FONT FACE="Times New Roman" SIZE="4"> as the reject file name. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difReject_File_Names.html">Reject File Names</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-R</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Assume that this patch was created with the old and new files swapped. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difApplying_Reversed_Patches.html">Applying Reversed Patches</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--reject-file=</FONT><FONT FACE="Times New Roman" SIZE="4">reject-file' 
+<BR>Use reject-file as the reject file name. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difReject_File_Names.html">Reject File Names</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+ '</FONT><FONT FACE="Courier New" SIZE="3">--remove-empty-files</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Remove output files that are empty after the patches have been applied. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difRemoving_Empty_Files.html">Removing Empty Files</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--reverse</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Assume that this patch was created with the old and new files swapped. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difApplying_Reversed_Patches.html">Applying Reversed Patches</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-s</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Work silently unless an error occurs. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difMessages_and_Questions_from_patc.html">Messages and Questions from </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difMessages_and_Questions_from_patc.html">patch</A></B></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-S</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Ignore this patch from the patch file, but continue looking for the next patch
+in the file. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difMultiple_Patches_in_a_File.html">Multiple Patches in a File</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--silent</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Work silently unless an error occurs. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difMessages_and_Questions_from_patc.html">Messages and Questions from </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difMessages_and_Questions_from_patc.html">patch</A></B></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--skip</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Ignore this patch from the </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> file, but continue looking for the next patch in the file. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difMultiple_Patches_in_a_File.html">Multiple Patches in a File</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--strip[=<I>number</I>]</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Set the file name strip count to </FONT><FONT FACE="Courier New" SIZE="3"><I>number</I></FONT><FONT FACE="Times New Roman" SIZE="4">. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difApplying_Patches_in_Other_Direct.html">Applying Patches in Other Directories</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--suffix=<I>backup-</I></FONT><FONT FACE="Times New Roman" SIZE="4">suffix' 
+<BR>Use </FONT><FONT FACE="Courier New" SIZE="3"><I>backup-suffix</I></FONT><FONT FACE="Times New Roman" SIZE="4"> as the backup extension instead of '</FONT><FONT FACE="Courier New" SIZE="3">.orig</FONT><FONT FACE="Times New Roman" SIZE="4">' or '˜'. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difBackup_File_Names.html">Backup File Names</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-t</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Do not ask any questions. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difMessages_and_Questions_from_patc.html">Messages and Questions from </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difMessages_and_Questions_from_patc.html">patch</A></B></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-u</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>'</FONT><FONT FACE="Courier New" SIZE="3">--unified</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Interpret the patch file as a unified diff. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSelecting_the_patch_Input_Format.html">Selecting the </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difSelecting_the_patch_Input_Format.html">patch</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSelecting_the_patch_Input_Format.html"> Input Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-v</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Output the revision header and patch level of patch.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-V</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>backup-style</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Select the kind of backups to make. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difBackup_File_Names.html">Backup File Names</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--version</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Output the revision header and patch level of </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4">, then exit.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--version=control=<I>backup-style</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Select the kind of backups to make. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difBackup_File_Names.html">Backup File Names</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-x</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>number</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Set internal debugging flags. Of interest only to </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> patchers.
+<P>
+</FONT></BODY>
+</HTML>

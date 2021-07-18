@@ -1,0 +1,3023 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title> Toshiba TX39 development</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<div CLASS="ChapterTitle"><a NAME="Top"></a><a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embFurther_documentation_for_SPARCl.html">Previous</a>|<a href="embCygwin.html">Next</a>
+<br><font face="Futura Md BT"><font size=+3>Toshiba TX39 development</font></font>
+<hr SIZE=3 WIDTH="100%"></div>
+&nbsp;<font size=+1>The following documentation discusses the TX39 processor.</font>
+<ul>
+<ul>
+<ul>
+<li CLASS="Bullet">
+<font size=+1><a href="#Compiler" CLASS="XRef">Compiler issues for TX39
+targets</a></font></li>
+
+<li CLASS="Bullet">
+<font size=+1><a href="#ABI" CLASS="XRef">ABI summary for the Toshiba TX39
+targets</a></font></li>
+
+<li CLASS="Bullet">
+<font size=+1><a href="#Assembler" CLASS="XRef">Assembler issues for TX39
+targets</a></font></li>
+
+<li CLASS="Bullet">
+<font size=+1><a href="#Linker" CLASS="XRef">Linker issues for TX39 targets</a></font></li>
+
+<li CLASS="Bullet">
+<font size=+1><a href="#Debugger" CLASS="XRef">Debugger issues for TX39
+targets</a></font></li>
+
+<li CLASS="Bullet">
+<font size=+1><a href="#Simulator" CLASS="XRef">Simulator issues for TX39
+targets</a></font></li>
+</ul>
+</ul>
+</ul>
+
+<div CLASS="Body"><font size=+1>GNUPro Toolkit is a complete solution for
+C and C++ development for the Toshiba TX39. The tools include the compiler,
+interactive debugger and utilities libraries. Debugger and linker support
+is also included for the Densan DVE-R3900/20 evaluation board.</font></div>
+
+<div CLASS="Body"><font size=+1>Cross-development tools in GNUPro Toolkit
+normally have names that reflect the target processor and the object file
+format output by the tools (for example, ELF). This makes it possible to
+install more than one set of tools in the same binary directory, including
+both native and cross-development tools.</font></div>
+
+<div CLASS="Body"><font size=+1>The complete tool name is a four-part hyphenated
+string. For example, the GCC compiler for the Toshiba TX39 is <tt>mips-tx39-elf-gcc</tt>.
+The first part indicates the processor family (<tt>mips</tt>).</font>
+<br><font size=+1>The second part indicates the processor (<tt>tx39</tt>).
+The third part indicates the file format output by the tool (<tt>elf</tt>).
+The fourth part is the generic tool name (<tt>gcc</tt>).</font></div>
+
+<div CLASS="Body"><font size=+1>The binaries for a Windows 95/NT hosted
+toolchain are installed with an <tt>.exe</tt> suffix. However, the <tt>.exe</tt>
+suffix does not need to be specified when running the executable.</font></div>
+
+<div CLASS="Body"><font size=+1>The TX39 package includes the following
+supported tools.</font></div>
+
+<table BORDER >
+<tr BGCOLOR="#C0C0C0">
+<td>
+<div CLASS="CellHeading"><b><i><font size=+1>Tool description</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><b><i><font size=+1>Tool name</font></i></b></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="Table-text"><i><font size=+1>GCC compiler</font></i></div>
+</td>
+
+<td>
+<div CLASS="Table-text"><tt><font size=+1>mips-tx39-elf-gcc</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="Table-text"><i><font size=+1>C++ compiler</font></i></div>
+</td>
+
+<td>
+<div CLASS="Table-text"><tt><font size=+1>mips-tx39-elf-c++</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="Table-text"><i><font size=+1>GAS assembler</font></i></div>
+</td>
+
+<td>
+<div CLASS="Table-text"><tt><font size=+1>mips-tx39-elf-as</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="Table-text"><i><font size=+1>GNU linker</font></i></div>
+</td>
+
+<td>
+<div CLASS="Table-text"><tt><font size=+1>mips-tx39-elf-ld</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="Table-text"><i><font size=+1>Standalone simulator</font></i></div>
+</td>
+
+<td>
+<div CLASS="Table-text"><tt><font size=+1>mips-tx39-elf-run</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="Table-text"><i><font size=+1>Binary utilities</font></i></div>
+</td>
+
+<td VALIGN=TOP>
+<div CLASS="Table-text"><tt><font size=+1>mips-tx39-elf-ar</font></tt></div>
+<font size=+1><tt>mips-tx39-elf-nm</tt>&nbsp;</font>
+<br><font size=+1><tt>mips-tx39-elf-objcopy</tt>&nbsp;</font>
+<br><font size=+1><tt>mips-tx39-elf-objdump</tt>&nbsp;</font>
+<br><font size=+1><tt>mips-tx39-elf-ranlib</tt>&nbsp;</font>
+<br><font size=+1><tt>mips-tx39-elf-size</tt>&nbsp;</font>
+<br><font size=+1><tt>mips-tx39-elf-strings</tt>&nbsp;</font>
+<br><tt><font size=+1>mips-tx39-elf-strip</font></tt></td>
+</tr>
+
+<tr>
+<td VALIGN=TOP>
+<div CLASS="Table-text"><i><font size=+1>GDB debugger</font></i></div>
+</td>
+
+<td>
+<div CLASS="Table-text"><tt><font size=+1>mips-tx39-elf-gdb</font></tt></div>
+</td>
+</tr>
+</table>
+
+<div CLASS="Body"><font size=+1>The TX39 can also port to the following
+targets. Both targets run in big-endian mode.</font></div>
+
+<ul>
+<ul>
+<ul>
+<li CLASS="Bullet">
+<font size=+1>GNUPro Instruction Set simulator</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>Densan DVE-R3900/20 evaluation board</font></li>
+</ul>
+</ul>
+</ul>
+
+<div CLASS="Body"><font size=+1>The TX39 supports the following hosts.</font></div>
+
+<table BORDER >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<td>
+<div CLASS="CellHeading"><b><i><font size=+1>Host</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><b><i><font size=+1>Vendor</font></i></b></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><font size=+1>SunOS 4.1.4 (SPARC)</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1>Sun</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><font size=+1>Solaris 2.4-2.5.1 (SPARC)</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1>Sun</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><font size=+1>Windows NT (x86)</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1>Microsoft</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><font size=+1>Windows 95 (x86)</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1>Microsoft&nbsp;</font></div>
+</td>
+</tr>
+</table>
+
+<div CLASS="Body"><font size=+1>The TX39 tools support the ELF object file
+format. See Chapter 4 of <b><i>System V Application Binary Interface</i></b>
+(Prentice Hall, 1990.). Use <tt>ld</tt> (see <a href="../5_ut/b_Usingld/ld.html"><i>Using</i><tt>ld</tt></a>
+in <b><i>GNUPro Utilities</i></b>) or <tt>objcopy</tt>&nbsp; (see <a href="../5_ut/c_Usingbinutils/bin.html"><i>Using</i>
+<tt>binutils</tt></a> in <b><i>GNUPro Utilities</i></b>) to produce S-records.</font></div>
+
+<div CLASS="Heading1"><a NAME="Compiler"></a><b><i><font size=+2>Compiler
+issues for TX39 targets</font></i></b></div>
+
+<div CLASS="Body"><font size=+1>The following documentation describes TX39-specific
+features of the GNUPro compiler.</font></div>
+
+<div CLASS="Body"><font size=+1>For a list of available generic compiler
+options, see <a href="../2_comp/Using_GNU_CC/gccGNU_CC_Command_Options.html">GNU
+CC command options</a> in <i><a href="../2_comp/Using_GNU_CC/gcc.html">Using
+GNU CC</a></i> in <b><i>GNUPro Compiler Tools</i></b>. In addition, the
+following TX39-specific command-line options are supported.</font></div>
+
+<div CLASS="BodyHang1">
+<ul><tt><font size=+1>-msoft-float</font></tt>
+<ul><font size=+1>This option is on by default. It causes the compiler
+to generate output containing library calls for floating point operations.</font></ul>
+</ul>
+</div>
+
+<ul>
+<div CLASS="BodyHang1"><tt><font size=+1>-msingle-float</font></tt></div>
+
+<ul><font size=+1>This option causes the compiler to generate output containing
+floating point instructions for single precision floating point operations,
+and library calls for double precision floating point operations.</font></ul>
+
+
+<p CLASS="BodyHang1"><tt><font size=+1>-EB</font></tt>
+<div CLASS="BodyHang1List"><tt><font size=+1>-EL</font></tt></div>
+
+<ul><font size=+1>Any MIPS configuration of the compiler can select big-endian
+or little-endian output at run time. Use <tt>-EB</tt> to select big-endian
+output and <tt>-EL</tt> for little-endian. If neither <tt>-EL</tt> nor
+<tt>-EB</tt>
+are defined, big-endian is the default.</font></ul>
+</ul>
+
+<div CLASS="Body"><font size=+1>There are no TX39-specific attributes.
+See <a href="../2_comp/Using_GNU_CC/gccDeclaring_Attributes_of_Function.html">Declaring
+attributes of functions</a> and <a href="../2_comp/Using_GNU_CC/gccSpecifying_Attributes_of_Variabl.html">Specifying
+attributes of variables</a> in <i><a href="../2_comp/Using_GNU_CC/gcc.html">Using
+GNU CC</a></i> in <b><i>GNUPro Compiler Tools</i></b> for more information.</font></div>
+
+<div CLASS="BodyHang1"><font size=+1>The compiler supports the following
+preprocessor symbols.</font></div>
+
+<ul>
+<div CLASS="BodyHang1"><tt><font size=+1>__mips__</font></tt></div>
+
+<div CLASS="BodyHang1List"><tt><font size=+1>__R3000__</font></tt></div>
+
+<ul><font size=+1>Each of these is always defined.</font></ul>
+
+<div CLASS="BodyHang1"><tt><font size=+1>__MIPSEL__</font></tt></div>
+
+<div CLASS="BodyHang1List"><tt><font size=+1>__MIPSEB__</font></tt></div>
+
+<ul><font size=+1>One of these will be defined depending on the endian
+compilation mode.</font></ul>
+
+<div CLASS="BodyHang1"><tt><font size=+1>__mips_single_float</font></tt></div>
+
+<div CLASS="BodyHang1List"><tt><font size=+1>__mips_soft_float</font></tt></div>
+
+<ul><font size=+1>One of these will be defined depending on the floating
+point compilation mode.</font></ul>
+</ul>
+
+<div CLASS="Heading1"><a NAME="ABI"></a><b><i><font face="Times New Roman,Times"><font size=+2>ABI
+summary for the Toshiba TX39 targets</font></font></i></b></div>
+
+<div CLASS="Body"><font size=+1>The following documentation describes the
+MIPS EABI, to which the TX39 tools adhere by default.</font>
+<ul>
+<ul>
+<ul>
+<li>
+<font size=+1><a href="#Data_size_alignments">Data type sizes and alignments</a></font></li>
+
+<li>
+<font size=+1><a href="#Subroutines">Subroutine calls for TX39</a></font></li>
+
+<li CLASS="Heading1">
+<font size=+1><a href="#Stack_frame">The stack frame for TX39 targets</a></font></li>
+
+<li CLASS="Heading1">
+<font size=+1><a href="#Parameter_assignment">Parameter assignments for
+registers for TX39</a></font></li>
+
+<li CLASS="Heading2">
+<font face="Times New Roman,Times"><font size=+1><a href="embTX.html#Structure_passing">Structure
+passing for TX39 targets</a></font></font></li>
+
+<li CLASS="Heading1">
+<font size=+1><a href="#Parameter_assignment">Varargs handling for TX39
+targets</a></font></li>
+
+<li CLASS="Heading1">
+<font size=+1><a href="#Func_return">Function return values for TX39 targets</a></font></li>
+</ul>
+</ul>
+</ul>
+</div>
+
+<div CLASS="Heading2"><a NAME="Data_size_alignments"></a><b><i><font size=+2>Data
+type sizes and alignments</font></i></b></div>
+
+<div CLASS="Body"><font size=+1>The following table shows the size and
+alignment for all data types.</font></div>
+
+<table BORDER >
+<tr BGCOLOR="#C0C0C0">
+<td>
+<div CLASS="CellHeading"><b><i><font size=+1>Type</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><b><i><font size=+1>Size (bytes)</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><b><i><font size=+1>Alignment (bytes)</font></i></b></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>char :</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>1 byte</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>1 byte</font></i></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>short :</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>2 bytes</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>2 bytes</font></i></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>int :</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>4 bytes</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>4 bytes</font></i></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>unsigned :</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>4 bytes</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>4 bytes</font></i></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>long :</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>4 bytes</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>4 bytes</font></i></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>long long :</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>8 bytes</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>8 bytes</font></i></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>float :</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>4 bytes</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>4 bytes</font></i></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>double :</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>8 bytes</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>8 bytes</font></i></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>
+<div CLASS="CellBody"><font size=+1><i>pointer</i><tt> :</tt></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>4 bytes</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>4 bytes</font></i></div>
+</td>
+</tr>
+</table>
+
+<ul>
+<ul>
+<ul>
+<li CLASS="Bullet">
+<font size=+1>Alignment within aggregates (structs and unions) is as above,
+with padding added if needed</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>Aggregates have alignment equal to that of their most aligned
+member</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>Aggregates have sizes which are a multiple of their alignment</font></li>
+</ul>
+</ul>
+</ul>
+
+<div CLASS="Heading2"><a NAME="Subroutines"></a><b><i><font size=+2>Subroutine
+calls for the TX39</font></i></b></div>
+
+<div CLASS="Body"><font size=+1>The following documentation describes the
+calling conventions for subroutine calls: parameter registers for passing
+parameters and other register usage.</font></div>
+
+<table BORDER >
+<tr ALIGN=CENTER VALIGN=TOP BGCOLOR="#C0C0C0">
+<td COLSPAN="2">
+<div CLASS="CellHeading"><b><i><font size=+1>Parameter registers</font></i></b></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><i><font size=+1>general-purpose</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1><tt>r4</tt> through <tt>r11</tt></font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><i><font size=+1>floating point</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1><tt>f12</tt> through <tt>f19</tt></font></div>
+</td>
+</tr>
+</table>
+
+<br>&nbsp;
+<table BORDER >
+<tr ALIGN=CENTER VALIGN=TOP BGCOLOR="#C0C0C0">
+<td COLSPAN="2">
+<div CLASS="CellHeading"><b><i><font size=+1>Register usage</font></i></b></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><i><font size=+1>fixed 0 value</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>r0</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><i><font size=+1>volatile</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1><tt>r1</tt> through <tt>r15</tt>, as
+well as <tt>r24</tt> and <tt>r25</tt></font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><i><font size=+1>non-volatile</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1><tt>r16</tt> through <tt>r23</tt>,as
+well as <tt>r30</tt></font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><i><font size=+1>kernel reserved</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1><tt>r26</tt>,<tt> r27</tt></font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><i><font size=+1>gp (SDA base)</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>r28</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><i><font size=+1>stack pointer</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>r29</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><i><font size=+1>frame pointer&nbsp;</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1><tt>r30 </tt><i>(if needed)</i></font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><i><font size=+1>return address</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>r31</font></tt></div>
+</td>
+</tr>
+</table>
+
+<ul>
+<ul>
+<ul>
+<li>
+&nbsp;<font size=+1>General-purpose and floating point parameter registers
+are allocated independently.</font></li>
+
+<li>
+<font size=+1>Structures that are less than or equal to 32 bits are passed
+as values.</font></li>
+
+<li>
+<font size=+1>Structures that are greater than 32 bits are passed as pointers.</font></li>
+</ul>
+</ul>
+</ul>
+
+<div CLASS="Heading1"><a NAME="Stack_frame"></a><b><i><font face="Times New Roman,Times"><font size=+2>The
+stack frame for TX39 targets</font></font></i></b></div>
+<font size=+1>The following documentation describes the TX39 stack frame.</font>
+<ul>
+<ul>
+<ul>
+<li CLASS="Bullet">
+<font size=+1>The stack grows downwards from high addresses to low addresses.</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>A leaf function need not allocate a stack frame if it does
+not need one.</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>A frame pointer need not be allocated.</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>The stack pointer shall always be aligned to 8 byte boundaries.</font></li>
+</ul>
+</ul>
+</ul>
+
+<div CLASS="Body"><font size=+1>Stack frames for functions that take a
+fixed number of arguments have the <a href="embTX.html#Stack1">following
+settings</a>.</font>
+<hr SIZE=3 WIDTH="100%"></div>
+
+<div CLASS="Body"><a NAME="Stack1"></a><map NAME="embTX-2"></map><img SRC="embTX-2.gif" USEMAP="#embTX-2" height=308 width=360></div>
+
+<div CLASS="Label">
+<hr SIZE=3 WIDTH="100%">*&nbsp; <font size=+1>If no <tt>alloca</tt> region,
+the frame pointer (<font face="Arial,Helvetica">FP</font>) points to the
+same place as the stack pointer (<font face="Arial,Helvetica">SP</font>).</font></div>
+
+<div CLASS="Body">
+<hr SIZE=3 WIDTH="100%"><font size=+1>Stack frames for functions that take
+a variable number of arguments have the <a href="embTX.html#Stack2">following
+settings</a>.</font></div>
+
+<ol><a NAME="Stack2"></a><map NAME="embTX-3"></map><img SRC="embTX-3.gif" USEMAP="#embTX-3" height=370 width=360></ol>
+
+<div CLASS="Label">
+<hr SIZE=3 WIDTH="100%"><font size=+1>*&nbsp; If no <tt>alloca</tt> region,
+the frame pointer (<font face="Arial,Helvetica">FP</font>) points to the
+same place as the stack pointer (<font face="Arial,Helvetica">SP</font>).</font>
+<hr SIZE=3 WIDTH="100%"></div>
+
+<div CLASS="Heading2"><a NAME="Parameter_assignment"></a><b><i><font face="Times New Roman,Times"><font color="#000000"><font size=+2>Parameter
+assignment to registers for TX39 targets</font></font></font></i></b></div>
+<font size=+1>Consider the parameters in a function call as ordered from
+left (first parameter) to right. In the following algorithm, FR contains
+the number of the next available <i>floating-point register </i>(or <i>register
+pair</i> for modes in which floating-point registers hold only 32 bits).
+GR contains the number of the next available <i>general-purpose register</i>.
+STARG is the address of the next available stack parameter word.</font>
+<ul>
+<h5 CLASS="Heading3">
+<font size=+1>INITIALIZE</font></h5>
+</ul>
+
+<div CLASS="Body">
+<ul>
+<ul><font size=+1>Set GR=r4, FR=f12, and STARG to point to parameter word
+1.</font></ul>
+</ul>
+</div>
+
+<ul>
+<h5 CLASS="Heading3">
+<font size=+1>SCAN</font></h5>
+</ul>
+
+<div CLASS="Body">
+<ul>
+<ul><font size=+1>If there are no more parameters, terminate. Otherwise,
+select one of the following depending on the type of the next parameter:</font></ul>
+</ul>
+</div>
+
+<ul>
+<h5 CLASS="Heading3">
+<font size=+1>DOUBLE OR FLOAT</font></h5>
+</ul>
+
+<div CLASS="Body">
+<ul>
+<ul><font size=+1>If FR > f19, go to STACK. Otherwise, load the parameter
+value into floating-point register FR and advance FR to the next floating-point
+register (or register pair in 32-bit mode). Then go to SCAN.</font></ul>
+</ul>
+</div>
+
+<ul>
+<h5 CLASS="Heading3">
+<font size=+1>SIMPLE ARG</font></h5>
+</ul>
+
+<div CLASS="Body">
+<ul>
+<ul><font size=+1>A SIMPLE ARG is one of the following types:</font></ul>
+</ul>
+</div>
+
+<ul>
+<ul>
+<ul>
+<ul>
+<li CLASS="Bullet">
+<font size=+1>One of the simple integer types which will fit into a general-purpose
+register</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>A pointer to an object of any type</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>A struct or union small enough to fit in a register</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>A larger struct or union, which shall be treated as a pointer
+to the object or to a copy of the object (See below for when copies are
+made.)</font></li>
+</ul>
+</ul>
+</ul>
+</ul>
+
+<div CLASS="Body">
+<ul>
+<ul><font size=+1>If GR > r11, go to STACK. Otherwise, load the parameter
+value into general-purpose register GR and advance GR to the next general-purpose
+register. Values shorter than the register size are sign-extended or zero-extended
+depending on whether they are signed or unsigned. Then go to SCAN.</font></ul>
+</ul>
+</div>
+
+<ul>
+<h5 CLASS="Heading3">
+<font size=+1>LONG LONG in 32-bit mode</font></h5>
+</ul>
+
+<div CLASS="Body">
+<ul>
+<ul><font size=+1>If GR > r10, go to STACK. Otherwise, if GR is odd, advance
+GR to the next register. Load the 64-bit <tt>long long</tt> value into
+register pair GR and GR+1. Advance GR to GR+2 and go to SCAN.</font></ul>
+</ul>
+</div>
+
+<ul>
+<h5 CLASS="Heading3">
+<font size=+1>STACK</font></h5>
+</ul>
+
+<div CLASS="Body">
+<ul>
+<ul><font size=+1>Parameters not otherwise handled in the previous discussions
+for register assignments are passed in the parameter words of the callers
+stack frame. SIMPLE ARGs, as defined above, are considered to have size
+and alignment equal to the size of a general-purpose register, with simple
+argument types shorter than this sign- or zero-extended to this width.
+float arguments are considered to have size and alignment equal to the
+size of a floating-point register. In 64-bit mode, floats are stored in
+the low-order 32 bits of the 64-bit space allocated to them. <tt>double</tt>
+and <tt>long long</tt> are considered to have 64-bit size and alignment.
+Round STARG up to a multiple of the alignment requirement of the parameter
+and copy the argument byte-for-byte into STARG, STARG+1, ... STARG+size-1.
+Set STARG to STARG+size and go to SCAN.</font></ul>
+</ul>
+</div>
+
+<div CLASS="Heading2"><a NAME="Structure_passing"></a><b><i><font face="Times New Roman,Times"><font size=+2>Structure
+passing for TX39 targets</font></font></i></b></div>
+
+<div CLASS="Body"><font size=+1>Code that passes structures and unions
+by value is implemented specially. ("struct" will refer to structs and
+unions, <i>inclusively</i>.) Structs small enough to fit in a register
+are passed by value in a single register or in a stack frame slot the size
+of a register. Larger structs are handled by passing the address of the
+structure. In this case, a copy of the structure will be made if necessary
+in order to preserve the pass-by-value semantics. Copies of large structs
+are made under the following rules.</font></div>
+
+<table BORDER >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<td BGCOLOR="#000000">
+<div CLASS="CellHeading">&nbsp;</div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><b><i><font size=+1>ANSI mode&nbsp;</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><b><i><font size=+1>K&amp;R mode</font></i></b></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellHeading"><font size=+1>Normal param</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1>Callee copies if needed&nbsp;</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1>Caller copies&nbsp;</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellHeading"><font size=+1>Varargs (...) param&nbsp;</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1>Caller copies&nbsp;</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1>Caller copies</font></div>
+</td>
+</tr>
+</table>
+
+<div CLASS="Body"><font size=+1>In the case of normal (non-varargs) large-struct
+parameters in ANSI mode, the callee is responsible for producing the same
+effect as if a copy of the structure were passed, preserving the pass-by-value
+semantics. This may be accomplished by having the callee make a copy, but
+in some cases the callee may be able to determine that a copy is not necessary
+in order to produce the same results. In such cases, the callee may choose
+to avoid making a copy of the parameter.</font></div>
+
+<div CLASS="Heading2"><a NAME="Varargs"></a><b><i><font face="Times New Roman,Times"><font size=+2>Varargs
+handling for TX39 targets</font></font></i></b></div>
+
+<div CLASS="Body"><font size=+1>No special changes are needed for handling
+<tt>varargs</tt>
+parameters other than the caller knowing that a copy is needed on struct
+parameters larger than a register (see <a href="embTX.html#Structure_passing">Structure
+passing for TX39 targets</a>).</font></div>
+
+<div CLASS="Body"><font size=+1>The <tt>varargs</tt> macros set up a two-part
+register save area, one part for the general-purpose registers and one
+part for floating-point registers, and maintain separate pointers for these
+two areas and for the stack parameter area. The register save area lies
+between the caller and callee stack frame areas.</font></div>
+
+<div CLASS="Body"><font size=+1>In the case of software floating-point,
+only the general-purpose registers need to be saved.</font>
+<br><font size=+1>Because the save area lies between the two stack frames,
+the saved register parameters are contiguous with parameters passed on
+the stack. This allows the varargs macros to be much simpler. Only one
+pointer is needed, advancing from the register save area into the callers
+stack frame.</font></div>
+
+<div CLASS="Heading2"><a NAME="Func_return"></a><b><i><font face="Times New Roman,Times"><font size=+2>Function
+return values for TX39 targets</font></font></i></b></div>
+
+<div CLASS="Body"><font size=+1>Data types and register usage use the following
+return values.</font></div>
+
+<table BORDER >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<td>
+<div CLASS="CellHeading"><b><i><font size=+1>Data type</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><b><i><font size=+1>Register</font></i></b></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>
+<div CLASS="CellBody"><font size=+1><tt>int</tt><b> :&nbsp;</b></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>r2</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>
+<div CLASS="CellBody"><font size=+1><tt>short</tt><b> :&nbsp;</b></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>r2</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>
+<div CLASS="CellBody"><font size=+1><tt>long</tt><b> :&nbsp;</b></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>r2</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>
+<div CLASS="CellBody"><font size=+1><tt>long long</tt><b> :&nbsp;</b></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1><tt>r2</tt> through <tt>r3 </tt><i>(32-bit
+mode)</i></font></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>
+<div CLASS="CellBody"><font size=+1><tt>float</tt><b> :&nbsp;</b></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>f0</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>
+<div CLASS="CellBody"><font size=+1><tt>double</tt><b> :&nbsp;</b></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1><tt>f0</tt> through <tt>f1 </tt><i>(32-bit
+mode)</i></font></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=RIGHT VALIGN=TOP>
+<div CLASS="CellBody"><font size=+1><tt>struct/union</tt><b> :&nbsp;</b></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><i><font size=+1>(see <a href="#structs_unions">following
+discussion</a>)</font></i></div>
+</td>
+</tr>
+</table>
+
+<div CLASS="Body"><a NAME="structs_unions"></a><font size=+1>Structures
+and unions that will fit into two general-purpose registers are returned
+in <tt>r2</tt>, or in <tt>r2</tt> and <tt>r3</tt>, if necessary. They are
+aligned within the register according to the endianness of the processor;
+for example, on a big-endian processor the first byte of the struct is
+returned in the most significant byte of <tt>r2</tt>, while on a little-endian
+processor the first byte is returned in the least significant byte of <tt>r2</tt>.
+The caller handles larger structures and unions, by passing, as a "hidden"
+first argument, a pointer to space allocated to receive the return value.</font></div>
+
+
+<p CLASS="Heading1"><a NAME="Assembler"></a><b><i><font face="Times New Roman,Times"><font size=+2>Assembler
+issues for TX39 targets</font></font></i></b>
+<br>&nbsp;
+<div CLASS="Body"><font size=+1>The following documentation describes TX39-specific
+features of the GNUPro assembler.</font>
+<ul>
+<ul>
+<ul>
+<ul>
+<li>
+<font size=+1><a href="#Register_names">Register names for TX39 targets</a></font></li>
+
+<li>
+<font size=+1><a href="#Assembler_dirs">Assembler directives for TX39 targets</a></font></li>
+
+<li>
+<font size=+1><a href="#MIPS_synthetics">MIPS synthetic instructions supported
+for the TX39 targets</a></font></li>
+</ul>
+</ul>
+</ul>
+</ul>
+</div>
+
+<div CLASS="Body"><font size=+1>For a list of available generic assembler
+options, see <a href="../5_ut/a_Using_AS/asCommandLine_Options.html">Command-line
+options</a> in <a href="../5_ut/a_Using_AS/as.html"><i>Using</i> <tt>as</tt></a>
+in <b><i>GNUPro Utilities</i></b>.</font></div>
+
+<div CLASS="BodyHang1">
+<ul><tt><font size=+1>-EB</font></tt>
+<br><tt><font size=+1>-EL</font></tt>
+<ul><font size=+1>Any MIPS configuration of the assembler can select big-endian
+or little-endian output at run time.</font></ul>
+</ul>
+</div>
+
+<ul>
+<ul>
+<div CLASS="BodyListFollow"><font size=+1>Use <tt>-EB</tt> to select <i>big-endian
+output</i>, and <tt>-EL</tt> for <i>little-endian output</i>. The default
+is big-endian.</font></div>
+</ul>
+</ul>
+
+<div CLASS="Body"><font size=+1>For information about the MIPS instruction
+set, see <b><i>MIPS RISC Architecture</i></b>, (Kane and Heindrich, Prentice-Hall).
+For an overview of MIPS assembly conventions, see <i>"Appendix D: Assembly
+Language Programming"</i> in <b><i>MIPS RISC Architecture</i></b>.</font></div>
+
+<div CLASS="Heading2"><a NAME="Register_names"></a><b><i><font face="Times New Roman,Times"><font size=+2>Register
+names for TX39 targets</font></font></i></b></div>
+
+<br>&nbsp;
+<div CLASS="Body"><font size=+1>There are 32 64-bit general (integer) registers,
+named <tt>$0 </tt>through <tt>$31</tt>. There are 32 64-bit floating-point
+registers, named <tt>$f0 </tt>through <tt>$f31</tt>.</font></div>
+
+<div CLASS="Body"><font size=+1>The symbols, <tt>$0</tt> through <tt>$31</tt>,
+refer to the general-purpose registers.</font></div>
+
+<div CLASS="Body"><font size=+1>The following <a href="#symbols">symbols</a>
+can be used as aliases for individual <a href="#registers">registers</a>.</font></div>
+
+<table BORDER >
+<tr BGCOLOR="#C0C0C0">
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellHeading"><a NAME="symbols"></a><b><i><font size=+1>Symbol</font></i></b></div>
+</td>
+
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellHeading"><a NAME="registers"></a><b><i><font size=+1>Register</font></i></b></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>$at</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>$1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>$kt0</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>$26</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>$kt1</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>$27</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>$gp</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>$28</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>$sp</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>$29</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>$fp</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>$30</font></tt></div>
+</td>
+</tr>
+</table>
+
+
+<p CLASS="Heading2"><a NAME="Assembler_dirs"></a><b><i><font face="Times New Roman,Times"><font size=+2>Assembler
+directives for TX39 targets</font></font></i></b>
+<br>&nbsp;
+<div CLASS="Body"><font size=+1>The following list shows the TX39 assembler
+directives.</font></div>
+
+<table>
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.abicalls</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.dcb.b</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.fail</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.irepc</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.psize</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.abort</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.dcb.d</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.file</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.irp</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.purgem</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.aent</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.dcb.l</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.fill</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.irpc</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.quad</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.align</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.dcb.s</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.float</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.lcomm</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.rdata</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.appfile</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.dcb.w</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.fmask</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.lflags</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.rep</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.appline</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.dcb.x</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.format</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.linkonce</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.rept</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ascii</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.debug</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.frame</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.list</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.rva</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.asciiz</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.double</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.global</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.livereg</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.sbttl</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.asciz</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ds</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.globl</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.llen</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.sdata</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.balign</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ds.b</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.gpword</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.loc</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.set</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.balignl</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ds.d</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.half</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.long</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.short</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.balignw</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ds.l</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.hword</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.lsym</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.single</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.bgnb</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ds.p</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.if</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.macro</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.skip</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.bss</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ds.s</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ifc</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.mask</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.space</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.byte</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ds.w</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ifdef</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.mexit</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.spc</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.comm</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ds.x</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ifeq</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.mri</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.stabd</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.common</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.dword</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ifeqs</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.name</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.stabn</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.common.s</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.eject</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ifge</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.noformat</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.stabs</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.cpadd</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.else</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ifgt</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.nolist</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.string</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.cpload</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.elsec</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ifle</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.nopage</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.struct</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.cprestore</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.end</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.iflt</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.octa</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.text</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.data</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.endb</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ifnc</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.offset</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.title</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.dc</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.endc</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ifndef</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.option</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ttl</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.dc.b</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.endif</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ifne</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.org</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.verstamp</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.dc.d</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ent</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ifnes</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.p2align</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.word</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.dc.l</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.equ</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.ifnotdef</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.p2alignl</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.xcom</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.dc.s</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.equiv</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.include</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.p2alignw</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.xdef</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.dc.w</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.err</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.insn</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.page</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.xref</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.dc.x</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.exitm</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.int</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.plen</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.xstabs</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.dcb</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.extern</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.irep</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.print</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>.zero</font></tt></div>
+</td>
+</tr>
+</table>
+<a NAME="MIPS_synthetics"></a><b><i><font face="Times New Roman,Times"><font size=+2>MIPS
+synthetic instructions supported for the TX39</font></font></i></b>
+<br>&nbsp;
+<div CLASS="Body"><font size=+1>The TX39 GAS assembler supports the typical
+MIPS synthetic instructions (macros). What follows is <a href="#Instruction">a
+list of synthetic instructions</a> supported by the assembler, as well
+as an <a href="#Expansion">example expansion of each instruction</a>. The
+following helps to follow the list of instructions.</font></div>
+
+<div CLASS="Body">
+<ul>
+<ul>
+<ul>
+<ul>
+<li>
+<font size=+1><tt>R</tt> = register</font></li>
+
+<li>
+<font size=+1><tt>I</tt> = immediate</font></li>
+
+<li>
+<font size=+1><tt>E</tt> = expression (usually a memory expression, <tt>addr</tt>
++ <tt>offset</tt>).</font></li>
+</ul>
+</ul>
+</ul>
+</ul>
+</div>
+
+<table BORDER >
+<tr ALIGN=CENTER VALIGN=TOP BGCOLOR="#C0C0C0">
+<th>
+<div CLASS="CellHeading"><a NAME="Instruction"></a><b><i><font size=+1>Instruction&nbsp;</font></i></b></div>
+</th>
+
+<th>
+<div CLASS="CellHeading"><a NAME="Expansion"></a><b><i><font size=+1>Expansion</font></i></b></div>
+</th>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>abs R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>bgez&nbsp;&nbsp;&nbsp; $a0,0x5c</font></tt></div>
+<font size=+1><tt>move&nbsp;&nbsp;&nbsp; $t1,$a0</tt>&nbsp;</font>
+<br><tt><font size=+1>neg&nbsp;&nbsp;&nbsp;&nbsp; $t1,$a0</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>div R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>div&nbsp;&nbsp;&nbsp;&nbsp; $zero,$t1,$a0</font></tt></div>
+<font size=+1><tt>bnez&nbsp;&nbsp;&nbsp; $a0,0x120</tt>&nbsp;</font>
+<br><font size=+1><tt>nop</tt>&nbsp;</font>
+<br><font size=+1><tt>break&nbsp;&nbsp; 0x7</tt>&nbsp;</font>
+<br><font size=+1><tt>li&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $at,-1</tt>&nbsp;</font>
+<br><font size=+1><tt>bne&nbsp;&nbsp;&nbsp;&nbsp; $a0,$at,0x138</tt>&nbsp;</font>
+<br><font size=+1><tt>lui&nbsp;&nbsp;&nbsp;&nbsp; $at,0x8000</tt>&nbsp;</font>
+<br><font size=+1><tt>bne&nbsp;&nbsp;&nbsp;&nbsp; $t1,$at,0x138</tt>&nbsp;</font>
+<br><font size=+1><tt>nop</tt>&nbsp;</font>
+<br><font size=+1><tt>break&nbsp;&nbsp; 0x6</tt>&nbsp;</font>
+<br><tt><font size=+1>mflo&nbsp;&nbsp;&nbsp; $a3</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>div R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>div&nbsp;&nbsp;&nbsp;&nbsp; $zero,$a3,$t1</font></tt></div>
+<font size=+1><tt>bnez&nbsp;&nbsp;&nbsp; $t1,0x154</tt>&nbsp;</font>
+<br><font size=+1><tt>nop</tt>&nbsp;</font>
+<br><font size=+1><tt>break&nbsp;&nbsp; 0x7</tt>&nbsp;</font>
+<br><font size=+1><tt>li&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $at,-1</tt>&nbsp;</font>
+<br><font size=+1><tt>bne&nbsp;&nbsp;&nbsp;&nbsp; $t1,$at,0x16c</tt>&nbsp;</font>
+<br><font size=+1><tt>lui&nbsp;&nbsp;&nbsp;&nbsp; $at,0x8000</tt>&nbsp;</font>
+<br><font size=+1><tt>bne&nbsp;&nbsp;&nbsp;&nbsp; $a3,$at,0x16c</tt>&nbsp;</font>
+<br><font size=+1><tt>nop</tt>&nbsp;</font>
+<br><font size=+1><tt>break&nbsp;&nbsp; 0x6</tt>&nbsp;</font>
+<br><tt><font size=+1>mflo&nbsp;&nbsp;&nbsp; $a3</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>div R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>li&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$at,&lt;I></font></tt></div>
+<font size=+1><tt>div&nbsp;&nbsp;&nbsp;&nbsp; $zero,$a3,$at</tt>&nbsp;</font>
+<br><tt><font size=+1>mflo&nbsp;&nbsp;&nbsp; $a1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>divu R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>divu&nbsp;&nbsp;&nbsp; $zero,$a0,$a2</font></tt></div>
+<font size=+1><tt>bnez&nbsp;&nbsp;&nbsp; $a2,0x1cc</tt>&nbsp;</font>
+<br><font size=+1><tt>nop</tt>&nbsp;</font>
+<br><font size=+1><tt>break&nbsp;&nbsp; 0x7</tt>&nbsp;</font>
+<br><tt><font size=+1>mflo&nbsp;&nbsp;&nbsp; $t1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>divu R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>divu&nbsp;&nbsp;&nbsp; $zero,$t1,$a0</font></tt></div>
+<font size=+1><tt>bnez&nbsp;&nbsp;&nbsp; $a0,0x1e8</tt>&nbsp;</font>
+<br><font size=+1><tt>nop</tt>&nbsp;</font>
+<br><font size=+1><tt>break&nbsp;&nbsp; 0x7</tt>&nbsp;</font>
+<br><tt><font size=+1>mflo&nbsp;&nbsp;&nbsp; $t1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>divu R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>li&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$at,&lt;I></font></tt></div>
+<font size=+1><tt>divu&nbsp;&nbsp;&nbsp; $zero,$v1,$at</tt>&nbsp;</font>
+<br><tt><font size=+1>mflo&nbsp;&nbsp;&nbsp; $t0</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>jal E</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>jalr&nbsp;&nbsp;&nbsp; &lt;E></font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>lwc0 R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>ll&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;R> &lt;I></font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>mul R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>multu&nbsp;&nbsp; $t0,$v1</font></tt></div>
+<tt><font size=+1>mflo&nbsp;&nbsp;&nbsp; $a2</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>mul R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>li&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$at,&lt;I></font></tt></div>
+<font size=+1><tt>mult&nbsp;&nbsp;&nbsp; $t0,$at</tt>&nbsp;</font>
+<br><tt><font size=+1>mflo&nbsp;&nbsp;&nbsp; $a2</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>mulo R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>mult&nbsp;&nbsp;&nbsp; $t0,$v1</font></tt></div>
+<font size=+1><tt>mflo&nbsp;&nbsp;&nbsp; $a2</tt>&nbsp;</font>
+<br><font size=+1><tt>sra&nbsp;&nbsp;&nbsp;&nbsp; $a2,$a2,0x1f</tt>&nbsp;</font>
+<br><font size=+1><tt>mfhi&nbsp;&nbsp;&nbsp; $at</tt>&nbsp;</font>
+<br><font size=+1><tt>beq&nbsp;&nbsp;&nbsp;&nbsp; $a2,$at,0x440</tt>&nbsp;</font>
+<br><font size=+1><tt>nop</tt>&nbsp;</font>
+<br><font size=+1><tt>break&nbsp;&nbsp; 0x6</tt>&nbsp;</font>
+<br><tt><font size=+1>mflo&nbsp;&nbsp;&nbsp; $a2</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>mulou R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>multu&nbsp;&nbsp; $t0,$v1</font></tt></div>
+<font size=+1><tt>mfhi&nbsp;&nbsp;&nbsp; $at</tt>&nbsp;</font>
+<br><font size=+1><tt>mflo&nbsp;&nbsp;&nbsp; $a2</tt>&nbsp;</font>
+<br><font size=+1><tt>beqz&nbsp;&nbsp;&nbsp; $at,0x464</tt>&nbsp;</font>
+<br><font size=+1><tt>nop</tt>&nbsp;</font>
+<br><tt><font size=+1>break&nbsp;&nbsp; 0x6</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>nor R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>ori&nbsp;&nbsp;&nbsp;&nbsp; $t1,$a0,0xe</font></tt></div>
+<tt><font size=+1>nor&nbsp;&nbsp;&nbsp;&nbsp; $t1,$t1,$zero</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>not R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>nor&nbsp;&nbsp;&nbsp;&nbsp; $t1,$a0,$zero</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>or R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>ori&nbsp;&nbsp;&nbsp;&nbsp; $a2,$t0,&lt;I></font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>rem R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>div&nbsp;&nbsp;&nbsp;&nbsp; $zero,$t1,$a0</font></tt></div>
+<font size=+1><tt>bnez&nbsp;&nbsp;&nbsp; $a0,0x4ec</tt>&nbsp;</font>
+<br><font size=+1><tt>nop</tt>&nbsp;</font>
+<br><font size=+1><tt>break&nbsp;&nbsp; 0x7</tt>&nbsp;</font>
+<br><font size=+1><tt>li&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $at,-1</tt>&nbsp;</font>
+<br><font size=+1><tt>bne&nbsp;&nbsp;&nbsp;&nbsp; $a0,$at,0x504</tt>&nbsp;</font>
+<br><tt><font size=+1>lui&nbsp;&nbsp;&nbsp;&nbsp; $at,0x8000</font></tt><font size=+1>&nbsp;</font>
+<br><font size=+1><tt>bne&nbsp;&nbsp;&nbsp;&nbsp; $t1,$at,0x504</tt>&nbsp;</font>
+<br><font size=+1><tt>nop</tt>&nbsp;</font>
+<br><font size=+1><tt>break&nbsp;&nbsp; 0x6</tt>&nbsp;</font>
+<br><tt><font size=+1>mfhi&nbsp;&nbsp;&nbsp; $a3</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>rem R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>li&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$at,11</font></tt></div>
+<font size=+1><tt>div&nbsp;&nbsp;&nbsp;&nbsp; $zero,$t1,$at</tt>&nbsp;</font>
+<br><tt><font size=+1>mfhi&nbsp;&nbsp;&nbsp; $a3</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>remu R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>divu&nbsp;&nbsp;&nbsp; $zero,$v1,$a1</font></tt></div>
+<font size=+1><tt>bnez&nbsp;&nbsp;&nbsp; $a1,0x564</tt>&nbsp;</font>
+<br><font size=+1><tt>nop</tt>&nbsp;</font>
+<br><font size=+1><tt>break&nbsp;&nbsp; 0x7</tt>&nbsp;</font>
+<br><tt><font size=+1>mfhi&nbsp;&nbsp;&nbsp; $t0</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>remu R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>li&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$at,&lt;I></font></tt></div>
+<font size=+1><tt>divu&nbsp;&nbsp;&nbsp; $zero,$a0,$at</tt>&nbsp;</font>
+<br><tt><font size=+1>mfhi&nbsp;&nbsp;&nbsp; $t1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>rol R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>negu&nbsp;&nbsp;&nbsp; $at,$a3</font></tt></div>
+<font size=+1><tt>srlv&nbsp;&nbsp;&nbsp; $at,$a1,$at</tt>&nbsp;</font>
+<br><font size=+1><tt>sllv&nbsp;&nbsp;&nbsp; $v1,$a1,$a3</tt>&nbsp;</font>
+<br><tt><font size=+1>or&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $v1,$v1,$at</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>rol R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>sll&nbsp;&nbsp;&nbsp;&nbsp; $at,$v1,&lt;I></font></tt></div>
+<font size=+1><tt>srl&nbsp;&nbsp;&nbsp;&nbsp; $t0,$v1,0x11</tt>&nbsp;</font>
+<br><tt><font size=+1>or&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $t0,$t0,$at</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>ror R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>negu&nbsp;&nbsp;&nbsp; $at,$a1</font></tt></div>
+<font size=+1><tt>sllv&nbsp;&nbsp;&nbsp; $at,$v1,$at</tt>&nbsp;</font>
+<br><font size=+1><tt>srlv&nbsp;&nbsp;&nbsp; $t0,$v1,$a1</tt>&nbsp;</font>
+<br><tt><font size=+1>or&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $t0,$t0,$at</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>ror R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>srl&nbsp;&nbsp;&nbsp;&nbsp; $at,$t0,&lt;I></font></tt></div>
+<font size=+1><tt>sll&nbsp;&nbsp;&nbsp;&nbsp; $a2,$t0,0x11</tt>&nbsp;</font>
+<br><tt><font size=+1>or&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $a2,$a2,$at</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sd R E</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>sw&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$a1,&lt;E></font></tt></div>
+<tt><font size=+1>sw&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $a2,&lt;E+4></font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>seq R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>xor&nbsp;&nbsp;&nbsp;&nbsp; $t1,$a0,$a2</font></tt></div>
+<tt><font size=+1>sltiu&nbsp;&nbsp; $t1,$t1,1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>seq R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>xori&nbsp;&nbsp;&nbsp; $a3,$t1,&lt;I></font></tt></div>
+<tt><font size=+1>sltiu&nbsp;&nbsp; $a3,$a3,1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sge R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>slt&nbsp;&nbsp;&nbsp;&nbsp; $a3,$t1,$a0</font></tt></div>
+<tt><font size=+1>xori&nbsp;&nbsp;&nbsp; $a3,$a3,0x1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sge R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>slti&nbsp;&nbsp;&nbsp; $a1,$a3,&lt;I></font></tt></div>
+<tt><font size=+1>xori&nbsp;&nbsp;&nbsp; $a1,$a1,0x1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sgeu R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>sltu&nbsp;&nbsp;&nbsp; $a1,$a3,$t1</font></tt></div>
+<tt><font size=+1>xori&nbsp;&nbsp;&nbsp; $a1,$a1,0x1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sgeu R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>sltiu&nbsp;&nbsp; $a0,$a2,&lt;I></font></tt></div>
+<tt><font size=+1>xori&nbsp;&nbsp;&nbsp; $a0,$a0,0x1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sgt R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>slt&nbsp;&nbsp;&nbsp;&nbsp; $a1,$t1,$a3</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sgt R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>li&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$at,&lt;I></font></tt></div>
+<tt><font size=+1>slt&nbsp;&nbsp;&nbsp;&nbsp; $v1,$at,$a1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sgtu R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>sltu&nbsp;&nbsp;&nbsp; $v1,$a3,$a1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sgtu R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>li&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$at,&lt;I></font></tt></div>
+<tt><font size=+1>sltu&nbsp;&nbsp;&nbsp; $t1,$at,$a0</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sle R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>slt&nbsp;&nbsp;&nbsp;&nbsp; $v1,$a3,$a1</font></tt></div>
+<tt><font size=+1>xori&nbsp;&nbsp;&nbsp; $v1,$v1,0x1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sle R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>li&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$at,&lt;I></font></tt></div>
+<font size=+1><tt>slt&nbsp;&nbsp;&nbsp;&nbsp; $t0,$at,$v1</tt>&nbsp;</font>
+<br><tt><font size=+1>xori&nbsp;&nbsp;&nbsp; $t0,$t0,0x1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sleu R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>sltu&nbsp;&nbsp;&nbsp; $t0,$a1,$v1</font></tt></div>
+<tt><font size=+1>xori&nbsp;&nbsp;&nbsp; $t0,$t0,0x1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sleu R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>li&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$at,&lt;I></font></tt></div>
+<font size=+1><tt>sltu&nbsp;&nbsp;&nbsp; $a3,$at,$t1</tt>&nbsp;</font>
+<br><tt><font size=+1>xori&nbsp;&nbsp;&nbsp; $a3,$a3,0x1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sll R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>sllv&nbsp;&nbsp;&nbsp; $t0,$v1,$a1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>slt R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>slti&nbsp;&nbsp;&nbsp; $a3,$t1,&lt;I></font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sltu R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>sltiu&nbsp;&nbsp; $a3,$t1,&lt;I></font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sne R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>xor&nbsp;&nbsp;&nbsp;&nbsp; $a1,$a3,$t1</font></tt></div>
+<tt><font size=+1>sltu&nbsp;&nbsp;&nbsp; $a1,$zero,$a1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sne R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>xori&nbsp;&nbsp;&nbsp; $v1,$a1,&lt;I></font></tt></div>
+<tt><font size=+1>sltu&nbsp;&nbsp;&nbsp; $v1,$zero,$v1</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sra R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>srav&nbsp;&nbsp;&nbsp; $a0,$a2,$t0</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>srl R R R</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>srlv&nbsp;&nbsp;&nbsp; $v1,$a1,$a3</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>sub R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>addi&nbsp;&nbsp;&nbsp; $a0,$a2,-&lt;I></font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>subu R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>addiu&nbsp;&nbsp; $t1,$a0,-&lt;I></font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>swc0 R E</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>sc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$a1,&lt;E></font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>ulh R E</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>lb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$a0,&lt;E></font></tt></div>
+<font size=+1><tt>lbu&nbsp;&nbsp;&nbsp;&nbsp; $at,&lt;E+1></tt>&nbsp;</font>
+<br><font size=+1><tt>sll&nbsp;&nbsp;&nbsp;&nbsp; $a0,$a0,0x8</tt>&nbsp;</font>
+<br><tt><font size=+1>or&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $a0,$a0,$at</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>ulhu R E</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>lbu&nbsp;&nbsp;&nbsp;&nbsp; $a0,&lt;E></font></tt></div>
+<font size=+1><tt>lbu&nbsp;&nbsp;&nbsp;&nbsp; $at,&lt;E+1></tt>&nbsp;</font>
+<br><font size=+1><tt>sll&nbsp;&nbsp;&nbsp;&nbsp; $a0,$a0,0x8</tt>&nbsp;</font>
+<br><tt><font size=+1>or&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $a0,$a0,$at</font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>ulw R E</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>lwl&nbsp;&nbsp;&nbsp;&nbsp; $a2,&lt;E></font></tt></div>
+<tt><font size=+1>lwr&nbsp;&nbsp;&nbsp;&nbsp; $a2,&lt;E+K></font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>ush R E</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>sb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$a2,&lt;E+K></font></tt></div>
+<font size=+1><tt>srl&nbsp;&nbsp;&nbsp;&nbsp; $at,$a2,0x8</tt>&nbsp;</font>
+<br><tt><font size=+1>sb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $at,&lt;E></font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>usw R E</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>swl&nbsp;&nbsp;&nbsp;&nbsp; $a2,&lt;E></font></tt></div>
+<tt><font size=+1>swr&nbsp;&nbsp;&nbsp;&nbsp; $a2,&lt;E+K></font></tt></td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><tt><font size=+1>xor R R I</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><tt><font size=+1>xori&nbsp;&nbsp;&nbsp; $a2,$t0,0x10</font></tt></div>
+</td>
+</tr>
+</table>
+
+
+<p CLASS="Heading1"><a NAME="Linker"></a><b><i><font face="Times New Roman,Times"><font size=+2>Linker
+issues for TX39 targets</font></font></i></b>
+<br>&nbsp;
+<div CLASS="Body"><font size=+1>The TX39-specific features of the GNUPro
+linker can be found in the <a href="#Linker_script">Linker script for TX39
+targets</a>.</font>
+<p><font size=+1>For a list of available generic linker options, see <a href="../5_ut/b_Usingld/ldLinker_scripts.html">Linker
+scripts</a> in <i>Using</i> <tt>ld</tt> in <b><i>GNUPro Utilities</i></b>.
+There are no TX39-specific command-line linker options.</font></div>
+
+<div CLASS="Heading2"><a NAME="Linker_script"></a><b><i><font face="Times New Roman,Times"><font color="#000000"><font size=+2>Linker
+script for TX39 targets</font></font></font></i></b></div>
+
+<br>&nbsp;
+<div CLASS="Body"><font size=+1>The GNU linker uses a linker script to
+determine how to process each section in an object file, and how to lay
+out the executable. The linker script is a declarative program consisting
+of a number of directives. For instance, the <tt>ENTRY()</tt> directive
+specifies the symbol in the executable that will be the executable's entry
+point.</font></div>
+
+<div CLASS="Body"><font size=+1>The following linker script is <tt>dve.ld</tt>,
+a linker script for the Densan DVE-R3900/A20 board.</font></div>
+
+<ul>&nbsp;
+<table COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<tr>
+<td>
+<div CLASS="CodeExample">
+<ul>
+<pre><tt><font size=+1>&nbsp; /* Linker script for Densan DVE-R3900/20A board */</font></tt></pre>
+</ul>
+</div>
+
+<ul>
+<pre><tt><font size=+1>&nbsp;ENTRY(_start)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;OUTPUT_ARCH("mips:3000")&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;OUTPUT_FORMAT("elf32-bigmips", "elf32-bigmips", "elf32-littlemips")&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;GROUP(-lc -ldve -lgcc)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;SEARCH_DIR(.)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;__DYNAMIC = 0;&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;/*&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; * Allocate the stack to be at the top of memory, since the&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; * stack grows down&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; */&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;PROVIDE (__stack = 0);&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;/* PROVIDE (__global = 0); */&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;/*&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; * Initalize some symbols to be zero so we can reference them&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; * in the crt0 without core dumping. These functions are all&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; * optional, but we do this so we can have our crt0 always use&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; * them if they exist.&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; * This is so BSPs work better when using the crt0 installed&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; * with gcc.&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; * We have to initalize them twice, so we multiple object file&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; * formats, as some prepend an underscore.&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; */&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;PROVIDE (hardware_init_hook = 0);&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;PROVIDE (software_init_hook = 0);&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;SECTIONS&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;{&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; . = 0xA0040000;&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; .text : {&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp;&nbsp; _ftext = . ;&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp;&nbsp; *(.init)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp;&nbsp; eprol = .;&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp;&nbsp; *(.text)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp;&nbsp; *(.mips16.fn.*)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp;&nbsp; *(.mips16.call.*)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp;&nbsp; PROVIDE (__runtime_reloc_start = .);&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp;&nbsp; *(.rel.sdata)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp;&nbsp; PROVIDE (__runtime_reloc_stop = .);&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp;&nbsp; *(.fini)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp;&nbsp; etext = .;&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp;&nbsp; _etext = .;&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;}&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;. = .;&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.rdata : {&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp;&nbsp; *(.rdata)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;}&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; _fdata = ALIGN(16);&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; .data : {&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp;&nbsp; *(.data)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp;&nbsp; CONSTRUCTORS&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;}&nbsp;&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;. = ALIGN(8);&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;_gp = . + 0x8000;&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;__global = _gp;&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.lit8 : {&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp; *(.lit8)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;}&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.lit4 : {&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp; *(.lit4)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;}&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.sdata : {&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp; *(.sdata)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;}&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;. = ALIGN(4);&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;edata = .;&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;_edata = .;&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;_fbss = .;&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.sbss : {&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp; *(.sbss)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp; *(.scommon)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;}&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.bss : {&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp; _bss_start = . ;&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp; *(.bss)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp; *(COMMON)&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;}&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;end = .;&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;_end = .;&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;/* DWARF debug sections.&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp; Symbols in the DWARF debugging sections are relative to&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;&nbsp; the beginning of the section so we begin them at 0. */&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;/* DWARF 1 */&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.debug 0 : { *(.debug) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.line 0 : { *(.line) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;/* GNU DWARF 1 extensions */&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.debug_srcinfo 0 : { *(.debug_srcinfo) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.debug_sfnames 0 : { *(.debug_sfnames) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;/* DWARF 1.1 and DWARF 2 */&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.debug_aranges 0 : { *(.debug_aranges) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.debug_pubnames 0 : { *(.debug_pubnames) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;/* DWARF 2 */&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.debug_info 0 : { *(.debug_info) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.debug_abbrev 0 : { *(.debug_abbrev) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.debug_line 0 : { *(.debug_line) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.debug_frame 0 : { *(.debug_frame) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.debug_str 0 : { *(.debug_str) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.debug_loc 0 : { *(.debug_loc) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp;.debug_macinfo 0 : { *(.debug_macinfo) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; /* SGI/MIPS DWARF 2 extensions */&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; .debug_weaknames 0 : { *(.debug_weaknames) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; .debug_funcnames 0 : { *(.debug_funcnames) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; .debug_typenames 0 : { *(.debug_typenames) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>&nbsp; .debug_varnames 0 : { *(.debug_varnames) }&nbsp;</font></tt></pre>
+
+<pre><tt><font size=+1>}&nbsp;</font></tt></pre>
+</ul>
+</td>
+</tr>
+</table>
+</ul>
+
+<div CLASS="Heading1"><a NAME="Debugger"></a><b><i><font face="Times New Roman,Times"><font size=+2>Debugger
+issues for TX39 targets</font></font></i></b></div>
+
+<br>&nbsp;
+<div CLASS="Body"><font size=+1>The following documentation describes TX39-specific
+features of the GNUPro debugger. There are three ways for GDB to talk to
+a TX39 target.</font></div>
+
+<ul>
+<ul>
+<ul>
+<li CLASS="Bullet">
+<b><i><font size=+1>Simulator</font></i></b></li>
+
+<br><font size=+1>GDBs built-in software simulation of the TX39 processor
+allows the debugging of programs compiled for the TX39 without requiring
+any access to actual hardware. To activate this mode in GDB type <tt>target
+sim</tt> . Then load the code into the simulator by typing <tt>load</tt>
+and debug it in the normal fashion.</font>
+<li CLASS="Bullet">
+<b><i><font size=+1>Remote target board by serial connection</font></i></b></li>
+
+<br><font size=+1>To connect to the target board in GDB, using the command</font>
+<br><font size=+1><tt>target remote</tt> <i><tt>&lt;devicename></tt></i>
+where <i><tt>&lt;devicename>&nbsp;</tt></i> will be a serial device such
+as <tt>/dev/ttya</tt> (Unix) or <tt>com2</tt> (Windows NT). Then load the
+code onto the target board by using the command, <tt>load</tt>. After being
+downloaded, the program can be executed. The target command would be something
+like the following example's input after the <b><tt>(gdb)</tt></b> prompt.</font></ul>
+</ul>
+</ul>
+
+<div CLASS="CodeExample2">
+<ul>
+<ul>
+<ul>
+<ul>
+<pre><tt><font size=+1><b>(gdb) </b>target r3900 205.180.230.151:1600</font></tt></pre>
+</ul>
+</ul>
+</ul>
+</ul>
+</div>
+
+<ul>
+<ul>
+<ul>
+<li CLASS="Bullet">
+<b><i><font size=+1>Remote target board by ethernet connection :</font></i></b></li>
+
+<br><font size=+1>Connecting to the ethernet port with GDB is very similar
+to connecting to a serial port. The target command would be something like
+the following example's input after the <b><tt>(gdb)</tt></b> prompt.</font></ul>
+</ul>
+</ul>
+
+<div CLASS="CodeExample2">
+<ul>
+<ul>
+<ul>
+<ul>
+<pre><tt><font size=+1><b>(gdb) </b>target r3900 205.180.230.151:1600</font></tt></pre>
+</ul>
+</ul>
+</ul>
+</ul>
+</div>
+
+<div CLASS="BodyListFollow">
+<ul>
+<ul>
+<ul><font size=+1>If the system administrator has assigned a host name
+to the board, you can use that name in the target command instead of the
+dotted IP address. For example, if the board is named tx39a, use the following
+examples input after the <tt>(gdb)</tt> prompt.</font></ul>
+</ul>
+</ul>
+</div>
+
+<div CLASS="CodeExample2">
+<ul>
+<ul>
+<ul>
+<ul>
+<pre><tt><font size=+1><b>(gdb)</b> target r3900 tx39a:1600</font></tt></pre>
+</ul>
+</ul>
+</ul>
+</ul>
+</div>
+
+<div CLASS="BodyListFollow">
+<ul>
+<ul>
+<ul><font size=+1>It is important to specify the port number. The exact
+number is not important, but it must be the same number that you used to
+configure the board.</font></ul>
+</ul>
+</ul>
+</div>
+
+<div CLASS="BodyListFollow">
+<ul>
+<ul>
+<ul><font size=+1>No special GDB commands are necessary to perform fast
+downloading of programs via the ethernet. Simply use the normal <tt>load</tt>
+command. GDB recognizes that the board is connected via ethernet, and will
+use a fast binary downloading method.</font></ul>
+</ul>
+</ul>
+</div>
+
+<div CLASS="Body"><font size=+1>For the available generic debugger options,
+see <a href="../3_dbug/b_Debugging_with_GDB/gdb.html">Debugging with GDB</a>
+in <b><i>GNUPro Debugging Tools</i></b>. There are no TX39 specific debugger
+command-line options.</font></div>
+
+<div CLASS="Heading1"><a NAME="Simulator"></a><b><i><font face="Times New Roman,Times"><font size=+2>Simulator
+issues for TX39 targets</font></font></i></b></div>
+
+<br>&nbsp;
+<div CLASS="Body"><font size=+1>The following documentation describes TX39-specific
+features of the GNUPro simulator.</font></div>
+
+<div CLASS="Body"><font size=+1>The TX39 simulator includes support for
+32, 32-bit general-purpose registers.</font></div>
+
+<div CLASS="Body"><font size=+1>The user program is provided with a single
+2Mb block of memory at address, <tt>0xa0000000</tt> (shadowed at address,
+<tt>0x80000000</tt>).</font></div>
+
+<div CLASS="Body"><font size=+1>The following general options, are supported
+by the simulator:</font></div>
+
+<div CLASS="BodyHang1">
+<ul><tt><font size=+1>--help</font></tt>
+<ul><font size=+1>The following example shows how to list the <a href="#SIM_MIPS_help">MIPS-specific
+help options</a>, as printed by the <tt>--help</tt> option.</font></ul>
+</ul>
+</div>
+
+<center><table>
+<tr>
+<td ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<div CLASS="CodeScreen"><a NAME="SIM_MIPS_help"></a><tt><font size=+1>%
+tx39-elf-run --help</font></tt></div>
+<b><font size=+1><tt>Usage: run [options] program [program args]</tt>&nbsp;</font></b>
+<br><b><font size=+1><tt>Options:</tt>&nbsp;</font></b>
+<br><b><font size=+1><tt>&nbsp;-l FILE, --log FILELog file</tt>&nbsp;</font></b>
+<br><b><font size=+1><tt>&nbsp;-n MODEL, --name MODELSelect arch model</tt>&nbsp;</font></b>
+<br><b><font size=+1><tt>&nbsp;-p[on|off], --profile [on|off]</tt>&nbsp;</font></b>
+<br><b><font size=+1><tt>Enable profiling</tt>&nbsp;</font></b>
+<br><b><font size=+1><tt>&nbsp;-t[on|off], --trace [on|off]</tt>&nbsp;</font></b>
+<br><b><font size=+1><tt>Enable tracing</tt>&nbsp;</font></b>
+<br><b><font size=+1><tt>&nbsp;-z FILE, --tracefile FILEWrite trace to
+file</tt>&nbsp;</font></b>
+<br><b><font size=+1><tt>&nbsp;-y FREQ, --frequency FREQProfile frequency</tt>&nbsp;</font></b>
+<br><b><tt><font size=+1>&nbsp;-y SIZE, --samples SIZE Profile sample size</font></tt></b></td>
+</tr>
+</table></center>
+
+<div CLASS="BodyHang1">
+<ul><tt><font size=+1>--trace=[on|off]</font></tt>
+<ul><font size=+1>This option creates a file called <tt>trace.din</tt>
+that contains tracing information. Use the <tt>--tracefile</tt> switch
+to change the name of the output file.</font></ul>
+</ul>
+</div>
+
+<ul>&nbsp;
+<ul>
+<ul>
+<ul>
+<pre CLASS="CodeExample2"><font size=+1><b><tt>%</tt></b> tx39-elf-run --trace hello</font></pre>
+
+<pre CLASS="CodeExample2"><b><tt><font size=+1>Hello, world!</font></tt></b></pre>
+
+<pre><b><tt><font size=+1>3 + 4 = 7</font></tt></b></pre>
+</ul>
+</ul>
+</ul>
+
+<ul>
+<div CLASS="BodyListFollow"><font size=+1>The following output shows the
+<a href="#trace">first
+10 lines of the file produced</a> by the previous command.</font></div>
+</ul>
+</ul>
+
+<center><table BGCOLOR="#C0C0C0" >
+<tr>
+<td>
+<div CLASS="CodeScreen"><a NAME="trace"></a><tt><font size=+1>2 a0040004
+; width 4 ; load instruction</font></tt></div>
+<font size=+1><tt>2 a0040008 ; width 4 ; load instruction</tt>&nbsp;</font>
+<br><font size=+1><tt>2 a004000c ; width 4 ; load instruction</tt>&nbsp;</font>
+<br><font size=+1><tt>2 a0040010 ; width 4 ; load instruction</tt>&nbsp;</font>
+<br><font size=+1><tt>2 a0040014 ; width 4 ; load instruction</tt>&nbsp;</font>
+<br><font size=+1><tt>2 a0040018 ; width 4 ; load instruction</tt>&nbsp;</font>
+<br><font size=+1><tt>2 a004001c ; width 4 ; load instruction</tt>&nbsp;</font>
+<br><font size=+1><tt>2 a0040020 ; width 4 ; load instruction</tt>&nbsp;</font>
+<br><font size=+1><tt>2 a0040024 ; width 4 ; load instruction</tt>&nbsp;</font>
+<br><tt><font size=+1>2 a0040028 ; width 4 ; load instruction</font></tt></td>
+</tr>
+</table></center>
+
+<div CLASS="BodyHang1">
+<ul><tt><font size=+1>--tracefile <i>&lt;file></i></font></tt>
+<ul><font size=+1>This option changes the name of the <i><tt>&lt;file></tt></i>
+to which trace information will be written.</font></ul>
+</ul>
+</div>
+
+<ul>
+<ul>
+<ul>
+<ul>
+<pre CLASS="CodeExample2"><b><font size=+1><tt>%</tt> </font></b><font size=+1>mips-tx39-elf-run --trace --tracefile=trace.out hello</font></pre>
+
+<pre><b><tt><font size=+1>Placing trace information into file "trace.out"</font></tt></b></pre>
+
+<pre><b><tt><font size=+1>Hello, world!</font></tt></b></pre>
+
+<pre><b><tt><font size=+1>3 + 4 = 7</font></tt></b></pre>
+</ul>
+</ul>
+</ul>
+
+<div CLASS="BodyHang1"><tt><font size=+1>--profile [on|off]</font></tt></div>
+
+<ul><font size=+1>This option creates a file called <tt>gmon.out</tt> that
+contains profiling information. This file can be used as input to <tt>gprof</tt>,
+the GNU profiler.</font></ul>
+
+<ul>
+<ul>
+<ul>
+<pre CLASS="CodeExample2"><tt><font size=+1><b>% </b>mips-tx39-elf-run --trace hello</font></tt></pre>
+
+<pre><b><tt><font size=+1>Hello, world!</font></tt></b></pre>
+
+<pre><b><tt><font size=+1>3 + 4 = 7</font></tt></b></pre>
+</ul>
+</ul>
+</ul>
+
+<div CLASS="BodyHang1"><tt><font size=+1>--frequency <i>&lt;frequency></i></font></tt></div>
+
+<ul><font size=+1>By default, the simulator samples the running program
+every 256 instructions. This option allows you to change this profiling
+frequency to some other number. Smaller numbers increasing the accuracy
+of the profile, but make the simulator run slightly slower. Also, because
+the counters used in the profile are only 16 bits, a high sampling frequency
+may cause the counters to overflow.</font></ul>
+
+<ul>
+<ul>
+<ul>
+<pre CLASS="CodeExample2"><tt><font size=+1><b>% </b>mips-tx39-elf-run --profile --frequency 128 hello</font></tt></pre>
+
+<pre><b><tt><font size=+1>Hello, world!</font></tt></b></pre>
+
+<pre><b><tt><font size=+1>3 + 4 = 7</font></tt></b></pre>
+</ul>
+</ul>
+</ul>
+
+<div CLASS="BodyHang1"><tt><font size=+1>--samples &lt;<i>size</i>></font></tt></div>
+
+<ul><font size=+1>By default, the simulator uses a profiling sample size
+of 131072 (128K). This option allows you to change the sample <tt>&lt;<i>size</i>></tt>.
+Increasing the sample size will make the profile more accurate, but will
+also increase the size of the profile output file (<tt>gmon.out</tt>).</font>
+
+<p CLASS="BodyListFollow"><font size=+1>The simulator rounds the sample
+size up the next power of two.</font></ul>
+
+<ul>
+<ul>
+<ul>
+<pre CLASS="CodeExample2"><tt><font size=+1><b>% </b>mips-tx39-elf-run --profile --samples 20000 hello</font></tt></pre>
+
+<pre><b><tt><font size=+1>Hello, world!</font></tt></b></pre>
+
+<pre><b><tt><font size=+1>3 + 4 = 7</font></tt></b></pre>
+</ul>
+</ul>
+</ul>
+</ul>
+
+<center>
+<hr SIZE=3 WIDTH="100%"><a href="#Top">Top</a>|<a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embFurther_documentation_for_SPARCl.html">Previous</a>|<a href="embCygwin.html">Next</a></center>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <!-- Edited by Matt P., 7/28/00-added link to style sheet-->
+<link rel="stylesheet"  href="style.css">
+<title>Incorporating Sound Objects into Games</title>
+</head>
+<br>
+<h2 ALIGN="CENTER">
+Incorporating Sound Objects into Games</h2>
+
+<hr WIDTH="600" ALIGN="CENTER">
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="kumiko">
+<tr>
+<td><p>In order to link files received from the sound engineer to the main  
+program, all of the files received should be placed in an arbitrary directory.  
+Then, the "Makefile" should be changed as follows.&nbsp;  
+<pre STYLE="color:#008080; line-height:16px; font-family:new-courier">&nbsp; <font color=black>*Add the following two lines to the head of the &quot;Makefile.&quot;*</font>
+
+<tt>    SOUND_DIR = </tt><I>Name of Directory to be placed in the sound file</I><tt>/</tt>
+<tt>    include $(SOUND_DIR)Soundfiles</tt>
+
+
+ <font color=black>*Add $(SOUND_FILES) to the written portion of the link.*</font>
+<tt>                                    <img src="down.gif" align=absbottom width="5" height="13"></tt>
+<tt>  $(TARGET_ELF): $(.OFILES) <b>$(SOUND_FILES)</b> Makefile $(DEPENDFILE)</tt>
+<tt>    @echo &gt; $(MAPFILE)</tt>
+<tt>    $(CC) -g -o $@ $(.OFILES) <b>$(SOUND_FILES)</b> -Wl, $(LDFLAGS)</tt>
+<tt>                                      <img src="up.gif" align=absbottom width="5" height="13"></tt></pre>  
+Furthermore, it is possible that there could be object files having rejected     
+data among the files received from the sound engineer.&nbsp; However, unnecessary     
+object file names will not be output to the "Soundfiles," so there is no need     
+to worry about links to unneeded data.&nbsp;</td>     
+</tr>     
+</table>     
+     
+<p>     
+<hr WIDTH="600" ALIGN="CENTER">     
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="link" >     
+<tr>     
+<td><b>Next:</b>[ <a href="p_sumary.html">Sound Functions     
+-- Summary</a> ]     
+<br><b>Back:</b>[ <a href="p_files.html">Description     
+of Files</a> ]     
+<br><b>TOP :</b>[ <a href="../p_index.html#p_kumiko">Table     
+of Contents</a> ]</td>     
+</tr>     
+</table>     
+     
+</html>     

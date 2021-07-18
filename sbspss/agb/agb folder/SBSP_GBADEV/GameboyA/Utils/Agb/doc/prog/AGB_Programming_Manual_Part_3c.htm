@@ -1,0 +1,455 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!--
+Editors' comments:
+mm/dd/yy  Created by * using w2w 2.0
+mm/dd/yy Edited by * -->
+		<title>DMA Transfer</title>
+	</head>
+
+	<body>
+		<h1>
+		<h1><a name="T19"></a>12 DMA Transfer</h1>
+		</h1>
+		<p>AGB has 4 DMA transfer channels.</p>
+		<p>The highest priority of these channels is DMA0, followed in order by DMA1, DMA2, and DMA3.</p>
+		<p>If a DMA with a higher priority than the currently executing DMA begins execution, the execution of the current DMA is temporarily halted, and the DMA with the higher priority is executed. Once this DMA finishes, the original DMA resumes execution from where it was halted.</p>
+		<p>Thus, the most appropriate uses of each DMA channel are those described below.</p>
+		<ul>
+			<li><b>DMA 0</b>
+		</ul>
+		<ol start="2">
+			<p>Because this has the highest priority, it is not interrupted by other DMA channels. Thus, it is used for reliable processing over a limited period, as is required for purposes such as horizontal-blanking DMA.</p>
+		</ol>
+		<ul start="2">
+			<li><b>DMA 1 and DMA 2</b>
+		</ul>
+		<ol start="2">
+			<p>These are used for direct sound functions, which require relatively high priority, or for general-purpose transfers.</p>
+		</ol>
+		<ul start="2">
+			<li><b>DMA 3</b>
+		</ul>
+		<ol start="2">
+			<p>This is used for the most general types of transfers.</p>
+		</ol>
+		<p>Perform the following settings when using DMA.</p>
+		<div align="justify">
+			<p>1. Specify the transfer source address in the source address register.</p>
+			<p>2. Specify the transfer destination address in the destination address register.</p>
+			<p>3. Set the number of data items in the word-count register.</p>
+			<p>4. Specify the transfer method to be used in the DMA control register.</p>
+		</div>
+		<p><b>[Note]</b></p>
+		<p>When transferring data to OAM or OBJ VRAM by DMA during H-blanking, the H-blank must first be freed from OBJ display hardware processing periods using the DISPCNT register. (See &quot;5 Image System&quot;.)</p>
+		<h2><b><a name="T20"></a>12.1 DMA 0</b></h2>
+		<ol start="2">
+			<p>DMA 0 allows different areas of internal memory in the main unit to access one another. It has the highest priority of the DMA channels.</p>
+			<h3><b><a name="T21"></a>1) Source Address</b></h3>
+			<ol start="2">
+				<p>Specifies the source address using 27 bits.</p>
+				<p>The area 00000000h-07FFFFFFh (internal memory area of main unit) can be specified.</p>
+			</ol>
+		</ol>
+		<p><img src="Image34.gif" width="570" height="101"></p>
+		<ol start="2">
+			<h3>
+			<h3><b><a name="T22"></a>2) Destination Address</b></h3>
+			</h3>
+			<ol start="2">
+				<p>Specifies the destination address using 27 bits.</p>
+				<p>The area 00000000h-07FFFFFFh (internal memory area of main unit) can be specified.</p>
+			</ol>
+		</ol>
+		<p><img src="Image35.gif" width="570" height="104"></p>
+		<ol start="2">
+			<h3>
+			<h3><b><a name="T23"></a>3) Word Count</b></h3>
+			</h3>
+			<ol start="2">
+				<p>Specifies the number of bytes transferred by DMA0, using 14 bits. The number can be specified in the range 0000h-3FFFh.</p>
+				<p>Thus, in 16-bit data transfer mode, up to 32,766 bytes can be transferred, and in 32-bit data transfer mode, up to 65,532 bytes can be transferred.</p>
+			</ol>
+		</ol>
+		<p><img src="Image36.gif" width="570" height="59"></p>
+		<ol start="2">
+			<h3>
+			<h3><b><a name="T24"></a>4) DMA Control</b></h3>
+			</h3>
+		</ol>
+		<p><img src="Image37.gif" width="579" height="540"></p>
+		<ol start="2">
+			<p>DM0CNT_H [d15] DMA Enable Flag</p>
+			<ol start="2">
+				<p>A setting of 0 disables DMA.</p>
+				<p>A setting of 1 enables DMA, and after the transfer is completed it is reset.</p>
+			</ol>
+			<p>DM0CNT_H [d14] Interrupt Request Enable Flag</p>
+			<ol start="2">
+				<p>Enables an interrupt request to be generated when DMA transfer of the specified word count has been completed.</p>
+				<p>No request is generated with a setting of 0; a request is generated with a setting of 1.</p>
+			</ol>
+			<p>DM0CNT_H [d13-12] DMA Transfer Timing</p>
+			<ol start="2">
+				<p>The timing of the DMA transfer can selected from the following options.</p>
+			</ol>
+		</ol>
+		<center>
+			<p>
+			<table width="533" border="1" cellspacing="0" cellpadding="3">
+				<tr>
+					<td width="20%" valign="top" bgcolor="white">
+						<center>
+							Setting&nbsp;</center>
+					</td>
+					<td width="80%" valign="top" bgcolor="white">
+						<center>
+							DMA Startup Timing&nbsp;</center>
+					</td>
+				</tr>
+				<tr height="24">
+					<td width="20%" valign="top" height="24">
+						<center>
+							00&nbsp;</center>
+					</td>
+					<td width="80%" valign="top" height="24"><b>Start immediately</b>&nbsp;</td>
+				</tr>
+				<tr height="24">
+					<td width="20%" valign="top" height="24">
+						<center>
+							01&nbsp;</center>
+					</td>
+					<td width="80%" valign="top" height="24"><b>Start during a V-blanking interval</b>
+						<p>Starts at the beginning of a V-blanking interval (approximately 4.993 ms).&nbsp;</td>
+				</tr>
+				<tr height="24">
+					<td width="20%" valign="top" height="24">
+						<center>
+							10&nbsp;</center>
+					</td>
+					<td width="80%" valign="top" height="24"><b>Start during a H-blanking interval</b>
+						<p>Starts at the beginning of a H-blanking interval (approximately 16.212 <img src="micro.gif">s).</p>
+						<p>If this accompanies OAM access, the H-blanking interval must first be freed of OBJ display hardware processing periods. (See <a href="AGB_Programming_Manual_Part_1d1.htm#T5">&quot;5 Image System&quot;</a>.)&nbsp;</td>
+				</tr>
+				<tr height="24">
+					<td width="20%" valign="top" height="24">
+						<center>
+							11&nbsp;</center>
+					</td>
+					<td width="80%" valign="top" height="24"><b>Prohibited Code</b>&nbsp;</td>
+				</tr>
+			</table>
+			</p>
+		</center>
+		<ol start="2">
+			<p>DM0CNT_H [d10] DMA Transfer Type</p>
+			<ol start="2">
+				<p>Sets the bit length of the transfer data.</p>
+				<p>With a setting of 0, the data are transferred by DMA in 16-bit (half-word) units. With a setting of 1, the data are transferred by DMA in 32-bit (word) units.</p>
+			</ol>
+			<p>DM0CNT_H [d09] DMA Repeat</p>
+			<ol start="2">
+				<p>With the DMA repeat function set to ON, if V-blanking or H-blanking intervals are selected as the timing of DMA startup, DMA is restarted when the next startup condition occurs (a V-blank or H-blank). <u>In this mode, restarting will continue as long as the DMA enable flag is not set to 0.</u></p>
+				<p>When the DMA repeat function is set to OFF, DMA halts as soon as the amount of data specified by the value in the word-count register has been transferred.</p>
+			</ol>
+			<p>DM0CNT_H [d08] Source Address Control Flag</p>
+			<ol start="2">
+				<p>Control of the source address is specified after each DMA transfer.</p>
+				<p>A setting of 00 causes an increment.</p>
+				<p>A setting of 01 causes a decrement.</p>
+				<p>A setting of 10 causes it to be fixed.</p>
+				<p>11 is a prohibited code.</p>
+			</ol>
+			<p>DM0CNT_H [d07] Destination Address Control Flag</p>
+			<ol start="2">
+				<p>Control of the destination address is specified after each DMA transfer.</p>
+				<p>A setting of 00 causes an increment.</p>
+				<p>A setting of 01 causes a decrement.</p>
+				<p>A setting of 10 causes it to be fixed.</p>
+				<p>A setting of 11 causes an increment and after all transfers end, a reload (the setting is returned to what it was when the transfer started) is done.</p>
+			</ol>
+		</ol>
+		<h2><b><a name="T25"></a>12.2 DMA 1 and 2</b></h2>
+		<ol start="2">
+			<p>DMA channels 1 and 2 provide access between the Game Pak bus/internal memory of the main unit and internal memory of the main unit, or between the Game Pak bus/internal memory of the main unit and the direct sound FIFO. Transfers to direct-sound FIFO can be accomplished only by using DMA 1 and 2.</p>
+			<h3><b><a name="T26"></a>1) Source Address</b></h3>
+			<ol start="2">
+				<p>Specifies the source address using 28 bits.</p>
+				<p>The area 00000000h-0FFFFFFFh can be specified.</p>
+			</ol>
+		</ol>
+		<center>
+			<p><img src="Image38.gif" width="605" height="99"></p>
+		</center>
+		<ol start="2">
+			<h3>
+			<h3><b><a name="T27"></a>2) Destination Address</b></h3>
+			</h3>
+			<ol start="2">
+				<p>Specifies the destination address using 27 bits.</p>
+				<p>The area 00000000h-07FFFFFFh (internal memory area of main unit) can be specified.</p>
+			</ol>
+		</ol>
+		<center>
+			<p><img src="Image39.gif" width="578" height="101"></p>
+		</center>
+		<ol start="2">
+			<h3>
+			<h3><b><a name="T28"></a>3) Word Count</b></h3>
+			</h3>
+			<ol start="2">
+				<p>Specifies the number of bytes transferred by DMA 1 and DMA 2, using 14 bits. The number can be specified in the range 0001h-3FFFh.</p>
+				<p>Thus, in 16-bit data transfer mode, up to 32,766 bytes can be transferred, and in 32-bit data transfer mode, up to 65,532 bytes can be transferred.</p>
+			</ol>
+		</ol>
+		<center>
+			<p><img src="Image40.gif" width="572" height="46"></p>
+		</center>
+		<ol start="2">
+			<ol start="2">
+				<p>The word-count register setting is disabled in direct-sound FIFO transfer mode. With each request received from sound FIFO, 32 bits x 4 words of sound data are transferred.</p>
+			</ol>
+			<h3>
+			<h3><b><a name="T29"></a>4) DMA Control</b></h3>
+			</h3>
+		</ol>
+		<p><img src="Image41.gif" width="572" height="527"></p>
+		<ol start="2">
+			<p>DM(1,2)CNT_H [d15] DMA Enable Flag</p>
+			<ol start="2">
+				<p>A setting of 0 disables the DMA function.</p>
+				<p>A setting of 1 enables the DMA function, and after the transfer is completed it is reset.</p>
+			</ol>
+			<p>DM(1,2)CNT_H [d14] Interrupt Request Enable Flag</p>
+			<ol start="2">
+				<p>Enables an interrupt request to be generated when DMA transfer of the specified word count has been completed.</p>
+				<p>No request is generated with a setting of 0; a request is generated with a setting of 1.</p>
+			</ol>
+			<p>DM(1,2)CNT_H [d13-12] DMA Transfer Timing</p>
+			<ol start="2">
+				<p>The timing of the DMA transfer can be selected from the following options.</p>
+			</ol>
+		</ol>
+		<center>
+			<p>
+			<table width="533" border="1" cellspacing="0" cellpadding="3">
+				<tr>
+					<td width="20%" valign="top" bgcolor="white">
+						<center>
+							Setting&nbsp;</center>
+					</td>
+					<td width="80%" valign="top" bgcolor="white">
+						<center>
+							DMA Startup Timing&nbsp;</center>
+					</td>
+				</tr>
+				<tr height="24">
+					<td width="20%" valign="top" height="24">
+						<center>
+							00&nbsp;</center>
+					</td>
+					<td width="80%" valign="top" height="24"><b>Start Immediately</b>&nbsp;</td>
+				</tr>
+				<tr height="24">
+					<td width="20%" valign="top" height="24">
+						<center>
+							01&nbsp;</center>
+					</td>
+					<td width="80%" valign="top" height="24"><b>Start During a V-blanking interval</b>
+						<p>Starts at the beginning of a V-blanking interval (approximately 4.993 ms).&nbsp;</td>
+				</tr>
+				<tr height="24">
+					<td width="20%" valign="top" height="24">
+						<center>
+							10&nbsp;</center>
+					</td>
+					<td width="80%" valign="top" height="24"><b>Start During a H-blanking interval</b>
+						<p>Starts at the beginning of a H-blanking interval (approximately 16.212 <img src="micro.gif">s).</p>
+						<p>If this accompanies OAM access, the H-blanking interval must first be freed of OBJ display hardware processing periods. (See <a href="AGB_Programming_Manual_Part_1d1.htm#T5">&quot;Chapter 5, Image System&quot;</a>.)&nbsp;</td>
+				</tr>
+				<tr height="24">
+					<td width="20%" valign="top" height="24">
+						<center>
+							11&nbsp;</center>
+					</td>
+					<td width="80%" valign="top" height="24"><b>Start When Request Generated by Direct-Sound FIFO</b>
+						<p>Starts when a request is received form direct-sound FIFO. Specify sound FIFO as the destination address. Also, set the DMA repeat function [d09] to ON.&nbsp;</td>
+				</tr>
+			</table>
+			</p>
+		</center>
+		<ol start="2">
+			<p>DM(1,2)CNT_H [d10] DMA Transfer Type</p>
+			<ol start="2">
+				<p>Sets the bit length of the transfer data.</p>
+				<p>With a setting of 0, the data are transferred by DMA in 16-bit (half-word) units. With a setting of 1, the data are transferred by DMA in 32-bit (word) units.</p>
+				<p>In direct-sound FIFO transfer mode, the data are transferred in 32-bit units.</p>
+			</ol>
+			<p>DM(1,2)CNT_H [d09] DMA Repeat</p>
+			<ol start="2">
+				<p>With the DMA repeat function set to ON, if V-blanking or H-blanking intervals are selected as the timing of DMA startup, DMA is restarted when the next startup condition occurs (a V-blank or H-blank). <u>In this mode, restarting will continue as long as the DMA enable flag is not set to 0.</u></p>
+				<p>When the DMA repeat function is set to OFF, DMA halts as soon as the amount of data specified by the value in the word-count register has been transferred.</p>
+				<p><u>Set this bit to 1 in direct-sound FIFO transfer mode.</u></p>
+			</ol>
+			<p>DM(1,2)CNT_H [d08] Source Address Control Flag</p>
+			<ol start="2">
+				<p>Control of the source address is specified after each DMA transfer.</p>
+				<p>A setting of 00 causes an increment.</p>
+				<p>A setting of 01 causes a decrement.</p>
+				<p>A setting of 10 causes it to be fixed.</p>
+				<p>11 is a prohibited code.</p>
+				<p><u>When the Game Pak Bus has been set to the source address, make sure you select increment.</u></p>
+			</ol>
+			<p>DM(1,2)CNT_H [d07] Destination Address Control Flag</p>
+			<ol start="2">
+				<p>Control of the destination address is specified after each DMA transfer.</p>
+				<p>A setting of 00 causes an increment.</p>
+				<p>A setting of 01 causes a decrement.</p>
+				<p>A setting of 10 causes it to be fixed.</p>
+				<p>A setting of 11 causes an increment to be carried out and then a reload(returned to setting at start of transfer) is done after every transfer is completed.</p>
+				<p>However, when in direct sound FIFO transfer mode, the destination address is fixed and unrelated to the setting.</p>
+			</ol>
+		</ol>
+		<h2>
+		<h2><b><a name="T30"></a>12.3 DMA 3</b></h2>
+		</h2>
+		<ol start="2">
+			<p>DMA 3 provides memory access between the Game Pak bus and internal memory of the main unit, or between different areas of internal memory of the main unit.</p>
+			<h3><b><a name="T31"></a>1) Source Address</b></h3>
+			<ol start="2">
+				<p>Specifies the source address using 28 bits.</p>
+				<p>The area 00000000h-0FFFFFFFh (internal memory of main unit and Game Pak memory area) can be specified.</p>
+			</ol>
+		</ol>
+		<p><img src="Image42.gif" width="588" height="110"></p>
+		<ol start="2">
+			<h3>
+			<h3><b><a name="T32"></a>2) Destination Address</b></h3>
+			</h3>
+			<ol start="2">
+				<p>Specifies the destination address using 28 bits.</p>
+				<p>The area 00000000h-0FFFFFFFh (internal memory area of main unit and Game Pak memory area) can be specified.</p>
+			</ol>
+		</ol>
+		<p><img src="Image43.gif" width="582" height="101"></p>
+		<ol start="2">
+			<h3>
+			<h3><b><a name="T33"></a>3) Word Count</b></h3>
+			</h3>
+			<ol start="2">
+				<p>Specifies the number of bytes transferred by DMA 3, using 16 bits. The number can be specified in the range 0001h-FFFFh.</p>
+				<p>Thus, in 16-bit data transfer mode, up to 65535 &times; 2 = 131070 bytes can be transferred, and in 32-bit data transfer mode, up to 65,535 &times; 4 = 262140 bytes can be transferred.</p>
+			</ol>
+		</ol>
+		<p><img src="Image44.gif" width="587" height="46"></p>
+		<ol start="2">
+			<h3>
+			<h3><b><a name="T34"></a>4) DMA Control</b></h3>
+			</h3>
+		</ol>
+		<p><img src="Image45.gif" width="587" height="542"></p>
+		<ol start="2">
+			<p>DM3CNT_H [d15] DMA Enable Flag</p>
+			<ol start="2">
+				<p>A setting of 0 disables DMA.</p>
+				<p>A setting of 1 enables DMA, and after the transfer is completed it is reset.</p>
+			</ol>
+			<p>DM3CNT_H [d14] Interrupt Request Enable Flag</p>
+			<ol start="2">
+				<p>Enables an interrupt request to be generated when DMA transfer of the specified word count has been completed.</p>
+				<p>No request is generated with a setting of 0; a request is generated with a setting of 1.</p>
+			</ol>
+			<p>DM3CNT_H [d13-12] DMA Transfer Timing</p>
+			<ol start="2">
+				<p>The timing of the DMA transfer can selected from the following options.</p>
+			</ol>
+		</ol>
+		<center>
+			<p>
+			<table width="533" border="1" cellspacing="0" cellpadding="3">
+				<tr>
+					<td width="20%" valign="top" bgcolor="white">
+						<center>
+							Setting&nbsp;</center>
+					</td>
+					<td width="80%" valign="top" bgcolor="white">
+						<center>
+							DMA Startup Timing&nbsp;</center>
+					</td>
+				</tr>
+				<tr height="24">
+					<td width="20%" valign="top" height="24">
+						<center>
+							00&nbsp;</center>
+					</td>
+					<td width="80%" valign="top" height="24"><b>Start Immediately</b>&nbsp;</td>
+				</tr>
+				<tr height="24">
+					<td width="20%" valign="top" height="24">
+						<center>
+							01&nbsp;</center>
+					</td>
+					<td width="80%" valign="top" height="24"><b>Start During a V-blanking Interval</b>
+						<p>Starts at the beginning of a V-blanking interval (approximately 4.993 ms).&nbsp;</td>
+				</tr>
+				<tr height="24">
+					<td width="20%" valign="top" height="24">
+						<center>
+							10&nbsp;</center>
+					</td>
+					<td width="80%" valign="top" height="24"><b>Start During a H-blanking Interval</b>
+						<p>Starts at the beginning of a H-blanking interval (approximately 16.212 <img src="micro.gif">s).</p>
+						<p>If this accompanies OAM access, the H-blanking interval must first be freed of OBJ display hardware processing periods. (See <a href="AGB_Programming_Manual_Part_1d1.htm#T5">&quot;5 Image System&quot;</a>.)&nbsp;</td>
+				</tr>
+				<tr height="24">
+					<td width="20%" valign="top" height="24">
+						<center>
+							11&nbsp;</center>
+					</td>
+					<td width="80%" valign="top" height="24">Synchronize with display and start.
+						<p>Synchronize with start of H-Line rendering during a display interval and start.&nbsp;</td>
+				</tr>
+			</table>
+			</p>
+		</center>
+		<ol start="2">
+			<p>DM3CNT_H [d11] Game Pak Data Request Transfer Flag</p>
+			<ol start="2">
+				<p>Should normally be set to 0.</p>
+				<p>When set to 1, DMA transfer is performed in response to a data request from the Game Pak.</p>
+				<p><b>[Note]</b></p>
+				<p>A Game Pak that supports this transfer mode is required in order to use it. In addition, it cannot be used at the same time as a Game Pak interrupt.</p>
+			</ol>
+			<p>DM3CNT_H [d10] DMA Transfer Type</p>
+			<ol start="2">
+				<p>Sets the bit length of the transfer data.</p>
+				<p>With a setting of 0, the data are transferred by DMA in 16-bit (half-word) units. With a setting of 1, the data are transferred by DMA in 32-bit (word) units.</p>
+			</ol>
+			<p>DM3CNT_H [d09] DMA Repeat</p>
+			<ol start="2">
+				<p>With the DMA repeat function set to ON, if V-blanking or H-blanking intervals are selected as the timing of DMA startup, DMA is restarted when the next startup condition occurs (a V-blank or H-blank). <u>In this mode, restarting will continue as long as the DMA enable flag is not set to 0.</u></p>
+				<p>When the DMA repeat function is set to OFF, DMA halts as soon as the amount of data specified by the value in the word-count register has been transferred.</p>
+			</ol>
+			<p>DM3CNT_H [d08] Source Address Control Flag</p>
+			<ol start="2">
+				<p>Control of the source address is specified after each DMA transfer.</p>
+				<p>A setting of 00 causes an increment.</p>
+				<p>A setting of 01 causes a decrement.</p>
+				<p>A setting of 10 causes it to be fixed.</p>
+				<p>11 is a prohibited code.</p>
+				<p><u>When the Game Pak Bus has been set to the source address, make sure you select increment.</u></p>
+			</ol>
+			<p>DM3CNT_H [d07] Destination Address Control Flag</p>
+			<ol start="2">
+				<p>Control of the destination address is specified after each DMA transfer.</p>
+				<p>A setting of 00 causes an increment.</p>
+				<p>A setting of 01 causes a decrement.</p>
+				<p>A setting of 10 causes it to be fixed.</p>
+				<p>A setting of 11 causes an increment to be carried out and then a reload(returned to setting at start of transfer) is done after every transfer is completed.
+			</ol>
+		</ol>
+	</body>
+
+</html>

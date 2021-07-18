@@ -1,0 +1,49 @@
+M-Type 0.3b release - 03/11/2001 France - Marsu, gbam@noos.fr -
+
+GameBoy and GameBoy Advance are registered trademarks of Nintendo. 
+The author is in no way affiliated with Nintendo. 
+The author is in no way affiliated with any pirate group out there. 
+
+This GBA Rom is a personnal work inspired by 90's Pulstar game, property of AICOM. 
+Several sprites are shamefully riped from this game. 
+Thus, dont play this demo and buy the original game.
+
+
+1- Technical informations
+Mode-0 Game.
+GamePak Flash Rom, to save player data. 
+Mosaic FX.
+Window Feature.
+Timer Control.
+Interrupt Control.
+1 to 3 backgrounds with priority level, scrolling, real-time swapping...
+Sprites with scales, rotations and HZ-VT flipping.
+Special color effects on sprites and backgrounds : alpha-blending and fade.
+DM3 transfert methode.
+key input.
+256 colors palette.
+
+
+2- Gameplay informations
+Hall Of Fame with SAVE
+New kind of firing ennemies.
+Flash when green ennemy died
+Underwater capabilities :)
+Enhanced shuttle and fixed bugs.
+New bugs..
+56 hidden levels...
+
+
+3- Cheat Codes
+Start+Select+RIGHT_key	-> GameOver
+Start+Select+LEFT_key	-> PowerUp bonus appear more frequently 
+Start+Select+UP_key	-> Activate windows GBA capabilities
+Start+Select+DOWN_key	-> Activate windows GBA capabilities
+Select			-> See Hall Of Fame (in start page only)
+
+
+3- Visit igba.multimania.com, mail me at gbam@noos.fr
+
+
+
+

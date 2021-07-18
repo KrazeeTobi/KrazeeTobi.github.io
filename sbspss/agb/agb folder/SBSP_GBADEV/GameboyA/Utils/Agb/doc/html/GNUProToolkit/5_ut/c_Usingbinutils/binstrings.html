@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>strings</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="bin.html">Contents</A>|<A HREF="binindex.html">Index</A>|<A HREF="binsize.html">Previous</A>|<A HREF="binstrip.html">Next</A>
+<BR><A NAME="off_394446"></A><A NAME="c5e31932"></A><A NAME="off_394446"></A><A NAME="c5e31932"></A><A NAME="off_394446"></A><A NAME="c5e31932"></A><A NAME="off_394446"></A><A NAME="c5e31932"></A><A NAME="off_394446"></A><A NAME="c5e31932"></A><A NAME="off_394446"></A><A NAME="c5e31932"></A><A NAME="off_394446"></A><A NAME="c5e31932"></A><A NAME="off_394446"></A><A NAME="c5e31932"></A><A NAME="off_394446"></A><A NAME="c5e31932"></A><A NAME="off_394446"></A><A NAME="c5e31932"></A><A NAME="off_394446"></A><A NAME="c5e31932"></A><A NAME="off_394446"></A><A NAME="c5e31932"></A><A NAME="off_394446"></A><A NAME="c5e31932"></A><A NAME="off_394446"></A><A NAME="c5e31932"></A><A NAME="off_394446"></A><A NAME="c5e31932"></A><A NAME="off_394446"></A><A NAME="c5e31932"></A><A NAME="off_394446"></A><A NAME="c5e31932"></A><B><FONT FACE="Courier New"><FONT SIZE=+3>strings</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>strings&nbsp; [-afov] [-<I>min</I>-<I>len</I>]
+[-n <I>min</I>-<I>len</I>] [-t <I>radix</I>] [-]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[--all] [--print-file-name] [--bytes=<I>min</I>-<I>len</I>]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[--radix=<I>radix</I>] [--target=<I>bfdname</I>]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[--help] [--version] <I>file</I> ...</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For each </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+given, GNU </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>strings</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+prints the printable character sequences that are at least 4 characters
+long (or the number given with the following options) and are followed
+by an unprintable character. By default, it only prints the strings from
+the initialized and loaded sections of object files; for other types of
+files, it prints the strings from the whole file.</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>strings</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is mainly useful for determining the contents of non-text files.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>-a</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>--all</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Do not scan only the initialized
+and loaded sections of object files; scan the whole files.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-f</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>--print-file-name</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print the name of the file
+before each string.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>--help</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print a summary of the program
+usage on the standard output and exit.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-<I>min</I>-<I>len</I></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-n</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>min</I>-<I>len</I></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>--bytes=<I>min</I>-<I>len</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print sequences of characters
+that are at least </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>min</I>-<I>len</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+characters long, instead of the default 4.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-o</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Like ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Some other versions of strings have ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+act like ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-t d</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Since we can not be compatible with both ways, we simply chose one.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-t radix</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>--radix=<I>radix</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print the offset within
+the file before each string. The single character argument specifies the
+radix of the offset—‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+for octal, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+for hexadecimal, or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>d</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+for decimal.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>--target=<I>bfdname</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Specify an object code format
+other than your system’s default format. See <FONT COLOR="#008000"><A HREF="binTarget_Selection.html">Target
+selection</A></FONT> for more information.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-v</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>--version</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print the program version
+number on the standard output and exit.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="bin.html">Contents</A>|<A HREF="binindex.html">Index</A>|<A HREF="binsize.html">Previous</A>|<A HREF="binstrip.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

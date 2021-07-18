@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Compiling Functions for Interrupt Calls</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccPrototypes_and_OldStyle_Function.html">Previous</A>|<A HREF="gccC_Style_Comments.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_3703331"></A><A NAME="b57591e6"></A><B><FONT SIZE=+3>Compiling
+functions for interrupt calls&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>When compiling code for
+certain platforms (currently the Hitachi H8/300 and the Tandem ST-2000),
+you can instruct </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>{No
+value for "gcc"}</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+that certain functions are meant to be called from hardware interrupts.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To mark a function as callable
+from interrupt, include the line, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+interrupt</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>, somewhere
+before the beginning of the function’s definition. (For maximum readability,
+you might place it immediately before the definition of the appropriate
+function.) </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+interrupt</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> will
+affect only the next function defined; if you want to define more than
+one function with this property, include </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+interrupt</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> before
+each of them.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When you define a function
+with a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma interrupt</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>declaration,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>{No value for "gcc"}</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+alters its usual calling convention in order to provide the right environment
+when the function is called from an interrupt. <I>Such functions cannot
+be called in the usual way from your program.</I></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You must use other facilities
+to actually associate these functions with particular interrupts; </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>{No
+value for "gcc"}</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can only compile them in the appropriate way.</FONT></FONT>
+</BODY>
+</HTML>

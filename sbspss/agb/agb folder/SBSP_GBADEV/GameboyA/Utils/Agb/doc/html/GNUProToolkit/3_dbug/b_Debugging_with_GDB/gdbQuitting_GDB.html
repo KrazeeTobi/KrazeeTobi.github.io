@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Quitting GDB</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbChoosing_modes.html">Previous</A>|<A HREF="gdbShell_commands.html">Next</A>
+<BR><A NAME="off_394813"></A><A NAME="b9fdcf29"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Quitting
+GDB&nbsp;</FONT></FONT></FONT></B>
+<HR SIZE=3 WIDTH="100%">
+<BR><FONT COLOR="#000000"><FONT SIZE=+1>The following documentation discusses
+exiting from GDB.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>quit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>To exit GDB, use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>quit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command (abbreviated </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>q</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+or use an end-of-file character (usually </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>C-d</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+If you do not supply </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>expression</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+GDB will terminate normally; otherwise it will terminate using the result
+of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>expression </FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>as
+the error code.</FONT></FONT></UL>
+</UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>An interrupt (often, </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>C-c</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+does not exit from GDB, but rather terminates the action of any GDB command
+that is in progress and returns to GDB command level. It is safe to use
+the interrupt character at any time because GDB does not allow it to take
+effect until a time when it is safe.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you have been using GDB
+to control an attached process or device, you can release it with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>detach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command (see <FONT COLOR="#008000"><A HREF="gdbDebugging_an_alreadyrunning_proc.html">Debugging
+an already-running process</A></FONT>).</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbChoosing_modes.html">Previous</A>|<A HREF="gdbShell_commands.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

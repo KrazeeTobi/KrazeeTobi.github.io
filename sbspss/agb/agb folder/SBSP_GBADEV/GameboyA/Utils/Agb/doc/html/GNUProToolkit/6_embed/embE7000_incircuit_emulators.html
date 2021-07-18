@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>E7000 in-circuit emulators</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="emb.html">Contents</A>|<A HREF="embindex.html">Index</A>|<A HREF="embHitachi_h8300_boards.html">Previous</A>|<A HREF="embFurther_documentation_fo00000029.html">Next</A>
+<BR><A NAME="off_395382"></A><A NAME="49f4bf64"></A><A NAME="off_395382"></A><A NAME="49f4bf64"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><B><FONT SIZE=+3>E7000
+in-circuit emulators&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>You can use the E7000 in-circuit
+emulator to develop code for either the Hitachi H8/300 or the H8/300H.
+Use one of the following forms of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>target
+e7000</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> command
+to connect GDB to your E7000.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>target e7000 <I>port</I> <I>speed</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use this command if your
+E7000 is connected to a serial port. The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>port</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+argument identifies what serial port to use (for example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>com2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+The third argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>speed</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is the line speed in bits per second (for example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>9600</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>target e7000 <I>hostname</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>If your E7000 is installed
+as a host on a TCP/IP network, you can just specify its </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>hostname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+GDB uses </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>telnet</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to connect.</FONT></FONT></UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The monitor command set makes
+it difficult to load large amounts of data over the network without using
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ftp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+commands. We recommend you try not to issue </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>load</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+commands when communicating over Ethernet; instead, use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ftpload</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="emb.html">Contents</A>|<A HREF="embindex.html">Index</A>|<A HREF="embHitachi_h8300_boards.html">Previous</A>|<A HREF="embFurther_documentation_fo00000029.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

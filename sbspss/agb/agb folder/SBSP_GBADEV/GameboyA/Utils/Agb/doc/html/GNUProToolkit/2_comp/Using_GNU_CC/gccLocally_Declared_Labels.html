@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Locally Declared Labels</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccStatements_and_Declarations_in_E.html">Previous</A>|<A HREF="gccLabels_as_Values.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_3244775"></A><A NAME="61101607"></A><B><FONT SIZE=+3>Locally
+declared labels&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Each statement expression
+is a scope in which <I>local labels</I> can be declared. A local label
+is simply an identifier.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can jump to it with an
+ordinary </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>goto</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+statement, but only from within the statement expression it belongs to;
+a local label declaration looks like </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__label__
+label</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__label__
+label1, label2 </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>and
+so on.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Local label declarations
+must come at the beginning of the statement expression, right after the
+parenthesis and brace, ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>({</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>‘,
+before any ordinary declarations.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The label declaration defines
+the label <I>name</I>, but does not define the label itself. You must do
+this in the usual way, with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>label</I><B>:</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+within the statements of the statement expression.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The local label feature is
+useful because statement expressions are often used in macros. If the macro
+contains nested loops, a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>goto</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can be useful for breaking out of them. However, an ordinary label whose
+scope is the whole function cannot be used: if the macro can be expanded
+several times in one function, the label will be multiply defined in that
+function. A local label avoids this problem. Use the following example,
+for instance.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define SEARCH(array, target)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \&nbsp;
+({&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \&nbsp;
+&nbsp; __label__ found;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \&nbsp;
+&nbsp; typeof (target) _SEARCH_target = (target);&nbsp;&nbsp;&nbsp; \&nbsp;
+&nbsp; typeof (*(array)) *_SEARCH_array = (array);&nbsp;&nbsp; \&nbsp;
+&nbsp; int i, j; \ int value;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \&nbsp;
+&nbsp; for (i = 0; i &lt; max; i++)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \&nbsp;
+&nbsp;&nbsp;&nbsp; for (j = 0; j &lt; max; j++)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (_SEARCH_array[i][j] == _SEARCH_target)\&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { value = i; goto found; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \&nbsp;
+&nbsp; value = -1;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \&nbsp;
+found:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \&nbsp;
+&nbsp; value;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \&nbsp;
+})</FONT></FONT></PRE>
+</UL>
+
+</BODY>
+</HTML>

@@ -1,0 +1,11 @@
+target sim
+load
+
+#b start
+#watch $sp
+#display/i $pc
+#b AgbMain
+b main
+b VBlankIntr
+run
+

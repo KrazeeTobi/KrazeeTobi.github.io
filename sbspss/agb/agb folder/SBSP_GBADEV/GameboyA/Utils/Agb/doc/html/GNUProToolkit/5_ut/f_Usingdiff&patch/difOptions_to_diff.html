@@ -1,0 +1,265 @@
+<HTML>
+<HEAD>
+<TITLE>Options to diff</TITLE>
+</HEAD><BODY>
+<A HREF= "dif.html">Contents</A>|<A HREF= "difindex.html">Index</A>|<A HREF="difInvoking_diff.html">Previous</A>|<A HREF="difInvoking_diff3.html">Next</A>
+<P>
+<A NAME="off_1017151"></A><A NAME="a27588ac"></A><FONT FACE="Times New Roman" SIZE="6"><B>Options to </B></FONT><FONT FACE="Courier New" SIZE="5"><B>diff
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">The following is a summary of all of the options that GNU </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> accepts. Most options have two equivalent names, one of which is a single
+letter preceded by '</FONT><FONT FACE="Courier New" SIZE="3">-</FONT><FONT FACE="Times New Roman" SIZE="4">', and the other of which is a long name preceded by '</FONT><FONT FACE="Courier New" SIZE="3">--</FONT><FONT FACE="Times New Roman" SIZE="4">'. Multiple single letter options (unless they take an argument) can be
+combined into a single command line word: '</FONT><FONT FACE="Courier New" SIZE="3">-ac</FONT><FONT FACE="Times New Roman" SIZE="4">' is equivalent to '</FONT><FONT FACE="Courier New" SIZE="3">-a</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3">-c</FONT><FONT FACE="Times New Roman" SIZE="4">'. Long named options can be abbreviated to any unique prefix of their name.
+Brackets (</FONT><FONT FACE="Courier New" SIZE="3">[</FONT><FONT FACE="Times New Roman" SIZE="4"> and </FONT><FONT FACE="Courier New" SIZE="3">]</FONT><FONT FACE="Times New Roman" SIZE="4">) indicate that an option takes an optional argument.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">- <I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4">'  
+<BR>Show </FONT><FONT FACE="Courier New" SIZE="3"><I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4"> (an integer) lines of context. This option does not specify an output format
+by itself; it has no effect unless it is combined with '</FONT><FONT FACE="Courier New" SIZE="3">-c</FONT><FONT FACE="Times New Roman" SIZE="4">' (see </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difContext_Format.html">Context Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">) or '</FONT><FONT FACE="Courier New" SIZE="3">-u</FONT><FONT FACE="Times New Roman" SIZE="4">' (see </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difUnified_Format.html">Unified Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">). This option is obsolete. For proper operation, </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> typically needs at least two lines of context.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-a</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Treat all files as text and compare them line-by-line, even if they do not
+seem to be text. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difBinary_Files_and_Forcing_Text_Co.html">Binary Files and Forcing Text Comparisons</A></FONT><FONT FACE="Times New Roman" SIZE="4"> .
+<P>
+ '</FONT><FONT FACE="Courier New" SIZE="3">-b</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Ignore changes in amount of white space. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSuppressing_Differences_00000004.html">Suppressing Differences in Blank and Tab Spacing</A></FONT><FONT FACE="Times New Roman" SIZE="4"> .
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-B</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Ignore changes that just insert or delete blank lines. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSuppressing_Differences_00000005.html">Suppressing Differences in Blank Lines</A></FONT><FONT FACE="Times New Roman" SIZE="4"> .
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--binary</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Read and write data in binary mode. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difBinary_Files_and_Forcing_Text_Co.html">Binary Files and Forcing Text Comparisons</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--brief</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Report only whether the files differ, not the details of the differences. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSummarizing_Which_Files_Differ.html">Summarizing Which Files Differ</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-c</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use the context output format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difContext_Format.html">Context Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-C</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>'</FONT><FONT FACE="Courier New" SIZE="3">--context[=<I>lines</I>]</FONT><FONT FACE="Times New Roman" SIZE="4">'  
+<BR>Use the context output format, showing </FONT><FONT FACE="Courier New" SIZE="3"><I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4"> (an integer) lines of context, or three if </FONT><FONT FACE="Courier New" SIZE="3"><I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4"> is not given. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difContext_Format.html">Context Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">. For proper operation, </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> typically needs at least two lines of context.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--changed-group-format=<I>format</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use </FONT><FONT FACE="Courier New" SIZE="3"><I>format </I></FONT><FONT FACE="Times New Roman" SIZE="4">to output a line group containing differing lines from both files in
+if-then-else format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difLine_Group_Formats.html">Line Group Formats</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-d</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Change the algorithm perhaps find a smaller set of changes. This makes </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> slower (sometimes much slower). See </FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difdiff_Performance_Tradeoffs.html">diff</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difdiff_Performance_Tradeoffs.html"> Performance Tradeoffs</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-D</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>name</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Make merged '</FONT><FONT FACE="Courier New" SIZE="3">#ifdef</FONT><FONT FACE="Times New Roman" SIZE="4">' format output, conditional on the pre-processor macro </FONT><FONT FACE="Courier New" SIZE="3"><I>name</I></FONT><FONT FACE="Times New Roman" SIZE="4">. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difMerging_Files_with_Ifthenelse.html">Merging Files with If-then-else</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-e</FONT><FONT FACE="Times New Roman" SIZE="4">'
+<BR>'</FONT><FONT FACE="Courier New" SIZE="3">--ed</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Make output that is a valid </FONT><FONT FACE="Courier New" SIZE="3">ed</FONT><FONT FACE="Times New Roman" SIZE="4"> script. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difed_Scripts.html">ed Scripts</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--exclude=</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>pattern</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>When comparing directories, ignore files and subdirectories whose basenames
+match </FONT><FONT FACE="Courier New" SIZE="3"><I>pattern</I></FONT><FONT FACE="Times New Roman" SIZE="4">. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difComparing_Directories.html">Comparing Directories</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--exclude-from=</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>file</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>When comparing directories, ignore files and subdirectories whose basenames
+match any pattern contained in </FONT><FONT FACE="Courier New" SIZE="3"><I>file</I></FONT><FONT FACE="Times New Roman" SIZE="4">. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difComparing_Directories.html">Comparing Directories</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+ '</FONT><FONT FACE="Courier New" SIZE="3">--expand-tabs</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Expand tabs to spaces in the output, to preserve the align-ment of tabs in the
+input files. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difPreserving_Tabstop_Alignment.html">Preserving Tabstop Alignment</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-f</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Make output that looks vaguely like an ed script but has changes in the order
+they appear in the file. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difForward_ed_Scripts.html">Forward </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difForward_ed_Scripts.html">ed</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difForward_ed_Scripts.html"> Scripts</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-F</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>regexp</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>In context and unified format, for each hunk of differences, show some of the
+last preceding line that matches </FONT><FONT FACE="Courier New" SIZE="3"><I>regexp</I></FONT><FONT FACE="Times New Roman" SIZE="4">. See &quot;Showing Lines That Match Regular Expressions&quot; in </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difShowing_Which_Sections_Differenc.html">Showing Which Sections Differences Are in</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--forward-ed</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Make output that looks vaguely like an </FONT><FONT FACE="Courier New" SIZE="3">ed</FONT><FONT FACE="Times New Roman" SIZE="4"> script but has changes in the order they appear in the file. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difForward_ed_Scripts.html">Forward </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difForward_ed_Scripts.html">ed</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difForward_ed_Scripts.html"> Scripts</A></FONT><FONT FACE="Times New Roman" SIZE="4"> .
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-h</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>This option currently has no effect; it is present for Unix compatibility.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-H</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use heuristics to speed handling of large files that have nu-merous scattered
+small changes. See </FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difdiff_Performance_Tradeoffs.html">diff</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difdiff_Performance_Tradeoffs.html"> Performance tradeoffs</A></FONT><FONT FACE="Times New Roman" SIZE="4"> .
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--horizon-lines=<I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Do not discard the last </FONT><FONT FACE="Courier New" SIZE="3"><I>lines </I></FONT><FONT FACE="Times New Roman" SIZE="4">lines of the common prefix and the first </FONT><FONT FACE="Courier New" SIZE="3"><I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4"> lines of the common suffix. See </FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difdiff_Performance_Tradeoffs.html">diff</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difdiff_Performance_Tradeoffs.html"> Performance tradeoffs</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-i</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Ignore changes in case; consider uppercase and lowercase letters equivalent.
+See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSuppressing_Case_Differences.html">Suppressing Case Differences</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-I</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>regexp</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Ignore changes that just insert or delete lines that match </FONT><FONT FACE="Courier New" SIZE="3"><I>regexp</I></FONT><FONT FACE="Times New Roman" SIZE="4">. See &quot;Showing Lines That Match Regular Expressions&quot; in </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difShowing_Which_Sections_Differenc.html">Showing Which Sections Differences Are in</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--ifdef=<I>name</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Make merged if-then-else output using </FONT><FONT FACE="Courier New" SIZE="3"><I>name</I></FONT><FONT FACE="Times New Roman" SIZE="4">. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difMerging_Files_with_Ifthenelse.html">Merging Files with </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difMerging_Files_with_Ifthenelse.html">If-then-else</A></B></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--ignore-all-space</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Ignore white space when comparing lines. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSuppressing_Differences_00000004.html">Suppressing Differences in Blank and Tab Spacing</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--ignore-blank-lines</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Ignore changes that just insert or delete blank lines. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSuppressing_Differences_00000005.html">Suppressing Differences in Blank Lines</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+ '</FONT><FONT FACE="Courier New" SIZE="3">--ignore-case</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Ignore changes in case; consider upper- and lower-case to be the same. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSuppressing_Case_Differences.html">Suppressing Case Differences</A></FONT><FONT FACE="Times New Roman" SIZE="4">. 
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--ignore-matching-lines=<I>regexp</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Ignore changes that just insert or delete lines that match </FONT><FONT FACE="Courier New" SIZE="3"><I>regexp</I></FONT><FONT FACE="Times New Roman" SIZE="4">. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSuppressing_Lines_Matching_a_Reg.html">Suppressing Lines Matching a Regular Expression</A></FONT><FONT FACE="Times New Roman" SIZE="4">. 
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--ignore-space-change</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Ignore changes in amount of white space. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSuppressing_Differences_00000004.html">Suppressing Differences in Blank and Tab Spacing</A></FONT><FONT FACE="Times New Roman" SIZE="4"> . 
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--initial-tab</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Output a tab rather than a space before the text of a line in normal or
+context format. This causes the alignment of tabs in the line to look normal. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difPreserving_Tabstop_Alignment.html">Preserving Tabstop Alignment</A></FONT><FONT FACE="Times New Roman" SIZE="4">. 
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-l</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Pass the output through </FONT><FONT FACE="Courier New" SIZE="3">pr</FONT><FONT FACE="Times New Roman" SIZE="4"> to paginate it. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difPaginating_diff_Output.html">Paginating </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difPaginating_diff_Output.html">diff</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difPaginating_diff_Output.html"> Output</A></FONT><FONT FACE="Times New Roman" SIZE="4">. 
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-L <I>label</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use </FONT><FONT FACE="Courier New" SIZE="3"><I>label </I></FONT><FONT FACE="Times New Roman" SIZE="4">instead of the file name in the context format (see &quot;Detailed Description of
+Context Format&quot; in </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difContext_Format.html">Context Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">) and unified format (see &quot;Detailed Description of Unified Format&quot; in </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difUnified_Format.html">Unified Format</A></FONT><FONT FACE="Times New Roman" SIZE="4"> ) headers. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difRCS_Scripts.html">RCS Scripts</A></FONT><FONT FACE="Times New Roman" SIZE="4">. 
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--label=<I>label</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use </FONT><FONT FACE="Courier New" SIZE="3"><I>label </I></FONT><FONT FACE="Times New Roman" SIZE="4">instead of the file name in the context format (see &quot;Detailed Description of
+Context Format&quot; in </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difContext_Format.html">Context Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">) and unified format (see &quot;Detailed Description of Unified Format&quot; in </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difUnified_Format.html">Unified Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">) headers. 
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--left-column</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Print only the left column of two common lines in side by side format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difControlling_Side_by_Side_Format.html">Controlling Side by Side Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">. 
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--line-format=<I>format</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use </FONT><FONT FACE="Courier New" SIZE="3"><I>format</I></FONT><FONT FACE="Times New Roman" SIZE="4"> to output all input lines in if-then-else format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difLine_Formats.html">Line Formats</A></FONT><FONT FACE="Times New Roman" SIZE="4">. 
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--minimal</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Change the algorithm to perhaps find a smaller set of changes. This makes </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> slower (sometimes much slower). See </FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difdiff_Performance_Tradeoffs.html">diff</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difdiff_Performance_Tradeoffs.html"> Performance Tradeoffs</A></FONT><FONT FACE="Times New Roman" SIZE="4">. 
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-n</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Output RCS-format diffs; like '</FONT><FONT FACE="Courier New" SIZE="3">-f</FONT><FONT FACE="Times New Roman" SIZE="4">' except that each command specifies the number of lines affected. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difRCS_Scripts.html">RCS Scripts</A></FONT><FONT FACE="Times New Roman" SIZE="4">. 
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-N</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>'</FONT><FONT FACE="Courier New" SIZE="3">--new-file</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>In directory comparison, if a file is found in only one directory, treat it as
+present but empty in the other directory. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difComparing_Directories.html">Comparing Directories</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+ '</FONT><FONT FACE="Courier New" SIZE="3">--new-group-format=<I>format</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use </FONT><FONT FACE="Courier New" SIZE="3"><I>format</I></FONT><FONT FACE="Times New Roman" SIZE="4"> to output a group of lines taken from just the second file in </FONT><FONT FACE="Courier New" SIZE="3">if-then-else</FONT><FONT FACE="Times New Roman" SIZE="4"> format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difLine_Group_Formats.html">Line Group Formats</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--new-line-format=<I>format</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use </FONT><FONT FACE="Courier New" SIZE="3"><I>format</I></FONT><FONT FACE="Times New Roman" SIZE="4"> to output a line taken from just the second file in </FONT><FONT FACE="Courier New" SIZE="3">if-then-else</FONT><FONT FACE="Times New Roman" SIZE="4"> format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difLine_Formats.html">Line Formats</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--old-group-format=<I>format</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use </FONT><FONT FACE="Courier New" SIZE="3"><I>format</I></FONT><FONT FACE="Times New Roman" SIZE="4"> to output a group of lines taken from just the first file in if-then-else
+format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difLine_Group_Formats.html">Line Group Formats</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--old-line-format=<I>format</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use </FONT><FONT FACE="Courier New" SIZE="3"><I>format </I></FONT><FONT FACE="Times New Roman" SIZE="4">to output a line taken from just the first file in if-then- else format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difLine_Formats.html">Line Formats</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-p</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Show which C function each change is in. See &quot;Showing C Function Headings&quot; in </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difShowing_Which_Sections_Differenc.html">Showing Which Sections Differences Are in</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-P</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>When comparing directories, if a file appears only in the second directory of
+the two, treat it as present but empty in the other. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difComparing_Directories.html">Comparing Directories</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--paginate</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Pass the output through pr to paginate it. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difPaginating_diff_Output.html">Paginating </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difPaginating_diff_Output.html">diff</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difPaginating_diff_Output.html"> Output</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-q</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Report only whether the files differ, not the details of the differences. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSummarizing_Which_Files_Differ.html">Summarizing Which Files Differ</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-r</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>When comparing directories, recursively compare any sub-directories found. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difComparing_Directories.html">Comparing Directories</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--rcs</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Output RCS-format diffs; like '</FONT><FONT FACE="Courier New" SIZE="3">-f</FONT><FONT FACE="Times New Roman" SIZE="4">' except that each command specifies the number of lines affected. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difRCS_Scripts.html">RCS Scripts</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--recursive</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>When comparing directories, recursively compare any sub-directories found. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difComparing_Directories.html">Comparing Directories</A></FONT><FONT FACE="Times New Roman" SIZE="4"> .
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--report-identical-files</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Report when two files are the same. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difComparing_Directories.html">Comparing Directories</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-s</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Report when two files are the same. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difComparing_Directories.html">Comparing Directories</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+ '</FONT><FONT FACE="Courier New" SIZE="3">-S</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>file</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>When comparing directories, start with the file, </FONT><FONT FACE="Courier New" SIZE="3"><I>file</I></FONT><FONT FACE="Times New Roman" SIZE="4">. This is used for resuming an aborted comparison. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difComparing_Directories.html">Comparing Directories</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--sdiff-merge-assist</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Print extra information to help </FONT><FONT FACE="Courier New" SIZE="3">sdiff</FONT><FONT FACE="Times New Roman" SIZE="4">. </FONT><FONT FACE="Courier New" SIZE="3">sdiff</FONT><FONT FACE="Times New Roman" SIZE="4"> uses this option when it runs </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4">. This option is not intended for users to use directly.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--show-c-function</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Show which C function each change is in. See &quot;Showing C Function Headings&quot; in </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difShowing_Which_Sections_Differenc.html">Showing Which Sections Differences Are in</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--show-function-line=<I>regexp</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>In context and unified format, for each hunk of differences, show some of the
+last preceding line that matches </FONT><FONT FACE="Courier New" SIZE="3"><I>regexp</I></FONT><FONT FACE="Times New Roman" SIZE="4">. See &quot;Showing Lines That Match Regular Expressions&quot; in </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difShowing_Which_Sections_Differenc.html">Showing Which Sections Differences Are in</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--side-by-side</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use the side by side output format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difControlling_Side_by_Side_Format.html">Controlling Side by Side Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--speed-large-files</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use heuristics to speed handling of large files that have nu-merous scattered
+small changes. See </FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difdiff_Performance_Tradeoffs.html">diff</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difdiff_Performance_Tradeoffs.html"> Performance Tradeoffs</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--starting-file=<I>file</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>When comparing directories, start with the file, </FONT><FONT FACE="Courier New" SIZE="3"><I>file</I></FONT><FONT FACE="Times New Roman" SIZE="4">. This is used for resuming an aborted comparison. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difComparing_Directories.html">Comparing Directories</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--suppress-common-lines</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Do not print common lines in side by side format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difControlling_Side_by_Side_Format.html">Controlling Side by Side Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-t</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Expand tabs to spaces in the output, to preserve the alignment of tabs in the
+input files. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difPreserving_Tabstop_Alignment.html">Preserving Tabstop Alignment</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-T</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Output a tab rather than a space before the text of a line in normal or
+context format. This causes the alignment of tabs in the line to look normal. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difPreserving_Tabstop_Alignment.html">Preserving Tabstop Alignment</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--text</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Treat all files as text and compare them line-by-line, even if they do not
+appear to be text. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difBinary_Files_and_Forcing_Text_Co.html">Binary Files and Forcing Text Comparisons</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-u</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use the unified output format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difUnified_Format.html">Unified Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--unchanged-group-format=<I>format</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use </FONT><FONT FACE="Courier New" SIZE="3"><I>format</I></FONT><FONT FACE="Times New Roman" SIZE="4"> to output a group of common lines taken from both files in if-then-else
+format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difLine_Group_Formats.html">Line Group Formats</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--unchanged-line-format=<I>format</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use </FONT><FONT FACE="Courier New" SIZE="3"><I>format</I></FONT><FONT FACE="Times New Roman" SIZE="4"> to output a line common to both files in if-then-else format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difLine_Formats.html">Line Formats</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">--unidirectional-new-file</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>When comparing directories, if a file appears only in the second directory of
+the two, treat it as present but empty in the other. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difComparing_Directories.html">Comparing Directories</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-U</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>'</FONT><FONT FACE="Courier New" SIZE="3">--unified[=</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>lines</I>]</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use the unified output format, showing </FONT><FONT FACE="Courier New" SIZE="3"><I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4"> (an integer) lines of context, or three if </FONT><FONT FACE="Courier New" SIZE="3"><I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4"> is not given. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difUnified_Format.html">Unified Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">. For proper operation, </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> typically needs at least two lines of context.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-v</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>'</FONT><FONT FACE="Courier New" SIZE="3">--version</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Output the version number of </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-w</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Ignore white space when comparing lines. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSuppressing_Differences_00000004.html">Suppressing Differences in Blank and Tab Spacing</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-W</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>columns</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>'</FONT><FONT FACE="Courier New" SIZE="3">--width=<I>columns</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use an output width of </FONT><FONT FACE="Courier New" SIZE="3"><I>columns </I></FONT><FONT FACE="Times New Roman" SIZE="4">in side by side format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difControlling_Side_by_Side_Format.html">Controlling Side by Side Format</A></FONT><FONT FACE="Times New Roman" SIZE="4"> .
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-x</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>pattern</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>When comparing directories, ignore files and subdirectories whose basenames
+match </FONT><FONT FACE="Courier New" SIZE="3"><I>pattern</I></FONT><FONT FACE="Times New Roman" SIZE="4">. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difComparing_Directories.html">Comparing Directories</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-X</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>file</I></FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>When comparing directories, ignore files and subdirectories whose basenames
+match any pattern contained in </FONT><FONT FACE="Courier New" SIZE="3"><I>file</I></FONT><FONT FACE="Times New Roman" SIZE="4">. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difComparing_Directories.html">Comparing Directories</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+'</FONT><FONT FACE="Courier New" SIZE="3">-y</FONT><FONT FACE="Times New Roman" SIZE="4">' 
+<BR>Use the side by side output format. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difControlling_Side_by_Side_Format.html">Controlling Side by Side Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+</FONT></BODY>
+</HTML>

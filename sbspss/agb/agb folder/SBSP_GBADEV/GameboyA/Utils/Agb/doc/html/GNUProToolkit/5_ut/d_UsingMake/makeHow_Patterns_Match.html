@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>How Patterns Match</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeAutomatic_Variables.html">Previous</A>|<A HREF="makeMatchAnything_Pattern_Rules.html">Next</A>
+<BR><A NAME="off_2230997"></A><A NAME="6a9cca9c"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>How
+patterns match</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>A target
+pattern is composed of a ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+between a prefix and a suffix, either or both of which may be empty. The
+pattern matches a file name only if the file name starts with the prefix
+and ends with the suffix, without overlap. The text between the prefix
+and the suffix is called the <I>stem</I>. Thus, when the pattern ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><B>%</B>.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+matches the file name ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>test.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+the stem is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>test</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+The pattern rule dependencies are turned into actual file names by substituting
+the stem for the character ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Thus, if in the same example one of the dependencies is written as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><B>%</B>.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+it expands to ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>test.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When the target pattern does
+not contain a slash (and it usually does not), directory names in the file
+names are removed from the file name before it is compared with the target
+prefix and suffix. After the comparison of the file name to the target
+pattern, the directory names, along with the slash that ends them, are
+added on to the dependency</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>file names generated from
+the pattern rule’s dependency patterns and the file name. The directories
+are ignored only for the purpose of finding an implicit rule to use, not
+in the application of that rule. Thus, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>e<B>%</B>t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+matches the file name ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>src/eat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>src/a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+as the stem. When dependencies are turned into file names, the directories
+from the stem are added at the front, while the rest of the stem is substituted
+for the ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+The stem ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>src/a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+with a dependency pattern ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>c<B>%</B>r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+gives the file name ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>src/car</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeAutomatic_Variables.html">Previous</A>|<A HREF="makeMatchAnything_Pattern_Rules.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

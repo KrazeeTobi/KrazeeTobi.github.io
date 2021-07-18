@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Output (Object) File</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asInput_Files.html">Previous</A>|<A HREF="asError_and_Warning_Messages.html">Next</A>
+<BR><A NAME="off_164483"></A><A NAME="322b839e"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Output
+(object) file</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Every
+time you run </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+it produces an output file, which is your assembly language program translated
+into numbers. This file is the object file. Its default name is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a.out</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b.out</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+when </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is configured for the Intel 80960. You can give it another name by using
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option. Conventionally, object file names end with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The default name is used for historical reasons: older assemblers were
+capable of assembling self-contained programs directly into a runnable
+program. (For some formats, this isn’t currently possible, but it can be
+done for the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a.out</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+format.)</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+object file is meant for input to the linker </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+It contains assembled program code, information to help </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+integrate the assembled program into a runnable file, and (optionally)
+symbolic information for the debugger.</FONT></FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asInput_Files.html">Previous</A>|<A HREF="asError_and_Warning_Messages.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,419 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Microsoft FrontPage 4.0">
+		<title>Editing {songname}.s Files</title>
+		<!-- Edited by Matt P., 8/21/00-added link to style sheet
+Matt P., 9/29/00, reformatted back to original format per discussion by Tahara/Ron/Raychole-->
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+        <STYLE TYPE="text/css">
+	<!--
+		H2 { color:black; text-align:center }
+		H3 { color:black; }
+		TABLE { border:0; padding:5; margin:1 }
+		TD { color:#303050; background-color:white }
+
+		TH { background-color:yellow }
+		TD.sheet { text-align:left; line-height:13pt }
+	-->
+	</STYLE>
+
+	</head>
+
+<BODY TEXT="#303050" BGCOLOR="#CCCCCC">
+
+	<br>
+	<center>
+		<h2><a name="sedit_0"></a>Editing {songname}.s Files</h2>
+	</center>
+	<p>
+	<hr width="600">
+	<table width="600" align="CENTER" summary="sedit_tbl_0">
+		<tr>
+			<td>After this system converts <a href="../yougo.html#{songname}.mid" target="yougo">.mid Files</a>&nbsp; into&nbsp; <a href="../yougo.html#{songname}.s" target="yougo">.s Files</a>, it creates <a href="../yougo.html#SoundObject" target="yougo">Sound Object</a> Files. At that point, nearly all of the functions can be written into the .mid File, so there is nearly no need to edit .s Files.&nbsp;<br>
+				<br>
+				However, there may be times when you edit the .s files. For example, if the links to the sequencer software are poor and correcting the .mid File would be problematic or you want to reduce the Sound Object by just a few bytes or similar situation.&nbsp;<br>
+				<br>
+				For this reason, the &quot;fonts&quot; of the&nbsp; <a href="../yougo.html#{songname}.s" target="yougo">{songname}.s Files</a> are shown below.&nbsp;<br>
+				Note, however that these fonts could be changed with future versions and that they are not guaranteed for future use.&nbsp;</td>
+		</tr>
+	</table>
+	<br>
+	<table width="600" align="CENTER" summary="index">
+		<tr>
+			<td><a name="index"></a><font size="3"><b>INDEX</b>&nbsp;&nbsp;&nbsp;Editing the {songname}.s Files</font>
+				<pre>     &nbsp; (1)&nbsp;&nbsp; <a href="#Wxx">Wxx</a>
+     &nbsp; (2)&nbsp; <a href="#FINE">FINE</a> 
+     &nbsp; (3)&nbsp; <a href="#GOTO">GOTO, label</a>
+     &nbsp; (4)&nbsp; <a href="#PATT">PATT, label</a>
+     &nbsp; (5)&nbsp; <a href="#PEND">PEND</a>  
+     &nbsp; (6)&nbsp; <a href="#REPT">REPT, xx, label</a>
+     &nbsp; (7)&nbsp; <a href="#TEMPO">TEMPO, xx/2</a>
+     &nbsp; (8)&nbsp; <a href="#KEYSH">KEYSH, xx</a>
+     &nbsp; (9)&nbsp; <a href="#MEMACC">MEMACC, mem set, adr, dat</a>
+     &nbsp;(10)&nbsp; <a href="#PRIO">PRIO, xx</a>
+     &nbsp;(11)&nbsp; <a href="#VOICE">VOICE, xx</a>
+     &nbsp;(12)&nbsp; <a href="#VOL">VOL, xx</a> 
+     &nbsp;(13)&nbsp; <a href="#PAN">PAN, c_v+xx</a>
+     &nbsp;(14)&nbsp; <a href="#BEND">BEND, c_v+xx</a>&nbsp;
+     &nbsp;(15)&nbsp; <a href="#BENDR">BENDR, xx</a>&nbsp; 
+     &nbsp;(16)&nbsp; <a href="#LFOS">LFOS, xx</a>&nbsp; 
+     &nbsp;(17)&nbsp; <a href="#LFODL">LFODL, xx</a>&nbsp;
+     &nbsp;(18)&nbsp; <a href="#MOD">MOD, xx</a>&nbsp; 
+     &nbsp;(19)&nbsp; <a href="#MODT">MODT, xx</a>&nbsp;
+     &nbsp;(20)&nbsp; <a href="#TUNE">TUNE, c_v+xx</a>&nbsp;
+     &nbsp;(21)&nbsp; <a href="#Nxx">Nxx [,key [,velo [,gtp?] ] ]</a>&nbsp;
+     &nbsp;(22)&nbsp; <a href="#TIE">TIE [,key[,velo]]</a>&nbsp;
+     &nbsp;(23)&nbsp; <a href="#EOT">EOT [,key]</a>&nbsp;
+     &nbsp;(24)&nbsp; <a href="#xIECV">XCMD, xIECV, xx</a>&nbsp;
+     &nbsp;(25)&nbsp; <a href="#xIECL">XCMD, xIECL, xx</a>
+
+      (Ref) <a href="#refer">{songname}.s File Contents</a></pre>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<table width="600" align="CENTER" summary="sedit_tbl_1">
+		<tr>
+			<td>
+				<h3><a name="Wxx"></a>(1) Wxx</h3>
+				<p>Until the following commands have been executed, the system will wait for xx <a href="../yougo.html#Clock" target="yougo">Clocks</a>. These can be thought of as &quot;rests.&quot;<br>
+				xx is a two-digit, single-byte number from 00 ~ 96, but they do not have to be consecutive.&nbsp;<br>
+				Values not defined in <a href="../yougo.html#MusicPlayDef.s" target="yougo">MusicPlayDef.s</a> cannot be used.)<br>
+                The length of the rest will be 24 clocks for a quarter rest and 96 clocks for a whole rest.&nbsp;</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="600" align="CENTER" summary="sedit_tbl_2">
+		<tr>
+			<td>
+				<h3><a name="FINE"></a>(2) FINE</h3>
+				<p>The musical term &quot;<i>fine</i>.&quot; This ends the track in question.&nbsp;</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="600" align="CENTER" summary="sedit_tbl_3">
+		<tr>
+			<td>
+				<h3><a name="GOTO"></a>(3) GOTO, label</h3>
+				<p>Unconditional jump to the position of the label. (a label is 4 bytes.)</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="600" align="CENTER" summary="sedit_tbl_4">
+		<tr>
+			<td>
+				<h3><a name="PATT"></a>(4) PATT, label</h3>
+				<p>Calls the pattern of a label. Can be nested up to three times.&nbsp;</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="600" align="CENTER" summary="sedit_tbl_5">
+		<tr>
+			<td>
+				<h3><a name="PEND"></a>(5) PEND</h3>
+				<p>Ends a pattern and restores it to its call source. If it is not being called from somewhere, it will be ignored.&nbsp;</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="600" align="CENTER" summary="sedit_tbl_6">
+		<tr>
+			<td>
+				<h3><a name="REPT"></a>(6) REPT, xx, label</h3>
+				<p>Repeats from the position of label through the present location xx number of times. (xx is from 0 ~ 255.)&nbsp;<br>
+				If xx is &quot;0,&quot; it will repeat without end. (Same as GOTO.) This cannot be nested.&nbsp;<br>
+				(This command cannot be specified on the MIDI sequencer.)</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="600" align="CENTER" summary="sedit_tbl_7">
+		<tr>
+			<td>
+				<h3><a name="TEMPO"></a>(7) TEMPO, xx/2</h3>
+				<p>This sets the tempo of the entire song. (xx is from <b>22 ~ 510</b>).</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="600" align="CENTER" summary="sedit_tbl_8">
+		<tr>
+			<td>
+				<h3><a name="KEYSH"></a>(8) KEYSH, xx</h3>
+				<p>This modulates the key of the track in question. (xx is from&nbsp; <b>-128 ~ + 127</b>).<br>
+				(This command cannot be specified on a MIDI sequencer.)</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="600" align="CENTER" summary="sedit_tbl_9">
+		<tr>
+			<td>
+				<H3><A NAME="MEMACC">(9) MEMACC, mem_set, adr, dat</A></H3>     
+Instruction for writing data to the <A HREF="../yougo.html#MemoryAccessAreaSize" TARGET="yougo">memory access area.</A><BR>     
+<BR>     
+<B>[MEMACC Instruction in MIDI File]</B><BR>     
+Use the MIDI control change numbers <FONT COLOR="black"><b>12, 14, and 16(or these plus
+                thirty: 42, 44,46)</b></font> when inserting the MEMACC instruction into the song data on the MIDI sequencer.<br>     
+<BR>     
+<FONT COLOR="black"><b>$Bx</b></FONT><SPAN STYLE="font-family:Terminal">,</SPAN><FONT COLOR="black"><b>12</b></FONT> ($Bx<SPAN STYLE="font-family:Terminal">,
+                </SPAN>Substitute for 16)<BR>       
+<FONT COLOR="black"><b>$Bx</b></FONT><SPAN STYLE="font-family:Terminal">,</SPAN><FONT COLOR="black"><b>14</b></FONT> Address accessed (0~127, but less than memacc_s)<BR>       
+<FONT COLOR="black"><b>$Bx</b></FONT><SPAN STYLE="font-family:Terminal">,</SPAN><FONT COLOR="black"><b>16</b></FONT> Data used for access. (and placing instruction)<BR>     
+<BR>     
+     
+<TABLE BORDER="1" CELLSPACING="0" STYLE="font-size:13" ALIGN="CENTER" SUMMARY="sheet1">     
+<TR>     
+<TH WIDTH="200" bgcolor=yellow>MIDI Code</TH>     
+<TH WIDTH="120" bgcolor=yellow>Label in .s</TH>     
+</TR>     
+<TR>     
+<TD CLASS="sheet" STYLE="font-family:Terminal">$Bx,14,aa, $Bx,16,dd</TD>
+<TD CLASS="sheet" STYLE="font-family:Terminal">MEMACC, mem_set</TD>
+</TR>
+</TABLE><BR>
+This is the point where the control change <FONT COLOR="black"><b>$Bx</b></FONT><SPAN STYLE="font-family:Terminal">,</SPAN><FONT COLOR="black"><b>16</b></FONT> is reached and the actual     
+instruction is set so all of <FONT COLOR="black"><b>$Bx</b></FONT><SPAN STYLE="font-family:Terminal">,</SPAN><FONT COLOR="black"><b>14</b></FONT> must be set up prior to <FONT COLOR="black"><b>$Bx</b></FONT><SPAN STYLE="font-family:Terminal">,</SPAN><FONT COLOR="black"><b>16.</b></FONT><br>    
+Also, in the sequencer that sorts the control change events with the same timing in descending order, <BR>    
+in place of <FONT COLOR="black"><b>$Bx</b></FONT><SPAN STYLE="font-family:Terminal">,</SPAN><FONT COLOR="black"><b>16</b></FONT>, you can use <FONT COLOR="black"><b>$Bx</b></FONT><SPAN STYLE="font-family:Terminal">,</SPAN><FONT COLOR="black"><b>12</b></FONT>.<BR>       
+<BR>
+<B>[MEMACC Instruction in Source File]</B><BR>
+<BR>
+The following is the format of the MEMACC instruction in the {songname}.s file.<PRE STYLE="color:#008080; line-height:1">
+&nbsp;&nbsp;Set up dat in mem_set&nbsp;&nbsp;&nbsp;m4a_memacc_area[ adr ].
+
+</PRE>       
+mem_set can be input on the MIDI sequencer.<BR>       
+(The range of adr and dat when you directly edit the .s file is <B>0~255</B>,<BR> and when you input on the MIDI sequencer it is <B>0~127</B>. Note that adr is less than <A HREF="../yougo.html#MemoryAccessAreaSize" TARGET="yougo">memacc_s</A>).<BR>       
+<BR>
+<A HREF="#index">Return to Top</A></td>
+		</tr>
+	</table>
+	<br>
+		<table width="600" align="CENTER" summary="sedit_tbl_10">
+		<tr>
+			<td>
+				<h3><a name="PRIO"></a>(10) PRIO, xx</h3>
+				<p>When this value is added to the priority of a song,                                                                                       
+it becomes the priority of that track.                                                                                       
+<br>(The xx range is <b>0 to 255</b> when editing directly                                                                                       
+in an .s file or <b>0 to 127</b> when input using a MIDI sequencer.)</p>
+<p><a href="#index">Return to Top</a></td>
+</tr>
+</table>
+	<br>
+<table width="600" align="CENTER" summary="sedit_tbl_9-5">
+		<tr>
+			<td>Using the following commands causes the running status to become valid.&nbsp;<br>
+				Running status is a function which allows operation from the parameters alone when the same command appears repeatedly and the command itself is omitted. This function allows the amount of data to be reduced.&nbsp;</td>
+		</tr>
+	</table>
+	<br>
+	<table width="550" align="CENTER" summary="sedit_tbl_11">
+		<tr>
+			<td>
+				<h3><a name="VOICE"></a>(11) VOICE, xx</h3>
+				<p>Selects the tone color.(xx is from <b>0 to                                                                                        
+127</b>). The tone color specified in <a href="../yougo.html#mks4agb.ini" target="yougo">mks4agb.ini</a>                                                                                        
+will be selected.&nbsp;</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="550" align="CENTER" summary="sedit_tbl_12">
+		<tr>
+			<td>
+				<h3><a name="VOL"></a>(12) VOL, xx</h3>
+				<p>Track Volume(xx is <b>0 to 127</b>)  Note:                                                                                        
+in order to make the master volume <a href="../yougo.html#Song
+Settings" target="yougo">song                                                                                        
+setup</a> valid, xx has to be specified using the formula <b>[Value *                                                                                        
+{songname}_mvl/mxv].</b></p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="550" align="CENTER" summary="sedit_tbl_13">
+		<tr>
+		<td>
+				<h3><a name="PAN"></a>(13) PAN, c_v+xx</h3>
+				<p>This is the panpot of the track in question. (xx is from <b>-64 ~ + 63.</b>) With CGB compatible sound, hardware restrictions limit you to three stages (right, center and left).&nbsp;</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="550" align="CENTER" summary="sedit_tbl_14">
+		<tr>
+			<td>
+				<h3><a name="BEND"></a>(14) BEND, c_v+xx</h3>
+				<p>This is the pitch bend of the track in question. (xx os frp,&nbsp; <b>-64 ~ +63</b>).</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="550" align="CENTER" summary="sedit_tbl_15">
+		<tr>
+			<td>
+				<h3><a name="BENDR"></a>(15) BENDR, xx</h3>
+				<p>This is the bend range. (xx is from&nbsp; <b>0 ~ 127.</b>) Pitch bend sets the maximum width and is expressed as the half tone count. Immediately after starting, this is &quot;2.&quot; That is, when the pitch bend value is maximized, the pitch will be a whole tone higher (or lower).&nbsp;</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="550" align="CENTER" summary="sedit_tbl_16">
+		<tr>
+			<td>
+				<h3><a name="LFOS"></a>(16) LFOS, xx</h3>
+				<p>This is the speed of the Low Frequency Oscillator. (xx is from <b>0 ~ 127.</b>) That is, the speed of modulation and other effects. The higher the value, the faster it will be.&nbsp;</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="550" align="CENTER" summary="sedit_tbl_17">
+		<tr>
+			<td>
+				<h3><a name="LFODL"></a>(17) LFODL, xx</h3>
+				<p>The time from the &quot;key on&quot; point until the LFO becomes valid. (xx is from <b>0 ~ 127.</b>) &nbsp; When this value is anything other than zero, modulation and other effects will not work immediately after &quot;key on.&quot;&nbsp; It will start after xx<a href="../yougo.html#Clock" target="yougo">Clocks</a> have passed.&nbsp;</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="550" align="CENTER" summary="sedit_tbl_18">
+		<tr>
+			<td>
+				<h3><a name="MOD"></a>(18) MOD, xx</h3>
+				<p>This is the modulation depth.&nbsp; (xx is from <b>0 ~ 127.</b>)</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="550" align="CENTER" summary="sedit_tbl_19">
+		<tr>
+			<td>
+				<h3><a name="MODT"></a>(19) MODT, xx</h3>
+				<p>This is the type of modulation.&nbsp; xx is selected from the three following types.&nbsp;<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;0 = Vibrato (Scale Change),<br>
+				&nbsp;&nbsp;&nbsp;1 = Tremolo (Volume Change),<br>
+				&nbsp;&nbsp;&nbsp;2 = Pan (Position Change)<br>
+				<br>
+				The value immediately after starting is &quot;0&quot; (Scale Change).&nbsp;</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="550" align="CENTER" summary="sedit_tbl_20">
+		<tr>
+			<td>
+				<h3><a name="TUNE"></a>(20) TUNE, c_v+xx</h3>
+				<p>This is tuning. (xx is from <b>-64 ~ + 63.</b>) Fine tunes the track in question over a &plusmn;(half tone) range.</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="600" align="CENTER" summary="sedit_tbl_20-5">
+		<tr>
+			<td>The following commands are &quot;Note Commands.&quot; Running Status also functions with these commands.&nbsp;<br>
+				Additionally, the parameters may be omitted in addition to the commands.</td>
+		</tr>
+	</table>
+	<br>
+	<table width="550" align="CENTER" summary="sedit_tbl_21">
+		<tr>
+			<td>
+				<h3><a name="Nxx"></a>(21) Nxx [,key [,velo [,gtp?] ] ]</h3>
+				<p>Gate Time is the&nbsp; xx <a href="../yougo.html#Clock" target="yougo">Clock</a> &quot;Note.&quot; xx is a single-byte, double-digit number from <b>00 ~ 96. </b>However, these do not necessarily have to be consecutive. (Numerical values not defined in <a href="../yougo.html#MusicPlayDef.s" target="yougo">MusicPlayDef.s</a> cannot be used. The length of the notes is 24 clocks for a quarter note and 96 clocks for a whole note.&nbsp;<br>
+				<br>
+				The &quot;key&quot; is the scale, where the following font is written.&nbsp;<br>
+				<b>CnM2<span>,</span> CsM2<span>,</span> DnM2<span>,</span> ...&nbsp;<span>,</span> Cn3<span>,</span> Cs3<span>,</span> Dn3<span>,</span> ...&nbsp;<span>,</span> Fn8<span>,</span> Fs8<span>,</span> Gn8</b></p>
+				<p>The first half (<b>Cn<span>,</span> Cs<span>,</span> Dn, </b>etc.) is expressed using the names of the notes.&nbsp;<br>
+				The first letter of the name of the note is the scale (<b>C ~ B</b>).<br>
+				The <b>n</b> following stands for natural, the <b>s</b> for sharp.&nbsp;<br>
+				The second half&nbsp; (<b>M2<span>,</span> 0<span>,</span> 3, </b>etc.)<b> </b>indicates the pitch of the note.&nbsp;<br>
+				<b>M </b>means minus (moving from lower to higher), it is written as follows. (<b>M2<span>,</span> M1<span>,</span> 0<span>,</span> 1 . . . 7<span>,</span> 8</b>)<br>
+				<br>
+				The correspondence with MIDI key numbers is as follows.&nbsp;<br>
+				<b>CnM2=0<span>,</span> . . . Cn3=36<span>,</span> . . . Gn8=127</b></p>
+				<p>velo is velocity, from <b>v000 ~ v127. </b>According to MIDI
+                standards, if the velocity is zero, it will be handled as a &quot;Note Off,&quot; but in this source file, v000 is not handled as a &quot;Note Off&quot;.&nbsp;</p>
+				<p>Also, in the song setting options, when it is set to &quot;do not
+                shorten -e gate time,&quot; a parameter called &quot;gtp? (?=1 ~ 3)&quot; may be attached.&nbsp;<br>
+				This is for the purpose of adding the amount truncated during data compression to the&nbsp; <a href="../yougo.html#Clock" target="yougo">Clock</a> once more.&nbsp;<br>
+				<br>
+				Refer to &quot;Writing in the mks4agb.ini File&quot; in the <a href="ini.html#ini_14op">Song Setting Options</a> for more information on song setting options.&nbsp;</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="550" align="CENTER" summary="sedit_tbl_22">
+		<tr>
+			<td>
+				<h3><a name="TIE"></a>(22) TIE [,key [,velo] ]</h3>
+				<p>This is the note that becomes TIE. The note will continue to sound until an &quot;EOT&quot; appears.&nbsp;<br>
+				The key is a scale from <b>CnM2 ~ Gn8</b>, and velo is velocity from <b>v000 ~ v127.</b><br><br>
+				<a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="550" align="CENTER" summary="sedit_tbl_23">
+		<tr>
+			<td>
+				<h3><a name="EOT"></a>(23) EOT [,key]</h3>
+				<p>This command stops the TIE note. The key is the scale of the note to be stopped from <b>CnM2 ~ Gn8.</b><br><br>
+				<a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="600" align="CENTER" summary="sedit_tbl_23-5">
+		<tr>
+			<td>The following commands are &quot;extension commands (XCMD).&quot;When there are
+              consecutive extension commands, the constant XCMD may be omitted using the running status function.&nbsp;</td>
+		</tr>
+	</table>
+	<br>
+	<table width="550" align="CENTER" summary="sedit_tbl_24">
+		<tr>
+			<td>
+				<h3><a name="xIECV"></a>(24) XCMD, xIECV, xx</h3>
+				<p>This is Pseudo Echo Volume. (xx is from <b>00 ~ 127.</b>) With the pseudo echo function, the sound continues at a specific volume and for a specific period after it has been produced and released.&nbsp;<br>
+				This function allows an echo-like effect to be placed on the track in question.&nbsp;<br>
+				The volume remains at xx /127th of the note in question.</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="550" align="CENTER" summary="sedit_tbl_25">
+		<tr>
+			<td>
+				<h3><a name="xIECL"></a>(25) XCMD, xIECL, xx</h3>
+				<p>This is the length of the Pseudo Echo. (xx is from <b>00 ~ 127.</b>) A pseudo echo will remain for a period of xx/60th of a second.&nbsp;</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<br>
+	<table width="550" align="CENTER" summary="sedit_tbl_24">
+		<tr>
+			<td>
+				<h3><a name="refer"></a>(Ref) {songname}.s File Contents</h3>
+				<p>Please refer to <a href="../Tutorial/tuto3_3.html">.s File Content</a> in the Tutorial&nbsp; for an explanation of the actual {songname}.s Files.&nbsp;</p>
+				<p><a href="#index">Return to Top</a></td>
+		</tr>
+	</table>
+	<p>
+	<hr width="600">
+	<table width="600" align="CENTER" summary="link">
+		<tr>
+			<td><b>Back:</b>[ <a href="mon.html">Operating the System &quot;Simple Monitor&quot;</a> ]<br>
+				<b>TOP :</b>[ <a href="../index.html">Table of Contents</a> ]</td>
+		</tr>
+	</table>
+
+</html>

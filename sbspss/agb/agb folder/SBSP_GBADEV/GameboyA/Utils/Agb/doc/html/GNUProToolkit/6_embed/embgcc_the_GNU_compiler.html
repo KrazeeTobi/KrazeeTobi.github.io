@@ -1,0 +1,77 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>gcc, the GNU compiler</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embInvoking_the_GNU_Tools.html">Previous</a>|<a href="embcpp_the_GNU_preprocessor.html">Next</a>
+<br><a NAME="off_33065"></a><a NAME="44240071"></a><a NAME="off_33065"></a><a NAME="44240071"></a><a NAME="off_33065"></a><a NAME="44240071"></a><a NAME="off_33065"></a><a NAME="44240071"></a><a NAME="off_33065"></a><a NAME="44240071"></a><a NAME="off_33065"></a><a NAME="44240071"></a><a NAME="off_33065"></a><a NAME="44240071"></a><a NAME="off_33065"></a><a NAME="44240071"></a><b><font color="#000000"><tt><font point-size="26">gcc</font></tt><font face="Futura Md BT"><font size=+3>,
+the GNU compiler</font></font></font></b>
+<br>
+<hr SIZE=3 WIDTH="100%">
+<br><font color="#000000"><font size=+1><tt>gcc</tt><font face="Times New Roman">
+invokes all the necessary GNU compiler passes for you with the following
+utilities.</font></font></font>
+<ul TYPE=SQUARE>
+<li>
+<tt><font color="#000000"><font size=+1>cpp</font></font></tt></li>
+
+<br><font face="Times New Roman,Times"><font color="#000000"><font size=+1>The
+preprocessor which processes all the header files and macros that your
+target requires.</font></font></font>
+<li>
+<tt><font color="#000000"><font size=+1>gcc</font></font></tt></li>
+
+<br><font face="Times New Roman,Times"><font color="#000000"><font size=+1>The
+compiler which produces assembly language code from the processed C files.
+For more information, see <i><a href="../2_comp/Using_GNU_CC/gcc.html">Using
+GNU CC</a></i> in <b><i>GNUPro Compiler Tools</i></b>.</font></font></font>
+<li>
+<tt><font color="#000000"><font size=+1>gas</font></font></tt></li>
+
+<br><font face="Times New Roman,Times"><font color="#000000"><font size=+1>The
+assembler which produces binary code from the assembly language code and
+puts it in an object file.</font></font></font>
+<li>
+<tt><font color="#000000"><font size=+1>ld</font></font></tt></li>
+
+<br><font face="Times New Roman,Times"><font color="#000000"><font size=+1>The
+linker which binds the code to addresses, links the startup file and libraries
+to the object file, and produces the executable binary image.</font></font></font></ul>
+<font color="#000000"><font size=+1><font face="Times New Roman">There
+are several&nbsp; machine-independent compiler switches, among which are,
+notably, </font><tt>-fno-exceptions</tt><font face="Times New Roman"> (for
+C++), </font><tt>-fritti</tt><font face="Times New Roman"> (for C++) and
+</font><tt>-T</tt><font face="Times New Roman"> (for linking).</font></font></font>
+<br><font color="#000000"><font size=+1><font face="Times New Roman">You
+have four implicit file extensions: </font><tt>.c</tt><font face="Times New Roman">,
+</font><tt>.C</tt><font face="Times New Roman">, </font><tt>.s</tt><font face="Times New Roman">,
+and </font><tt>.S</tt><font face="Times New Roman">. For more information,
+see </font><font face="Times New Roman,Times"><i><a href="../2_comp/Using_GNU_CC/gcc.html">Using
+GNU CC</a></i>&nbsp; in <b><i>GNUPro Compiler Tools</i></b></font><font face="Times New Roman">.</font></font></font>
+<br><font color="#000000"><font face="Times New Roman"><font size=+1>When
+you compile C or C++ programs with GNU</font><font size=-2> </font><font size=+1>C,
+the compiler quietly inserts a call at the beginning of </font></font><font face="Courier New"><font size=+0>main</font></font><font face="Times New Roman"><font size=+1>
+to a GCC support subroutine called </font></font><font face="Courier New"><font size=+0>__main</font></font><font face="Times New Roman"><font size=+1>.
+Normally this is invisible—you may run into it if you want to avoid linking
+to the standard libraries, by specifying the compiler option, </font></font><font face="Courier New"><font size=+0>-nostdlib</font></font><font face="Times New Roman"><font size=+1>.
+Include </font></font><font face="Courier New"><font size=+0>-lgcc</font></font><font face="Times New Roman"><font size=+1>
+at the end of your compiler command line to resolve this reference. This
+links with the compiler support library </font></font><font face="Courier New"><font size=+0>libgcc.a</font></font><font face="Times New Roman"><font size=+1>.
+Putting it at the end of your command line ensures that you have a chance
+to link first with any of your own special libraries.</font></font></font>
+<p><font color="#000000"><font face="Courier New"><font size=+0>__main</font></font><font face="Times New Roman"><font size=+1>
+is the initialization routine for C++ constructors. Because GNU C is designed
+to interoperate with GNU C++, even C programs must have this call: otherwise
+C++ object files linked with a C main might fail.</font></font></font>
+<p><font face="Times New Roman"><font color="#000000"><font size=+1>For
+more information on the compiler, see <i><a href="../2_comp/Using_GNU_CC/gcc.html">Using
+GNU CC</a></i> in <b><i>GNUPro Compiler Tools</i></b>.</font></font></font>
+<center>
+<hr SIZE=3 WIDTH="100%">
+<br><a href="#Top">Top</a>|<a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embInvoking_the_GNU_Tools.html">Previous</a>|<a href="embcpp_the_GNU_preprocessor.html">Next</a></center>
+
+</body>
+</html>

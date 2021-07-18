@@ -1,0 +1,7 @@
+Installation note:
+
+You need to have an AGB IS-CGB-Emulator hardware connected to your PC
+to execute the installation program.
+
+Double-click the executable file (*.exe) in order to start the installation
+program.

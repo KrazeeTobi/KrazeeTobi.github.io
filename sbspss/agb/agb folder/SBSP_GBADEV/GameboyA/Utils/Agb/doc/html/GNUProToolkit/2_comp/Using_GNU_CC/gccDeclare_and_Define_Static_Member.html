@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Declare and Define Static Members</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccCommon_Misunderstandings_with_GN.html">Previous</A>|<A HREF="gccTemporaries_May_Vanish_Before_Yo.html">Next</A>
+<BR>&nbsp;<A NAME="off_5114357"></A><A NAME="718cd469"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><B><FONT SIZE=+3>Declare
+and define static members&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>When a class has static
+data members, it is not enough to <I>declare</I> the static member; you
+must also <I>define</I> it. Use the following example, for instance.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>class Foo&nbsp;
+{&nbsp;
+: : :&nbsp;
+void method();&nbsp;
+static int bar;&nbsp;
+};</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This declaration only establishes
+that the class </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+named </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Foo::bar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and a member function named </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Foo::method</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+But you still need to define <I>both</I> </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>method</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+elsewhere. According to the draft ANSI standard, you must supply an initializer
+in one (and only one) source file, such as the following example shows.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>int Foo::bar = 0;</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Other C++ compilers may not
+correctly implement the standard behavior. As a result, when you switch
+to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>g++</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+from one of these compilers, you may discover that a program that appeared
+to work correctly in fact does not conform to the standard: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>g++</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+reports as undefined symbols any static data members that lack definitions.</FONT></FONT>
+</BODY>
+</HTML>

@@ -1,0 +1,123 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Compiler options for Hitachi sh</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="emb.html">Contents</A>|<A HREF="embindex.html">Index</A>|<A HREF="embCompiling_on_Hitachi_sh_targets.html">Previous</A>|<A HREF="embPredefined_preprocessor_00000034.html">Next</A>
+<BR><A NAME="off_427991"></A><A NAME="c4ecf248"></A><A NAME="off_427991"></A><A NAME="c4ecf248"></A><A NAME="off_427991"></A><A NAME="c4ecf248"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><B><FONT SIZE=+3>Compiler
+options for Hitachi SH&nbsp;</FONT></B></FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT SIZE=+1><FONT FACE="Times New Roman">When
+you run GCC, you can use command-line options to choose machine-specific
+details. See also </FONT><A HREF="#options"><FONT FACE="Courier New,Courier">gcc</FONT><FONT FACE="Arial,Helvetica">
+</FONT><FONT FACE="Times New Roman,Times">options for architecture and
+code generation for Hitachi SH</FONT></A><FONT FACE="Times New Roman,Times">
+and <A HREF="#float">Floating point subroutines for Hitachi SH</A>. </FONT><FONT FACE="Times New Roman">For
+information on all the GCC command-line options, see <A HREF="../2_comp/Using_GNU_CC/gccGNU_CC_Command_Options.html">GNU
+CC command options</A> in <I><A HREF="../2_comp/Using_GNU_CC/gcc.html">Using
+GNU CC</A></I> in <B><I>GNUPro Compiler Tools</I></B>.</FONT></FONT>
+
+<P><A NAME="options"></A><B><FONT SIZE=+2><FONT FACE="Courier New,Courier">gcc</FONT><I><FONT FACE="Arial,Helvetica">
+</FONT><FONT FACE="Times New Roman,Times">options for architecture and
+code generation for Hitachi SH</FONT></I></FONT></B><FONT FACE="Times New Roman,Times"></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>-g</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The compiler debugging option,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-g</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is essential to see interspersed high-level source statements, since without
+debugging information the assembler cannot tie most of the generated code
+to lines of the original source file.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-mshl</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate little-endian Hitachi
+SH COFF output.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-m1</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate code for the Hitachi
+SH-1 chip. This is the default behavior for the Hitachi SH configuration.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-m2</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate code for the Hitachi
+SH-2 chip.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-m3</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate code for the Hitachi
+SH-3 chip.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-m3e</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate code for the Hitachi
+SH-3E chip.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-mhitachi</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use Hitachi’s calling convention
+rather than that for GCC. The registers, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MACH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MACL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+are saved with this setting (see <A HREF="embCalling_conventions_for_00000036.html">Calling
+conventions for Hitachi SH</A>).</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-mspace</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate small code rather
+than fast code. By default, GCC generates fast code rather than small code.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-mb</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate big endian code.
+This is the default.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-ml</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate little endian code.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-mrelax</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Do linker relaxation. For
+the Hitachi SH, this means the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>jsr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instruction can be converted to the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bsr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instruction. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mrelax</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+replaces the obsolete option, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mbsr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-mbigtable</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate jump tables for
+switch statements using four-byte offsets rather than the standard two-byte
+offset. This option is necessary when the code within a switch statement
+is larger than 32k. If the option is needed and not supplied, the assembler
+will generate errors.</FONT></FONT></UL>
+</UL>
+<A NAME="float"></A><FONT FACE="Times New Roman,Times"><B><I><FONT SIZE=+2>Floating
+point subroutines for Hitachi SH</FONT></I></B></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Two kinds of floating point
+subroutines are useful with GCC.</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Software implementations of
+the basic functions (floating-point multiply, divide, add, subtract), for
+use when there is no hardware floating-point support.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>General-purpose mathematical
+subroutines.</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GNUPro Toolkit includes
+an implementation of the standard C mathematical subroutine library. See
+<A HREF="../4_libs/b_GNUPro_Math_Library/libmMathematical_Functions_mathh.html">Mathematical
+functions (</A></FONT></FONT><A HREF="../4_libs/b_GNUPro_Math_Library/libmMathematical_Functions_mathh.html"><B><FONT FACE="Courier New"><FONT SIZE=+0>math.h</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>)</FONT></FONT></A><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in <I><A HREF="../4_libs/b_GNUPro_Math_Library/libm.html">GNUPro Math Library</A></I>
+in <B><I>GNUPro Libraries</I></B>.</FONT></FONT></UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="emb.html">Contents</A>|<A HREF="embindex.html">Index</A>|<A HREF="embCompiling_on_Hitachi_sh_targets.html">Previous</A>|<A HREF="embPredefined_preprocessor_00000034.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

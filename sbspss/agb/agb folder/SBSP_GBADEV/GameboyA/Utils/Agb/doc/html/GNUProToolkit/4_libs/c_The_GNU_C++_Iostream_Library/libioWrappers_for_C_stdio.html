@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Wrappers for C stdio</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioCstyle_formatting_for_streambuf_.html">Previous</A>|<A HREF="libioReadingwriting_fromto_a_pipe.html">Next</A>
+<BR><A NAME="off_591107"></A><A NAME="eddf73a8"></A><A NAME="off_591107"></A><A NAME="eddf73a8"></A><A NAME="off_591107"></A><A NAME="eddf73a8"></A><A NAME="off_591107"></A><A NAME="eddf73a8"></A><A NAME="off_591107"></A><A NAME="eddf73a8"></A><A NAME="off_591107"></A><A NAME="eddf73a8"></A><A NAME="off_591107"></A><A NAME="eddf73a8"></A><A NAME="off_591107"></A><A NAME="eddf73a8"></A><A NAME="off_591107"></A><A NAME="eddf73a8"></A><B><FONT SIZE=+3><FONT FACE="Futura Md BT">Wrappers
+for C </FONT><FONT FACE="Courier New,Courier">stdio</FONT><FONT FACE="Futura Md BT"></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>A </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdiobuf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>streambuf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+object that points to a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>FILE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+object (as defined by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdio.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+All </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>streambuf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+operations on the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdiobuf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are forwarded to the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>FILE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Thus the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdiobuf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+object provides a wrapper around a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>FILE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+allowing use of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>streambuf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+operations on a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>FILE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+This can be useful when mixing C code with C++ code.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The pre-defined streams </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cin</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cout</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cerr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are normally implemented as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdiobuf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+objects that point to respectively </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdin</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdout</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stderr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+This is convenient, but it does cost some extra overhead.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you set things up to use
+the implementation of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdio</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+provided with this library, then </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cin</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cout</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cerr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will be set up to use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdiobuf
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#000000">objects,
+since you get their benefits for free. See </FONT><FONT COLOR="#008000"><A HREF="libioC_Input_and_Output.html">C
+input and output</A></FONT><FONT COLOR="#000000">.</FONT></FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioCstyle_formatting_for_streambuf_.html">Previous</A>|<A HREF="libioReadingwriting_fromto_a_pipe.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

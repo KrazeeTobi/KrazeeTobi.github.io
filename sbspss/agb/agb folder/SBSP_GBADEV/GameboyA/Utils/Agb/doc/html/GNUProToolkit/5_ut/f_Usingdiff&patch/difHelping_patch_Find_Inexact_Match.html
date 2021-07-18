@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE>Helping patch Find Inexact Matches</TITLE>
+</HEAD><BODY>
+<A HREF= "dif.html">Contents</A>|<A HREF= "difindex.html">Index</A>|<A HREF="difApplying_Reversed_Patches.html">Previous</A>|<A HREF="difRemoving_Empty_Files.html">Next</A>
+<P>
+<A NAME="off_886319"></A><A NAME="0ac345bd"></A><FONT FACE="Times New Roman" SIZE="6"><B>Helping </B></FONT><FONT FACE="Courier New" SIZE="5"><B>patch</B></FONT><FONT FACE="Times New Roman" SIZE="6"><B> Find Inexact Matches
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">For context diffs, and to a lesser extent normal diffs, </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> can detect when the line numbers mentioned in the patch are incorrect, and it
+attempts to find the correct place to apply each hunk of the patch. As a first
+guess, it takes the line number mentioned in the hunk, plus or minus any
+offset used in applying the previous hunk. If that is not the correct place, </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> scans both forward and backward for a set of lines matching the context given
+in the hunk. 
+<P>
+First </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> looks for a place where all lines of the context match. If it cannot find
+such a place, and it is reading a context or unified diff, and the maximum fuzz
+factor is set to 1 or more, then patch makes another scan, ignoring the first and
+last line of context. If that fails, and the maximum fuzz factor is set to 2
+or more, it makes another scan, ignoring the first two and last two lines of
+context are ignored. It continues similarly if the maximum fuzz factor is larger. 
+<P>
+The '</FONT><FONT FACE="Courier New" SIZE="3">-F</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4">' or'</FONT><FONT FACE="Courier New" SIZE="3">--fuzz=<I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4">' option sets the maximum fuzz factor to </FONT><FONT FACE="Courier New" SIZE="3"><I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4">. This option only applies to context and unified diffs; it ignores up to </FONT><FONT FACE="Courier New" SIZE="3"><I>lines</I></FONT><FONT FACE="Times New Roman" SIZE="4"> lines while looking for the place to install a hunk. Note that a larger fuzz
+factor increases the odds of making a faulty patch. The default fuzz factor is
+2; it may not be set to more than the number of lines of context in the diff,
+ordinarily 3. 
+<P>
+If </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> cannot find a place to install a hunk of the patch, it writes the hunk out to
+a reject file (see </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difReject_File_Names.html">Reject File Names</A></FONT><FONT FACE="Times New Roman" SIZE="4"> for information on how reject files are named). It writes out rejected hunks
+in context format no matter what form the input patch is in. If the input is a
+normal or </FONT><FONT FACE="Courier New" SIZE="3">ed</FONT><FONT FACE="Times New Roman" SIZE="4"> diff, many of the contexts are simply null. The line numbers on the hunks in
+the reject file may be different from those in the patch file; they show the
+approximate location where </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> thinks the failed hunks belong in the new file rather than in the old one. 
+<P>
+As it completes each hunk, </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> tells you whether the hunk succeeded or failed, and if it failed, on which
+line (in the new file) </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> thinks the hunk should go. If this is different from the line number
+specified in the diff, it tells you the offset. A single large offset may indicate that </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> installed a hunk in the wrong place. </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> also tells you if it used a fuzz factor to make the match, in which case you
+should also be slightly suspicious.
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> cannot tell if the line numbers are off in an </FONT><FONT FACE="Courier New" SIZE="3">ed</FONT><FONT FACE="Times New Roman" SIZE="4"> script, and can only detect wrong line numbers in a normal </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> when it finds a change or delete command. It may have the same problem with a
+context diff using a fuzz factor equal to or greater than the number of lines
+of context shown in the diff (typically 3). In these cases, you should probably
+look at a context diff between your original and patched input files to see if
+the changes make sense. Compiling without errors is a pretty good indication
+that the patch worked, but not a guarantee.
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> usually produces the correct results, even when it must make many guesses.
+However, the results are guaranteed only when the patch is applied to an exact
+copy of the file that the patch was generated from.
+<P>
+</FONT></BODY>
+</HTML>

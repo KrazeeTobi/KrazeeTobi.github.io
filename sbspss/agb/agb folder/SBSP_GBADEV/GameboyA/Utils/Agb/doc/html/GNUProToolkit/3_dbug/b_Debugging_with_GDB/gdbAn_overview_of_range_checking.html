@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>An overview of range checking</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbAn_overview_of_type_checking.html">Previous</A>|<A HREF="gdbSupported_languages.html">Next</A>
+<BR><A NAME="off_1803546"></A><A NAME="011df69c"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>An
+overview of range checking</FONT></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>In some
+languages (such as Modula-2), it is an error to exceed the bounds of a
+type; this is enforced with run-time checks. Such range checking is meant
+to ensure program correctness by making sure computations do not overflow,
+or indices on an array element access do not exceed the bounds of the array.
+For expressions that you use in GDB commands, you can tell GDB to treat
+range errors in one of three ways:</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>ignore them</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>always treat them as errors
+and abandon the expression</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>issue warnings but evaluate
+the expression anyway</FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<FONT SIZE=+1><FONT FACE="Times New Roman">A range error can result from
+numerical overflow, from exceeding an array index bound, or when you type
+a constant that is not a member of any type. Some languages, however, do
+not treat overflows as an error. In many implementations of C, mathematical
+overflow causes the result to “wrap around” to lower values—for instance,
+if </FONT><TT>m</TT><FONT FACE="Times New Roman"> is the largest integer
+value, and </FONT><TT>s</TT><FONT FACE="Times New Roman"> is the smallest,
+then, </FONT></FONT><FONT FACE="Courier New,Courier"><FONT SIZE=+0>m +1
+=> s</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>This, too, is specific to
+individual languages, and in some cases specific to individual compilers
+or machines. See <FONT COLOR="#008000"><A HREF="gdbSupported_languages.html">Supported
+languages</A></FONT> for further details on specific languages.</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB provides the following
+additional commands for controlling the range checker.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>set check range auto</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set range checking on or
+off based on the current working language. See <FONT COLOR="#008000"><A HREF="gdbSupported_languages.html">Supported
+languages</A></FONT> for the default settings for each language.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>set check range on</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>set check range off</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set range checking on or
+off, overriding the default setting for the current working language. A
+warning is issued if the setting does not match the language default. If
+a range error occurs, then a message is printed and evaluation of the expression
+is aborted.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>set check range warn</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Output messages when the
+GDB range checker detects a range error, but attempt to evaluate the expression
+anyway. Evaluating the expression may still be impossible for other reasons,
+such as accessing memory that the process does not own (a typical example
+from many Unix systems).</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>show range</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Show the current setting
+of the range checker, and whether or not it is being set automatically
+by GDB.</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbAn_overview_of_type_checking.html">Previous</A>|<A HREF="gdbSupported_languages.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

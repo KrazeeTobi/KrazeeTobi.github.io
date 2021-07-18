@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Static Pattern Rules versus Implicit Rules</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeSyntax_of_Static_Pattern_Rules.html">Previous</A>|<A HREF="makeDoubleColon_Rules.html">Next</A>
+<BR><A NAME="off_753840"></A><A NAME="3eb21e5c"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Static
+pattern rules versus implicit rules</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>A static
+pattern rule has much in common with an implicit rule defined as a pattern
+rule (see <FONT COLOR="#008000"><A HREF="makeDefining_and_Redefining_Pattern_.html">Defining
+and redefining pattern rules</A></FONT>). Both have a pattern for the target
+and patterns for constructing the names of dependencies. The difference
+is in how </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+decides <I>when</I> the rule applies.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>An implicit rule can apply
+to any target that matches its pattern, but it <I>does</I> apply only when
+the target has no commands otherwise specified, and only when the dependencies
+can be found. If more than one implicit rule appears applicable, only one
+applies; the choice depends on the order of rules.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>By contrast, a static pattern
+rule applies to the precise list of targets that you specify in the rule.
+It cannot apply to any other target and it invariably does apply to each
+of the targets specified. If two conflicting rules apply, and both have
+commands, that’s an error. The static pattern rule can be better than an
+implicit rule for the following reasons.</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You may wish to override the
+usual implicit rule for a few files whose names cannot be categorized syntactically
+but can be given in an explicit list.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If you cannot be sure of the
+precise contents of the directories you are using, you may not be sure
+which other irrelevant files might lead make to use the wrong implicit
+rule. The choice might depend on the order in which the implicit rule search
+is done. With static pattern rules, there is no uncertainty: each rule
+applies to precisely the targets specified.</FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeSyntax_of_Static_Pattern_Rules.html">Previous</A>|<A HREF="makeDoubleColon_Rules.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

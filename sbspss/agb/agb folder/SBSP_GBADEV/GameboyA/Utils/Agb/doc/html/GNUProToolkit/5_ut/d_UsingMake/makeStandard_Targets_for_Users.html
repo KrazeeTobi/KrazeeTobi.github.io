@@ -1,0 +1,288 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Standard Targets for Users</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeUtilities_in_Makefiles.html">Previous</A>|<A HREF="makeVariables_for_Specifying_Command.html">Next</A>
+<BR><A NAME="off_2654208"></A><A NAME="0387ca05"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Standard
+targets for users</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>All
+GNU programs should have the following targets in their Makefiles.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>all</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Compile the entire program.
+This should be the default tar-get. This target need not rebuild any documentation
+files; Info files should normally be included in the distribution, and
+DVI files should be made only when explicitly asked for.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>install</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Compile the program and
+copy the executables, libraries, and so on to the file names where they
+should reside for actual use. If there is a simple test to verify that
+a program is properly installed, this target should run that test.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If possible, write the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>install</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+target rule so that it does not modify anything in the directory where
+the program was built, provided ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make
+all</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ has just
+been done. This is convenient for building the program under one user name
+and installing it under another.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The commands should create
+all the directories in which files are to be installed, if they don’t already
+exist. This includes the directories specified as the values of the variables,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>prefix</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>exec_prefix</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+as well as all sub-directo-ries that are needed. One way to do this is
+by means of an installdirs target as described below.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Use ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>-</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+before any command for installing a man page, so that </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will ignore any errors. This is in case there are systems that don’t have
+the Unix man page documentation system installed.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The way to install </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+files is to copy them into ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\$(infodir)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\$(INSTALL_DATA)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(see <FONT COLOR="#008000"><A HREF="makeVariables_for_Specifying_Command.html">Variables
+for specifying commands</A></FONT>), and then run the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>install-info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+program if it is present. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>install-info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a script that edits the Info ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>dir</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+file to add or update the menu entry for the given </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file; it will be part of the Texinfo package. The following is a sample
+rule to install an Info file:</FONT></FONT></UL>
+</UL>
+
+<UL>
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0><B>$(infodir)/foo.info: foo.info</B></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0># There may be a newer info
+file in . than in srcdir.</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; -if test -f foo.info;
+then d=.; \</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp; else
+d=$(srcdir); fi; \</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; $(INSTALL_DATA)
+$$d/foo.info $@; \</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0># Run install-info only if it
+exists.</FONT></FONT>
+<BR><FONT SIZE=+0><FONT FACE="Courier New"># Use </FONT><FONT FACE="Times New Roman">‘</FONT><FONT FACE="Courier New">if</FONT><FONT FACE="Times New Roman">’</FONT><FONT FACE="Courier New">
+instead of just prepending </FONT><FONT FACE="Times New Roman">‘</FONT><FONT FACE="Courier New">-</FONT><FONT FACE="Times New Roman">’</FONT><FONT FACE="Courier New">
+to the</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0># line so we notice real errors
+from install-info.</FONT></FONT>
+<BR><FONT SIZE=+0><FONT FACE="Courier New"># We use </FONT><FONT FACE="Times New Roman">‘</FONT><FONT FACE="Courier New">$(SHELL)
+-c</FONT><FONT FACE="Times New Roman">’</FONT><FONT FACE="Courier New">
+because some shells do not</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0># fail gracefully when there
+is an unknown command.</FONT></FONT>
+<BR><FONT SIZE=+0><FONT FACE="Courier New">&nbsp;&nbsp; if $(SHELL) -c
+</FONT><FONT FACE="Times New Roman">’</FONT><FONT FACE="Courier New">install-info
+--version</FONT><FONT FACE="Times New Roman">’</FONT><FONT FACE="Courier New">
+\</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp; >/dev/null
+2>&amp;1; then \</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp; install-info
+--infodir=$(infodir) $$d/foo.info; \</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; else true; fi</FONT></FONT></UL>
+</UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>uninstall</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Delete all the installed
+files that the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>install</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+target would create (but not the non-installed files such as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make
+all</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ would create).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This rule should not modify
+the directories where compilation is done, only the directories where files
+are installed.</FONT></FONT></UL>
+</UL>
+&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Delete all files from the
+current directory that are normally created by building the program. Don’t
+delete the files that record the configuration. Also preserve files that
+could be made by building, but normally aren’t because the distribution
+comes with them. Delete ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.dvi</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+files here if they are not part of the distribution.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>distclean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Delete all files from the
+current directory that are created by configuring or building the program.
+If you have unpacked the source and built the program without creating
+any other files, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make
+distclean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ should
+leave only the files that were in the distribution.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mostlyclean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Like ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+but may refrain from deleting a few files that people normally don’t want
+to recompile. For example, the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mostlyclean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+target for GCC does not delete ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+be-cause recompiling it is rarely necessary and takes a lot of time.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>maintainer-clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Delete almost everything
+from the current directory that can be reconstructed with this Makefile.
+This typically includes everything deleted by distclean, plus more: C source
+files produced by Bison, tags tables, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+files, and so on.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The reason we say “almost
+everything” is that ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make
+maintainer-clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+should not delete ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+even if ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+can be remade using a rule in the Makefile. More generally, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make
+maintainer-clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+should not delete anything that needs to exist in order to run ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and then begin to build the program. This is the only exception; </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>maintainer-clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+should delete everything else that can be rebuilt.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>maintainer-clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is intended to be used by a maintainer of the package, not by ordinary
+users. You may need special tools to reconstruct some of the files that
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make maintainer-clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+deletes. Since these files are normally included in the distribution, we
+don’t take care to make them easy to reconstruct. If you find you need
+to unpack the full distribution again, don’t blame us.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To help make users aware
+of this, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>maintainer-clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+should start with the following two commands.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>@echo "This command is intended
+for maintainers \</FONT></FONT>
+<BR><FONT SIZE=+0><FONT FACE="Courier New"><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</B>to use;"</FONT><FONT FACE="Times New Roman"></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>@echo "it deletes files that
+may require special \</FONT></FONT>
+<BR><FONT SIZE=+0><FONT FACE="Courier New"><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</B>tools to rebuild."</FONT><FONT FACE="Times New Roman"></FONT></FONT></UL>
+</UL>
+</UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>TAGS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Update a tags table for
+this program.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate any Info files
+needed. The best way to write the rules is as follows.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>info: foo.info</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>foo.info: foo.texi chap1.texi
+chap2.texi $(MAKEINFO)</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</B>$(srcdir)/foo.texi</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You must define the variable,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MAKEINFO</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+in the Makefile. It should run the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>makeinfo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+program which is part of the Texinfo distribution.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>dvi</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate DVI files for all
+Texinfo documentation. For example:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>dvi: foo.dvi</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>foo.dvi: foo.texi chap1.texi
+chap2.texi $(TEXI2DVI)</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</B>$(srcdir)/foo.texi</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You must define the variable,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>TEXI2DVI</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+in the Makefile. It should run the program, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>texi2dvi</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+which is part of the Texinfo distribution. Alternatively, write just the
+dependencies, and allow GNU </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to provide the command.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>dist</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Create a distribution tar
+file for this program. The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>tar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file should be set up so that the file names in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>tar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file start with a subdirectory name which is the name of the package it
+is a distribution for. This name can include the version number. For example,
+the distribution </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>tar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file of GCC version 1.40 unpacks into a subdirectory named ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gcc-1.40</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The easiest way to do this
+is to create a subdirectory appropriately named, use</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+ln</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to install the proper files in it, and then </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>tar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+that subdirectory. The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>dist</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+target should explicitly depend on all non-source files that are in the
+distribution, to make sure they are up to date in the distribution. See
+section Making Releases” in GNU Coding Standards.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>check</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Perform self-tests (if any).
+The user must build the program before running the tests, but need not
+install the program; you should write the self-tests so that they work
+when the program is built but not installed.</FONT></FONT></UL>
+&nbsp;</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The following targets are suggested
+as conventional names, for programs in which they are useful.</FONT></FONT>
+<UL>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>installcheck</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Perform installation tests
+(if any). The user must build and install the program before running the
+tests. You should not assume that ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\$(bindir)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is in the search path.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>installdirs</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>It’s useful to add a target
+named ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>installdirs</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to create the directories where files are installed, and their parent directories.
+There is a script called ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mkinstalldirs</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+which is convenient for this; find it in the Texinfo package.You can use
+a rule like this:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0># Make sure all installation
+directories</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0># (e.g. $(bindir)) actually
+exist by</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0># making them if necessary.</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>installdirs: mkinstalldirs</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</B>$(srcdir)/mkinstalldirs<B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </B>$(bindir)
+$(datadir) \</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</B>$(libdir) $(infodir) \</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</B>$(mandir)</FONT></FONT>
+<BR>&nbsp;</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This rule should not modify
+the directories where compilation is done. It should do nothing but create
+installation directories.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeUtilities_in_Makefiles.html">Previous</A>|<A HREF="makeVariables_for_Specifying_Command.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

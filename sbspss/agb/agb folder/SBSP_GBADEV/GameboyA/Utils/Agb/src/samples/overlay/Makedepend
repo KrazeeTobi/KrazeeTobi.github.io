@@ -1,0 +1,35 @@
+main.o : main.c overlay.h types.h ../../../include/Agb.h \
+ ../../../include/AgbTypes.h ../../../include/AgbDefine.h \
+ ../../../include/AgbMemoryMap.h ../../../include/AgbMacro.h \
+ ../../../include/AgbSystemCall.h ../../../include/AgbSound.h \
+ ../../../include/AgbMultiBoot.h ../../../include/IsAgbPrint.h sub.h \
+ data.h
+sub.o : sub.c overlay.h types.h ../../../include/Agb.h \
+ ../../../include/AgbTypes.h ../../../include/AgbDefine.h \
+ ../../../include/AgbMemoryMap.h ../../../include/AgbMacro.h \
+ ../../../include/AgbSystemCall.h ../../../include/AgbSound.h \
+ ../../../include/AgbMultiBoot.h ../../../include/IsAgbPrint.h sub.h \
+ data.h
+title.o : title.c overlay.h types.h ../../../include/Agb.h \
+ ../../../include/AgbTypes.h ../../../include/AgbDefine.h \
+ ../../../include/AgbMemoryMap.h ../../../include/AgbMacro.h \
+ ../../../include/AgbSystemCall.h ../../../include/AgbSound.h \
+ ../../../include/AgbMultiBoot.h ../../../include/IsAgbPrint.h sub.h \
+ data.h
+objmove.o : objmove.c overlay.h types.h ../../../include/Agb.h \
+ ../../../include/AgbTypes.h ../../../include/AgbDefine.h \
+ ../../../include/AgbMemoryMap.h ../../../include/AgbMacro.h \
+ ../../../include/AgbSystemCall.h ../../../include/AgbSound.h \
+ ../../../include/AgbMultiBoot.h ../../../include/IsAgbPrint.h sub.h \
+ data.h
+bgmove.o : bgmove.c overlay.h types.h ../../../include/Agb.h \
+ ../../../include/AgbTypes.h ../../../include/AgbDefine.h \
+ ../../../include/AgbMemoryMap.h ../../../include/AgbMacro.h \
+ ../../../include/AgbSystemCall.h ../../../include/AgbSound.h \
+ ../../../include/AgbMultiBoot.h ../../../include/IsAgbPrint.h sub.h \
+ data.h
+data.o : data.c ../../../include/Agb.h ../../../include/AgbTypes.h \
+ ../../../include/AgbDefine.h ../../../include/AgbMemoryMap.h \
+ ../../../include/AgbMacro.h ../../../include/AgbSystemCall.h \
+ ../../../include/AgbSound.h ../../../include/AgbMultiBoot.h \
+ ../../../include/IsAgbPrint.h types.h

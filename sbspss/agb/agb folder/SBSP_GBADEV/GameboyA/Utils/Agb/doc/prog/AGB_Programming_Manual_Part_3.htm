@@ -1,0 +1,596 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!--
+Editors' comments:
+mm/dd/yy  Created by * using w2w 2.0
+mm/dd/yy Edited by * -->
+		<title>Color Special Effects</title>
+	</head>
+
+	<body>
+		<h1><a name="T1"></a>9 Color Special Effects</h1>
+		<p>The AGB provides the following color special effects. The area where these effects are applied can be limited using a window.</p>
+		<p><b>1) <img src="bigalpha.gif"> Blending</b></p>
+		<p>Performs arithmetic operations on 2 selected surfaces and implements processing for 16 levels of semi-transparency.</p>
+		<p><b>2) Fade-in/Fade-out</b></p>
+		<p>Performs arithmetic operations on 1 selected surface and implements processing for 16 levels of brightness.</p>
+		<h2>
+		<h2><b><a name="T2"></a>9.1 Selection of Color Special Effects </b></h2>
+		</h2>
+		<p>The types of color special effects and the target pixels, are determined by the BLDMOD register.</p>
+		<p><img src="Image5.gif" width="570" height="136"></p>
+		<p>Although color special effects are specified by the BLDMOD register, for <b><img src="alpha.gif"></b> blending, which involves processing between surfaces, the 2 target surfaces must have suitable priorities.</p>
+		<p>In addition, semi-transparent OBJs are individually specified in OAM, and color special effects for the OBJ as a whole, are specified in the BLDMOD register. These specifications are summarized in the following table.</p>
+		<p>
+		<table width="618" border="1" cellspacing="0" cellpadding="3">
+			<tr>
+				<td valign="top" colspan="2" bgcolor="white">
+					<center>
+						BLDMOD&nbsp;</center>
+				</td>
+				<td width="19%" valign="top" rowspan="2" bgcolor="white">
+					<center>
+						Type&nbsp;</center>
+				</td>
+				<td width="69%" valign="top" rowspan="2" bgcolor="white">
+					<center>
+						Color Special Effects Processing&nbsp;</center>
+				</td>
+			</tr>
+			<tr>
+				<td width="6%" valign="top" bgcolor="white">d07&nbsp;</td>
+				<td width="6%" valign="top" bgcolor="white">
+					<center>
+						d06&nbsp;</center>
+				</td>
+			</tr>
+			<tr>
+				<td width="6%" valign="top">
+					<center>
+						0&nbsp;</center>
+				</td>
+				<td width="6%" valign="top">
+					<center>
+						0&nbsp;</center>
+				</td>
+				<td width="19%" valign="top">No special effects&nbsp;</td>
+				<td width="69%" valign="top">Normally, color special effects processing is not performed.<br>
+					16-level semi-transparency processing (<b><img src="alpha.gif"></b> blending) is performed only when a semi-transparent OBJ is present and is followed immediately by a 2<sup>nd</sup> target screen.&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="6%" valign="top">
+					<center>
+						0&nbsp;</center>
+				</td>
+				<td width="6%" valign="top">
+					<center>
+						1&nbsp;</center>
+				</td>
+				<td width="19%" valign="top">
+					<center>
+						<b><img src="alpha.gif"></b><font size="1"> </font>blending
+						<p>(Semi-transparency processing)&nbsp;</center>
+				</td>
+				<td width="69%" valign="top">If the 1<sup>st</sup> target screen is followed immediately by a 2<sup>nd</sup> target screen, 16-level semi-transparency processing (<b><img src="alpha.gif"></b> blending) is performed.<br>
+					The bits of the backdrop of the 1<sup>st</sup> target screen should be turned off ([d05]=0).<br>
+					When OBJ = 1 for the 1<sup>st</sup> target pixel, processing is executed for all OBJs regardless of the OBJ type.<br>
+					When OBJ=0, processing is executed only if the OBJ is semi-transparent. &nbsp;</td>
+			</tr>
+			<tr>
+				<td width="6%" valign="top">
+					<center>
+						1&nbsp;</center>
+				</td>
+				<td width="6%" valign="top">
+					<center>
+						0&nbsp;</center>
+				</td>
+				<td width="19%" valign="top">
+					<center>
+						Brightness Increase &nbsp;</center>
+				</td>
+				<td width="69%" valign="top">Gradually increases brightness for 1<sup>st</sup> target screen.<br>
+					The entire screen can gradually be made whiter by setting all bits of the specification for the 1st target screen<sup> </sup>to 1.<br>
+					When OBJ=1 for the 1st target screen, processing for increased brightness is executed only for normal objects.<br>
+					If a semi-transparent OBJ is the 1st target screen, <b><img src="alpha.gif"></b> blending processing is always executed.&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="6%" valign="top">
+					<center>
+						1&nbsp;</center>
+				</td>
+				<td width="6%" valign="top">
+					<center>
+						1&nbsp;</center>
+				</td>
+				<td width="19%" valign="top">
+					<center>
+						Brightness Decrease&nbsp;</center>
+				</td>
+				<td width="69%" valign="top">Brightness is gradually decreased for the 1st target screen.<br>
+					The entire screen can gradually be made blacker by setting all bits of the specification for the 1st target screen<sup> </sup>to 1.<br>
+					When OBJ=1 for the 1st target screen, processing for decreased brightness is performed only for normal objects. If a semi-transparent OBJ is the 1st target screen, <b><img src="alpha.gif"></b> blending processing is always executed.&nbsp;</td>
+			</tr>
+		</table>
+		</p>
+		<h2>
+		<h2>
+		<h2>
+		<h2><b><a name="T3"></a>9.2 Color Special Effects Processing</b></h2>
+		</h2>
+		</h2>
+		</h2>
+		<h3><b><a name="T4"></a>Coefficients for Color Special Effects</b></h3>
+		<p><img src="Image6.gif" width="597" height="204"></p>
+		<p>Coefficients used in <b><img src="alpha.gif"></b> blending processing are specified in EVA and EVB of the COLEV register.</p>
+		<p>The coefficient used in processing brightness changes is specified in EVY of the COLY register.</p>
+		<p>The values of EVA, EVB, and EVY are numbers less than 1 and are obtained by multiplying 1/16 by an integer.</p>
+		<div align="left">
+			<p>
+			<table width="552" border="1" cellspacing="0" cellpadding="3">
+				<tr>
+					<td valign="top" colspan="5" bgcolor="white">
+						<center>
+							EVA, EVB, EVY&nbsp;</center>
+					</td>
+					<td width="11%" valign="top" bgcolor="white">
+						<center>
+							Coeff.&nbsp;</center>
+					</td>
+					<td valign="top" colspan="5" bgcolor="white">
+						<center>
+							EVA, EVB, EVY&nbsp;</center>
+					</td>
+					<td width="11%" valign="top" bgcolor="white">
+						<center>
+							Coeff.&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="11%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="11%" valign="top">
+						<center>
+							8/16&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="11%" valign="top">
+						<center>
+							1/16&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="11%" valign="top">
+						<center>
+							9/16&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="11%" valign="top">
+						<center>
+							2/16&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="11%" valign="top">
+						<center>
+							10/16&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="11%" valign="top">
+						<center>
+							3/16&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="11%" valign="top">
+						<center>
+							11/16&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="11%" valign="top">
+						<center>
+							4/16&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="11%" valign="top">
+						<center>
+							12/16&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="11%" valign="top">
+						<center>
+							5/16&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="11%" valign="top">
+						<center>
+							13/16&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="11%" valign="top">
+						<center>
+							6/16&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="11%" valign="top">
+						<center>
+							14/16&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="11%" valign="top">
+						<center>
+							7/16&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="11%" valign="top">
+						<center>
+							15/16&nbsp;</center>
+					</td>
+				</tr>
+				<tr height="3">
+					<td valign="top" colspan="6" height="3">&nbsp;</td>
+					<td width="8%" valign="top" height="3">
+						<center>
+							1&nbsp;</center>
+					</td>
+					<td width="8%" valign="top" height="3">
+						<center>
+							X&nbsp;</center>
+					</td>
+					<td width="8%" valign="top" height="3">
+						<center>
+							X&nbsp;</center>
+					</td>
+					<td width="8%" valign="top" height="3">
+						<center>
+							X&nbsp;</center>
+					</td>
+					<td width="8%" valign="top" height="3">
+						<center>
+							X&nbsp;</center>
+					</td>
+					<td width="11%" valign="top" height="3">
+						<center>
+							16/16&nbsp;</center>
+					</td>
+				</tr>
+			</table>
+			</p>
+		</div>
+		<p>The color special effects arithmetic expressions that use the coefficients are shown below.</p>
+		<p><b>1. <img src="bigalpha.gif"> Blending (16 levels of semi-transparency) Operations</b></p>
+		<p>Display color (R) = 1st pixel color (R) &times;EVA + 2nd pixel color (R)&times;EVB<br>
+		Display color (G) = 1st pixel color (G) &times;EVA + 2nd pixel color (G) &times;EVB<br>
+		Display color (B) = 1st pixel color (B) &times;EVA + 2nd pixel color (B) &times;EVB</p>
+		<p><b>2. Brightness Increase Operations</b></p>
+		<p>Display color (R) = 1st pixel (R) + (31 - 1st pixel (R) ) &times;EVY<br>
+		Display color (G) = 1st pixel (G) + (63 - 1st pixel (G) ) &times;EVY<br>
+		Display color (B) = 1st pixel (B) + (31 - 1st pixel (B) ) &times;EVY</p>
+		<p><b>3. Brightness Decrease Operations</b></p>
+		<p>Display color (R) = 1st pixel (R) - 1st pixel (R) &times;EVY<br>
+		Display color (G) = 1st pixel (G) - 1st pixel (G) &times;EVY<br>
+		Display color (B) = 1st pixel (B) - 1st pixel (B) &times;EVY
+	</body>
+
+</html>

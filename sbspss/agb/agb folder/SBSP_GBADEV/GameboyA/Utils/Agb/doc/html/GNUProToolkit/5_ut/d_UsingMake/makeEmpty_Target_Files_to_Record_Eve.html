@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Empty Target Files to Record Events</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeRules_without_Commands_or_Depend.html">Previous</A>|<A HREF="makeSpecial_Builtin_Target_Names.html">Next</A>
+<BR><A NAME="off_623110"></A><A NAME="8598363d"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Empty
+target files to record events</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+<I>empty target</I> is a variant of the phony target; it is used to hold
+commands for an action that you request explicitly from time to time. Unlike
+a phony target, this target file can really exist; but the file’s contents
+do not matter, and usually are empty.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The purpose of the empty
+target file is to record, with its last-modification time, when the rule’s
+commands were last executed. It does so because one of the commands is
+a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>touch</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command to update the target file.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The empty target file must
+have some dependencies. When you ask to remake the empty target, the commands
+are executed if any dependency is more recent than the target; in other
+words, if a dependency has changed since the last time you remade the target.
+Use the following as an example.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>print: foo.c bar.c</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+lpr -p $?</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+touch print</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>With this rule, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make
+print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ will execute
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>lpr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command if either source file has changed since the last ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make
+print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’. The automatic
+variable ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>$?</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is used to print only those files that have changed (see <FONT COLOR="#008000"><A HREF="makeAutomatic_Variables.html">Automatic
+variables</A></FONT>).</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeRules_without_Commands_or_Depend.html">Previous</A>|<A HREF="makeSpecial_Builtin_Target_Names.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

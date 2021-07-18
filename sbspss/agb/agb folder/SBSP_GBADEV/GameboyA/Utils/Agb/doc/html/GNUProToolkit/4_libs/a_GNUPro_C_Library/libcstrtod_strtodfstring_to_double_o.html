@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>strtod, strtodf[string to double or float]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.03Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcrand_srandpseudorandom_numbers.html">Previous</A>|<A HREF="libcstrtolstring_to_long.html">Next</A>
+</P>
+
+<P><A NAME="off_393814"></A><A NAME="623ef2c4"></A><A NAME="off_393814"></A><A NAME="623ef2c4"></A><A NAME="off_393814"></A><A NAME="623ef2c4"></A><A NAME="off_393814"></A><A NAME="623ef2c4"></A><A NAME="off_393814"></A><A NAME="623ef2c4"></A><A NAME="off_393814"></A><A NAME="623ef2c4"></A><FONT SIZE=+3><FONT FACE="Courier New">strtod</FONT><FONT FACE="Times New Roman">,
+</FONT><FONT FACE="Courier New">strtodf <BR>
+</FONT><FONT FACE="Times New Roman">[string to double or float] </FONT></FONT></P>
+
+<PRE><B><FONT FACE="Times New Roman"><FONT SIZE=+2>SYNOPSIS 
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+1>#include &lt;stdlib.h&gt; 
+double strtod(const char *<I>str</I>, char **<I>tail</I>); 
+float strtodf(const char *<I>str</I>, char **<I>tail</I>); 
+
+double _strtod_r(void *<I>reent</I>, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const char *<I>str</I>, char **<I>tail</I>);</FONT><FONT SIZE=+0> </FONT></FONT></PRE>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>DESCRIPTION <BR>
+</B>The function </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>strtod</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">parses the character string </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>str</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+producing a sub-string which can be converted to a double value. The substring
+converted is the longest initial subsequence of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>str</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+beginning with the first non-whitespace character, that has the following
+format. </FONT></FONT></P>
+
+<UL>
+<P><FONT FACE="Courier New"><FONT SIZE=+0>[+|-]<I>digits</I>[.][<I>digits</I>][(e|E)[+|-]<I>digits</I>]
+</FONT></FONT></P>
+</UL>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The substring contains no
+characters if </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>str</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is empty, consists entirely of whitespace,
+or if the first non-whitespace character is something other than </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or a digit. If the substring is empty, no conversion is done, and the value
+of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>str</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is stored in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*<I>tail</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Otherwise, the substring is converted, and a pointer to the final string
+(which will contain at least the terminating null character of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>str</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+is stored in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*<I>tail</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If you want no assignment to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*<I>tail</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+pass a null pointer as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>tail</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>strtodf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is identical to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>strtod</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">except for its return type. This implementation
+returns the nearest machine number to the input decimal string. Ties are
+broken by using the IEEE round-even rule. The alternate function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>_strtod_r</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">,</FONT><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is a reentrant version. The extra argument,
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>reent</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Times New Roman">,</FONT><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is a pointer to a reentrancy structure.
+</FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>strtod</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">returns the converted substring value,
+if any. If no conversion could be performed, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is returned. If the correct value is out of the range of representative
+values, plus or minus </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>HUGE_VAL</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is returned, and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ERANGE</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is stored in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If the correct value would cause underflow, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is returned and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ERANGE</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is stored in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>COMPLIANCE <BR>
+</B>Supporting OS subroutines required: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>close</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fstat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>isatty</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>lseek</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>read</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sbrk</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>write</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+</BODY>
+</HTML>

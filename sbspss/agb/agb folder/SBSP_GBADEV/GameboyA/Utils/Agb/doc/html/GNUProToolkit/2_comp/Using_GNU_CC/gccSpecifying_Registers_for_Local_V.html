@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Specifying Registers for Local Variables</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccDefining_Global_Register_Variabl.html">Previous</A>|<A HREF="gccAlternate_Keywords.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_4259840"></A><A NAME="b0144826"></A><B><FONT SIZE=+3>Specifying
+registers for local variables&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>You can define a local register
+variable with a specified register like the following.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>register int *foo asm ("a5");</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Here </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a5</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the name of the register which should be used. This is the same syntax
+used for defining global register variables, but for a local variable it
+would appear within a function.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Naturally the register name
+is CPU-dependent, but this is not a problem, since specific registers are
+most often useful with explicit assembler instructions (see <A HREF="gccAssembler_Instructions_with_C_Ex.html">Assembler
+instructions with C expression operands</A>). Both of these things generally
+require that you conditionalize your program according to CPU type.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In addition, operating systems
+on one type of CPU may differ in how they name the registers; then you
+would need additional conditionals. For example, some 68000 operating systems
+call this register, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%a5</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Eventually there may be a
+way of asking the compiler to choose a register automatically, but first
+we need to figure out how it should choose and how to enable you to guide
+the choice. No solution is evident.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Defining such a register
+variable does not reserve the register; it remains available for other
+uses in places where flow control determines the variable’s value is not
+live. However, these registers are made unavailable for use in the reload
+pass. Don’t be surprised if excessive use of this feature leaves the compiler
+too few available registers to compile certain functions.</FONT></FONT>
+</BODY>
+</HTML>

@@ -1,0 +1,129 @@
+<!DOCTYPE html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<HEAD>
+<!-- Edited by Matt P., 8/10/00-added link to style sheet
+Matt P., 9/29/00, reformatted back to original format per discussion by Tahara/Ron/Raychole-->
+		<link rel="stylesheet" type="text/css" href="style.css">	
+<STYLE TYPE="text/css">
+	<!--
+		H2 { color:black; text-align:center }
+		H5.navy { color:black; margin-bottom:4 }
+		TABLE { border:0; padding:5; margin:1 }
+		TD { color:#303050; background-color:white;}
+	-->
+	</STYLE>
+
+	<TITLE>Calling Sound Functions</TITLE>
+</HEAD>
+
+<BODY TEXT="#303050" BGCOLOR="#CCCCCC">
+
+<br>
+<H2><A NAME="call_0">Calling Sound Functions</A></H2>
+
+
+<HR WIDTH="600" ALIGN="CENTER">
+
+
+<TABLE WIDTH="600" ALIGN="CENTER" SUMMARY="call_tbl_1"><TR><TD>
+<H5 CLASS="navy">(1) Make the following declaration.</H5>
+<PRE STYLE="color:#008080">&nbsp;&nbsp;#include &quot;sound file directory /4aLib.h&quot;
+</PRE>
+</TD></TR></TABLE><BR><br>
+
+
+
+<TABLE WIDTH="600" ALIGN="CENTER" SUMMARY="call_tbl_2" 600"></pre>
+  <TR><TD>
+<H5 CLASS="navy">(2) Run the following with the initialization routine following a reset.</H5><p>Initialize the sound function I/O and set aside the work areas.
+				<pre style="color:#008080">&nbsp;&nbsp; m4aSoundInit();</pre>
+</TD></TR></TABLE><BR>
+
+
+
+
+<TABLE WIDTH="600" ALIGN="CENTER" SUMMARY="call_tbl_3"><TR><TD>
+<H5 CLASS="navy">(3) Call the following function immediately after every V-Blank interrupt.</H5><p>The timing on this is very tight. It would be ideal to call this before any other process.<br>
+				Note that the process itself is extremely short.
+				<pre style="color:#008080">&nbsp;&nbsp; m4aSoundVSync();</pre>
+</TD></TR></TABLE><BR>
+
+
+
+
+<TABLE WIDTH="600" ALIGN="CENTER" SUMMARY="call_tbl_4"><TR><TD>
+<H5 CLASS="navy">(4) Call the following function during every V-Blank period (1/60 of a second).</H5><p>There is no need to be concerned about the timing of this. It can be called after all
+                processsing besides that for other songs, has been completed.
+				<pre style="color:#008080">&nbsp;&nbsp; m4aSoundMain();</pre>
+</TD></TR></TABLE><BR>
+
+
+
+
+<TABLE WIDTH="600" ALIGN="CENTER" SUMMARY="call_tbl_5"><TR><TD>
+<H5 CLASS="navy">(5) To start playing song number n, call the following function.</h5>
+				<pre style="color:#008080">&nbsp;&nbsp; m4aSongNumStart( n );</pre>
+
+</TD></TR></TABLE><BR>
+
+
+
+
+
+<TABLE WIDTH="600" ALIGN="CENTER" SUMMARY="call_tbl_7-5"><TR><TD>
+<H5 CLASS="navy">(6) Functions Other Than Those Above</h5>
+				<p>Please refer to the AGB Music Player <b>Programmer's Manual</b> for more information on functions.&nbsp;&nbsp;        
+				<pre style="color:#008080; line-height:16px">&nbsp;&nbsp; m4aSoundMode();&nbsp;&nbsp;&nbsp; Operation Mode Settings
+
+&nbsp;&nbsp; m4aSoundVSyncOff();&nbsp;&nbsp;&nbsp; Stop Sound DMA
+
+&nbsp;&nbsp; m4aSoundVSyncOn();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Restart Sound DMA
+
+&nbsp;&nbsp; m4aMPlayStart();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Start Playing by Song Name
+
+&nbsp;&nbsp; m4aSongNumStartOrChange();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change/Start Playing by Song#
+
+&nbsp;&nbsp; m4aSongNumStartOrContinue();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Start/Restart Playing by Song#
+
+&nbsp;&nbsp; m4aMPlayStop();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stop (Pause) Song
+
+&nbsp;&nbsp; m4aSongNumStop();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stop (Pause) by Song Number
+
+&nbsp;&nbsp; m4aMPlayAllStop();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stop (Pause) All Songs
+
+&nbsp;&nbsp; m4aMPlayContinue();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Restart Song
+
+&nbsp;&nbsp; m4aSongNumContinue();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Restart by Song Number
+
+&nbsp;&nbsp; m4aMPlayAllContinue();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Restart Play of All Songs
+
+&nbsp;&nbsp; m4aMPlayFadeOut();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fade Out Song
+
+&nbsp;&nbsp; m4aMPlayTempoControl();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Tempo
+
+&nbsp;&nbsp; m4aMPlayVolumeControl();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Volume
+
+&nbsp;&nbsp; m4aMPlayPitchControl();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Scale
+
+&nbsp;&nbsp; m4aMPlayPanpotControl();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Normal Position
+
+&nbsp;&nbsp; m4aMPlayModDepthSet();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Modulation Depth
+
+&nbsp;&nbsp; m4aMPlayLFOSpeedSet();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change Modulation Speed    
+  
+&nbsp;&nbsp; m4aMPlayImmInit();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Immediately Initialize Song Plan to Start Playing</pre>      
+    
+    
+        
+</TD></TR></TABLE><BR>        
+        
+        
+<HR WIDTH="600" ALIGN="CENTER">        
+        
+        
+<TABLE WIDTH="600" ALIGN="CENTER" SUMMARY="link"><TR><TD>        
+<B>Back:</B>[ <A HREF="kumikomi.html">Incorporating Sound Objects into Games</A> ]<BR>        
+<B>TOP :</B>[ <A HREF="../index.html">Table of Contents</A> ]<BR>        
+</TD></TR></TABLE><BR>        
+        
+</BODY>        

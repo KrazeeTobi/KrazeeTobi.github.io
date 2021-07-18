@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>Detailed Description of Normal Format</TITLE>
+</HEAD><BODY>
+<A HREF= "dif.html">Contents</A>|<A HREF= "difindex.html">Index</A>|<A HREF="difShowing_Differences_Without_Cont.html">Previous</A>|<A HREF="difAn_Example_of_Normal_Format.html">Next</A>
+<P>
+<A NAME="off_262265"></A><A NAME="4a7c7879"></A><FONT FACE="Times New Roman" SIZE="6"><B>Detailed Description of Normal Format
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">The normal output format consists of one or more hunks of differences; each
+hunk shows one area where the files differ. Normal format hunks look like the
+following:
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3"><B>change-command 
+<BR>&lt; from-file-line 
+<BR>&lt; from-file-line ...
+<BR>--- 
+<BR>&gt; to-file-line 
+<BR>&gt; to-file-line ...
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">There are three types of change commands. Each consists of a line number or
+comma-separated range of lines in the first file, a single character indicating
+the kind of change to make, and a line number or comma-separated range of lines
+in the second file. All line numbers are the original line numbers in each
+file. The types of change commands are the following.
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3"><I>l</I>a<I>r
+<BR></I></FONT><FONT FACE="Times New Roman" SIZE="4">Add the lines in range </FONT><FONT FACE="Courier New" SIZE="3"><I>r</I></FONT><FONT FACE="Times New Roman" SIZE="4"> of the second file after line </FONT><FONT FACE="Courier New" SIZE="3"><I>l</I></FONT><FONT FACE="Times New Roman" SIZE="4"> of the first file. For example, '</FONT><FONT FACE="Courier New" SIZE="3">8a12,15</FONT><FONT FACE="Times New Roman" SIZE="4">' means append lines 12–15 of file 2 after line 8 of file 1; or, if changing
+file 2 into file 1, delete lines 12–15 of file 2.
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3"><I>f</I>c<I>t
+<BR></I></FONT><FONT FACE="Times New Roman" SIZE="4">Replace the lines in range </FONT><FONT FACE="Courier New" SIZE="3"><I>f </I></FONT><FONT FACE="Times New Roman" SIZE="4">of the first file with lines in range </FONT><FONT FACE="Courier New" SIZE="3"><I>t</I></FONT><FONT FACE="Times New Roman" SIZE="4"> of the second file. This is like a combined add and delete, but more compact.
+For example, '</FONT><FONT FACE="Courier New" SIZE="3">5,7c8,10</FONT><FONT FACE="Times New Roman" SIZE="4">' means change lines 5–7 of file 1 to read as lines 8–10 of file 2; or, if
+changing file 2 into file 1, change lines 8–10 of file 2 to read as lines 5–7 of
+file 1.
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3"><I>r</I>d<I>l
+<BR></I></FONT><FONT FACE="Times New Roman" SIZE="4">Delete the lines in range </FONT><FONT FACE="Courier New" SIZE="3"><I>r</I></FONT><FONT FACE="Times New Roman" SIZE="4"> from the first file; line </FONT><FONT FACE="Courier New" SIZE="3"><I>l </I></FONT><FONT FACE="Times New Roman" SIZE="4">is where they would have appeared in the second file had they not been
+deleted. For example, '</FONT><FONT FACE="Courier New" SIZE="3">5,7d3</FONT><FONT FACE="Times New Roman" SIZE="4">' means delete lines 5–7 of file 1; or, if changing file 2 into file 1, append
+lines 5–7 of file 1 after line 3 of file 2.
+<P>
+</FONT></BODY>
+</HTML>

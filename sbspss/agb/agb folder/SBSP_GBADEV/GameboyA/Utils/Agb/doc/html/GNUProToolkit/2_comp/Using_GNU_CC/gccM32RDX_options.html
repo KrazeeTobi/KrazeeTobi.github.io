@@ -1,0 +1,85 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Frederick Geers">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>M32RDX_options</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccMIPS_Options.html">Previous</a>|<a href="gccD10V_options.html">Next</a>
+<br><font face="Futura Md BT"><font color="#000000"><font size=+3>Mitsubishi
+M32R/D/X options&nbsp;</font></font></font>
+<hr SIZE=6 WIDTH="100%">
+<br><font size=+1>The following ‘<tt>-m</tt>’ options are defined for Mitsubishi
+M32R/D/X architectures.</font>
+<dl>
+<dl>
+<dt>
+<tt><font size=+1>-mcode-model=small</font></tt></dt>
+
+<ul><font size=+1>Assume all objects live in the lower 16MB of memory (so
+that their addresses can be loaded with the ld24 instruction), and assume
+all subroutines are reachable with the <tt>bl</tt> instruction. This is
+the default. The addressability of a particular object can be set with
+the model attribute.</font></ul>
+
+<dt>
+<tt><font size=+1>-mcode-model=medium</font></tt></dt>
+
+<ul><font size=+1>Assume objects may be anywhere in the 32 bit address
+space (the compiler will generate <tt>seth/add3</tt> instructions to load
+their addresses), and assume all subroutines are reachable with the <tt>bl</tt>
+instruction.</font></ul>
+
+<dt>
+<tt><font size=+1>-mcode-model=large</font></tt></dt>
+
+<ul><font size=+1>Assume objects may be anywhere in the 32 bit address
+space (the compiler will generate <tt>seth/add3</tt> instructions to load
+their addresses), and assume subroutines may not be reachable with the
+bl instruction (the compiler will generate the much slower <tt>seth/add3/jl
+</tt>instruction sequence).</font></ul>
+
+<dt>
+<tt><font size=+1>-msdata=none</font></tt></dt>
+
+<ul><font size=+1>Disable use of the small data area. Variables will be
+put into one of ‘<tt>.data</tt>’, ‘<tt>.bss</tt>’, or ‘<tt>.rodata</tt>’
+(unless the <tt>section</tt> attribute has been specified). This is the
+default.The small data area consists of sections, ‘<tt>.sdata</tt>’ and
+‘<tt>.sbss</tt>’. Objects may be explicitly put in the small data area
+with the section attribute using one of these sections.</font></ul>
+
+<dt>
+<tt><font size=+1>-msdata=sdata</font></tt></dt>
+
+<ul><font size=+1>Put small global and static data in the small data area,
+but do not generate special code to reference them.</font></ul>
+
+<dt>
+<tt><font size=+1>-msdata=use</font></tt></dt>
+
+<ul><font size=+1>Put small global and static data in the small data area,
+and generate special instructions to reference them.</font></ul>
+
+<dt>
+<tt><font size=+1>-G <i>num</i></font></tt></dt>
+
+<ul><font size=+1>Put global and static objects less than or equal to <i><tt>num</tt></i>
+bytes into the small data or bss sections instead of the normal data or
+bss sections. The default value of <i><tt>num</tt></i> is 8. The ‘<tt>-msdata</tt>’
+option must be set to one of ‘<tt>sdata</tt>’ or ‘<tt>use</tt>’ for this
+option to have any effect. All modules should be compiled with the same
+‘<tt>-G <i>num</i></tt>’ value. Compiling with different values of <i><tt>num</tt></i>
+may or may not work; if it doesn’t, the linker will give an error message:
+incorrect code will not be generated.</font></ul>
+</dl>
+
+<center>
+<hr SIZE=3 WIDTH="100%">
+<br><a href="#Top">Top</a>|<a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccMIPS_Options.html">Previous</a>|<a href="gccD10V_options.html">Next</a></center>
+</dl>
+
+</body>
+</html>

@@ -1,0 +1,628 @@
+Archive member included       because of file (symbol)
+
+c:\projects\agb\lib/libagbsyscall.a(AgbSysCpuSet.o)
+                              m4aLib.o (CpuSet)
+c:\projects\agb\lib/libagbsyscall.a(AgbSysMidiKey2Freq.o)
+                              C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o (MidiKey2Freq)
+C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_call_via_rX.o)
+                              m4aLib.o (_call_via_r1)
+C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_divsi3.o)
+                              m4aLib.o (__divsi3)
+C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_dvmd_tls.o)
+                              C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_divsi3.o) (__div0)
+C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_udivsi3.o)
+                              C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o (__udivsi3)
+C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_umodsi3.o)
+                              C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o (__umodsi3)
+
+Allocating common symbols
+Common symbol       size              file
+
+c_bit               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+m4a_sound           0xfb0             m4aLib.o
+p_rev               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+p_bit               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+c_mvg               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+AvrLinC             0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+c_mvo               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+w_midibuf           0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+vcount              0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+m4a_mplay000        0x40              SoundDat.o
+ExtMPlyJmpTbl       0x90              m4aLib.o
+Cont                0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+xcmdn               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+MaxLin              0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+c_mch               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+AvrLinT             0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+r_midibuf           0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+Trg                 0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+c_rev               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+sysex               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+m4a_cgbchn          0x100             m4aLib.o
+MaxChnC             0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+c_song              0x10              C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+c_fre               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+KeySpd              0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+p_mch               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+midibuf             0x100             C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+IntrMainBuf         0x800             C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+MaxChn              0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+c_mpr               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+midi_ma             0x40              C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+midi_ta             0x500             C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+runst               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+KeyRep              0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+OamBak              0x400             C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+m4a_memacc_area     0x10              SoundDat.o
+p_song              0x10              C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+p_fre               0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+BgBak               0x800             C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+CurtCurs            0x4               C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\crt0.o
+LOAD m4aLib.o
+LOAD C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+LOAD C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SndMonDat.o
+LOAD SoundDat.o
+LOAD s1.o
+LOAD s2.o
+LOAD s3.o
+LOAD s4.o
+LOAD s5.o
+LOAD s6.o
+LOAD s7.o
+LOAD s8.o
+LOAD s9.o
+LOAD sa.o
+LOAD sb.o
+LOAD sc.o
+LOAD sd.o
+LOAD se.o
+LOAD sf.o
+LOAD sg.o
+LOAD sh.o
+LOAD si.o
+LOAD sj.o
+LOAD sk.o
+LOAD sl.o
+LOAD sm.o
+LOAD sn.o
+LOAD so.o
+LOAD sp.o
+LOAD sq.o
+LOAD sr.o
+LOAD ss.o
+LOAD st.o
+LOAD su.o
+LOAD chp1lvl2.o
+LOAD c:\projects\agb\lib/libagbsyscall.a
+LOAD C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a
+LOAD C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/lib/libg.a
+LOAD C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/lib/libc.a
+LOAD C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a
+Address of section .text set to 0x8000000
+Address of section .bss set to 0x3000000
+                0x00008000                .=0x8000
+
+.interp
+ *(.interp)
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x08000000     0x3b58
+ *(.text)
+ .text          0x08000000      0x1d0 C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\crt0.o
+                0x080001d0                seg_m4aLib_top
+                0x08000000                _start
+                0x080000c0                start_vector
+                0x080000fc                intr_main
+ .text          0x080001d0     0x2104 m4aLib.o
+                0x080014e8                SoundVSyncOff_rev01
+                0x08001358                SampFreqSet_rev01
+                0x080001d0                umul3232H32
+                0x08001110                MPlayExtender
+                0x08001494                SoundClear_rev01
+                0x08002268                ply_xsust
+                0x0800124c                Clear64byte_rev
+                0x08002254                ply_xdeca
+                0x08001234                MusicPlayerJumpTableCopy
+                0x0800222c                ply_xtype
+                0x08001e0c                MPlayVolumeControl
+                0x08001618                MPlayStart_rev01
+                0x08000608                SoundMainBTM
+                0x080022bc                ply_xswee
+                0x08001564                SoundVSyncOn_rev01
+                0x080010b8                m4aMPlayFadeOut
+                0x080015a0                MPlayOpen_rev01
+                0x08000ae0                TrackStop_rev01
+                0x0800108c                m4aMPlayAllContinue
+                0x08002240                ply_xatta
+                0x08001840                MidiKey2CgbFr
+                0x08002290                ply_xiecv
+                0x08001020                m4aSongNumContinue
+                0x08001fe4                MPlayLFOSpeedSet
+                0x08000e48                DummyFunc
+                0x08000e68                MPlayFadeOut
+                0x08000d54                ply_endtie_rev01
+                0x08001080                m4aMPlayContinue
+                0x08001de4                MPlayTempoControl
+                0x0800170c                FadeOutBody_rev01
+                0x080018e8                CgbOscOff
+                0x080021d0                ply_xxx
+                0x08000de4                MidiKey2fr
+                0x08000f14                m4aSoundMain
+                0x080021e4                ply_xwave
+                0x0800178c                TrkVolPitSet_rev01
+                0x08000f20                m4aSongNumStart
+                0x08000dbc                ply_lfos_rev01
+                0x08000e4c                MPlayContinue
+                0x08000dd0                ply_mod_rev01
+                0x08001e74                MPlayPitchControl
+                0x08001f50                MP_clear_modM
+                0x08000880                MPlayMain_rev01
+                0x08000b54                ply_note_rev01
+                0x08001260                SoundInit_rev01
+                0x08000f4c                m4aSongNumStartOrChange
+                0x08001f70                MPlayModDepthSet
+                0x08000f98                m4aSongNumStartOrContinue
+                0x080019a0                CgbSound
+                0x080016cc                MPlayStop_rev01
+                0x080022d0                DummyFunc_rev
+                0x080021b0                ply_xcmd
+                0x080013fc                SoundMode_rev01
+                0x08001ee8                MPlayPanpotControl
+                0x08001238                ClearChain_rev
+                0x08000834                SoundVSync_rev01
+                0x08000e88                m4aSoundInit
+                0x0800229c                ply_xiecl
+                0x080022a8                ply_xleng
+                0x080010c8                m4aMPlayImmInit
+                0x08002058                ply_memacc
+                0x080001e0                SoundMain
+                0x08000264                SoundMainRAM
+                0x08001054                m4aMPlayAllStop
+                0x08001938                CgbModVol
+                0x08000608                Clear64byte
+                0x08000fec                m4aSongNumStop
+                0x08000670                MPlyJmpTblCopy
+                0x0800227c                ply_xrele
+ .text          0x080022d4     0x1670 C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+                0x080029cc                IntrDummy
+                0x08002f80                ModeWrite
+                0x080029b8                VBlankIntr
+                0x08002c5c                ValueWrite
+                0x080032e0                MidiInputMain
+                0x080022d4                seg_m4aLib_end
+                0x080032c8                unReadMidi
+                0x08002954                KeyRead
+                0x08003038                MidiWrite
+                0x08003230                MidiInIntr
+                0x08002d80                SongWrite
+                0x08003908                MidiAllStop
+                0x080029d0                ValueChange
+                0x080022d8                _MPlayFadeOut
+                0x08002c34                StrWrite
+                0x080031fc                MidiPortInit
+                0x080030dc                MidiInputInit
+                0x08002cf0                ValueWriteHex
+                0x08003290                ReadMidi
+                0x080022dc                AgbMain
+ .text          0x08003944        0x4 c:\projects\agb\lib/libagbsyscall.a(AgbSysCpuSet.o)
+                0x08003944                CpuSet
+ .text          0x08003948        0x4 c:\projects\agb\lib/libagbsyscall.a(AgbSysMidiKey2Freq.o)
+                0x08003948                MidiKey2Freq
+ .text          0x0800394c       0x3c C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_call_via_rX.o)
+                0x08003954                _call_via_r2
+                0x08003964                _call_via_r6
+                0x08003960                _call_via_r5
+                0x08003958                _call_via_r3
+                0x08003978                _call_via_fp
+                0x0800396c                _call_via_r8
+                0x08003968                _call_via_r7
+                0x0800394c                _call_via_r0
+                0x08003974                _call_via_sl
+                0x08003980                _call_via_sp
+                0x08003970                _call_via_r9
+                0x0800395c                _call_via_r4
+                0x08003950                _call_via_r1
+                0x0800397c                _call_via_ip
+                0x08003984                _call_via_lr
+ .text          0x08003988       0x94 C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_divsi3.o)
+                0x08003988                __divsi3
+ .text          0x08003a1c        0x4 C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_dvmd_tls.o)
+                0x08003a1c                __div0
+ .text          0x08003a20       0x78 C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_udivsi3.o)
+                0x08003a20                __udivsi3
+ .text          0x08003a98       0xc0 C:\Program files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_umodsi3.o)
+                0x08003a98                __umodsi3
+ *(.text.*)
+ *(.stub)
+ *(.gnu.warning)
+ *(.gnu.linkonce.t*)
+ *(.glue_7t)
+ *(.glue_7)
+                0x08003b58                _etext=.
+                0x08003b58                PROVIDE (etext, .)
+
+.fini
+ *(.fini)
+
+.rodata         0x08003b58    0x12c8c
+ *(.rodata)
+ .rodata        0x08003b58        0x4 C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\crt0.o
+                0x08003b5c                seg_m4aLib_rodata_top
+ .rodata        0x08003b5c      0x2d8 m4aLib.o
+                0x08003ca0                FreqTable
+                0x08003d6c                CgbFrTable
+                0x08003b5c                MPlyJmpTbl
+                0x08003dc0                Cgb3vol
+                0x08003bec                ScaleTable
+                0x08003e04                xcmd_tbl
+                0x08003dd0                clock_tbl_rev01
+                0x08003ce8                CgbScTable
+                0x08003d84                NoiseTable
+                0x08003cd0                pcmVBtbl_rev
+ .rodata        0x08003e34     0x13c0 C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+                0x08005188                IntrTable
+                0x08004380                OamData_Sample
+                0x08003e34                seg_m4aLib_rodata_end
+                0x08003e50                CurP
+                0x08004388                PlttData_Sample
+                0x08003e36                FreTbl
+                0x08004588                CharData_Sample
+                0x08003e80                BgScData_Sample
+ .rodata        0x080051f4        0x8 C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SndMonDat.o
+                0x080051f8                app_vgrp_table
+                0x080051fc                seg_rodata_top
+                0x080051f4                app_song_table
+ .rodata        0x080051fc      0x180 SoundDat.o
+                0x080051fc                voicegroup000
+                0x08005364                mplay_table
+                0x08005370                song_table
+ .rodata        0x0800537c      0x954 s1.o
+                0x0800537c                s1
+ .rodata        0x08005cd0     0x1be4 s2.o
+                0x08005cd0                s2
+ .rodata        0x080078b4      0x954 s3.o
+                0x080078b4                s3
+ .rodata        0x08008208      0xa70 s4.o
+                0x08008208                s4
+ .rodata        0x08008c78      0x2b4 s5.o
+                0x08008c78                s5
+ .rodata        0x08008f2c      0x378 s6.o
+                0x08008f2c                s6
+ .rodata        0x080092a4      0xd04 s7.o
+                0x080092a4                s7
+ .rodata        0x08009fa8     0x1258 s8.o
+                0x08009fa8                s8
+ .rodata        0x0800b200      0x758 s9.o
+                0x0800b200                s9
+ .rodata        0x0800b958      0x958 sa.o
+                0x0800b958                sa
+ .rodata        0x0800c2b0      0x548 sb.o
+                0x0800c2b0                sb
+ .rodata        0x0800c7f8      0x928 sc.o
+                0x0800c7f8                sc
+ .rodata        0x0800d120      0xa54 sd.o
+                0x0800d120                sd
+ .rodata        0x0800db74      0x694 se.o
+                0x0800db74                se
+ .rodata        0x0800e208      0x760 sf.o
+                0x0800e208                sf
+ .rodata        0x0800e968      0x2a8 sg.o
+                0x0800e968                sg
+ .rodata        0x0800ec10      0x6d0 sh.o
+                0x0800ec10                sh
+ .rodata        0x0800f2e0       0x30 si.o
+                0x0800f2e0                si
+ .rodata        0x0800f310      0x62c sj.o
+                0x0800f310                sj
+ .rodata        0x0800f93c      0x714 sk.o
+                0x0800f93c                sk
+ .rodata        0x08010050      0x9e4 sl.o
+                0x08010050                sl
+ .rodata        0x08010a34      0xce0 sm.o
+                0x08010a34                sm
+ .rodata        0x08011714      0x6a0 sn.o
+                0x08011714                sn
+ .rodata        0x08011db4     0x1320 so.o
+                0x08011db4                so
+ .rodata        0x080130d4      0x534 sp.o
+                0x080130d4                sp
+ .rodata        0x08013608      0x5c0 sq.o
+                0x08013608                sq
+ .rodata        0x08013bc8      0x280 sr.o
+                0x08013bc8                sr
+ .rodata        0x08013e48      0x388 ss.o
+                0x08013e48                ss
+ .rodata        0x080141d0      0x48c st.o
+                0x080141d0                st
+ .rodata        0x0801465c      0x460 su.o
+                0x0801465c                su
+ .rodata        0x08014abc     0x1d24 chp1lvl2.o
+                0x080167c8                chp1lvl2
+ *(.rodata.*)
+ .rodata.end    0x080167e0        0x4 C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SndMonDat.o
+                0x080167e0                seg_rodata_end
+ *(.gnu.linkonce.r*)
+
+.rodata1
+ *(.rodata1)
+                0x080168e4                .=(ALIGN(0x100)+(.&0xff))
+
+.data           0x080168e4        0x0
+ *(.data)
+ *(.data.*)
+ *(.gnu.linkonce.d*)
+
+.data1
+ *(.data1)
+
+.ctors
+ EXCLUDE_FILE ( *crtend.o )*(.ctors)
+ *(SORT(.ctors.*))
+ *crtend(.ctors)
+
+.dtors
+ EXCLUDE_FILE ( *crtend.o )*(.dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+
+.got
+ *(.got.plt)
+ *(.got)
+
+.dynamic
+ *(.dynamic)
+
+.sdata
+ *(.sdata)
+ *(.sdata.*)
+                0x080168e4                _edata=.
+                0x080168e4                PROVIDE (edata, .)
+                0x080168e4                __bss_start=.
+                0x080168e4                __bss_start__=.
+
+.sbss
+ *(.sbss)
+ *(.scommon)
+
+.bss            0x03000000     0x3310
+ *(.dynbss)
+ *(.bss)
+ .bss           0x03000000      0x280 SoundDat.o
+ *(.bss.*)
+ .bss.code      0x03000280      0x400 m4aLib.o
+                0x03000280                SoundMainBuf
+ *(COMMON)
+ COMMON         0x03000680     0x1140 m4aLib.o
+                                  0x0 (size before relaxing)
+                0x03000680                m4a_sound
+                0x03001630                ExtMPlyJmpTbl
+                0x030016c0                m4a_cgbchn
+ COMMON         0x030017c0     0x1af4 C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.o
+                                  0x0 (size before relaxing)
+                0x030017c0                c_bit
+                0x030017c4                p_rev
+                0x030017c8                p_bit
+                0x030017cc                c_mvg
+                0x030017d0                AvrLinC
+                0x030017d4                c_mvo
+                0x030017d8                w_midibuf
+                0x030017dc                vcount
+                0x030017e0                Cont
+                0x030017e4                xcmdn
+                0x030017e8                MaxLin
+                0x030017ec                c_mch
+                0x030017f0                AvrLinT
+                0x030017f4                r_midibuf
+                0x030017f8                Trg
+                0x030017fc                c_rev
+                0x03001800                sysex
+                0x03001804                MaxChnC
+                0x03001810                c_song
+                0x03001820                c_fre
+                0x03001824                KeySpd
+                0x03001828                p_mch
+                0x03001830                midibuf
+                0x03001930                IntrMainBuf
+                0x03002130                MaxChn
+                0x03002134                c_mpr
+                0x03002140                midi_ma
+                0x03002180                midi_ta
+                0x03002680                runst
+                0x03002684                KeyRep
+                0x03002690                OamBak
+                0x03002a90                p_song
+                0x03002aa0                p_fre
+                0x03002ab0                BgBak
+                0x030032b0                CurtCurs
+ *fill*         0x030032b4        0xc
+ COMMON         0x030032c0       0x50 SoundDat.o
+                                  0x0 (size before relaxing)
+                0x030032c0                m4a_mplay000
+                0x03003300                m4a_memacc_area
+                0x03003310                .=ALIGN(0x4)
+                0x03003310                .=ALIGN(0x4)
+                0x03003310                _end=.
+                0x03003310                _bss_end__=.
+                0x03003310                __bss_end__=.
+                0x03003310                PROVIDE (end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.stack          0x00080000        0x0
+                0x00080000                _stack=.
+ *(.stack)
+OUTPUT(C:\Projects\AGB\Projects\spongebobsquarepants\mks4agbSystem\SoundMon.elf elf32-littlearm)

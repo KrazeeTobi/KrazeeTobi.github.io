@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Choosing modes</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbChoosing_files.html">Previous</A>|<A HREF="gdbQuitting_GDB.html">Next</A>
+<BR><A NAME="off_362884"></A><A NAME="b0a282c7"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Choosing
+modes&nbsp;</FONT></FONT></FONT></B>
+<HR SIZE=3 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>You can run GDB in various
+alternative modes—for example, in batch mode or quiet mode.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>-nx</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-n</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Do not execute commands
+from any initialization files (normally called ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.gdbinit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’).
+Normally, the commands in these files are executed after all the command
+options and arguments have been processed. See <FONT COLOR="#008000"><A HREF="gdbCommand_files.html">Command
+files</A></FONT>.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-quiet</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-q</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Quiet</I>. Do not print
+the introductory and copyright messages. These messages are also suppressed
+in batch mode.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-batch</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Run in batch mode. Exit
+with status </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+after processing all the command files specified with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+(and all commands from initialization files, if not inhibited with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-n</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’).
+Exit with nonzero status if an error occurs in executing the GDB commands
+in the command files.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Batch mode may be useful
+for running GDB as a filter, for example to download and run a program
+on another computer; in order to make this more useful, the following message
+does not issue when running in batch mode (ordinarily, the message issues
+whenever a program running under GDB control terminates).</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL>
+<UL><B><FONT FACE="Courier New"><FONT SIZE=+0>Program exited normally.</FONT></FONT></B></UL>
+</UL>
+</UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-cd <I>directory</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Run GDB using directory
+as its working directory, instead of the current directory.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-fullname</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>GNU Emacs sets this option
+when it runs GDB as a subprocess. It tells GDB to output the full file
+name and line number in a standard, recognizable fashion each time a stack
+frame is displayed (which includes each time your program stops). This
+recognizable format looks like two ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\032</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+characters, followed by the file name, line number and character position
+separated by colons, and a newline. The Emacs-to-GDB interface program
+uses the two ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\032</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+characters as a signal to display the source code for the frame.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-b <I>bps</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set the line speed (baud
+rate or bits per second) of any serial interface used by GDB for remote
+debugging.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-tty</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>device</FONT></FONT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Run using </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>device</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for your program’s standard input and output.</FONT></FONT></UL>
+</UL>
+
+</BODY>
+</HTML>

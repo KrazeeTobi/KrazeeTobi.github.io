@@ -1,0 +1,168 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Checking the state of a stream</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioShared_properties_class_ios.html">Previous</A>|<A HREF="libioChoices_in_formatting.html">Next</A>
+<BR><A NAME="off_100653"></A><A NAME="6a8808c9"></A><A NAME="off_100653"></A><A NAME="6a8808c9"></A><A NAME="off_100653"></A><A NAME="6a8808c9"></A><A NAME="off_100653"></A><A NAME="6a8808c9"></A><A NAME="off_100653"></A><A NAME="6a8808c9"></A><A NAME="off_100653"></A><A NAME="6a8808c9"></A><A NAME="off_100653"></A><A NAME="6a8808c9"></A><A NAME="off_100653"></A><A NAME="6a8808c9"></A><A NAME="off_100653"></A><A NAME="6a8808c9"></A><A NAME="off_100653"></A><A NAME="6a8808c9"></A><A NAME="off_100653"></A><A NAME="6a8808c9"></A><A NAME="off_100653"></A><A NAME="6a8808c9"></A><A NAME="off_100653"></A><A NAME="6a8808c9"></A><A NAME="off_100653"></A><A NAME="6a8808c9"></A><A NAME="off_100653"></A><A NAME="6a8808c9"></A><A NAME="off_100653"></A><A NAME="6a8808c9"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Checking
+the state of a stream</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Use
+this collection of methods to test for (or signal) errors and other exceptional
+conditions of streams:</FONT></FONT>
+<UL>
+<UL><B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><FONT SIZE=+1><B><FONT FACE="Times New Roman">ios::operator </FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">void*
+()</FONT></FONT><FONT FACE="Courier"> </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">const&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>You can do a quick check
+on the state of the most recent operation on a stream by examining a pointer
+to the stream itself. The pointer is arbitrary except for its truth value;
+it is true if no failures have occurred (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::fail</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is not true). For instance, you might
+ask for input on </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cin</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">only if all prior output operations
+succeeded, as in the following example.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<UL>
+<UL>
+<UL>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>if (cout)&nbsp;
+{&nbsp;
+&nbsp;&nbsp; // Everything OK so far&nbsp;
+&nbsp;&nbsp; cin >> new_value;&nbsp;
+&nbsp;&nbsp; ...&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+</UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><FONT SIZE=+1><B><FONT FACE="Times New Roman">ios::operator</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">
+! () const&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>In case it is more convenient
+to check whether something has failed, the operator, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>!</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">,</FONT><FONT FACE="Arial">
+</FONT><FONT FACE="Times New Roman">returns true if </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::fail</FONT></FONT><FONT SIZE=+1><FONT FACE="Arial">
+</FONT><FONT FACE="Times New Roman">is true (an operation has failed).
+For example, you might issue an error message if input failed, as in the
+following example.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>if (!cin)&nbsp;
+{&nbsp;
+&nbsp;&nbsp; // Oops&nbsp;
+&nbsp;&nbsp; cerr &lt;&lt; "Eh?\n";&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+</UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">iostate</FONT></FONT><FONT FACE="Times New Roman">
+<B>ios::rdstate</B> </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">()const&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL TYPE=SQUARE><FONT FACE="Times New Roman"><FONT SIZE=+1>Return the state
+flags for this stream. The value is from the enumeration </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>iostate</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+You can test for any combination of the following flags.</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::goodbit</FONT></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>There are no indications
+of exceptional states on this stream.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::eofbit</FONT></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>End of file.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::failbit</FONT></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>An operation has failed
+on this stream; this usually indicates bad format of input.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::badbit</FONT></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The stream is unusable.</FONT></FONT></UL>
+</UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">void</FONT></FONT><FONT FACE="Times New Roman">
+<B>ios::setstate </B></FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(iostate
+<I>state</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set the state flag for this
+stream to </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>state</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in addition to any state flags already set. Synonym (for upward compatibility):
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::set</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>See </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::clear</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to set the stream state without regard to existing state flags. See </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::good</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::eof</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::fail</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::bad</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to test the state.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int </FONT></FONT><FONT FACE="Times New Roman"><B>ios::good</B>
+</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">()const&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Test the state flags associated
+with this stream; true if no error indicators are set.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int </FONT></FONT><B><FONT FACE="Times New Roman">ios::bad
+</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">()const&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Test whether a stream is
+marked as unusable. (Whether </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::badbit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is set.)</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int </FONT></FONT><B><FONT FACE="Times New Roman">ios::eof</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">
+()const&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>True if end of file was
+reached on this stream. (If </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::eofbit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is set.)</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int </FONT></FONT><B><FONT FACE="Times New Roman">ios::fail</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">
+()const&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Test for any kind of failure
+on this stream: either some operation failed, or the stream is marked as
+bad. (If either </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::failbit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::badbit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is set.)</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">void </FONT></FONT><FONT FACE="Times New Roman"><B>ios::clear</B>
+</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(iostate <I>state</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set the state indication
+for this stream to the argument </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>state</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+You may call </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::clear</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with no argument, in which case the state is set to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>good</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(no errors pending).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>See </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::good</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::eof</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::fail</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::bad</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to test the state; see </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::set</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::setstate</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for an alternative way of setting the state.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioShared_properties_class_ios.html">Previous</A>|<A HREF="libioChoices_in_formatting.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

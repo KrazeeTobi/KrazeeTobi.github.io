@@ -1,0 +1,20 @@
+OPTIONS_CC = -c -Wall -ansic -cpu ARM7TDMI -fpu none -Otime -apcs /narrow/noswst
+OPTIONS_ASM = -CPU ARM7TDMI -Littleend
+
+LIB = #/q/arm250/lib/armlib_cn.32l
+
+CC = armcc
+ASM = armasm
+LINK = armlink
+
+OBJS = start.o test.o
+
+test:           $(OBJS)
+        $(LINK) -bin -first start.o $(OBJS) -ro-base 0x08000000 -rw-base 0x0300000 -nodebug -l $(LIB) -o ray.bin
+
+start.o:        start.asm
+        $(ASM) $(OPTIONS_ASM) start.asm
+
+test.o:         test.c
+        $(CC) $(OPTIONS_CC) test.c -o test.o
+

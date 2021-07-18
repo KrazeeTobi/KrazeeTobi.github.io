@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Simple output re-direction by redefining overflow</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioAreas_of_a_streambuf.html">Previous</A>|<A HREF="libioCstyle_formatting_for_streambuf_.html">Next</A>
+<BR><A NAME="off_559063"></A><A NAME="1e4a39db"></A><A NAME="off_559063"></A><A NAME="1e4a39db"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Simple
+output re-direction by redefining overflow</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Suppose
+you have a function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>write_to_window</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+that writes characters to a window object. If you want to use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function to write to it, what follows is one (portable) way to do it. This
+depends on the default buffering (if any).</FONT></FONT>
+<UL>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#include &lt;iostream.h>&nbsp;
+/* Returns number of characters successfully written to win.*/&nbsp;
+extern int write_to_window (window* win, char* text, int length);&nbsp;
+
+class windowbuf : public streambuf {&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; window* win;&nbsp;
+&nbsp;&nbsp; public:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; windowbuf (window* w) { win = w; }&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int sync ();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int overflow (int ch);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Defining xsputn is an optional optimization.&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // (streamsize was recently added to ANSI C++, not portable yet.)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; streamsize xsputn (char* text, streamsize n);&nbsp;
+};&nbsp;
+
+int windowbuf::sync ()&nbsp;
+{ streamsize n = pptr () - pbase ();&nbsp;
+&nbsp; return (n &amp;&amp; write_to_window (win, pbase (), n) != n) ? EOF : 0;&nbsp;
+}&nbsp;
+int windowbuf::overflow (int ch)&nbsp;
+{ streamsize n = pptr () - pbase ();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (n &amp;&amp; sync ())&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return EOF;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (ch != EOF)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char cbuf[1];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cbuf[0] = ch;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (write_to_window (win, cbuf, 1) != 1)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return EOF;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pbump (-n); // Reset pptr().&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0;&nbsp;
+}&nbsp;
+streamsize windowbuf::xsputn (char* text, streamsize n)&nbsp;
+{ return sync () == EOF ? 0 : write_to_window (win, text, n); }&nbsp;
+
+int&nbsp;
+main (int argc, char**argv)&nbsp;
+{&nbsp;
+&nbsp;&nbsp; window *win = ...;&nbsp;
+&nbsp;&nbsp; windowbuf wbuf(win);&nbsp;
+&nbsp;&nbsp; ostream wstr(&amp;wbuf);&nbsp;
+&nbsp;&nbsp; wstr &lt;&lt; "Hello world!\n";&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioAreas_of_a_streambuf.html">Previous</A>|<A HREF="libioCstyle_formatting_for_streambuf_.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

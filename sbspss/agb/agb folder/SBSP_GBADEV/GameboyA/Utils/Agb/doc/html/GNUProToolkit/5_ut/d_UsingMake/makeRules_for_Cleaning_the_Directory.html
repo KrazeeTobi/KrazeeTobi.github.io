@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Rules for Cleaning the Directory</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeAnother_Style_of_Makefile.html">Previous</A>|<A HREF="makeWriting_Makefiles.html">Next</A>
+<BR><A NAME="off_231764"></A><A NAME="1ec12b5b"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Rules
+for cleaning the directory</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Compiling
+a program is not the only thing for which you might want to write rules.
+Makefiles commonly tells how to do a few other things besides compiling
+a program; for instance, how to delete all the object files and executables
+so that the directory is ‘clean’. The following shows how to write a </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+rule for cleaning the example editor.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>clean:</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+rm edit $(objects)</FONT></FONT>
+<BR>&nbsp;</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In practice, you might want
+to write the rule in a somewhat more complicated manner to handle unanticipated
+situations. Use input like the following example.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>.PHONY : clean</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>clean :</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-rm edit $(objects)</FONT></FONT>
+<BR>&nbsp;</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This prevents </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+from using an actual file called ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>clean</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+allowing it to continue in spite of errors from </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>rm</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+(See <FONT COLOR="#008000"><A HREF="makePhony_Targets.html">Phony targets</A></FONT>
+and in <FONT COLOR="#008000"><A HREF="makeErrors_in_Commands.html">Errors
+in commands</A></FONT>.) A rule such as this should not be placed at the
+beginning of the makefile, since you do not want it to run by default!
+Thus, in the example makefile, you want the rule for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>edit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+which recompiles the editor, to remain the default goal. Since </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is not a dependency of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>edit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+this rule will not run at all if we give the command ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+with no arguments. In order to make the rule run, use ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make
+clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’. See <FONT COLOR="#008000"><A HREF="makeHow_to_Run_make.html">How
+to run </A></FONT></FONT></FONT><B><FONT FACE="Courier New"><FONT COLOR="#008000"><FONT SIZE=+0><A HREF="makeHow_to_Run_make.html">make</A></FONT></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeAnother_Style_of_Makefile.html">Previous</A>|<A HREF="makeWriting_Makefiles.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

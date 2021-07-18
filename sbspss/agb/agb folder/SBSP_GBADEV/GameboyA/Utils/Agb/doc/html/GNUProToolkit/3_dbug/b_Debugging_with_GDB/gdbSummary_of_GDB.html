@@ -1,0 +1,149 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Summary of GDB</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbGDB_as_free_software.html">Next</a>
+<br><a NAME="off_66122"></a><a NAME="24bb512e"></a><b><font face="Futura Md BT"><font color="#000000"><font size=+3>Summary
+of GDB&nbsp;</font></font></font></b>
+<hr SIZE=6 WIDTH="100%">
+<br><font face="Times New Roman"><font size=+1>The purpose of a debugger
+such as the GNU debugger, GDB, is to allow you to see what is going on
+<i>inside</i> another program while it executes—or what another program
+was doing at the moment it stopped. GDB can do four main kinds of things
+to help you catch such problematic things that are called “bugs.”</font></font>
+<ul TYPE=SQUARE>
+<li>
+<font face="Times New Roman"><font size=+1>Start your program, specifying
+anything that might affect its behavior.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>Make your program stop on specified
+conditions.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>Examine what has happened, when
+your program has stopped.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>Change things in your program,
+so you can experiment with correcting the effects of one bug and go on
+to learn about another problem affecting your program.</font></font></li>
+</ul>
+<font face="Times New Roman"><font size=+1>You can use GDB to debug programs
+written in&nbsp; <font color="#008000"><a href="gdbC_and_C.html">C and
+C++</a></font>.</font></font>
+<p><font face="Times New Roman"><font size=+1>Support for Modula-2 and
+Chill is partial. For information on Modula-2, see <font color="#008000"><a href="gdbModula2.html">Modula-2</a></font>.
+There is no further documentation on Chill yet.</font></font>
+<p><font face="Times New Roman"><font size=+1>Debugging Pascal, a program
+which use sets, subranges, file variables, or nested functions, does not
+currently work. GDB does not support entering expressions, printing values,
+or similar features using Pascal syntax.</font></font>
+<p><font face="Times New Roman"><font size=+1>GDB can be used to debug
+programs written in Fortran, although it does not yet support entering
+expressions, printing values, or similar features using Fortran syntax.
+It may be necessary to refer to some variables with a trailing underscore.</font></font>
+<p><font face="Times New Roman"><font size=+1>For some specific discussion
+on GDB, see the following documentation.</font></font>
+<ul TYPE=SQUARE>
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbGDB_as_free_software.html">GDB
+as free software</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbContributors_to_GDB.html">Contributors
+to GDB</a></font></font></font></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbInstalling_GDB.html">Installing
+GDB</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbControlling_GDB.html">Controlling
+GDB</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbGetting_In_and_Out_of_GDB.html">Getting
+In and Out of GDB</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbGDB_Commands.html">GDB
+Commands</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbRunning_Programs_Under_GDB.html">Running
+Programs Under GDB</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbStopping_and_Continuing.html">Stopping
+and Continuing</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbExamining_the_Stack.html">Examining
+the Stack</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbExamining_Source_Files.html">Examining
+Source Files</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbExamining_Data.html">Examining
+Data</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbUsing_GDB_with_Different_Languag.html">Using
+GDB with Different Languages</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbExamining_the_Symbol_Table.html">Examining
+the Symbol Table</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbAltering_Execution.html">Altering
+Execution</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbGDB_Files.html">GDB
+Files</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbSpecifying_a_Debugging_Target.html">Specifying
+a Debugging Target</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbCanned_Sequences_of_Commands.html">Canned
+Sequences of Commands</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbUsing_GDB_under_gnu_Emacs.html">Using
+GDB under GNU Emacs</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbReporting_Bugs_in_GDB.html">Reporting
+Bugs in GDB</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbCommand_Line_Editing.html">Command
+Line Editing</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbUsing_History_Interactively.html">Using
+History Interactively</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gdbFormatting_Documentation.html">Formatting
+Documentation</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font size=+1><a href="gdbindex.html">Index</a></font></font></b></li>
+</ul>
+
+<hr SIZE=3 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbGDB_as_free_software.html">Next</a></center>
+
+</body>
+</html>

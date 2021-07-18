@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>What Name to Give Your Makefile</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeWhat_Makefiles_Contain.html">Previous</A>|<A HREF="makeIncluding_Other_Makefiles.html">Next</A>
+<BR><A NAME="off_294912"></A><A NAME="b0f19371"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>What
+name to give your makefile</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>By default,
+when </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+looks for the makefile, it tries the following names, in order: ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>GNUmakefile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>makefile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makefile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Normally you should call
+your makefile either ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>makefile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makefile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+(We recommend ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makefile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+because it appears prominently near the beginning of a directory listing,
+right near other important files such as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>README</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.)
+The first name checked, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>GNUmakefile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+is not recommended for most makefiles. You should use this name if you
+have a makefile that is specific to GNU </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and will not be understood by other versions of make. Other </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+programs look for ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>makefile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makefile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+but not ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>GNUmakefile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+finds none of these names, it does not use any makefile. Then you must
+specify a goal with a command argument, and </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will attempt to figure out how to remake it using only its built-in implicit
+rules. See <FONT COLOR="#008000"><A HREF="makeUsing_Implicit_Rules.html">Using
+implicit rules</A></FONT>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you want to use a non-standard
+name for your makefile, you can specify the makefile name with the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>name</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--file=<I>name</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+arguments tell </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to read the file, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>name</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+as the makefile. If you use more than one ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option, you can specify several makefiles.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>All the makefiles are effectively
+concatenated in the order specified.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The default makefile names,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>GNUmakefile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>makefile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makefile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+are not checked automatically if you specify ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeWhat_Makefiles_Contain.html">Previous</A>|<A HREF="makeIncluding_Other_Makefiles.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Controlling Names Used in Assembler Code</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccConstraints_for_Particular_Machi.html">Previous</A>|<A HREF="gccVariables_in_Specified_Registers.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_4194848"></A><A NAME="7dac9e2f"></A><B><FONT SIZE=+3>Controlling
+names used in assembler code&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>You can specify the name
+to be used in the assembler code for a C function or variable by writing
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__asm__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+keyword after the declarator as follows:</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>int foo asm ("myfoo") = 2;</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This specifies that the name
+to be used for the variable </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in the assembler code should be </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>myfoo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+rather than the usual </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>_foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>On systems where an underscore
+is normally prepended to the name of a C function or variable, this feature
+allows you to define names for the linker that do not start with an underscore.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You cannot use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in this way in a function definition; but you can get the same effect by
+writing a declaration for the function before its definition and putting
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+there, like the following example's declaration shows.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>extern func () asm ("FUNC");&nbsp;
+
+func (x, y)&nbsp;
+int x, y;&nbsp;
+...</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>It is up to you to make sure
+that the assembler names you choose do not conflict with any other assembler
+symbols. Also, you must not use a register name; that would produce completely
+invalid assembler code. GNU CC does not as yet have the ability to store
+static variables in registers.</FONT></FONT>
+</BODY>
+</HTML>

@@ -1,0 +1,153 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Appending More Text to Variables</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeSetting_Variables.html">Previous</A>|<A HREF="makeThe_override_Directive.html">Next</A>
+<BR><A NAME="off_1280111"></A><A NAME="4281e252"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Appending
+more text to variables</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Often
+it is useful to add more text to the value of a variable already defined.
+You do this with a line containing ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+as in</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0> objects += another.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This takes the value of the
+variable objects, and adds the text ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>another.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to it (preceded by a single space), as in the following example.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>objects = main.o foo.o bar.o
+utils.o</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>objects += another.o</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The last line sets </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>objects</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>main.o foo.o bar.o.o
+an utils other.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is similar to the following example.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>objects = main.o foo.o bar.o
+utils.o</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>objects := $(objects) another.o</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This last example’s statement
+differs in ways that become important when you use more complex values.
+When the variable in question has not been defined before, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+acts just like normal ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’:
+it defines a recursively-expanded variable. However, when there is a previous
+definition, exactly what ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+does depends on what flavor of variable you defined originally. See <FONT COLOR="#008000"><A HREF="makeThe_Two_Flavors_of_Variables.html">The
+two flavors of variables </A></FONT>for an explanation of the two flavors
+of variables.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When you add to a variable’s
+value with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+acts essentially as if you had included the extra text in the initial definition
+of the variable. If you defined it first with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>:=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+making it a simply-expanded variable, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+adds to that simply-expanded definition, and expands the new text before
+appending it to the old value just as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>:=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+does (see <FONT COLOR="#008000"><A HREF="makeSetting_Variables.html">Setting
+Variables</A></FONT> for a full explanation of ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>:=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’).
+Consider the following definition.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>variable := value</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>variable += more</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This last statement is exactly
+equivalent to this next definition.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>variable := value</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>variable := $(variable) more</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>On the other hand, when you
+use ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+with a variable that you defined first to be recursively-expanded using
+plain ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does something a bit different. Recall that when you define a recursively-expanded
+variable, make does not expand the value you set for variable and function
+references immediately. Instead it stores the text verbatim, and saves
+these variable and function references to be expanded later, when you refer
+to the new variable (see <FONT COLOR="#008000"><A HREF="makeThe_Two_Flavors_of_Variables.html">The
+two flavors of variables </A></FONT>). When you use ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+on a recursively-expanded variable, it is this unexpanded text to which
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+appends the new text you specify.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>variable = value</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>variable += more</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This last statement is roughly
+equivalent to this next definition.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>temp = value</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>variable = $(temp) more</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Of course it never defines
+a variable called </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>temp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The importance of this comes when the variable’s old value contains variable
+references. Take this common example.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>CFLAGS = $(includes) -O</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>...</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>CFLAGS += -pg # enable profiling</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The first line defines the
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CFLAGS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+variable with a reference to another variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>includes</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+(</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CFLAGS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is used by the rules for C compilation; see <FONT COLOR="#008000"><A HREF="makeCatalogue_of_Implicit_Rules.html">Catalogue
+of implicit rules</A></FONT>.) Using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+for the definition makes </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CFLAGS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+a recursively-expanded variable, meaning ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(includes)
+-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ isnot expanded
+when make processes the definition of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CFLAGS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Thus, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>includes</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+need not be defined yet for its value to take effect. It only has to be
+defined before any reference to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CFLAGS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If we tried to append to the value of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CFLAGS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+without using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+we might do it with this following definition.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>CFLAGS := $(CFLAGS) -pg # enable
+profiling</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This is pretty close, but
+not quite what we want. Using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>:=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+redefines </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CFLAGS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as a simply-expanded variable; this means </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+expands the text, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(CFLAGS)
+-pg</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ before setting
+the variable. If </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>includes</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is not yet defined, we get ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+-O -pg</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’, and a
+later definition of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>includes</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will have no effect. Conversely, by using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+we set </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CFLAGS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to the unexpanded value, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(includes)
+-O -pg</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’. Thus,
+we preserve the reference to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>includes</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+so that, if that variable gets defined at any later point, a reference
+like ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(CFLAGS)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+still uses its value.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeSetting_Variables.html">Previous</A>|<A HREF="makeThe_override_Directive.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

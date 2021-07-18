@@ -1,0 +1,15 @@
+main.o : main.c MultiSio.h /agb/include/Agb.h /agb/include/AgbTypes.h \
+ /agb/include/AgbDefine.h /agb/include/AgbMemoryMap.h \
+ /agb/include/AgbMacro.h /agb/include/AgbSystemCall.h \
+ /agb/include/AgbSound.h /agb/include/AgbMultiBoot.h \
+ /agb/include/IsAgbPrint.h data.h MusyX.h demo_snd.h
+data.o : data.c /agb/include/Agb.h /agb/include/AgbTypes.h \
+ /agb/include/AgbDefine.h /agb/include/AgbMemoryMap.h \
+ /agb/include/AgbMacro.h /agb/include/AgbSystemCall.h \
+ /agb/include/AgbSound.h /agb/include/AgbMultiBoot.h \
+ /agb/include/IsAgbPrint.h
+MultiSio.o : MultiSio.c MultiSio.h /agb/include/Agb.h \
+ /agb/include/AgbTypes.h /agb/include/AgbDefine.h \
+ /agb/include/AgbMemoryMap.h /agb/include/AgbMacro.h \
+ /agb/include/AgbSystemCall.h /agb/include/AgbSound.h \
+ /agb/include/AgbMultiBoot.h /agb/include/IsAgbPrint.h

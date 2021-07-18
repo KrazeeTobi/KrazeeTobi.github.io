@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>The BFD canonical object-file format</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="ld.html">Contents</A>|<A HREF="ldindex.html">Index</A>|<A HREF="ldInformation_Loss.html">Previous</A>|<A HREF="ldMRI_Compatible_Script_Files.html">Next</A>
+<BR><A NAME="off_757104"></A><A NAME="ebaaf8d0"></A><FONT FACE="Futura Md BT"><B><FONT SIZE=+3>The
+BFD canonical object-file format</FONT></B></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+greatest potential for loss of information occurs when there is the least
+overlap between the information provided by the source format, that stored
+by the canonical format, and that needed by the destination format. A brief
+description of the canonical form may help you understand which kinds of
+data you can count on preserving across conversions.</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1><B>files</B></FONT></FONT></I></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Information stored on a
+per-files basis includes target machine architecture, particular implementation
+format type, a demand pageable bit, and a write protected bit. Information
+like Unix magic numbers is not stored here—only the magic numbers’ meaning,
+so a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ZMAGIC</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file would have both the demand pageable bit and the write protected text
+bit set. The byte order of the target is stored on a per-file basis, so
+that big- and little-endian object files may be used with one another.</FONT></FONT>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1><B>sections</B></FONT></FONT></I></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Each section in the input
+file contains the name of the section, the section’s original address in
+the object file, size and alignment information, various flags, and pointers
+into other BFD data structures.</FONT></FONT>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1><B>symbols</B></FONT></FONT></I></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Each symbol contains a pointer
+to the information for the object file which originally defined it, its
+name, its value, and various flag bits. When a BFD back end reads in a
+symbol table, it relocates all symbols to make them relative to the base
+of the section where they were defined.</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Doing this ensures that each
+symbol points to its containing section. Each symbol also has a varying
+amount of hidden private data for the BFD back end. Since the symbol points
+to the original file, the private data format for that symbol is accessible.
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can operate on a collection of symbols of wildly different formats without
+problems.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Normal global and simple
+local symbols are maintained on output, so an output file (no matter its
+format) will retain symbols pointing to functions and to global, static,
+and common variables. Some symbol information is not worth retaining; in
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a.out</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+type information is stored in the symbol table as long symbol names.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This information would be
+use-less to most COFF debuggers; the linker has command line switches to
+allow users to throw it away.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>There is one word of type
+information within the symbol, so if the format supports symbol type information
+within symbols (for example, COFF, IEEE, Oasys) and the type is simple
+enough to fit within one word (nearly everything but aggregates), the information
+will be preserved.</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1><B>relocation level</B></FONT></FONT></I></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Each canonical BFD relocation
+record contains a pointer to the symbol to relocate to, the offset of the
+data to relocate, the section the data is in, and a pointer to a relocation
+type descriptor. Relocation is performed by passing messages through the
+relocation type descriptor and the symbol pointer. Therefore, relocations
+can be performed on output data using a relocation method that is only
+available in one of the input formats. For instance, Oasys provides a byte
+relocation format. A relocation record requesting this relocation type
+would point indirectly to a routine to perform this, so the relocation
+may be performed on a byte being written to a 68k COFF file, even though
+68k COFF has no such relocation type.</FONT></FONT>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1><B>line numbers</B></FONT></FONT></I></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Object formats can contain,
+for debugging purposes, some form of mapping between symbols, source line
+numbers, and addresses in the output file. These addresses have to be relocated
+along with the symbol information. Each symbol with an associated list
+of line number records points to the first record of the list. The head
+of a line number list consists of a pointer to the symbol, which allows
+finding out the address of the function whose line number is being described.
+The rest of the list is made up of pairs: offsets into the section and
+line numbers. Any format which can simply derive this information can pass
+it successfully between formats (COFF, IEEE and Oasys).</FONT></FONT></UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="ld.html">Contents</A>|<A HREF="ldindex.html">Index</A>|<A HREF="ldInformation_Loss.html">Previous</A>|<A HREF="ldMRI_Compatible_Script_Files.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

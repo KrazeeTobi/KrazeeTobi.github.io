@@ -1,0 +1,93 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>How Makefiles Are Remade</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeThe_Variable_MAKEFILES.html">Previous</A>|<A HREF="makeOverriding_Part_of_Another_Makef.html">Next</A>
+<BR><A NAME="off_329993"></A><A NAME="0814648e"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>How
+makefiles are remade</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Sometimes
+makefiles can be remade from other files, such as RCS or SCCS files. If
+a makefile can be remade from other files, you probably want </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to get an up-to-date version of the makefile to read in.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To this end, after reading
+in all makefiles, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will consider each as a goal target and attempt to update it. If a makefile
+has a rule which says how to update it (found either in that very makefile
+or in another one) or if an implicit rule applies to it (see <FONT COLOR="#008000"><A HREF="makeUsing_Implicit_Rules.html">Using
+implicit rules</A></FONT>), it will be updated if necessary. After all
+makefiles have been checked, if any have actually been changed, </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+starts with a clean slate and reads all the makefiles over again. (It will
+also attempt to update each of them over again, but normally this will
+not change them again, since they are already up to date.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If the makefiles specify
+a double-colon rule to remake a file with commands but no dependencies,
+that file will always be remade (see <FONT COLOR="#008000"><A HREF="makeDoubleColon_Rules.html">Double-colon
+rules</A></FONT>). In the case of makefiles, a make-file that has a double-colon
+rule with commands but no dependencies will be remade every time make is
+run, and then again after make starts over and reads the makefiles in again.
+This would cause an infinite loop; make would constantly remake the makefile,
+and never do anything else. So, to avoid this, make will not attempt to
+remake makefiles which are specified as double-colon targets but have no
+dependencies.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you do not specify any
+makefiles to be read with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options, </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will try the default makefile names; see <FONT COLOR="#008000"><A HREF="makeWhat_Name_to_Give_Your_Makefile.html">What
+name to give your makefile</A></FONT>. Unlike makefiles explicitly requested
+with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options, make is not certain that these makefiles should exist. However,
+if a default makefile does not exist but can be created by running make
+rules, you probably want the rules to be run so that the makefile can be
+used.</FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Times New Roman">Therefore, if none of the
+default makefiles exists, make will try to make each of them in the same
+order in which they are searched for (<FONT COLOR="#008000"><A HREF="makeWhat_Name_to_Give_Your_Makefile.html">What
+name to give your makefile</A></FONT>) until it succeeds in making one,
+or it runs out of names to try. Note that it is not an error if </FONT><TT>make</TT><FONT FACE="Times New Roman">
+cannot find or make any makefile; a makefile is not always necessary.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When you use the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--touch</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option (see <FONT COLOR="#008000"><A HREF="makeInstead_of_Executing_the_Command.html">Instead
+of executing the commands</A></FONT>), you would not want to use an out-of-date
+makefile to decide which targets to touch. So the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option has no effect on updating makefiles; they are really updated even
+if ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is specified. Likewise, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-q</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+(or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--question</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’)
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-n</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+(or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--just-print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’)
+do not prevent updating of makefiles, because an out-of-date makefile would
+result in the wrong output for other targets.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>However, on occasion you
+might actually wish to prevent updating of even the makefiles. You can
+do this by specifying the makefiles as goals in the command line as well
+as specifying them as makefiles. When the makefile name is specified explicitly
+as a goal, the options ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and so on do apply to them.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Thus, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make
+-f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mfile
+-n</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+will update ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mfile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+read it in, and then print the commands to update ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and its dependencies without running them. The commands printed for ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+will be those specified in the updated contents of ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mfile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeThe_Variable_MAKEFILES.html">Previous</A>|<A HREF="makeOverriding_Part_of_Another_Makef.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

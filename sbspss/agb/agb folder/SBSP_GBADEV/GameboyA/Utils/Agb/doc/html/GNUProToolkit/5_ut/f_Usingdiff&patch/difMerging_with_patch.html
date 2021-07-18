@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<TITLE>Merging with patch</TITLE>
+</HEAD><BODY>
+<A HREF= "dif.html">Contents</A>|<A HREF= "difindex.html">Index</A>|<A HREF="difMerge_Commands.html">Previous</A>|<A HREF="difSelecting_the_patch_Input_Format.html">Next</A>
+<P>
+<A NAME="off_821702"></A><A NAME="befa057d"></A><FONT FACE="Times New Roman" SIZE="6"><B>Merging with </B></FONT><FONT FACE="Courier New" SIZE="5"><B>patch
+<P>
+</B></FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> takes comparison output produced by </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> and applies the differences to a copy of the original file, producing a
+patched version. With </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4">, you can distribute just the changes to a set of files instead of
+distributing the entire file set; your correspondents can apply </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> to update their copy of the files with your changes. patch automatically
+determines the diff format, skips any leading or trailing headers, and uses the
+headers to determine which file to patch. This lets your correspondents feed an
+article or message containing a difference listing directly to </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> detects and warns about common problems like forward patches. It saves the
+original version of the files it patches, and saves any patches that it could not
+apply. It can also maintain a </FONT><FONT FACE="Courier New" SIZE="3">patchlevel.h</FONT><FONT FACE="Times New Roman" SIZE="4"> file to ensures that your correspondents apply diffs in the proper order.
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> accepts a series of diffs in its standard input, usually separated by headers
+that specify which file to patch. It applies </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> hunks (see </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difHunks.html">Hunks</A></FONT><FONT FACE="Times New Roman" SIZE="4">) one by one. If a hunk does not exactly match the original file, </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> uses heuristics to try to patch the file as well as it can. If no approximate
+match can be found, </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> rejects the hunk and skips to the next hunk. </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> normally replaces each file, </FONT><FONT FACE="Courier New" SIZE="3"><I>f</I></FONT><FONT FACE="Times New Roman" SIZE="4">, with its new version, saving the original file in '</FONT><FONT FACE="Courier New" SIZE="3"><I>f</I></FONT><FONT FACE="Times New Roman" SIZE="4">.</FONT><FONT FACE="Courier New" SIZE="3">orig</FONT><FONT FACE="Times New Roman" SIZE="4">', and putting reject hunks (if any) into '</FONT><FONT FACE="Courier New" SIZE="3"><I>f</I>.rej</FONT><FONT FACE="Times New Roman" SIZE="4">'.
+<P>
+See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difInvoking_patch.html">Invoking patch</A></FONT><FONT FACE="Times New Roman" SIZE="4"> for information on the options to patch, </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difBackup_File_Names.html">Backup File Names</A></FONT><FONT FACE="Times New Roman" SIZE="4"> for information on how </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> names backup files, </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difReject_File_Names.html">Reject File Names</A></FONT><FONT FACE="Times New Roman" SIZE="4"> for information on where </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> puts reject hunks, and also </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSelecting_the_patch_Input_Format.html">Selecting the patch Input Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">, </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difApplying_Imperfect_Patches.html">Applying Imperfect Patches</A></FONT><FONT FACE="Times New Roman" SIZE="4">, </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difRemoving_Empty_Files.html">Removing Empty Files</A></FONT><FONT FACE="Times New Roman" SIZE="4">, </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difMultiple_Patches_in_a_File.html">Multiple Patches in a File</A></FONT><FONT FACE="Times New Roman" SIZE="4">, and </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difMessages_and_Questions_from_patc.html">Messages and Questions from </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difMessages_and_Questions_from_patc.html">patch</A></B></FONT><FONT FACE="Times New Roman" SIZE="4">.
+<P>
+</FONT></BODY>
+</HTML>

@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>Generating the Merged Output Directly</TITLE>
+</HEAD><BODY>
+<A HREF= "dif.html">Contents</A>|<A HREF= "difindex.html">Index</A>|<A HREF="difMarking_Conflicts.html">Previous</A>|<A HREF="difHow_diff3_Merges_Incomplete_Line.html">Next</A>
+<P>
+<A NAME="off_787010"></A><A NAME="4ff2fa6c"></A><FONT FACE="Times New Roman" SIZE="6"><B>Generating the Merged Output Directly
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">With the '</FONT><FONT FACE="Courier New" SIZE="3">-m</FONT><FONT FACE="Times New Roman" SIZE="4">' or '</FONT><FONT FACE="Courier New" SIZE="3">--merge</FONT><FONT FACE="Times New Roman" SIZE="4">' option, </FONT><FONT FACE="Courier New" SIZE="3">diff3</FONT><FONT FACE="Times New Roman" SIZE="4"> outputs the merged file directly. This is more efficient than using ed to
+generate it, and works even with non-text files that </FONT><FONT FACE="Courier New" SIZE="3">ed</FONT><FONT FACE="Times New Roman" SIZE="4"> would reject. If you specify '</FONT><FONT FACE="Courier New" SIZE="3">-m</FONT><FONT FACE="Times New Roman" SIZE="4">' without an </FONT><FONT FACE="Courier New" SIZE="3">ed</FONT><FONT FACE="Times New Roman" SIZE="4"> script option, '</FONT><FONT FACE="Courier New" SIZE="3">-A</FONT><FONT FACE="Times New Roman" SIZE="4">' ('</FONT><FONT FACE="Courier New" SIZE="3">--show-all</FONT><FONT FACE="Times New Roman" SIZE="4">') is assumed.
+<P>
+For example, the command '</FONT><FONT FACE="Courier New" SIZE="3">diff3 -m lao tzu</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3">tao</FONT><FONT FACE="Times New Roman" SIZE="4">' would output the following (see </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difA_Third_Sample_Input_File.html">A Third Sample Input File</A></FONT><FONT FACE="Times New Roman" SIZE="4"> for a copy of the input files):
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3"><B>&lt;&lt;&lt;&lt;&lt;&lt;&lt; tzu 
+<BR>======= 
+<BR>The Way that can be told of is not the eternal Way; 
+<BR>The name that can be named is not the eternal name. 
+<BR>&gt;&gt;&gt;&gt;&gt;&gt;&gt; tao 
+<BR>The Nameless is the origin of Heaven and Earth; 
+<BR>The Named is the mother of all things. 
+<BR>Therefore let there always be non-being,
+<BR>  so we may see their subtlety, 
+<BR>And let there always be being, 
+<BR>  so we may see their result. 
+<BR>The two are the same, 
+<BR>But after they are produced, 
+<BR>  they have different names. 
+<BR>&lt;&lt;&lt;&lt;&lt;&lt;&lt; lao 
+<BR>||||||| tzu 
+<BR>They both may be called deep and profound. 
+<BR>Deeper and more profound, 
+<BR>The door of all subtleties! 
+<BR>=======
+<BR>
+<BR>-- The Way of Lao-Tzu, tr. Wing-tsit Chan 
+<BR>&gt;&gt;&gt;&gt;&gt;&gt;&gt; tao
+<P>
+</B></FONT></BODY>
+</HTML>

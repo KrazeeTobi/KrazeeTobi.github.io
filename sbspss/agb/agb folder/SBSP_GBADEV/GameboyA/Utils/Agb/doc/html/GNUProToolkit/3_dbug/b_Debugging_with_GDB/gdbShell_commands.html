@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Shell commands</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbQuitting_GDB.html">Previous</A>|<A HREF="gdbGDB_Commands.html">Next</A>
+<BR><A NAME="off_395536"></A><A NAME="94796011"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Shell
+commands&nbsp;</FONT></FONT></FONT></B>
+<HR SIZE=3 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If you need to execute occasional
+shell commands during your debugging session, there is no need to leave
+or suspend GDB; you can just use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>shell</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>shell <I>command</I> <I>string</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Invoke a the standard shell
+to execute </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>command</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>string</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.If
+it exists, the environment variable </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SHELL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+determines which shell to run. Otherwise GDB uses </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/bin/sh</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+&nbsp;</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>utility is often
+needed in development environments. You do not have to use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>shell</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command for this purpose in GDB.</FONT></FONT>
+<UL>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>make <I>make-args</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Execute the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+program with the specified arguments.&nbsp;<BR>
+This is equivalent to a ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>shell
+make <I>make-args</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+declaration.</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbQuitting_GDB.html">Previous</A>|<A HREF="gdbGDB_Commands.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

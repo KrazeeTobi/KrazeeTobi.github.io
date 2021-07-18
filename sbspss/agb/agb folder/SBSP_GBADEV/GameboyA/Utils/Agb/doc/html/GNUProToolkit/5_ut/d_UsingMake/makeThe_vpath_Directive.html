@@ -1,0 +1,117 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>The vpath Directive</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeVPATH_Search_Path_for_All_Depend.html">Previous</A>|<A HREF="makeWriting_Shell_Commands_with_Dire.html">Next</A>
+<BR><A NAME="off_524408"></A><A NAME="c2377f11"></A><B><FONT SIZE=+3><FONT FACE="Futura Md BT">The
+</FONT><FONT FACE="Courier New">vpath</FONT><FONT FACE="Futura Md BT">
+directive</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Similar
+to the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>VPATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+variable but more selective is the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive (note the use of lower case) which allows you to specify a search
+path for a particular class of file names, those that match a particular
+pattern. Thus you can supply certain search directories for one class of
+file names and other directories (or none) for other file names. There
+are three forms of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>vpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>pattern</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>directories</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Specify the search path
+directories for file names that match pattern.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The search path, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>directories</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is a list of directories to be searched, separated by colons or blanks,
+just like the search path used in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>VPATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+variable.</FONT></FONT>
+<BR>&nbsp;</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>vpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>pattern</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Clear out the search path
+associated with </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>pattern</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>vpath</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Clear all search paths previously
+specified with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directives.</FONT></FONT></UL>
+</UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>A </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pattern is a string containing a ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+character. The string must match the file name of a dependency that is
+being searched for, the ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+character matching any sequence of zero or more characters (as in pattern
+rules; see <FONT COLOR="#008000"><A HREF="makeDefining_and_Redefining_Pattern_.html">Defining
+and redefining pattern rules</A></FONT>). For example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><B>%</B>.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+matches files that end in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+(If there is no ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+the pattern must match the dependency exactly, which is not useful very
+often.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+characters in a vpath directive’s pattern can be quoted with preceding
+backslashes (‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>\</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’).
+Backslashes that would otherwise quote ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+characters can be quoted with more backslashes. Backslashes that quote
+‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+characters or other backslashes are removed from the pattern before it
+is compared to file names. Backslashes that are not in danger of quoting
+‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+characters go unmolested.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When a dependency fails to
+exist in the current directory, if the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>pattern</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive matches the name of the dependency file, then the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>directories
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>in that directive
+are searched just like (and before) the directories in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>VPATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+variable.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vpath
+<B>%</B>.h ../headers</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+tells </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to look for any dependency whose name ends in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in the directory ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>../headers</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+if the file is not found in the current directory.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If several </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+patterns match the dependency file’s name, then </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+processes each matching </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive one by one, searching all the directories mentioned in each directive.
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+handles multiple </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directives in the order in which they appear in the makefile; multiple
+directives with the same pattern are independent of each other. Thus, the
+following directive will look for a file ending in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+then ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>blish</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+then ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>vpath %.c foo</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>vpath % blish</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>vpath %.c bar</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The next example, on the
+other hand, will look for a file ending in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+then ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+then ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>blish</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>vpath %.c foo:bar</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>vpath % blish</FONT></FONT></UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeVPATH_Search_Path_for_All_Depend.html">Previous</A>|<A HREF="makeWriting_Shell_Commands_with_Dire.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

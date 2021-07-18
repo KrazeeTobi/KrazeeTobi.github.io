@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Reading and writing in memory</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioReading_and_writing_files.html">Previous</A>|<A HREF="libioUsing_the_streambuf_Layer.html">Next</A>
+<BR><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><A NAME="off_493191"></A><A NAME="2060040b"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Reading
+and writing in memory</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+classes, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>istrstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostrstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>strstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+provide some additional features for reading and writing strings in memory—both
+static strings, and dynamically allocated strings. The underlying class,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>strstreambase</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+provides some features common to all three; </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>strstreambuf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+underlies that in turn.</FONT></FONT>
+<UL><FONT SIZE=+1><B><FONT FACE="Times New Roman">istrstream::istrstream
+</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">(const char*
+<I>str</I> </FONT></FONT><FONT FACE="Times New Roman">[</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">,
+int <I>size</I></FONT></FONT><FONT FACE="Times New Roman">]</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Constructor</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Associate the new input
+string class, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>istrstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+with an existing static string, starting at </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>str</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+of size, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If you do not specify </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the string is treated as a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NUL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+terminated string.</FONT></FONT></UL>
+</UL>
+
+<UL><FONT SIZE=+1><B><FONT FACE="Times New Roman">ostrstream::ostrstream</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">
+()&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Constructor</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Create a new stream for
+output to a dynamically managed string, which will grow as needed</FONT></FONT></UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><FONT SIZE=+1><B><FONT FACE="Times New Roman">ostrstream::ostrstream</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">
+(char* <I>str</I>, int <I>size </I></FONT></FONT><FONT FACE="Times New Roman">[</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">,int
+<I>mode</I></FONT></FONT><FONT FACE="Times New Roman">]</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Constructor</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>A new stream for output
+to a statically defined string of length, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+starting at </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>str</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+You may optionally specify one of the modes described for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ifstream::ifstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+if you do not specify one, the new stream is simply open for output, with
+mode </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::out</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int</FONT></FONT><FONT FACE="Times New Roman">
+<B>ostrstream::pcount</B></FONT><FONT FACE="Courier New"><FONT COLOR="#000000">
+()&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Report the current length
+of the string associated with this </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostrstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">char*</FONT></FONT><FONT FACE="Times New Roman">
+<B>ostrstream::str </B></FONT><FONT FACE="Courier New"><FONT COLOR="#000000">()&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>A pointer to the string
+managed by this </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostrstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Implies </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostrstream::freeze()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If you want the string to
+be </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NUL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+terminated, you must do that yourself (perhaps by writing </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ends</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to the stream).</FONT></FONT></UL>
+</UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">void </FONT></FONT><B><FONT FACE="Times New Roman">ostrstream::freeze
+</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">(</FONT></FONT><FONT FACE="Times New Roman">[</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">int
+<I>n</I></FONT></FONT><FONT FACE="Times New Roman">]</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>If </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is nonzero (the default), declare that the string associated with this
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostrstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is not to change dynamically; while frozen, it will not be reallocated
+if it needs more space, and it will not be de-allocated when the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostrstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is destroyed. Use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>freeze(1)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+if you refer to the string as a pointer after creating it via </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostrstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+facilities. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>freeze(0)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+cancels this declaration, allowing a dynamically allocated string to be
+freed when its </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostrstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is destroyed. If this </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostrstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is already static—that is, if it was created to manage an existing statically
+allocated string—</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>freeze</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is unnecessary, and has no effect.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int </FONT></FONT><B><FONT FACE="Times New Roman">ostrstream::frozen
+</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">()&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Test whether </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>freeze(1)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is in effect for this string.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">strstreambuf*</FONT></FONT><FONT FACE="Times New Roman">
+<B>strstreambase::rdbuf</B></FONT><FONT FACE="Courier New"><FONT COLOR="#000000">
+()&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>A pointer to the underlying
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>strstreambuf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioReading_and_writing_files.html">Previous</A>|<A HREF="libioUsing_the_streambuf_Layer.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

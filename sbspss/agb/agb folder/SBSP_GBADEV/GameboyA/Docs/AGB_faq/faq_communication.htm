@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+
+<HEAD>
+
+<link rel="stylesheet" type="text/css" href="faq.css">
+<!-- Edited by Ron D. 2/12/01, modified format for separate release of FAQ -->
+
+<TITLE>AGB FAQ, Communication</TITLE>
+
+</HEAD>
+
+<BODY bgcolor="#ffffff"><A name="TOP"></A>
+
+<FORM name="jump" target="cont"><B><FONT face="Arial" color="#ff0000">FAQ MENU</FONT></B> <SELECT name="menu" onchange="location.href = document.jump.menu.options[document.jump.menu.selectedIndex].value">
+
+<OPTION value="faq_general.htm">[FAQ]General</OPTION>
+
+<OPTION value="faq_backup.htm">[FAQ]Backup</OPTION>
+
+<OPTION value="faq_communication.htm" selected>[FAQ]Communication</OPTION>
+
+<OPTION value="faq_gnu.htm">[FAQ]GNU</OPTION>
+
+<OPTION value="faq_graphic.htm">[FAQ]Graphics</OPTION>
+
+<OPTION value="faq_sound.htm">[FAQ]Sound</OPTION>
+
+</SELECT>
+
+</FORM>
+<H2>Communication</h2>
+
+<HR size="4" noshade>
+
+<P>
+<FONT size="-1"><A href="#001">[Q001] Is there a way through hardware for the transmitting side to determine that the receiving side has actually received the data?</A></FONT><BR>
+
+<FONT size="-1"><A href="#002">[Q002] Is it necessary to use the timer during communications?</A></FONT><BR>
+
+<FONT size="-1"><A href="#003">[Q003] I have trouble getting communication using timer interrupt and m4aSoundMain() function synchronized with v-blank interrupt to coexist.</A></FONT></P>
+
+<HR>
+
+<H3><A name="001">[Q001]</A></H3>
+
+<P>Is there a way through hardware for the transmitting side to determine that the receiving side has actually received the data?</P>
+
+<H3>[A001]</H3>
+
+<P>In multiplayer communications, there is no way using hardware to determine that the other party has actually received the data.  For this reason, you should implement some convention such as having the receiving side send back some signal once data reception has been completed, or freeing enough of a time interval for transmission to ensure the data is received.</A></P>
+
+<P align="right"><B><FONT size="-1"><A href="#TOP">[TOP]</A></FONT></B></P>
+
+<HR>
+
+<H3><A name="002">[Q002]</A></H3>
+
+<P>Is it necessary to use the timer during communications?</P>
+
+<H3>[A002]</H3>
+
+<P>Simultaneous communication interrupts to the master and slave cannot be staged due to errors in the timing of waveform edge detection, as per the hardware specifications.  (There are individual variations.)<BR>
+      <BR>
+       For this reason, the master device could conceivably start transmissions before the slave device has finished receiving data, leading to a failure in communications.<BR>
+      <BR>
+       You could ensure communications during an SIO interrupt by inserting a sufficient wait before the master begins transmitting, but to do so would require a wait equal to the guaranteed period for successful communications plus at least 600 clock cycles (an adequate value for errors in the generation of SIO interrupts).  This long wait alone would be a heavy burden.<BR>
+      Moreover, other interrupt processes (m4aSoundVSync(), etc.) would be delayed by that much, and there is a high probability this would have bad effects. <BR>
+      <BR>
+      For these reasons, <b>please be sure to use the timer for data transmissions, and free up a transfer interval that is 600 clock cycles longer than the time actually used for transmission operations.</B><BR>
+      <BR>
+      Consider this as an adequate value to ensure proper operation of multiplayer communications with all production AGBs.</A></P>
+
+<P align="right"><B><FONT size="-1"><A href="#TOP">[TOP]</A></FONT></B></P>
+
+<HR>
+
+<H3><A name="003">[Q003]</A></H3>
+
+<P>I have trouble getting communication using timer interrupt and m4aSoundMain() function synchronized with v-blank interrupt to coexist.</P>
+
+<H3>[A003]</H3>
+
+<P>All devices must enable multiple interrupts by SIO interrupts to the slave device and timer interrupts to the master device.<BR>
+       Note that when you use multiple interrupts in combination with m4aSoundMain(), during an interrupt, the size of the stack area for interrupts increases by that amount. So you need to make it avoid stack overflow.</A></P>
+
+<P align="right"><B><FONT size="-1"><A href="#TOP">[TOP]</A></FONT></B></P>
+
+<HR>
+
+<P align="right">D.C.N. AGB-06-0027-001A (2/21/01)<BR>
+&copy; 2001 Nintendo of America Inc.</P>
+
+</body>
+
+</html>

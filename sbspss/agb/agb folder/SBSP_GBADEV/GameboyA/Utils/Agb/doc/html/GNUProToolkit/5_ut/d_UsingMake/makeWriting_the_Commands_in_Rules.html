@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Writing the Commands in Rules</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeGenerating_Dependencies_Automati.html">Previous</A>|<A HREF="makeCommand_Echoing.html">Next</A>
+<BR><A NAME="off_819645"></A><A NAME="b5c84043"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Writing
+the commands in rules</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+commands of a rule consist of shell command lines to be executed one by
+one. Each command line must start with a tab, except that the first command
+line may be attached to the target-and-dependencies line with a semicolon
+in between. Blank lines and lines of just comments may appear among the
+command lines; they are ignored. (But beware, an apparently “blank” line
+that begins with a tab is <I>not</I> blank! It is an empty command.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Users use many different
+shell programs, but commands in make-files are always interpreted by ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/bin/sh</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+unless the makefile specifies otherwise.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The shell that is in use
+determines whether comments can be written on command lines, and what syntax
+they use. When the shell is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/bin/sh</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+a ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+starts a comment that extends to the end of the line. The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+does not have to be at the beginning of a line. Text on a line before a
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is not part of the comment.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>See the following documentation
+for more discussion.</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeCommand_Echoing.html">Command
+echoing</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeCommand_Execution.html">Command
+execution</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeParallel_Execution.html">Parallel
+execution</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeErrors_in_Commands.html">Errors
+in commands</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeInterrupting_or_Killing_make.html">Interrupting
+or killing make</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT COLOR="#008000"><A HREF="makeRecursive_Use_of__make.html"><FONT FACE="Times New Roman"><FONT SIZE=+1>Recursive
+use of </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B></A></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></LI>
+
+<UL>
+<LI>
+<FONT COLOR="#008000"><A HREF="makeHow_the_MAKE_Variable_Works.html"><I><FONT FACE="Times New Roman"><FONT SIZE=+1>How
+the </FONT></FONT></I><B><FONT FACE="Courier New"><FONT SIZE=+0>MAKE</FONT></FONT></B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+variable works</FONT></FONT></I></A></FONT><I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></I></LI>
+
+<LI>
+<FONT COLOR="#008000"><A HREF="makeCommunicating_Variables_to_a_Sub.html"><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Communicating
+variables to a sub-</FONT></FONT></I><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B></A></FONT><I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></I></LI>
+
+<LI>
+<FONT COLOR="#008000"><A HREF="makeCommunicating_Options_to_a_Subma.html"><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Communicating
+options to a sub-</FONT></FONT></I><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B></A></FONT><I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></I></LI>
+
+<LI>
+<FONT COLOR="#008000"><A HREF="makeThe_printdirectory_Option.html"><I><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+‘</FONT></FONT></I><B><FONT FACE="Courier New"><FONT SIZE=+0>--print-directory</FONT></FONT></B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option</FONT></FONT></I></A></FONT><I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></I></LI>
+</UL>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeDefining_Canned_Command_Sequence.html">Defining
+canned command sequences</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeUsing_Empty_Commands.html">Using
+empty commands</A></FONT></FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeGenerating_Dependencies_Automati.html">Previous</A>|<A HREF="makeCommand_Echoing.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

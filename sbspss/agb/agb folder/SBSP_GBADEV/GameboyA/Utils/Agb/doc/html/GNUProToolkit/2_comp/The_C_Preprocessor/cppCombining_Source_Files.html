@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Combining Source Files</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppThe_error_and_warning_Directives.html">Previous</A>|<A HREF="cppMiscellaneous_Preprocessing_Dire.html">Next</A>
+<BR><A NAME="off_821279"></A><A NAME="52218152"></A><A NAME="off_821279"></A><A NAME="52218152"></A><A NAME="off_821279"></A><A NAME="52218152"></A><A NAME="off_821279"></A><A NAME="52218152"></A><A NAME="off_821279"></A><A NAME="52218152"></A><A NAME="off_821279"></A><A NAME="52218152"></A><A NAME="off_821279"></A><A NAME="52218152"></A><A NAME="off_821279"></A><A NAME="52218152"></A><A NAME="off_821279"></A><A NAME="52218152"></A><A NAME="off_821279"></A><A NAME="52218152"></A><A NAME="off_821279"></A><A NAME="52218152"></A><A NAME="off_821279"></A><A NAME="52218152"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3><B>Combining
+source files&nbsp;</B>&nbsp;</FONT></FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>One
+of the jobs of the C preprocessor is to inform the C compiler of where
+each line of C code came from: which source file and which line number.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>C code
+can come from multiple source files if you use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+both </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and the use of conditionals and macros can cause the line number of a line
+in the preprocessor output to be different from the line’s number in the
+original source file. You will appreciate the value of making both the
+C compiler (in error messages) and symbolic debuggers such as GDB use the
+line numbers in your source file.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+C preprocessor builds on this feature by offering a directive by which
+you can control the feature explicitly. This is useful when a file for
+input to the C preprocessor is the output from another program such as
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bison</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+parser generator, which operates on another file that is the true source
+file. Parts of the output from </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bison</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are generated from scratch, other parts come from a standard parser file.
+The rest are copied nearly verbatim from the source file, but their line
+numbers in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bison</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+output are not the same as their original line numbers. Naturally you would
+like compiler error messages and symbolic debuggers to know the original
+source file and line number of each line in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bison</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+input.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>bison</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+arranges this by writing </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#line</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directives into the output file. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#line</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a directive that specifies the original line number and source file
+name for subsequent input in the current preprocessor input file. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#line</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has three variants:</FONT></FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>#line <I>linenum</I></FONT></FONT></LI>
+
+<UL TYPE=SQUARE><FONT FACE="Times New Roman"><FONT SIZE=+1>Here </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>linenum</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a decimal integer constant. This specifies that the line number of the
+following line of input, in its original source file, was </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>linenum</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>#line <I>linenum</I> <I>filename</I></FONT></FONT></LI>
+
+<UL TYPE=SQUARE><FONT FACE="Times New Roman"><FONT SIZE=+1>Here </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>linenum</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a decimal integer constant and </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a string constant. This specifies that the following line of input came
+originally from source file </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and its line number there was </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>linenum</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Keep in mind that </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is not just a file <I>name</I>.</FONT></FONT></UL>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>#line <I>anything</I> <I>else</I></FONT></FONT></LI>
+
+<UL TYPE=SQUARE><I><FONT FACE="Courier New"><FONT SIZE=+0>anything</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>else</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is checked for macro calls, which are expanded. The result should be a
+decimal integer constant followed optionally by a string constant.</FONT></FONT></UL>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>#line</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directives alter the results of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__FILE__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__LINE__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+predefined macros from that point on. See </FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="cppStandard_Predefined_Macros.html">Standard
+predefined macros</A></FONT><FONT COLOR="#000000">.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+output of the preprocessor (which is the input for the rest of the compiler)
+contains directives that look much like </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#line</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directives. They start with just </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instead of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#line</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+but this is followed by a line number and file name as in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#line</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+See </FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="cppC_Preprocessor_Output.html">C
+preprocessor output</A></FONT><FONT COLOR="#000000">.</FONT></FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppThe_error_and_warning_Directives.html">Previous</A>|<A HREF="cppMiscellaneous_Preprocessing_Dire.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

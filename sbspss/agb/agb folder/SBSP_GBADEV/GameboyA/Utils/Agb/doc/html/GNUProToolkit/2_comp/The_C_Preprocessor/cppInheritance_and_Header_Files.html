@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Inheritance and Header Files</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppOnceOnly_Include_Files.html">Previous</A>|<A HREF="cppMacros.html">Next</A>
+<BR><A NAME="off_166408"></A><A NAME="5d51a148"></A><A NAME="off_166408"></A><A NAME="5d51a148"></A><A NAME="off_166408"></A><A NAME="5d51a148"></A><A NAME="off_166408"></A><A NAME="5d51a148"></A><A NAME="off_166408"></A><A NAME="5d51a148"></A><A NAME="off_166408"></A><A NAME="5d51a148"></A><A NAME="off_166408"></A><A NAME="5d51a148"></A><A NAME="off_166408"></A><A NAME="5d51a148"></A><A NAME="off_166408"></A><A NAME="5d51a148"></A><A NAME="off_166408"></A><A NAME="5d51a148"></A><A NAME="off_166408"></A><A NAME="5d51a148"></A><A NAME="off_166408"></A><A NAME="5d51a148"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3><B>Inheritance
+and header files&nbsp;</B>&nbsp;</FONT></FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1><I>Inheritance</I>
+is what happens when one object or file derives some of its contents by
+virtual copying from another object or file. In the case of C header files,
+inheritance means that one header file includes another header file and
+then replaces or adds something.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>If
+the inheriting header file and the base header file have different names,
+then inheritance is straightforward: simply </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>write
+#include "<I>base</I>"</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in the inheriting file.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Sometimes
+it is necessary to give the inheriting file the same name as the base file.
+This is less straightforward.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>For
+example, suppose an application program uses the system header file </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sys/signal.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+but the version of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/usr/include/sys/signal.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+on a particular system doesn’t do what the application program expects.
+It might be convenient to define a <I>local</I> version, perhaps under
+the name </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/usr/local/include/sys/signal.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to override or add to the one supplied by the system. Use the option, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-I.</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+for compilation, and writing a file </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sys/signal.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+that does what the application program expects. But making this file include
+the standard </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sys/signal.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is not so easy—writing </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include
+&lt;sys/signal.h></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in that file doesn’t work, because it includes your own version of the
+file, not the standard system version.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Used
+in that file itself, this leads to an infinite recursion and a fatal error
+in compilation.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>#include
+&lt;/usr/include/sys/signal.h></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+would find the proper file, but that is not clean, since it makes an assumption
+about where the system header file is found. This is bad for maintenance,
+since it means that any change in where the system’s header files are kept
+requires a change somewhere else.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+clean way to solve this problem is to use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include_next</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+which means, “Include the <I>next</I> file with this name.” This directive
+works like </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+except in searching for the specified file: it starts searching the list
+of header file directories after the directory in which the current file
+was found.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Suppose
+you specify </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-I /usr/local/include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and the list of directories to search also includes </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/usr/include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+and suppose that both directories contain a file named </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sys/signal.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Ordinary </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include
+&lt;sys/signal.h></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+finds the file under </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/usr/local/include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If that file contains </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include_next
+&lt;sys/signal.h></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+it starts searching after that directory, and finds the file in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/usr/include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppOnceOnly_Include_Files.html">Previous</A>|<A HREF="cppMacros.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

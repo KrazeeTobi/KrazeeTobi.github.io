@@ -1,0 +1,124 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Named Return Values in C++</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccExtensions_to_the_C_Language.html">Previous</A>|<A HREF="gccMinimum_and_Maximum_Operators_in.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_4326325"></A><A NAME="a08a7897"></A><B><FONT SIZE=+3>Named
+return values in C++&nbsp;</FONT></B>&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GNU C++ extends the function-definition
+syntax, which allows you to specify a name for the result of a function
+outside the body of the definition, in C++ programs.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>type&nbsp;
+<I>functionname</I> (<I>args</I>) return <I>resultname</I>;&nbsp;
+{&nbsp;
+&nbsp;&nbsp; ...&nbsp;
+&nbsp;&nbsp; <I>body&nbsp;
+</I>&nbsp;&nbsp; ...&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You can use this feature to
+avoid an extra constructor call when a function result has a class type.
+For example, consider a function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>m</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+declared as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>X v =m
+();</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’, whose result
+is of class </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>X.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>X&nbsp;
+m ()&nbsp;
+{&nbsp;
+&nbsp;&nbsp; X b;&nbsp;
+&nbsp;&nbsp; b.a = 23;&nbsp;
+&nbsp;&nbsp; return b;&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Although ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>m</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+appears to have no arguments, in fact it has one implicit argument: the
+address of the return value. At invocation, the address of enough space
+to hold ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>v</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is sent in as the implicit argument. Then ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is constructed and its ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+field is set to the value 23. Finally, a copy constructor (a constructor
+of the form ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>X(X&amp;)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’)
+is applied to ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+with the (implicit) return value location as the target, so that ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>v</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is now bound to the return value.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>But this is wasteful. The
+local ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is declared just to hold something that will be copied right out. While
+a compiler that combined an <I>elision</I> algorithm with interprocedural
+data flow analysis could conceivably eliminate all of this, it is much
+more practical to allow you to assist the compiler in generating efficient
+code by manipulating the return value explicitly, thus avoiding the local
+variable and copy constructor altogether.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Using the extended GNU C++
+function-definition syntax, you can avoid the temporary allocation and
+copying by naming </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as your return value at the outset, and assigning to its ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+field directly, as in the following example.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>X&nbsp;
+m () return r;&nbsp;
+{&nbsp;
+&nbsp;&nbsp; r.a = 23;&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The declaration of ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is a standard, proper declaration, whose effects are executed <I>before</I>
+any of the body of ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>m</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Functions of this type impose
+no additional restrictions; in particular, you can execute return statements,
+or return implicitly by reaching the end of the function body (<I>falling
+off the edge</I>). Cases like the following example (or even the statement,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Xm () return r (23)
+; {</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>}</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+are unambiguous, since the return value ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+has been initialized in either case.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>X&nbsp;
+m () return r (23);&nbsp;
+{&nbsp;
+&nbsp;&nbsp; return;&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The following code may be hard
+to read, but also works predictably:</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>X&nbsp;
+m () return r;&nbsp;
+{&nbsp;
+&nbsp;&nbsp; X b;&nbsp;
+&nbsp;&nbsp; return b;&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The return value slot denoted
+by ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is initialized at the outset, but the statement ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>return</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+overrides this value. The compiler deals with this by destroying ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+(calling the destructor if there is one, or doing nothing if there is not),
+and then reinitializing ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This extension is provided
+primarily to help people who use overloaded operators, where there is a
+great need to control not just the arguments, but the return values of
+functions. For classes where the copy constructor incurs a heavy performance
+penalty (especially in the common case where there is a quick default constructor),
+this is a major savings. The disadvantage of this extension is that you
+do not control when the default constructor for the return value is called:
+it is always called at the beginning.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccExtensions_to_the_C_Language.html">Previous</A>|<A HREF="gccMinimum_and_Maximum_Operators_in.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

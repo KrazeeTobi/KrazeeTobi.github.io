@@ -1,0 +1,268 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Reentrancy</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcsetlocale_localeconvselect_or_qu.html">Previous</A>|<A HREF="libcMiscellaneous_Macros_and_Functio.html">Next</A>
+<BR><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><A NAME="off_1966431"></A><A NAME="ef9a5031"></A><FONT FACE="Futura Md BT"><FONT SIZE=+3>Reentrancy</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Reentrancy
+is a characteristic of library functions allowing multiple processes to
+use the same address space with assurance that the values stored in those
+spaces will remain constant between calls.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Cygnus implements the library
+functions to ensure that, whenever possible, these library functions are
+reentrant. However, there are some functions that can not be trivially
+made reentrant. Hooks have been provided to allow you to use these functions
+in a fully reentrant fashion. These hooks use the structure, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>_reent</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+defined in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>reent.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>All functions which must
+manipulate global information are available in two versions.</FONT></FONT>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The first version has the usual
+name, using a single global instance of the reentrancy structure.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The second has a different name,
+normally formed by prepending ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>_</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and appending ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>_r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and taking a pointer to the particular reentrancy structure to use.</FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>For example, the function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fopen</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+takes two arguments, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>mode</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and uses the global reentrancy structure. The function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>_fopen_r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+takes the argument, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct_reent</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+which is a pointer to an instance of the reentrancy structure, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>mode</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Each function which uses
+the global reentrancy structure uses the global variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>_impure_ptr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+which points to a reentrancy structure.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This means that you have
+two ways to achieve reentrancy. Both require that each thread of execution
+control initialize a unique global variable of type, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct_reent</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Use the reentrant versions of
+the library functions, after initializing a global reentrancy structure
+for each process. Use the pointer to this structure as the extra argument
+for all library functions.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Ensure that each thread of execution
+control has a pointer to its own unique reentrancy structure in the global
+variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>_impure_ptr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and call the standard library subroutines.</FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The following functions are
+provided in both reentrant and non-reentrant versions.</FONT></FONT>
+
+<P><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Equivalent for </FONT></FONT></I><B><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT></B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+variable:</FONT></FONT></I>
+<BR>&nbsp;
+<TABLE>
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_errno<B>_</B>r&nbsp;</FONT></FONT></TD>
+</TR>
+</TABLE>
+
+<HR WIDTH="100%"><B><FONT FACE="Courier New"><FONT SIZE=+0>locale</FONT></FONT></B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+functions:</FONT></FONT></I>
+<BR>&nbsp;
+<TABLE>
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_localeconv_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_setlocale_r&nbsp;</FONT></FONT></TD>
+</TR>
+</TABLE>
+
+<HR WIDTH="100%"><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Equivalents
+for </FONT></FONT></I><B><FONT FACE="Courier New"><FONT SIZE=+0>stdio</FONT></FONT></B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+variables:</FONT></FONT></I>
+<BR>&nbsp;
+<TABLE>
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_stdin_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_stdout_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_stderr_r&nbsp;</FONT></FONT></TD>
+</TR>
+</TABLE>
+
+<HR WIDTH="100%"><B><FONT FACE="Courier New"><FONT SIZE=+0>stdio</FONT></FONT></B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+functions:</FONT></FONT></I>
+<BR>&nbsp;
+<TABLE>
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_fdopen_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_mkstemp_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_remove_r&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_fopen_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_mktemp_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_rename_r&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_getchar_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_perror_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_tempnam_r&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_gets_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_putchar_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_tmpnam_r&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_iprintf_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_puts_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_tmpfile_r&nbsp;</FONT></FONT></TD>
+</TR>
+</TABLE>
+
+<HR WIDTH="100%"><B><FONT FACE="Courier New"><FONT SIZE=+0>signal</FONT></FONT></B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+functions:</FONT></FONT></I>
+<BR>&nbsp;
+<TABLE>
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_raise_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_signal_r&nbsp;</FONT></FONT></TD>
+</TR>
+</TABLE>
+
+<HR WIDTH="100%"><B><FONT FACE="Courier New"><FONT SIZE=+0>stdlib</FONT></FONT></B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+functions:</FONT></FONT></I>
+<BR>&nbsp;
+<TABLE>
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_dtoa_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_realloc_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_strtoul_r&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_free_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_srand_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_system_r&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_malloc_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_strtod_r&nbsp;</FONT></FONT></TD>
+
+<TD></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_rand_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_strtol_r&nbsp;</FONT></FONT></TD>
+
+<TD></TD>
+</TR>
+</TABLE>
+
+<HR WIDTH="100%"><I><FONT FACE="Times New Roman"><FONT SIZE=+1>String function:</FONT></FONT></I>
+<BR>&nbsp;
+<TABLE>
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_strtok_r&nbsp;</FONT></FONT></TD>
+
+<TD></TD>
+
+<TD></TD>
+</TR>
+</TABLE>
+
+<HR WIDTH="100%"><I><FONT FACE="Times New Roman"><FONT SIZE=+1>System functions:</FONT></FONT></I>
+<BR>&nbsp;
+<TABLE>
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_close_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_lseek_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_stat_r&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_fork_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_open_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_unlink_r&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_fstat_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_read_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_wait_r&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_link_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_sbrk_r&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_write_r&nbsp;</FONT></FONT></TD>
+</TR>
+</TABLE>
+
+<HR WIDTH="100%"><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Time function:</FONT></FONT></I>
+<BR>&nbsp;
+<TABLE>
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>_asctime_r&nbsp;</FONT></FONT></TD>
+
+<TD></TD>
+
+<TD></TD>
+</TR>
+</TABLE>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcsetlocale_localeconvselect_or_qu.html">Previous</A>|<A HREF="libcMiscellaneous_Macros_and_Functio.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

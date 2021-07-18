@@ -1,0 +1,144 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Acknowledgements</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asZ8000_Dependent_Features.html">Previous</A>
+<BR><A NAME="off_1869393"></A><A NAME="38454095"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Acknowledgements</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>If
+you have contributed to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and your name isn’t listed here, it is not meant as a slight. We just don’t
+know about it. Send mail to the maintainer, and Cygnus will correct the
+situation. Currently the maintainer is Ken Raeburn (email address: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>raeburn@cygnus.com</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT></FONT>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Dean Elsner wrote the original
+GNU assembler for the VAX.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Jay Fenlason maintained </FONT></FONT><FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+0>as
+</FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>for a while,
+adding support for GDB-specific debug information and the 68k series machines,
+most of the preprocessing pass, and extensive changes in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>messages.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>input-file.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>write</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>K. Richard Pixley maintained
+</FONT></FONT><FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+0>as
+</FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>for a while,
+adding various enhancements and many bug fixes, including merging support
+for several processors, breaking </FONT></FONT><FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+0>as
+</FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>up to handle
+multiple object file format back ends (including heavy rewrite, testing,
+an integration of the COFF and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b.out</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+back ends), adding configuration including heavy testing and verification
+of cross assemblers and file splits and renaming, converted </FONT></FONT><FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+0>as
+</FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>to strictly
+ANSI C including full prototypes, added support for m680[34]0 and cpu32,
+did considerable work on i960 including a COFF port (including considerable
+amounts of reverse engineering), a SPARC opcode file rewrite, DEC station,
+RS6000, and HP300 HPUX host ports, updated “</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>know</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>”
+assertions and made them work, much other reorganization, cleanup, and
+lint.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Ken Raeburn wrote the high-level
+BFD interface code to replace most of the code in format-specific I/O modules.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The original VMS support was
+contributed by David L. Kashtan. Eric Youngdale has done much work with
+it since.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The Intel 80386 machine description
+was written by Eliot Dresselhaus.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Minh Tran-Le at IntelliCorp
+contributed some AIX 386 support.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The Motorola 88k machine description
+was contributed by Devon Bowen of Buffalo University and Torbjorn Granlund
+of the Swedish Institute of Computer Science.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Keith Knowles at the Open Software
+Foundation wrote the original MIPS back end (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>tc-mips.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>tc-mips.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+and contributed Rose format support (which hasn’t been merged in yet).
+Ralph Campbell worked with the MIPS code to support </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a.out</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+format.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Support for the Zilog Z8k and
+Hitachi H8/300 and H8/500 processors (tc-z8k, tc-h8300, tc-h8500), and
+IEEE 695 object file format (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>obj-ieee</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+was written by Steve Chamberlain of Cygnus. Steve also modified the COFF
+back end to use BFD for some low-level operations, for use with the H8/300
+and AMD 29k targets.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>John Gilmore built the AMD 29000
+support, added </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+support, and simplified the configuration of which versions accept which
+directives. He updated the 68k machine description so that Motorola’s opcodes
+always produced fixed-size instructions (e.g., </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>jsr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+while synthetic instructions remained shrinkable (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>jbsr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+John fixed many bugs, including true tested cross-compilation support,
+and one bug in relaxation that took a week and required the proverbial
+one-bit fix.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Ian Lance Taylor of Cygnus merged
+the Motorola and MIT syntax for the 68k, completed support for some COFF
+targets (68k, i386 SVR3, and SCO Unix), added support for MIPS, ECOFF and
+ELF targets, and made a few other minor patches.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Steve Chamberlain made </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+able to generate listings.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Hewlett-Packard contributed
+support for the HP9000/300.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Jeff Law wrote </FONT></FONT><FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+0>as
+</FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>and BFD
+support for the native HPPA object format (SOM) along with a fairly extensive
+HPPA testsuite (for both SOM and ELF object formats). This work was supported
+by both the Center for Software Science at the University of Utah and Cygnus.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Support for ELF format files
+has been worked on by Mark Eichin of Cygnus (original, incomplete implementation
+for SPARC), Pete Hoogenboom and Jeff Law at the University of Utah (HPPA
+mainly), Michael Meissner of the Open Software Foundation (i386 mainly),
+and Ken Raeburn of Cygnus (SPARC, and some initial 64-bit support).</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Several engineers at Cygnus
+have also provided many small bug fixes and configuration enhancements.
+Many others have contributed large or small bugfixes and enhancements.
+If you have contributed significant work and are not mentioned on this
+list, and want to be, let us know. Some of the history has been lost; we
+are not intentionally leaving anyone out.</FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asZ8000_Dependent_Features.html">Previous</A></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,99 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Information about a frame</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbSelecting_a_frame.html">Previous</a>|<a href="gdbMIPS_machines_and_the_function_s.html">Next</a>
+<br><a NAME="off_1212729"></a><a NAME="3ddb5850"></a><b><font face="Futura Md BT"><font color="#000000"><font size=+3>Information
+about a frame</font></font></font></b>
+<br>
+<hr SIZE=3 WIDTH="100%"><font face="Times New Roman"><font size=+1>There
+are several other commands to print information about the selected stack
+frame.</font></font>
+<ul><font face="Courier New"><font size=+0>frame</font></font>
+<br><font face="Courier New"><font size=+0>f</font></font>
+<ul><font face="Times New Roman"><font size=+1>When used without any argument,
+this command does not change which frame is selected, but prints a brief
+description of the currently selected stack frame. It can be abbreviated
+</font></font><font face="Courier New"><font size=+0>f</font></font><font face="Times New Roman"><font size=+1>.
+With an argument, this command is used to select a stack frame. See <font color="#008000"><a href="gdbSelecting_a_frame.html">Selecting
+a frame</a></font>.</font></font></ul>
+<font face="Courier New"><font size=+0>info frame</font></font>
+<br><font face="Courier New"><font size=+0>info f</font></font>
+<ul><font face="Times New Roman"><font size=+1>This command prints a verbose
+description of the selected stack frame, including:</font></font></ul>
+</ul>
+
+<ul>
+<ul>
+<ul>
+<li>
+<font face="Times New Roman"><font size=+1>the address of the frame</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>the address of the next frame
+down (called by this frame)</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>the address of the next frame
+up (caller of this frame)</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>the language in which the source
+code corresponding to this frame is written</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>the address of the frame’s arguments</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>the program counter saved in
+it (the address of execution in the caller frame)</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>which registers were saved in
+the frame</font></font></li>
+</ul>
+</ul>
+
+<ul><font face="Times New Roman"><font size=+1>The verbose description
+is useful when something has gone wrong that has made the stack format
+fail to fit the usual conventions.</font></font></ul>
+</ul>
+
+<ul><font face="Courier New"><font size=+0>info frame <i>addr</i></font></font>
+<br><font face="Courier New"><font size=+0>info f <i>addr</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Print a verbose description
+of the frame at address </font></font><i><font face="Courier New"><font size=+0>addr</font></font></i><font face="Times New Roman"><font size=+1>,
+without selecting that frame. The selected frame remains unchanged by this
+command. This requires the same kind of address (more than one for some
+architectures) that you specify in the </font></font><font face="Courier New"><font size=+0>frame</font></font><font face="Times New Roman"><font size=+1>
+command. See <font color="#008000"><a href="gdbSelecting_a_frame.html">Selecting
+a frame</a></font>.</font></font></ul>
+<font face="Courier New"><font size=+0>info args</font></font>
+<ul><font face="Times New Roman"><font size=+1>Print the arguments of the
+selected frame, each on a separate line.</font></font></ul>
+<font face="Courier New"><font size=+0>info locals</font></font>
+<ul><font face="Times New Roman"><font size=+1>Print the local variables
+of the selected frame, each on a separate line. These are all variables
+(declared either static or automatic) accessible at the point of execution
+of the selected frame.</font></font></ul>
+<font face="Courier New"><font size=+0>info catch</font></font>
+<ul><font face="Times New Roman"><font size=+1>Print a list of all the
+exception handlers that are active in the current stack frame at the current
+point of execution. To see other exception handlers, visit the associated
+frame (using the </font></font><font face="Courier New"><font size=+0>up</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>down</font></font><font face="Times New Roman"><font size=+1>,
+or </font></font><font face="Courier New"><font size=+0>frame</font></font><font face="Times New Roman"><font size=+1>
+commands); then use the </font></font><font face="Courier New"><font size=+0>info</font></font><font size=+1><tt>catch</tt>
+declaration.<font face="Times New Roman"> See <font color="#008000"><a href="gdbBreakpoints_and_exceptions.html">Setting
+catchpoints</a></font>.</font></font></ul>
+</ul>
+
+<hr SIZE=3 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbSelecting_a_frame.html">Previous</a>|<a href="gdbMIPS_machines_and_the_function_s.html">Next</a></center>
+
+</body>
+</html>

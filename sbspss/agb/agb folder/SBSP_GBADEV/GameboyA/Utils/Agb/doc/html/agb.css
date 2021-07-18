@@ -1,0 +1,28 @@
+p {font-family: arial, sans-serif; font-size: 10pt}
+p.indent {font-family: arial, sans-serif; font-size: 10pt; margin-left: 18px}
+p.note {font-family: arial, sans-serif; font-size: 8pt}
+p.toc {font-family: arial, sans-serif; font-size: 8pt}
+blockquote {font-family: arial, sans-serif; font-size: 10pt}
+table {font-family: arial, sans-serif; font-size: 10pt}
+tr {font-family: arial, sans-serif; font-size: 10pt}
+th {font-family: arial, sans-serif; font-size: 10pt}
+td {font-family: arial, sans-serif; font-size: 10pt}
+td.toc {font-family: arial, sans-serif; font-size: 8pt}
+ol {font-family: arial, sans-serif; font-size: 10pt}
+ol.toc {font-family: arial, sans-serif; font-size: 8pt}
+ul {font-family: arial, sans-serif; font-size: 10pt}
+li {font-family: arial, sans-serif; font-size: 10pt}
+li.toc {font-family: arial, sans-serif; font-size: 8pt}
+dl {font-family: arial, sans-serif; font-size: 10pt}
+dd {font-family: arial, sans-serif; font-size: 10pt}
+dt {font-family: arial, sans-serif; font-size: 10pt}
+code {font-family: courier new, courier; font-size: 10pt}
+tt {font-family: courier new, courier; font-size: 10pt}
+tt.toc {font-family: courier new, courier; font-size: 8pt}
+pre {font-family: courier new, courier; font-size: 10pt}
+h1 {font-family: arial, sans-serif; font-size: 20pt; font-style: bold}
+h2 {font-family: arial, sans-serif; font-size: 16pt; font-style: bold}
+h3 {font-family: arial, sans-serif; font-size: 12pt; font-style: bold}
+h4 {font-family: arial, sans-serif; font-size: 10pt; font-style: bold}
+h5 {font-family: arial, sans-serif; font-size: 8pt; font-style: bold}
+h6 {font-family: arial, sans-serif; font-size: 8pt; font-style: bold}

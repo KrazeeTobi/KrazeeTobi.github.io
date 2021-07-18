@@ -1,0 +1,825 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Command Line Options</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="ld.html">Contents</A>|<A HREF="ldindex.html">Index</A>|<A HREF="ldInvocation.html">Previous</A>|<A HREF="ldEnvironment_Variables.html">Next</A>
+<BR><A NAME="off_34396"></A><A NAME="853c893b"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Command
+line options for </FONT></FONT><TT><FONT POINT-SIZE="28">ld</FONT></TT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+following example shows the options you can use on the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command line. Following the example is a discussion of the options.</FONT></FONT>
+<UL>
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>ld [ -o <I>output</I> ] <I>objfile</I>
+: ::</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -A<I>architecture</I>
+][ -b <I>input-format</I> ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -Bstatic ] [
+-Bdynamic ] [ -Bsymbolic ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -c <I>MRI-commandfile</I>
+] [ -d | -dc | -dp ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -defsym <I>symbol</I>=<I>expression
+</I>]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -dynamic-linker
+<I>file</I> ] [ -embedded-relocs ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -e <I>entry</I>
+] [ -F ] [ -F <I>format</I> ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -format <I>input</I>-<I>format</I>
+] [ -g ] [ -G size ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -help ] [ -i
+] [ -l archive ] [-L<I>searchdir</I> ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -M ] [ -Map <I>mapfile</I>
+][-m <I>emulation</I> ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -N | -n ] [ -noinhibit-exec
+] [ -no-keep-memory ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -oformat <I>output</I>-<I>format</I>
+][-R <I>filename</I> ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -relax ] [ -retain-symbols-file
+<I>filename</I> ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -r | -Ur ] [
+-rpath <I>dir</I> ] [ -rpath-link <I>dir</I> ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -S ] [ -s ] [
+-soname <I>name</I> ] [ -shared ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -sort-common
+] [ -stats ] [ -T <I>commandfile</I> ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -Ttext <I>org</I>
+] [ -Tdata <I>org</I> ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -Tbss <I>org</I>
+] [ -t ] [ -traditional-format ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -u <I>symbol</I>]
+[ -V] [ -v] [ -verbose] [ -version ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -warn-common
+] [ -warn-constructors] [ -warn-once ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -y <I>symbol</I>
+] [ -X ] [-x ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -( [ archives
+] -) ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ --start-group
+[ archives ] --end-group ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ -split-by-reloc
+<I>count</I> ] [ -split-by-file ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp; [ --whole-archive
+]</FONT></FONT></UL>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This plethora of command-line
+options may seem intimidating, but in actual practice few of them are used
+in any particular context. For instance, a frequent use of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is to link standard Unix object files on a standard, supported Unix system.
+On such a system, to link a file </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>hello.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+use the following example.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>ld -o <I>output</I> /lib/crt0.o
+hello.o -lc</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This tells </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to produce a file called </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>output</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as the result of linking the file </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/lib/crt0.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>hello.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and the library </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libc.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+which will come from the standard search directories. (See the discussion
+of search directories with the </FONT></FONT><FONT COLOR="#008000"><A HREF="ldCommand_Line_Options.html#000062a6"><FONT FACE="Courier New"><FONT SIZE=+0>-L</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option</FONT></FONT></A></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The command-line options
+to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may be specified in any order, and may be repeated at will. Repeating most
+options with a different argument will either have no further effect, or
+override prior occurrences (those further to the left on the command line)
+of that specific option.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The exceptions—which may
+meaningfully be used more than once—are the following: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-A</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(or its synonym, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-format</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-defsym</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-L</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-R</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-u</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-( </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>(or
+its synonym, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--start-group</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The list of object files
+to be linked together, shown as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>objfile</I>...</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+may follow, precede, or be mixed in with command-line options, except that
+an </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>objfile</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+argument may not be placed between an option and its argument.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Usually the linker is invoked
+with at least one object file, but you can specify other forms of binary
+input files using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-R</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+and the script command language. If no binary input files at all are specified,
+the linker does not produce any output, and issues the message ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>No
+input</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>files</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If the linker can not recognize
+the format of an object file, it will assume that it is a linker script.
+A script specified in this way augments the main linker script used for
+the link (either the default linker script or the one specified by using
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-T</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’).
+This feature permits the linker to link against a file which appears to
+be an object or an archive, but actually merely defines some symbol values,
+or uses </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>INPUT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>GROUP</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to load other objects. See <A HREF="ldLinker_scripts.html">Linker scripts</A>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For options whose names are
+a single letter, option arguments must either follow the option letter
+without intervening whitespace, or be given as separate arguments immediately
+following the option that requires them.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For options whose names are
+multiple letters, either one dash or two can precede the option name; for
+example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--oformat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-oformat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are equivalent. Arguments to multiple-letter options must either be separated
+from the option name by an equals sign, or be given as separate arguments
+immediately following the option that requires them. For example, --</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>oformat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>srec</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--oformat=srec</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are equivalent. Unique abbreviations of the names of multiple-letter options
+are accepted.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>-A <I>architecture</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>In the current release of
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+this option is useful only for the Intel 960 family of architectures.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In that </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+configuration, the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>architecture</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+argument identifies the particular architecture in the 960 family, enabling
+some safeguards and modifying the archive-library search path. See </FONT></FONT><FONT COLOR="#008000"><A HREF="ldld_and_the_Intel_960_family.html"><B><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and the Intel 960 family</FONT></FONT></A></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for details.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Future releases of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may support similar functionality for other architecture families.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-b <I>input</I>-<I>format</I></FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may be configured to support more than one kind of object file. If your
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is configured this way, you can use the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option to specify the binary format for input object files that follow
+this option on the command line. Even when </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is configured to support alternative object formats, you don’t usually
+need to specify this, as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+should be configured to expect as a default input format the most usual
+for-mat on each machine. </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>input-format</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a text string, the name of a particular format supported by the BFD
+libraries. (You can list the available binary formats with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>objdump
+-i</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.) ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-format
+<I>input</I>-<I>format</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+has the same effect, as does the script command </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>TARGET</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+See <FONT COLOR="#008000"><A HREF="ldBFD.html">BFD</A></FONT>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You may want to use this
+option if you are linking files with an unusual binary format. You can
+also use ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to switch formats explicitly (when linking object files of different formats),
+by including ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>input-format</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+before each group of object files in a particular format.</FONT></FONT></UL>
+&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The default format is taken
+from the environment variable </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>GNUTARGET</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+See <FONT COLOR="#008000"><A HREF="ldEnvironment_Variables.html">Environmental
+variables</A></FONT>. You can also define the input format from a script,
+using the command, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>TARGET</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+see <A HREF="ldLinker_scripts.html#Commands">Commands&nbsp; dealing with
+object file formats</A>.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-B <I>static</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Do not link against shared
+libraries. This is only meaningful on platforms for which shared libraries
+are supported.</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>-</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>B
+<I>dynamic</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Link against dynamic libraries.
+This is only meaningful on platforms for which shared libraries are supported.
+This option is normally the default on such platforms.</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>-</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>B
+<I>symbolic</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>When creating a shared library,
+bind references to global symbols to the definition within the shared library,
+if any. Normally, it is possible for a program linked against a shared
+library to override the definition within the shared library. This option
+is only meaningful on ELF platforms which support shared libraries.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>MRI-commandfile</FONT></FONT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>For compatibility with linkers
+produced by MRI, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+accepts script files written in an alternate, restricted command language,
+described in <FONT COLOR="#008000"><A HREF="ldMRI_Compatible_Script_Files.html">MRI
+compatible script files</A></FONT>. Introduce MRI script files with the
+option ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’;
+use the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-T</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option to run linker scripts written in the general-purpose </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+scripting language. If </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>MRI-cmdfile</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not exist, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+looks for it in the directories specified by any ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-L</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-d</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-dc</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-dp</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>These three options are
+equivalent; multiple forms are sup-ported for compatibility with other
+linkers. They assign space to common symbols even if a relocatable output
+file is specified (with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’).
+The script command, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>FORCE_COMMON_
+ALLOCATION</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>, has
+the same effect.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-defsym</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>symbol</I>=<I>expression</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Create a global symbol in
+the output file, containing the absolute address given by </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>expression</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+You may use this option as many times as necessary to define multiple symbols
+in the command line. A limited form of arithmetic is supported for the
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>expression</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in this context: you may give a hexadecimal constant or the name of an
+existing symbol, or use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to add or subtract hexadecimal constants or symbols. If you need more elaborate
+expressions, consider using the linker command language from a script (see
+<A HREF="ldLinker_scripts.html#example">Simple linker script example</A>).</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>There should be no white
+space between </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>symbol</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the equals sign (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+and </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>expression</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-dynamic-linker</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set the name of the dynamic
+linker. This is only meaningful when generating dynamically linked ELF
+executables. The default dynamic linker is normally correct; don’t use
+this unless you know what you are doing.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-embedded-relocs</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This option is only meaningful
+when linking MIPS embedded PIC code, generated by the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-membedded-pic</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option to the GNU compiler and assembler. It causes the linker to create
+a table which may be used at runtime to relocate any data which was statically
+initialized to pointer values. See the code in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>testsuite/ld-empic</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for details.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-e<I> entry</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>entry</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as the explicit symbol for beginning execution of your program, rather
+than the default entry point. See <A HREF="ldLinker_scripts.html#Entry_point">Setting
+the e<FONT COLOR="#008000">ntry point</FONT></A> for a discussion of defaults
+and other ways of specifying the entry point.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-F</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-F<I> format</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Ignored. Some older linkers
+used this option throughout a compilation toolchain for specifying object-file
+format for both input and output object files.</FONT></FONT></UL>
+&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The mechanisms </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+uses for this purpose (the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-format</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options for input files, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-oformat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option or the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>TARGET</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command in linker scripts for output files, the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>GNUTARGET</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+environment variable) are more flexible, but </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+accepts the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-F</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option for compatibility with scripts written to call the old linker.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-format<I> input-format</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Synonym for ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>input-format</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-g</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Ignored. Provided for compatibility
+with other tools.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-G <I>value</I></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-G</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>value</FONT></FONT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set the maximum size of
+objects to be optimized using the GP register to </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+under MIPS ECOFF. Ignored for other object file formats.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-help</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print a summary of the command-line
+options on the standard output and exit.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-I</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Perform an incremental link
+(same as option ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’).</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-l <I>ar</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Add archive file </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>archive</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to the list of files to link. This option may be used any number of times.
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will search its path-list for occurrences of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>lib<I>ar</I>.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for every </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>archive</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+specified.</FONT></FONT></UL>
+<A NAME="000062a6"></A><FONT FACE="Courier New"><FONT SIZE=+0>-L <I>searchdir</I></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-L</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>searchdir</FONT></FONT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Add path, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>searchdir</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to the list of paths that </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will search for archive libraries and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+control scripts. You may use this option any number of times. The directories
+are searched in the order in which they are specified on the command line.
+Directories specified on the command line are searched before the default
+directories. All </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-L</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options apply to all </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options, regardless of the order in which the options appear. The default
+set of paths searched (without being specified with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-L</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+depends on which emulation mode </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is using, and in some cases also on how it was configured. See <FONT COLOR="#008000"><A HREF="ldEnvironment_Variables.html">Environmental
+variables</A></FONT>. The paths can also be specified in a link script
+with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SEARCH_DIR</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command. Directories specified this way are searched at the point in which
+the linker script appears in the command line.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-M</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print (to the standard output)
+a link map—diagnostic information about where symbols are mapped by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and information on global common storage allocation.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-Map<I> mapfile</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print to the file </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>mapfile
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>a link map—diagnostic
+information about where symbols are mapped by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and information on global common storage allocation.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-m <I>emulation</I></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-m</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>emulation</FONT></FONT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Emulate the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>emulation</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+linker. You can list the available emulations with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--verbose</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-V</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options. The default depends on </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’s
+configuration.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-N</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set the text and data sections
+to be readable and writable. Also, do not page-align the data segment.
+If the output format supports Unix style magic numbers, mark the output
+as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>OMAGIC</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-n</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set the text segment to
+be read only, and mark the output as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NMAGIC</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+if possible.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-noinhibit-exec</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Retain the executable output
+file whenever it is still usable. Normally, the linker will not produce
+an output file if it encounters errors during the link process; it exits
+without writing an output file when it issues any error whatsoever.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-no-keep-memory</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+normally optimizes for speed over memory usage by caching the symbol tables
+of input files in memory. This option tells </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to instead optimize for memory usage, by rereading the symbol tables as
+necessary. This may be required if </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+runs out of memory space while linking a large executable.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>output</FONT></FONT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>output</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as the name for the program produced by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+if this option is not specified, the name </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a.out</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is used by default. The script command </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>OUTPUT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can also specify the output file name.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-oformat<I> output-format</I></FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may be configured to support more than one kind of object file. If your
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is configured this way, you can use the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-oformat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option to specify the binary format for the output object file. Even when
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is configured to support alternative object formats, you don’t usually
+need to specify this, as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+should be configured to produce as a default output format the most usual
+format on each machine. </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>output-format</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a text string, the name of a particular format supported by the BFD
+libraries. (You can list the available binary formats with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>objdump
+-i</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.) The script
+command </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>OUTPUT_FORMAT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can also specify the output format, but this option overrides it. See <FONT COLOR="#008000"><A HREF="ldBFD.html">BFD</A></FONT>.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-R<I> filename</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Read symbol names and their
+addresses from </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+but do not relocate it or include it in the output. This allows your output
+file to refer symbolically to absolute locations of memory defined in other
+programs.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-relax</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>An option with machine dependent
+effects. Currently this option is only supported on the H8/300 and the
+Intel 960. See </FONT></FONT><FONT COLOR="#008000"><A HREF="ldld_and_the_H8300.html"><B><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and the H8/300</FONT></FONT></A></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT COLOR="#008000"><A HREF="ldld_and_the_Intel_960_family.html"><B><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and the Intel 960 family</FONT></FONT></A></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>On some platforms, the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-relax</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option performs global optimizations that become possible when the linker
+resolves addressing in the program, such as relaxing address modes and
+synthesizing new instructions in the output object file.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>On platforms where this is
+not supported, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-relax</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is accepted, but ignored.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-retain-symbols-file<I> filename</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Retain only the symbols
+listed in the file, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+discarding all others. </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is simply a flat file, with one symbol name per line. This option is especially
+useful in environments (such as VxWorks) where a large global symbol table
+is accumulated gradually, to conserve runtime memory.</FONT></FONT></UL>
+&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-retain-symbols-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+does not discard undefined symbols, or symbols needed for relocations.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You may only specify ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-retain-symbols-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+once in the command line. It overrides ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-s</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-S</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-rpath<I> dir</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Add a directory to the runtime
+library search path. This is used when linking an ELF executable with shared
+objects. All </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-rpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+arguments are concatenated and passed to the runtime linker, which uses
+them to locate shared objects at runtime.</FONT></FONT></UL>
+&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-rpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option is also used when locating shared objects which are needed by shared
+objects explicitly included in the link; see the description of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-rpath-link</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option. If </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-rpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is not used when linking an ELF executable, the contents of the environment
+variable </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>LD_RUN_ PATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will be used if it is defined.</FONT></FONT></UL>
+&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-rpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option may also be used on SunOS. By default, on SunOS, the linker will
+form a runtime search patch out of all the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-L</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options it is given. If a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-rpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option is used, the runtime search path will be formed exclusively using
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-rpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options, ignoring the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-L</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options. This can be useful when using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gcc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+which adds many </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-L</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options which may be on NFS mounted filesystems.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-rpath-link</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>DIR</FONT></FONT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>When using ELF or SunOS,
+one shared library may require another. This happens when an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld
+-shared</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> link includes
+a shared library as one of the input files. When the linker encounters
+such a dependency when doing a non-shared, non-relocateable link, it will
+automatically try to locate the required shared library and include it
+in the link, if it is not included explicitly. In such a case, the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-rpath-link</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option specifies the first set of directories to search. The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-rpath-
+link</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> option may
+specify a sequence of directory names either by specifying a list of names
+separated by colons, or by appearing multiple times. The linker uses the
+following search paths to locate required shared libraries.</FONT></FONT>
+<BR>&nbsp;
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Any directories specified by
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-rpath-link</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Any directories specified by
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-rpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options. The difference between </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-rpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-rpath-link</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is that directories specified by</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>-rpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are included in the executable to use at runtime, whereas the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-rpath-link</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is only effective at link time.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On an ELF system, if the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-rpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>rpath-link</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options were not used, search the contents of the environment variable
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>LD_RUN_PATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On SunOS, if the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-rpath</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option was not used, search any directories specified using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-L</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>For a native linker, the contents
+of the environment variable </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>LD_LIBRARY_PATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The default directories, normally
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/lib</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/usr/lib</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<UL>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>If the required shared library
+is not found, the linker will issue a warning and continue with the link.</FONT></FONT></UL>
+</UL>
+&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>-r</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate relocatable output—i.e.,
+generate an output file that can in turn serve as input to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+This is often called partial linking. As a side effect, in environments
+that support standard Unix magic numbers, this option also sets the output
+file’s magic number to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>OMAGIC</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If this option is not specified, an absolute file is produced. When linking
+C++ programs, this option will not resolve references to constructors;
+to do that, use ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-Ur</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This option does the same
+thing as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-i</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-S</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Omit debugger symbol information
+(but not all symbols) from the output file.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-s</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Omit all symbol information
+from the output file.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-soname</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>name</FONT></FONT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>When creating an ELF shared
+object, set the internal </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>DT
+SONAME</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> field to
+the specified name. When an executable is linked with a shared object which
+has a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>DT SONAME</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+field, then when the executable is run the dynamic linker will attempt
+to load the shared object specified by the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>DT
+SONAME</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> field rather
+than the using the file name given to the linker.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-shared</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Create a shared library.
+This is currently only supported on ELF and SunOS platforms. On SunOS,
+the linker will automatically create a shared library if the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-e</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option is not used and there are undefined symbols in the link.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-sort-common</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Normally, when </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+places the global common symbols in the appropriate output sections, it
+sorts them by size. First come all the one byte symbols, then all the two
+bytes, then all the four bytes, and then everything else. This is to prevent
+gaps between symbols due to alignment constraints. This option disables
+that sorting.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-split-by-reloc<I> count</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Tries to creates extra sections
+in the output file so that no single output section in the file contains
+more than </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>count</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+relocations. This is useful when generating huge relocatable for downloading
+into certain real time kernels with the COFF object file format; since
+COFF cannot represent more than 65535 relocations in a single section.
+Note that this will fail to work with object file formats which do not
+support arbitrary sections. The linker will not split up individual input
+sections for redistribution, so if a single input section contains more
+than </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>count</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+relocations one output section will contain that many relocations.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-split-by-file</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Similar to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-split-by-reloc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+but creates a new output section for each input file.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-stats</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Compute and display statistics
+about the operation of the linker, such as execution time and memory usage.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-Tbss <I>org</I></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-Tdata<I> org</I></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-Ttext<I> org</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>org</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as the starting address for—respectively—the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bss</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>data</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>text</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+segment of the output file. </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>org</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+must be a single hexadecimal integer; for compatibility with other linkers,
+you may omit the leading ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+usually associated with hexadecimal values.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-T<I>commandfile</I></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-T</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>commandfile</FONT></FONT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Read link commands from
+the file, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>commandfile</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+These commands replace </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’s
+default link script (rather than adding to it), so </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>commandfile</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+must specify everything necessary to describe the target format. See <A HREF="ldLinker_scripts.html#Commands">Linker
+scripts</A>. If </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>commandfile</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>does
+not exist, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+looks for it in the directories specified by any preceding ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-L</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options. Multiple ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-T</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options accumulate.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-t</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print the names of the input
+files as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+processes them.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-traditional-format</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>For some targets, the output
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is different in some ways from the output of some existing linker. This
+switch requests </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to use the traditional format instead. For example, on SunOS, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+combines duplicate entries in the symbol string table. This can reduce
+the size of an output file with full debugging information by over 30 percent.
+Unfortunately, the SunOS </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>dbx</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+program can not read the resulting program (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gdb</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has no trouble). The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-traditional-format</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+switch tells </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to not combine duplicate entries.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-u</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>symbol</FONT></FONT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Force </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>symbol</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to be entered in the output file as an undefined symbol. Doing this may,
+for example, trigger linking of additional modules from standard libraries.
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-u</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+may be repeated with different option arguments to enter additional undefined
+symbols.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-Ur</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>For anything other than
+C++ programs, this option is equivalent to ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’:
+it generates relocatable output—i.e., an output file that can in turn serve
+as input to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+When linking C++ programs, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-Ur</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+does resolve references to constructors, unlike ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+It does not work to use ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-Ur</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+on files that were themselves linked with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-Ur</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’;
+once the constructor table has been built, it cannot be added to. Use ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-Ur</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+only for the last partial link, and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+for the others.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>--verbose</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Display the version number
+for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and list the linker emulations supported. Display which input files can
+and cannot be opened.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-v</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-V</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Display the version number
+for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-V</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option also lists the supported emulations.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-version</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Display the version number
+for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and exit.</FONT></FONT></UL>
+<A NAME="warncommon"></A><FONT FACE="Courier New"><FONT SIZE=+0>-warn-common</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Warn when a common symbol
+is combined with another common symbol or with a symbol definition. Unix
+linkers allow this somewhat sloppy practice, but linkers on some other
+operating systems do not. This option allows you to find potential problems
+from combining global symbols. Unfortunately, some C libraries use this
+practice, so you may get some warnings about symbols in the libraries as
+well as in your programs.</FONT></FONT></UL>
+&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>There are three kinds of
+global symbols, illustrated here by C examples:</FONT></FONT>
+<BR>&nbsp;
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int
+i = 1;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>A definition, which goes
+in the initialized data section of the output file.</FONT></FONT>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>extern</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int i;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>An undefined reference,
+which does not allocate space. There must be either a definition or a common
+symbol for the variable somewhere.</FONT></FONT>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int
+i;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>A common symbol. If there
+are only (one or more) common symbols for a variable, it goes in the uninitialized
+data area of the output file. The linker merges multiple common symbols
+for the same variable into a single symbol. If they are of different sizes,
+it picks the largest size. The linker turns a common symbol into a declaration,
+if there is a definition of the same variable.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<UL>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-warn-common</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option can produce the following five kinds of warnings. Each warning consists
+of a pair of lines: the first describes the symbol just encountered, and
+the second describes the previous symbol encountered with the same name.
+One or both of the two symbols will be a common symbol.</FONT></FONT>
+<BR>&nbsp;
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Turning a common symbol into
+a reference, because there is already a definition for the symbol.</FONT></FONT></LI>
+
+<UL><FONT FACE="Courier New"><FONT SIZE=+0><I>file</I>( <I>section</I>):
+warning: common of '<I>symbol</I>'</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+overridden by definition</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0><I>file</I>( <I>section</I>):
+warning: defined here</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Turning a common symbol into
+a reference, because a later definition for the symbol is encountered.
+This is the same as the previous case, except that the symbols are encountered
+in a different order.</FONT></FONT></LI>
+
+<UL><FONT SIZE=+0><FONT FACE="Courier New">file( section): warning: definition
+of </FONT><FONT FACE="Times New Roman">‘</FONT><FONT FACE="Courier New">
+symbol</FONT><FONT FACE="Times New Roman">’</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+overriding common</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>file( section): warning: common
+is here</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Merging a common symbol with
+a previous same-sized common symbol.</FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<UL>
+<UL>
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>file( section): warning: multiple
+common</FONT></FONT>
+<BR><FONT SIZE=+0><FONT FACE="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+of </FONT><FONT FACE="Times New Roman">‘</FONT><FONT FACE="Courier New">
+symbol</FONT><FONT FACE="Times New Roman">’</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>file( section): warning: previous
+common is here</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Merging a common symbol with
+a previous larger common symbol.</FONT></FONT></LI>
+
+<UL><FONT SIZE=+0><FONT FACE="Courier New">file( section): warning: common
+of </FONT><FONT FACE="Times New Roman">‘</FONT><FONT FACE="Courier New">
+symbol</FONT><FONT FACE="Times New Roman">’</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+overridden by larger common</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>file( section): warning: larger
+common is here</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Merging a common symbol with
+a previous smaller common symbol. The following is the same as the previous
+case, except that the symbols are encountered in a different order.</FONT></FONT></LI>
+
+<UL><FONT SIZE=+0><FONT FACE="Courier New">file( section): warning: common
+of </FONT><FONT FACE="Times New Roman">‘</FONT><FONT FACE="Courier New">
+symbol</FONT><FONT FACE="Times New Roman">’</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+overriding smaller common</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>file( section): warning: smaller
+common is here</FONT></FONT>
+<BR>&nbsp;</UL>
+</UL>
+</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-warn-constructors</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Warn if any global constructors
+are used. This is only useful for a few object file formats. For formats
+like COFF or ELF, the linker can not detect the use of global constructors.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-warn-once</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Only warn once for each
+undefined symbol, rather than once per module which refers to it.</FONT></FONT></UL>
+&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>For each archive mentioned
+on the command line, include every object file in the archive in the link,
+rather than searching the archive for the required object files. This is
+normally used to turn an archive file into a shared library, forcing every
+object to be included in the resulting shared library.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-X</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Delete all temporary local
+symbols. For most targets, this is all local symbols whose names begin
+with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>L</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-x</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Delete all local symbols.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-y <I>symbol</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print the name of each linked
+file in which symbol appears. This option may be given any number of times.
+On many systems it is necessary to prepend an underscore. This option is
+useful when you have an undefined symbol in your link but don’t know where
+the reference is coming from.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-(<I>archives</I>-)</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>--start-group <I>archives</I>--end-group</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>archives</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+should be a list of archive files. They may be either explicit file names,
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The specified archives are
+searched repeatedly until no new undefined references are created. Normally,
+an archive is searched only once in the order that it is specified on the
+command line. If a symbol in that archive is needed to resolve an undefined
+symbol referred to by an object in an archive that appears later on the
+command line, the linker would not be able to resolve that reference. By
+grouping the archives, they all be searched repeatedly until all possible
+references are resolved.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Using this option has a significant
+performance cost. Use it only when there are unavoidable circular references
+between two or more archives.</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="ld.html">Contents</A>|<A HREF="ldindex.html">Index</A>|<A HREF="ldInvocation.html">Previous</A>|<A HREF="ldEnvironment_Variables.html">Next</A></CENTER>
+
+<UL>&nbsp;</UL>
+
+</BODY>
+</HTML>

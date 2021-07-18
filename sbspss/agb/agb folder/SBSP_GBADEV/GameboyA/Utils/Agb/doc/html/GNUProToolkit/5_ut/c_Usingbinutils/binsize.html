@@ -1,0 +1,131 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>size</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="bin.html">Contents</A>|<A HREF="binindex.html">Index</A>|<A HREF="binranlib.html">Previous</A>|<A HREF="binstrings.html">Next</A>
+<BR><A NAME="off_362095"></A><A NAME="002b31cd"></A><A NAME="off_362095"></A><A NAME="002b31cd"></A><A NAME="off_362095"></A><A NAME="002b31cd"></A><A NAME="off_362095"></A><A NAME="002b31cd"></A><A NAME="off_362095"></A><A NAME="002b31cd"></A><A NAME="off_362095"></A><A NAME="002b31cd"></A><A NAME="off_362095"></A><A NAME="002b31cd"></A><A NAME="off_362095"></A><A NAME="002b31cd"></A><A NAME="off_362095"></A><A NAME="002b31cd"></A><A NAME="off_362095"></A><A NAME="002b31cd"></A><A NAME="off_362095"></A><A NAME="002b31cd"></A><A NAME="off_362095"></A><A NAME="002b31cd"></A><A NAME="off_362095"></A><A NAME="002b31cd"></A><A NAME="off_362095"></A><A NAME="002b31cd"></A><A NAME="off_362095"></A><A NAME="002b31cd"></A><A NAME="off_362095"></A><A NAME="002b31cd"></A><A NAME="off_362095"></A><A NAME="002b31cd"></A><B><FONT FACE="Courier New"><FONT SIZE=+3>size</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>size&nbsp; [ -A | -B | --format=<I>compatibility</I>
+]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ --help ] [ -d | -o | -x | --radix=<I>number</I> ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ --target=<I>bfdname</I> ] [ -V | --version ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<I>objfile</I>...</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The GNU </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+utility lists the section sizes—and the total size—for each of the object
+or archive files, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>objfile</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+in its argument list. By default, one line of output is generated for each
+object file or each module in an archive.</FONT></FONT>
+
+<P><I><FONT FACE="Courier New"><FONT SIZE=+0>objfile</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>... </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>are
+the object files to be examined.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The command line options
+have the following meanings.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>-A</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-B</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>--format=<I>compatibility</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Using one of these options,
+you can choose whether the output from GNU </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+resembles output from System V </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-A</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--format=sysv</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’),
+or Berkeley </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-B</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--format=berkeley</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’).
+The default is the one-line format similar to Berkeley’s.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The following is an example
+of the Berkeley (default) format of output from </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>size --format=Berkeley ranlib
+size</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>text&nbsp;&nbsp;&nbsp; data&nbsp;&nbsp;&nbsp;&nbsp;
+bss&nbsp;&nbsp;&nbsp; dec&nbsp;&nbsp;&nbsp;&nbsp; hex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+filename</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>294880&nbsp; 81920&nbsp;&nbsp;&nbsp;
+11592&nbsp; 388392&nbsp; 5ed28&nbsp;&nbsp;&nbsp; ranlib</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>294880&nbsp; 81920&nbsp;&nbsp;&nbsp;
+11888&nbsp; 388688&nbsp; 5ee50&nbsp;&nbsp;&nbsp; size</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The following example shows
+the same data, but displayed closer to System V conventions.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>size --format=SysV ranlib size</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>ranlib :</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>section&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; addr</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>.text&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+294880&nbsp;&nbsp;&nbsp; 8192</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>.data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+81920&nbsp;&nbsp;&nbsp;&nbsp; 303104</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>.bss&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+11592&nbsp;&nbsp;&nbsp;&nbsp; 385024</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+388392</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>size :</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>section&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; addr</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>.text&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+294880&nbsp;&nbsp;&nbsp; 8192</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>.data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+81920&nbsp;&nbsp;&nbsp;&nbsp; 303104</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>.bss&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+11888&nbsp;&nbsp;&nbsp;&nbsp; 385024</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+388688</FONT></FONT></UL>
+</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0></FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>--help</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Shows a summary of acceptable
+arguments and options.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>&nbsp;</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-d</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-o</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-x</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>--radix=<I>number</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Using one of these options,
+you can control whether the size of each section is given: in decimal (‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-d</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--radix=10</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’);
+in octal (‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--radix=8</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’);
+or, in hexadecimal (‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--radix=16</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’).</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>In ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--radix=<I>number</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+only the three values (8, 10, 16) are supported. The total size is always
+given in two radices; decimal and hexadecimal for ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-d</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+output; or octal and hexadecimal if you’re using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>--target=<I>bfdname</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Specify that the object-code
+format for </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>objfile</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>bfdname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+This option may not be necessary; </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can automatically recognize many formats. See <FONT COLOR="#008000"><A HREF="binTarget_Selection.html">Target
+selection</A></FONT> for more information.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-V</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>--version</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Display the version number
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="bin.html">Contents</A>|<A HREF="binindex.html">Index</A>|<A HREF="binranlib.html">Previous</A>|<A HREF="binstrings.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

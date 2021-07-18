@@ -1,0 +1,42 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Frederick Geers">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>ARC_options</title>
+</head>
+<body>
+<a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccAMD29K_Options.html#Top">Previous</a>|<a href="gccARM_Options.html#Top">Next</a>
+<br><b><font face="Futura Md BT"><font color="#000000"><font size=+3>ARC
+options</font></font></font></b>
+<br>
+<hr SIZE=6 WIDTH="100%">
+<br><font size=+1>The following options are for the ARC implementations.</font>
+<ul><tt><font size=+1>-EL</font></tt>
+<ul><font size=+1>Compile code for little endian mode. This is the default.</font></ul>
+<tt><font size=+1>-EB</font></tt>
+<ul><font size=+1>Compile code for big endian mode.</font></ul>
+<tt><font size=+1>-mmangle-cpu</font></tt>
+<ul><font size=+1>Prepend the name of the <tt>cpu</tt> to all public symbol
+names. In multiple-processor systems, there are many ARC variants with
+different instruction and register set characteristics. This flag prevents
+code compiled for one CPU to be linked with code compiled for another CPU.
+No facility exists for handling variants that are “almost identical.” This
+is an all or nothing option.</font></ul>
+<tt><font size=+1>-mcpu=cpu</font></tt>
+<ul><font size=+1>Compile code for ARC variant, <i><tt>cpu</tt></i>. Which
+variants are supported depend on the configuration. All variants support
+the default, <tt>-mcpu=base</tt>.</font></ul>
+<tt><font size=+1>-mtext=text <i>section</i></font></tt>
+<br><tt><font size=+1>-mdata=data <i>section</i></font></tt>
+<br><tt><font size=+1>-mrodata=readonly data <i>section</i></font></tt>
+<ul><font size=+1>Put functions, data, and read-only data in <i><tt>text
+section</tt></i>, <i><tt>data section</tt></i>, and <i><tt>readonly data
+section</tt></i>, respectively,&nbsp; by default. This can be overridden
+with the <tt>section</tt> attribute. See <a href="gccSpecifying_Attributes_of_Variabl.html">Specifying
+attributes of variables</a>.</font></ul>
+</ul>
+
+</body>
+</html>

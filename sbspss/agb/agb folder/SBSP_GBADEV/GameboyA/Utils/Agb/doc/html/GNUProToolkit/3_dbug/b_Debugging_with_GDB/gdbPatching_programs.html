@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Patching programs</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbCalling_program_functions.html">Previous</A>|<A HREF="gdbGDB_Files.html">Next</A>
+<BR><A NAME="off_2228224"></A><A NAME="3c680972"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Patching
+programs</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>By default,
+GDB opens the file containing your program’s executable code (or the corefile)
+read-only. This prevents accidental alterations to machine code; but it
+also prevents you from intentionally patching your program’s binary.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you’d like to be able
+to patch the binary, you can specify that explicitly with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+write</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> command.
+For example, you might want to turn on internal debugging flags, or even
+to make emergency repairs.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>set write on</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>set write off</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>If you specify ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+write on</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’, GDB
+opens executable and core files for both reading and writing; if you specify
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set write off</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+(the default), GDB opens them read-only. If you have already loaded a file,
+you must load it again (using the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>exec-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>core-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+commands) after changing </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+write</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>, for your
+new setting to take effect.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>show write</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Display whether executable
+files and core files are opened for writing as well as reading.</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbCalling_program_functions.html">Previous</A>|<A HREF="gdbGDB_Files.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

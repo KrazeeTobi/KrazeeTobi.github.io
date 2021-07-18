@@ -1,0 +1,113 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Source and machine code</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbSpecifying_source_directories.html">Previous</a>|<a href="gdbExamining_Data.html">Next</a>
+<br><a NAME="off_1312019"></a><a NAME="11ee5fcb"></a><b><font face="Futura Md BT"><font size=+3>Source
+and machine code</font></font></b>
+<br>
+<hr SIZE=3 WIDTH="100%"><font face="Times New Roman"><font size=+1>You
+can use the command, </font></font><font face="Courier New"><font size=+0>info
+line</font></font><font face="Times New Roman"><font size=+1>, to map source
+lines to program addresses (and vice versa), and the command, </font></font><font face="Courier New"><font size=+0>disassemble</font></font><font face="Times New Roman"><font size=+1>,
+to display a range of addresses as machine instructions.</font></font>
+<p><font face="Times New Roman"><font size=+1>When run under GNU Emacs
+mode, the </font></font><font face="Courier New"><font size=+0>info line</font></font><font face="Times New Roman"><font size=+1>
+command now causes the arrow to point to the line specified. Also, </font></font><font face="Courier New"><font size=+0>info
+line</font></font><font face="Times New Roman"><font size=+1> prints addresses
+in symbolic form as well as hex.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0>info line<i>linespec</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Print the starting and ending
+addresses of the compiled code for source line linespec. Specify source
+lines in any of the ways understood by the </font></font><font face="Courier New"><font size=+0>list</font></font><font face="Times New Roman"><font size=+1>
+command (see <font color="#008000"><a href="gdbPrinting_source_lines.html">Printing
+source lines</a></font>).</font></font>
+<br><font face="Times New Roman"><font size=+1>For instance, we can use
+</font></font><font face="Courier New"><font size=+0>info
+line</font></font><font face="Times New Roman"><font size=+1> to discover
+the location of the object code for the first line of function,
+</font></font><font face="Courier New"><font size=+0>m4_changequote</font></font><font face="Times New Roman"><font size=+1>,
+as in the following example.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0><b>(gdb) </b>info line m4_changecom</font></font>
+<br><b><font face="Courier New"><font size=+0>Line 895 of "builtin.c" starts
+at pc 0x634c and ends at 0x6350.</font></font></b></ul>
+<font face="Times New Roman"><font size=+1>We can also inquire (using
+</font></font><font face="Courier New"><font size=+0>*<i>addras</i></font></font><font face="Times New Roman"><font size=+1>,
+the form for </font></font><i><font face="Courier New"><font size=+0>linespec</font></font></i><font face="Times New Roman"><font size=+1>)
+what source line covers a particular address, as in the following example.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0><b>(gdb) </b>info line *0x63ff</font></font>
+<br><b><font face="Courier New"><font size=+0>Line 926 of "builtin.c" starts
+at pc 0x63e4 and ends at 0x6404.</font></font></b></ul>
+<font face="Times New Roman"><font size=+1>After </font></font><font face="Courier New"><font size=+0>info
+line</font></font><font face="Times New Roman"><font size=+1>, the default
+address for the x command is changed to the starting address of the line,
+so that ‘</font></font><font face="Courier New"><font size=+0>x/i</font></font><font face="Times New Roman"><font size=+1>’
+is sufficient to begin examining the machine code (see <font color="#008000"><a href="gdbExamining_memory.html">Examining
+memory</a></font>). Also, this address is saved as the value of the convenience
+variable, </font></font><font face="Courier New"><font size=+0>$_ </font></font><font face="Times New Roman"><font size=+1>(see
+<font color="#008000"><a href="gdbConvenience_variables.html">Convenience
+variables</a></font>).</font></font></ul>
+<font face="Courier New"><font size=+0>disassemble</font></font>
+<ul><font face="Times New Roman"><font size=+1>This specialized command
+dumps a range of memory as machine instructions. The default memory range
+is the function surrounding the program counter of the selected frame.
+A single argument to this command is a program counter value; GDB dumps
+the function surrounding this value. Two arguments specify a range of addresses
+(first inclusive, second exclusive) to dump.</font></font>
+<br><font face="Times New Roman"><font size=+1>We can use </font></font><font face="Courier New"><font size=+0>disassemble</font></font><font face="Times New Roman"><font size=+1>
+to inspect the object code range shown in the last info line example (the
+example shows SPARC machine instructions):</font></font>
+<ul>&nbsp;
+<ul><font face="Courier New"><font size=+0><b>(gdb) </b>disas 0x63e4 0x6404</font></font>
+<br><b><font face="Courier New"><font size=+0>Dump of assembler code from
+0x63e4 to 0x6404:</font></font></b>
+<br><b><font face="Courier New"><font size=+0>0x63e4 &lt;builtin_init+5340>:
+ble 0x63f8 &lt;builtin_init+5360></font></font></b>
+<br><b><font face="Courier New"><font size=+0>0x63e8 &lt;builtin_init+5344>:
+sethi %hi(0x4c00), %o0</font></font></b>
+<br><b><font face="Courier New"><font size=+0>0x63ec &lt;builtin_init+5348>:
+ld [%i1+4], %o0</font></font></b>
+<br><b><font face="Courier New"><font size=+0>0x63f0 &lt;builtin_init+5352>:
+0x63fc &lt;builtin_init+5364></font></font></b>
+<br><b><font face="Courier New"><font size=+0>0x63f4 &lt;builtin_init+5356>:
+ld [%o0+4], %o0</font></font></b>
+<br><b><font face="Courier New"><font size=+0>0x63f8 &lt;builtin_init+5360>:
+or %o0, 0x1a4, %o0</font></font></b>
+<br><b><font face="Courier New"><font size=+0>0x63fc &lt;builtin_init+5364>:
+call 0x9288 &lt;path_search></font></font></b>
+<br><b><font face="Courier New"><font size=+0>0x6400 &lt;builtin_init+5368>:
+nop</font></font></b>
+<br><b><font face="Courier New"><font size=+0>End of assembler dump.</font></font></b></ul>
+</ul>
+</ul>
+<tt><font size=+1></font></tt>
+<p><br><tt><font size=+1>set assembly-language <i>instruction-set</i></font></tt>
+<ul><font face="Times New Roman"><font size=+1>This command selects the
+instruction set to use when disassembling</font></font>
+<br><font size=+1><font face="Times New Roman">the program via the </font><tt>disassemble</tt><font face="Times New Roman">
+or </font><tt>x/i</tt><font face="Times New Roman"> com-mands. It is useful
+for architectures that have more than one native instruction set. Currently,
+it is only defined for the Intel </font><i><tt>x</tt></i><font face="Times New Roman">86
+family. You can set </font><i><tt>instruction-set</tt></i><font face="Times New Roman">
+to either i386 or i8086. The default is i386.</font></font></ul>
+</ul>
+
+<center>
+<hr SIZE=3 WIDTH="100%">
+<br><a href="#Top">Top</a>|<a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbSpecifying_source_directories.html">Previous</a>|<a href="gdbExamining_Data.html">Next</a></center>
+
+<ul>
+<ul>
+<ul><b><font face="Courier New"><font size=+0></font></font></b>&nbsp;</ul>
+</ul>
+</ul>
+
+</body>
+</html>

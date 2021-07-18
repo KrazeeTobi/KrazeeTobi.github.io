@@ -1,0 +1,430 @@
+# Microsoft Developer Studio Generated Dependency File, included by prevcl.mak
+
+.\agbanimnode.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbanimnode.h"\
+	".\agbnode.h"\
+	".\ex_reference.h"\
+	".\nodemagic.h"\
+	".\prev_util.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\agbnode.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbnode.h"\
+	".\c_access.h"\
+	".\ex_reference.h"\
+	".\nodeinfo.h"\
+	".\nodemagic.h"\
+	".\nodemanager.h"\
+	".\prev_util.h"\
+	".\screenheader.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\c_access.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbnode.h"\
+	".\c_access.h"\
+	".\ex_reference.h"\
+	".\nodeinfo.h"\
+	".\nodemagic.h"\
+	".\nodemanager.h"\
+	".\prev_util.h"\
+	".\screenheader.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\flipbook.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbanimnode.h"\
+	".\agbnode.h"\
+	".\ex_reference.h"\
+	".\flipbook.h"\
+	".\nodeinfo.h"\
+	".\nodemagic.h"\
+	".\nodemanager.h"\
+	".\prev_util.h"\
+	".\screenheader.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\move_animation.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbanimnode.h"\
+	".\agbnode.h"\
+	".\ex_reference.h"\
+	".\move_animation.h"\
+	".\prev_util.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\multi_switch.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbnode.h"\
+	".\ex_reference.h"\
+	".\multi_switch.h"\
+	".\nodeinfo.h"\
+	".\nodemagic.h"\
+	".\nodemanager.h"\
+	".\prev_util.h"\
+	".\screenheader.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\ndanimation.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbnode.h"\
+	".\c_access.h"\
+	".\ex_reference.h"\
+	".\ndanimation.h"\
+	".\nodeinfo.h"\
+	".\nodemagic.h"\
+	".\nodemanager.h"\
+	".\prev_util.h"\
+	".\screenheader.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\ndbackground.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\image.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbnode.h"\
+	".\c_access.h"\
+	".\ex_reference.h"\
+	".\ndbackground.h"\
+	".\ndimage.h"\
+	".\nodeinfo.h"\
+	".\nodemagic.h"\
+	".\nodemanager.h"\
+	".\prev_util.h"\
+	".\screenheader.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\ndcharacter.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\bmpstruct.h"\
+	"..\..\..\include\character.h"\
+	"..\..\..\include\character16.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\image.h"\
+	"..\..\..\include\palette.h"\
+	"..\..\..\include\pathname.h"\
+	"..\..\..\include\picture.h"\
+	".\agbnode.h"\
+	".\ex_reference.h"\
+	".\ndcharacter.h"\
+	".\ndimage.h"\
+	".\nodemagic.h"\
+	".\token_list.h"\
+	
+
+.\ndimage.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\image.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbnode.h"\
+	".\c_access.h"\
+	".\ex_reference.h"\
+	".\ndimage.h"\
+	".\prev_util.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\ndmapcharacter.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\bmpstruct.h"\
+	"..\..\..\include\char16set.h"\
+	"..\..\..\include\char256set.h"\
+	"..\..\..\include\character.h"\
+	"..\..\..\include\character16.h"\
+	"..\..\..\include\character256.h"\
+	"..\..\..\include\charset.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\image.h"\
+	"..\..\..\include\maptextunit.h"\
+	"..\..\..\include\palette.h"\
+	"..\..\..\include\pathname.h"\
+	"..\..\..\include\picture.h"\
+	".\agbnode.h"\
+	".\ex_reference.h"\
+	".\ndcharacter.h"\
+	".\ndimage.h"\
+	".\ndmapcharacter.h"\
+	".\nodemagic.h"\
+	".\prev_util.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\ndmapimage.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\bmpstruct.h"\
+	"..\..\..\include\char16set.h"\
+	"..\..\..\include\character.h"\
+	"..\..\..\include\character16.h"\
+	"..\..\..\include\character256.h"\
+	"..\..\..\include\charset.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\image.h"\
+	"..\..\..\include\map.h"\
+	"..\..\..\include\map16.h"\
+	"..\..\..\include\map256.h"\
+	"..\..\..\include\mapsrimage.h"\
+	"..\..\..\include\maptextimage.h"\
+	"..\..\..\include\maptextunit.h"\
+	"..\..\..\include\palette.h"\
+	"..\..\..\include\pathname.h"\
+	"..\..\..\include\picture.h"\
+	".\agbnode.h"\
+	".\ex_reference.h"\
+	".\ndcharacter.h"\
+	".\ndimage.h"\
+	".\ndmapimage.h"\
+	".\nodemagic.h"\
+	".\prev_util.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\ndobject.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\image.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbnode.h"\
+	".\c_access.h"\
+	".\ex_reference.h"\
+	".\ndimage.h"\
+	".\ndobject.h"\
+	".\nodeinfo.h"\
+	".\nodemagic.h"\
+	".\nodemanager.h"\
+	".\prev_util.h"\
+	".\screenheader.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\ndpalette.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\bmpstruct.h"\
+	"..\..\..\include\character.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\image.h"\
+	"..\..\..\include\palette.h"\
+	"..\..\..\include\pathname.h"\
+	"..\..\..\include\picture.h"\
+	".\agbnode.h"\
+	".\ex_reference.h"\
+	".\ndimage.h"\
+	".\ndpalette.h"\
+	".\nodeinfo.h"\
+	".\nodemagic.h"\
+	".\nodemanager.h"\
+	".\prev_util.h"\
+	".\screenheader.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\nodeinfo.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbnode.h"\
+	".\c_access.h"\
+	".\ex_reference.h"\
+	".\nodeinfo.h"\
+	".\nodemagic.h"\
+	".\nodemanager.h"\
+	".\prev_util.h"\
+	".\screenheader.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\nodemagic.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbnode.h"\
+	".\ex_reference.h"\
+	".\nodemagic.h"\
+	".\token_list.h"\
+	
+
+.\nodemanager.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbnode.h"\
+	".\ex_reference.h"\
+	".\nodeinfo.h"\
+	".\nodemagic.h"\
+	".\nodemanager.h"\
+	".\prev_util.h"\
+	".\screenheader.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\offset_animation.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbanimnode.h"\
+	".\agbnode.h"\
+	".\ex_reference.h"\
+	".\offset_animation.h"\
+	".\prev_util.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\palette_animation.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbanimnode.h"\
+	".\agbnode.h"\
+	".\ex_reference.h"\
+	".\nodeinfo.h"\
+	".\nodemagic.h"\
+	".\nodemanager.h"\
+	".\palette_animation.h"\
+	".\prev_util.h"\
+	".\screenheader.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\prev_util.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\prev_util.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\rotate_animation.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbanimnode.h"\
+	".\agbnode.h"\
+	".\ex_reference.h"\
+	".\nodemagic.h"\
+	".\prev_util.h"\
+	".\rotate_animation.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\scale_animation.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbanimnode.h"\
+	".\agbnode.h"\
+	".\ex_reference.h"\
+	".\nodemagic.h"\
+	".\prev_util.h"\
+	".\scale_animation.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\screenheader.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\image.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbnode.h"\
+	".\c_access.h"\
+	".\ex_reference.h"\
+	".\ndbackground.h"\
+	".\ndimage.h"\
+	".\nodeinfo.h"\
+	".\nodemagic.h"\
+	".\nodemanager.h"\
+	".\prev_util.h"\
+	".\screenheader.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\switch.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\color.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\agbnode.h"\
+	".\ex_reference.h"\
+	".\nodeinfo.h"\
+	".\nodemagic.h"\
+	".\nodemanager.h"\
+	".\prev_util.h"\
+	".\screenheader.h"\
+	".\switch.h"\
+	".\token_list.h"\
+	".\token_type.h"\
+	
+
+.\token_list.cpp : \
+	"..\..\..\include\agbtypes.h"\
+	"..\..\..\include\filename.h"\
+	"..\..\..\include\pathname.h"\
+	".\token_list.h"\
+	

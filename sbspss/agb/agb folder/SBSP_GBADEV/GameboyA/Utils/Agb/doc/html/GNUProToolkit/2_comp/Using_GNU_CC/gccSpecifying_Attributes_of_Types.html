@@ -1,0 +1,284 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Specifying Attributes of Types</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccSpecifying_Attributes_of_Variabl.html">Previous</A>|<A HREF="gccAn_inline_Function_is_As_Fast_As.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_3803429"></A><A NAME="c2496a03"></A><B><FONT SIZE=+3>Specifying
+attributes of types&nbsp;</FONT></B>&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The keyword, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__attribute__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+allows you to specify special attributes of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+types when you define such types. This keyword is followed by an attribute
+specification inside double parentheses. Three attributes are currently
+defined for types: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>aligned</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>packed</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>transparent_union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Other attributes are defined for functions (see <A HREF="gccDeclaring_Attributes_of_Function.html">Declaring
+attributes of functions</A>) and for variables (see <A HREF="gccSpecifying_Attributes_of_Variabl.html">Specifying
+attributes of variables</A>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You may also specify any
+one of these attributes with ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>__</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+preceding and following its keyword. This allows you to use these attributes
+in header files without being concerned about a possible macro of the same
+name. For example, you may use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><B>__</B>aligned<B>__</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instead of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>aligned</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You may specify the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>aligned</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>transparent_union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attributes either in a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>typedef</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+declaration or just past the closing curly brace of a complete </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>enum</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+type definition and the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>packed</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attribute only past the closing brace of a definition.</FONT></FONT>
+<DL>
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>aligned (<I>alignment</I>)</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This attribute specifies
+a minimum alignment (in bytes) for variables of the specified type. For
+example, the following declarations force the compiler to insure (as fast
+as it can) that each variable whose type is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct
+S</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>more_aligned_int</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will be allocated and aligned <I>at least</I> on an 8-byte boundary.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>struct S { short f[3]; } __attribute__&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ((aligned (8)));&nbsp;
+typedef int more_aligned_int __attribute__&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ((aligned (8)));</FONT></FONT></PRE>
+</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On a SPARC, having all variables
+of type, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct S</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+aligned to 8-byte boundaries allows the compiler to use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ldd</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and std (doubleword load and store) instructions when copying one variable
+of type, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct S</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to another, thus improving run-time efficiency.</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT></DT>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The alignment of any given
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+type is required by the ANSI C standard to be at least a perfect multiple
+of the lowest common multiple of the alignments of all of the members of
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in question. This means that you can effectively adjust the alignment of
+a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+type by attaching an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>aligned</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attribute to any one of the members of such a type, but the notation illustrated
+in the last example is a more obvious, intuitive, and readable way to request
+the compiler to adjust the alignment of an entire </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+type.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>As in the preceding example,
+you can explicitly specify the alignment (in bytes) that you wish the compiler
+to use for a given </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+type. Alternatively, you can leave out the alignment factor and just ask
+the compiler to align a type to the maximum useful alignment for the target
+machine you are compiling for. For example, you could write:</FONT></FONT></DT>
+
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>struct S { short f[3]; } __attribute__ ((aligned));</FONT></FONT></PRE>
+</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Whenever you leave out the alignment
+factor in an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>aligned</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attribute specification, the compiler automatically sets the alignment
+for the type to the largest alignment which is ever used for any data type
+on the target machine you are compiling for. Doing this can often make
+copy operations more efficient, because the compiler can use whatever instructions
+copy the biggest chunks of memory when performing copies to or from the
+variables which have types that you have aligned this way. In the example
+above, if the size of each </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>short</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is 2 bytes, then the size of the entire </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct
+S</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> type is 6 bytes.
+The smallest power of two which is greater than or equal to that is 8,
+so the compiler sets the alignment for the entire </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct
+S</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> type to 8 bytes.</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT></DT>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Although you can ask the
+compiler to select a time-efficient alignment for a given type and then
+declare only individual stand-alone objects of that type, the compiler’s
+ability to select a time-efficient alignment is primarily useful only when
+you plan to create arrays of variables having the relevant (efficiently
+aligned) type. If you declare or use arrays of variables of an efficiently-aligned
+type, then it is likely that your program will also be doing pointer arithmetic
+(or subscripting, which amounts to the same thing) on pointers to the relevant
+type, and the code that the compiler generates for these pointer arithmetic
+operations will often be more efficient for efficiently-aligned types than
+for other types.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>aligned</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attribute can only increase the alignment; but you can decrease it by specifying
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>packed</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as well. See the following discussion for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><A HREF="#packed">packed</A></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT></DT>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The effectiveness of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>aligned</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attributes may be limited by inherent limitations in your linker. On many
+systems, the linker is only able to arrange for variables to be aligned
+up to a certain maximum alignment. (For some linkers, the maximum supported
+alignment may be very very small.) If your linker is only able to align
+variables up to a maximum of 8 byte alignment, then specifying </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>aligned(16)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__attribute__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will still only provide you with 8 byte alignment. See <A HREF="gccSpecifying_Attributes_of_Variabl.html">Specifying
+attributes of variables</A>, and see <A HREF="../../5_ut/b_Usingld/ldLinker_scripts.html">Linker
+scripts</A> and <I><A HREF="../../5_ut/b_Usingld/ld.html">Using LD</A><B>
+</B></I>in <B><I>GNUPro Utilities</I></B> for further information.</FONT></FONT>
+<BR>&nbsp;</UL>
+</UL>
+
+<DT>
+<A NAME="packed"></A><FONT FACE="Courier New"><FONT SIZE=+0>packed</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This attribute, attached
+to an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>enum</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,or
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+type definition, specified that the minimum required memory be used to
+represent the type.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Specifying this attribute for
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+types is equivalent to specifying the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>packed</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attribute on each of the structure or union members. Specifying the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fshort-enums</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+flag on the line is equivalent to specifying the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>packed</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attribute on all </FONT></FONT><FONT FACE="Courier New,Courier">enum</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+definitions.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You may also specify attributes
+between the </FONT></FONT><FONT FACE="Courier New,Courier">enum</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New,Courier">struct</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New,Courier">union</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+tag and the name of the type rather than after the closing brace.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>transparent_union</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This attribute, attached
+to a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+type definition, indicates that any function parameter having that </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+type causes calls to that function to be treated in a special way.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>First, the argument corresponding
+to a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>transparent union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+type can be of any type in the union; no cast is required. Also, if the
+union contains a pointer type, the corresponding argument can be a null
+pointer constant or a void pointer expression; and if the union contains
+a void pointer type, the corresponding argument can be any pointer expression.
+If the union member type is a pointer, qualifiers like </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>const</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+on the referenced type must be respected, just as with normal pointer conversions.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Second, the argument is passed
+to the function using the calling conventions of first member of the transparent
+union, not the calling conventions of the union itself. All members of
+the union must have the same machine representation; this is necessary
+for this argument passing to work properly.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Transparent unions are designed
+for library functions that have multiple interfaces for compatibility reasons.
+For example, suppose the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>wait</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function must accept either a value of type </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int
+*</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> to comply with
+Posix, or a value of type ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union
+wait *</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ to comply
+with the 4.1BSD interface. If&nbsp; the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>wait
+function</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’s parameter
+were ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>void *</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>wait</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+would accept both kinds of arguments, but it would also accept any other
+pointer type and this would make argument type checking less useful. Instead,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>&lt;sys/wait.h></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+might define the interface as follows:</FONT></FONT></DT>
+
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>typedef union&nbsp;
+&nbsp;&nbsp; {&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int *__ip;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; union wait *__up;&nbsp;
+&nbsp;&nbsp; } wait_status_pointer_t __attribute__ \&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ((__transparent_union__));&nbsp;
+pid_t wait (wait_status_pointer_t);</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This interface allows either
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int *</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union wait *</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+arguments to be passed, using the</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int
+*</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ calling convention.
+The program can call </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>wait</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with arguments of either type:</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>int w1 () { int w; return wait (&amp;w); }&nbsp;
+int w2 () { union wait w; return wait (&amp;w); }</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>With this interface,&nbsp; the
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>wait</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+implementation might look like the following example’s input.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>pid_t wait (wait_status_pointer_t p)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return waitpid (-1, p.__ip, 0);&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+</UL>
+
+<DT>
+<FONT FACE="Courier New,Courier">unused</FONT></DT>
+
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>When attached to a type
+(including a </FONT></FONT><FONT FACE="Courier New,Courier">union</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or a </FONT></FONT><FONT FACE="Courier New,Courier">struct</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+this attribute means that variables of that type are meant to appear possibly
+unused. GNU CC will not produce a warning for any variables of that type,
+even if the variable appears to do nothing. This is often the case with
+lock or thread classes, which are usually de ned and then not referenced,
+but contain constructors and destructors that have nontrivial bookkeeping
+functions.</FONT></FONT>
+<BR>&nbsp;</DL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>To specify multiple attributes,
+separate them by commas within the double parentheses; for example,</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>__attribute__ ((aligned (16), packed))</FONT></FONT></PRE>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccSpecifying_Attributes_of_Variabl.html">Previous</A>|<A HREF="gccAn_inline_Function_is_As_Fast_As.html">Next</A></CENTER>
+</DL>
+
+</BODY>
+</HTML>

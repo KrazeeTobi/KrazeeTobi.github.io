@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Summarizing Which Files Differ</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="dif.html">Contents</A>|<A HREF="difindex.html">Index</A>|<A HREF="difSuppressing_Lines_Matching_a_Reg.html">Previous</A>|<A HREF="difBinary_Files_and_Forcing_Text_Co.html">Next</A>
+</P>
+
+<P><A NAME="off_165688"></A><A NAME="4316d74f"></A><B><FONT FACE="Times New Roman"><FONT SIZE=+3>Summarizing
+Which Files Differ </FONT></FONT></B></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When you only want to find
+out whether files are different, and you don't care what the differences
+are, you can use the summary output format. In this format, instead of
+showing the differences between the files, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+simply reports whether files differ. The '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-q</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+and '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--brief</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+options select this output format. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This format is especially
+useful when comparing the contents of two directories. It is also much
+faster than doing the normal line by line comparisons, because </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can stop analyzing the files as soon as it knows that there are any differences.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For more discussion, see
+the following documentation. </FONT></FONT></P>
+
+<UL TYPE=SQUARE>
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difHunks.html">Hunks</A></FONT>
+</FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difSuppressing_Differences_00000004.html">Suppressing
+Differences in Blank and Tab Spacing</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difSuppressing_Case_Differences.html">Suppressing
+Case Differences</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="difSuppressing_Differences_00000005.html">Suppressing
+Differences in Blank Lines </A></FONT></FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difSuppressing_Lines_Matching_a_Reg.html">Suppressing
+Lines Matching a Regular Expression</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difSummarizing_Which_Files_Differ.html">Summarizing
+Which Files Differ</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difBinary_Files_and_Forcing_Text_Co.html">Binary
+Files and Forcing Text Comparisons</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT COLOR="#008000"><A HREF="difdiff_Output_Formats.html"><B><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+Output Formats</FONT></FONT></A></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT></LI>
+</UL>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can also get a brief
+indication of whether two files differ by using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cmp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+For files that are identical, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cmp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+produces no output. When the files differ, by default, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cmp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+outputs the byte offset and line number where the first difference occurs.
+You can use the '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-s</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+option to suppress that information, so that </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cmp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+produces no output and reports whether the files differ using only its
+exit status (see <FONT COLOR="#008000"><A HREF="difInvoking_cmp.html">Invoking
+</A></FONT></FONT></FONT><B><FONT FACE="Courier New"><FONT COLOR="#008000"><FONT SIZE=+0><A HREF="difInvoking_cmp.html">cmp</A></FONT></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Unlike </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cmp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+cannot compare directories; it can only compare two files. </FONT></FONT></P>
+
+</BODY>
+</HTML>

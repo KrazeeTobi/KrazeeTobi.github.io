@@ -1,0 +1,54 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Standard Header File Directories</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccCrossCompilers_and_Header_Files.html">Previous</a>|<a href="gccActually_Building_the_CrossCompi.html#Top">Next</a>
+<br><a NAME="off_3179777"></a><a NAME="15017298"></a><b><font face="Futura Md BT"><font color="#000000"><font size=+3>Standard
+header file directories&nbsp;</font></font></font></b>
+<hr SIZE=6 WIDTH="100%">
+<br><font size=+1>The following directories are standards for GNU CC.</font>
+<ul TYPE=SQUARE>
+<li>
+<font face="Courier New"><font size=+0>GCC_INCLUDE_DIR</font></font><font face="Times New Roman"><font size=+1>
+means the same thing for native and cross. It is where GNU CC stores its
+private include files, and also where GNU CC stores the fixed </font></font><font face="Courier New"><font size=+0>include</font></font><font face="Times New Roman"><font size=+1>
+files. A cross compiled GNU CC runs </font></font><font face="Courier New"><font size=+0>fixincludes</font></font><font face="Times New Roman"><font size=+1>
+on the header files in ‘</font></font><font face="Courier New"><font size=+0>$(tooldir)/include</font></font><font face="Times New Roman"><font size=+1>’.
+(If the cross compilation header files need to be fixed, they must be installed
+before GNU CC is built. If the cross compilation header files are already
+suitable for ANSI C and GNU CC, nothing special need be done).</font></font></li>
+
+<li>
+<font face="Courier New"><font size=+0>GPLUS_INCLUDE_DIR</font></font><font face="Times New Roman"><font size=+1>
+means the same thing for native and cross. It is where </font></font><font face="Courier New"><font size=+0>g++</font></font><font face="Times New Roman"><font size=+1>
+looks first for header files. </font></font><font face="Courier New"><font size=+0>libg++</font></font><font face="Times New Roman"><font size=+1>
+installs only target independent header files in that directory.</font></font></li>
+
+<li>
+<font face="Courier New"><font size=+0>LOCAL_INCLUDE_DIR</font></font><font face="Times New Roman"><font size=+1>
+is used only for a native compiler. It is normally ‘</font></font><font face="Courier New"><font size=+0>/usr/local/include</font></font><font face="Times New Roman"><font size=+1>’.
+GNU CC searches this directory so that users can install header files in
+‘</font></font><font face="Courier New"><font size=+0>/usr/local/include</font></font><font face="Times New Roman"><font size=+1>’.</font></font></li>
+
+<li>
+<font face="Courier New"><font size=+0>CROSS_INCLUDE_DIR</font></font><font face="Times New Roman"><font size=+1>
+is used only for a cross compiler. GNU CC doesn’t install anything there.</font></font></li>
+
+<li>
+<font face="Courier New"><font size=+0>TOOL_INCLUDE_DIR</font></font><font face="Times New Roman"><font size=+1>
+is used for both native and cross compilers. It is the place for other
+packages to install header files that GNU CC will use. For a cross-compiler,
+this is the equivalent of ‘</font></font><font face="Courier New"><font size=+0>/usr/include</font></font><font face="Times New Roman"><font size=+1>’.
+When you build a cross-compiler, </font></font><font face="Courier New"><font size=+0>fixincludes</font></font><font face="Times New Roman"><font size=+1>
+processes any header files in this directory.</font></font></li>
+</ul>
+
+<hr SIZE=3 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccCrossCompilers_and_Header_Files.html">Previous</a>|<a href="gccActually_Building_the_CrossCompi.html#Top">Next</a></center>
+
+</body>
+</html>

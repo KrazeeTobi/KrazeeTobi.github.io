@@ -1,0 +1,114 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Infix Operators</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asPrefix_Operator.html">Previous</A>|<A HREF="asAssembler_Directives.html">Next</A>
+<BR><A NAME="off_688542"></A><A NAME="fca4a7b2"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Infix
+operators</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Infix
+operators</I> take two arguments, one on either side. Operators have precedence,
+but operations with equal precedence are performed left to right. Apart
+from </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>-</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+both arguments must be absolute, and the result is absolute.</FONT></FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Highest Precedence</FONT></FONT></I></B></LI>
+</UL>
+
+<UL>
+<UL><B><FONT FACE="Courier New"><FONT SIZE=+0>*</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1><I>(Multiplication)</I></FONT></FONT>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>/</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1><I>(Division)</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Truncation is the same as
+the C operator ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>/</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.|</FONT></FONT></UL>
+
+
+<P><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B>
+<BR><I><FONT FACE="Times New Roman"><FONT SIZE=+1>(Remainder)</FONT></FONT></I>
+
+<P><B><FONT FACE="Courier New"><FONT SIZE=+0>&lt;</FONT></FONT></B>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>&lt;&lt;</FONT></FONT></B>
+<BR><I><FONT FACE="Times New Roman"><FONT SIZE=+1>(Shift left)</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Same as the C operator ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>&lt;&lt;</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+
+
+<P><B><FONT FACE="Courier New"><FONT SIZE=+0>></FONT></FONT></B>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>>></FONT></FONT></B>
+<BR><I><FONT FACE="Times New Roman"><FONT SIZE=+1>(Shift right)</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Same as the C operator ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>>></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+</UL>
+</UL>
+</UL>
+</UL>
+
+<UL>
+<UL>
+<UL>
+<LI>
+<B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Intermediate Precedence</FONT></FONT></I></B></LI>
+
+<UL><B><FONT FACE="Courier New"><FONT SIZE=+0>|</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1><I>(Bitwise </I>‘<I>Inclusive
+Or</I>’<I>)</I></FONT></FONT>
+
+<P><B><FONT FACE="Courier New"><FONT SIZE=+0>&amp;</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1><I>(Bitwise </I>‘<I>And</I>’<I>)</I></FONT></FONT>
+
+<P><B><FONT FACE="Courier New"><FONT SIZE=+0>ˆ</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1><I>(Bitwise </I>‘<I>Exclusive
+Or</I>’<I>)</I></FONT></FONT>
+
+<P><B><FONT FACE="Courier New"><FONT SIZE=+0>!</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1><I>(Bitwise </I>‘<I>Or Not</I>’<I>)</I></FONT></FONT></UL>
+</UL>
+</UL>
+</UL>
+&nbsp;
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><B><I>Lowest Precedenc</I></B>e</FONT></FONT></LI>
+
+<UL><B><FONT FACE="Courier New"><FONT SIZE=+0>+</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1><I>(Addition)</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>If either argument is absolute,
+the result has the section of the other argument. You may not add together
+arguments from different sections.</FONT></FONT></UL>
+</UL>
+</UL>
+</UL>
+</UL>
+
+<UL>
+<UL>
+<UL>
+<UL><B><FONT FACE="Courier New"><FONT SIZE=+0>-</FONT></FONT></B>
+<BR><I><FONT FACE="Times New Roman"><FONT SIZE=+1>(Subtraction)</FONT></FONT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>If the right argument is
+absolute, the result has the section of the left argument. If both arguments
+are in the same section, the result is absolute. You may not subtract arguments
+from different sections.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>In short, it’s only meaningful
+to add or subtract the <I>offsets</I> in an address; you can only have
+a defined section in one of the two arguments.</FONT></FONT></UL>
+</UL>
+</UL>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asPrefix_Operator.html">Previous</A>|<A HREF="asAssembler_Directives.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>iscntrl[control character predicate]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcisasciiASCII_character_predicate.html">Previous</A>|<A HREF="libcisdigitdecimal_digit_predicate.html">Next</A>
+</P>
+
+<P><A NAME="off_525689"></A><A NAME="a397d3b3"></A><A NAME="off_525689"></A><A NAME="a397d3b3"></A><FONT SIZE=+3><FONT FACE="Courier New">iscntrl
+<BR>
+</FONT><FONT FACE="Times New Roman">[control character predicate] </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>&lt;ctype.h&gt;</FONT><FONT SIZE=-1> <BR>
+</FONT><FONT SIZE=+0>int</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>iscntrl(int</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0><I>c</I>); </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>iscntrl</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is a macro which classifies ASCII integer
+values by table lookup. It is a predicate returning non-zero for control
+characters, and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for other characters. It is defined only when </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>isascii(<I>c</I>)</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">
+is true or </FONT><FONT FACE="Courier">c </FONT><FONT FACE="Times New Roman">is
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>EOF</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can use a compiled subroutine
+instead of the macro definition by undefining the macro, using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#undef</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>iscntrl</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>iscntrl</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">returns non-zero if </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>c</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is a delete character or ordinary control
+character (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0x7F</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0x00</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>–</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0x1F</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+</FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>iscntrl</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is ANSI C. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>No supporting OS subroutines
+are required. </FONT></FONT></P>
+
+</BODY>
+</HTML>

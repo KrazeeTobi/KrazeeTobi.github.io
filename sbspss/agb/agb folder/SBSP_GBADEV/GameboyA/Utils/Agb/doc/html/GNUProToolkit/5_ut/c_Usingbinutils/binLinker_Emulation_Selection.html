@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Linker Emulation Selection</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="bin.html">Contents</A>|<A HREF="binindex.html">Index</A>|<A HREF="binArchitecture_selection.html">Previous</A>
+<BR><A NAME="off_557416"></A><A NAME="d4324acf"></A><A NAME="off_557416"></A><A NAME="d4324acf"></A><A NAME="off_557416"></A><A NAME="d4324acf"></A><A NAME="off_557416"></A><A NAME="d4324acf"></A><A NAME="off_557416"></A><A NAME="d4324acf"></A><A NAME="off_557416"></A><A NAME="d4324acf"></A><A NAME="off_557416"></A><A NAME="d4324acf"></A><A NAME="off_557416"></A><A NAME="d4324acf"></A><A NAME="off_557416"></A><A NAME="d4324acf"></A><A NAME="off_557416"></A><A NAME="d4324acf"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Linker
+emulation selection</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>A linker
+emulation is a <I>personality</I> of the linker, giving the linker default
+values for the other aspects of the target system.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In particular, it consists
+of the linker script, the target and several <I>hook</I> functions (which
+are run at certain stages of the linking process to do special things that
+some targets require).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The command to list valid
+linker emulation values is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld
+-V</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Sample values: ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>hp300bsd</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mipslit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sun4</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Ways to specify:</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>command line option, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-m
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>(see <A HREF="../b_Usingld/ldCommand_Line_Options.html">Command
+line options</A> in <I>Using </I></FONT></FONT><FONT FACE="Courier New,Courier">ld</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>environment variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>LDEMULATION</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>compiled-in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>DEFAULT_EMULATION</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+from </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Makefile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+which comes from </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>EMUL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>config/<I>target</I>.mt</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT></LI>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="bin.html">Contents</A>|<A HREF="binindex.html">Index</A>|<A HREF="binArchitecture_selection.html">Previous</A></CENTER>
+
+</BODY>
+</HTML>

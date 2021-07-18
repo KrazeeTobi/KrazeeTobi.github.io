@@ -1,0 +1,507 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<head><!-- Edited by Tracy B. 2/13/01-->
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Writing to the Setup File (mks4agb.ini)</title>
+</head>
+
+<body>
+
+<p><br>
+</p>
+
+<h2 ALIGN="CENTER">Writing to the Setup File (mks4agb.ini)</h2>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="start">
+  <tr>
+    <td>Using a text editor, the <a href="../yougo.html#SoundObject" TARGET="yougo">Sound
+    Object</a> parameter data&nbsp; are written into the <a href="../yougo.html#mks4agb.ini"
+    TARGET="yougo">mks4agb.ini</a> file that was placed in the Working Directory. <b><font
+    color="#008080">Please set these up as written in this color.&nbsp;</font></b> <br>
+    (In the mks4agb.ini file, <b>text coming after a semicolon&nbsp; (<span>;</span>) to the
+    end of the line is a comment.)&nbsp;</b> <br>
+    <br>
+    If you have proceeded through the set up as described in the tutorial, then all you need
+    to do is set things up as described below, and you should have no problems. The
+    &quot;Explanation&quot; links connect to descriptions of each of the parameters.&nbsp; <br>
+    <br>
+    <font color="#FF0000">* Note: The use of double-byte characters will generate system
+    errors upon execution, so please avoid double-byte characters. (This includes double-byte
+    spaces.)</font> <br>
+    <br>
+    * A set up file is available that has all of the parameters already set up. If writing in
+    the parameters is too much trouble, you can download the <a
+    href="../yougo.html#mks4agb.ini" TARGET="yougo">mks4agb.ini</a> file at the bottom of the
+    page and use it.&nbsp;</td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="index">
+  <tr>
+    <td><a NAME="index"></a><font size="+0"><b>INDEX</b>&nbsp;&nbsp;&nbsp;Writing the Set Up
+    File (mks4agb.ini)</font> <pre>&nbsp; (1) <a href="#rebuild">Rebuild Switch
+</a>&nbsp; (2) <a
+href="#aif_dir">Waveform Data Input Directory
+</a>&nbsp; (3) <a href="#midi_dir">Song Data Input Directory
+</a>&nbsp; (4) <a
+href="#src_dir">Source File Directory
+</a>&nbsp; (5) <a href="#out_dir">Output Directory
+</a>&nbsp; (6) <a
+href="#lib_dir">AGB System Library File Directory
+</a>&nbsp; (7) <a href="#gcc_path">GCC Execution Path
+</a>&nbsp; (8) <a
+href="#sound_mode">Initial Setup Values for Sound Modes
+</a>&nbsp; (9) <a href="#vgroup">Starting Tone Color Group Setup
+</a>&nbsp;(10) <a
+href="#voice_params">Tone Color Setup
+</a>&nbsp;(11) <a href="#split_tbl">Key Split Table Setup
+</a>&nbsp;(12) <a
+href="#snd3_wave">Sound 3 Waveform Setup
+</a>&nbsp;(13) <a href="#mplay_params">Music Player Setup
+</a>&nbsp;(14) <a
+href="#song_params">Song Setup
+</a>&nbsp;(15) <a href="#midi_switch">MIDI Input Performance Setup
+</a>&nbsp;(16) <a
+HREF="#memacc_s">Memory Access Area Size
+</a>&nbsp;(17) <a HREF="#max_line">Maximum Lines for Processing Time of m4aSoundMain()
+</a>&nbsp;(18) <a
+HREF="#only_dma1">DMA Limit Switch
+</a>&nbsp;(19) <a HREF="#sys_rom">System ROM Use Switch
+</a></pre>
+    </td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="rebuild_switch">
+  <tr>
+    <td><h4><a NAME="rebuild"></a>Rebuild Switch&nbsp;</h4>
+    <p>Set to 0.&nbsp;&nbsp;&nbsp;&nbsp;<a href="../yougo.html#RebuildSwitch" TARGET="yougo">(Explanation)</a>
+    </p>
+    <p>&nbsp;&nbsp;<b><font color="#008080"><tt>rebuild = 0</tt> </font></b></p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="aiff_dir">
+  <tr>
+    <td><h4><a NAME="aif_dir"></a>Waveform Data Input Directory</h4>
+    <p>This specifies the directory for the <a href="../yougo.html#{wavename}.aif"
+    TARGET="yougo">Waveform Data File</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="../yougo.html#WaveformDataInputDirectory" TARGET="yougo">(Explanation)</a> </p>
+    <p>&nbsp;&nbsp;<b><font color="#008080"><tt>aif_dir = aiff\</tt></font></b> </p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="midi_dir">
+  <tr>
+    <td><h4><a NAME="midi_dir"></a>Song Data Input Directory</h4>
+    <p>This specifies the directory for the <a href="../yougo.html#{songname}.mid"
+    TARGET="yougo">Song Data File</a>.&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="../yougo.html#SongDataInputDirectory" TARGET="yougo">(Explanation)</a> </p>
+    <p>&nbsp;&nbsp;<b><font color="#008080"><tt>mid_dir = midi\</tt></font></b> </p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="src_dir">
+  <tr>
+    <td><h4><a NAME="src_dir"></a>Source File Directory</h4>
+    <p>This specifies the directory for <a href="../yougo.html#SourceFile" TARGET="yougo">Source
+    Files</a> that are output.&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="../yougo.html#SourceFileDirectory" TARGET="yougo">(Explanation)</a> </p>
+    <p>&nbsp;&nbsp;<b><font color="#008080"><tt>src_dir = src\</tt></font></b> </p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="out_dir">
+  <tr>
+    <td><h4><a NAME="out_dir"></a>Output Directory</h4>
+    <p>This specifies the directory for <a href="../yougo.html#SoundObject" TARGET="yougo">Sound
+    Objects</a> that are output.&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="../yougo.html#OutputDirectory" TARGET="yougo">(Explanation)</a> </p>
+    <p>&nbsp;&nbsp;<b><font color="#008080"><tt>out_dir = out\</tt></font></b> </p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="lib_dir">
+  <tr>
+    <td><h4><a NAME="lib_dir"></a>AGB System Library File Directory</h4>
+    <p>This specifies the directory for the library files installed with the Game Boy Advance
+    Developer Toolkit 2.0.&nbsp;&nbsp;&nbsp;&nbsp;<a href="../yougo.html#LibraryFileDirectory"
+    TARGET="yougo">(Explanation)</a> </p>
+    <p>&nbsp;&nbsp;<b><font color="#008080"><tt>agb_lib = C:\agb\lib</tt></font></b> </p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="gcc_path">
+  <tr>
+    <td><h4><a NAME="gcc_path"></a>GCC Execution Path</h4>
+    <p>This is the execution path for the GCC compiler. Please use the following two: <a
+    href="../yougo.html#GCCExecutionPath" TARGET="yougo">(Explanation)</a> </p>
+    <p><b><font color="#008080"><tt>cmd_path=C:\Program
+    files\Cygnus\thumbelf-000512\H-i686-cygwin32\bin</tt></font></b> <br>
+    <b><font color="#008080"><tt>cmd_path=C:\Program
+    files\Cygnus\native-99r1\H-i686-cygwin32\bin</tt></font></b> <br>
+    <br>
+    <font color="#FF0000">* In the event that the compiler is upgraded, the execution path
+    will also have to be changed.&nbsp;</font> </p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="sound_mode">
+  <tr>
+    <td><h4><a NAME="sound_mode"></a>Initial Setup Values for Sound Modes</h4>
+    <p>Use the values specified in the defaults. They are:&nbsp; <br>
+    <br>
+    &nbsp;&nbsp;- Simultaneously-Produced Direct Sounds:&nbsp;&nbsp;&nbsp;&nbsp;8 <br>
+    &nbsp;&nbsp;- Direct Sound Master
+    Volume:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    13 <br>
+    &nbsp;&nbsp;- Playback Frequency of Direct
+    Sounds:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21024 <br>
+    &nbsp;&nbsp;- Final Output DA Conversion Bit
+    Count:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 <br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<a href="../yougo.html#InitialSetUpValuesForSoundModes"
+    TARGET="yougo">(Explanation)</a> </p>
+    <p><tt>&nbsp;&nbsp;<b><font color="#008080">mode_i = 8<span>,</span> 13<span>,</span>
+    21024<span>,</span> 8</font></b> </tt></p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="vgroup">
+  <tr>
+    <td><h4><a NAME="vgroup"></a>Starting Tone Color Group Setup</h4>
+    <p>In the tutorial demonstration, three Tone Color Groups are set up.&nbsp; <br>
+    After declaring the Tone Color Group Start, the Tone Colors belonging to each of those
+    groups are specified.&nbsp; <br>
+    The correct way to write the settings is summarized in the Tone Color Setup Categories
+    shown below.&nbsp;&nbsp;&nbsp;&nbsp;<a href="../yougo.html#StartingToneColorGroupSettings"
+    TARGET="yougo">(Explanation)</a> </p>
+    <p><tt><b><font color="#008080">&nbsp;&nbsp;vgroup = 0</font></b> <br>
+    <b><font color="#008080">&nbsp;&nbsp; (The Tone Color settings for Tone Color Group 0
+    follow.)</font></b> <br>
+    <b><font color="#008080">&nbsp;&nbsp;vgroup = 1</font></b> <br>
+    <b><font color="#008080">&nbsp;&nbsp; (The Tone Color settings for Tone Color Group 1
+    follow.)</font></b> <br>
+    <b><font color="#008080">&nbsp;&nbsp;vgroup = 2</font></b> <br>
+    <b><font color="#008080">&nbsp;&nbsp; (The Tone Color settings for Tone Color Group 2
+    follow.)</font></b> </tt></p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="voice_params">
+  <tr>
+    <td><h4><a NAME="voice_params"></a>Tone Color Setup</h4>
+    <p>This sets up the Tone Colors corresponding to the MIDI Program Change Numbers.&nbsp; <br>
+    This sets up various elements for each sound such as color tone type (Direct Sound or
+    Compatible Sound), ADSR, etc., and adds a &quot;Color&quot;. <br>
+    Many different types of Tone Color can be specified for even a single set of sampled
+    waveform data by changing the parameters.&nbsp; <br>
+    Many of the Tone Color Settings have been specified in the Tutorial Demonstration. Specify
+    the settings as follows. The start definition for the Tone Color Groups is also
+    included.&nbsp;&nbsp;&nbsp;&nbsp;<a href="../yougo.html#ToneColorSettings" TARGET="yougo">(Explanation)</a>
+    </p>
+    <p><a href="#index">Return to Top</a> </p>
+    <pre><tt><b><font color="#008080">vgroup = 0
+p000 = A, gun,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+p001 = A, se3,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+p002 = A, se5,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+p003 = A, se8,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+p004 = A, se9b,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+p005 = A, flutec4,&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+p006 = Q, sc2dt12,&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+p007 = Q, sc1dt50,&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99,,,,1c
+p008 = Q, sc2dt50,&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+p009 = Q, sc1dt50,&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99,,,,1c
+p010 = Q, sc4st15,&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+p011 = A, suboscc3,&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+p012 = A, orgc3,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+
+
+p016 = Q, sc2dt12,&nbsp;&nbsp;&nbsp; 99,&nbsp; 66,&nbsp; 00,&nbsp; 99
+
+p017 = A, synbsc2,&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 80
+p018 = A, brassc3,&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 80
+p019 = A, mutetpc4,&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 80
+p020 = A, cutgtg3,&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+p021 = A, sawg3,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+p022 = A, sinec3,&nbsp;&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+p023 = A, revcym,&nbsp;&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+p024 = S, 0, 2, c1
+p025 = S, 1, 2, c1
+p026 = A, engin01a,&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+p027 = Q, sc3w001,&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99
+
+p127 = R, 1, c1
+
+vgroup = 1
+p000 = F, housebd,&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 60&nbsp;&nbsp;&nbsp; ;C1
+p001 = F, housesd,&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 60&nbsp;&nbsp;&nbsp; ;C#1
+p002 = F, housechh,&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 60&nbsp;&nbsp;&nbsp; ;D1
+p003 = F, houseohh,&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 60&nbsp;&nbsp;&nbsp; ;D#1
+p004 = F, tamba,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 60&nbsp;&nbsp;&nbsp; ;E1
+p005 = F, vibra,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 60&nbsp;&nbsp;&nbsp; ;F1
+p006 = F, timbale,&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 60&nbsp;&nbsp;&nbsp; ;F#1
+p007 = F, se8,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 60&nbsp;&nbsp;&nbsp; ;G1
+
+vgroup = 2
+p000 = A, harpc3,&nbsp;&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 40
+p001 = A, harpc5,&nbsp;&nbsp;&nbsp;&nbsp; 99,&nbsp; 99,&nbsp; 99,&nbsp; 40</font></b></tt></pre>
+    <p>You may view the content of the parameters in the Sound Driver Manual by means of the
+    &quot;Explanation&quot; link.&nbsp; </p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="split_tbl">
+  <tr>
+    <td><h4><a NAME="split_tbl"></a> Key Split Table Setup</h4>
+    <p>This registers the Key Split Table Numbers. In the Tutorial Demonstration, a number of
+    Key Split Tone Colors are used. Set them up as shown below. <a
+    href="../yougo.html#KeySplitTable" TARGET="yougo">(Explanation)</a> </p>
+    <p><a href="#index">Return to Top</a> </p>
+    <pre><tt><font color="#008080"><b>;       C1, C#1,D1. D#1,E1, F1, F#1,G1, G#1,A1,A#1, B1,
+t000 =  00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,&nbsp; ;C1-B1
+
+;       C2, C#2,D2. D#2,E2, F2, F#2,G2, G#2,A2,A#2, B2,
+        00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,&nbsp; ;C2-B2
+
+;       C3, C#3,D3. D#3,E3, F3, F#3,G3, G#3,A3,A#3, B3,
+        00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,&nbsp; ;C3-B3
+
+;       C4, C#4,D4. D#4,E4, F4, F#4,G4, G#4,A4,A#4, B4,
+        01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01,&nbsp; ;C4-B4
+
+;       C5, C#5,D5. D#5,E5, F5, F#5,G5, G#5,A5,A#5, B5,
+        01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01,&nbsp; ;C5-B5
+
+;       C6, C#6,D6. D#6,E6, F6, F#6,G6, G#6,A6,A#6, B6,
+        01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01&nbsp;&nbsp; ;C6-B6
+
+t001 =  00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,&nbsp; ;C1-B1
+        00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,&nbsp; ;C2-B2
+        00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,&nbsp; ;C3-B3
+        01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01,&nbsp; ;C4-B4
+        01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01,&nbsp; ;C5-B5
+        01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01&nbsp;&nbsp; ;C6-B6</b></font></tt></pre>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="snd3_wave">
+  <tr>
+    <td><h4><a NAME="snd3_wave"></a> Sound 3 Waveform Setup</h4>
+    <p>This sets up the Sound 3 Waveforms. A number of Tone Colors that use Sound 3 are used
+    in the Tutorial Demonstration. Set them up as shown below.&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="../yougo.html#Sound3WaveformSettings" TARGET="yougo">(Explanation)</a> </p>
+    <pre STYLE="color:#008080"><tt><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; w000 = 0011235689ACDEEFFFEEDCA986532110, sinewave
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; w001 = 0123456789ABCDEFFEDCBA9876543210, triangle
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; w002 = FFEEDDCCBBAA99887766554433221100, fat_saw
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; w003 = FEDCBA99888888887777777766543210, thin_saw
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; w004 = FFFF0000000000000000000000000000, square12
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; w005 = FFFFFFFF000000000000000000000000, square25
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; w006 = FFFFFFFFFFFF00000000000000000000, square37
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; w007 = FFFFFFFFFFFFFFFF0000000000000000, square50</b></tt></pre>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="mplay_params">
+  <tr>
+    <td><h4><a NAME="mplay_params"></a> Music Player Setup</h4>
+    <p>This specifies the <a href="../yougo.html#MusicPlayer" TARGET="yougo">Music Player</a>
+    used during a game and the number of tracks that can be played back. Four Music Players
+    are used in this Tutorial Demonstration. Set them up as shown below. <a
+    href="../yougo.html#MusicPlayerSettings" TARGET="yougo">(Explanation)</a> </p>
+    <pre STYLE="color:#008080"><tt><b>&nbsp;&nbsp;&nbsp;&nbsp;mp00 = 8</b>                                  
+
+<b>&nbsp;&nbsp;&nbsp;&nbsp;mp01 = 6</b>                                  
+
+<b>&nbsp;&nbsp;&nbsp;&nbsp;mp02 = 2</b>                                  
+
+<b>&nbsp;&nbsp;&nbsp;&nbsp;mp03 = 2</b></tt></pre>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="song_params">
+  <tr>
+    <td><h4><a NAME="song_params"></a> Song Setup</h4>
+    <p>This sets up the <a href="../yougo.html#Song Data" TARGET="yougo">Song Data</a>. The
+    numbers specified here are used when starting songs or sound effects by number. By setting
+    each parameter, it is possible to specify priority, etc. Many songs are used in the
+    Tutorial Demonstration. Set them up as shown below.&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="../yougo.html#SongSettings" TARGET="yougo">(Explanation)</a> </p>
+    <pre STYLE="color:#008080"><tt><b>
+s001 = se_d01,    3, 0, 127, 10     ; Direct Single Event
+s002 = se_dbend,  3, 0, 127, 10     ; Direct + Pitch Bend + Single Event
+s003 = se_dvib,   3, 0,  60, 10     ; Direct + Vibrato + Single Event
+s004 = se_gbend2, 3, 0,  90, 10     ; Compatible + Pitch Bend + Single Event
+s005 = se_swep2,  3, 0,  90, 10     ; Compatible + Sweep + Single Event
+s006 = se_noise,  3, 0, 127, 10     ; Compatible + Noise + Single Event
+s007 = sound3,    3, 0, 127, 10     ; Compatible Sound 3</b></tt></pre>
+    <pre STYLE="color:#008080"><tt><b>
+s008 = se_dben2,  3, 0, 127, 10     ; Direct + Pitch Bend + Continuous
+s009 = se_gbend,  3, 0,  90, 10     ; Compatible + Pitch Bend + Continuous
+s010 = se_sweep,  3, 0, 127, 10     ; Compatible + Sweep + Continuous
+s011 = se_dgmix,  3, 0, 127, 10     ; Direct + Compatible (Mixed)
+s013 = agb2000,   2, 0, 127, 20, 50 ; AGB 2000!!
+s014 = wario,     0, 0, 100,  0, 50 ;
+s015 = engin,     3, 0, 127, 10     ; Engine Sound (Loop)</b></tt></pre>
+    <p>You may view the content of the parameters in the Sound Driver Manual by means of the
+    &quot;Explanation&quot; link.&nbsp; </p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="midi_switch">
+  <tr>
+    <td><h4><a NAME="midi_switch"></a> MIDI Input Performance Setup</h4>
+    <p>Use the values specified in the defaults. They are: <br>
+    <br>
+    &nbsp;&nbsp;- MIDI Input Performance
+    Switch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 <br>
+    &nbsp;&nbsp;- MIDI Performance Tone Color Group&nbsp;&nbsp;&nbsp; 0 <br>
+    &nbsp;&nbsp;- MIDI Performance Master Volume&nbsp;&nbsp;&nbsp;&nbsp; 120 <br>
+    &nbsp;&nbsp;- MIDI Performance
+    Priority&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    200 <br>
+    &nbsp;&nbsp;- MIDI Performance Tempo (Affects LFO Speed)&nbsp;&nbsp; 120 <br>
+    <br>
+    <a href="../yougo.html#MIDI-IN" TARGET="yougo">(Explanation)</a> </p>
+    <pre><font color="#008080"><b>&nbsp;&nbsp;pbymidi = 0, 0, 120, 200, 120</b></font></pre>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="memacc_s">
+  <tr>
+    <td><h4><a NAME="memacc_s">Memory Access Area Size</a></h4>
+    <p>Use the value set up as the default. <a HREF="../yougo.html#MemoryAccessAreaSize"
+    TARGET="yougo">(Explanation)</a><br>
+    <font color="#008080"><b></p>
+    <pre><tt>&nbsp;&nbsp;memacc_s = 16</tt></b></font></pre>
+    <p><a HREF="#index">Return to Top</a></p>
+    </td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="max_line">
+  <tr>
+    <td><h4><a NAME="max_line">Maximum Lines for Processing Time of m4aSoundMain()</a></h4>
+    <p>You can set a limit for the processing time in the sound main routine.<br>
+    Specify no limit here, &quot;0&quot;. <a HREF="../yougo.html#ProcessingTimeMaxLine"
+    TARGET="yougo">(Explanation)</a><br>
+    <font color="#008080"><b></p>
+    <pre><tt>&nbsp;&nbsp;max_line = 0</tt></b></font></pre>
+    <p><a HREF="#index">Return to Top</a></p> 
+    </td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="only_dma1">
+  <tr>
+    <td><h4><a NAME="only_dma1"></a>DMA Limit Switch</h4>
+    <p>Use the value specified in defaults. <a href="../yougo.html#DMALimitSwitch"
+    TARGET="yougo">(Explanation)</a> </p>
+    <pre><font color="#008080"><b>&nbsp;&nbsp;only_dma1 = 0</b></font></pre>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="sys_rom">
+  <tr>
+    <td><h4><a NAME="sys_rom">System ROM Use Switch</a></h4>
+    <p>Use the value set as the default. <a HREF="../yougo.html#SystemROMUseSwitch"
+    TARGET="yougo">(Explanation)</a> </p>
+    <pre>
+<font color="#008080"><b>&nbsp;&nbsp;sys_rom = 0</b></font></pre>
+    <p><a HREF="#index">Return to Top</a> </td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="ini_dload">
+  <tr>
+    <td>The mks4agb.ini is the setup file that is required for sound creation in this
+    system.&nbsp; <br>
+    When actually using the system, please be sure to read the <b>Details</b> which are linked
+    to each of the categories (Explanation).&nbsp; <br>
+    <br>
+    A mks4agb.ini file with the above settings can be downloaded below.&nbsp; <br>
+    * <a href="../SoundData/IniFile.zip">Download a Sample Setup File (IniFile.zip 4KB)</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="end">
+  <tr>
+    <td>This concludes the settings for the mks4agb.ini file. Please proceed to the next
+    section.&nbsp; <br>
+    <br>
+    <b>Next:&nbsp;</b><a href="tuto2_4.html">Running mks4agb.exe</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<p align="center">[ | <a href="tuto2_2.html">Back</a> | <a href="../index.html">User's
+Manual Table of Contents</a> | <a href="tuto0.html">Tutorial Table of Contents</a> | <a
+href="tuto2_4.html">Next</a> | ] <br>
+</p>
+</body>
+</html>

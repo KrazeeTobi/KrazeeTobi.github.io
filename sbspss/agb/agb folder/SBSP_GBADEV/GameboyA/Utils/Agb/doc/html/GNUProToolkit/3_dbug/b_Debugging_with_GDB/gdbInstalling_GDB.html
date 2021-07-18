@@ -1,0 +1,129 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Installing GDB</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbContributors_to_GDB.html">Previous</A>|<A HREF="gdbCompiling_GDB_in_another_directo.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>&nbsp;<A NAME="off_131072"></A><A NAME="536465df"></A><B>Installing
+GDB&nbsp;</B>&nbsp;</FONT></FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB comes with a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+script that automates the process of preparing GDB for installation; you
+can then use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to build the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gdb</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+program.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The GDB distribution includes
+all the source code you need for GDB in a single directory, whose name
+is usually composed by appending the version number to ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gdb</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>That directory contains the
+following.</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(and supporting files)</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Script for configuring GDB
+and all its supporting libraries</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>gdb</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The source specific to GDB
+itself</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>bfd</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Source for the Binary File
+Descriptor library</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>include</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GNU include files</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>libiberty</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Source for the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-liberty</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+free software library</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>opcodes</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Source for the library of
+opcode tables and disassemblers</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>readline</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Source for the GNU command-line
+interface</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>glob</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Source for the GNU filename
+pattern-matching subroutine</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>mmalloc</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Source for the GNU memory-mapped
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>malloc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+package</FONT></FONT></UL>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The simplest way to configure
+and build GDB is to run </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+from the source directory.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Pass the identifier for the
+platform on which GDB will run as an argument.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Change to the directory in
+which GDB resides. Then, use the following command.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>./configure<I> host</I></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></UL>
+<I><FONT FACE="Courier New"><FONT SIZE=+0>host</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is an identifier such as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sun4</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>decstation</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+that identifies the platform where GDB will run. (You can often leave off
+host; </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+tries to guess the correct value by examining your system.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Running ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure
+<I>host</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ and
+then running </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+builds the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bfd</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>readline</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mmalloc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libiberty</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+libraries, then </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gdb</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+itself. The configured source files, and the binaries, are left in the
+corresponding source directories.</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a Bourne-shell (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/bin/sh</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+script; if your system does not recognize this automatically when you run
+a different shell, you may need to run </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sh</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+on it explicitly:</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>sh configure <I>host</I></FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If you run </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+from a directory that contains source directories for multiple libraries
+or programs, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+creates configuration files for every directory level underneath (unless
+you tell it not to, with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--norecursion</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option). You can run the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>configure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+script from any of the subordinate directories if you only want to configure
+from one of those subdirectories, but be sure to specify a path to it.&nbsp;
+You can install </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gdb</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+anywhere; it has no hardwired paths. However, you should make sure that
+the shell on your path (named by the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SHELL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+environment variable) is publicly readable. Remember that GDB uses the
+shell to start your program—some systems refuse to let GDB debug child
+processes whose programs are not readable.</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbContributors_to_GDB.html">Previous</A>|<A HREF="gdbCompiling_GDB_in_another_directo.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

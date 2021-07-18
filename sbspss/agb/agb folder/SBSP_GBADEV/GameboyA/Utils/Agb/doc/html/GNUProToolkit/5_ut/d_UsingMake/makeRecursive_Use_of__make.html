@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Recursive Use of  make</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeInterrupting_or_Killing_make.html">Previous</A>|<A HREF="makeHow_the_MAKE_Variable_Works.html">Next</A>
+<BR><A NAME="off_920162"></A><A NAME="7b5a4e9b"></A><B><FONT SIZE=+3><FONT FACE="Futura Md BT">Recursive
+use of </FONT><FONT FACE="Courier New">make</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Recursive
+use of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+means using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as a command in a makefile. This technique is useful when you want separate
+makefiles for various subsystems that compose a larger system. For example,
+suppose you have a subdirectory, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>subdir</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+which has its own makefile, and you would like the containing directory’s
+makefile to run </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+on the subdirectory. You can do it by writing the following declaration.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>subsystem:</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+cd subdir; $(MAKE)</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Or, equivalently (see <FONT COLOR="#008000"><A HREF="makeSummary_of_Options.html">Summary
+of options</A></FONT>), use the following input.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>subsystem:</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$(MAKE) -C subdir</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can write recursive </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+commands just by copying this example, but there are many things to know
+about how they work and why, and about how the sub-</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+relates to the top-level </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>See the following documentation
+for more discusssion.</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT COLOR="#008000"><A HREF="makeHow_the_MAKE_Variable_Works.html"><I><FONT FACE="Times New Roman"><FONT SIZE=+1>How
+the </FONT></FONT></I><B><FONT FACE="Courier New"><FONT SIZE=+0>MAKE</FONT></FONT></B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+variable works</FONT></FONT></I></A></FONT><I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></I></LI>
+
+<LI>
+<FONT COLOR="#008000"><A HREF="makeCommunicating_Variables_to_a_Sub.html"><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Communicating
+variables to a sub-</FONT></FONT></I><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B></A></FONT><I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></I></LI>
+
+<LI>
+<FONT COLOR="#008000"><A HREF="makeCommunicating_Options_to_a_Subma.html"><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Communicating
+options to a sub-</FONT></FONT></I><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B></A></FONT><I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></I></LI>
+
+<LI>
+<FONT COLOR="#008000"><A HREF="makeThe_printdirectory_Option.html"><I><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+‘</FONT></FONT></I><B><FONT FACE="Courier New"><FONT SIZE=+0>--print-directory</FONT></FONT></B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option</FONT></FONT></I></A></FONT><I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></I></LI>
+</UL>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeInterrupting_or_Killing_make.html">Previous</A>|<A HREF="makeHow_the_MAKE_Variable_Works.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

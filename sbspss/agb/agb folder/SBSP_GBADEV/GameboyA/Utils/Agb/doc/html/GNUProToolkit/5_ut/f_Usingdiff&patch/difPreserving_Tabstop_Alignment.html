@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<TITLE>Preserving Tabstop Alignment</TITLE>
+</HEAD><BODY>
+<A HREF= "dif.html">Contents</A>|<A HREF= "difindex.html">Index</A>|<A HREF="difMaking_diff_Output_Prettier.html">Previous</A>|<A HREF="difPaginating_diff_Output.html">Next</A>
+<P>
+<A NAME="off_624610"></A><A NAME="836ee0bd"></A><FONT FACE="Times New Roman" SIZE="6"><B>Preserving Tabstop Alignment
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">The lines of text in some of the diff output formats are preceded by one or
+two characters that indicate whether the text is inserted, deleted, or changed.
+The addition of those characters can cause tabs to move to the next tabstop,
+throwing off the alignment of columns in the line. GNU </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> provides two ways to make tab-aligned columns line up correctly. 
+<P>
+The first way is to have </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> convert all tabs into the correct number of spaces before outputting them.
+<P>
+Select this method with the '</FONT><FONT FACE="Courier New" SIZE="3">-t</FONT><FONT FACE="Times New Roman" SIZE="4">' or '</FONT><FONT FACE="Courier New" SIZE="3">--expand-tabs</FONT><FONT FACE="Times New Roman" SIZE="4">' option. </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> assumes that tabstops are set every 8 columns. To use this form of output
+with </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4">, use the '</FONT><FONT FACE="Courier New" SIZE="3">-l</FONT><FONT FACE="Times New Roman" SIZE="4">' or '</FONT><FONT FACE="Courier New" SIZE="3">--ignore-white-space</FONT><FONT FACE="Times New Roman" SIZE="4">' option (see </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difApplying_Patches_with_Changed_Wh.html">Applying Patches with Changed White Space</A></FONT><FONT FACE="Times New Roman" SIZE="4"> for more information). 
+<P>
+The other method for making tabs line up correctly is to add a tab character
+instead of a space after the indicator character at the beginning of the line.
+This ensures that all following tab characters are in the same position relative
+to tabstops that they were in the original files, so that the output is
+aligned correctly. Its disadvantage is that it can make long lines too long to fit on
+one line of the screen or the paper. It also does not work with the unified
+output format which does not have a space character after the change type
+indicator character.
+<P>
+Select this method with the '</FONT><FONT FACE="Courier New" SIZE="3">-T</FONT><FONT FACE="Times New Roman" SIZE="4">' or '</FONT><FONT FACE="Courier New" SIZE="3">--initial-tab</FONT><FONT FACE="Times New Roman" SIZE="4">' option.
+<P>
+</FONT></BODY>
+</HTML>

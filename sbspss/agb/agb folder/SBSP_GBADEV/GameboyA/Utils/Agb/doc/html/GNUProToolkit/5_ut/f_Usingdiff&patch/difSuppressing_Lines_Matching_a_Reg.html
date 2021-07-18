@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Suppressing Lines Matching a Regular Expression</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="dif.html">Contents</A>|<A HREF="difindex.html">Index</A>|<A HREF="difSuppressing_Case_Differences.html">Previous</A>|<A HREF="difSummarizing_Which_Files_Differ.html">Next</A>
+</P>
+
+<P><A NAME="off_164443"></A><A NAME="d9924ca3"></A><B><FONT FACE="Times New Roman"><FONT SIZE=+3>Suppressing
+Lines Matching a Regular Expression </FONT></FONT></B></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To ignore insertions and
+deletions of lines that match a regular expression, use the '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-I</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>regexp</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+or '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--ignore-matching-lines=
+<I>regexp</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+option. You should escape regular expressions that contain shell meta-characters
+to prevent the shell from expanding them. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff
+-I 'ˆ[0-9]'</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>' ignores
+all changes to lines beginning with a digit. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>However, '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-I</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+only ignores the insertion or deletion of lines that contain the regular
+expression if every changed line in the hunk—every insertion and every
+deletion—matches the regular expression. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In other words, for each
+non-ignorable change, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+prints the complete set of changes in its vicinity, including the ignorable
+ones. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can specify more than
+one regular expression for lines to ignore by using more than one '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-I</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+option. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+tries to match each line against each regular expression, starting with
+the last one given. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For more documentation, see
+the following. </FONT></FONT></P>
+
+<UL TYPE=SQUARE>
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difHunks.html">Hunks</A></FONT>
+</FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difSuppressing_Differences_00000004.html">Suppressing
+Differences in Blank and Tab Spacing</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difSuppressing_Case_Differences.html">Suppressing
+Case Differences</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="difSuppressing_Differences_00000005.html">Suppressing
+Differences in Blank Lines </A></FONT></FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difSummarizing_Which_Files_Differ.html">Summarizing
+Which Files Differ</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difBinary_Files_and_Forcing_Text_Co.html">Binary
+Files and Forcing Text Comparisons</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT COLOR="#008000"><A HREF="difdiff_Output_Formats.html"><B><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+Output Formats</FONT></FONT></A></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT></LI>
+</UL>
+
+</BODY>
+</HTML>

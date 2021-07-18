@@ -1,0 +1,175 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Functions for File Names</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeFunctions_for_String_Substitutio.html">Previous</A>|<A HREF="makeThe_foreach_Function.html">Next</A>
+<BR><A NAME="off_1574205"></A><A NAME="792c7591"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Functions
+for file names</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Several
+of the built-in expansion functions relate specifically to taking apart
+file names or lists of file names.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Each of the following functions
+performs a specific transformation on a file name. The argument of the
+function is regarded as a series of file names, separated by whitespace.
+(Leading and trailing whitespace is ignored.) Each file name in the series
+is transformed in the same way and the results are concatenated with single
+spaces between them.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>$(dir <I>names</I>...)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Extracts the directory-part
+of each file name in names. The directory-part of the file name is everything
+up through (and including) the last slash in it. If the file name contains
+no slash, the directory part is the string ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>./</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(dir
+src/foo.c hacks)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+produces the result, ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>src/
+./</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(notdir <I>names</I> ...)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Extracts all but the directory-part
+of each file name in </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>names</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If the file name contains no slash, it is left unchanged. Otherwise, everything
+through the last slash is removed from it.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>A file name that ends with
+a slash becomes an empty string. This is unfortunate because it means that
+the result does not always have the same number of whitespace-separated
+file names as the argument had; but we do not see any other valid alternative.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(notdir
+src/foo.c hacks)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+produces the resulting file name, ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>foo.c
+hacks</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(suffix <I>names</I> ...)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Extracts the suffix of each
+file name in names. If the file name contains a period, the suffix is everything
+starting with the last period. Otherwise, the suffix is the empty string.
+This frequently means that the result will be empty when names is not,
+and if names contains multiple file names, the result may contain fewer
+file names.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(suffix
+src/foo.c hacks)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+produces the result, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.<B>c</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(basename <I>names</I>...)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Extracts all but the suffix
+of each file name in </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>names</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.If
+the file name contains a period, the basename is everything starting up
+to (and not including) the last period. Otherwise, the basename is the
+entire file name. For example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(basename
+src/foo.c hacks)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+produces the result, ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>src/foo
+hacks</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(addsuffix <I>suffix</I>, <I>names</I>...)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>names</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is regarded as a series of names, sep-arated by whitespace; </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>suffix</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is used as a unit. The value of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>suffix</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is appended to the end of each individual name and the resulting larger
+names are concatenated with single spaces between them.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(addsuffix
+.c,foo bar)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> results
+in‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>foo.c bar.c</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(addprefix <I>prefix</I>, <I>names</I>...)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>names</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is regarded as a series of names, separated by whitespace; </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>prefix</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is used as a unit. The value of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>prefix</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is prepended to the front of each individual name and the resulting larger
+names are concatenated with single spaces between them.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example,</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+$(addprefix src/,foo bar)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+results in ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>src/foo</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>src/bar</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(join <I>list1</I>, <I>list2</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Concatenates the two arguments
+word by word; the two first words (one from each argument), concatenated,
+form the first word of the result; the two second words form the second
+word of the result, and so on. So the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>th
+word of the result comes from the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>th
+word of each argument. If one argument has more words that the other, the
+extra words are copied unchanged into the result.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(join
+a b,.c .o)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ produces
+‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>a.c b.o</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Whitespace between the words
+in the lists is not preserved; it is replaced with a single space. This
+function can merge the results of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>dir</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>notdir</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+functions to produce the original list of files which was given to those
+two functions.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(word <I>n</I>, <I>text</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Returns the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>th
+word of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The legitimate values of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+start from 1. If </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>is bigger
+than the number of words in </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the value is empty.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(word
+2, foo bar baz) </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>returns
+‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>bar</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(words <I>text</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Returns the number of words
+in </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Thus, the last word of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(word
+$(words <I>text</I>),<I>text</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(firstword <I>names</I>...)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>names</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is regarded as a series of names, separated by whitespace. The value is
+the first name in the series. The rest of the names are ignored.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(firstword
+foo bar)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> produces
+the result ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Although </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(firstword
+<I>text</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> is
+the same as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(word
+1, <I>text</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>firstword</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function is retained for its simplicity.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(wildcard <I>pattern</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The argument </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>pattern</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a file name pattern, typically containing wildcard characters (as in
+shell file name patterns). The result of wildcard is a space-separated
+list of the names of existing files that match the pattern. See <FONT COLOR="#008000"><A HREF="makeUsing_Wildcard_Characters_in_Fil.html">Using
+wildcard characters in file names</A></FONT>.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeFunctions_for_String_Substitutio.html">Previous</A>|<A HREF="makeThe_foreach_Function.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

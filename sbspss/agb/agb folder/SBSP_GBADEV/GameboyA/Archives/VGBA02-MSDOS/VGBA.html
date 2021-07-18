@@ -1,0 +1,256 @@
+<HTML>
+<HEAD>
+<TITLE>Virtual GameBoy Advance Documentation</TITLE>
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF LINK=#006000 VLINK=#006000>
+
+<CENTER>
+<H1><FONT COLOR=#FF0000>
+Virtual GameBoy Advance<BR>version 0.2
+</FONT></H1>
+<H3>by <A HREF="http://www.komkon.org/fms/">Marat Fayzullin</A></H3>
+</CENTER>
+<P>
+
+<H1>Disclaimers</H1>
+</A>
+<UL>
+<LI><I>GameBoy and GameBoy Advance</I> are registered trademarks of Nintendo.
+<LI>The author is in no way affiliated with Nintendo.
+<LI>The author is in no way affiliated with any pirate group out there.
+<LI>The author <U>cannot</U> and <U>will not</U> provide you with
+    any GameBoy or GameBoy Advance games.
+<LI>The author cannot be held responsible for anything this program
+    will do to your computer, brains, free time, housemates, pets, or
+    family members.
+</UL>
+<HR>
+
+<H1>What is It?</H1>
+This is a very early version of the GameBoy Advance emulator I am working
+on. This version can't be even called a beta, but it will run homebrewn
+demos written for GBA and maybe even Nintendo's own demos.
+<P>
+GameBoy Advance has <U>not</U> been released by Nintendo yet. They are
+planning to release it in the middle of year 2001. Therefore, there are
+<U>no</U> games for GameBoy Advance. If there were any games, I would
+not give them to you. And even if you got games, they most likely
+wouldn't run on this version of VGBA. So, <U>please</U>, do not ask me
+for GBA games. You can always get the latest version of VGBA at
+<P>
+<CENTER>
+<A HREF="http://www.komkon.org/fms/VGBA/">
+http://www.komkon.org/fms/VGBA/
+</A>
+</CENTER>
+<P>
+I am releasing VGBA mainly for game developers and demo programmers
+who would like to start coding for GBA but cannot afford to buy an
+official development board from Nintendo. VGBA is not a replacement for
+the real development board though, as it only emulates a small part of
+GBA features. I hope that the number of supported features will increase
+with time though.
+<HR>
+
+<H1>How to Use It?</H1>
+This release of VGBA has been compiled to run with PMODE/W extender
+on MSDOS (external extender not required). It will also run on Windows
+95/98/ME. I have not tested it on Windows NT/2000. The future releases
+will run on multiple platforms. Please, note that the <U><I>VESA</I>
+drivers are necessary</U> to run VGBA, as it uses 320x200x16bit screen
+mode.
+<P>
+Start VGBA with the following command line:
+<FONT COLOR="#000060">
+<CENTER><PRE>
+vgba [-verbose &lt;level&gt;] [-trap &lt;address&gt;] [-vsync|-novsync] FILENAME.GBA
+</PRE></CENTER>
+</FONT>
+VGBA will load <CODE>FILENAME.GBA</CODE> at address <CODE>0x08000000</CODE>
+and start execution. You can exit emulator by pressing <CODE>ESCAPE</CODE>
+or <CODE>F12</CODE> keys. To break execution and drop into the debugger
+press <CODE>F1</CODE> key.
+<P>
+To make VGBA break when execution reaches some address, use the
+<CODE>-trap &lt;address&gt;</CODE> option, where <CODE>address</CODE> is
+a hexadecimal number. To make VGBA go into debugger right away, use
+<CODE>-trap now</CODE> option.
+<P>
+The <CODE>-verbose &lt;level&gt;</CODE> option takes an decimal number
+that is a sum of the following:
+<FONT COLOR="#000060">
+<PRE>
+1  - Show startup messages only          2  - Show all I/O accesses
+4  - Show invalid memory accesses        8  - Show DMA operations
+16 - Show invalid CPU opcodes            32 - Show SWI calls
+</PRE>
+</FONT>
+<P>
+By default, VGBA runs at the maximal possible speed. To slow VGBA down to
+the "normal" speed, use <CODE>-vsync</CODE> option. This option synchronizes
+screen updates with VGA VBlank signal.
+<P>
+VGBA uses following key equivalents for GBA buttons:
+<FONT COLOR="#000060">
+<PRE>
+[A]      - ALT,SPACE,A,S,D,F,G,H,J,K,L
+[B]      - CONTROL,Z,X,C,V,B,N,M
+[LEFT]   - Q,E,T,U,O
+[RIGHT]  - W,R,Y,I,P
+[SELECT] - TAB
+[START]  - ENTER
+</PRE>
+</FONT>
+<HR>
+
+<H1>What is Emulated?</H1>
+This version of VGBA has emulation for the following:
+<UL>
+<LI>ARM7TDMI CPU with ARM and THUMB opcode sets.
+<LI>Internal RAM at addresses <CODE>0x03000000</CODE> (32kB) and
+    <CODE>0x02000000</CODE> (256kB).
+<LI>Cartridge ROM at address <CODE>0x08000000</CODE> mirrored at
+    <CODE>0x09000000</CODE> and <CODE>0x0A000000</CODE>.
+<LI>Cartridge RAM at address <CODE>0x0E000000</CODE> (64kB).
+<LI>Interrupts: VBlank, HBlank, line coincidence, timers, joypad.
+<LI>Timers: TIMER0, TIMER1, TIMER2, TIMER3.
+<LI>DMA channels: DMA0, DMA1, DMA2, DMA3.
+<LI>Joypad buttons and interrupts.
+<LI>GameBoy-compatible melodic sound chip.
+</UL>
+Not emulated:
+<UL>
+<LI>CPU timings are not correct. All ARM commands are assumed to take
+    two clocks. All THUMB commands take one clock.
+<LI>DMA happens "instantly". DMA interrupts and auto-repeating DMA
+    are not yet emulated.
+<LI>Cartridge flash ROM is not emulated.
+<LI>GBA-specific sound hardware is not emulated.
+</UL>
+GBA video subsystem is extremely complicated. Only a small part of its
+features is currently implemented in the VGBA. Both text backgrounds and
+rotation backgrounds are emulated, in the correct order, for modes 0..2.
+High color modes 3..5 and sprites also work:
+<P>
+<CENTER>
+<TABLE BORDER=1 BGCOLOR="#FFFFE0" CELLPADDING=3 CELLSPACING=0>
+<TR BGCOLOR="#0033AA">
+<TD>Feature           <TD>Text BGs<TD>Rotation BGs<TD>MODE 3<TD>MODE 4<TD>MODE 5<TD>Sprites
+<TR><TD>Variable Size     <TD>YES     <TD>YES         <TD>N/A   <TD>N/A   <TD>N/A   <TD>YES
+<TR><TD>Tile Flipping     <TD>YES     <TD>N/A         <TD>N/A   <TD>N/A   <TD>N/A   <TD>YES
+<TR><TD>16/256-Color Tiles<TD>YES     <TD>N/A         <TD>N/A   <TD>N/A   <TD>N/A   <TD>YES
+<TR><TD>Scrolling         <TD>YES     <TD>N/A         <TD>N/A   <TD>N/A   <TD>N/A   <TD>N/A
+<TR><TD>Mosaic            <TD>YES     <TD>YES         <TD>YES   <TD>YES   <TD>YES   <TD>NO
+<TR><TD>Rotation          <TD>N/A     <TD>NO          <TD>NO    <TD>NO    <TD>NO    <TD>NO
+<TR><TD>Window            <TD>NO      <TD>NO          <TD>N/A   <TD>N/A   <TD>N/A   <TD>NO
+<TR><TD>Color Effects     <TD>NO      <TD>NO          <TD>NO    <TD>NO    <TD>NO    <TD>&alpha;-blending only
+</TABLE>
+</CENTER>
+<P>
+GBA BIOS is partly emulated. I do not have the original Nintendo BIOS ROM.
+Besides, including it with the emulator would be clearly illegal. Therefore,
+I have tried to simulate GBA BIOS routines by trapping and handling ARM
+<CODE>SWI</CODE> opcodes. The simulated calls correspond to the TS2 revision
+of the BIOS:
+<P>
+<CENTER>
+<TABLE BORDER=1 BGCOLOR="#FFFFE0" CELLPADDING=3 CELLSPACING=0>
+<TR BGCOLOR="#0033AA">
+    <TD>Function                  <TD>SWI #  <TD>Supported
+<TR><TD>BIOS_SoftReset            <TD>0x00   <TD>Yes
+<TR><TD>BIOS_RegisterRAMReset     <TD>0x01   <TD>Yes
+<TR><TD>BIOS_Halt                 <TD>0x02   <TD>No
+<TR><TD>BIOS_Stop                 <TD>0x03   <TD>No
+<TR><TD>BIOS_IntrWait             <TD>0x04   <TD>No
+<TR><TD>BIOS_VBlankIntrWait       <TD>0x05   <TD>Yes
+<TR><TD>BIOS_Div                  <TD>0x06   <TD>Yes
+<TR><TD>BIOS_DivARM               <TD>0x07   <TD>Yes
+<TR><TD>BIOS_Sqrt                 <TD>0x08   <TD>Yes
+<TR><TD>BIOS_ArcTan               <TD>0x09   <TD>Yes
+<TR><TD>BIOS_ArcTan2              <TD>0x0A   <TD>Yes
+<TR><TD>BIOS_CPUSet               <TD>0x0B   <TD>No
+<TR><TD>BIOS_CPUFastSet           <TD>0x0C   <TD>No
+<TR><TD>BIOS_BgAffineSet          <TD>0x0E   <TD>No
+<TR><TD>BIOS_ObjAffineSet         <TD>0x0F   <TD>No
+<TR><TD>BIOS_BitUnPack            <TD>0x10   <TD>No
+<TR><TD>BIOS_LZ77UnCompWRAM       <TD>0x11   <TD>Yes
+<TR><TD>BIOS_LZ77UnCompVRAM       <TD>0x12   <TD>Yes
+<TR><TD>BIOS_HuffUnComp           <TD>0x13   <TD>No
+<TR><TD>BIOS_RLUnCompWRAM         <TD>0x14   <TD>No
+<TR><TD>BIOS_RLUnCompVRAM         <TD>0x15   <TD>No
+<TR><TD>BIOS_Diff8bitUnFilterWRAM <TD>0x16   <TD>No
+<TR><TD>BIOS_Diff8bitUnFilterVRAM <TD>0x17   <TD>No
+<TR><TD>BIOS_Diff16bitUnFilter    <TD>0x18   <TD>No
+<TR><TD>BIOS_SoundBiasChange      <TD>0x19   <TD>No
+<TR><TD>BIOS_SoundDriverInit      <TD>0x1A   <TD>No
+<TR><TD>BIOS_SoundDriverMode      <TD>0x1B   <TD>No
+<TR><TD>BIOS_SoundDriverMain      <TD>0x1C   <TD>No
+<TR><TD>BIOS_SoundDriverVSync     <TD>0x1D   <TD>No
+<TR><TD>BIOS_SoundChannelClear    <TD>0x1E   <TD>No
+<TR><TD>BIOS_MIDIKey2Freq         <TD>0x1F   <TD>No
+<TR><TD>BIOS_MusicPlayerOpen      <TD>0x20   <TD>No
+<TR><TD>BIOS_MusicPlayerStart     <TD>0x21   <TD>No
+<TR><TD>BIOS_MusicPlayerStop      <TD>0x22   <TD>No
+<TR><TD>BIOS_MusicPlayerContinue  <TD>0x23   <TD>No
+<TR><TD>BIOS_MusicPlayerFadeOut   <TD>0x24   <TD>No
+<TR><TD>BIOS_MultiBoot            <TD>0x25   <TD>No
+<TR><TD>BIOS_SoundDriverVSyncOff  <TD>0x28   <TD>No
+<TR><TD>BIOS_SoundDriverVSyncOn   <TD>0x29   <TD>No
+</TABLE>
+</CENTER>
+<HR>
+
+<H1>Notes to Demo Authors</H1>
+As the the final GBA hardware does not yet exist and development boards are
+rare, all homebrewn GBA demos written so far are made to run on the GBAEmu
+emulator written by Tim Schuerewegen. Unfortunately, GBAEmu has a variety
+of bugs that the demos seem to rely on. While I have tried to "simulate"
+some of these bugs in VGBA to make demos run, the simulation is going away
+pretty soon (next version). Following is a list of problems that I've found.
+If you are a demo author, please, check your demos for these problems and
+fix them:
+<UL>
+<LI>Many demos use random areas of address space for RAM. Apparently,
+    GBAEmu will create RAM at any address accessed by the program. The
+    real GBA (according to the latest specification) is only going to
+    have RAM at addresses <CODE>0x03000000</CODE> (32kB) and
+    <CODE>0x02000000</CODE> (256kB). Use only this memory.
+<LI>Many demos use cartridge address space (<CODE>0x08000000</CODE> and
+    up) as RAM. This is not correct as cartridge ROM is <U>not</U>
+    writable. Please, use RAM areas described above.
+<LI>In graphical screen modes (MODEs 3,4,5) the entire screen is treated
+    as background #2. This means that to actually show the screen you
+    have to enable background #2 in <CODE>DISPCONT</CODE> and set
+    appropriate bits in <CODE>BG2CONT</CODE>.
+<LI>The backgrounds are shown in the order 0,1,2,3, with background #0
+    being on top and background #3 on the bottom. When you set different
+    background priorities, the backgrounds with lower priorities will
+    be on top.
+<LI>At least two demos (<I>FireDemo</I> and <I>ConsoleDev Demo</I>) are
+    using reads from non-aligned addresses. While non-aligned reads are
+    a documented feature of ARM7TDMI CPU, they are rarely used and
+    cannot be efficiently simulated. The current VGBA binary has been
+    compiled to be compatible with these demos. In the next version,
+    I hope to use fast read functions that speed up emulation but
+    <U>do not</U> simulate non-aligned reads.
+<LI>VGBA attempts to emulate the GBA development board from Nintendo
+    known as TS2. This board is not entirely compatible with the older
+    TS1 board. Therefore, VGBA will not correctly run some programs
+    compiled for TS1, such as programs using interrupts. TS3 and TS4
+    boards are said to be compatible with TS2.
+</UL>
+<HR>
+
+<H1>Thanks</H1>
+I would like to thank people from the EFNet <I>#GBADEV</I> IRC channel for
+their help locating GBA specifications and testing the emulator.
+<HR>
+
+<I>
+&copy; Copyright by
+<A HREF="http://www.komkon.org/fms/">Marat Fayzullin</A>
+(fms@cs.umd.edu)
+</I>
+</BODY>
+</HTML>

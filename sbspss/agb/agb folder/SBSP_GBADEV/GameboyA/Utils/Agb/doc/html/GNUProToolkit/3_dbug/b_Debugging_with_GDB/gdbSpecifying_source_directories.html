@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Specifying source directories</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbSearching_source_files.html">Previous</A>|<A HREF="gdbSource_and_machine_code.html">Next</A>
+<BR><A NAME="off_1279852"></A><A NAME="cd16aba5"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Specifying
+source directories</FONT></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Executable
+programs sometimes do not record the directories of the source files from
+which they were compiled, just the names. Even when they do, the directories
+could be moved between the compilation and your debugging session. GDB
+has a list of directories to search for source files; this is called the
+<I>source path</I>. Each time GDB wants a source file, it tries all the
+directories in the list, in the order they are present in the list, until
+it finds a file with the desired name.</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The executable search path
+is <I>not</I> used for this purpose. Neither is the current working directory,
+unless it happens to be in the source path.</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If GDB cannot find a source
+file in the source path, and the object program records a directory, GDB
+tries that directory too. If the source path is empty, and there is no
+record of the compilation directory, GDB looks in the current directory
+as a last resort.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Whenever you reset or rearrange
+the source path, GDB clears out any information it has cached about where
+source files are found and where each line is in the file. When you start
+GDB, its source path is empty. To add other directories, use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>directory</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command.</FONT></FONT>
+<BR>&nbsp;
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>directory <I>dirname</I> ...</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>dir <I>dirname</I> ...</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Add directory, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>dirname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to the front of the source path. Several directory names may be given to
+this command, separated by ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>:</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or whitespace. You may specify a directory that is already in the source
+path; this moves it forward, so GDB searches it sooner.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>You can use the string,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$cdir</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+to refer to the compilation directory (if one is recorded), and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$cwd</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to refer to the current working directory. ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$cwd</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is not the same as ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>.</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’—the
+former tracks the current working directory as it changes during your GDB
+session, while the latter is immediately expanded to the current directory
+at the time you add an entry to the source path.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>directory</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Reset the source path to
+empty again. This requires confirmation.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>show directories</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print the source path; show
+which directories it contains.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If your source path is cluttered
+with directories that are no longer of interest, GDB may sometimes cause
+confusion by finding the wrong versions of source. You can correct the
+situation by the following methods.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>directory</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with no argument to reset the source path to empty.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>directory</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with suitable arguments to reinstall the directories you want in the source
+path. You can add all the directories in one command.</FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbSearching_source_files.html">Previous</A>|<A HREF="gdbSource_and_machine_code.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

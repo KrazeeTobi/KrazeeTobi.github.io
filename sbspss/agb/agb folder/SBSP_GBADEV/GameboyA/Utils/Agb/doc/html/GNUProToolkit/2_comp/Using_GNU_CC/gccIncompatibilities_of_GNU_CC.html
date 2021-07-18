@@ -1,0 +1,278 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Incompatibilities of GNU CC</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccProblems_Compiling_Certain_Progr.html">Previous</A>|<A HREF="gccFixed_Header_Files.html">Next</A>
+<BR><A NAME="off_4980950"></A><A NAME="c24866d3"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3><B>Incompatibilities
+of GNU CC&nbsp;</B>&nbsp;</FONT></FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>There are several noteworthy
+incompatibilities between GNU C and most existing (non-ANSI) versions of
+C. The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-traditional</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option eliminates many of these incompatibilities, <I>but not all</I>,
+by telling GNU C to behave like the other C compilers.</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>GNU CC normally makes string
+constants read-only. If several identical-looking string constants are
+used, GNU CC stores only one copy of the string.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>One consequence is that you
+cannot call </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mktemp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with a string constant argument. The function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mktemp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+always alters the string its argument points to. Another consequence is
+that </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sscanf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not work on some systems when passed a string constant as its format
+control string or input. This is because ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sscanf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+incorrectly tries to write into the string constant. Likewise </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fscanf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>scanf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The best solution to these problems
+is to change the program to use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>char</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>-array
+variables with initialization strings for these purposes instead of string
+constants. But if this is not possible, you can use the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fwritable-strings</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+flag, which directs GNU CC to handle string constants the same way most
+C compilers do. ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-traditional</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+also has this effect, among others.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>-2147483648</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is positive.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This is because 2147483648 cannot
+fit in the type, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+so (following the ANSI C rules) its data type is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>unsigned</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>long int</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Negating this value yields 2147483648 again. GNU CC does not substitute
+macro arguments when they appear within string constants. For example,
+the following macro in GNU CC will produce output ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>"a"</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+regardless of what the argument ‘</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>is.</FONT></FONT></DT>
+
+<UL TYPE=SQUARE>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define foo(<I>a</I>) "a"</FONT></FONT></PRE>
+</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-traditional</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option directs GNU CC to handle such cases (among others) in the old-fashioned
+(non-ANSI) fashion.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>When you use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>setjmp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>longjmp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the only automatic variables guaranteed to remain valid are those declared
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>volatile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+This is a consequence of automatic register allocation. Consider the following
+function.</FONT></FONT></LI>
+
+<UL TYPE=SQUARE>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>jmp_buf j;&nbsp;
+
+foo ()&nbsp;
+{&nbsp;
+&nbsp;&nbsp; int a, b;&nbsp;
+
+&nbsp;&nbsp; a = fun1 ();&nbsp;
+
+&nbsp;&nbsp; if (setjmp (j))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return a;&nbsp;
+
+&nbsp;&nbsp; a = fun2 ();&nbsp;
+&nbsp;&nbsp; /* longjmp (j) may occur in fun3. */&nbsp;
+&nbsp;&nbsp; return a + fun3 ();&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In the previous example, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+may or may not be restored to its first value when the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>longjmp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+occurs. If ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is allocated in a register, then its first value is restored; otherwise,
+it keeps the last value stored in it.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If you use the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-W</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option with the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option, you will get a warning when GNU CC thinks such a problem might
+be possible.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-traditional</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option directs GNU C to put variables in the stack by default, rather than
+in registers, in functions that call </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>setjmp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+This results in the behavior found in traditional C compilers.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Programs that use preprocessing
+directives in the middle of macro arguments do not work with GNU CC. For
+example, a program like the following will not work.</FONT></FONT></LI>
+
+<UL TYPE=SQUARE>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>foobar (&nbsp;
+#define luser&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hack)</FONT></FONT></PRE>
+</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>ANSI C does not permit such
+a construct. It would make sense to support it when ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-traditional</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is used, but it is too much work to implement.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Declarations of external variables
+and functions within a block apply only to the block containing the declaration.
+In other words, they have the same scope as any other declaration in the
+same place.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In some other C compilers, an
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>extern</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+declaration affects all the rest of the file even if it happens within
+a block. The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-traditional</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option directs GNU C to treat all </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>extern</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+declarations as global, like traditional compilers.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In traditional C, you can combine
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>long</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+etc., with a typedef name, as shown by the following.</FONT></FONT></LI>
+
+<UL TYPE=SQUARE>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>typedef int foo;&nbsp;
+typedef long foo bar;</FONT></FONT></PRE>
+</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In ANSI C, this is not allowed:
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>long</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and other type modifiers require an explicit </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Because this criterion is expressed by Bison grammar rules rather than
+C code, the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-traditional</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+flag cannot alter it.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>PCC allows typedef names to
+be used as function parameters. The difficulty described previously applies
+here too.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>PCC allows whitespace in the
+middle of compound assignment operators such as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+GNU CC, following the ANSI standard, does not allow this. The difficulty
+described previously applies here too.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>GNU CC complains about unterminated
+character constants inside of preprocessing conditionals that fail. Some
+programs have English comments enclosed in conditionals that are guaranteed
+to fail; if these comments contain apostrophes, GNU CC will probably report
+an error. For example, this code would produce an error:</FONT></FONT></LI>
+
+<UL TYPE=SQUARE>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#if 0&nbsp;
+You can't expect this to work.&nbsp;
+#endif</FONT></FONT></PRE>
+</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The best solution to such a
+problem is to put the text into an actual C comment delimited by ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/*...*/</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+However, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-traditional</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+suppresses these error messages.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Many user programs contain the
+declaration ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>long
+time();</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’. In the
+past, the system header files on many systems did not actually declare
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>time</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+so it did not matter what type your program declared it to return. But
+in systems with ANSI C headers, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>time</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is declared to return </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>time_t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and if that is not the same as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>long</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+then ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>long time()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is erroneous. The solution is to change your program to use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>time_t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as the return type of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>time</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>When compiling functions that
+return </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>float</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+PCC converts it to a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>double</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+GNU CC actually returns a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>float</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If you are concerned with PCC compatibility, you should declare your functions
+to return </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>double</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+you might as well say what you mean.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>When compiling functions that
+return structures or unions, GNU CC output code normally uses a method
+different from that used on most versions of Unix. As a result, code compiled
+with GNU CC cannot call a structure-returning function compiled with PCC,
+and vice versa.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The method used by GNU CC is
+as follows: a structure or union which is 1, 2, 4 or 8 bytes long is returned
+like a scalar. A structure or union with any other size is stored into
+an address supplied by the caller (usually in a special, fixed register,
+but on some machines it is passed on the stack). The machine description
+macros, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>STRUCT_ VALUE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>STRUCT_INCOMING_VALUE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+tell GNU CC where to pass this address.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>By contrast, PCC on most target
+machines returns structures and unions of any size by copying the data
+into an area of static storage, and then returning the address of that
+storage as if it were a pointer value. The caller must copy the data from
+that memory area to the place where the value is wanted. GNU CC does not
+use this method because it is slower and non re-entrant.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On some newer machines, PCC
+uses a reentrant convention for all structure and union returning. GNU
+CC on most of these machines uses a compatible convention when returning
+structures and unions in memory, but still returns small structures and
+unions in registers.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You can tell GNU CC to use a
+compatible convention for all structure and union returning with the option
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fpcc-struct-return</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>GNU C complains about program
+fragments such as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0x74ae-0x4000</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+which appear to be two hexadecimal constants separated by the minus operator.
+Actually, this string is a single<I> preprocessing token</I>. Each such
+token must correspond to one token in C. Since this does not, GNU C prints
+an error message. Although it may appear obvious that what is meant, is
+an operator and two values, the ANSI C standard specifically requires that
+this be treated as erroneous.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>A <I>preprocessing token</I>
+is a <I>preprocessing number</I> if it begins with a digit and is followed
+by letters, underscores, digits, periods and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>e+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>e-</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>E+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>E-</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+character sequences. To make the previous program fragment valid, place
+whitespace in front of the minus sign. This whitespace will end the preprocessing
+number.</FONT></FONT></LI>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccProblems_Compiling_Certain_Progr.html">Previous</A>|<A HREF="gccFixed_Header_Files.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

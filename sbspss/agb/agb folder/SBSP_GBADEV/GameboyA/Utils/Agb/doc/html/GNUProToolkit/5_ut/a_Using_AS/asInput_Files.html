@@ -1,0 +1,72 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Input Files</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="as.html">Contents</a>|<a href="asindex.html">Index</a>|<a href="asCommand_Line.html">Previous</a>|<a href="asOutput_Object_File.html">Next</a>
+<br><a NAME="off_132375"></a><a NAME="3e7c0324"></a><b><font face="Futura Md BT"><font size=+3>Input
+files</font></font></b>
+<br>
+<hr SIZE=3 WIDTH="100%"><font color="#000000"><font face="Times New Roman"><font size=+1>We
+use the phrase <i>source program</i>, abbreviated <i>source</i>, to describe
+the program input to one run of </font></font><font face="Courier New"><font size=+0>as</font></font><font face="Times New Roman"><font size=+1>.
+The program may be in one or more files; how the source is partitioned
+into files doesn’t change the meaning of the source.</font></font></font>
+<p><font face="Times New Roman"><font color="#000000"><font size=+1>The
+source program is a concatenation of the text in all the files, in the
+order specified.</font></font></font>
+<p><font color="#000000"><font face="Times New Roman"><font size=+1>Each
+time you run </font></font><font face="Courier New"><font size=+0>as</font></font><font face="Times New Roman"><font size=+1>,
+it assembles exactly one source program. The source program is made up
+of one or more files. (The standard input is also a file.)</font></font></font>
+<p><font color="#000000"><font face="Times New Roman"><font size=+1>You
+give </font></font><font face="Courier New"><font size=+0>as</font></font><font face="Times New Roman"><font size=+1>
+a command line that has zero or more input file names. The input files
+are read (from left file name to right). A command line argument (in any
+position) that has no special meaning is taken to be an input file name.</font></font></font>
+<p><font color="#000000"><font face="Times New Roman"><font size=+1>If
+you give </font></font><font face="Courier New"><font size=+0>as</font></font><font face="Times New Roman"><font size=+1>
+no file names it attempts to read one input file from the </font></font><font face="Courier New"><font size=+0>as</font></font><font size=+1><font face="Times New Roman">
+standard input, which is normally your terminal. You may have to type </font><b><font face="Arial Narrow">Ctrl-D
+</font></b><font face="Times New Roman">to tell as there is no more program
+to assemble.</font></font></font>
+<p><font color="#000000"><font face="Times New Roman"><font size=+1>Use
+‘</font></font><font face="Courier New"><font size=+0>--</font></font><font face="Times New Roman"><font size=+1>’
+if you need to explicitly name the standard input file in your command
+line.</font></font></font>
+<p><font face="Times New Roman"><font color="#000000"><font size=+1>If
+the source is empty, as produces a small, empty object file.</font></font></font>
+<p><b><i><font face="Times New Roman"><font size=+2>Filenames and line-numbers</font></font></i></b>
+<p><font face="Times New Roman"><font size=+1><font color="#000000">There
+are two ways of locating a line in the input file (or files) and either
+may be used in reporting error messages. One way refers to a line number
+in a <i>physical</i> file; the other refers to a line number in a <i>logical</i>
+file. See also </font><font color="#008000"><a href="asError_and_Warning_Messages.html">Error
+and warning messages</a></font><font color="#000000">.</font></font></font>
+<ul>
+<ul>
+<ul>
+<li>
+<font face="Times New Roman"><font color="#000000"><font size=+1><i>Physical
+files</i> are those files named in the command line given to as.</font></font></font></li>
+
+<li>
+<font color="#000000"><font face="Times New Roman"><font size=+1><i>Logical
+files</i> are simply names declared explicitly by assembler directives;
+they bear no relation to physical files. Logical file names help error
+messages reflect the original source file, when </font></font><font face="Courier New"><font size=+0>as</font></font><font size=+1><font face="Times New Roman">
+source is itself synthesized from other files. See </font></font></font><font size=+1><font face="Courier New"><font color="#008000"><a href="asAssembler_Directives.html#b5f1df75">.file
+<i>string</i></a></font></font><font face="Times New Roman"><font color="#000000">.</font></font></font></li>
+</ul>
+</ul>
+</ul>
+
+<center>
+<hr SIZE=3 WIDTH="100%">
+<br><a href="#Top">Top</a>|<a href="as.html">Contents</a>|<a href="asindex.html">Index</a>|<a href="asCommand_Line.html">Previous</a>|<a href="asOutput_Object_File.html">Next</a></center>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+main.o : main.c C:/agb/include/Agb.h C:/agb/include/AgbTypes.h \
+ C:/agb/include/AgbDefine.h C:/agb/include/AgbMemoryMap.h \
+ C:/agb/include/AgbMacro.h C:/agb/include/AgbSystemCall.h \
+ C:/agb/include/AgbSound.h C:/agb/include/AgbMultiBoot.h \
+ C:/agb/include/IsAgbPrint.h main.h player.h bg.h
+player.o : player.c C:/agb/include/Agb.h C:/agb/include/AgbTypes.h \
+ C:/agb/include/AgbDefine.h C:/agb/include/AgbMemoryMap.h \
+ C:/agb/include/AgbMacro.h C:/agb/include/AgbSystemCall.h \
+ C:/agb/include/AgbSound.h C:/agb/include/AgbMultiBoot.h \
+ C:/agb/include/IsAgbPrint.h main.h player.h enemy.h ring.h bg.h
+player_dat.o : player_dat.c C:/agb/include/Agb.h \
+ C:/agb/include/AgbTypes.h C:/agb/include/AgbDefine.h \
+ C:/agb/include/AgbMemoryMap.h C:/agb/include/AgbMacro.h \
+ C:/agb/include/AgbSystemCall.h C:/agb/include/AgbSound.h \
+ C:/agb/include/AgbMultiBoot.h C:/agb/include/IsAgbPrint.h main.h \
+ player.h enemy.h
+enemy.o : enemy.c C:/agb/include/Agb.h C:/agb/include/AgbTypes.h \
+ C:/agb/include/AgbDefine.h C:/agb/include/AgbMemoryMap.h \
+ C:/agb/include/AgbMacro.h C:/agb/include/AgbSystemCall.h \
+ C:/agb/include/AgbSound.h C:/agb/include/AgbMultiBoot.h \
+ C:/agb/include/IsAgbPrint.h main.h player.h enemy.h
+enemy_dat.o : enemy_dat.c C:/agb/include/Agb.h \
+ C:/agb/include/AgbTypes.h C:/agb/include/AgbDefine.h \
+ C:/agb/include/AgbMemoryMap.h C:/agb/include/AgbMacro.h \
+ C:/agb/include/AgbSystemCall.h C:/agb/include/AgbSound.h \
+ C:/agb/include/AgbMultiBoot.h C:/agb/include/IsAgbPrint.h main.h \
+ player.h enemy.h
+game_dat.o : game_dat.c C:/agb/include/Agb.h C:/agb/include/AgbTypes.h \
+ C:/agb/include/AgbDefine.h C:/agb/include/AgbMemoryMap.h \
+ C:/agb/include/AgbMacro.h C:/agb/include/AgbSystemCall.h \
+ C:/agb/include/AgbSound.h C:/agb/include/AgbMultiBoot.h \
+ C:/agb/include/IsAgbPrint.h
+bg.o : bg.c C:/agb/include/Agb.h C:/agb/include/AgbTypes.h \
+ C:/agb/include/AgbDefine.h C:/agb/include/AgbMemoryMap.h \
+ C:/agb/include/AgbMacro.h C:/agb/include/AgbSystemCall.h \
+ C:/agb/include/AgbSound.h C:/agb/include/AgbMultiBoot.h \
+ C:/agb/include/IsAgbPrint.h main.h player.h bg.h
+hitcheck.o : hitcheck.c C:/agb/include/Agb.h C:/agb/include/AgbTypes.h \
+ C:/agb/include/AgbDefine.h C:/agb/include/AgbMemoryMap.h \
+ C:/agb/include/AgbMacro.h C:/agb/include/AgbSystemCall.h \
+ C:/agb/include/AgbSound.h C:/agb/include/AgbMultiBoot.h \
+ C:/agb/include/IsAgbPrint.h main.h player.h enemy.h ring.h hitcheck.h
+ring.o : ring.c C:/agb/include/Agb.h C:/agb/include/AgbTypes.h \
+ C:/agb/include/AgbDefine.h C:/agb/include/AgbMemoryMap.h \
+ C:/agb/include/AgbMacro.h C:/agb/include/AgbSystemCall.h \
+ C:/agb/include/AgbSound.h C:/agb/include/AgbMultiBoot.h \
+ C:/agb/include/IsAgbPrint.h main.h player.h ring.h
+r_kihon0.o : obj/r_kihon0.c C:/agb/include/AgbTypes.h
+r_kihon1.o : obj/r_kihon1.c C:/agb/include/AgbTypes.h
+r_kihon2.o : obj/r_kihon2.c C:/agb/include/AgbTypes.h
+r_kihon3.o : obj/r_kihon3.c C:/agb/include/AgbTypes.h
+r_kihon4.o : obj/r_kihon4.c C:/agb/include/AgbTypes.h
+r_kihon5.o : obj/r_kihon5.c C:/agb/include/AgbTypes.h
+r_kihon6.o : obj/r_kihon6.c C:/agb/include/AgbTypes.h
+r_kihon7.o : obj/r_kihon7.c C:/agb/include/AgbTypes.h
+r_up0.o : obj/r_up0.c C:/agb/include/AgbTypes.h
+r_up1.o : obj/r_up1.c C:/agb/include/AgbTypes.h
+r_up2.o : obj/r_up2.c C:/agb/include/AgbTypes.h
+r_up3.o : obj/r_up3.c C:/agb/include/AgbTypes.h
+r_up4.o : obj/r_up4.c C:/agb/include/AgbTypes.h
+r_up5.o : obj/r_up5.c C:/agb/include/AgbTypes.h
+r_up6.o : obj/r_up6.c C:/agb/include/AgbTypes.h
+r_up7.o : obj/r_up7.c C:/agb/include/AgbTypes.h
+r_up8.o : obj/r_up8.c C:/agb/include/AgbTypes.h
+r_go_up0.o : obj/r_go_up0.c C:/agb/include/AgbTypes.h
+r_go_up1.o : obj/r_go_up1.c C:/agb/include/AgbTypes.h
+r_go_up2.o : obj/r_go_up2.c C:/agb/include/AgbTypes.h
+r_go_up3.o : obj/r_go_up3.c C:/agb/include/AgbTypes.h
+r_go_up4.o : obj/r_go_up4.c C:/agb/include/AgbTypes.h
+r_go_up5.o : obj/r_go_up5.c C:/agb/include/AgbTypes.h
+r_go_up6.o : obj/r_go_up6.c C:/agb/include/AgbTypes.h
+r_go_up7.o : obj/r_go_up7.c C:/agb/include/AgbTypes.h
+r_down0.o : obj/r_down0.c C:/agb/include/AgbTypes.h
+r_down1.o : obj/r_down1.c C:/agb/include/AgbTypes.h
+r_down2.o : obj/r_down2.c C:/agb/include/AgbTypes.h
+r_down3.o : obj/r_down3.c C:/agb/include/AgbTypes.h
+r_down4.o : obj/r_down4.c C:/agb/include/AgbTypes.h
+r_down5.o : obj/r_down5.c C:/agb/include/AgbTypes.h
+r_down6.o : obj/r_down6.c C:/agb/include/AgbTypes.h
+r_down7.o : obj/r_down7.c C:/agb/include/AgbTypes.h
+r_down8.o : obj/r_down8.c C:/agb/include/AgbTypes.h
+r_go_down0.o : obj/r_go_down0.c C:/agb/include/AgbTypes.h
+r_go_down1.o : obj/r_go_down1.c C:/agb/include/AgbTypes.h
+r_go_down2.o : obj/r_go_down2.c C:/agb/include/AgbTypes.h
+r_go_down3.o : obj/r_go_down3.c C:/agb/include/AgbTypes.h
+r_go_down4.o : obj/r_go_down4.c C:/agb/include/AgbTypes.h
+r_go_down5.o : obj/r_go_down5.c C:/agb/include/AgbTypes.h
+r_go_down6.o : obj/r_go_down6.c C:/agb/include/AgbTypes.h
+r_go_down7.o : obj/r_go_down7.c C:/agb/include/AgbTypes.h
+r_jump0.o : obj/r_jump0.c C:/agb/include/AgbTypes.h
+r_jump1.o : obj/r_jump1.c C:/agb/include/AgbTypes.h
+r_jump2.o : obj/r_jump2.c C:/agb/include/AgbTypes.h
+r_jump3.o : obj/r_jump3.c C:/agb/include/AgbTypes.h
+r_jump4.o : obj/r_jump4.c C:/agb/include/AgbTypes.h
+r_jump5.o : obj/r_jump5.c C:/agb/include/AgbTypes.h
+r_jump6.o : obj/r_jump6.c C:/agb/include/AgbTypes.h
+r_jump7.o : obj/r_jump7.c C:/agb/include/AgbTypes.h
+r_jump8.o : obj/r_jump8.c C:/agb/include/AgbTypes.h
+r_jump9.o : obj/r_jump9.c C:/agb/include/AgbTypes.h
+r_jump10.o : obj/r_jump10.c C:/agb/include/AgbTypes.h
+r_attack1.o : obj/r_attack1.c C:/agb/include/AgbTypes.h
+r_attack2.o : obj/r_attack2.c C:/agb/include/AgbTypes.h
+r_attack3.o : obj/r_attack3.c C:/agb/include/AgbTypes.h
+r_attack4.o : obj/r_attack4.c C:/agb/include/AgbTypes.h
+r_attack5.o : obj/r_attack5.c C:/agb/include/AgbTypes.h
+r_attack6.o : obj/r_attack6.c C:/agb/include/AgbTypes.h
+r_attack7.o : obj/r_attack7.c C:/agb/include/AgbTypes.h
+o_kihon001.o : obj/o_kihon001.c C:/agb/include/AgbTypes.h
+o_kihon002.o : obj/o_kihon002.c C:/agb/include/AgbTypes.h
+o_kihon003.o : obj/o_kihon003.c C:/agb/include/AgbTypes.h
+o_kihon004.o : obj/o_kihon004.c C:/agb/include/AgbTypes.h
+o_kihon005.o : obj/o_kihon005.c C:/agb/include/AgbTypes.h
+o_kihon006.o : obj/o_kihon006.c C:/agb/include/AgbTypes.h
+o_kihon007.o : obj/o_kihon007.c C:/agb/include/AgbTypes.h
+o_kihon008.o : obj/o_kihon008.c C:/agb/include/AgbTypes.h
+o_kihon009.o : obj/o_kihon009.c C:/agb/include/AgbTypes.h
+o_kihon010.o : obj/o_kihon010.c C:/agb/include/AgbTypes.h
+o_kougeki000.o : obj/o_kougeki000.c C:/agb/include/AgbTypes.h
+o_kougeki001.o : obj/o_kougeki001.c C:/agb/include/AgbTypes.h
+o_kougeki002.o : obj/o_kougeki002.c C:/agb/include/AgbTypes.h
+o_kougeki003.o : obj/o_kougeki003.c C:/agb/include/AgbTypes.h
+o_kougeki004.o : obj/o_kougeki004.c C:/agb/include/AgbTypes.h
+o_kougeki005.o : obj/o_kougeki005.c C:/agb/include/AgbTypes.h
+o_kougeki006.o : obj/o_kougeki006.c C:/agb/include/AgbTypes.h
+o_kougeki007.o : obj/o_kougeki007.c C:/agb/include/AgbTypes.h
+o_kougeki008.o : obj/o_kougeki008.c C:/agb/include/AgbTypes.h
+o_kougeki009.o : obj/o_kougeki009.c C:/agb/include/AgbTypes.h
+o_kougeki010.o : obj/o_kougeki010.c C:/agb/include/AgbTypes.h
+o_kougeki011.o : obj/o_kougeki011.c C:/agb/include/AgbTypes.h
+o_kougeki012.o : obj/o_kougeki012.c C:/agb/include/AgbTypes.h
+o_kougeki013.o : obj/o_kougeki013.c C:/agb/include/AgbTypes.h
+o_kougeki014.o : obj/o_kougeki014.c C:/agb/include/AgbTypes.h
+o_kougeki015.o : obj/o_kougeki015.c C:/agb/include/AgbTypes.h
+o_kougeki016.o : obj/o_kougeki016.c C:/agb/include/AgbTypes.h
+o_kougeki017.o : obj/o_kougeki017.c C:/agb/include/AgbTypes.h
+o_kougeki018.o : obj/o_kougeki018.c C:/agb/include/AgbTypes.h
+o_kougeki019.o : obj/o_kougeki019.c C:/agb/include/AgbTypes.h
+o_kougeki020.o : obj/o_kougeki020.c C:/agb/include/AgbTypes.h
+o_yarare000.o : obj/o_yarare000.c C:/agb/include/AgbTypes.h
+o_yarare001.o : obj/o_yarare001.c C:/agb/include/AgbTypes.h
+o_yarare002.o : obj/o_yarare002.c C:/agb/include/AgbTypes.h
+o_yarare003.o : obj/o_yarare003.c C:/agb/include/AgbTypes.h
+o_yarare004.o : obj/o_yarare004.c C:/agb/include/AgbTypes.h
+o_yarare005.o : obj/o_yarare005.c C:/agb/include/AgbTypes.h
+o_yarare006.o : obj/o_yarare006.c C:/agb/include/AgbTypes.h
+o_yarare007.o : obj/o_yarare007.c C:/agb/include/AgbTypes.h
+o_yarare008.o : obj/o_yarare008.c C:/agb/include/AgbTypes.h
+o_yarare009.o : obj/o_yarare009.c C:/agb/include/AgbTypes.h
+o_yarare010.o : obj/o_yarare010.c C:/agb/include/AgbTypes.h
+o_yarare011.o : obj/o_yarare011.c C:/agb/include/AgbTypes.h
+o_yarare012.o : obj/o_yarare012.c C:/agb/include/AgbTypes.h
+o_yarare013.o : obj/o_yarare013.c C:/agb/include/AgbTypes.h
+o_yarare014.o : obj/o_yarare014.c C:/agb/include/AgbTypes.h
+o_yarare015.o : obj/o_yarare015.c C:/agb/include/AgbTypes.h
+o_yarare016.o : obj/o_yarare016.c C:/agb/include/AgbTypes.h
+o_yarare017.o : obj/o_yarare017.c C:/agb/include/AgbTypes.h
+o_yarare018.o : obj/o_yarare018.c C:/agb/include/AgbTypes.h
+o_yarare019.o : obj/o_yarare019.c C:/agb/include/AgbTypes.h
+o_yarare020.o : obj/o_yarare020.c C:/agb/include/AgbTypes.h
+o_fukiya000.o : obj/o_fukiya000.c C:/agb/include/AgbTypes.h
+awa.o : obj/awa.c C:/agb/include/AgbTypes.h
+ring_32_64_left.o : obj/ring_32_64_left.c C:/agb/include/AgbTypes.h
+ring_32_64_right.o : obj/ring_32_64_right.c C:/agb/include/AgbTypes.h
+umia_.o : bg_parts/umia_.c C:/agb/include/agbtypes.h
+umi_ab_256x512.o : bg_parts/umi_ab_256x512.c C:/agb/include/agbtypes.h
+sango1024x256.o : bg_parts/sango1024x256.c C:/agb/include/agbtypes.h
+sora.o : bg_parts/sora.c C:/agb/include/agbtypes.h
+light4.o : bg_parts/light4.c C:/agb/include/agbtypes.h
+wave2nd1.o : bg_parts/wave2nd1.c C:/agb/include/AgbTypes.h
+wave2nd2.o : bg_parts/wave2nd2.c C:/agb/include/AgbTypes.h
+wave2nd3.o : bg_parts/wave2nd3.c C:/agb/include/AgbTypes.h

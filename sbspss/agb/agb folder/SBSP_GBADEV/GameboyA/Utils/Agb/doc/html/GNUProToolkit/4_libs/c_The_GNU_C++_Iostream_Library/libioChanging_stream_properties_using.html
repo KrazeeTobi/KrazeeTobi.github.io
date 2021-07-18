@@ -1,0 +1,142 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Changing stream properties using manipulators</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioChoices_in_formatting.html">Previous</A>|<A HREF="libioExtended_data_fields.html">Next</A>
+<BR><A NAME="off_198011"></A><A NAME="c7f3ebc9"></A><A NAME="off_198011"></A><A NAME="c7f3ebc9"></A><A NAME="off_198011"></A><A NAME="c7f3ebc9"></A><A NAME="off_198011"></A><A NAME="c7f3ebc9"></A><A NAME="off_198011"></A><A NAME="c7f3ebc9"></A><A NAME="off_198011"></A><A NAME="c7f3ebc9"></A><A NAME="off_198011"></A><A NAME="c7f3ebc9"></A><A NAME="off_198011"></A><A NAME="c7f3ebc9"></A><A NAME="off_198011"></A><A NAME="c7f3ebc9"></A><A NAME="off_198011"></A><A NAME="c7f3ebc9"></A><A NAME="off_198011"></A><A NAME="c7f3ebc9"></A><A NAME="off_198011"></A><A NAME="c7f3ebc9"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Changing
+stream properties using manipulators</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>For
+convenience, manipulators provide a way to change certain properties of
+streams, or otherwise affect them, in the middle of expressions involving
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>&lt;&lt;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>>></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, you might use
+the following input statement to produce </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>|**234|
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>as output.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>cout &lt;&lt; "|" &lt;&lt; setfill('*') &lt;&lt; setw(5) &lt;&lt; 234 &lt;&lt; "|";</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Manipulators that take an argument
+require </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include &lt;iomanip.h></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<UL>
+<UL><B><FONT FACE="Times New Roman"><FONT SIZE=+1>ws&nbsp;<BR>
+<I>Manipulator</I></FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Skips whitespace.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<UL>
+<UL><B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>flush&nbsp;<BR>
+<I>Manipulator</I></FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Flushes an output stream.
+For instance, the input, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cout&lt;&lt;...&lt;&lt;flush;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+has the same effect as the following input.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0></FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>cout&lt;&lt;...; cout.flush();</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+</UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>endl&nbsp;<BR>
+<I>Manipulator</I></FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Writes an end of line character,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\n</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+then flushes the output stream.</FONT></FONT></UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>ends&nbsp;<BR>
+<I>Manipulator</I></FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Writes the string terminator
+character, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><FONT SIZE=+1><FONT FACE="Times New Roman"><B>setprecision</B> </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(int
+<I>signif</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Manipulator</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>You can change the value
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::precision</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>&lt;&lt;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+expressions with the manipulator, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>setprecision(<I>signif</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+for instance, use the following input to print </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>4.6</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Manipulators such as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>setprecision(<I>signif</I>)
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>that take an argument
+require</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>#include &lt;iomanip.h></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>cout &lt;&lt; setprecision(2) &lt;&lt; 4.567;</FONT></FONT></PRE>
+</UL>
+</UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><FONT SIZE=+1><FONT FACE="Times New Roman"><B>setw</B> </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(int
+<I>n</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Manipulator</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>You can change the value
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::width</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>&lt;&lt;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+expressions with the manipulator </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>setw(
+n)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>; use the following
+input as an example.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>cout &lt;&lt; setw(5) &lt;&lt; 234;</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This input prints </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>234</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with two leading spaces.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Requires </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include
+&lt;iomanip.h></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><FONT SIZE=+1><FONT FACE="Times New Roman"><B>setbase</B> </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(int
+<I>base</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Manipulator</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Where </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>base</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is one of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>10</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(decimal), </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>8</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(octal), or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>16</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(hexadecimal), change the base value for numeric representations.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Requires </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include
+&lt;iomanip.h></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>dec&nbsp;<BR>
+<I>Manipulator</I></FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Select decimal base; equivalent
+to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>setbase(10)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>hex</B>&nbsp;<BR>
+<B><I>Manipulator</I></B></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Select hexadecimal base;
+equivalent to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>setbase(16)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>oct&nbsp;<BR>
+<I>Manipulator</I></FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Select octal base; equivalent
+to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>setbase(8)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><FONT SIZE=+1><FONT FACE="Times New Roman"><B>setfill</B> </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(char
+<I>padding</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Manipulator</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>padding</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+character, in the same way as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::fill</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Requires </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include
+&lt;iomanip.h></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioChoices_in_formatting.html">Previous</A>|<A HREF="libioExtended_data_fields.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

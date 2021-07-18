@@ -1,0 +1,72 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title> cygcheck</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<div CLASS="Heading5"><a NAME="Top"></a><a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embCygwin.html">Previous</a>|<a href="embcygpath.html">Next</a></div>
+
+<div CLASS="Heading5"><tt><font size=+3></font></tt></div>
+
+<div CLASS="Heading5"><tt><font size=+3>cygcheck</font></tt>
+<hr SIZE=5 WIDTH="100%"></div>
+
+<div CLASS="Label"><b><font size=+1>USAGE</font></b></div>
+
+<pre CLASS="CodeExample2"><font size=+1>cygcheck [-s] [-v] [-r] [-h] [<i> program</i> ...]</font></pre>
+
+<div CLASS="Label"><b><font size=+1>DESCRIPTION</font></b></div>
+
+<div CLASS="Note"><font size=+1>You must at least give either an ‘<tt>-s</tt>’
+option or a program name, signified in the usage as <i><tt>program</tt></i>.</font></div>
+
+<div CLASS="Note"><font size=+1>The <tt>cygcheck</tt> program is a diagnostic
+utility that examines your system and reports the information that is significant
+to the proper operation of cygwin programs. It can give information about
+a specific program (or <i><tt>program</tt></i>) you are trying to run,
+general system information, or both. If you list one or more programs on
+the command line, it will diagnose the runtime environment of that program
+or programs. If you specify the <tt>-s</tt> option, it will give general
+system information. If you specify <tt>-s</tt> and list one or more programs
+on the command line, it reports on both specified programs.</font></div>
+
+<div CLASS="Note"><font size=+1>The <tt>cygcheck</tt> program should be
+used to send information about your system to Cygnus for troubleshooting
+(if your support representative requests it). When asked to run this command,
+include all the options plus any commands with which you are having trouble,
+saving the output so that you can mail it to Cygnus. Use the following
+declaration at the <tt>C:\Cygnus></tt> prompt.</font></div>
+
+<br>&nbsp;
+<blockquote>
+<pre CLASS="CodeExample2"><font size=+1>cygcheck -s -v -r -h > tocygnus.txt</font></pre>
+</blockquote>
+
+<div CLASS="Note"><font size=+1>The <tt>-v</tt> option causes the output
+to be more verbose. What this means is that additional information will
+be reported which is usually not interesting, such as the internal version
+numbers of DLLs, additional information about recursive DLL usage, and
+if a file in one directory in the <tt>PATH</tt> also occurs in other directories
+on the <tt>PATH</tt>.</font></div>
+
+<div CLASS="Note"><font size=+1>The <tt>-r</tt> option causes cygcheck
+to search your registry for information that is relevent to Cygnus programs.
+These registry entries are the ones that have “Cygnus” in the name. If
+you are concerned about privacy, you may remove information from this report,
+keeping in mind that doing so makes it harder for Cygnus to diagnose the
+problem.</font></div>
+
+<div CLASS="Note"><font size=+1>The <tt>-h</tt> option prints additional
+helpful messages in the report, at the beginning of each section. It also
+adds table column headings. While this is useful information, it also adds
+significantly to the size of the report; if you want a compact report or
+if you know what everything is already, don’t use this option.</font>
+<hr SIZE=5 WIDTH="100%"></div>
+
+<center><a href="#Top">Top</a>|<a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embCygwin.html">Previous</a>|<a href="embcygpath.html">Next</a></center>
+
+</body>
+</html>

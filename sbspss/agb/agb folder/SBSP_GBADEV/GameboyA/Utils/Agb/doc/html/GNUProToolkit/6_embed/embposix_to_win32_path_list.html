@@ -1,0 +1,59 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title> cygwin_posix_to_win32_path_list</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<div CLASS="Heading5"><a NAME="Top"></a><a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embposix_path_list_p.html#Top">Previous</a>|<a href="embposix_to_win32_path_list_buf_size.html">Next</a></div>
+
+<div CLASS="Heading5"><tt><font size=+3>cygwin_posix_to_win32_path_list</font></tt>
+<hr SIZE=5 WIDTH="100%"></div>
+
+<div CLASS="CodeScreen"><b><font size=+1>USAGE</font></b></div>
+
+<pre CLASS="CodeScreen"><font size=+1>extern "C" void <tt>cygwin_posix_to_win32_path_list</tt> (const char *<i>posix</i>, char *<i>win32</i>);</font></pre>
+<font size=+1></font>
+<div CLASS="Body"><b><font size=+1>DESCRIPTION</font></b></div>
+
+<div CLASS="Body"><font size=+1></font></div>
+
+
+<p CLASS="Body"><font size=+1>Given a POSIX path-style string (that is,
+<tt>/foo:/bar</tt>), convert to the equivalent Win32 path-style string
+(that is, <tt>d:\;e:\bar</tt>). Win32 must point to a sufficiently large
+buffer.</font>
+<br><font size=+1></font>&nbsp;
+<pre CLASS="CodeExample"><font size=+1>char *_epath;</font></pre>
+
+<pre><font size=+1>char *_win32epath;</font></pre>
+
+<pre><font size=+1>_epath = _win32epath = getenv (NAME);</font></pre>
+
+<pre><font size=+1>/* If we have a POSIX path list, convert to win32 path list */</font></pre>
+
+<pre><font size=+1>if (_epath != NULL &amp;&amp; *_epath != 0</font></pre>
+
+<pre><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp; &amp;&amp; cygwin_posix_path_list_p (_epath))</font></pre>
+
+<pre><font size=+1>&nbsp; {</font></pre>
+
+<pre><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp; _win32epath = (char *) xmalloc</font></pre>
+
+<pre><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (cygwin_posix_to_win32_path_list_buf_size (_epath));</font></pre>
+
+<pre><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp; cygwin_posix_to_win32_path_list (_epath, _win32epath);</font></pre>
+
+<pre><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp; }</font></pre>
+
+<div CLASS="Body"><font size=+1>See also <tt><a href="embposix_to_win32_path_list_buf_size.html" CLASS="XRef">cygwin_posix_to_win32_path_list_buf_size</a></tt>.</font></div>
+
+<div CLASS="Body">
+<hr SIZE=5 WIDTH="100%"></div>
+
+<center><a href="#Top">Top</a>|<a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embposix_path_list_p.html#Top">Previous</a>|<a href="embposix_to_win32_path_list_buf_size.html">Next</a></center>
+
+</body>
+</html>

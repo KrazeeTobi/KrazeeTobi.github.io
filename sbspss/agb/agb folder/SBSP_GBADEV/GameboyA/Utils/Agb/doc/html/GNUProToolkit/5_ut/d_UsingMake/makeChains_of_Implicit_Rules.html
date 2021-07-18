@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Chains of Implicit Rules</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeVariables_Used_by_Implicit_Rules.html">Previous</A>|<A HREF="makeDefining_and_Redefining_Pattern_.html">Next</A>
+<BR><A NAME="off_2098689"></A><A NAME="661e25b6"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Chains
+of implicit rules</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Sometimes
+a file can be made by a sequence of implicit rules. For example, a file
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>n.</I><B>o</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+could be made from ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>n.</I><B>y</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+by running first Yacc and then </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>cc</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Such a sequence is called a chain.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If the file ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>n.</I><B>c</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+exists, or is mentioned in the makefile, no special searching is required:
+make finds that the object file can be made by C compilation from ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>n.</I><B>c</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’;
+later on, when considering how to make ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>n.</I><B>c</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+the rule for running Yacc is used. Ultimately both ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>n.</I><B>c</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>n.</I><B>o</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+are updated.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>However, even if ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>n.</I><B>c</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+does not exist and is not mentioned, make knows how to envision it as the
+missing link between ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>n.</I><B>o</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>n.</I><B>y</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’!
+In this case, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>n.</I><B>c</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is called an intermediate file. Once </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has decided to use the <I>intermediate file</I>, it is entered in the data
+base as if it had been mentioned in the makefile, along with the implicit
+rule that says how to create it.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Intermediate files are remade
+using their rules just like all other files. The difference is that the
+intermediate file is deleted when </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is finished. Therefore, the intermediate file which did not exist before
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+also does not exist after </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The deletion is reported to you by printing a ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>rm
+-f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ command that
+shows what make is doing. (You can list the target pattern of an implicit
+rule (such as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’)
+as a dependency of the special target, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.PRECIOUS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to preserve intermediate files made by implicit rules whose target patterns
+match that file’s name; see <FONT COLOR="#008000"><A HREF="makeInterrupting_or_Killing_make.html">Interrupting
+or killing </A></FONT></FONT></FONT><B><FONT FACE="Courier New"><FONT COLOR="#008000"><FONT SIZE=+0><A HREF="makeInterrupting_or_Killing_make.html">make</A></FONT></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>A chain can involve more
+than two implicit rules. For example, it is possible to make a file ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+from ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>RCS/foo.y,v</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+by running RCS, Yacc and </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>cc</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Then both ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.y</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+are intermediate files that are deleted at the end.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>No single implicit rule can
+appear more than once in a chain. This means that </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will not even consider such a ridiculous thing as making ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+from ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.o.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+by running the linker twice. This constraint has the added benefit of preventing
+any infinite loop in the search for an implicit rule chain.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>There are some special implicit
+rules to optimize certain cases that would otherwise be handled by rule
+chains. For example, making ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+from ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+could be handled by compiling and linking with separate chained rules,
+using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+as an intermediate file. But what actually happens is that a special rule
+for this case does the compilation and linking with a single </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command. The optimized rule is used in preference to the step-by-step chain
+because it comes earlier in the ordering of rules.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeVariables_Used_by_Implicit_Rules.html">Previous</A>|<A HREF="makeDefining_and_Redefining_Pattern_.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

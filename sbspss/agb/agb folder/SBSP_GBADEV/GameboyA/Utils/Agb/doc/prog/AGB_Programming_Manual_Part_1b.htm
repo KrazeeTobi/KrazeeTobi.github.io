@@ -1,0 +1,109 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!--
+Editors' comments:
+07/07/00  Created by Pam Curtis using w2w 2.0
+mm/dd/yy Edited by * -->
+		<title>System Configuration</title>
+	</head>
+
+	<body text="black" bgcolor="white">
+		<a name="topofpage"></a>
+		<h1><a name="T1"></a>2 System Configuration</h1>
+		<h2><a name="T2"></a>2.1 CPU Block Diagram</h2>
+		<p><img src="image2a.gif" width="553" height="795">
+		<h2><a name="T3"></a>2.2 Complete Block Diagram</h2>
+		<center>
+			<p><img src="Image3.gif"></p>
+		</center>
+		<h2><a name="T4"></a>2.3 Memory Configuration and Access Width</h2>
+		<center>
+			<p>
+			<table width="500" border="1" cellspacing="0" cellpadding="3">
+				<tr>
+					<td width="38%" valign="top" rowspan="2" bgcolor="#cccccc" align="center"><b>Memory Type</b></td>
+					<td width="11%" valign="top" rowspan="2" bgcolor="#cccccc" align="center"><b>Bus Width</b></td>
+					<td valign="top" colspan="2" bgcolor="#cccccc" align="center"><b>DMA</b></td>
+					<td valign="top" colspan="2" bgcolor="#cccccc" align="center"><b>CPU</b></td>
+				</tr>
+				<tr>
+					<td width="13%" valign="top" bgcolor="#cccccc"><b>Read Width</b></td>
+					<td width="13%" valign="top" bgcolor="#cccccc"><b>Write Width</b></td>
+					<td width="13%" valign="top" bgcolor="#cccccc"><b>Read Width</b></td>
+					<td width="13%" valign="top" bgcolor="#cccccc"><b>Write Width</b></td>
+				</tr>
+				<tr height="24">
+					<td width="38%" valign="top" height="24">OAM</td>
+					<td width="11%" valign="top" height="24">32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+				</tr>
+				<tr height="24">
+					<td width="38%" valign="top" height="24">Palette RAM</td>
+					<td width="11%" valign="top" height="24">16</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+				</tr>
+				<tr height="24">
+					<td width="38%" valign="top" height="24">VRAM</td>
+					<td width="11%" valign="top" height="24">16</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+				</tr>
+				<tr height="24">
+					<td width="38%" valign="top" height="24">CPU Internal Working RAM</td>
+					<td width="11%" valign="top" height="24">32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">8/16/32</td>
+					<td width="13%" valign="top" height="24">8/16/32</td>
+				</tr>
+				<tr height="24">
+					<td width="38%" valign="top" height="24">CPU External Working RAM</td>
+					<td width="11%" valign="top" height="24">16</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">8/16/32</td>
+					<td width="13%" valign="top" height="24">8/16/32</td>
+				</tr>
+				<tr height="24">
+					<td width="38%" valign="top" height="24">Internal registers</td>
+					<td width="11%" valign="top" height="24">32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">8/16/32</td>
+					<td width="13%" valign="top" height="24">8/16/32</td>
+				</tr>
+				<tr height="24">
+					<td width="38%" valign="top" height="24">Game Pak ROM (Mask ROM, Flash Memory)</td>
+					<td width="11%" valign="top" height="24">16</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+					<td width="13%" valign="top" height="24">8/16/32</td>
+					<td width="13%" valign="top" height="24">16/32</td>
+				</tr>
+				<tr height="24">
+					<td width="38%" valign="top" height="24">Game Pak RAM (SRAM, Flash Memory)</td>
+					<td width="11%" valign="top" height="24">8</td>
+					<td width="13%" valign="top" height="24">--</td>
+					<td width="13%" valign="top" height="24">--</td>
+					<td width="13%" valign="top" height="24">8</td>
+					<td width="13%" valign="top" height="24">8</td>
+				</tr>
+			</table>
+		</center>
+		<p>Good execution efficiency is obtained when programs that operate from the Game Pak use 16-bit instructions (16-bit compiler), and those that operate from CPU Internal Working RAM use 32-bit instructions (32-bit compiler).</p>
+		<h2><a name="T5"></a>2.4 Little-Endian</h2>
+		<p>In the AGB CPU, memory addresses are allocated in 8-bit increments, and little-endian format is used in implementing the 8-, 16-, and 32-bit access widths.</p>
+		<p><img src="Image4.gif" width="513" height="155">
+	</body>
+
+</html>

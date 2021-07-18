@@ -1,0 +1,180 @@
+// Mixing ARM and/or Thumb Assembly Code with C when using GCC
+// by Jeff Frohwein, v1.0221
+// Some contributions from Dennis Ranke (exoticorn/icebird)
+
+//  The first half of this document describes including assembly
+// code inside of your .c files. The second half describes linking
+// a stand-alone .s assembly file in with your project. These examples
+// only apply for GCC and NOT the arm SDT compiler.
+
+//  The normal code used in GBA games is Thumb asm. Thumb code tends
+// to be smaller and slower than ARM code. If you plan to mix Thumb
+// and ARM code then you need to use the following compiler option:
+
+//  First, make sure that you add '-mthumb-interwork' to your compile
+// options for both the compiler (GCC) and the assembler (AS).
+//
+//  -mthumb-interwork
+//       Generate code which supports calling between the ARM
+//      and THUMB instruction sets. Without this option the two
+//      instruction sets cannot be reliably used inside one program.
+//      The default is `-mno-thumb-interwork', since slightly larger
+//      code is generated when `-mthumb-interwork' is specified.
+
+//
+// *********** Mixing Assembly IN c code examples ************
+
+// Draw pixel in GBA graphics modes 3/5 in Thumb asm (slow)
+// Entry: px = pixel X coordinate
+//        py = pixel Y coordinate
+//      colr = pixel color
+void PutPixel16 (u32 px, u32 py, u32 colr)
+   {
+   // r0 = px
+   // r1 = py
+   // r2 = colr
+   // Since input parameters are stored in the lower registers,
+   //  it's more efficient to use the upper registers for
+   //  your asm code whenever possible.
+   // For less routine overhead, use 'u32' function parameters
+   //  instead of 'u8' or 'u16'. These smaller types automatically
+   //  perform the following additional overhead: u8: v=v&0xff; u16: v=v&0xffff;
+   asm ("
+      mov    r3,%0
+
+      mov    r5, #240
+      lsl    r5, r5, #1          @ r2 = 480
+
+      mul    r5,r5,r3
+      mov    r4,%1
+      add    r5,r5,r4
+      add    r5,r5,r4
+
+      mov    r3,#192
+      lsl    r3, r3, #19         @ r0 = 0x6000000
+
+      add    r3,r3,r5
+      mov    r4,%2
+      strh   r4,[r3]
+      " :
+      /* No output */ :                 // No output is returned from this routine.
+      "r" (py), "r" (px), "r" (colr) :  // Define the routine inputs (%0,%1,%2).
+      "r3", "r4", "r5" );               // Specific which registers we destroy.
+                                        // For more info on 'asm' read the GCC docs at gnu.org
+   }
+
+// Draw pixel in GBA graphics modes 3/5 in ARM asm (fast)
+// Entry: px = pixel X coordinate
+//        py = pixel Y coordinate
+//      colr = pixel color
+void PutPixel32 (u32 px, u32 py, u32 colr)
+   {
+   // r0 = px
+   // r1 = py
+   // r2 = colr
+   // Since input parameters are stored in the lower registers,
+   //  it's more efficient to use the upper registers for
+   //  your asm code whenever possible.
+   // For less routine overhead, use 'u32' function parameters
+   //  instead of 'u8' or 'u16'. These smaller values automatically
+   //  perform the following additional overhead: u8: v=v&0xff; u16: v=v&0xffff;
+   asm ("
+@ Enter ARM Mode
+      adr    r3,2f             @ Get address of label 2 (f means the label
+                               @  is below[f=forward] instead of above[b=backward])
+      bx     r3
+
+      .ALIGN                   @ This is required before all ARM code.
+                               @ ..or you can use .CODE 32 here
+      .ARM
+
+2:
+      mov    r4,#480
+      mul    r5,r4,r1
+      movs   r4,r0,lsl #1
+      add    r5,r5,r4
+
+      mov    r3,#0x6000000
+      add    r3,r3,r5
+      strh   r2,[r3]
+
+@ Enter Thumb mode
+      adr    r3,3f + 1
+      bx     r3
+
+      .THUMB                   @ ..or you can use .CODE 16 here
+3:
+      " :
+      /* No output */ :               // No output is returned from this routine
+      "r" (px), "r" (py), "r" (colr): // Define the routine inputs (%0,%1,%2) even if we don't use them
+      "r3", "r4", "r5" );             // Specific which registers we destroy
+   }
+
+//*****************************************************************
+
+// *********** Linking to assembly code (.s) from C code ************
+
+//  Both of the following routines my be in the same .s file.
+// One is written in Thumb (slow) amd the other is in ARM (fast).
+// Add the following to your .c file:
+//   extern void DrawPixel16 (u32 px, u32 py, u32 colr);
+//   extern void DrawPixel32 (u32 px, u32 py, u32 colr, u32 scrnadr);
+// Add this .s file to your makefile and you are all setup.
+// (For an example of that, check out gfxLib on http://www/devrs.com/gba/ )
+//
+//  Note that in DrawPixel16 below, the compiler stays in native Thumb
+// mode. In DrawPixel32, the C calling routine switches to ARM mode
+// when calling DrawPixel32 because no .THUMB_FUNC is used. The
+// C calling routine expects you to switch back to Thumb mode before
+// returning. This is accomplished by the 'bx r14' here.
+
+@ Draw pixel in GBA graphics modes 3/5 in Thumb asm (slow)
+@ (void) DrawPixel16 (u32 x, u32 y, u32 color);
+        .THUMB
+        .ALIGN  2
+        .GLOBL  DrawPixel16
+        .THUMB_FUNC
+
+DrawPixel16:
+        push    {r3, r4, r5, lr}
+
+        mov     r5, #240
+        lsl     r5, r5,#1           @ r5 = 480
+        mul     r5,r5,r1 @r3
+        mov     r4,r0
+        add     r5,r5,r4
+        add     r5,r5,r4
+        mov     r3,#192
+        lsl     r3, r3, #19         @ r3 = 0x6000000
+        add     r3,r3,r5
+        mov     r4,r2
+        strh    r4,[r3]
+
+        pop     {r3, r4, r5}
+        pop     {r0}
+        bx      r0
+
+@ Draw pixel in GBA graphics modes 3/5 in ARM asm (fast)
+@ Entry: px = pixel X coordinate
+@        py = pixel Y coordinate
+@     color = pixel color
+@   scrnadr = base screen address
+@ (void) DrawPixel32 (u32 x, u32 y, u32 color, u32 scrnadr);
+
+        .ARM
+        .ALIGN
+        .GLOBL  DrawPixel32
+
+DrawPixel32:
+        stmed   r13!,{r4-r5,r14}
+
+        mov     r4,#480
+        mul     r5,r4,r1
+        add     r5,r5,r0,lsl #1
+        add     r4,r5,r3
+        strh    r2,[r4]
+
+        ldmed   r13!,{r4-r5,r14}
+        bx      r14
+
+*EOF*

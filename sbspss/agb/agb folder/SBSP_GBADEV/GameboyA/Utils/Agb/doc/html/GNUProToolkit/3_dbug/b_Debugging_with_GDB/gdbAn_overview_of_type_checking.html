@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>An overview of type checking</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbType_and_range_checking.html">Previous</A>|<A HREF="gdbAn_overview_of_range_checking.html">Next</A>
+<BR><A NAME="off_1771635"></A><A NAME="9250dacf"></A><FONT FACE="Futura Md BT"><B><FONT SIZE=+3>An
+overview of type checking</FONT></B></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Some
+languages, such as Modula-2, are strongly typed, meaning that the arguments
+to operators and functions have to be of the correct type, otherwise an
+error occurs. These checks prevent type mismatch errors from ever causing
+any run-time problems. Consider the two following examples.</FONT></FONT>
+<UL><TT><FONT SIZE=+0>1 +2 <B>=></B> 3</FONT></TT>
+
+<P><TT><B><SUP><FONT SIZE=-1>error</FONT></SUP></B><FONT SIZE=+0> 1 + 2.3</FONT></TT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The second example fails because
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CARDINAL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+1 is not type-compatible with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>REAL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+2.3.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For the expressions you use
+in GDB commands, you can tell the GDB type checker to skip checking; to
+treat any mismatches as errors and abandon the expression; or to only issue
+warnings when type mismatches occur, but evaluate the expression anyway.
+When you choose the last of these, GDB evaluates expressions like the second
+example, but also issues a warning.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Even if you turn type checking
+off, there may be other reasons related to type that prevent GDB from evaluating
+an expression. For instance, GDB does not know how to add an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+These particular type errors have nothing to do with the language in use,
+and usually arise from expressions (such as the one described), which make
+little sense to evaluate anyway.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Each language defines to
+what degree it is strict about type. For instance, both Modula-2 and C
+require the arguments to arithmetical operators to be numbers. In C, enumerated
+types and pointers can be represented as numbers, so that they are valid
+arguments to mathematical operators. See <FONT COLOR="#008000"><A HREF="gdbSupported_languages.html">Supported
+languages</A></FONT> for further details on specific languages.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB provides the following
+additional commands for controlling the type checker.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>set check type auto</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set type checking on or
+off based on the current working language. See <FONT COLOR="#008000"><A HREF="gdbSupported_languages.html">Supported
+languages</A></FONT> for the default settings for each language.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>set check type on</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>set check type off</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set type checking on or
+off, overriding the default setting for the current working language. Issue
+a warning if the setting does not match the language default. If any type
+mismatches occur in evaluating an expression while typechecking is on,
+GDB prints a message and aborts evaluation of the expression.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>set check type warn</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Cause the type checker to
+issue warnings, but to always attempt to evaluate the expression. Evaluating
+the expression may still be impossible for other reasons. For example,
+GDB cannot add numbers and structures.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>show type</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Show the current setting
+of the type checker, and whether or not GDB is automatically setting it.</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbType_and_range_checking.html">Previous</A>|<A HREF="gdbAn_overview_of_range_checking.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

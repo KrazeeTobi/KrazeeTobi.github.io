@@ -1,0 +1,43 @@
+//-------------------------------------------------//
+//       Pikachu ga Pokeboru o aishimasu           //
+//                                                 //
+//                 Readme file                     //
+//                                                 //
+//          8. Feb. 2001 - 10. Feb 2001            //
+//     By Nokturn ( code ) and Redah ( gfx )       //
+//-------------------------------------------------//
+
+ Copyright stuff:
+
+ I am in no way bound to Nintendo. Pikachu, Pikatyuu, Pokémon, Pokéball
+and all other characters (c) by Nintendo, all rights reserved. We do not
+sell this game nor did we get any payment to do it. We made it out of our
+free will and it should be treaded as "fan art" or "fan stuff".
+
+ The game:
+
+ "Pikachu ga Pokeboru o aishimasu" is Japanese and means "Pikachu loves
+Pokéballs". The goal of the game is to catch as many falling-down Pokéballs
+as possible. Red Pokéballs give you 1 point, blue ones, 3 and golden ones, 5.
+There are three stages. Press enter on the title screen and then use the left/right
+keys to move Pikachu. Have fun with high-score breaking.
+
+
+ The credits:
+
+ - Nokturn: Code, Idea, Gameplay, Game design
+ - Redah: Graphix
+ - Many nice people in #gbadev: Helped to playtest:
+   ( Joat, reio-ta, SimonB, Vova, F355, TwinD, ... )
+
+ The greets and thanx: 
+
+ Greets and thanx go to: QLeder, Jessica & Andrea ( belated happy birthday ;) ), PromisS,
+ Julius from Arndt, Iki, Nintendo, Pikachu, Pikachu's wife, Guano, benji from Infinite Dreams,
+ Mic, SimonB, cforman, Kojote, Joat, TwinD, Eloist, all the Rinen staff, SabreWulf,
+ OneManBand, Subice, craigix, all the other leet ppl from #gbadev and the scene
+
+ special thanx to TwinD for almost beating my high-score of 249 ( he got 248 ) during
+Playtest phase!
+
+ - Nokturn 2001

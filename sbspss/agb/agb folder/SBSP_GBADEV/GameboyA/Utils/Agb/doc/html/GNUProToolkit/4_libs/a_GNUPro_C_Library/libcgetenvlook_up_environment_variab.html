@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>getenv[look up environment variable]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcexitend_program_execution.html">Previous</A>|<A HREF="libclabslong_integer_absolute_value.html">Next</A>
+</P>
+
+<P><A NAME="off_295127"></A><A NAME="6b8f08ec"></A><A NAME="off_295127"></A><A NAME="6b8f08ec"></A><A NAME="off_295127"></A><A NAME="6b8f08ec"></A><FONT SIZE=+3><FONT FACE="Courier New">getenv
+<BR>
+</FONT><FONT FACE="Times New Roman">[look up environment variable] </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>&lt;stdlib.h&gt;</FONT><FONT SIZE=-1> <BR>
+</FONT><FONT SIZE=+0>char</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>*getenv(const</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>char</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>*</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0><I>name</I>); </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>getenv</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">searches the list of environment variable
+names and values (using the global pointer </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>char</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>**environ</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+for a variable whose name matches the string at </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>name</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If a variable name matches, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>getenv</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">returns a pointer to the associated
+value. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>RETURNS <BR>
+</B>A pointer to the (string) value of the environment variable, or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NULL</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">if there is no such environment variable.
+</FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>getenv</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is ANSI, but the rules for properly
+forming names of environment variables vary from one system to another.
+</FONT></FONT></P>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>getenv</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">requires a global pointer </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>environ</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+</BODY>
+</HTML>

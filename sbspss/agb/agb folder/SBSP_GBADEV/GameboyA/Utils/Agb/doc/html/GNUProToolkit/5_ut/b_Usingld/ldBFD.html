@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>BFD</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="ld.html">Contents</A>|<A HREF="ldindex.html">Index</A>|<A HREF="ldld_and_the_Intel_960_family.html">Previous</A>|<A HREF="ldHow_it_works_an_outline_of_BFD.html">Next</A>
+<BR><A NAME="off_722453"></A><A NAME="000085c8"></A><FONT FACE="Futura Md BT"><B><FONT SIZE=+3>BFD</FONT></B></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+linker accesses object and archive files using the BFD libraries.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>See the following documentation
+for more specific discussion of BFD.</FONT></FONT>
+<BR>&nbsp;
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="ldHow_it_works_an_outline_of_BFD.html">How
+it works: an outline of BFD</A></FONT></FONT></FONT></LI>
+
+<LI>
+<I><FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="ldHow_it_works_an_outline_of_BFD.html">Information
+loss</A></FONT></FONT></FONT></I></LI>
+
+<LI>
+<I><FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="ldHow_it_works_an_outline_of_BFD.html">The
+BFD c</A><A HREF="ldThe_BFD_canonical_objectfile_for.html">anonical object-file
+format</A></FONT></FONT></FONT></I></LI>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The BFD libraries allow the
+linker to use the same routines to operate on object files whatever the
+object file format. A different object file format can be supported simply
+by creating a new BFD back end and adding it to the library. To conserve
+runtime memory, however, the linker and associated tools are usually configured
+to support only a subset of the object file formats available. You can
+use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>objdump -i</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(see “</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>objdump</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>”
+in the document, <I>The GNU Binary Utilities</I>, in this volume of <B><I>GNUPro
+Utilities</I></B>) to list all the formats available for your configuration.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>As with most implementations,
+BFD is a compromise between several conflicting requirements. The major
+factor influencing BFD design was efficiency: any time used converting
+between formats is time which would not have been spent had BFD not been
+involved. This is partly offset by abstraction payback; since BFD simplifies
+applications and back ends, more time and care may be spent optimizing
+algorithms for a greater speed.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>One minor artifact of the
+BFD solution which you should bear in mind is the potential for information
+loss. There are two places where useful information can be lost using the
+BFD mechanism: during conversion and during output. See <FONT COLOR="#008000"><A HREF="ldInformation_Loss.html">Information
+loss</A></FONT>.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="ld.html">Contents</A>|<A HREF="ldindex.html">Index</A>|<A HREF="ldld_and_the_Intel_960_family.html">Previous</A>|<A HREF="ldHow_it_works_an_outline_of_BFD.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

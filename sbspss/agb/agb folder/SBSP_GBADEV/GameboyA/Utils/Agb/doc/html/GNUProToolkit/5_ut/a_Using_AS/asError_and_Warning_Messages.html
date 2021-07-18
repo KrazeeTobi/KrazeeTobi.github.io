@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Error and Warning Messages</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asOutput_Object_File.html">Previous</A>|<A HREF="asCommandLine_Options.html">Next</A>
+<BR><A NAME="off_165320"></A><A NAME="8776b0ec"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Error
+and warning messages</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may write warnings and error messages to the standard error file (usually
+your terminal). This should not happen when a compiler runs as automatically.
+Warnings report an assumption made so that </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+could keep assembling a flawed program; errors report a grave problem that
+stops the assembly.</FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Warning
+messages have the following format (where </FONT></FONT><B><TT><FONT SIZE=+2>NNN</FONT></TT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a line number).</FONT></FONT></FONT>
+<UL>
+<UL><TT><FONT SIZE=+1>file_name:<B>NNN</B>:Warning Message Text</FONT></TT></UL>
+</UL>
+<FONT SIZE=+1><FONT FACE="Times New Roman"><FONT COLOR="#000000">If a logical
+file name has been given (see </FONT><FONT COLOR="#008000"><A HREF="asAssembler_Directives.html#b5f1df75">.</A></FONT></FONT><FONT FACE="Courier New"><FONT COLOR="#008000"><A HREF="asAssembler_Directives.html#b5f1df75">app-file
+<I>string</I></A></FONT></FONT><FONT FACE="Times New Roman"><FONT COLOR="#000000">
+) it is used for the filename, otherwise the name of the current input
+file is used. If a logical line number was given (see </FONT></FONT><FONT FACE="Courier New"><FONT COLOR="#008000"><A HREF="asAssembler_Directives.html#19ea5242">.line
+<I>line</I> <I>number</I></A></FONT></FONT><FONT FACE="Times New Roman"><FONT COLOR="#000000">
+) then it is used to calculate the number printed, otherwise the actual
+line in the current source file is printed. The message text is intended
+to be self explanatory (in the grand Unix tradition).</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Error
+messages have the following format (where </FONT></FONT><B><TT><FONT SIZE=+2>NNN</FONT></TT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a line number).</FONT></FONT></FONT>
+<UL>
+<UL><TT><FONT SIZE=+1>file_name:<B>NNN</B>:FATAL:Error Message Text</FONT></TT></UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>The file
+name and line number are derived as for warning messages. The actual message
+text may be rather less explanatory because many of them aren’t supposed
+to happen.</FONT></FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asOutput_Object_File.html">Previous</A>|<A HREF="asCommandLine_Options.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

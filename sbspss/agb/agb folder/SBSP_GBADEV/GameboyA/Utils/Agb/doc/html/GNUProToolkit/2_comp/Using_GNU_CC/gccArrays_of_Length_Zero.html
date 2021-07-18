@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Arrays of Length Zero</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccComplex_Numbers.html">Previous</A>|<A HREF="gccArrays_of_Variable_Length.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_3440640"></A><A NAME="e3edd8f6"></A><B><FONT SIZE=+3>Arrays
+of length zero&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Zero-length arrays are allowed
+in GNU C. They are very useful as the last element of a structure which
+is really a header for a variable-length object.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>struct line {&nbsp;
+&nbsp;&nbsp; int length;&nbsp;
+&nbsp;&nbsp; char contents[0];&nbsp;
+};&nbsp;
+
+{&nbsp;
+&nbsp;&nbsp; struct line *thisline = (struct line *)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; malloc (sizeof (struct line) + this_length);&nbsp;
+&nbsp;&nbsp; thisline->length = this_length;&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In standard C, you would have
+to give contents a length of 1, which means either you waste space or complicate
+the argument to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>malloc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+</BODY>
+</HTML>

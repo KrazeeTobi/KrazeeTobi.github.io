@@ -1,0 +1,432 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Options for Code Generation Conventions</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccVAX_Options.html">Previous</A>|<A HREF="gccoffsetinfo_option.html">Next</A>
+<BR><A NAME="off_2131239"></A><A NAME="1e5206b8"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3><B>Options
+for code generation conventions&nbsp;</B>&nbsp;</FONT></FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The following machine-independent
+options control the interface conventions used in code generation. Most
+of them have both positive and negative forms; the negative form of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-ffoo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+would be </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fno-foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+In the following options, only one of the forms is listed—the one which
+is not the default. You can figure out the other form by either removing
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>no-</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’or
+adding it.</FONT></FONT>
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fpcc-struct-return</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Return “short” </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+values in memory like longer ones, rather than in registers. This convention
+is less efficient, although it has the advantage of allowing intercalls
+between GNU CC-compiled files and files compiled with other compilers.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The precise convention for
+returning structures in memory depends on the target configuration macros.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Short structures and unions
+are those whose size and alignment match that of some integer type.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-freg-struct-return</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use the convention that
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+values are returned in registers when possible. This is more efficient
+for small structures than ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fpcc-struct-return</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If you specify neither ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fpcc-struct-return</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+nor its contrary ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-freg-struct-return</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+GNU CC defaults to whichever convention is standard for the target. If
+there is no standard convention, GNU CC defaults to ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fpcc-struct-return</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+except on targets where GNU CC is the principal compiler. In those cases,
+we can choose the standard, and we chose the more efficient register return
+alternative.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fshort-enums</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Allocate to an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>enum</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+type only as many bytes as it needs for the declared range of possible
+values. Specifically, the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>enum</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+type will be equivalent to the smallest integer type which has enough room.</FONT></FONT></DT>
+</UL>
+</UL>
+
+<UL>&nbsp;<FONT FACE="Courier New"><FONT SIZE=+0>-fshort-double</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use the same size for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>double</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>float</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fshared-data</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Requests that the data and
+non-</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>const</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+variables of this compilation be shared data rather than private data.
+The distinction makes sense only on certain operating systems, where shared
+data is shared between processes running the same program, while private
+data exists in one copy per process.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fno-common</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Allocate even uninitialized
+global variables in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bss</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+section of the object file, rather than generating them as common blocks.
+This has the effect that if the same variable is declared (without </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>extern</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+in two different compilations, you will get an error when you link them.
+The only reason this might be useful is if you wish to verify that the
+program will work on other systems which always work this way.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fno-ident</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Ignore the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#ident</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fno-gnu-linker</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Do not output global initializations
+(such as C++ constructors and destructors) in the form used by the GNU
+linker (on systems where the GNU linker is the standard method of handling
+them). Use this option when you want to use a non-GNU linker, which also
+requires using the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>collect2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+program to make sure the system linker includes constructors and destructors.
+(</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>collect2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is included in the GNU CC distribution.) For systems which must use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>collect2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the compiler driver </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gcc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is configured to do this automatically.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-finhibit-size-directive</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Don’t output a .size assembler
+directive, or anything else that would cause trouble if the function is
+split in the middle, and the two halves are placed at locations far apart
+in memory. This option is used when compiling ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>crtstuff.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’;
+you should not need to use it for anything else.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fverbose-asm</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Put extra commentary information
+in the generated assembly code to make it more readable. This option is
+generally only of use to those who actually need to read the generated
+assembly code (perhaps while debugging the compiler itself).</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fverbose-asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is the default. ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fno-verbose-asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+causes the extra information to be omitted and is useful when comparing
+two assembler files.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fvolatile</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Consider all memory references
+through pointers to be volatile.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fvolatile-global</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Consider all memory references
+to extern and global data items to be volatile.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fpic</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate position-independent
+code (PIC) suitable for use in a shared library, if supported for the target
+machine. Such code accesses all constant addresses through a global offset
+table (GOT). The dynamic loader resolves the GOT entries when the program
+starts (the dynamic loader is not part of GNU CC; it is part of the operating
+system). If the GOT size for the linked executable exceeds a machine-specific
+maximum size, you get an error message from the linker indicating that
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fpic</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+does not work; in that case, recompile with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fPIC</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+instead. (These maximums are 16k on the m88k, 8k on the SPARC, and 32k
+on the m68k and RS/6000. The 386 has no such limit.)</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Position-independent code requires
+special support, and therefore works only on certain machines. For the
+386, GNU CC supports PIC for System V but not for the Sun 386i. Code generated
+for the IBM RS/6000 is always position-independent.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fPIC</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>If supported for the target
+machine, emit position-independent code, suitable for dynamic linking and
+avoiding any limit on the size of the global offset table. This option
+makes a difference on the m68k, m88k, and the SPARC.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Position-independent code requires
+special support, and therefore works only on certain machines.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-ffixed-<I>reg</I></FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Treat the register named
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>reg</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as a fixed register; generated code should never refer to it (except perhaps
+as a stack pointer, frame pointer or in some other fixed role).</FONT></FONT>
+<DT>
+<I><FONT FACE="Courier New"><FONT SIZE=+0>reg</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+must be the name of a register. The register names accepted are machine-specific
+and are defined in the macro, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>REGISTER_NAMES</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+in the machine description macro file.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This flag does not have a negative
+form, because it specifies a three-way choice.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fcall-used-<I>reg</I></FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Treat the register named
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>reg</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as an allocatable register that is clobbered by function calls. It may
+be allocated for temporaries or variables that do not live across a call.
+Functions compiled this way will not save and restore the register </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>reg</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Use of this flag for a register
+that has a fixed pervasive role in the machine’s execution model, such
+as the stack pointer or frame pointer, will produce disastrous results.
+This flag does not have a negative form, because it specifies a three-way
+choice.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fcall-saved-<I>reg</I></FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Treat the register named
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>reg</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as an allocatable register saved by functions. It may be allocated even
+for temporaries or variables that live across a call. Functions compiled
+this way will save and restore the register </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>reg</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+if they use it.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Use of this flag for a register
+that has a fixed pervasive role in the machine’s execution model, such
+as the stack pointer or frame pointer, will produce disastrous results.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>A different sort of disaster
+will result from the use of this flag for a register in which function
+values may be returned.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This flag does not have a negative
+form, because it specifies a three-way choice.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fpack-struct</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Pack all structure members
+together without holes. Usually you would not want to use this option,
+since it makes the code suboptimal, and the offsets of structure members
+won’t agree with system libraries.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New,Courier">-fpack-struct</FONT></DT>
+
+<UL><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>Generate extra code
+to check each memory access. GNU CC will generate code that is suitable
+for a detector of bad memory accesses such as </FONT></FONT><FONT FACE="Courier New,Courier">Checker</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>.
+If you specify this option, you can not use the </FONT></FONT><FONT FACE="Courier New,Courier">asm</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New,Courier">__asm__</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>
+keywords.</FONT></FONT> <FONT FACE="Times New Roman"><FONT SIZE=+1>‘’</FONT></FONT>
+<BR><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>You must also specify
+this option when you compile functions you call that have side effects.
+If you do not, you may get erroneous messages from the detector. Normally,
+you should compile all your code with this option. If you use functions
+from a library that have side-effects (such as </FONT></FONT><FONT FACE="Courier New,Courier">read</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>),
+you</FONT></FONT>
+<BR><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>may not be able to
+recompile the library and specify this option. In that case, you can enable
+the </FONT></FONT><FONT FACE="Courier New,Courier">-fprefix-function-name</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>
+option, which requests GNU CC to encapsulate your code and make other functions
+look as if they were compiled with </FONT></FONT><FONT FACE="Courier New,Courier">-fcheck-memory-usage</FONT><FONT SIZE=+1><FONT FACE="Times New Roman,Times">.
+This is done by calling </FONT><FONT FACE="Times New Roman">‘s</FONT><FONT FACE="Times New Roman,Times">tubs</FONT><FONT FACE="Times New Roman">’
+</FONT><FONT FACE="Times New Roman,Times">which are provided by the detector.
+If you cannot nd or build stubs for every function you call, you may have
+to specify </FONT></FONT><FONT FACE="Courier New,Courier">-fcheck-memory-usage</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>
+without </FONT></FONT><FONT FACE="Courier New,Courier">-fprefix-function-name</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fexceptions</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>Enable exception handling.
+For some targets, this implies generation of frame unwind information for
+all functions, which can produce signi cant data size overhead, though
+it does not affect execution.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman,Times"><FONT SIZE=+1>This option is on by default
+for languages that support exception handling (such as C++), and off for
+those that don't (such as C).</FONT></FONT></DT>
+</UL>
+
+<DT>
+<A NAME="e_codegen"></A><FONT FACE="Courier New"><FONT SIZE=+0>+e0</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>+e1</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Control whether virtual
+function definitions in classes are used to generate code, or only to define
+interfaces for their callers. (C++ only).</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>These options are provided for
+compatibility with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cfront</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+1.x usage; the recommended alternative GNU C++ usage is in flux. See <A HREF="gccDeclarations_and_Definitions_in_.html">Declarations
+and definitions in one header</A>.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>With </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+e0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+virtual function definitions in classes are declared </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>extern</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+the declaration is used only as an interface specification, not to generate
+code for the virtual functions (in this compilation).</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>With </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+e1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+G++ actually generates the code implementing virtual functions defined
+in the code, and makes them publicly visible.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-funaligned-pointers</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Assume that all pointers
+contain unaligned addresses. On machines where unaligned memory accesses
+trap, this will result in much larger and slower code for all pointer dereferences,
+but the code will work even if addresses are unaligned.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-funaligned-struct-hack</FONT></FONT></DT>
+
+<DL>
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>Always access structure
+fields using loads and stores of the declared size. This option is useful
+for code that dereferences pointers to unaligned structures, but only accesses
+fields that are themselves aligned. Without this option, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gcc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may try to use a memory access larger than the field. This might give an
+unaligned access fault on some hardware. This option makes some invalid
+code work at the expense of disabling some optimizations. It is strongly
+recommended that this option not be used.</FONT></FONT></DL>
+&nbsp;
+<DT>
+<FONT FACE="Courier New,Courier">-fprefix-function-name</FONT></DT>
+
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>Request GNU CC to add a
+prefix to the symbols generated for function names.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GNU CC adds a prefix to
+the names of functions defined as well as functions called. Code compiled
+with this option and code compiled without the option can’t be linked together,
+unless or stubs are used.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If you compile the following
+code with </FONT></FONT><FONT FACE="Courier New,Courier">-fprefix-function-name</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,</FONT></FONT>
+<DL>
+<PRE><FONT FACE="Courier New,Courier"><FONT SIZE=+1>extern void bar (int);
+void
+foo (int a)
+{
+&nbsp;&nbsp; return bar (a + 5);
+}</FONT></FONT></PRE>
+</DL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>GNU CC will compile the code
+as if it was written:</FONT></FONT>
+<DL>
+<PRE><FONT FACE="Courier New,Courier"><FONT SIZE=+1>extern void prefix_bar (int);
+void
+prefix_foo (int a)
+{
+&nbsp;&nbsp; return prefix_bar (a + 5);
+}</FONT></FONT></PRE>
+</DL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This option is designed to be
+used with </FONT></FONT><FONT FACE="Courier New,Courier">-fcheck-memory-usage</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;</DL>
+
+<DT>
+<FONT FACE="Courier New,Courier">-finstrument-functions</FONT></DT>
+
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate instrumentation
+calls for entry and exit to functions. Just after function entry and just
+before function exit, the following profiling functions will be called
+with the address of the current function and its call site. (On some platforms,
+</FONT></FONT><FONT FACE="Courier New,Courier">__builtin_return_address</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not work beyond the current function, so the call site information
+may not be available to the profiling functions otherwise.)</FONT></FONT>
+<DL>
+<PRE><FONT FACE="Courier New,Courier"><FONT SIZE=+1>void __cyg_profile_func_enter (void *this_fn, void *call_site);
+void __cyg_profile_func_exit (void *this_fn, void *call_site);</FONT></FONT></PRE>
+</DL>
+<FONT FACE="Times New Roman,Times"><FONT SIZE=+1>The first argument is
+the address of the start of the current function, which may be looked up
+exactly in the symbol table.</FONT></FONT>
+<BR><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>This instrumentation
+is also done for functions expanded inline in other functions. The profiling
+calls will indicate where, conceptually, the inline function is entered
+and exited. This means that addressable versions of such functions must
+be available. If all your uses of a function are expanded inline, this
+may</FONT></FONT>
+<BR><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>mean an additional
+expansion of code size. If you use `extern inline' in your C code, an addressable
+version of such functions must be provided. (This is normally the case
+anyways, but if you get lucky and the optimizer always expands the functions
+inline, you might have gotten away without providing static</FONT></FONT>
+<BR><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>copies.)</FONT></FONT>
+<BR><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>A function may be
+given the attribute no_instrument_function, in which case this instrumentation
+will not be done. This can be used, for example, for the pro ling functions
+listed above, high-priority interrupt routines, and any functions from
+which the pro ling functions cannot safely be called (perhaps signal handlers,
+if the profiling routines generate output or allocate memory).</FONT></FONT>
+<BR>&nbsp;</DL>
+
+<DT>
+<FONT FACE="Courier New,Courier">-fstack-check</FONT></DT>
+
+<DL>
+<DT>
+<FONT FACE="Times New Roman,Times"><FONT SIZE=+1>Generate code to verify
+that you do not go beyond the boundary of the stack. You should specify
+this ag if you are running in an environment with multiple threads, but
+only rarely need to specify it in a single-threaded environment since stack
+over ow is automatically detected on nearly all systems if there is only
+one stack.</FONT></FONT></DT>
+</DL>
+</DL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccVAX_Options.html">Previous</A>|<A HREF="gccoffsetinfo_option.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

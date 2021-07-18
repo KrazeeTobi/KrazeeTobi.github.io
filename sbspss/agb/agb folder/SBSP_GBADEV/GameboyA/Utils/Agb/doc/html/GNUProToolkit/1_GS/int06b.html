@@ -1,0 +1,358 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title> </title>
+</head>
+<body bgcolor="#FFFFFF">
+<a NAME="Top"></a><a href="gsTOC.html">Contents</a>|<a href="int06a.html">Previous</a>|<a href="reb.html">Next</a>
+<div CLASS="ChapterTitle"><a NAME="pgfId=998356"></a><a NAME="pgfId=1007015"></a><a NAME="21359"></a><font face="Futura Md BT"><font color="#000000"><font size=+3>Tutorials
+for debugging with Insight</font></font></font></div>
+
+<div CLASS="Chapter">
+<hr SIZE=6 WIDTH="100%"></div>
+<a NAME="pgfId=1007492"></a><font size=+1>The following documentation contains
+an example debugging session with step by step procedures for using Insight.</font>
+<ul>
+<ul>
+<ul>
+<li CLASS="Square">
+<a NAME="pgfId=1007493"></a><font size=+1><a href="int06b.html#_Toc419784882" CLASS="XRef">Initializing
+a target executable file</a></font></li>
+
+<li CLASS="Square">
+<font size=+1><a href="#StartInsight">Starting Insight from Source-Navigator</a></font></li>
+
+<li CLASS="Square">
+<a NAME="pgfId=1007494"></a><font size=+1><a href="int06b.html#_Toc419784883" CLASS="XRef">Selecting
+a source file</a></font></li>
+
+<li CLASS="Square">
+<a NAME="pgfId=1007495"></a><font size=+1><a href="int06b.html#_Toc419784884" CLASS="XRef">Setting
+breakpoints and viewing local variables</a></font></li>
+
+<li CLASS="Square">
+<font size=+1><a href="#Breakpointmultithreads" CLASS="XRef">Setting breakpoints
+on multiple threads</a></font></li>
+
+<br>&nbsp;</ul>
+</ul>
+</ul>
+
+<h2 CLASS="Square">
+<a NAME="pgfId=1007499"></a><a NAME="_Toc419784882"></a><b><i><font face="Times New Roman,Times">Initializing
+a target executable file</font></i></b></h2>
+
+<div CLASS="Body"><a NAME="pgfId=1007500"></a><a NAME="GDBTk"></a><font size=+1>Initializing
+a&nbsp;<a NAME="target executable file"></a>target&nbsp;<a NAME="GDBTk"></a>executable
+file with Insight means opening a specific executable file.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1007501"></a><font size=+1>There are two
+ways to open an executable file in Insight.</font></div>
+
+<ul>
+<ul>
+<ul>
+<li CLASS="Body">
+<a NAME="pgfId=1008463"></a><font size=+1>Using the <font face="Arial Narrow">Open</font>
+menu item in the <font face="Arial Narrow">File</font> drop-down menu from
+the <font face="Arial Narrow">Source Window</font>.</font></li>
+
+<li CLASS="Body">
+<a NAME="pgfId=1007502"></a><font size=+1>Using the following initialization
+procedure, entering commands at the <tt>(gdb)</tt> prompt in the <font face="Arial Narrow">Console</font>
+window.</font></li>
+</ul>
+</ul>
+
+<div CLASS="Numbered"><a NAME="pgfId=1007503"></a><font size=+1>1.</font></div>
+
+<div CLASS="Numbered"><font size=+1>Open the <font face="Arial Narrow">Console</font>
+window, either from the <font face="Arial Narrow">View</font> menu, or
+with the <font face="Arial Narrow">Console</font> button (see <a href="int06a.html#27831" CLASS="XRef"><font face="Arial Narrow">Console</font>
+button</a>).</font></div>
+
+<div CLASS="NumberedNext"><a NAME="pgfId=1007504"></a><font size=+1>2.</font></div>
+
+<div CLASS="NumberedNext"><font size=+1>With the <font face="Arial Narrow">Console</font>
+window active, determine if the target file is in the same directory as
+Insight. If not, change to the target directory, using the <tt>cd</tt>
+command.</font></div>
+
+<div CLASS="BodyListFollow"><a NAME="pgfId=1008480"></a><font size=+1>In
+our example procedures, the syntax uses the forward slash as the path delimiter
+on all platforms. Windows, though, requires using two forward slashes after
+the drive designation.</font></div>
+
+<div CLASS="Label"><a NAME="pgfId=1007505"></a><b><i><font size=+1>Note:</font></i></b></div>
+
+<div CLASS="Note"><a NAME="pgfId=1007667"></a><font size=+1>If the source
+files are not in the same directory as the executable file, use the GDB
+<tt>dir</tt>
+command to add a path to them, using the same syntax as in Step 2 of initializing
+a target file. This was not needed in our example.</font></div>
+
+<div CLASS="NumberedNext"><a NAME="pgfId=1007506"></a><font size=+1>3.</font></div>
+
+<div CLASS="NumberedNext"><font size=+1>Use the command, <font face="Arial Narrow">file
+example</font>, to specify the target executable file.</font></div>
+</ul>
+
+<div CLASS="BodyListFollow"><a NAME="pgfId=1008532"></a><font size=+1>See
+<a href="int06b.html#24069" CLASS="XRef"><font face="Arial Narrow">Console</font>
+window with initial commands</a> for the results of these procedures.</font></div>
+
+<ol>
+<div CLASS="Figure">
+<h6>
+<a NAME="pgfId=1007693"></a><a NAME="24069"></a><b><font size=+1>Figure
+70: <font face="Arial Narrow">Console</font> window with initial commands</font></b></h6>
+<img SRC="tk_70.gif" height=409 width=669></div>
+</ol>
+
+<h2 CLASS="Heading1">
+<a NAME="StartInsight"></a><i>Starting Insight from Source-Navigator</i></h2>
+
+<div CLASS="Heading1"><font size=+1>The following steps show how to have
+an active Source-Navigator session and start Insight for debugging a project
+with that active session.</font></div>
+
+<blockquote>
+<div CLASS="Heading1"><b><font size=+1>Warning!</font></b></div>
+
+<div CLASS="Heading1"><font size=+1>Having a debugging session open yet
+inactive when starting another debugging session with Source-Navigator
+will close all projects.</font></div>
+
+<div CLASS="Heading1"><font size=+1>Debugging work will be unrecoverable.</font></div>
+</blockquote>
+
+<div CLASS="Heading1"><font size=+1>1.</font></div>
+
+<div CLASS="Heading1"><font size=+1>To start Insight using Source-Navigator,
+on Windows operating systems, use the Start menu’s Programs menu item to
+locate Source-Navigator and, from a command shell on UNIX systems, enter
+“<tt>./snavigator</tt>” as input. Source-Navigator activates.</font></div>
+
+<div CLASS="Heading1"><font size=+1>From the <font face="Arial Narrow">File</font>
+menu, choose the <font face="Arial Narrow">New Project...</font> menu item
+to create a new project.</font></div>
+
+<div CLASS="Heading1"><font size=+1>From the <font face="Arial Narrow">File</font>
+menu, choose the <font face="Arial Narrow">Project</font> menu item’s <font face="Arial Narrow">Project
+Preferences</font> sub-menu item to set debugging preferences.</font></div>
+
+<div CLASS="Heading1"><font size=+1>With the <font face="Arial Narrow">Preferences</font>
+window active, choose the <font face="Arial Narrow">Others</font> tab.Enter
+the path to Insight in the <font face="Arial Narrow">GNU Debugger command</font>
+dialog box (see <a href="#Fig71SNsession">Figure 71</a> for the results
+of this process). Click the <font face="Arial Narrow">OK</font> button
+to close the <font face="Arial Narrow">Preferences</font> window.</font></div>
+
+<div CLASS="Heading1"><a NAME="Fig71SNsession"></a><b><font size=+1>Figure
+71: Getting to Insight from a Source-Navigator session</font></b></div>
+
+<div CLASS="Heading1"><img SRC="image06U.JPG" height=347 width=597></div>
+
+<h2 CLASS="Heading1">
+<a NAME="pgfId=1007515"></a><a NAME="_Toc419784883"></a><b><i><font face="Times New Roman,Times">Selecting
+a source file</font></i></b></h2>
+
+<div CLASS="Body"><a NAME="pgfId=1007516"></a><font size=+1>To select a
+source file and specify a function within that file, use the following
+procedure.&nbsp;</font><a NAME="GDBTk"></a></div>
+
+<div CLASS="Numbered"><a NAME="pgfId=1007517"></a><font size=+1>1.</font>
+<br><font size=+1>Select a source file (‘<font face="Arial Narrow">foo.c</font>’
+in the example, <a href="int06b.html#36954" CLASS="XRef">Source file and
+function selection</a>) from the file drop-down combo box, at the bottom
+of the <font face="Arial Narrow">Source Window</font>. <a href="int06b.html#36954" CLASS="XRef">Source
+file and function selection</a> represents the lower left corner of the
+<font face="Arial Narrow">Source
+Window</font>, showing the <font face="Arial Narrow">Source Window</font><i>file
+menu drop-down combo box</i> on the left and the
+<i>function drop-down
+combo box</i> on the right of the window. See also
+<a href="int06a.html#_Toc419784863" CLASS="XRef">Below
+the horizontal scroll bar</a>.</font></div>
+
+<h6 CLASS="FigureTitle">
+<a NAME="pgfId=1007945"></a><a NAME="36954"></a><font size=+1>Figure 72:
+Source file and function selection</font></h6>
+
+<ol>
+<div CLASS="Figure"><a NAME="pgfId=1007949"></a><img SRC="imageDJU.JPG" height=81 width=325></div>
+</ol>
+
+<div CLASS="NumberedNext"><a NAME="pgfId=1007518"></a><font size=+1>2.</font>
+<br><font size=+1>Select a function from the function drop-down combo box,
+at the bottom of the <font face="Arial Narrow">Source Window</font> (in
+<a href="int06b.html#36954" CLASS="XRef">Source
+file and function selection</a>, ‘<font face="Arial Narrow">foo</font>’
+is the choice), making the source file (in this example, ‘<font face="Arial Narrow">foo.c</font>’
+) display in the <font face="Arial Narrow">Source Window</font> with a
+colored bar (in <a href="int06b.html#42379" CLASS="XRef"><font face="Arial Narrow">Source
+Window</font> with <font face="Arial Narrow">foo.c</font> source file</a>,
+on the first executable line, line 6, in the ‘<font face="Arial Narrow">foo</font>’
+function, the colored bar is violet), indicating that the program is not
+running.</font></div>
+
+<h6 CLASS="FigureTitle">
+<a NAME="pgfId=1007992"></a><a NAME="42379"></a><font size=+1>Figure 73:
+<font face="Arial Narrow">Source
+Window</font> with <font face="Arial Narrow">foo.c</font> source file</font></h6>
+
+<ol>
+<div CLASS="Figure"><a NAME="pgfId=1008042"></a><img SRC="tk_72.gif" height=514 width=677></div>
+</ol>
+
+<h2 CLASS="Heading1">
+<a NAME="pgfId=1007534"></a><a NAME="_Toc419784884"></a><b><i><font face="Times New Roman,Times">Setting
+breakpoints and viewing local variables</font></i></b></h2>
+
+<div CLASS="Body"><a NAME="pgfId=1007535"></a><font size=+1>A breakpoint
+can be set at any executable line in the source file (as in ‘main.c’ of
+our example executable program, shown in <a href="int06b.html#26473" CLASS="XRef">Results
+of setting breakpoints at lines 6, 7, 8, and 9</a>). Executable lines are
+marked by a minus sign in the left margin of the&nbsp;<a NAME="GDBTk"></a><font face="Arial Narrow">Source
+Window</font>. When the cursor is in the left column and it is over an
+executable line, it changes into a circle. When the cursor is in this state,
+a breakpoint can be set.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1007536"></a><font size=+1>The following
+exercise steps you through setting four breakpoints in a function, as well
+as running the program and viewing the changing values in the local variables.</font></div>
+
+<div CLASS="Numbered"><a NAME="pgfId=1007537"></a><font size=+1>1.</font>
+<br><font size=+1>With the <font face="Arial Narrow">Source Window</font>
+active, having opened the <font face="Arial Narrow">foo.c</font> source
+file, place the cursor over the minus sign on line 6.</font></div>
+
+<div CLASS="NumberedNext"><a NAME="pgfId=1008263"></a><font size=+1>2.</font>
+<br><font size=+1>When the minus sign changes into a circle, click the
+left mouse button; this sets the breakpoint, signified as a red square.</font></div>
+
+<ul>
+<div CLASS="Label"><a NAME="pgfId=1008286"></a><b><i><font size=+1>Note:</font></i></b>
+<br><a NAME="pgfId=1008287"></a><font size=+1>A second single click on
+a breakpont will remove the breakpoint.</font></div>
+</ul>
+
+<div CLASS="NumberedNext"><a NAME="pgfId=1008296"></a><font size=+1>3.</font>
+<br><font size=+1>Repeat the process to set breakpoints at lines 8, 9 and
+10. See <a href="int06b.html#26473" CLASS="XRef">Results of setting breakpoints
+at lines 6, 7, 8, and 9</a>.</font></div>
+
+<div CLASS="NumberedNext"><a NAME="pgfId=1007539"></a><font size=+1>4.</font>
+<br><font size=+1>Open the <font face="Arial Narrow">Breakpoints</font>
+window, by clicking the <font face="Arial Narrow">Breakpoints</font> button
+on the tool bar (see <a href="int06a.html#37353" CLASS="XRef"><font face="Arial Narrow">Breakpoints</font>
+button</a> and <a href="#breakpoints_window" CLASS="XRef"><font face="Arial Narrow">Breakpoints</font>
+window</a>).</font>
+<br><font size=+1><b>Figure 74: </b><font face="Arial Narrow">Breakpoints</font><b>
+window</b></font>
+<br><a NAME="breakpoints_window"></a><img SRC="int06-77.gif" height=211 width=317></div>
+
+<div CLASS="NumberedNext"><a NAME="pgfId=1007546"></a><font size=+1>5.</font>
+<br><font size=+1>Click the check box for line 6. The red checkmark disappears
+and the red square in the <font face="Arial Narrow">Source Window</font>
+changes to black. This color change indicates that the breakpoint has been
+disabled. Re-enable the breakpoint at line 6 by clicking the check box.</font></div>
+
+<div CLASS="NumberedNext"><a NAME="pgfId=1007547"></a><font size=+1>6.</font>
+<br><font size=+1>Click the <font face="Arial Narrow">Run</font> button
+on the tool bar to start the executable (see <a href="int06a.html#14987" CLASS="XRef"><font face="Arial Narrow">Run</font>
+button</a>). The program runs until it hits the first breakpoint on line
+6. The color bar on line 6 is green, indicating that the program is running
+(see <a href="int06b.html#26473" CLASS="XRef">Results of setting breakpoints
+at lines 6, 7, 8, and 9</a> and <a href="int06b.html#18276" CLASS="XRef"><font face="Arial Narrow">Breakpoints</font>
+window</a>).</font></div>
+
+<h6 CLASS="FigureTitle">
+<a NAME="pgfId=1008323"></a><font size=+1>Figure 75: Results of setting
+breakpoints at lines 6, 7, 8, and 9&nbsp;</font><a NAME="26473"></a></h6>
+
+<ol>
+<div CLASS="Figure"><a NAME="pgfId=1008321"></a><img SRC="tk_73.gif" height=517 width=679></div>
+</ol>
+
+<h6 CLASS="FigureTitle">
+<a NAME="pgfId=1008347"></a><font size=+1>Figure 76: <font face="Arial Narrow">Breakpoints</font>&nbsp;<a NAME="18276"></a>window</font></h6>
+
+<ol>
+<div CLASS="Figure"><a NAME="pgfId=1008351"></a><img SRC="tk_74.gif" height=211 width=317></div>
+</ol>
+
+<div CLASS="NumberedNext"><a NAME="pgfId=1007554"></a><font size=+1>7.</font>
+<br><font size=+1>Open the <font face="Arial Narrow">Local Variables</font>
+window, by clicking the <font face="Arial Narrow">Local Variables</font>
+button in the tool bar (see <a href="int06a.html#22222" CLASS="XRef"><font face="Arial Narrow">Local
+Variables</font> button</a> and <a href="int06a.html#13279" CLASS="XRef">See
+<font face="Arial Narrow">Local
+Variables</font> window</a>). The window displays the initial values of
+the variables.</font></div>
+
+<div CLASS="NumberedNext"><a NAME="pgfId=1007555"></a><font size=+1>8.</font>
+<br><font size=+1>Click the <font face="Arial Narrow">Continue</font> button
+in the tool bar (see <a href="int06a.html#35260" CLASS="XRef"><font face="Arial Narrow">Continue</font>
+button</a>), to move to the next breakpoint. The variables that have changed
+value turn blue in the <font face="Arial Narrow">Local Variables</font>
+window (see <a href="int06b.html#GDBTk" CLASS="XRef"><font face="Arial Narrow">Local
+Variables</font> window after setting breakpoints</a>).</font></div>
+
+<h6 CLASS="FigureTitle">
+<a NAME="pgfId=1008377"></a><font size=+1>Figure 77: <font face="Arial Narrow">Local
+Variables</font> window after&nbsp;<a NAME="GDBTk"></a>setting breakpoints</font></h6>
+
+<ol>
+<div CLASS="Figure"><a NAME="pgfId=1008378"></a><img SRC="tk_75a.gif" height=156 width=242><img SRC="tk_75b.gif" height=157 width=241></div>
+</ol>
+
+<div CLASS="NumberedNext"><a NAME="pgfId=1007563"></a><font size=+1>9.</font>
+<br><font size=+1>Click the <font face="Arial Narrow">Continue</font> button
+two more times, to step through the next two breakpoints and notice the
+changing values of the local variables.</font></div>
+
+<div CLASS="Body">
+<h2>
+<a NAME="Breakpointmultithreads"></a>Setting breakpoints on multiple threads</h2>
+<font size=+1>With Insight, in a multi-thread environment, select threads
+and set breakpoints on one or more threads.</font>
+<blockquote><b><font size=+1>Warning!</font></b>
+<br><font size=+1>This functionality does not work similarly on all embedded
+targets. When debugging C++ code, for instance, breakpoints and exceptions
+may not work.</font></blockquote>
+<font size=+1>1.</font>
+<br><font size=+1>In the <font face="Arial Narrow">Source Window</font>,
+right click on an executable line without a breakpoint to open the breakpoint
+pop-up menu (see <a href="#Breakpointpop">Figure 77</a>).</font>
+<br><a NAME="Breakpointpop"></a><font size=+1><b>Figure 77: Breakpoint
+pop-up menu in the </b><font face="Arial Narrow">Source Window</font></font>
+<br><img SRC="imageF4O.JPG" height=516 width=681>
+<br><font size=+1>2.</font>
+<br><font size=+1>Scroll down to the bottom of the program in the <font face="Arial Narrow">Threads</font>
+window and select <font face="Arial Narrow">Set Breakpoint on Thread(s)</font>
+from the pop-up menu. The <font face="Arial Narrow">Thread Selection</font>
+dialog box opens (see <a href="#ThreadSelection">Figure 78</a>).</font>
+<br><a NAME="ThreadSelection"></a><font size=+1><b>Figure 78: </b><font face="Arial Narrow">Thread
+Selection</font><b> dialog box</b></font>
+<br><img SRC="image286.JPG" height=145 width=420>
+<br><font size=+1>3.</font>
+<br><font size=+1>By clicking, select one or more threads. A breakpoint
+at the executable line sets only for selected threads.</font>
+<p><font size=+1>4.</font>
+<br><font size=+1>With the cursor over a line in the <font face="Arial Narrow">Source
+Window</font>, a breakpoint has a <i>breakpoint information balloon</i>
+displaying thread information (see <a href="#Breakpointballoon">Figure
+79</a>).</font>
+<p><a NAME="Breakpointballoon"></a><b><font size=+1>Figure 79: Breakpoint
+information balloon with thread information</font></b>
+<br><img SRC="imageBH4.JPG" height=514 width=679>
+<br>
+<hr SIZE=6 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="gsTOC.html">Contents</a>|<a href="int06a.html">Previous</a>|<a href="reb.html">Next</a></center>
+</div>
+
+</body>
+</html>

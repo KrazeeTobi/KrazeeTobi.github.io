@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Newlines in Macro Arguments</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppCascaded_Use_of_Macros.html">Previous</A>|<A HREF="cppConditionals.html">Next</A>
+<BR><A NAME="off_625256"></A><A NAME="5d133b0b"></A><A NAME="off_625256"></A><A NAME="5d133b0b"></A><A NAME="off_625256"></A><A NAME="5d133b0b"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><B><FONT SIZE=+3>Newlines
+in macro arguments&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Traditional
+macro processing carries forward all newlines in macro arguments into the
+expansion of the macro. This means that, if some of the arguments are substituted
+more than once, or not at all, or out of order, newlines can be duplicated,
+lost, or moved around within the expansion. If the expansion consists of
+multiple statements, then the effect is to distort the line numbers of
+some of these statements. The result can be incorrect line numbers, in
+error messages or displayed in a debugger.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>The
+GNU C preprocessor operating in ANSI C mode adjusts appropriately for multiple
+use of an argument—the first use expands all the newlines, and subsequent
+uses of the same argument produce no newlines. But even in this mode, it
+can produce incorrect line numbering if arguments are used out of order,
+or not used at all. What follows is an example illustrating this problem.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define ignore_second_arg(a,b,c) a; c&nbsp;
+
+ignore_second_arg (foo (),&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ignored (),&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; syntax error);</FONT></FONT></PRE>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The syntax
+error triggered by the tokens “</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>syntax
+error</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>” results
+in an error message citing <I>the line containing</I> “</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ignored</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>(),</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>”
+even though the statement of “</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>syntax</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>error);</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>”
+is <I>the line containing the error</I>.</FONT></FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppCascaded_Use_of_Macros.html">Previous</A>|<A HREF="cppConditionals.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

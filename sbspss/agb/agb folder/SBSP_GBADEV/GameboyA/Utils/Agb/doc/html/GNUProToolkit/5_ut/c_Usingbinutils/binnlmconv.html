@@ -1,0 +1,106 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>nlmconv</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="bin.html">Contents</A>|<A HREF="binindex.html">Index</A>|<A HREF="bincfilt.html">Previous</A>|<A HREF="windres.html">Next</A>
+<BR><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><A NAME="off_460903"></A><A NAME="22d3eccf"></A><B><FONT FACE="Courier New"><FONT SIZE=+3>nlmconv</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Courier New"><FONT SIZE=+0>nlmconv</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+converts a relocatable object file into a NetWare Loadable Module.</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><B><I>Warning</I></B>:</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>nlmconv</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is not always built as part of the binary utilities, since it is only useful
+for NLM targets.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>nlmconv [ -I <I>bfdname</I> | --input-target=<I>bfdname</I>
+]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ -O <I>bfdname</I> | --output-target=<I>bfdname</I> ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ -T <I>headerfile</I> | --header-file=<I>headerfile</I> ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ -d | --debug] [ -l linker | --linker=<I>linker</I> ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ -h | --help ] [ -V | --version ]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<I>infile</I> <I>outfile</I></FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>nlmconv</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+converts the relocatable ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>i386</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+object file </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>infile</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+into the NetWare Loadable Module, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>outfile</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+optionally reading </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>headerfile</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for NLM header information.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For instructions on writing
+the NLM command file language used in header files, see the section, “linkers”
+or “NLMLINK” in particular, of the <B><I>NLM Development and Tools Overview</I></B>,
+which is part of the <B><I>NLM Software Developer’s Kit</I></B> (“<I>NLM</I>
+<I>SDK</I>”), available from Novell, Inc.</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>nlmconv</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+uses the GNU Binary File Descriptor library to read </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>infile</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+see <A HREF="../b_Usingld/ldBFD.html">BFD</A> in <A HREF="../b_Usingld/ld.html"><I>Using
+</I></A></FONT></FONT><FONT FACE="Courier New,Courier"><A HREF="../b_Usingld/ld.html">ld</A></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for more information.</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>nlmconv</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can perform a link step. In other words, you can list more than one object
+file for input if you list them in the definitions file (rather than simply
+specifying one input file on the command line). In this case, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>nlmconv</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+calls the linker for you.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>-I</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>bfdname</FONT></FONT></I>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>--input-target=<I>bfdname</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Object format of the input
+file. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>nlmconv</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can usually determine the format of a given file (so no default is necessary).
+See <FONT COLOR="#008000"><A HREF="binTarget_Selection.html">Target selection</A></FONT>
+for more information.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>bfdname</FONT></FONT></I>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>--output-target=<I>bfdname</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Object format of the output
+file. nlmconv infers the output format based on the input format, e.g.,
+for a ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>i386</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+input file, the output format is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>nlm32-i386</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+See <FONT COLOR="#008000"><A HREF="binTarget_Selection.html">Target selection</A></FONT>
+for more information.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-T</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>headerfile</FONT></FONT></I>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>--header-file=<I>headerfile</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Reads </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>headerfile</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for NLM header information. For instructions on writing the NLM command
+file language used in header files, see the section, “linkers” or “NLMLINK”
+in particular, of the <B><I>NLM Development and Tools Overview</I></B>,
+which is part of the <B><I>NLM Software Developer’s Kit</I></B> (“<I>NLM</I>
+<I>SDK</I>”), available from Novell, Inc.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-d</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>--debug</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Displays (on standard error)
+the linker command line used by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>nlmconv</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>linker</FONT></FONT></I>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>--linker=<I>linker</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>linker</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for any linking. </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>linker</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can be an absolute or a relative pathname.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-h</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>--help</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Prints a usage summary.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-V</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>--version</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Prints the version number
+for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>nlmconv</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="bin.html">Contents</A>|<A HREF="binindex.html">Index</A>|<A HREF="bincfilt.html">Previous</A>|<A HREF="windres.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Referring to a Type with typeof</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccNaming_an_Expressions_Type.html">Previous</A>|<A HREF="gccGeneralized_Lvalues.html">Next</A>
+<BR><FONT COLOR="#000000"><FONT FACE="Futura Md BT">&nbsp;<A NAME="off_3343282"></A><A NAME="019beb38"></A><B><FONT SIZE=+3>Referring
+to a type with </FONT></B></FONT><B><TT><FONT POINT-SIZE="24">typeof</FONT></TT><FONT FACE="Futura Md BT"><FONT SIZE=+3>&nbsp;</FONT></FONT></B><FONT FACE="Futura Md BT">&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Another way to refer to
+the type of an expression is with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>typeof</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The syntax of using of this keyword looks like </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sizeof</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+but the construct acts semantically like a type name defined with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>typedef</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>There are two ways of writing
+the argument to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>typeof</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>:
+with an expression, or with a type. The following is an example with an
+expression.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>typeof (x[0](1))</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This input assumes that ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is an array of functions; the type described is that of the values of the
+functions. The following is an example with a type name as the argument.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>typeof (int *)</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If you are writing a header
+file that must work when included in ANSI C programs, write</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+__typeof__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> instead
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>typeof</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+See <A HREF="gccAlternate_Keywords.html">Alternate keywords</A>. A </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>typeof</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>-construct
+can be used anywhere a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>typedef</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+name could be used. For example, you can use it in a declaration, in a
+cast, or inside of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sizeof</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>typeof</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+In the following, the type described is that of pointers to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>typeof (*x) y;</FONT></FONT></PRE>
+</UL>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The following declaration uses
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>y</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+as an array of such values.</FONT></FONT></LI>
+
+<UL TYPE=SQUARE>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>typeof (*x) y[4];</FONT></FONT></PRE>
+</UL>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The following declaration uses
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>y</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+as an array of pointers to characters.</FONT></FONT></LI>
+
+<UL TYPE=SQUARE>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>typeof (typeof (char *)[4]) y;</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>It is equivalent to the traditional
+C declaration, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>char
+*y[4];</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To see the meaning of the
+declaration using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>typeof</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and why it might be a useful way to write, let’s rewrite it with the following
+macros.</FONT></FONT>
+<UL TYPE=SQUARE>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define pointer(T) typeof(T *)&nbsp;
+#define array(T, N) typeof(T [N])</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Now the declaration can be rewritten
+the following way.</FONT></FONT>
+<UL TYPE=SQUARE>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>array (pointer (char), 4) y;</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Thus, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>array
+(pointer (char), 4)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the type of arrays of 4 pointers to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>char</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccNaming_an_Expressions_Type.html">Previous</A>|<A HREF="gccGeneralized_Lvalues.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

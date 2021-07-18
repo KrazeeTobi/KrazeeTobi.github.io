@@ -1,0 +1,44 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>I/O support code</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embsnav_demo.html">Previous</a>|<a href="embMemory_support.html">Next</a>
+<br><a NAME="off_230470"></a><a NAME="c5ecae86"></a><a NAME="off_230470"></a><a NAME="c5ecae86"></a><a NAME="off_230470"></a><a NAME="c5ecae86"></a><a NAME="off_230470"></a><a NAME="c5ecae86"></a><a NAME="off_230470"></a><a NAME="c5ecae86"></a><a NAME="off_230470"></a><a NAME="c5ecae86"></a><a NAME="off_230470"></a><a NAME="c5ecae86"></a><a NAME="off_230470"></a><a NAME="c5ecae86"></a><a NAME="off_230470"></a><a NAME="c5ecae86"></a><b><font face="Futura Md BT"><font color="#000000"><font size=+3>I/O
+support code</font></font></font></b>
+<br>
+<hr SIZE=3 WIDTH="100%"><font color="#000000"><font face="Times New Roman"><font size=+1>Most
+applications use calls to the standard C library. However, when you initially
+link </font></font><font face="Courier New"><font size=+0>libc.a</font></font><font face="Times New Roman"><font size=+1>,
+several I/O functions are undefined. If you don’t plan on doing any input
+or output, you’ve no concerns; otherwise, you need to create two functions,
+</font></font><font face="Courier New"><font size=+0>open()</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>close()</font></font><font face="Times New Roman"><font size=+1>.
+These don’t need to be fully supported unless you have a file system, so
+they are normally stubbed out, using </font></font><font face="Courier New"><font size=+0>kill()</font></font><font face="Times New Roman"><font size=+1>.</font></font></font>
+<p><font color="#000000"><font face="Courier New"><font size=+0>sbrk()</font></font><font face="Times New Roman"><font size=+1>is
+also a stub, since you can’t do process control on an embedded system,
+since process control is only needed by applications that do dynamic memory
+allocation. It uses the variable, </font></font><font face="Courier New"><font size=+0>_end</font></font><font face="Times New Roman"><font size=+1>,
+which is set in the linker script.</font></font></font>
+<p><font face="Times New Roman"><font color="#000000"><font size=+1>The
+following routines are also used for optimization.</font></font></font>
+<ul>&nbsp;<font face="Courier New"><font size=+0>-inbyte</font></font>
+<ul><font face="Times New Roman"><font size=+1>Returns a single byte from
+the console.</font></font>
+<br><font face="Times New Roman"><font size=+1></font></font>&nbsp;</ul>
+<font face="Courier New"><font size=+0>-outbyte</font></font>
+<ul><font face="Times New Roman"><font size=+1>Used for low-level debugging,
+takes an argument for </font></font><font face="Courier New"><font size=+0>print()</font></font><font face="Times New Roman"><font size=+1>
+and prints a byte out to the console (typically used for ASCII text).</font></font></ul>
+</ul>
+
+<center>
+<hr SIZE=3 WIDTH="100%">
+<br><a href="#Top">Top</a>|<a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embsnav_demo.html">Previous</a>|<a href="embMemory_support.html">Next</a></center>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Avoiding Recompilation of Some Files</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeInstead_of_Executing_the_Command.html">Previous</A>|<A HREF="makeOverriding_Variables.html">Next</A>
+<BR><A NAME="off_1802240"></A><A NAME="54f1c02f"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Avoiding
+recompilation of some files</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Sometimes
+you may have changed a source file but you do not want to recompile all
+the files that depend on it. For example, suppose you add a macro or a
+declaration to a header file that many other files depend on. Being conservative,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+assumes that any change in the header file requires recompilation of all
+dependent files, but you know that they do not need to be recompiled and
+you would rather not waste the time waiting for them to compile.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you anticipate the problem
+before changing the header file, you can use the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+flag. This flag tells </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+not to run the commands in the rules, but rather to mark the target up
+to date by changing its last-modification date.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Use the following procedure.</FONT></FONT>
+<UL><FONT FACE="Arial"><FONT SIZE=+1>1.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Use the command, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+to recompile the source files that really need recompilation</FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=+1>2.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Make the changes in the
+header files.</FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=+1>3.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Use the command, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make
+-t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’, to mark all
+the object files as up to date. The next time you run </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the changes in the header files will not cause any recompilation.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you have already changed
+the header file at a time when some files do need recompilation, it is
+too late to do this. Instead, you can use the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+flag which marks a specified file as “old” (<FONT COLOR="#008000"><A HREF="makeSummary_of_Options.html">Summary
+of options</A></FONT>), meaning that the file itself will not be remade,
+and nothing else will be remade on its account.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Use the following procedure.</FONT></FONT>
+<UL><FONT FACE="Arial"><FONT SIZE=+1>1.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Recompile the source files
+that need compilation for reasons independent of the particular header
+file, with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make -o
+headerfile</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’. If
+several header files are involved, use a separate ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option for each header file.</FONT></FONT>
+
+<P><FONT FACE="Arial"><FONT SIZE=+1>2.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Touch all the object files
+with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make -t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeInstead_of_Executing_the_Command.html">Previous</A>|<A HREF="makeOverriding_Variables.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

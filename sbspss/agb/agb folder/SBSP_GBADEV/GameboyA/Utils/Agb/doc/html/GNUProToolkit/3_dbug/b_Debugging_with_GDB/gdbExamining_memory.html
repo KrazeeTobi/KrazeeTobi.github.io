@@ -1,0 +1,175 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Examining memory</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbOutput_formats.html">Previous</A>|<A HREF="gdbAutomatic_display.html">Next</A>
+<BR><A NAME="off_1443019"></A><A NAME="15cfa514"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Examining
+memory</FONT></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>You
+can use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command (for “examine”) to examine memory in any of several formats, independently
+of your program’s data types.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>x/</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>nfu</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>addr</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>addr</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command to examine memory.</FONT></FONT>
+<BR><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>f</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>u</I> </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>are
+all optional parameters that specify how much memory to display and how
+to format it; </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>addr
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>is an expression
+giving the address where you want to start displaying memory. If you use
+defaults for </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>nfu</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+you need not type the slash, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Several commands set convenient defaults for </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>addr</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+
+<P><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT><FONT SIZE=+1><TT>,
+the repeat count</TT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The repeat count is a decimal
+integer; the default is 1. It specifies how much memory (counting by units,
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>u</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+to display.</FONT></FONT></UL>
+
+
+<P><I><FONT FACE="Courier New"><FONT SIZE=+0>f</FONT></FONT><FONT SIZE=+1><TT>,
+the display format</TT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The display format is one
+of the formats used by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>s</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+(null-terminated string), or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>i</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+(machine instruction). The default is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+(hexadecimal) initially. The default changes each time you use either </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+
+<P><I><FONT FACE="Courier New"><FONT SIZE=+0>u</FONT></FONT><TT><FONT SIZE=+1>,
+the unit size</FONT></TT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The unit size is any of
+the following.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>b</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Bytes.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>h</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Halfwords (two bytes).</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>w</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Words (four bytes). This
+is the initial default.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>g</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Giant words (eight bytes).</FONT></FONT></UL>
+</UL>
+&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Each time you specify a
+unit size with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+that size becomes the default unit the next time you use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+(For the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>s</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>i</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+formats, the unit size is ignored and is normally not written.)</FONT></FONT></UL>
+
+
+<P><I><FONT FACE="Courier New"><FONT SIZE=+0>addr</FONT></FONT><TT><FONT SIZE=+1>,
+starting display address</FONT></TT></I>
+<UL><I><FONT FACE="Courier New"><FONT SIZE=+0>addr</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the address where you want GDB to begin displaying memory. The expression
+need not have a pointer value (though it may); it is always interpreted
+as an integer address of a byte of memory. See <FONT COLOR="#008000"><A HREF="gdbExpressions.html">Expressions</A></FONT>
+for more information on expressions. The default for addr is usually just
+after the last address examined—but several other commands also set the
+default address: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info
+breakpoints</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> (to
+the address of the last breakpoint listed), </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info
+line</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> (to the starting
+address of a line), and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(if you use it to display a value from memory).</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x/3uh</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0x54320</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is a request to display three halfwords (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+of memory, formatted as unsigned decimal integers (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>u</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+starting at address </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0x54320</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x/4xw</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$sp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+prints the four words (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>w</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+of memory above the stack pointer (here, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$sp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’;
+see <FONT COLOR="#008000"><A HREF="gdbRegisters.html">Registers</A></FONT>)
+in hexadecimal (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT></UL>
+&nbsp;</UL>
+<FONT SIZE=+1><FONT FACE="Times New Roman">Since the letters indicating
+unit sizes are all distinct from the letters specifying output formats,
+you do not have to remember whether unit size or format comes first; either
+order works. The output specifications ‘</FONT><TT>4xw</TT><FONT FACE="Times New Roman">’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>4wx</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">’
+mean exactly the same thing. (However, the count, </FONT><I><TT>n</TT></I><FONT FACE="Times New Roman">,
+must come first; ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>wx4</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+does not work.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Even though the unit size
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>u</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is ignored for the&nbsp; ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>s</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>i</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+formats, you might still want to use a count, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+for example, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>3i</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+specifies that you want to see three machine instructions, including any
+operands. The command, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>disassemble</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+gives an alternative way of inspecting machine instructions; see <FONT COLOR="#008000"><A HREF="gdbSource_and_machine_code.html">Source
+and machine code</A></FONT>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>All the defaults for the
+arguments to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are designed to make it easy to continue scanning memory with minimal specifications
+each time you use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, after you have
+inspected three machine instructions with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x/3i</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>addr</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+you can inspect the next seven with just ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x/7</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+If you use </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Return</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to repeat the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command, the repeat count, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is used again; the other arguments default as for successive uses of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The addresses and contents
+printed by the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command are not saved in the value history because there is often too much
+of them and they would get in the way. Instead, GDB makes these values
+available for subsequent use in expressions as values of the convenience
+variables, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$_ </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>and
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+After an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command, the last address examined is available for use in expressions
+in the convenience variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$_</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The contents of that address, as examined, are available in the convenience
+variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command has a repeat count, the address and contents saved are from the
+last memory unit printed; this is not the same as the last address printed
+if several units were printed on the last line of output.&nbsp;</FONT></FONT>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><FONT FACE="Times New Roman"><A HREF="#Top">Top</A>|</FONT><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbOutput_formats.html">Previous</A>|<A HREF="gdbAutomatic_display.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

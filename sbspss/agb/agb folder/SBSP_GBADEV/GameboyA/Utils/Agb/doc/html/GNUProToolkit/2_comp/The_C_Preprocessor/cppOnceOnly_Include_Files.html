@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Once-Only Include Files</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppHow_include_Works.html">Previous</A>|<A HREF="cppInheritance_and_Header_Files.html">Next</A>
+<BR><A NAME="off_164142"></A><A NAME="85a75a75"></A><A NAME="off_164142"></A><A NAME="85a75a75"></A><A NAME="off_164142"></A><A NAME="85a75a75"></A><A NAME="off_164142"></A><A NAME="85a75a75"></A><A NAME="off_164142"></A><A NAME="85a75a75"></A><A NAME="off_164142"></A><A NAME="85a75a75"></A><A NAME="off_164142"></A><A NAME="85a75a75"></A><A NAME="off_164142"></A><A NAME="85a75a75"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3><B>Once-only
+include files&nbsp;</B>&nbsp;</FONT></FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Very
+often, one header file includes another. It can easily result that a certain
+header file is included more than once. This may lead to errors, if the
+header file defines structure types or typedefs, and is certainly wasteful.
+Therefore, we often wish to prevent multiple inclusion of a header file.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>The
+standard way to do this is to enclose the entire real contents of the file
+in a conditional, like the following.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#ifndef FILE_FOO_SEEN&nbsp;
+#define FILE_FOO_SEEN&nbsp;
+
+the entire file&nbsp;
+
+#endif /* FILE_FOO_SEEN */</FONT></FONT></PRE>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The macro,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>FILE_FOO_SEEN</FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,<FONT COLOR="#000000">
+indicates that the file has been included once already. In a user header
+file, the macro name should not begin with ‘</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>_</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+In a system header file, this name should begin with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to avoid conflicts with user programs. In any kind of header file, the
+macro name should contain the name of the file and some additional text,
+to avoid conflicts with other header files.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+GNU C preprocessor is programmed to notice when a header file uses this
+particular construct and handle it efficiently. If a header file is contained
+entirely in a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#ifndef</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+conditional, then it records that fact. If a subsequent </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+specifies the same file, and the macro in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#ifndef</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is already defined, then the file is entirely skipped, without even reading
+it.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>There
+is also an explicit directive to tell the preprocessor that it need not
+include a file more than once. This is called </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+once</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>, and was
+used in addition to the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#ifndef</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+conditional around the contents of the header file. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+once</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> is now obsolete
+and should not be used at all.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>In
+the Objective C language, there is a variant of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+called </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#import</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+which includes a file, but does so at most once. If you use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#import</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instead of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+then you don’t need the conditionals inside the header file to prevent
+multiple execution of the contents.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>#import</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is obsolete because it is not a well designed feature. It requires the
+users of a header file—the application’s programmer’s header file—to know
+that a certain header file should be included <B><I>only once</I></B>.
+It is much better for the header file’s implementor to write the file so
+that users don’t need to know this. Using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#ifndef</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+accomplishes this goal.</FONT></FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppHow_include_Works.html">Previous</A>|<A HREF="cppInheritance_and_Header_Files.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

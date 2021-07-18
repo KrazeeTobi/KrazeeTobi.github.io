@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Why Conditionals are Used</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppConditionals.html">Previous</A>|<A HREF="cppSyntax_of_Conditionals.html">Next</A>
+<BR><A NAME="off_657335"></A><A NAME="664ba70d"></A><A NAME="off_657335"></A><A NAME="664ba70d"></A><A NAME="off_657335"></A><A NAME="664ba70d"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3><B>Why
+conditionals are used&nbsp;</B>&nbsp;</FONT></FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Generally
+there are three kinds of reason to use a conditional.</FONT></FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>A program may need to use different
+code depending on the machine or operating system it is to run on. In some
+cases the code for one operating system may be erroneous on another operating
+system; for example, it might refer to library routines that do not exist
+on the other system. When this happens, it is not enough to avoid executing
+the invalid code: merely having it in the program makes it impossible to
+link the program and run it. With a preprocessing conditional, the offending
+code can be effectively excised from the program when it is not valid.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You may want to be able to compile
+the same source file into two different programs. Sometimes the difference
+between the programs is that one makes frequent time-consuming consistency
+checks on its intermediate data, or prints the values of those data for
+debugging, while the other does not.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>A conditional whose condition
+is always false is a good way to exclude code from the program but keep
+it as a sort of comment for future reference.</FONT></FONT></LI>
+</UL>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Most simple
+programs that are intended to run on only one machine will not need to
+use preprocessing conditionals.</FONT></FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppConditionals.html">Previous</A>|<A HREF="cppSyntax_of_Conditionals.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

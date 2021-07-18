@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Redefining Macros</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppUndefining_Macros.html">Previous</A>|<A HREF="cppPitfalls_and_Subtleties_of_Macro.html">Next</A>
+<BR><A NAME="off_461075"></A><A NAME="bbd26599"></A><A NAME="off_461075"></A><A NAME="bbd26599"></A><A NAME="off_461075"></A><A NAME="bbd26599"></A><A NAME="off_461075"></A><A NAME="bbd26599"></A><A NAME="off_461075"></A><A NAME="bbd26599"></A><A NAME="off_461075"></A><A NAME="bbd26599"></A><A NAME="off_461075"></A><A NAME="bbd26599"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><B><FONT SIZE=+3>Redefining
+macros&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Redefining</I>
+a macro means defining (with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#define</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+a name that is already defined as a macro. A redefinition is trivial if
+the new definition is transparently identical to the old one. You probably
+wouldn’t deliberately write a trivial redefinition, but they can happen
+automatically when a header file is included more than once (see <A HREF="cppHeader_Files.html">Header
+files</A>), so they are accepted silently and without effect.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Nontrivial
+redefinition is considered likely to be an error, so it provokes a warning
+message from the preprocessor. However, sometimes it is useful to change
+the definition of a macro in mid-compilation. You can inhibit the warning
+by undefining the macro with #undef before the second definition. In order
+for a redefinition to be trivial, the new definition must exactly match
+the one already in effect, with two possible exceptions, as in the following
+instances.</FONT></FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Whitespace may be added or deleted
+at the beginning or the end.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Whitespace may be changed in
+the middle (but not inside strings). However, it may not be eliminated
+entirely, and it may not be added where there was no whitespace at all.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Recall
+that a comment counts as whitespace.</FONT></FONT></FONT></DT>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppUndefining_Macros.html">Previous</A>|<A HREF="cppPitfalls_and_Subtleties_of_Macro.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

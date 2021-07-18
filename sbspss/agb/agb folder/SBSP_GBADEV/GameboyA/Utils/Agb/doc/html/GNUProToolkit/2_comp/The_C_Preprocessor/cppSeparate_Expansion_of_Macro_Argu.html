@@ -1,0 +1,171 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Separate Expansion of Macro Arguments</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppSelfReferential_Macros.html">Previous</A>|<A HREF="cppCascaded_Use_of_Macros.html">Next</A>
+<BR><A NAME="off_589824"></A><A NAME="475ac1ff"></A><A NAME="off_589824"></A><A NAME="475ac1ff"></A><A NAME="off_589824"></A><A NAME="475ac1ff"></A><A NAME="off_589824"></A><A NAME="475ac1ff"></A><A NAME="off_589824"></A><A NAME="475ac1ff"></A><A NAME="off_589824"></A><A NAME="475ac1ff"></A><A NAME="off_589824"></A><A NAME="475ac1ff"></A><A NAME="off_589824"></A><A NAME="475ac1ff"></A><A NAME="off_589824"></A><A NAME="475ac1ff"></A><A NAME="off_589824"></A><A NAME="475ac1ff"></A><A NAME="off_589824"></A><A NAME="475ac1ff"></A><A NAME="off_589824"></A><A NAME="475ac1ff"></A><A NAME="off_589824"></A><A NAME="475ac1ff"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><B><FONT SIZE=+3>Separate
+expansion of macro arguments&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>We
+have explained that the expansion of a macro, including the substituted
+actual arguments, is scanned over again for macro calls to be expanded.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>What
+really happens is more subtle: first each actual argument text is scanned
+separately for macro calls. Then the results of this are substituted into
+the macro body to produce the macro expansion, and the macro expansion
+is scanned again for macros to expand. The result is that the actual arguments
+are scanned twice to expand macro calls in them.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Most
+of the time, this has no effect. If the actual argument contained any macro
+calls, they are expanded during the first scan. The result therefore contains
+no macro calls, so the second scan does not change it.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#000000">If
+the actual argument were substituted as given, with no pre-scan, the single
+remaining scan would find the same macro calls and produce the same results.
+You might expect the double scan to change the results when a self-referential
+macro is used in an actual argument of another macro (see </FONT><FONT COLOR="#008000"><A HREF="cppSelfReferential_Macros.html">Self-referential
+macros</A></FONT><FONT COLOR="#000000">). The self-referential macro would
+be expanded once in the first scan, and a second time in the second scan.
+But this is not what happens. The self-references that do not expand in
+the first scan are marked so that they will not expand in the second scan
+either.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>The
+pre-scan is not done when an argument is stringified or concatenated. Use
+the following input as an example.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define str(s) #s&nbsp;
+#define foo 4&nbsp;
+str (foo)</FONT></FONT></PRE>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>This,
+then, expands to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>"foo"</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Once more, prescan has been prevented from having any noticeable effect.
+More precisely, stringification and concatenation use the argument as written,
+in un-prescanned form. The same actual argument would be used in pre-scanned
+form if it is substituted elsewhere without stringification or concatenation.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define str(s) #s lose(s)&nbsp;
+#define foo 4&nbsp;
+str (foo)</FONT></FONT></PRE>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>This,
+then, expands to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>"foo"
+lose(4)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>You
+might now ask, “Why mention the pre-scan, if it makes no difference? And
+why not skip it and make the preprocessor faster?” The answer is that the
+pre-scan does make a difference in three special cases:</FONT></FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Nested calls to a macro.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Macros that call other macros
+that stringify or concatenate.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Macros whose expansions contain
+unshielded commas.</FONT></FONT></LI>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>We say
+that nested calls to a macro occur when a macro’s actual argument contains
+a call to that very macro. For example, if </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a macro that expects one argument, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>f
+(f (1))</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> is a nested
+pair of calls to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The desired expansion is made by expanding </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>f
+(1)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> and substituting
+that into the definition of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The pre-scan causes the expected result to happen. Without the prescan,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>f (1)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+itself would be substituted as an actual argument, and the inner use of
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+would appear during the main scan as an indirect self-reference and would
+not be expanded. Here, the pre-scan cancels an undesirable side effect
+(in the medical, not computational, sense of the term) of the special rule
+for self-referential macros.</FONT></FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>But
+pre-scan causes trouble in certain other cases of nested macro calls, as
+the following example shows.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define foo a,b&nbsp;
+#define bar(x) lose(x)&nbsp;
+#define lose(x) (1 + (x))&nbsp;
+
+bar(foo)</FONT></FONT></PRE>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>We would
+like </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bar(foo)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to turn into </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>(1
++ (foo))</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+which would then turn into </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>(1
++ (a,b))</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+But instead, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bar(foo)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+expands into </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>lose(a,b)</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and you get an error because </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>lose</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+requires a single argument. In this case, the problem is easily solved
+by the same parentheses that ought to be used to prevent mis-nesting of
+arithmetic operations.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define foo (a,b)&nbsp;
+#define bar(x) lose((x))</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>The problem
+is more serious when the operands of the macro are not expressions; for
+example, when they are statements. Then parentheses are unacceptable because
+they would make for invalid C code.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define foo { int a, b;. . .&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>In GNU
+C, you can shield the commas using the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>({.
+. .})</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> construct
+which turns a compound statement into an expression like the following
+example’s statement.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define foo ({ int a, b;. . .&nbsp;
+})</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Or you
+can rewrite the macro definition to avoid such commas, using the following
+input.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define foo { int a; int b;. . .&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>There
+is also one case where pre-scan is useful. It is possible to use pre-scan
+to expand an argument and then stringify it—if you use two levels of macros.
+Let’s add a new macro, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>xstr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to the previous definition.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define xstr(s) str(s)&nbsp;
+#define str(s) #s&nbsp;
+#define foo 4&nbsp;
+xstr (foo)</FONT></FONT></PRE>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>This expands
+into </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>"4"</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+not </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>"foo"</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The reason for the difference is that the argument of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>xstr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is expanded at pre-scan (because </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>xstr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not specify stringification or concatenation of the argument). The
+result of pre-scan then forms the actual argument for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>str</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></FONT>
+<BR><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>str</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+uses its argument without pre-scan because it performs stringification;
+but it cannot prevent or undo the pre-scanning already done by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>xstr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppSelfReferential_Macros.html">Previous</A>|<A HREF="cppCascaded_Use_of_Macros.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

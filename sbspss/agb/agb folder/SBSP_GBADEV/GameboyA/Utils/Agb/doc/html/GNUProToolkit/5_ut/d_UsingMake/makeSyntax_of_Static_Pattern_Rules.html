@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Syntax of Static Pattern Rules</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeStatic_Pattern_Rules.html">Previous</A>|<A HREF="makeStatic_Pattern_Rules_versus_Impl.html">Next</A>
+<BR><A NAME="off_691063"></A><A NAME="c389f9ab"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Syntax
+of static pattern rules</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+following shows the syntax of a static pattern rule:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0><I>targets</I> ...: <I>target-pattern</I>:
+<I>dep-patterns</I> ...</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>commands</FONT></FONT></I>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>...</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>targets</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+list specifies the targets to which the rule applies. The targets can contain
+wildcard characters, just like the targets of ordinary rules (see <FONT COLOR="#008000"><A HREF="makeUsing_Wildcard_Characters_in_Fil.html">Using
+wildcard characters in file names</A></FONT>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>target-pattern</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>dep-patterns</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+say how to compute the dependencies of each target.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Each target is matched against
+the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>target-pattern</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to extract a part of the target name, called the <I>stem</I>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This stem is substituted
+into each of the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>dep-patterns</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to make the dependency names (one from each </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>dep-pattern</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Each pattern normally contains
+the character ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+just once.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>target-pattern</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+matches a target, the ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+can match any part of the target name; this part is called the <I>stem</I>.
+The rest of the pattern must match exactly. For example, the target ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+matches the pattern ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><B>%</B>.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+as the stem. The targets ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.out</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+do not match that pattern.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The dependency names for
+each target are made by substituting the stem for the ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in each dependency pattern. For example, if one dependency pattern is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><B>%</B>.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+then substitution of the stem ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+gives the dependency name ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+It is legitimate to write a dependency pattern that does not contain ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’;
+then this dependency is the same for all targets.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+characters in pattern rules can be quoted with preceding back-slashes (‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>\</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’).
+Backslashes that would otherwise quote ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+characters can be quoted with more backslashes. Backslashes that quote
+‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+characters or other backslashes are removed from the pattern before it
+is compared to file names or has a stem substituted into it. Backslashes
+that are not in danger of quoting ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+characters go unmolested. For example, the pattern ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>the<B>\%</B>weird<B>\\%</B>pattern<B>\\</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+has ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>the<B>%</B>weird<B>\</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+preceding the operative ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+character, and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>pattern<B>\\</B></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+following it. The final two backslashes are left alone because they cannot
+affect any ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+character.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The following is an example
+which compiles each of ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bar.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+from the corresponding ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+file.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>objects = foo.o bar.o</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(objects): %.o: %.c</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$(CC) -c $(CFLAGS) $&lt; -o $@</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In the previous example,
+‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>$&lt;</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is the automatic variable that holds the name of the dependency and ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>$@</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is the automatic variable that holds the name of the target; see <FONT COLOR="#008000"><A HREF="makeAutomatic_Variables.html">Automatic
+variables</A></FONT>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Each target specified must
+match the target pattern; a warning is issued for each target that does
+not. If you have a list of files, only some of which will match the pattern,
+you can use the filter function to remove nonmatching file names (see <FONT COLOR="#008000"><A HREF="makeFunctions_for_String_Substitutio.html">Functions
+for string substitution and analysis</A></FONT>), as in the following example.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>files = foo.elc bar.o lose.o</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$(filter %.o,$(files)): %.o:
+%.c</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$(CC) -c $(CFLAGS) $&lt; -o $@</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>$(filter %.elc,$(files)): %.elc:
+%.el</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+emacs -f batch-byte-compile $&lt;</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In this example the result
+of ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><B>$</B>(filter
+<B>%</B>.o,<B>$</B>(files))</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bar.o lose.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+and the first static pattern rule causes each of these object files to
+be updated by compiling the corresponding C source file. The result of
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><B>$</B>(filter %.elc,$(files))</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.elc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+so that file is made from ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.el</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The following example shows
+how to use </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>$*</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in static pattern rules.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>bigoutput littleoutput : %output
+: text.g</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+generate text.g -$* > $@</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>generate</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command is run, </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>$*</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will expand to the stem, either ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>big</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>little</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeStatic_Pattern_Rules.html">Previous</A>|<A HREF="makeStatic_Pattern_Rules_versus_Impl.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

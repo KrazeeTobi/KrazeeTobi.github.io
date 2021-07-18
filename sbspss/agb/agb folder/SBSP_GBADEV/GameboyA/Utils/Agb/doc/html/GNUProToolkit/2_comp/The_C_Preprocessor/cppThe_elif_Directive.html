@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>The #elif Directive</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppThe_else_Directive.html">Previous</A>|<A HREF="cppKeeping_Deleted_Code_for_Future_.html">Next</A>
+<BR><A NAME="off_721439"></A><A NAME="04514a3a"></A><A NAME="off_721439"></A><A NAME="04514a3a"></A><A NAME="off_721439"></A><A NAME="04514a3a"></A><A NAME="off_721439"></A><A NAME="04514a3a"></A><B><FONT COLOR="#000000"><FONT FACE="Futura Md BT"><FONT SIZE=+3>The
+</FONT></FONT><TT><FONT POINT-SIZE="24">#elif</FONT></TT><FONT FACE="Futura Md BT"><FONT SIZE=+3>
+directive&nbsp;</FONT></FONT></FONT></B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>&nbsp;</FONT></FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>One
+common case of nested conditionals is used to check for more than two possible
+alternatives. For example, you might have the following statement.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#if X == 1&nbsp;</FONT></FONT>
+</PRE>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>. . .&nbsp;</FONT></FONT>
+</PRE>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#else /* X != 1 */ #if X == 2&nbsp;</FONT></FONT>
+</PRE>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>. . .&nbsp;</FONT></FONT>
+</PRE>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#else /* X != 2 */&nbsp;</FONT></FONT>
+</PRE>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>. . .&nbsp;</FONT></FONT>
+</PRE>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#endif /* X != 2 */&nbsp;
+#endif /* X != 1 */</FONT></FONT></PRE>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Another
+conditional directive, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#elif</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+allows the previous input to be abbreviated, as the following example shows.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#if X == 1&nbsp;</FONT></FONT>
+</PRE>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>. . .&nbsp;</FONT></FONT>
+</PRE>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#elif X == 2&nbsp;</FONT></FONT>
+</PRE>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>. . .&nbsp;</FONT></FONT>
+</PRE>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#else /* X != 2 and X != 1*/&nbsp;</FONT></FONT>
+</PRE>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>. . .&nbsp;</FONT></FONT>
+</PRE>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#endif /* X != 2 and X != 1*/</FONT></FONT></PRE>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>#elif</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+stands for <I>else if</I>. Like </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#else</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+it goes in the middle of “</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#if</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>”and
+“</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#endif</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>”
+pairs, subdividing the pair; </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#elif</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not require a matching </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#endif</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Like </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#if</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#elif</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive includes an expression to be tested.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+text following the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#elif</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is processed only if the original </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#if</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+condition failed and the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#elif</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+condition succeeds. More than one </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#elif</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can go in the same “</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#if</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>”
+and “</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#endif</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>”
+group. Then the text after each </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#elif</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is processed only if the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#elif</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+condition succeeds after the original </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#if</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and any previous </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#elif</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directives within it have failed. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#else</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is equivalent to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#elif1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#else</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is allowed after any number of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#elif</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directives, but </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#elif</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may not follow </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#else</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppThe_else_Directive.html">Previous</A>|<A HREF="cppKeeping_Deleted_Code_for_Future_.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

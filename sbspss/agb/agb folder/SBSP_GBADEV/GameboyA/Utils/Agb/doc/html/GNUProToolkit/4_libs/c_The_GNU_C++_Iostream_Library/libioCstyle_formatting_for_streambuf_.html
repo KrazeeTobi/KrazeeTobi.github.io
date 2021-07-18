@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>C-style formatting for streambuf objects</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioSimple_output_redirection_by_red.html">Previous</A>|<A HREF="libioWrappers_for_C_stdio.html">Next</A>
+<BR><A NAME="off_589824"></A><A NAME="21c79e1e"></A><A NAME="off_589824"></A><A NAME="21c79e1e"></A><A NAME="off_589824"></A><A NAME="21c79e1e"></A><A NAME="off_589824"></A><A NAME="21c79e1e"></A><A NAME="off_589824"></A><A NAME="21c79e1e"></A><A NAME="off_589824"></A><A NAME="21c79e1e"></A><B><FONT SIZE=+3><FONT FACE="Futura Md BT">C-style
+formatting for </FONT><FONT FACE="Courier New,Courier">streambuf</FONT><FONT FACE="Futura Md BT">
+objects</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+GNU </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>streambuf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+class supports </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>printf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>-like
+formatting and scanning. See also </FONT></FONT><A HREF="../a_GNUPro_C_Library/libcprintf_fprintf_sprintfformat_out.html"><FONT FACE="Courier New"><FONT SIZE=+0>printf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#0000FF">,</FONT>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fprintf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#0000FF">,</FONT>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sprintf</FONT></FONT></A><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<UL><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int</FONT></FONT><FONT FACE="Times New Roman">
+<B>streambuf::vform</B> </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(const
+char * <I>format</I>, ...)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Similar to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fprintf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>(<I>file</I>,</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>format</I>, ...)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>format</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>printf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>-style
+format control string, which is used to format the (variable number of)
+arguments, printing the result on the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>this</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+streambuf. The result is the number of characters printed.</FONT></FONT></UL>
+</UL>
+
+<UL><FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int</FONT></FONT><FONT FACE="Times New Roman">
+<B>streambuf::vform </B></FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(const
+char * <I>format</I>, va_list <I>args</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Similar to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vfprintf
+(<I>file</I>,</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>format</I>,</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>args</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>format</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>printf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>-style
+format control string, which is used to format the argument list </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>args</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+printing the result on the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>this</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+streambuf. The result is the number of characters printed. See also </FONT></FONT><A HREF="../a_GNUPro_C_Library/libcvprintf_vfprintf_vsprintfformat_.html"><FONT FACE="Courier New"><FONT SIZE=+0>vprintf</FONT></FONT><FONT FACE="Times New Roman"><FONT COLOR="#0000FF"><FONT SIZE=+1>,
+</FONT></FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vfprintf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#0000FF">,</FONT>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vsprintf</FONT></FONT></A><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int</FONT></FONT><FONT FACE="Times New Roman">
+<B>streambuf::scan</B> </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(const
+char * <I>format</I>, ...)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Similar to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fscanf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>(file, format, ...)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>format</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>scanf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>-style
+format control string, which is used to read the (variable number of) arguments
+from the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>this</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+streambuf. The result is the number of items assigned, or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>EOF</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in case of input failure before any conversion. See also </FONT></FONT><A HREF="../a_GNUPro_C_Library/libcscanf_fscanf_sscanfscan_and_form.html"><FONT FACE="Courier New"><FONT SIZE=+0>scanf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#0000FF">,</FONT>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fscanf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#0000FF">,</FONT>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sscanf</FONT></FONT></A><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int</FONT></FONT><FONT FACE="Times New Roman">
+<B>streambuf::vscan</B> </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(const
+char * <I>format</I>, va_list <I>args</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Like </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>streambuf::scan</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+but takes a single </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>va_list</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+argument.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioSimple_output_redirection_by_red.html">Previous</A>|<A HREF="libioWrappers_for_C_stdio.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

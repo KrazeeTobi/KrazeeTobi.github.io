@@ -1,0 +1,67 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title> mkpasswd</title>
+</head>
+<body bgcolor="#FFFFFF">
+<a NAME="Top"></a><a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embmkgroup.html">Previous</a>|<a href="embmount.html">Next</a>
+<div CLASS="Heading5"><tt><font size=+3></font></tt></div>
+
+
+<p CLASS="Heading5"><tt><font size=+3>mkpasswd</font></tt>
+<hr SIZE=5 WIDTH="100%">
+<div CLASS="Label"><b><font size=+1></font></b></div>&nbsp;
+
+<div CLASS="Label"><b><font size=+1>USAGE</font></b></div>
+
+<pre CLASS="CodeExample2"><font size=+1>mkpasswd [options] [domain]</font></pre>
+<font size=+1>This program prints a <tt>/etc/passwd</tt> file to <tt>stdout</tt>.</font>
+<blockquote>
+<pre><font size=+1>Options are</font></pre>
+
+<pre><font size=+1>&nbsp;&nbsp;&nbsp; -l,--local&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print local accounts</font></pre>
+
+<pre><font size=+1>&nbsp;&nbsp;&nbsp; -d,--domain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print domain accounts</font></pre>
+
+<pre><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (from current domain if no domain</font></pre>
+
+<pre><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; specified</font></pre>
+
+<pre><font size=+1>&nbsp;&nbsp;&nbsp; -g,--local-groups&nbsp;&nbsp; print local group information too</font></pre>
+
+<pre><font size=+1>&nbsp;&nbsp;&nbsp; -?,--help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; displays this message</font></pre>
+</blockquote>
+<font size=+1></font>
+<p><br><font size=+1>This program does only work on Windows NT.</font><font size=+1></font>
+
+<p CLASS="Note"><font size=+1>The <tt>mkpasswd</tt> program can be used
+to help configure your Windows system to be more UNIX-like by creating
+an initial <tt>/etc/passwd</tt> substitute (some commands need this file)
+from your system information. To initially set up your machine, use the
+following example’s declarations as a guide.</font>
+<br><font size=+1></font>&nbsp;
+<blockquote>
+<pre CLASS="CodeExample2"><font size=+1>mkdir /etc</font></pre>
+
+<pre><font size=+1>mkpasswd > /etc/passwd</font></pre>
+
+<pre><font size=+1></font></pre>
+</blockquote>
+
+<div CLASS="Note"><font size=+1>This information is static. If you change
+the user information in your system, regenerate the <tt>passwd</tt> file
+for it to have the new information.</font></div>
+<font size=+1></font>
+
+<p CLASS="Note"><font size=+1>The <tt>-d</tt> and <tt>-l</tt> options allow
+you to specify where the information derives, either the default (or given)
+domain (<tt>-d</tt>), or the local machine (<tt>-l</tt>).</font>
+<div CLASS="Note">
+<hr SIZE=5 WIDTH="100%"></div>
+
+<center><a href="#Top">Top</a>|<a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embmkgroup.html">Previous</a>|<a href="embmount.html">Next</a></center>
+
+</body>
+</html>

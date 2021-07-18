@@ -1,0 +1,229 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Assemble in MRI Compatibility Mode: -M</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asInclude_Local_Labels_L.html">Previous</A>|<A HREF="asName_the_Object_File_o.html">Next</A>
+<BR><A NAME="off_230322"></A><A NAME="9598388a"></A><B><FONT SIZE=+3><FONT FACE="Futura Md BT">Assemble
+in MRI compatibility mode: </FONT><FONT FACE="Courier New">-M</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-M</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--mri</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option selects MRI compatibility mode. This changes the syntax and pseudo-op
+handling of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to make it compatible with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ASM68K</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ASM960</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(depending upon the configured target) assembler from Microtec Research.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+exact nature of the MRI syntax will not be documented; see the MRI manuals
+for more information. The purpose of this option is to permit assembling
+existing MRI assembler code using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>The
+MRI compatibility is not complete.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Certain
+operations of the MRI assembler depend upon its object file format, and
+can not be supported using other object file formats.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Supporting
+these would require enhancing each object file format individually. These
+are the following.</FONT></FONT></FONT>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>global symbols in common
+section</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The Motorola 68k MRI assembler
+supports common sections which are merged by the linker. Other object file
+formats do not support this. as handles common sections by treating them
+as a single common symbol.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>It permits local symbols to
+be defined within a common section, but it can not support global symbols,
+since it has no way to describe them.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>complex relocations</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The MRI assemblers support
+relocations against a negated section address, and relocations which combine
+the start addresses of two or more sections. These are not support by other
+object file formats.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>END</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+<I>pseudo-op specifying start address</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The MRI </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>END</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op permits the specification of a start address. This is not supported
+by other object file formats. The start address may instead be specified
+using the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-e</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option to the linker, or in a linker script.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>IDNT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.ident</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NAME</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+<I>pseudo-ops</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The MRI </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>IDNT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.ident</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NAME</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-ops assign a module name to the output file. This is not supported
+by other object file formats.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>ORG</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+<I>pseudo-op</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The Motorola 68k MRI </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ORG</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op begins an absolute section at a given address. This differs from
+the usual </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.org</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op, which changes the location within the current section. Absolute
+sections are not supported by other object file formats. The address of
+a section may be assigned within a linker script.</FONT></FONT></UL>
+</UL>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>There
+are some other features of the MRI assembler which are not supported by
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+typically either because they are difficult or because they seem of little
+consequence. Some of these may be supported in future releases. These are
+the following.</FONT></FONT></FONT>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>EBCDIC</I> strings</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>EBCDIC strings are not supported.</FONT></FONT>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>packed binary coded decimal</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Packed binary coded decimal
+is not supported. This means that the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>DC.P</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>DCB.P</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-ops are not supported.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>FEQU</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+<I>pseudo-op</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The Motorola 68k </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>FEQU</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op is not supported.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>NOOBJ</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The Motorola 68k </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NOOBJ</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op is not supported.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>OPT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+branch control options</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The Motorola 68k </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>OPT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+branch control options—</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>B</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>BRS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>BRB</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>BRL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>BRW</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>—
+are ignored. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+automatically relaxes all branches, whether forward or backward, to an
+appropriate size, so these options serve no purpose.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>OPT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+list control options</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The following m68k OPT list
+control options are ignored: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>C</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CEX</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New,Courier">CL</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CRE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>E</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>G</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>I</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>M</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MEX</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MC</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MD</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>X</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>other </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>OPT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The following Motorola 68k
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>OPT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options are ignored: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NEST</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>OLD</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>OP</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>P</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>PCO</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>PCR</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>PCS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>R</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>OPT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>D</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option is default</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The Motorola 68k </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>OPT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>D</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option is the default, unlike the MRI assembler. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>OPT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NOD</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may be used to turn it off.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>XREF</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op.</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The Motorola 68k </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>XREF</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op is ignored.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>.debug</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The Intel i960 </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.debug</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op is not supported.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>.extended</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The Intel i960 </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.extended</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op is not supported.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>.list</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op.</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The various options of the
+Intel i960 </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.list</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op are not supported.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>.optimize</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The Intel i960 </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.optimize</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op is not supported.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>.output</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The Intel i960 </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.output</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op is not supported.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>.setreal</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The Intel i960 </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.setreal</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pseudo-op is not supported.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asInclude_Local_Labels_L.html">Previous</A>|<A HREF="asName_the_Object_File_o.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

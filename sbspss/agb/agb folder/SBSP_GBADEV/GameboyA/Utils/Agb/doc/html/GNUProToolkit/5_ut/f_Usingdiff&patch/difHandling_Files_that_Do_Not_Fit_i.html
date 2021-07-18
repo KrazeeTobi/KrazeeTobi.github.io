@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<TITLE>Handling Files that Do Not Fit in Memory</TITLE>
+</HEAD><BODY>
+<A HREF= "dif.html">Contents</A>|<A HREF= "difindex.html">Index</A>|<A HREF="difArbitrary_Limits.html">Previous</A>|<A HREF="difIgnoring_Certain_Changes.html">Next</A>
+<P>
+<A NAME="off_1409790"></A><A NAME="f5bff885"></A><FONT FACE="Times New Roman" SIZE="6"><B>Handling Files that Do Not Fit in Memory
+<P>
+</B></FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> operates by reading both files into memory. This method fails if the files
+are too large, and </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> should have a fallback. 
+<P>
+One way to do this is to scan the files sequentially to compute hash codes of
+the lines and put the lines in equivalence classes based only on hash code.
+Then compare the files normally. This does produce some false matches. 
+<P>
+Then scan the two files sequentially again, checking each match to see whether
+it is real. When a match is not real, mark both the &quot;matching&quot; lines as
+changed. Then build an edit script as usual. 
+<P>
+The output routines would have to be changed to scan the files sequentially
+looking for the text to print.
+<P>
+</FONT></BODY>
+</HTML>

@@ -1,0 +1,272 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>M88K Options</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccM680x0_Options.html">Previous</a>|<a href="gccV850.htm">Next</a>
+<br><a NAME="off_1606845"></a><a NAME="535b76e1"></a><font face="Futura Md BT"><font color="#000000"><b><font size=+3>Motorola
+88K options&nbsp;</font></b>&nbsp;</font></font>
+<hr SIZE=6 WIDTH="100%">
+<br><font face="Times New Roman"><font size=+1>The following ‘</font></font><font face="Courier New"><font size=+0>-m</font></font><font face="Times New Roman"><font size=+1>’
+options are defined for Motorola 88000 architectures.</font></font>
+<ul>
+<dt>
+<font face="Courier New"><font size=+0>-m88000</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate code that works
+well on both the m88100 and the m88110.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-m88100</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate code that works
+best for the m88100, but that also runs on the m88110.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-m88110</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate code that works
+best for the m88110, and may not run on the m88100.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mbig-pic</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Obsolete option to be removed
+from the next revision. Use </font></font><font face="Courier New"><font size=+0>-fPIC</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-midentify-revision</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Include an </font></font><font face="Courier New"><font size=+0>ident</font></font><font face="Times New Roman"><font size=+1>
+directive in the assembler output recording the source filename, compiler
+name and version, timestamp, and compilation flags used.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-underscores</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>In assembler output, emit
+symbol names without adding an underscore character at the beginning of
+each name. The default is to use an underscore as prefix on each name.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mocs-debug-info</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-ocs-debug-info</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Include (or omit) additional
+debugging information (about registers used in each stack frame) as specified
+in the 88open Object Compatibility Standard, OCS. This extra information
+allows debugging of code that has had the frame pointer eliminated. The
+default for DG/UX, SVr4, and Delta 88 SVr3.2 is to include this information;
+other 88k configurations omit this information by default.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mocs-frame-position</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>When emitting COFF debugging
+information for automatic variables and parameters stored on the stack,
+use the offset from the canonical frame address which is the stack pointer
+(register 31) on entry to the function. The DG/UX, SVr4, Delta88 SVr3.2,
+and BCS configurations use </font></font><font face="Courier New"><font size=+0>-mocs-frame-position</font></font><font face="Times New Roman"><font size=+1>;
+other 88k configurations have the default, </font></font><font face="Courier New"><font size=+0>-mno-ocs-frame-position</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-ocs-frame-position</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>When emitting COFF debugging
+information for automatic variables and parameters stored on the stack,
+use the offset from the frame pointer register (register 30). When this
+option is in effect, the frame pointer is not eliminated when debugging
+information is selected by the </font></font><font face="Courier New"><font size=+0>-g</font></font><font face="Times New Roman"><font size=+1>
+switch.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-moptimize-arg-area</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-optimize-arg-area</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Control how function arguments
+are stored in stack frames.</font></font>
+<br><font face="Courier New"><font size=+0>-moptimize-arg-area</font></font><font face="Times New Roman"><font size=+1>
+saves space by optimizing them, but this conflicts with the 88open specifications.
+The opposite alternative, </font></font><font face="Courier New"><font size=+0>-mno-optimize-arg-area</font></font><font face="Times New Roman"><font size=+1>,
+agrees with 88open standards. By default GNU CC does not optimize the argument
+area.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mshort-data-<i>num</i></font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Generate smaller data references
+by making them relative to </font></font><font face="Courier New"><font size=+0>r0</font></font><font face="Times New Roman"><font size=+1>,
+which allows loading a value using a single instruction (rather than the
+usual two). You control which data references are affected by specifying
+</font></font><i><font face="Courier New"><font size=+0>num</font></font></i><font face="Times New Roman"><font size=+1>
+with this option. For example, if you specify </font></font><font face="Courier New"><font size=+0>-mshort-data-512</font></font><font face="Times New Roman"><font size=+1>,
+then the data references affected are those involving displacements of
+less than 512 bytes. </font></font><font face="Courier New"><font size=+0>-mshort-data-<i>num</i></font></font><font face="Times New Roman"><font size=+1>
+is not effective for </font></font><i><font face="Courier New"><font size=+0>num</font></font></i><font face="Times New Roman"><font size=+1>
+greater than 64k.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mserialize-volatile</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-serialize-volatile</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Do, or don’t, generate code
+to guarantee sequential consistency of volatile memory references. By default,
+consistency is guaranteed.</font></font>
+<dt>
+<font face="Times New Roman"><font size=+1>The order of memory references
+made by the MC88110 processor does not always match the order of the instructions
+requesting those references. In particular, a load instruction may execute
+before a preceding store instruction. Such reordering violates sequential
+consistency of volatile memory references, when there are multiple processors.
+When consistency must be guaranteed, GNU C generates special instructions,
+as needed, to force execution in the proper order.</font></font></dt>
+
+<dt>
+<font face="Times New Roman"><font size=+1>The MC88100 processor does not
+reorder memory references and so always provides sequential consistency.
+However, by default, GNU C generates the special instructions to guarantee
+consistency even when you use </font></font><font face="Courier New"><font size=+0>-m88100</font></font><font face="Times New Roman"><font size=+1>,
+so that the code may be run on an MC88110 processor. If you intend to run
+your code only on the MC88100 processor, you may use </font></font><font face="Courier New"><font size=+0>-mno-serialize-volatile</font></font><font face="Times New Roman"><font size=+1>.</font></font></dt>
+
+<dt>
+<font face="Times New Roman"><font size=+1>The extra code generated to
+guarantee consistency may affect the performance of your application. If
+you know that you can safely forgo this guarantee, you may use </font></font><font face="Courier New"><font size=+0>-mno-serialize-volatile</font></font><font face="Times New Roman"><font size=+1>.</font></font></dt>
+</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-msvr4</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-msvr3</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Turn on (</font></font><font face="Courier New"><font size=+0>-msvr4</font></font><font face="Times New Roman"><font size=+1>)
+or off (</font></font><font face="Courier New"><font size=+0>-msvr3</font></font><font face="Times New Roman"><font size=+1>)
+compiler extensions related to System V release 4 (SVr4).</font></font>
+<br><font face="Times New Roman"><font size=+1>This controls the following
+functionality.</font></font>
+<ul>
+<li>
+<font face="Times New Roman"><font size=+1>Which variant of the assembler
+syntax to emit.</font></font></li>
+
+<li>
+<font face="Courier New"><font size=+0>-msvr4</font></font><font face="Times New Roman"><font size=+1>
+makes the C preprocessor recognize ‘</font></font><font face="Courier New"><font size=+0>#pragma
+weak</font></font><font face="Times New Roman"><font size=+1>’ that is
+used on System V release 4.</font></font></li>
+
+<li>
+<font face="Courier New"><font size=+0>-msvr4</font></font><font face="Times New Roman"><font size=+1>
+makes GNU CC issue additional declaration directives used in SVr4.</font></font></li>
+</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-msvr4</font></font><font face="Times New Roman"><font size=+1>
+is the default for the </font></font><font face="Courier New"><font size=+0>m88k-motorola-sysv4</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>m88k-dg-dgux</font></font><font face="Times New Roman"><font size=+1>
+M88K configurations. </font></font><font face="Courier New"><font size=+0>-msvr3</font></font><font face="Times New Roman"><font size=+1>
+is the default for all other M88K configurations.</font></font></dt>
+</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mversion-03.00</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>This option is obsolete,
+and is ignored.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-check-zero-division</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mcheck-zero-division</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Do, or don’t, generate code
+to guarantee that integer division by zero will be detected. By default,
+detection is guaranteed.</font></font>
+<br><font face="Times New Roman"><font size=+1>Some models of the MC88100
+processor fail to trap upon integer division by zero under certain conditions.
+By default, when compiling code that might be run on such a processor,
+GNU C generates code that explicitly checks for zero-valued divisors and
+traps with exception number 503 when one is detected. Use of </font></font><font face="Courier New"><font size=+0>-mno-check-zero-division</font></font><font face="Times New Roman"><font size=+1>
+suppresses such checking for code generated to run on an MC88100 processor.</font></font>
+<br><font face="Times New Roman"><font size=+1>GNU C assumes that the MC88110
+processor correctly detects all instances of integer division by zero.
+When </font></font><font face="Courier New"><font size=+0>-m88110</font></font><font face="Times New Roman"><font size=+1>
+is specified, both</font></font>
+<br><font face="Courier New"><font size=+0>-mcheck-zero-division</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>-mno-check-zero-division</font></font><font face="Times New Roman"><font size=+1>
+are ignored, and no explicit checks for zero-valued divisors are generated.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-muse-div-instruction</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Use the </font></font><font face="Courier New"><font size=+0>div</font></font><font face="Times New Roman"><font size=+1>
+instruction for signed integer division on the MC88100 processor. By default,
+the </font></font><font face="Courier New"><font size=+0>div</font></font><font face="Times New Roman"><font size=+1>
+instruction is not used.</font></font>
+<br><font face="Times New Roman"><font size=+1>On the MC88100 processor
+the signed integer division instruction </font></font><font face="Courier New"><font size=+0>div)</font></font><font face="Times New Roman"><font size=+1>
+traps to the operating system on a negative operand. The operating system
+transparently completes the operation, but at a large cost in execution
+time. By default, when compiling code that might be run on an MC88100 processor,
+GNU C emulates signed integer division using the unsigned integer division
+instruction </font></font><font face="Courier New"><font size=+0>divu)</font></font><font face="Times New Roman"><font size=+1>,
+thereby avoiding the large penalty of a trap to the operating system. Such
+emulation has its own, smaller, execution cost in both time and space.
+To the extent that your code’s important signed integer division operations
+are performed on two nonnegative operands, it may be desirable to use the
+</font></font><font face="Courier New"><font size=+0>div</font></font><font face="Times New Roman"><font size=+1>
+instruction directly.</font></font>
+<br><font face="Times New Roman"><font size=+1>On the MC88110 processor
+the </font></font><font face="Courier New"><font size=+0>div</font></font><font face="Times New Roman"><font size=+1>
+instruction (also known as the </font></font><font face="Courier New"><font size=+0>divs</font></font><font face="Times New Roman"><font size=+1>
+instruction) processes negative operands with-out trapping to the operating
+system. When </font></font><font face="Courier New"><font size=+0>-m88110</font></font><font face="Times New Roman"><font size=+1>
+is specified, </font></font><font face="Courier New"><font size=+0>-muse-div-instruction</font></font><font face="Times New Roman"><font size=+1>
+is ignored, and the </font></font><font face="Courier New"><font size=+0>div</font></font><font face="Times New Roman"><font size=+1>
+instruction is used for signed integer division.</font></font>
+<ul><font face="Times New Roman"><font size=+1><i>Note</i>:</font></font>
+<br><font face="Times New Roman"><font size=+1>The result of dividing </font></font><font face="Courier New"><font size=+0>INT
+MIN</font></font><font face="Times New Roman"><font size=+1> by </font></font><font face="Courier New"><font size=+0>-1</font></font><font face="Times New Roman"><font size=+1>
+is undefined. In particular, the behavior of such a division with and with-out
+</font></font><font face="Courier New"><font size=+0>-muse-div-instruction</font></font><font face="Times New Roman"><font size=+1>
+may differ.</font></font></ul>
+</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mtrap-large-shift</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mhandle-large-shift</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Include code to detect bit-shifts
+of more than 31 bits; respectively, trap such shifts or emit code to handle
+them properly. By default GNU CC makes no special provision for large bit
+shifts.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mwarn-passed-structs</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Warn when a function passes
+a struct as an argument or result. Structure-passing conventions have changed
+during the evolution of the C language, and are often the source of portability
+problems. By default, GNU CC issues no such warning.</font></font></ul>
+</ul>
+
+<center>
+<hr SIZE=3 WIDTH="100%">
+<br><a href="#Top">Top</a>|<a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccM680x0_Options.html">Previous</a>|<a href="gccV850.htm">Next</a></center>
+
+</body>
+</html>

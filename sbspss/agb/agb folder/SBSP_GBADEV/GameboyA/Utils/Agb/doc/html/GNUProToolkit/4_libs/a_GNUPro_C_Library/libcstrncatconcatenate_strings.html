@@ -1,0 +1,41 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>strncat[concatenate strings]</title>
+</head>
+<body>
+<a href="libc.html">Contents</a>|<a href="libcindex.html">Index</a>|<a href="libcstrupr.html">Previous</a>|<a href="libcstrncmpcharacter_string_compare.html">Next</a>
+<p><a NAME="off_1574548"></a><a NAME="6efc7732"></a><a NAME="off_1574548"></a><a NAME="6efc7732"></a><font face="Courier New"><font size=+3>strncat</font></font>
+<br><font face="Times New Roman"><font size=+3>[concatenate strings]</font></font>
+<p><b><font face="Times New Roman"><font size=+1>SYNOPSIS</font></font></b>
+<br><font face="Courier New"><font size=+0>#include&lt;string.h></font></font>
+<br><font face="Courier New"><font size=+0>char</font><font size=-1> </font><font size=+0>*strncat(char*<i>dst</i>,</font><font size=-1>
+</font><font size=+0>constchar</font><font size=-1> </font><font size=+0>*<i>src</i>,
+size_t</font><font size=-1> </font><font size=+0><i>length</i>);</font></font>
+<p><b><font face="Times New Roman"><font size=+1>DESCRIPTION</font></font></b>
+<br><font face="Courier New"><font size=+0>strncat</font></font><font face="Times New Roman"><font size=+1>
+appends not more than </font></font><i><font face="Courier New"><font size=+0>length</font></font></i><font face="Times New Roman"><font size=+1>
+characters from the string pointed to by </font></font><i><font face="Courier New"><font size=+0>src</font></font></i><font face="Times New Roman"><font size=+1>
+(including the terminating null character) to the end of the string pointed
+to by </font></font><i><font face="Courier New"><font size=+0>dst</font></font></i><font face="Times New Roman"><font size=+1>.
+The initial character of </font></font><i><font face="Courier New"><font size=+0>src</font></font></i><font face="Times New Roman"><font size=+1>
+overwrites the null character at the end of </font></font><i><font face="Courier New"><font size=+0>dst</font></font></i><font face="Times New Roman"><font size=+1>.
+A terminating null character is always appended to the result.</font></font>
+<p><b><font face="Times New Roman"><font size=+1>WARNING:</font></font></b>
+<br><font face="Times New Roman"><font size=+1>Note that a null is always
+appended, so that if the copy is limited by the </font></font><i><font face="Courier New"><font size=+0>length</font></font></i><font face="Times New Roman"><font size=+1>
+argument, the number of characters appended to </font></font><i><font face="Courier New"><font size=+0>dst</font></font></i><font face="Times New Roman"><font size=+1>
+is</font></font>
+<br><font face="Courier New"><font size=+0>n+1</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<p><b><font face="Times New Roman"><font size=+1>RETURNS</font></font></b>
+<br><font face="Times New Roman"><font size=+1>This function returns the
+initial value of </font></font><i><font face="Courier New"><font size=+0>dst</font></font></i><font face="Times New Roman"><font size=+1>.</font></font>
+<p><b><font face="Times New Roman"><font size=+1>COMPLIANCE</font></font></b>
+<br><font face="Courier New"><font size=+0>strncat</font></font><font face="Times New Roman"><font size=+1>
+is ANSI C.</font></font>
+<p><font face="Courier New"><font size=+0>strncat</font></font><font face="Times New Roman"><font size=+1>
+requires no supporting OS subroutines.</font></font>
+</body>
+</html>

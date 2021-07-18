@@ -1,0 +1,132 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Character Constants</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asConstants.html">Previous</A>|<A HREF="asNumber_Constants.html">Next</A>
+<BR><A NAME="off_393804"></A><A NAME="bfa0b25b"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Character
+constants</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>There
+are two kinds of character constants.</FONT></FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>A <I><A HREF="#b43b4b2e">character
+constant</A></I> stands for one character in one byte and its value may
+be used in numeric expressions.</FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1><I><A HREF="#c5e31932">String
+constants</A></I> (properly called <I>string literals</I>) are potentially
+many bytes and their values may not be used in arithmetic expressions.</FONT></FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+
+
+<P><A NAME="b43b4b2e"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Characters</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>A single
+character may be written as a single quote immediately followed by that
+character. The same escapes apply to characters as to strings. So if you
+want to write the character backslash, you must write </FONT><FONT SIZE=+0>’</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\\</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+where the first </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+escapes the second </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+As you can see, the quote is an ‘acute’ accent, not a ‘grave’ accent (</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+2>`</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+A newline immediately following an acute accent is taken as a literal character
+and does not count as the end of a statement. The value of a character
+constant in a numeric expression is the machine’s byte-wide code for that
+character. as assumes your character code is ASCII: </FONT><FONT SIZE=+0>’</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>A</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+means 65, </FONT><FONT SIZE=+0>’</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>B</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+means 66, and so on.</FONT></FONT></FONT>
+
+<P><A NAME="c5e31932"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Strings</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>A string
+is written between double-quotes. It may contain double-quotes or null
+characters. The way to get special characters into a string is to escape
+these characters: precede them with a backslash (</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>\</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+character. For example </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\\</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+represents one backslash: the first </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is an escape which tells as to interpret the second character literally
+as a backslash (which prevents as from recognizing the second </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as an escape character). The complete list of escapes follows.</FONT></FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0><B>\</B>b<B></B></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Mnemonic for backspace;
+for ASCII this is octal code 010.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0><B>\</B>f<B></B></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Mnemonic for FormFeed; for
+ASCII this is octal code 014.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0><B>\</B>n</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Mnemonic for newline; for
+ASCII this is octal code 012.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0><B>\</B>r<B></B></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Mnemonic for carriage-Return;
+for ASCII this is octal code 015.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0><B>\</B>t<B></B></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Mnemonic for horizontal
+Tab; for ASCII this is octal code 011.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0><B>\ </B><I>digit digit digit</I><B></B></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>An octal character code.
+The numeric code is 3 octal digits. For compatibility with other Unix systems,
+8 and 9 are accepted as digits: for example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\008</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has the value 010, and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\009</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+the value 011.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0><B>\</B>x<B> </B><I>hex-digit
+hex-digit</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>A hex character code. The
+numeric code is 2 hexadecimal digits. Either upper or lower case </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+works.</FONT></FONT></UL>
+
+
+<P><B><FONT FACE="Courier New"><FONT SIZE=+0>\\</FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Represents one </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>\</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+character.</FONT></FONT></UL>
+
+
+<P><B><FONT FACE="Courier New"><FONT SIZE=+0>\"</FONT></FONT></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Represents one </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>"</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+character. Needed in strings to represent this character, because an unescaped
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>"</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+would end the string.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0><B>\ </B><I>anything-else</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Any other character when
+escaped by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+gives a warning, but assembles as if the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+was not present. The idea is that if you used an escape sequence you clearly
+didn’t want the literal interpretation of the following character. However
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has no other interpretation, so as knows it is giving you the wrong code
+and warns you of the fact.</FONT></FONT></UL>
+&nbsp;</UL>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Which
+characters are escapable, and what those escapes represent, varies widely
+among assemblers. The current set is what we think the BSD 4.2 assembler
+recognizes, and is a subset of what most C compilers recognize. If you
+are in doubt, do not use an escape sequence.</FONT></FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asConstants.html">Previous</A>|<A HREF="asNumber_Constants.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

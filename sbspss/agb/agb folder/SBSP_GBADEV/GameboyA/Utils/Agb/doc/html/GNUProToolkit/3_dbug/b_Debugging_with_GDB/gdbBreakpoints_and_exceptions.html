@@ -1,0 +1,131 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Breakpoints and exceptions</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbSetting_watchpoints.html">Previous</a>|<a href="gdbDeleting_breakpoints.html">Next</a>
+<br><a NAME="off_852915"></a><a NAME="8549a785"></a><b><font face="Futura Md BT"><font color="#000000"><font size=+3>Setting
+catchpoints</font></font></font></b>
+<hr SIZE=3 WIDTH="100%">
+<br><font face="Times New Roman"><font size=+1>You can use catchpoints
+to cause the debugger to stop for certain kinds of program events, such
+as C++ exceptions or the loading of a shared library. Use the catch command
+to set a catchpoint.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0>catch <i>event</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Stop when </font></font><i><font face="Courier New"><font size=+0>event</font></font></i><font face="Times New Roman"><font size=+1>
+occurs. </font></font><i><font face="Courier New"><font size=+0>event</font></font></i><font face="Times New Roman"><font size=+1>
+can be any of the following calls.</font></font>
+<br>&nbsp;
+<ul>
+<li>
+<tt><font size=+1>throw</font></tt></li>
+
+<br><font face="Times New Roman"><font size=+1>The throwing of a C++ exception.</font></font>
+<li>
+<tt><font size=+1>catch</font></tt></li>
+
+<br><font face="Times New Roman"><font size=+1>The catching of a C++ exception.</font></font>
+<li>
+<tt><font size=+1>exec</font></tt></li>
+
+<br><font size=+1><font face="Times New Roman">A call to </font><tt>exec</tt><font face="Times New Roman">.</font></font>
+<li>
+<tt><font size=+1>fork</font></tt></li>
+
+<br><font size=+1><font face="Times New Roman">A call to </font><tt>fork</tt></font>
+<li>
+<tt><font size=+1>vfork</font></tt></li>
+
+<br><font size=+1><font face="Times New Roman">A call to </font><tt>vfork</tt></font>
+<li>
+<tt><font size=+1>load</font></tt></li>
+
+<li>
+<font size=+1><tt>load</tt><font face="Times New Roman"> </font><i><tt>libname</tt></i></font></li>
+
+<br><font size=+1><font face="Times New Roman">The dynamic loading of any
+shared library, or the loading of the library, </font><i><tt>libname</tt></i><font face="Times New Roman">.</font></font>
+<li>
+<tt><font size=+1>unload</font></tt></li>
+
+<li>
+<tt><font size=+1>unload <i>libname</i></font></tt></li>
+
+<br><font size=+1><font face="Times New Roman">The unloading of any dynamically
+loaded shared library, or the unloading of the library, </font><i><tt>libname</tt></i><font face="Times New Roman">.</font></font></ul>
+</ul>
+<font face="Courier New"><font size=+0>tcatch <i>event</i></font></font>
+<ul><font size=+1><font face="Times New Roman">Set a catchpoint that is
+enabled only for one stop. The catchpoint is automatically deleted after
+the first time the event is caught (see previous </font><i><tt>event</tt></i><font face="Times New Roman">
+calls for </font>event<font face="Times New Roman"> definitions).</font></font>
+<br><font face="Times New Roman"><font size=+1></font></font>&nbsp;
+<br><font face="Times New Roman"><font size=+1></font></font>&nbsp;</ul>
+<font size=+1><font face="Times New Roman">Use the </font><tt>info break</tt><font face="Times New Roman">
+command to list the current catchpoints.</font></font>
+<br><font size=+1><font face="Times New Roman">There are currently some
+limitations to C++ exception handling (</font><tt>catch throw</tt><font face="Times New Roman">
+and </font><tt>catch catch</tt><font face="Times New Roman">) in GDB, as
+the following discussion describes.</font></font>
+<ul>
+<ul>
+<li>
+<font face="Times New Roman"><font size=+1>If you call a function interactively,
+GDB normally returns control to you when the function has finished executing.
+If the call raises an exception, however, the call may bypass the mechanism
+that returns control to you and cause your program either to abort or to
+simply continue running until it hits a breakpoint, catches a signal that
+GDB is listening for, or exits. This is the case even if you set a catchpoint
+for the exception; catchpoints on exceptions are disabled within interactive
+calls.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>You cannot raise an exception
+interactively.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>You cannot install an exception
+handler interactively.</font></font></li>
+</ul>
+</ul>
+<font face="Times New Roman"><font size=+1></font></font>
+<p><br><font size=+1><font face="Times New Roman">Sometimes </font><tt>catch</tt><font face="Times New Roman">
+is not the best way to debug exception handling: if you need to know exactly
+where an exception is raised, it is better to stop <i>before</i> the exception
+handler is called, since that way you can see the stack before any unwinding
+takes place. If you set a breakpoint in an exception handler instead, it
+may not be easy to find out where the exception was raised.</font></font><font face="Times New Roman"><font size=+1></font></font>
+<p><font size=+1><font face="Times New Roman">To stop just before an exception
+handler is called, you need some knowledge of the implementation. In the
+case of GNU C++, exceptions are raised by calling a library function named
+</font><tt>__raise_exception</tt><font face="Times New Roman"> which has
+the following ANSI C interface:</font></font>
+<br><font face="Times New Roman"><font size=+1></font></font>&nbsp;
+<ul><tt><font size=+1>/* <i>addr</i> is where the exception identifier
+is stored.</font></tt>
+<br><tt><font size=+1>&nbsp;&nbsp; <i>id</i> is the exception identifier.
+*/</font></tt>
+<br><tt><font size=+1>void __raise_exception (void ** <i>addr</i>, void
+* <i>id</i>);</font></tt></ul>
+<font face="Times New Roman"><font size=+1></font></font>
+<p><br><font size=+1><font face="Times New Roman">To make the debugger
+catch all exceptions before any stack unwinding takes place, set a breakpoint
+on </font><tt>__raise_exception</tt><font face="Times New Roman"> (see
+<a href="gdbBreakpoints_watchpoints_and_exce.html">Breakpoints, watchpoints,
+and exceptions</a>).</font></font><font face="Times New Roman"><font size=+1></font></font>
+<p><font size=+1><font face="Times New Roman">With a conditional breakpoint
+(see <a href="gdbBreak_conditions.html">Break conditions</a>) that depends
+on the value of </font><i><tt>id</tt></i><font face="Times New Roman">,
+you can stop your program when a specific exception is raised. You can
+use multiple conditional breakpoints to stop your program when any of a
+number of exceptions are raised.</font></font></ul>
+
+<hr SIZE=3 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbSetting_watchpoints.html">Previous</a>|<a href="gdbDeleting_breakpoints.html">Next</a></center>
+
+</body>
+</html>

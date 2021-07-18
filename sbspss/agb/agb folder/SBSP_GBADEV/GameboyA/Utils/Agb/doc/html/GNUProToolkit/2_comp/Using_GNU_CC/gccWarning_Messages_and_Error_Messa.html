@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Warning Messages and Error Messages</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccCertain_Changes_We_Dont_Want_to_.html">Previous</A>|<A HREF="gccReporting_Bugs.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="4ddf23a1"></A><B><FONT SIZE=+3>Warning
+messages and error messages&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The GNU compiler can produce
+two kinds of diagnostics: errors and warnings. Each kind has a different
+purpose.</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><B><I>Errors</I></B> report
+problems that make it impossible to compile your program. GNU CC reports
+errors with the source filename and line number where the problem is apparent.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><B><I>Warnings</I></B> report
+other unusual conditions in your code that may indicate a problem, although
+compilation can (and does) proceed. Warning messages also report the source
+filename and line number, but include the text, </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>warning:</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to distinguish them from error messages.</FONT></FONT></LI>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Warnings may indicate danger
+points where you should check to make sure that your program really does
+what you intend; or the use of obsolete features; or the use of nonstandard
+features of GNU C or C++. Many warnings are issued only if you ask for
+them, with one of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-W</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options (for instance,</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-Wall</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+requests a variety of useful warnings). GNU CC always tries to compile
+your program if possible; it never gratuitously rejects a program whose
+meaning is clear merely because (for instance) it fails to conform to a
+standard. In some cases, however, the C and C++ standards specify that
+certain extensions are forbidden, and a diagnostic must be issued by a
+conforming compiler. The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-pedantic</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option tells GNU CC to issue warnings in such cases; ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-pedantic-errors</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+says to make them errors instead. This does not mean that all non-ANSI
+constructs get warnings or errors. See <A HREF="gccOptions_to_Request_or_Suppress_W.html">Options
+to request or suppress warnings</A> for more detail on these and related
+command-line options.</FONT></FONT>
+</BODY>
+</HTML>

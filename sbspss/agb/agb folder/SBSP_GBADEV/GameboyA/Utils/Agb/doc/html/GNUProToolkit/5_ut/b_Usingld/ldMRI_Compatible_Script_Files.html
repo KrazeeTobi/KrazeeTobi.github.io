@@ -1,0 +1,270 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>MRI Compatible Script Files</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="ld.html">Contents</A>|<A HREF="ldindex.html">Index</A>|<A HREF="ldThe_BFD_canonical_objectfile_for.html">Previous</A>
+<BR><A NAME="off_819200"></A><A NAME="33406939"></A><FONT FACE="Futura Md BT"><B><FONT SIZE=+3>MRI
+compatible script files</FONT></B></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>To aid
+users making the transition to GNU </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+from the MRI linker, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can use MRI compatible linker scripts as an alternative to the more general-purpose
+linker scripting language described in <A HREF="ldLinker_scripts.html">Linker
+scripts</A>. MRI compatible linker scripts have a much simpler command
+set than the scripting language otherwise used with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+GNU </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+supports the most commonly used MRI linker commands; these commands are
+described in the following.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In general, MRI scripts aren’t
+of much use with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a.out</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+object file format, since it only has three sections and MRI scripts lack
+some features to make use of them.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can specify a file containing
+an MRI-compatible script using the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+command-line option.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Each command in an MRI-compatible
+script occupies its own line; each command line starts with the keyword
+that identifies the command (though blank lines are also allowed for punctuation).
+If a line of an MRI-compatible script begins with an unrecognized keyword,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+issues a warning message, but continues processing the script. Lines beginning
+with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+are comments.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can write these commands
+using all upper-case letters, or all lower case; for example, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>chip</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is the same as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CHIP</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+The following list shows only the upper-case form of each command.</FONT></FONT>
+<DL>
+<DL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>ABSOLUTE <I>secname</I></FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>ABSOLUTE <I>secname</I>, <I>secname</I>,
+... <I>secname</I></FONT></FONT></DT>
+
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>Normally, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+includes in the output file all sections from all the input files. However,
+in an MRI-compatible script, you can use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ABSOLUTE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command to restrict the sections that will be present in your output program.
+If the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ABSOLUTE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command is used at all in a script, then only the sections named explicitly
+in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ABSOLUTE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+commands will appear in the linker output. You can still use other input
+sections (whatever you select on the command line, or using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>LOAD</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+to resolve addresses in the output file.</FONT></FONT></DL>
+</DL>
+</DL>
+
+<DL>
+<DL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>ALIAS <I>out-secname</I>, <I>in-secname</I></FONT></FONT></DT>
+
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use this command to place
+the data from input section </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>in-secname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in a section called </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>out-secname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in the linker output file.</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>
+in-secname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may be an integer.</FONT></FONT></DL>
+</DL>
+</DL>
+
+<DL>
+<DL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>ALIGN <I>secname</I>=<I>expression</I></FONT></FONT></DT>
+
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>Align the section called
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>secname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>expression</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>expression</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+should be a power of two.</FONT></FONT></DL>
+</DL>
+</DL>
+
+<DL>
+<DL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>BASE <I>expression</I></FONT></FONT></DT>
+
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use the value of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>expression</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as the lowest address (other than absolute addresses) in the output file.</FONT></FONT></DL>
+</DL>
+</DL>
+
+<DL>
+<DL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>CHIP</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>expression</FONT></FONT></I></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>CHIP <I>expression</I>, <I>expression</I></FONT></FONT></DT>
+
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>This command does nothing;
+it is accepted only for compatibility.</FONT></FONT></DL>
+</DL>
+</DL>
+
+<DL>
+<DL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>END</FONT></FONT></DT>
+
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>This command does nothing
+whatever; it’s only accepted for compatibility.</FONT></FONT></DL>
+</DL>
+</DL>
+
+<DL>
+<DL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>FORMAT <I>output</I>-<I>format</I></FONT></FONT></DT>
+
+<UL TYPE=SQUARE><FONT FACE="Times New Roman"><FONT SIZE=+1>Similar to the
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>OUTPUT_FORMAT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command in the more general linker language, but restricted to one of these
+output formats:</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<A NAME="S-records"></A><FONT FACE="Times New Roman"><FONT SIZE=+1>S-records,
+if </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>output-format</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>S</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT></LI>
+
+<LI>
+<A NAME="IEEE"></A><FONT FACE="Times New Roman"><FONT SIZE=+1>IEEE, if
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>output-format</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>IEEE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT></LI>
+
+<LI>
+<A NAME="COFF and BFD"></A><FONT FACE="Times New Roman"><FONT SIZE=+1>COFF
+(the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>coff-m68k</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+variant in BFD), if </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>output-format</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is ‘</FONT></FONT><FONT SIZE=+0><FONT FACE="Courier New">COFF</FONT><FONT FACE="Times New Roman">’</FONT></FONT></LI>
+</UL>
+</UL>
+&nbsp;
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>LIST <I>anything</I>...</FONT></FONT></DT>
+
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print (to the standard output
+file) a link map, as produced by the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command-line option ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-M</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></DL>
+</DL>
+</DL>
+
+<UL>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The keyword </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>LIST</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may be followed by anything on the same line, with no change in its effect.</FONT></FONT></UL>
+</UL>
+
+<DL>
+<DL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>LOAD</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>LOAD</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename, filename,
+... filename</FONT></FONT></I></DT>
+
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>Include one or more object
+file </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in the link; this has the same effect as specifying </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directly on the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command line.</FONT></FONT></DL>
+</DL>
+</DL>
+
+<DL>
+<DL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>NAME</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>output-name</FONT></FONT></I></DT>
+
+<DL><I><FONT FACE="Courier New"><FONT SIZE=+0>output-name</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the name for the program produced by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+the MRI-compatible command </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NAME</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is equivalent to the command-line option ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or the general script language command </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>OUTPUT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></DL>
+</DL>
+</DL>
+
+<DL>
+<DL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>ORDER</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>secname, secname,
+... secname</FONT></FONT></I></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>ORDER</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>secname secname
+secname</FONT></FONT></I></DT>
+
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>Normally, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+orders the sections in its output file in the order in which they first
+appear in the input files. In an MRI-compatible script, you can override
+this ordering with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ORDER</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command. The sections you list with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ORDER</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will appear first in your output file, in the order specified.</FONT></FONT></DL>
+</DL>
+</DL>
+
+<DL>
+<DL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>PUBLIC</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>name=expression</FONT></FONT></I></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>PUBLIC</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>name, expression</FONT></FONT></I></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>PUBLIC</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>name expression</FONT></FONT></I></DT>
+
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>Supply a value (</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>expression</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+for external symbol name used in the linker input files.</FONT></FONT></DL>
+&nbsp;
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>SECT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>secname, expression</FONT></FONT></I></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>SECT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>secname=expression</FONT></FONT></I></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>SECT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>secname expression</FONT></FONT></I></DT>
+
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>You can use any of these
+three forms of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SECT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command to specify the start address (</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>expression</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>section</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>sec-name</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If you have more than one </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SECT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+statement for the same </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>sec-name</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+only the <I>first</I> sets the start address.</FONT></FONT></DL>
+</DL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="ld.html">Contents</A>|<A HREF="ldindex.html">Index</A>|<A HREF="ldThe_BFD_canonical_objectfile_for.html">Previous</A></CENTER>
+</DL>
+
+</BODY>
+</HTML>

@@ -1,0 +1,62 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Frederick Geers">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Cross-development environment</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embS_Nav.html#Top">Previous</a>|<a href="embcrt0_the_main_startup_file.html">Next</a>
+<br><font face="Futura Md BT"><font size=+3>Cross-development environment</font></font>
+<hr SIZE=5 WIDTH="100%">
+<br><font size=+1>Using GNUPro Toolkit in one of the cross-development
+configurations usually requires some attention to setting up the target
+environment.</font>
+<p><font size=+1>A cross-development configuration can develop software
+for a different target machine than the development tools themselves (which
+run on the host)—for example, a SPARCstation can generate and debug code
+for a Motorola Power PC-based board. This process is known as <b><i>embedded</i></b>
+development.</font>
+<p><font size=+1>For GNUPro tools to work with a target environment (except
+for real-time operating systems, which provide full operating system support),
+set up the tools with the help of the following documentation.</font>
+<br>&nbsp;
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>To set up the C run-time environment, see <a href="embcrt0.html">The
+C run-time environment (<tt>crt0</tt>)</a>.</font></li>
+</ul>
+
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>Use the <tt>crt0</tt> (C RunTime 0) file which contains the
+initial startup code for embedded development.</font></li>
+</ul>
+
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>To use linker scripts for embedded applications, see <a href="embThe_linker_script.html">The
+linker script</a>.</font></li>
+</ul>
+
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>To create stubs, or minimal versions of operating system
+subroutines for the C subroutine library, see <a href="../4_libs/a_GNUPro_C_Library/libcSystem_Calls.html">System
+calls</a> in <i><a href="../4_libs/a_GNUPro_C_Library/libc.html">GNUPro
+C Library</a></i> in <b><i>GNUPro Libraries</i></b>.</font></li>
+</ul>
+
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>To understand the connection to the debugger, see <a href="../3_dbug/b_Debugging_with_GDB/gdbSpecifying_a_Debugging_Target.html">Specifying
+a debugging target</a> in <i><a href="../3_dbug/b_Debugging_with_GDB/gdb.html">Debugging
+with GDB</a></i> in <b><i>GNUPro Debugging Tools</i></b>.</font></li>
+</ul>
+
+<hr SIZE=5 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embS_Nav.html#Top">Previous</a>|<a href="embcrt0_the_main_startup_file.html">Next</a></center>
+
+</body>
+</html>

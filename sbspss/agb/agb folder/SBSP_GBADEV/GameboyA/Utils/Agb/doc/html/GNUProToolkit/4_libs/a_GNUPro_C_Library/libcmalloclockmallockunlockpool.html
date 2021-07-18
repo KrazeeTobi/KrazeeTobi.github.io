@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>malloc, realloc, free[manage memory]</TITLE>
+</HEAD>
+<BODY>
+<A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcmalllinfomalloc_statsmallopt_malloc_support.html">Previous</A>|<A HREF="libcmmbtowcminimal_multibyte_to_wide.html">Next</A>
+
+<P CLASS="Descriptor"><A NAME="pgfId=461288"></A><FONT SIZE=+3><FONT FACE="Courier New">__malloc_lock</FONT><FONT COLOR="#000000">,&nbsp;<A NAME="pgfId=461311"></A></FONT><FONT FACE="Courier New">__malloc_unlock<A NAME="22440"></A></FONT></FONT>
+<DIV CLASS="Descriptor"><A NAME="pgfId=461312"></A><FONT COLOR="#000000"><FONT SIZE=+3>[lock
+malloc pool]</FONT></FONT></DIV>
+
+<H4>
+<B><FONT SIZE=+1>SYNOPSIS</FONT></B></H4>
+
+<PRE><A NAME="pgfId=461314"></A><FONT SIZE=+1>#include &lt;malloc.h></FONT></PRE>
+
+<PRE CLASS="CodeExample"><A NAME="pgfId=461315"></A><FONT SIZE=+1>void __malloc_lock (void *<I> reent</I> );</FONT></PRE>
+
+<PRE CLASS="CodeExample"><A NAME="pgfId=461316"></A><FONT SIZE=+1>void __malloc_unlock (void *<I> reent</I> );</FONT></PRE>
+
+<H4>
+<B><FONT SIZE=+1>DESCRIPTION</FONT></B></H4>
+
+<DIV CLASS="Note"><A NAME="pgfId=461318"></A><FONT SIZE=+1>The <TT>malloc</TT>
+family of routines call these functions when they need to lock the memory
+pool. The version of these routines supplied in the library does not do
+anything. If multiple threads of execution can call <TT>malloc</TT>, or
+if <TT>malloc</TT> can be called reentrantly, then you need to define your
+own versions of these functions in order to safely lock the memory pool
+during a call. If you do not, the memory pool may become corrupted.</FONT></DIV>
+
+<DIV CLASS="Note"><A NAME="pgfId=461319"></A><FONT SIZE=+1>A call to <TT>malloc</TT>
+may call <TT>__malloc_lock</TT> recursively; that is, the sequence of calls
+may go <TT>__malloc_lock</TT>, <TT>__malloc_lock</TT>, <TT>__malloc_unlock</TT>,
+<TT>__malloc_unlock</TT>. Any implementation of these routines must be
+careful to avoid causing a thread to wait for a lock that it already holds.</FONT></DIV>
+
+
+<P CLASS="Note"><FONT SIZE=+1>&nbsp;</FONT>
+<BR>&nbsp;
+</BODY>
+</HTML>

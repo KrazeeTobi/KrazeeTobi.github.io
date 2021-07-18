@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>modf, modff[split fractional and integer parts]</TITLE>
+</HEAD>
+<BODY>
+<A HREF="libm.html">Contents</A>|<A HREF="libmindex.html">Index</A>|<A HREF="libmmatherrmodifiable_math_error_han.html">Previous</A>|<A HREF="libmnan_nanfrepresentation_of_infini.html">Next</A>
+
+<P><A NAME="off_330379"></A><A NAME="160d45aa"></A><A NAME="off_330379"></A><A NAME="160d45aa"></A><A NAME="off_330379"></A><A NAME="160d45aa"></A><A NAME="off_330379"></A><A NAME="160d45aa"></A><FONT SIZE=+3><FONT FACE="Courier New">modf</FONT><FONT FACE="Times New Roman">,
+</FONT><FONT FACE="Courier New">modff</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+3>[split fractional and integer
+parts]</FONT></FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS</FONT></FONT></B>
+<BR><FONT FACE="Courier New">#include &lt;math.h>&nbsp;<BR>
+double modf(double <I>val</I>, double *<I>ipart</I>);&nbsp;<BR>
+float modff(float <I>val</I>, float *<I>ipart</I>);</FONT><B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>modf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">splits the double </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>val</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">apart into an integer part and a fractional
+part, returning the fractional part and storing the integer part in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*<I>ipart</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+No rounding whatsoever is done; the sum of the integer and fractional parts
+is guaranteed to be exactly equal to </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>val</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+That is, if .</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>realpart</I>=modf(<I>val</I>,&amp;<I>intpart</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>);
+then </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>realpart</I>+<I>intpart
+</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>is the same
+as </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>val</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>modff</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is identical, save that it takes and
+returns </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>float</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">rather than </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>double</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">values.</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The fractional part is returned.
+Each result has the same sign as the supplied argument </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>val</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>modf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is ANSI C. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>modff</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is an extension.</FONT></FONT>
+</BODY>
+</HTML>

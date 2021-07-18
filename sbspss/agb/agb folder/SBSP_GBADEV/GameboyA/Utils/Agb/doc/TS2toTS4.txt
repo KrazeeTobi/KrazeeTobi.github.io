@@ -1,0 +1,81 @@
+*****************************************************************************************
+ 
+Differences between Target board (TS2) and Preproduction (TS4) Specifications
+ 
+***************************************************************************************** 
+The differences between Target Board (TS2) and Preproduction (TS4) will be 
+explained here. The points that you need to be aware of are summarized in 
+the programming cautions so be sure and adhere to these when operating with 
+the Preproduction version (TS4). 
+ 
+-The timing of the monitor program to access the Game Pak has been changed 
+ from 8 waits to 4 waits. (Only use 1st access). 
+ 
+-System Call bug was fixed. 
+ (There are still a few bugs left with the Music Player related calls, but these
+ are handled by the library) 
+ 
+-Supports the download mode (serial boot) even when inserting Game Pak 
+ For information on download mode, see MultiBoot.txt included in the multi-boot 
+ sample found on the NOA-Engineering download site. 
+ 
+-When the Game Pak is not inserted the Nintendo logo will not be displayed. 
+ 
+-The start up sound has changed. 
+ 
+-The CPU size has been reduced so the amount of power consumed
+ decreased  somewhat. 
+ 
+-The delay from DMA setup to startup changed from 1 wait to 2 waits. 
+ For more details, see the programming cautions below. 
+ 
+ 
+*Programming Cautions 
+
+Due to the change in the DMA delay wait described above, if a different DMA
+channel is being used alternately in the program there is
+no problem. However, if a same DMA channel is used
+consecutively,  a problem of the next DMA being set up before the first DMA
+starts up would occur.
+ 
+With TS2 even if the setup for the next DMA was done immediately, the 
+first DMA was started up first. With TS4 the start up of the DMA is delayed 
+so it will be start up with an abnormal setup. 
+ 
+With the TS4 compatible DmaSet() Macro, the following is carried out and 
+immediately after the DMA starts up, 3 waits are added as a result of 
+inserting the LDR instruction. (For future compatibility, extra margins are 
+used and the prefetch buffer is not reset) When writing code for same  DMA
+channel being used consecutively with the assembler, 
+insert an LDR instruction between the DMAs. 
+ 
+*This macro is not in the Game Boy Advance Developers Kit 2.0. 
+ The TS4 compatible version has been uploaded to the NOA-Engineering 
+ download site as "AGBDevKit24.zip". Please be sure you install this. 
+ 
+
+AgbMacro.h: 
+ 
+#ifndef CODE32 
+#define DmaSet(DmaNo, Srcp, Destp, DmaCntData)          \ 
+{                                                       \ 
+    vu32 *(DmaCntp) = (vu32 *)REG_DMA##DmaNo;           \ 
+    DmaCntp[0] = (vu32 )(Srcp);                         \ 
+    DmaCntp[1] = (vu32 )(Destp);                        \ 
+    DmaCntp[2] = (vu32 )(DmaCntData);                   \ 
+    DmaCntp[2];                                         \ 
+} 
+#else 
+#define DmaSet(DmaNo, Srcp, Destp, DmaCntData)                    \ 
+{                                                                 \ 
+    vu32 *(RegBasep) = (vu32 *)REG_BASE;                          \ 
+    RegBasep[OFFSET_REG_DMA##DmaNo##SAD/4] = (vu32 )(Srcp);       \ 
+    RegBasep[OFFSET_REG_DMA##DmaNo##DAD/4] = (vu32 )(Destp);      \ 
+    RegBasep[OFFSET_REG_DMA##DmaNo##CNT/4] = (vu32 )(DmaCntData); \ 
+    RegBasep[OFFSET_REG_DMA##DmaNo##CNT/4];                       \ 
+} 
+#endif 
+ 
+ 
+
+ 

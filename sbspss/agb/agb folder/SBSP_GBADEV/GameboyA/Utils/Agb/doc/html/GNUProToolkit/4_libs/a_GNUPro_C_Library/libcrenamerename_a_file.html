@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>rename[rename a file]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcremovedelete_a_files_name.html">Previous</A>|<A HREF="libcrewindreinitialize_a_file_or_str.html">Next</A>
+</P>
+
+<P><A NAME="off_1018166"></A><A NAME="7dc54470"></A><A NAME="off_1018166"></A><A NAME="7dc54470"></A><A NAME="off_1018166"></A><A NAME="7dc54470"></A><FONT SIZE=+3><FONT FACE="Courier New">rename
+<BR>
+</FONT><FONT FACE="Times New Roman">[rename a file] </FONT></FONT></P>
+
+<PRE><B><FONT FACE="Times New Roman"><FONT SIZE=+2>SYNOPSIS 
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+1>#include &lt;stdio.h&gt; 
+int rename(const char *<I>old</I>, const char *<I>new</I>); 
+
+int _rename_r(void *<I>reent</I>, const char *<I>old</I>, const char *<I>new</I>); </FONT></FONT></PRE>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>DESCRIPTION <BR>
+</B>Use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>rename</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">to establish a new name (the string
+at </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>new</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+for a file now known by the string at </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>old</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+After a successful </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>rename</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the file is no longer accessible by the string at </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>old</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>rename</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">fails, the file named </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*<I>old</I></FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is unaffected. The conditions for failure
+depend on the host operating system. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The alternate function,</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>_rename_r</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">,</FONT><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is a reentrant version. The extra argument,
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>reent</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Times New Roman">,</FONT><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is a pointer to a reentrancy structure.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>RETURNS <BR>
+</B>The result is either </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT><FONT SIZE=-1>
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>(when successful)
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-1</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">(when the file could not be renamed).
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>COMPLIANCE <BR>
+</B>ANSI C requires</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>rename</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+but only specifies that the result on failure be nonzero. The effects of
+using the name of an existing file as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*<I>new</I></FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">may vary from one implementation to
+another. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Supporting OS subroutines
+required: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>link</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>unlink</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>rename</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+</BODY>
+</HTML>

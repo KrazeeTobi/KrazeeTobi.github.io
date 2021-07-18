@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Join Data and Text Sections: -R</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asName_the_Object_File_o.html">Previous</A>|<A HREF="asDisplay_Assembly_Statistics_stat.html">Next</A>
+<BR><A NAME="off_264302"></A><A NAME="1f822945"></A><B><FONT SIZE=+3><FONT FACE="Futura Md BT">Join
+data and text sections: </FONT><FONT FACE="Courier New">-R</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>-R</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+tells as to write the object file as if all data-section data lives in
+the text section. This is only done at the very last moment: your binary
+data are the same, but data section parts are relocated differently. The
+data section part of your object file is zero bytes long because all its
+bytes are appended to the text section. (See </FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asSections_and_Relocation.html">Sections
+and relocation</A></FONT><FONT COLOR="#000000">.) When you specify </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>-R</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+it would be possible to generate shorter address displacements (because
+we do not have to cross between text and data section). We refrain from
+doing this simply for compatibility with older versions of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+In future, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-R</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may work this way.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>When
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is configured for COFF output, this option is only useful if you use sections
+named </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.text</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.data</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>-R</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is not supported for any of the HPPA targets. Using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-R</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+generates a warning from </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asName_the_Object_File_o.html">Previous</A>|<A HREF="asDisplay_Assembly_Statistics_stat.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

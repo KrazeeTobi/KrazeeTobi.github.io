@@ -1,0 +1,97 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>The #include Directive</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppUses_of_Header_Files.html">Previous</A>|<A HREF="cppHow_include_Works.html">Next</A>
+<BR><A NAME="off_100312"></A><A NAME="c74dc986"></A><A NAME="off_100312"></A><A NAME="c74dc986"></A><A NAME="off_100312"></A><A NAME="c74dc986"></A><A NAME="off_100312"></A><A NAME="c74dc986"></A><A NAME="off_100312"></A><A NAME="c74dc986"></A><A NAME="off_100312"></A><A NAME="c74dc986"></A><A NAME="off_100312"></A><A NAME="c74dc986"></A><A NAME="off_100312"></A><A NAME="c74dc986"></A><A NAME="off_100312"></A><A NAME="c74dc986"></A><A NAME="off_100312"></A><A NAME="c74dc986"></A><A NAME="off_100312"></A><A NAME="c74dc986"></A><A NAME="off_100312"></A><A NAME="c74dc986"></A><A NAME="off_100312"></A><A NAME="c74dc986"></A><FONT COLOR="#000000"><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>The
+</FONT></FONT><TT><FONT POINT-SIZE="24">#include</FONT></TT><FONT FACE="Futura Md BT"><FONT SIZE=+3>
+directive&nbsp;</FONT></FONT></B><FONT FACE="Futura Md BT">&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Both
+user and system header files are included using the preprocessing directive,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+It has the following three variants.</FONT></FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>#include&lt;<I>file</I>></FONT></FONT></LI>
+
+<UL TYPE=SQUARE><FONT FACE="Times New Roman"><FONT SIZE=+1>This variant
+is used for system header files. It searches for a file named </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in a list of directories specified by you, then in a standard list of system
+directories. You specify directories to search for header files with the
+command option, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-I</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(see <FONT COLOR="#008000"><A HREF="cppInvoking_the_C_Preprocessor.html">Invoking
+the C preprocessor</A></FONT>). The option, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-nostdinc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+inhibits searching the standard system directories; in this case only the
+directories you specify are searched.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The parsing of this form of
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is slightly special because comments are not recognized within the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>&lt;...></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Thus, in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>&lt;x/*y></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/*</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not start a comment and the directive specifies inclusion of a system
+header file named </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x/*y</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Of course, a header file with such a name is unlikely to exist on Unix,
+where shell wildcard features would make it hard to manipulate.</FONT></FONT></DT>
+
+<BR><FONT SIZE=+1><FONT FACE="Times New Roman">The argument, </FONT><I><TT>file</TT></I><FONT FACE="Times New Roman">,
+may <B><I>not</I></B> contain a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+character. It may, however, contain a</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+&lt;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> character.</FONT></FONT></UL>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>#include "<I>file</I>"</FONT></FONT></LI>
+
+<UL TYPE=SQUARE><FONT FACE="Times New Roman"><FONT SIZE=+1>This variant
+is used for header files of your own program. It searches for a file named
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+first in the current directory, then in the same directories used for system
+header files. The current directory is the directory of the current input
+file. It is tried first because it is presumed to be the location of the
+files that the current input file refers to. (If the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-I-</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option is used, the special treatment of the current directory is inhibited.)</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+may not contain ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>"</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">’
+characters. If backslashes occur within </FONT><I><TT>file</TT></I><FONT FACE="Times New Roman">,
+they are considered ordinary text characters, not escape characters. None
+of the character escape sequences appropriate to string constants in C
+are processed. Thus, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include
+"x\n\\y" </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>specifies
+a filename containing three backslashes. It is not clear why this behavior
+is ever useful, but the ANSI standard specifies it.</FONT></FONT></DT>
+</UL>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>#include <I>anything else</I></FONT></FONT></LI>
+
+<UL TYPE=SQUARE><FONT FACE="Times New Roman"><FONT SIZE=+1>This variant
+is called a computed </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Any </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">
+directive whose argument does not fit the above two forms is a computed
+include. The text, </FONT><I><TT>anything else</TT></I><FONT FACE="Times New Roman">,
+is checked for macro calls, which are expanded (see <FONT COLOR="#008000"><A HREF="cppMacros.html">Macros</A></FONT>).
+When this is done, the result must fit one of the previous two variants—in
+particular, the expanded text must, in the end, be surrounded by either
+quotes or angle braces.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This feature allows you to define
+a macro which controls the file name to be used at a later point in the
+program. One application of this is to allow a site-specific configuration
+file for your program to specify the names of the system </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+files to be used. This can help in porting the program to various operating
+systems in which the necessary system header files are found in different
+places.</FONT></FONT></DT>
+</UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppUses_of_Header_Files.html">Previous</A>|<A HREF="cppHow_include_Works.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

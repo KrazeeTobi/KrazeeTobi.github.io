@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Additional process information</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbKilling_the_child_process.html">Previous</A>|<A HREF="gdbDebugging_programs_with_00000035.html">Next</A>
+<BR><A NAME="off_656927"></A><A NAME="5cd434e0"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Additional
+process information&nbsp;</FONT></FONT></FONT></B>
+<HR SIZE=3 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Some operating systems provide
+a facility called ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/proc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+that can be used to examine the image of a running process using file system
+subroutines. If GDB is configured for an operating system with this facility,
+the command </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info proc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is available to report on several kinds of information about the process
+running your program. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info
+proc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> works only
+on SVR4 systems that support </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>procfs</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>info proc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Summarize available information
+about the process.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>info proc mappings</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Report on the address ranges
+accessible in the program, with information on whether your program may
+read, write, or execute each range.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>info proc times</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Starting time, user CPU
+time, and system CPU time for your program and its children.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>info proc id</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Report on the process IDs
+related to your program: its own process ID, the ID of its parent, the
+process group ID, and the session ID.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>info proc status</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>General information on the
+state of the process. If the process is stopped, this report includes the
+reason for stopping, and any signal received.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>info proc all</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Show all the above information
+about the process.</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbKilling_the_child_process.html">Previous</A>|<A HREF="gdbDebugging_programs_with_00000035.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

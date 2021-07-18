@@ -1,0 +1,143 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Type Abstraction using Signatures</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccWheres_the_Template.html">Previous</A>|<A HREF="gccgcov_a_Test_Coverage_Program.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>&nbsp;<A NAME="off_4490900"></A><A NAME="797760b0"></A><B>Type
+abstraction using signatures&nbsp;</B>&nbsp;</FONT></FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>In GNU C++, you can use
+the keyword, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>signature</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to define a completely abstract class interface as a datatype. You can
+connect this abstraction with actual classes using signature pointers.
+If you want to use signatures, run the GNU compiler with the&nbsp; command-line
+option, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fhandle-signatures</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+(With this option, the compiler reserves a second keyword, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sigof</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+as well, for a future extension.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Roughly, signatures are type
+abstractions or interfaces of classes. Some other languages have similar
+facilities. C++ signatures are related to ML’s signatures, Haskell’s type
+classes, definition modules in Modula-2, interface modules in Modula-3,
+abstract types in Emerald, type modules in Trellis/Owl, categories in Scratchpad
+II, and types in POOL-I. For a more detailed discussion of signatures,
+see <B><I>Signatures: A Language Extension for Improving Type Abstraction
+and Subtype Polymorphism in C++</I></B> by Gerald Baumgartner and Vincent
+F. Russo (Tech report CSD–TR–95–051, Dept. of Computer Sciences, Purdue
+University, August 1995, a slightly improved version appeared in <B><I>Software—Practice
+&amp; Experience</I></B>, <B>25</B>(8), pp. 863–889, August 1995). You
+can get the tech report by anonymous FTP from </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ftp.cs.purdue.edu</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>pub/gb/Signature-design.ps.gz</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Syntactically, a signature
+declaration is a collection of member function declarations and nested
+type declarations. For example, the following signature declaration defines
+a new abstract type ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>S</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+with member functions, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int
+foo()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int
+bar(int)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>signature S&nbsp;
+{&nbsp;
+&nbsp;&nbsp; int foo ();&nbsp;
+&nbsp;&nbsp; int bar (int);&nbsp;
+};</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Since signature types do not
+include implementation definitions, you cannot write an instance of a signature
+directly. Instead, you can define a pointer to any class that contains
+the required interfaces as a <I>signature pointer</I>. Such a class <I>implements</I>
+the signature type.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To use a class as an implementation
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>S</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+you must ensure that the class has public member functions ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int
+foo()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int
+bar(int)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’. The
+class can have other member functions as well, public or not; as long as
+it offers what’s declared in the signature, it is suitable as an implementation
+of that signature type.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, suppose that
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>C</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is a class that meets the requirements of signature ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>S</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+(</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>C</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+<I>conforms</I> <I>to</I> </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>S</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+Then the following statement defines a signature pointer ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>p</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and initializes it to point to an object of type ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>C</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>C obj;&nbsp;
+S * p = &amp;obj;</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The member function call, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int
+i = p->foo ();</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+executes </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>obj.foo ()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Abstract virtual classes
+provide somewhat similar facilities in standard C++. There are two main
+advantages to using signatures instead.</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Subtyping becomes independent
+from inheritance.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>A class or signature type ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>T</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is a subtype of a signature type ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>S</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+independent of any inheritance hierarchy as long as all the member functions
+declared in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>S</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+are also found in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>T</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+So you can define a subtype hierarchy that is completely independent from
+any inheritance (implementation) hierarchy, instead of being forced to
+use types that mirror the class inheritance hierarchy.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Signatures allow you to work
+with existing class hierarchies as implementations of a signature type.
+If those class hierarchies are only available in compiled form, you’re
+out of luck with abstract virtual classes, since an abstract virtual class
+cannot be retrofitted on top of existing class hierarchies.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>So you would be required to
+write interface classes as subtypes of the abstract virtual class.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>There is one more detail about
+signatures. A signature declaration can contain member function <I>definitions</I>
+as well as member function declarations. A signature member function with
+a full definition is called a <I>default implementation</I>; classes need
+not contain that particular interface in order to conform.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>For example, a class ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>C</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+can conform to the following signature.</FONT></FONT></DT>
+
+<UL TYPE=SQUARE>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>signature T&nbsp;
+{&nbsp;
+&nbsp;&nbsp; int f (int);&nbsp;
+&nbsp;&nbsp; int f0 () { return f (0); };&nbsp;
+};</FONT></FONT></PRE>
+</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This happens whether </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>C</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+implements the member function, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int
+f0()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’, or not.
+If you define </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>C::f0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+that definition takes precedence; otherwise, the default implementation,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>S::f0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+applies.</FONT></FONT></DT>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccWheres_the_Template.html">Previous</A>|<A HREF="gccgcov_a_Test_Coverage_Program.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

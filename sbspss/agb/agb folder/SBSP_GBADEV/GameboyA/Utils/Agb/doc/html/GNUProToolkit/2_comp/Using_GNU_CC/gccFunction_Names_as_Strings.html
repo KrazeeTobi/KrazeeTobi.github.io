@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Function Names as Strings</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccIncomplete_enum_Types.html">Previous</A>|<A HREF="gccGetting_the_Return_or_Frame_Addr.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_4293221"></A><A NAME="78c2d3e7"></A><B><FONT SIZE=+3>Function
+names as strings&nbsp;</FONT></B>&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GNU CC predefines two string
+variables to be the name of the current function. The variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__FUNCTION__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is the name of the function as it appears in the source. The variable,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__PRETTY_FUNCTION__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is the name of the function pretty printed in a language specific fashion.
+These names are always the same in a C function, but in a C++ function
+they may be different, like the following program.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>extern "C" {&nbsp;
+extern int printf (char *, ...);&nbsp;
+}&nbsp;
+class a {&nbsp;
+public:&nbsp;
+&nbsp; sub (int i)&nbsp;
+&nbsp;&nbsp;&nbsp; {&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; printf ("__FUNCTION__ = %s\n", __FUNCTION__);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; printf ("__PRETTY_FUNCTION__ = %s\n", __PRETTY_FUNCTION__);&nbsp;
+&nbsp;&nbsp;&nbsp; }&nbsp;
+};&nbsp;
+int&nbsp;
+main (void)&nbsp;
+{&nbsp;
+&nbsp; a ax;&nbsp;
+&nbsp; ax.sub (0);&nbsp;
+&nbsp; return 0;&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The program, then, gives the
+following output.</FONT></FONT>
+<UL>
+<PRE><B><FONT FACE="Courier New"><FONT SIZE=+1>__FUNCTION__ = sub&nbsp;
+__PRETTY_FUNCTION__ = int a::sub (int)</FONT></FONT></B></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>These names are not macros:
+they are predefined string variables. For example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#ifdef
+__FUNCTION__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> does
+not have any special meaning inside a function, since the preprocessor
+does not do anything special with the identifier, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__FUNCTION__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccIncomplete_enum_Types.html">Previous</A>|<A HREF="gccGetting_the_Return_or_Frame_Addr.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

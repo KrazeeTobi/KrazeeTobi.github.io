@@ -1,0 +1,155 @@
+//**************************************************
+// GameBoy Advance Development Environment Setup
+//     for Target Board TS2 (AGB-STB-03)
+//     6/7/2000 
+//     Copyright (C) 1999, 2000 NINTENDO Co., Ltd.
+//     Copyright (C) 2000 Nintendo of America Inc.
+//**************************************************
+
+<Introduction>
+
+Here we will explain how to set up the GameBoy Advance (hereinafter AGB) 
+development environment. 
+
+<Operating Environment>
+
+Operating system: Windows95/98/NT4.0 SP3 or later
+Recommended machine: Machine equipped with at least a Pentium processor
+Recommended memory: 64MB or more main memory, 4096 initial environment variables 
+                    for DOS (Windows 95/98)
+Recommended HDD space: There should be at least 900MB free space on the hard 
+		       drive (if including all the GnuPro tools)
+Minimum HDD space: 420MB
+
+* UNIX-based operation and building are not supported.
+* Windows 2000 is not supported. 
+
+<Setup Wizard>
+
+1. Double-click on AGBLibrary.exe from the CD (Game Boy Advance Developers ToolKit
+   2.0) and install the software as instructed by the installation program.  Once 
+   setup is completed, the libraries, macros, headers, various samples, and all 
+   manuals that are necessary for development of AGB applications will have been 
+   installed under the [drive name]:\agb directory. 
+
+2. Next, double-click on GNUPro.exe from the CD (Game Boy Advance Developers 
+   ToolKit 2.0) and install the software as instructed by the installation program.  
+   Once setup is completed, the 16-bit command build environment of thumbelf-000512
+   for Cygnus Solutions' ARM7TDMI and native-99rl (BASH shell) are installed under
+   the [drive name]:\Program files\cygnus directory. 
+
+* When changing the install directory, you need to change the setting of 
+  AGBDIR,CYGNUSDIR in AgbGNUProBash.bat. This is because the default path of the 
+  environmental parameter CYGNUSDIR is presumed to be in the same directory. 
+ 
+* The 32-bit command building environment armelf-XXXXXX is in the root directory of 
+  the CD as armelf-000512.zip.  It can be copied and used as necessary. (Free space
+  of 460MB is necessary to decompress this file.)
+
+
+3. This completes installation of the software. 
+   Now, turn off the power to the personal computer (PC). 
+
+4. Now set up the hardware. 
+   Have the following items ready.
+   -IS-AGB-EMULATOR (or DEBUGGER or CHARACTER or ANIMEVIEWER, etc.)
+    {The hardware for which the AGB is set up will be indicated by a checkmark 
+    on the label on the back of the unit.}
+   -SCSI cable (purchase separately) 
+   -Generic SCSI2 card for PC (purchase separately) 
+   -AGB target board (A special AGB adapter is included)
+   -WIDEBOY-AGB (necessary and included when the target board does not have an LCD)
+   -NINTENDO64 (necessary along with the WIDEBOY-AGB when the target board does 
+    not have an LCD.  Standard commercial product must be purchased separately.) 
+   -TV monitor (necessary when the target board does not have an LCD)
+
+5. With the power to the PC off, connect the SCSI card and the IS-AGB-EMULATOR 
+   with as short a cable as possible.  See the included manuals for details. 
+
+6. Connect the ribbon cable included with the IS-AGB-EMULATOR to P8 on the AGB 
+   target board. Next, connect the red and black cable included with the target 
+   board to the white 6-pin connector on the AGB Game Pak.  Connect the other end 
+   of this cable to the P5 connector on the AGB target board.  (Resets and 
+   interrupts will have no effect unless this is connected.)  
+   Finally, attach one of the included AC adaptors.
+
+   If there is no LCD on the target board, install a dedicated cable between the 
+   special WIDE-BOY64 for the AGB target board and the P7 connector on the target 
+   board. Then, connect the WIDE-BOY64 to the NINTENDO64 to complete hardware setup. 
+
+7. Turn on the power to the IS-AGB-EMULATOR and the target board.  
+   The power switch for the target board is the large sliding switch (SW1) at 
+   the front of the board.  Then, turn on the power to the PC. 
+
+8. Install the emulator from the CD included with the IS-AGB-EMULATOR. 
+   (See the IS-AGB-EMULATOR documentation for details.)
+
+9. Select [Start]->[Program]->[IS-AGB-EMULATOR]->[IS-AGB-EMULATOR] to check 
+    operation. 
+
+10. Select [File]->[Open] and select BIN from the dialog box.  Then, select 
+    [Browse]->[C:\agb\src\samples\functional_sample\fncsample.bin]. 
+
+11. Once the IS-AGB-EMULATOR has been initialized, data will be transferred to the 
+    AGB-target board.  It is functioning normally if the menu is displayed on AGB 
+    target board and each function is working. 
+
+12. Next, try compiling the source code. 
+    From the Explorer, double click on: 
+
+    {installed drive}:\Program files\cygnus\thumbelf-000512\AgbGNUProBash.bat and 
+    start the batch file.
+
+13. The BASH shell will start in the DOS window. 
+    If "[/Program Files/Cygnus/thumbelf-000512]" is displayed at the prompt, 
+    everything is normal.  In the following description, the prompt will be shown 
+    as $. 
+
+* If "Out of environment space" is displayed, either press the 
+  Properties button for the AgbGNUProBash.bat batch file, or right click 
+  on AgbGNUProBash.bat to select Properties and open a dialog box. 
+  Change the parameter of [Memory]->[Environment Variables] to 4096, or something
+  similar. 
+
+14. $ cd /agb/src/samples/functional_sample
+    $ make
+
+    Execute the above two commands in order to perform make. 
+    Confirm that fncsample.bin and fncsample.elf are created in the same directory. 
+
+15. Execute fncsample.bin according to the procedure described in step 10 and check 
+    its operation. 
+
+16. The preceding confirms that the system is operating under the AGB 
+    development environment. 
+
+    Then, from Explorer, open: {installed drive}:\agb\doc\AGB.htm for use in AGB 
+    development. 
+
+* This text is stored in the ROOT directory of the CD, as well as in the 
+  {installed drive}:\agb\doc directory. 
+
+* The GameBoy Advance Developers ToolKit includes products from Cygnus Solutions 
+  and Free Software Foundation, Inc.  Cygnus Solutions and Free Software Foundation,
+  Inc. owns the copyrights to their products.
+
+* All support for GNUPro and GNUPro Tools should be handled with Cygnus Solutions 
+  and companies with support contracts with Cygnus Solutions. 
+  
+   http://www.cygnus.com
+   http://www.cygnus.com/support/ (For support-related inquiries)
+ 
+* The latest versions of AGB tools can be acquired from the 
+  NOA Engineering web site. 
+    
+   http://www.noa-engineering.com
+
+* The various product names and company names used herein are trademarks or 
+  registered trademarks of their respective companies. 
+
+*****************************************************************
+Please send technical inquiries regarding AGB to the following e-mail address.
+support@noa.com
+*****************************************************************
+
+END

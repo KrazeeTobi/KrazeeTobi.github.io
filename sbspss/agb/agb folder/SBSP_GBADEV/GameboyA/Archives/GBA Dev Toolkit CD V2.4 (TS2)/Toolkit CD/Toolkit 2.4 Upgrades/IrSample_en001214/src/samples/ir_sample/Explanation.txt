@@ -1,0 +1,46 @@
+
+********************* Explanation of Display ************************
+
+SIODAT	Diplays contents of R register and tells status of SIO terminal
+
+STATUS	Indicates communication status
+	Communication status is defined in AgbIr.h
+
+MODE	Indicates communication mode
+	Send: 0002, Receive: 0001
+
+SUM	Indicates check-sum value
+
+SUCCESS	Indicates count for communication success
+FAILURE	Indicates count for communication failure
+
+KEYCODE	Indicates defined key code
+RECVBUF	Contents of first address in reception buffer
+	-If sending, it indicates modified key code returned from receiver
+	-If receiving, it indicates the first data sent by sender
+
+RATE	Indicates communication speed (see header file)
+CORE	Indicates communication core mounted
+
+
+********************* How to Opearte ************************
+
+A Button	Send data
+
+B Button	Turn off consecutive send mode
+
+START Button	Consecutive send mode. It continues to send
+		until it is turn off by pressing B button
+
+Arrow Keys	<Up>: mounts ARM core
+			(104kbps with RAM operation)
+		<Down>: mounts THUMB core
+			(40kbps with ROM operation)
+
+L Trigger	Not used
+
+R Trigger	Not used
+
+SELECT Button	Not used
+
+

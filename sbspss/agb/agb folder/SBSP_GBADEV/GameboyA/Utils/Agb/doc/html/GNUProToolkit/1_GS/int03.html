@@ -1,0 +1,478 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title> Issues from previous releases</title>
+</head>
+<body bgcolor="#FFFFFF">
+<a NAME="Top"></a><a href="gsTOC.html">Contents</a>|<a href="int02.html">Previous</a>|<a href="int04.html">Next</a>
+<br><a NAME="pgfId=1003010"></a><a NAME="Issues_from_previous_releases"></a><a NAME="Issuesfrom previous"></a><a NAME="Issues_from_previous"></a><font face="Futura Md BT"><font color="#000000"><font size=+3>Issues
+from previous releases&nbsp;</font></font></font>
+<hr SIZE=6 WIDTH="100%">
+<ul TYPE=SQUARE>
+<div CLASS="BodyListFollow2"><a NAME="pgfId=1003864"></a><font size=+1>The
+following documentation discusses issues that serve as important&nbsp;<a NAME="marker=1009651"></a>warnings
+or isssues that were&nbsp;<a NAME="new issues"></a>new enhancements with
+this release.</font>
+
+<p CLASS="Body"><a NAME="pgfId=1008751"></a><font size=+1>These issues
+may provide clues that may help if you are a new user of the GNU tools
+or if you run into&nbsp;<a NAME="marker=1009652"></a>problems with the
+GNUPro tools.</font>
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li CLASS="Bullet">
+<a NAME="pgfId=1003865"></a><font size=+1><a href="#General_new" CLASS="XRef">General
+issues</a></font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1003914"></a><font size=+1><a href="#Compiler_new" CLASS="XRef">Compiler
+issues</a></font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1003866"></a><font size=+1><a href="#Debugger_issues" CLASS="XRef">Debugger
+issues</a></font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1003859"></a><font size=+1><a href="#Utils_issues" CLASS="XRef">Utilities
+issues</a></font></li>
+</ul>
+</ul>
+
+<div CLASS="Body">&nbsp;</div>
+
+<div CLASS="Heading1">&nbsp;
+<br><a NAME="pgfId=1004001"></a><a NAME="General_new"></a><b><i><font face="Times New Roman,Times"><font size=+2>General
+issues</font></font></i></b></div>
+
+<div CLASS="Body"><a NAME="pgfId=1004002"></a><font size=+1>The following
+documentation discusses new features and alerts for this release of GNUPro
+Toolkit.</font></div>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1009487"></a><font size=+1>For problems with this or future
+releases, Cygnus now has&nbsp;<a NAME="marker=1009645"></a>Website&nbsp;<a NAME="marker=1009646"></a>support
+access. See Accessing Cygnus Web Support to report problems.</font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1009502"></a><a NAME="marker=1009644"></a><font size=+1>eCos</font><sup><font size=-2>TM</font></sup><font size=+1>
+(Embedded Cygnus Operating System), a full-featured, run-time solution
+under&nbsp;<a NAME="marker=1009650"></a>open-source licensing terms is
+available for using with the GNUPro tools. eCos, a royalty-free, highly
+configurable, application-specific operating system, is targeted at embedded
+systems development, allowing embedded system developers to focus on differentiating
+their products instead of developing, maintaining, or configuring proprietary,
+real-time&nbsp;<a NAME="marker=1009649"></a>kernels. Details on eCos are
+available online at the following location, along with specific documentation
+and open-source licensing terms.</font></li>
+
+<div CLASS="CodeExample">
+<ul><a NAME="pgfId=1008892"></a><tt><font size=+1><a href="http://sourceware.cygnus.com/ecos/">http://sourceware.cygnus.com/ecos/</a></font></tt></ul>
+</div>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1009746"></a><font size=+1>The GNUPro visual debugger, Cygnus
+Insight</font><sup><font size=-2>TM</font></sup><font size=+1>, formerly
+known as <i>GDBTk</i> has many significant changes; see <a href="#Debugger_issues">Debugger
+issues</a> and <a href="int06.html">Working with Cygnus Insight, the visual
+debugger</a>, for details regarding usage and features of Insight.</font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1009793"></a><font size=+1>The GNUPro tools are now supported
+for use in the Win32 environment by using the Cygwin</font><sup><font size=-2>TM</font></sup><font size=+1>
+tools, a porting layer for applications that are generally functional only
+in Unix environments.</font></li>
+
+<ul TYPE=SQUARE>
+<div CLASS="Bullet"><a NAME="pgfId=1009803"></a><font size=+1>See <a href="http://sourceware.cygnus.com/cygwin/" CLASS="XRef">Cygwin:
+a free Win32 porting layer for Unix applications</a> and <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b> for details about using the tools
+for developing programs in the Win32 environment.</font></div>
+
+<div CLASS="BodyListFollow"><a NAME="pgfId=1009825"></a><a NAME="marker=1009837"></a><font size=+1>Rebuilding
+is now available for the Windows operating system. See <a href="reb.html" CLASS="XRef">Rebuilding
+from source</a> for details and instructions.</font></div>
+</ul>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1009500"></a><font size=+1>There is now support for several&nbsp;<a NAME="marker=1009647"></a>new
+targets with this release.</font></li>
+
+<ul TYPE=SQUARE>&nbsp;
+<table BORDER >
+<tr BGCOLOR="#C0C0C0">
+<th BGCOLOR="#CCCCCC">
+<div CLASS="CellBody"><a NAME="pgfId=1008911"></a><b><font size=+1>Host</font></b></div>
+</th>
+
+<th>
+<div CLASS="CellBody"><a NAME="pgfId=1008913"></a><b><font size=+1>Target</font></b></div>
+</th>
+
+<th>
+<div CLASS="CellBody"><a NAME="pgfId=1008915"></a><b><font size=+1>Output
+Format</font></b></div>
+</th>
+</tr>
+
+<tr>
+<td VALIGN=TOP>
+<div CLASS="CellBody"><a NAME="pgfId=1008917"></a><font size=+1><i>HP-UX
+10.</i> <i>x</i></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1008919"></a><font size=+1>MIPS 64
+V</font><i><sub><font size=-2>R</font></sub></i><font size=+1>5<i><tt>xxx</tt></i></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1008921"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP ROWSPAN="5">
+<div CLASS="CellBody"><a NAME="pgfId=1008935"></a><i><font size=+1>SPARC
+Solaris 2.5</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1008937"></a><font size=+1>ARM 7/7T</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1008939"></a><font size=+1>COFF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009656"></a><font size=+1>M68K</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009658"></a><font size=+1>ELF</font><sup><font size=-1><a href="#pgfId=1009701" CLASS="footnote">1</a></font></sup></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1008973"></a><font size=+1>MIPS 64
+V</font><i><sub><font size=-2>R</font></sub></i><font size=+1>5<i><tt>xxx</tt></i></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1008975"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1008991"></a><font size=+1>MIPS LSI
+TinyRISC</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1008993"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009015"></a><font size=+1>v85<i><tt>x</tt></i></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009017"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP ROWSPAN="5">
+<div CLASS="CellBody"><a NAME="pgfId=1009398"></a><i><font size=+1>SPARC
+SunOS 4.1.4</font></i></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009400"></a><font size=+1>D10V</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009402"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009664"></a><font size=+1>MIPS 64
+V</font><i><sub><font size=-2>R</font></sub></i><font size=+1>5<i><tt>xxx</tt></i></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009666"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009364"></a><font size=+1>MIPS LSI
+TinyRISC</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009366"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009358"></a><font size=+1>MIPS TX39</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009360"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009328"></a><font size=+1>v85<i><tt>x</tt></i></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009330"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP ROWSPAN="6">
+<div CLASS="CellBody"><a NAME="pgfId=1009314"></a><font size=+1>Windows
+NT4.0/95</font><sup><font size=-1><a href="#pgfId=1009807" CLASS="footnote">2</a></font></sup></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009316"></a><font size=+1>D10V</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009318"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009694"></a><font size=+1>M68K</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009696"></a><font size=+1>ELF</font><sup><font size=-1><a href="#pgfId=1009698" CLASS="footnote">3</a></font></sup></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009682"></a><font size=+1>MIPS LSI
+TinyRISC</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009684"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009280"></a><font size=+1>MIPS 64
+V</font><i><sub><font size=-2>R</font></sub></i><font size=+1>5<i><tt>xxx</tt></i></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009282"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009274"></a><font size=+1>MIPS TX39</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009276"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009244"></a><font size=+1>v85<i><tt>x</tt></i></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009246"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+</table>
+</ul>
+<span CLASS="footnoteNumber"><font size=-1>1.</span><a NAME="pgfId=1009701"></a>To
+use the Motorola "Coldfire" version, if that is the configuration you intend
+to specify as a target, see <a href="../6_embed/embMotorola_m68k_targets.html">Motorola
+<tt>m68k</tt>
+development</a> in <b><i><a href="../6_embed/emb.html">GNUPro Tools for
+Embedded Systems</a></i></b>.</font>
+<ul TYPE=SQUARE>
+<div CLASS="footnotes">
+<div CLASS="footnote">
+<div CLASS="TableFootnote"><span CLASS="footnoteNumber"><font size=-1>2.</span><a NAME="pgfId=1009807"></a>See
+also <a href="http://sourceware.cygnus.com/cygwin/" CLASS="XRef">Cygwin:
+a free Win32 porting layer for Unix applications</a> in <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b> for details about using the tools
+for developing programs in the Win32 environment.</font></div>
+</div>
+
+<div CLASS="footnote">
+<div CLASS="TableFootnote"><span CLASS="footnoteNumber"><font size=-1>3.</span><a NAME="pgfId=1009698"></a>See
+<a href="#pgfId=1009701">previous
+footnote</a> for the Motorola "Coldfire" version.</font></div>
+</div>
+</div>
+</ul>
+
+<div CLASS="BodyListFollow">
+<hr SIZE=6 WIDTH="100%"><a NAME="pgfId=1008740"></a><font size=+1>For the
+complete list of supported hosts and targets, see <a href="int01.html#Embedded_cross-configuration_support" CLASS="XRef">Embedded
+cross-configuration support</a> and see <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b> for details about specific hosts
+and targets.</font></div>
+
+<div CLASS="Heading1"><a NAME="pgfId=1004016"></a><a NAME="_Toc405092898"></a><a NAME="Compiler_new"></a><b><i><font face="Times New Roman,Times"><font size=+2>Compiler
+issues</font></font></i></b></div>
+
+<br>&nbsp;
+<div CLASS="Body"><a NAME="pgfId=1004017"></a><font size=+1>The following
+documentation concerns enhancement issues that may affect the API or ABI
+when working with the GNUPro compiler tools.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1009880"></a><font size=+1>For documentation
+specific to a particular processor, see the specific processor’s documentation
+as well as <b><i><a href="../6_embed/emb.html">GNUPro Tools for Embedded
+Systems</a></i></b>.</font></div>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1009583"></a><font size=+1>The command input, <tt>gcc --help<a NAME="marker=1009630"></a></tt>,
+will now give a list of options for the GNU compiler, GCC.</font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1008893"></a><font size=+1><tt>init_priority</tt>&nbsp;<a NAME="marker=1009631"></a>allows&nbsp;<a NAME="marker=1009632"></a>initialiazation
+of&nbsp;<a NAME="marker=1009633"></a>objects in the order that you want.</font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1009589"></a><font size=+1>There is now&nbsp;<a NAME="marker=1009635"></a>namespace
+support, identifying the particular&nbsp;<a NAME="marker=1009634"></a>scope
+for wrapping class or type functions so that two or more libraries can
+work together.</font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1008894"></a><font size=+1>There have been enhancements
+to the GNU profiler, <tt>gprof<a NAME="marker=1009639"></a></tt>, enabling&nbsp;<a NAME="marker=1009638"></a>profiling
+when testing the compiler.</font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1008897"></a><a NAME="marker=1009640"></a><font size=+1>Thread
+safe&nbsp;<a NAME="marker=1009641"></a>exception handling is now supported
+for the Solaris 2.6 and PowerPC 860 systems.</font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1009848"></a><font size=+1>The GNU C++ library, <tt>libstdc++</tt>,
+is not thread safe by default under Solaris. Contact us for information
+on how to recreate the library so that it is thread safe, using <tt>-lthread</tt>
+or <tt>-lpthread</tt>.</font></li>
+
+<h3 CLASS="Heading1">
+<a NAME="pgfId=1004354"></a><a NAME="_Toc405092899"></a><a NAME="Debugger_issues"></a><b><i><font face="Times New Roman,Times"><font size=+2>Debugger
+issues</font></font></i></b></h3>
+
+<div CLASS="Body"><a NAME="pgfId=1004355"></a><font size=+1>The following
+documentation concerns the enhancement issues for the GNUPro debugger tools.</font></div>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1008752"></a><font size=+1>Continued enhancements have improved
+the GNUPro visual debugger, Cygnus&nbsp;<a NAME="marker=1009629"></a>Insight
+(formerly known as GDBTk).</font></li>
+
+<div CLASS="BodyListFollow"><a NAME="pgfId=1009451"></a><font size=+1>See
+<a href="int06.html" CLASS="XRef">Working
+with Cygnus Insight, the visual debugger</a> for details regarding usage
+and features of Insight.</font></div>
+
+<li CLASS="Bullet2">
+<a NAME="pgfId=1008873"></a><font size=+1>The <font face="Arial Narrow">Source
+Window</font> now has cache functionality generating faster navigation,
+searches and settings.</font></li>
+
+<li CLASS="Bullet2">
+<a NAME="pgfId=1008887"></a><font size=+1>A <font face="Arial Narrow">Function
+Browser</font> window now interacts with the <i>Source Window</i> in order
+to examine functions in source code for multiple executables. A dialog
+box is available in order to enter text, declaring functions as static
+or as regular expressions.</font></li>
+
+<li CLASS="Bullet2">
+<a NAME="pgfId=1008888"></a><font size=+1>The interface for the <font face="Arial Narrow">Memory</font>
+window has faster refresh rates.</font></li>
+
+<li CLASS="Bullet2">
+<a NAME="pgfId=1008889"></a><font size=+1>Improved mouse functionality
+allows for right click features to provide better and faster access to
+standard debugging features through pop-up windows.</font></li>
+
+<li>
+<font size=+1>The <font face="Arial Narrow">Target Selection</font> window
+for the GNUPro visual debugger, Cygnus Insight, has additional functionality.
+Accessible from Insight’s Source Window, V850 users developing with ICE
+select a target by entering the name of the ICE target into the <font face="Arial Narrow">Target
+Selection</font> window’s dialog box. The V850 processor is the only supported
+target until the next release.</font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1008761"></a><font size=+1>The GNU debugger, GDB, is going
+through many changes in its emergence as version 5, available in a 1999
+release. See future releases for the results of the development.</font></li>
+
+<div CLASS="Heading1">&nbsp;
+<br><a NAME="pgfId=1004047"></a><a NAME="_Toc405092900"></a><a NAME="Utils_issues"></a><b><i><font face="Times New Roman,Times"><font size=+2>Utilities
+issues</font></font></i></b></div>
+
+<div CLASS="Body"><a NAME="pgfId=1004777"></a><font size=+1>The following
+documentation concerns enhancement issues for GNUPro utilities.</font></div>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1003921"></a><font size=+1>The GNU linker tool has improved
+function and variable linking since the addition of a few supported targets
+(see <a href="int01.html#Embedded_cross-configuration_support" CLASS="XRef">Embedded
+cross-configuration support</a> for the complete listing of targets). This
+linking allows for selecting specific functions and variables in an object
+file when configuring, whereby the linking&nbsp;<a NAME="marker=1009628"></a>selectively
+(or <i>explicitly</i>) includes those libraries in the&nbsp;<a NAME="marker=1009615"></a>linking
+instruction.</font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1009610"></a><font size=+1>For specific assembler or linker
+details, consult the specific processor’s documentation and <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b>.</font><a NAME="pgfId=1009495"></a></li>
+
+<br>&nbsp;
+<p>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<center>
+<p>
+<hr SIZE=3 WIDTH="100%">
+<br><a href="#Top">Top</a>|<a href="gsTOC.html">Contents</a>|<a href="int02.html">Previous</a>|<a href="int04.html">Next</a></center>
+</div>
+</ul>
+
+</body>
+</html>

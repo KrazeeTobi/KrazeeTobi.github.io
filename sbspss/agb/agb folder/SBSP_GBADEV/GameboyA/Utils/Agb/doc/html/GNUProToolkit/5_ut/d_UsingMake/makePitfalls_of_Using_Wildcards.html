@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Pitfalls of Using Wildcards</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeWildcard_Examples.html">Previous</A>|<A HREF="makeThe_Function_wildcard.html">Next</A>
+<BR><A NAME="off_459904"></A><A NAME="289b7242"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Pitfalls
+of using wildcards</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+next is an example of a naive way of using wildcard expansion that does
+not do what you would intend. Suppose you would like to say that the executable
+file, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+is made from all the object files in the directory, and you write the following.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>objects = *.o</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>foo : $(objects)</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+cc -o foo $(CFLAGS) $(objects)</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The value of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>objects</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the actual string ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><B>*</B>.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Wildcard expansion happens in the rule for ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+so that each existing ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+file becomes a dependency of ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and will be recompiled if necessary. But what if you delete all the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+files? When a wildcard matches no files, it is left as it is, so then ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+will depend on the oddly-named file ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><B>*</B>.o</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">’.
+Since no such file is likely to exist, </FONT><TT>make</TT><FONT FACE="Times New Roman">
+will give you an error saying it cannot figure out how to make ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><B>*</B>.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+This is not what you want! Actually it is possible to obtain the desired
+result with wildcard expansion, but you need more sophisticated techniques,
+including the wildcard function and string substitution. These are described
+in <FONT COLOR="#008000"><A HREF="makeThe_Function_wildcard.html">The function,
+</A></FONT></FONT></FONT><B><FONT FACE="Courier New"><FONT COLOR="#008000"><FONT SIZE=+0><A HREF="makeThe_Function_wildcard.html">wildcard</A></FONT></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeWildcard_Examples.html">Previous</A>|<A HREF="makeThe_Function_wildcard.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

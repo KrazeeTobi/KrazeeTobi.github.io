@@ -1,0 +1,1307 @@
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Writing in the mks4agb.ini File</title>
+<!-- Edited by Tracy B; 2/13/01 -->
+<link rel="stylesheet" type="text/css" href="style.css">
+<style type="text/css"><!--
+			h2 { color: black; text-align: center }
+			h4 { color: black }
+			h5.darkred { color: black }
+			h5.navy { color: black; margin-bottom: 4 }
+			table { margin: 1; padding: 5; border: 0 }
+			td { color: #303050; background-color: white }-->
+		</style>
+</head>
+
+<body text="#303050" bgcolor="#cccccc">
+
+<p align="center"><br>
+</p>
+
+<h2 align="center">Writing in the mks4agb.ini File</h2>
+
+<hr width="600">
+
+<table width="600" align="CENTER" summary="ini_tbl_0">
+  <tr>
+    <td>In order to create <a href="../yougo.html#SoundObject" target="yougo">sound objects</a>
+    correctly, the <a href="../yougo.html#mks4agb.ini" target="yougo">mks4agb.ini</a> file
+    must be correctly written. Using any general-use text editor, set up the parameters in the
+    mks4agb.ini&nbsp; file.&nbsp;<br>
+    <br>
+    <b>The mks4agb.ini file contains comments (the portions following the semicolons
+    &quot;;&quot;) so be sure to read those also.</b></td>
+  </tr>
+</table>
+
+<p><br>
+</p>
+
+<table width="600" align="CENTER" summary="index">
+  <tr>
+    <td><a name="index"></a><b>INDEX</b>&nbsp;&nbsp;&nbsp;Writing in the mks4agb.ini File <pre>  
+  (1)   rebuild =           <a
+href="#ini_1">Rebuild Switch</a>
+  (2)   aif_dir =           <a href="#ini_2">Waveform Data Input Directory</a>
+  (3)   mid_dir =           <a
+href="#ini_3">Song Data Input Directory</a>
+  (4)   src_dir =           <a href="#ini_4">Source File Directory</a>
+  (5)   out_dir =           <a
+href="#ini_5">Output Directory</a>
+  (6)   agb_lib =           <a href="#ini_6">AGB System Library File Directory</a>
+  (7)   cmd_path =          <a
+href="#ini_7">GCC Execution Path</a>
+  (8)   mode_i =            <a href="#ini_8">Initial Setup Values for the Sound Modes</a>
+  (9)   vgroup =            <a
+href="#ini_9">Begin Tone Color G<font face="Arial">roup Setup</font></a>
+ (10)  p??? =               <a
+href="#ini_10">Tone Color </a><a href="#ini_9"><font face="Arial">Setup</font></a>
+ <span
+style="color:">      </span><span style="color:" black"><b>*Tone Color Type</b></span>
+                     <span
+style="color:#000000"><b>A or F</b></span>  <a href="#AorF">(Direct Sound) </a><a
+href="#ini_9"><font face="Arial">Setup</font></a>
+                     <span
+style="color:#000000"><b>P or Q</b></span>  <a href="#PorQ">(CGB Compatible Sound) </a><a
+href="#ini_9"><font face="Arial">Setup</font></a>
+           <span style="color:#000000">          <b>R</b></span>       <a
+href="#R">(Rhythm Set) </a><a href="#ini_9"><font face="Arial">Setup</font></a>
+           <span
+style="color:#000000">          <b>S</b></span>       <a href="#S">(Key Split Tone Color) </a><a
+href="#ini_9"><font face="Arial">Setup</font></a>
+ (11)  t??? =               <a href="#ini_11">Key Split Table </a><a
+href="#ini_9"><font face="Arial">Setup</font></a>
+ (12)  w??? =               <a href="#ini_12">Sound 3 Waveform </a><a
+href="#ini_9"><font face="Arial">Setup</font></a>
+ (13)  mp??? =              <a href="#ini_13">Music Player Setup</a> 
+ (14)  s??? =               <a
+href="#ini_14">Song </a><a href="#ini_9"><font face="Arial">Setup</font></a>
+ (15)  pbymidi =            <a
+href="#ini_15">MIDI Input Performance </a><a href="#ini_9"><font face="Arial">Setup</font></a>
+ (16)  memacc_s =           <a
+href="#ini_16">Memory Access Area Size</a>
+ (17)  max_line =           <a HREF="#ini_17">Maximum Lines for Processing Time of m4aSoundMain()</a>
+ (18)  only_dma1 =          <a
+HREF="#ini_18">DMA Limit Switch</a>
+ (19)  sys_rom =            <a HREF="#ini_19">System ROM Use Switch</a>
+				</pre>
+    </td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_1">
+  <tr>
+    <td><h4><a name="ini_1"></a>(1) rebuild = Rebuild Switch</h4>
+    <p>Once a sound object has been configured, this system will reconfigure only the data
+    that is subsequently updated. It does not reconfigure sections that have not been
+    modified.&nbsp;<br>
+    &nbsp; (This is generally known as the &quot;Make function.&quot;)<br>
+    Set this to&nbsp; &quot;0&quot; for normal use. However, in the event that it becomes
+    necessary to reconfigure everything for some reason, set this to &quot;1.&quot;&nbsp;</p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_2">
+  <tr>
+    <td><h4><a name="ini_2"></a>(2) aif_dir = Waveform Data Input Directory</h4>
+    <p>This specifies the directory where the waveform data file(s)&nbsp; <a
+    href="../yougo.html#{wavename}.aif" target="yougo">{wavename}.aif</a> are to be
+    placed.&nbsp;<br>
+    List the absolute path starting with the drive name or else the relative path using the
+    working directory as the reference. If a non-existent drive is specified, an error will
+    result.&nbsp;</p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_3">
+  <tr>
+    <td><h4><a name="ini_3"></a>(3) mid_dir = Song Data Input Directory</h4>
+    <p>This specifies the directory where the song data file(s)&nbsp; <a
+    href="../yougo.html#{songname}.mid" target="yougo">{songname}.mid</a> are to be
+    placed.&nbsp;<br>
+    List the absolute path starting with the drive name or else the relative path using the
+    working directory as the reference.&nbsp; If a non-existent drive is specified, an error
+    will result.&nbsp;</p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_4">
+  <tr>
+    <td><h4><a name="ini_4"></a>(4) src_dir = Source File Directory</h4>
+    <p>This specifies the directory where <a href="../yougo.html#SourceFile" target="yougo">.s
+    files</a> and other files are output.&nbsp;<br>
+    It is possible to create more detailed data by editing the song data files&nbsp; <a
+    href="../yougo.html#{songname}.s" target="yougo">{songname}.s</a> in this directory.&nbsp;
+    List the absolute or relative path here.&nbsp;<br>
+    If a non-existent directory is specified, there will be a query about making a new
+    directory immediately after this is run.&nbsp;</p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_5">
+  <tr>
+    <td><h4><a name="ini_5"></a>(5) out_dir = Output Directory</h4>
+    <p>This specifies the directory where <a href="../yougo.html#SoundObject" target="yougo">.o
+    files</a>&nbsp; and other files are output.<br>
+    Normally, all of the files created in this directory are passed over to the main program
+    side.&nbsp;<br>
+    List the absolute or relative path here.<br>
+    If a non-existent directory is specified, there will be a query about making a new
+    directory immediately after this is run.</p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_6">
+  <tr>
+    <td><h4><a name="ini_6"></a>(6) agb_lib = AGB System Library File Directory</h4>
+    <p>List the library file directory created with the Game Boy Advance Developer Tool Kit.
+    Normally, this is the directory specified using the first -L option of the LDFLAGS in the
+    &quot;Makefile.&quot;</p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_7">
+  <tr>
+    <td><h4><a name="ini_7"></a>(7) cmd_path = GCC Execution Path</h4>
+    <p>This writes the run path of the GCC or other compilers. Under normal conditions, please
+    list the directory specified in the final path of the <a href="../yougo.html#agb_c2s.bat"
+    target="yougo">agb_c2s.bat</a> file.&nbsp;<br>
+    If there are semicolons &quot;;&quot; anything following them will be commented out, so in
+    such cases, start a new line with a carriage return and list it again using cmd_path = .</p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_8">
+  <tr>
+    <td><h4><a name="ini_8"></a>(8) mode_i = Initial Setup Values for the Sound Modes</h4>
+    <p><font color="#2e8b57">(Syntax)<br>
+    <tt>&nbsp;&nbsp;<b>mode_i = max_ch, m_vol, freq, DA_bit</b></tt></font></p>
+    <pre><font color="#2e8b57"><tt>  max_ch : 1~12                 </tt><a href="#8_max_ch">Number of Simultaneously-Produced Direct Sounds</a></font>
+<font
+color="#2e8b57"><tt>     m_vol : 1~15                 </tt><a href="#8_m_vol">Direct Sound Master Volume</a></font>
+<font
+color="#2e8b57"><tt>         freq : 5734-42048    </tt><a href="#8_freq">Direct Sound Playback Frequency</a></font>
+<font
+color="#2e8b57"><tt>    DA_bit : 9-6                   </tt><a href="#8_da_bit">Final Output D/A Conversion Bit Count</a></font></pre>
+    <p><font color="teal">(Syntax Example)<br>
+    <tt>&nbsp;&nbsp;<b>mode_i = 8, 13, 21024, 8</b></tt></font><br>
+    <br>
+    The sound functions set up the initial values of the sound modes when started up using <font
+    face="courier">m4aSoundInit()</font>.</p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<table width="627" align="CENTER" summary="ini_tbl_8-1">
+  <tr>
+    <td width="623"><h5 class="navy"><a name="8_max_ch"></a>Number of Simultaneously-Produced
+    Direct Sounds (<font size="2" color="#2e8b57">max_ch</font> : <font size="2" color="teal">8</font>)</h5>
+    <p><b>1 ~ 12.</b> This specifies the number of simultaneously-produced direct sounds. For
+    more information, refer to the separate section, <a href="dschn.html#dschn_0">Number of
+    Simultaneously-Produced Direct Sounds</a>. (Default Value: 8)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_8">(8) mode_i</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_8-2">
+  <tr>
+    <td><h5 class="navy"><a name="8_m_vol"></a>Direct Sound Master Volume (<font size="2"
+    color="#2e8b57">m_vol</font> : <font size="2" color="teal">13</font>)</h5>
+    <p><b>1 ~ 15.</b> This specifies the master volume of the direct sounds.<br>
+    If the sounds produced overlap and the output levels are driven too hard causing a lot of
+    distortion, reduce this value and lower the overall volume of the direct sounds. (Default
+    Value: 15)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_8">(8) mode_i</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_8-3">
+  <tr>
+    <td><h5 class="navy"><a name="8_freq"></a>Direct Sound Playback Frequencies&nbsp; (<font
+    size="2" color="#2e8b57">freq</font> : <font size="2" color="teal">21024</font>)</h5>
+    <p><b>5734 ~ 42048.&nbsp;</b> This specifies the direct sound playback frequencies. For
+    more information, please refer to the separate section <a href="dsfreq.html#dsfreq_0">Direct
+    Sound Playback Frequencies</a>. Note that when these figures are not rated levels, the
+    nearest rated level will be selected automatically by internal logic.<br>
+    &nbsp;&nbsp; (Default Value: 13379)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_8">(8) mode_i</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_8-4">
+  <tr>
+    <td><h5 class="navy"><a name="8_da_bit"></a>Final Output DA Conversion Bit
+    Count&nbsp;&nbsp; (<font size="2" color="#2e8b57">DA_bit</font> : <font size="2"
+    color="teal">8</font>)</h5>
+    <p><b>9 ~ 6. </b>This specifies the final output DA conversion bit count. For more
+    information, please refer to the separate section <a href="sndbit.html#sndbit_0">Sound
+    Output DA Conversion Bit Count (Frequency)</a>.<br>
+    &nbsp;&nbsp; (Default Value: 8)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_8">(8) mode_i</a></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_9">
+  <tr>
+    <td><h4><a name="ini_9"></a>(9) vgroup = Tone Color Group Number Setup</h4>
+    <p>The <a href="../yougo.html#ToneColorSettings" target="yougo">Tone Color Setup (p???)</a>&nbsp;
+    written after these settings are registered as &quot;Tone Color Groups&quot; having the
+    number specified here. (Initial Value of &quot;0.&quot;)<br>
+    &nbsp; The tone color settings can be set to start at &quot;0&quot; for each Tone Color
+    Group.&nbsp;</p>
+    <pre><font color="teal">(Example)</font>
+<font color="teal"><tt>  vgroup = <b>0</b></tt></font>
+<font
+color="teal"><tt>  <b>p000</b> = .....</tt> (Tone Color Setup for Tone Color Group 0,Tone Color Number 0.)</font>
+<font
+color="teal"><tt>          ~</tt></font>
+<font color="teal"><tt>  <b>p015</b> = ..... </tt>(Tone Color Setup for Tone Color Group 0, Tone Color Number 15.)</font>
+<font
+color="teal"><tt>  vgroup = <b>1</b></tt></font> 
+<font color="teal"><tt>  <b>p000</b> = ..... </tt>(Tone Color Setup for Tone Color Group 1, Tone Color Number 0.) 
+<font
+color="teal"><tt>           ~</tt></font>
+</pre>
+    <p>Also, for each unit of&nbsp; <a href="../yougo.html#Song Data" target="yougo">Song Data</a>,
+    one Tone Color Group will be specified for use.&nbsp;<br>
+    For more information, please refer to the <a href="#ini_14">Song Setup</a>.&nbsp;</p>
+    <p><a href="#index">Return to Top</a></font></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_10">
+  <tr>
+    <td><h4><a name="ini_10"></a>(10) p??? = Tone Color Setup</h4>
+    <p>These are the settings corresponding to the MIDI Program Change Numbers. The tone
+    colors having the numbers specified as Program Change Numbers in the <a
+    href="../yougo.html#Song Data" target="yougo">Song Data</a> file will be output. (In the <a
+    href="../yougo.html#{songname}.s" target="yougo">.sFile</a> it is the number next to the
+    &quot;VOICE&quot; label.)<br>
+    <br>
+    The question marks &quot;???&quot; in &quot;p???&quot; are 3-digit, single-byte tone color
+    numbers and can range from &quot;000 ~ 127.&quot; These numbers do not have to be in
+    sequence, but the same number cannot be used more than once. If the <a href="#ini_9">Tone
+    Color Groups</a> are different, they may be used more than once.)<br>
+    <br>
+    After the &quot;p??? =&quot; comes the tone color type. Subsequent parameters are
+    separated with commas, but be aware that <b>what you write depends on the tone color type.</b>&nbsp;</p>
+    <h5 class="BLACK">Tone Color Types</h5>
+    <p>&nbsp;&nbsp;A <a href="#AorF">Direct Sound</a><br>
+    &nbsp;&nbsp;F <a href="#AorF">Direct Sound</a>(Fixed Scale)<br>
+    &nbsp;&nbsp;P <a href="#PorQ">CGB Compatible Sound </a>(Scale Priority)<br>
+    &nbsp;&nbsp;Q <a href="#PorQ">CGB Compatible Sound </a>(Sound Quality Priority)<br>
+    &nbsp;&nbsp;R <a href="#R">Rhythm Set</a><br>
+    &nbsp;&nbsp;S <a href="#S">Key Split Tone Color</a></p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_10-1">
+  <tr>
+    <td><h5 class="darkred"><a name="AorF"></a>A or F (Direct Sound) Setup</h5>
+    <p><font color="#2e8b57">(Syntax)<br>
+    <b>&nbsp;&nbsp;p??? = type, wave, attack, decay, sustain, release, comp, rhykey, rhypan</b></font></p>
+    <pre><tt><font color="#2e8b57">       wave : .AIF file                       </font><a
+href="#ini_wave_filename">AIFF File Name</a></tt>
+<tt><font color="#2e8b57">     attack : 0 ~ 99                          </font><a
+href="#9_attack">Attack Speed (99= Fastest)</a></tt>
+<tt><font color="#2e8b57">     decay : 0 ~ 99                          </font><a
+href="#9_decay">Decay Speed (99= Fastest)</a></tt>
+<tt><font color="#2e8b57">  sustain : 0 ~ 99                           </font><a
+href="#9_sustain">Sustain Level (99= Maximum)</a></tt>
+<tt><font color="#2e8b57">  release : 0 ~ 99                           </font><a
+href="#9_release">Release Speed (99= Maximum)</a></tt>
+<tt><font color="#2e8b57">     rhykey : 0 ~ 127 (C-2 ~ G8)    </font><a
+href="#9_rhykey">Scale Produced When Rhythm Set Used</a></tt>
+<tt><font color="#2e8b57">    rhypan : off, -64 ~ 63               </font><a
+href="#9_rhy_pan">Panpot When Rhythm Set Used</a></tt>
+<tt><font color="#2e8b57">      comp : 0.1 ~ 1                         </font><a
+href="#CompressionRate">Sampling Sound Compression Rate</a></tt></pre>
+    <p><tt><font color="#2e8b57">(Syntax)</font><br>
+    <font color="#2e8b57"><b>&nbsp;&nbsp;p000 = A, sample.aif, 96, 60, 60, 90, 60, off, 1</b></font></tt></p>
+    <p><tt>This type of tone color outputs a sampled waveform using direct sound.&nbsp;<br>
+    Because of higher processing speeds, the scale calculations are omitted at the time of
+    output, particularly Type F.&nbsp;</tt></p>
+    <p><a href="#index"><tt>Return to Top</tt></a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-1-1">
+  <tr>
+    <td><h5 class="navy"><a name="9_attack"></a><b>Tone Color Number (<font size="2"
+    color="#2e8b57">p???</font><font color="navy"> : </font><font size="2" color="teal">p000</font><font
+    color="navy">)</font></b><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#AorF">A
+    or F</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-1-2">
+  <tr>
+    <td><h5 class="navy"><a name="9_attack"></a><b>Tone Color Type (<font size="2"
+    color="#2e8b57">type</font><font color="navy"> : </font><font size="2" color="teal">A</font><font
+    color="navy">)</font></b><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#AorF">A
+    or F</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-1-3">
+  <tr>
+    <td><h5 class="navy"><a name="ini_wave_filename"></a><b>Waveform File Name (<font size="2"
+    color="#2e8b57">wave</font></b> : <font size="2" color="teal">sample.aiff</font>)<br>
+    </h5>
+    <p>This writes the waveform data file name. If the extension is .aif, then the extension
+    does not have to be written out. The same file name may be used any number of times, but
+    the value of the <a href="#CompressionRate">Compression Rate</a> described below will be
+    the value that was set when that file was first written.&nbsp;<br>
+    Note that if this file name is 64 letters or less, then it may contain a relative path
+    conforming to aif_dir.</p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#AorF">A or F</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-1-4">
+  <tr>
+    <td><h5 class="navy"><a name="9_attack"></a>Attack Speed (<font size="2" color="#2e8b57">attack</font>
+    : <font size="2" color="teal">96</font>)</h5>
+    <p><b>0 ~ 99 </b>The larger the number, the faster the start up.(Default Value: 99.)&nbsp;</p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#AorF">A or F</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-1-5">
+  <tr>
+    <td><h5 class="navy"><a name="9_decay"></a>Decay Speed (<b><font size="2" color="#2e8b57">decay</font>
+    : <font size="2" color="teal">60</font>)</b></h5>
+    <p><b>0&nbsp; ~ 99. </b>The larger the number, the faster the attenuation. (Default Value:
+    99.)</p>
+    <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<a
+    href="#AorF">A or F</a></h6>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-1-6">
+  <tr>
+    <td><h5 class="navy"><a name="9_sustain"></a>Sustain Level (<font size="2" color="#2e8b57">sustain</font>
+    : <font size="2" color="teal">60</font>)</h5>
+    <p><b>0 ~ 99. </b>The larger the number, the greater the level.(Default Value: 99.)</p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#AorF">A or F</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-1-7">
+  <tr>
+    <td><h5 class="navy"><a name="9_release"></a>Release Speed (<font size="2" color="#2e8b57">release</font>
+    : <font size="2" color="teal">90</font>)</h5>
+    <p><b>0&nbsp; ~ 99. </b>The larger the number, the faster the attenuation. (Default Value:
+    99.)</p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#AorF">A or F</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-1-8">
+  <tr>
+    <td><h5 class="navy"><a name="9_rhykey"></a>Scale Produced when Rhythm Set Used (<font
+    size="2" color="#2e8b57">rhykey</font> : <font size="2" color="teal">60</font>)</h5>
+    <p><b>0 ~ 127 (C - 2 ~ G8) </b>When the current <a href="#ini_9">Tone Color Group</a>&nbsp;
+    is used as the <a href="#R">Rhythm Set</a>, the scale that this tone color is produced
+    with. (Default Value: 60.)</p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#AorF">A or F</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-1-9">
+  <tr>
+    <td><h5 class="navy"><a name="9_rhy_pan"></a>Panpot when Rhythm Set Used (<font size="2"
+    color="#2e8b57">rhypan</font> : <font size="2" color="teal">off</font>)</h5>
+    <p><b>-64 ~ 63 or off. </b>When the current <a href="#ini_9">Tone Color Group</a>&nbsp; is
+    used as the&nbsp; <a href="#R">Rhythm Set</a>, the panpot of this tone color. When
+    &quot;off&quot; it is produced with that track's panpot.(Default Value: off.)</p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#AorF">A or F</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-1-10">
+  <tr>
+    <td><h5 class="navy"><a name="CompressionRate"></a>Compression Rate (<font size="2"
+    color="#2e8b57">comp</font> : <font size="2" color="teal">1</font>)</h5>
+    <p><b>0.1 ~ 1. </b>Compresses waveform data. However, compression (rate down) using
+    waveform editing software yields better sound quality.(Default Value: 1.)</p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#AorF">A or F</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-1-11">
+  <tr>
+    <td>The above syntax examples can be written in abbreviated form as follows.&nbsp; <p><font
+    color="teal">(Example of Abbreviated Syntax)<br>
+    <tt><b>&nbsp;&nbsp;p000 = A, sample, 96, 60, 60, 90, 60</b></tt></font></p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#AorF">A or F</a></h5>
+    </td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_10-2">
+  <tr>
+    <td><h5 class="darkred"><a name="PorQ"></a>P or Q (CGB Compatible Sound) Setup</h5>
+    <p><font color="#2e8b57" (syntax)<br><tt><b>&nbsp;&nbsp;p??? = type, wave, attack, decay,
+    sustain, release, rhykey, rhypan, length, sweep</b></tt></font></p>
+    <pre><font color="#2e8b57"><tt>      wave : sc?????                            </tt><a
+href="#WaveformName">Waveform Name</a></font>
+<font color="#2e8b57"><tt>     attack : 0 ~ 99                                </tt><a
+href="#10_attack">Attack Speed (99= Fastest)</a></font>
+<font color="#2e8b57"><tt>     decay : 0 ~ 99                                </tt><a
+href="#10_decay">Decay Speed (99= Fastest)</a></font>
+<font color="#2e8b57"><tt>  sustain : 0 ~ 99                                 </tt><a
+href="#10_sustain">Sustain Level (99= Maximum)</a></font>
+<font color="#2e8b57"><tt>  release : 0 ~ 99                                 </tt><a
+href="#10_release">Release Speed (99= Fastest)</a></font>
+<font color="#2e8b57"><tt>     rhykey : 0 ~ 127 (C-2 ~ G8)          </tt><a
+href="#10_rhykey">Scale Produced when Rhythm Set Used</a></font>
+<font color="#2e8b57"><tt>    rhypan : off, -64 ~ 63                     </tt><a
+href="#10_rhypan">Panpot when Rhythm Set Used</a></font>
+<font color="#2e8b57"><tt>     length : 0 ~ 63 (~ 255(sc3))          </tt><a
+href="#10_length">Length Data (0= Continuous)</a></font>
+<font color="#2e8b57"><tt>    sweep : 0 ~ 7F (Hexadecimal)      </tt><a
+href="#10_sweep">Sweep (only for sc1)(0= Off)</a></font>
+
+<font color="#2e8b57">&nbsp;&nbsp;&nbsp; *When the &quot;sweep&quot; is on, the &quot;rhypan&quot; settings are &quot;off.&quot;</font></pre>
+    <pre>
+<font color="teal">(Syntax Example)</font>
+<font color="teal"><tt><b>  p000 = P, sc1dt50, 99, 80, 85, 64, 60, off, 0, 0 ; (Sound 1)</b></tt></font>
+<font
+color="teal"><tt><b>  p001 = P, sinewave, 99, 80, 85, 64, 60, off, 0, 0 ; (Sound 3)</b></tt></font></pre>
+    <p>This type is the tone color that outputs timbre using CGB compatible sound.&nbsp;<br>
+    In order to produce a clear tone color, particularly with Type Q, some of the lower bits
+    on the scale will be cleared when output, so the higher the sound, the greater the scale
+    error.&nbsp;</p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-2-1">
+  <tr>
+    <td><h5 class="navy"><a name="ToneColorNumber"></a><b>Tone Color Number</b> (<font
+    size="2" color="#2e8b57">p???</font><font color="navy"> : </font><font size="2"
+    color="teal">p000</font><font color="navy">)</font><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#PorQ">P
+    or Q</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-2-2">
+  <tr>
+    <td><h5 class="navy"><a name="ToneColorType"></a><b>Tone Color Type (<font size="2"
+    color="#2e8b57">type</font><font color="navy"> : </font><font size="2" color="teal">P</font><font
+    color="navy">)</font></b><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#PorQ">P
+    or Q</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-2-3">
+  <tr>
+    <td><h5><a name="WaveformName"></a>Waveform Name (<font size="2" color="#2e8b57">wave</font>
+    : <font size="2" color="teal">sc1dt50, sinewave</font>)</h5>
+    <p><b>sc1dt??: </b>Sound 1 Duty (?? = 12,25,50,75 (%))<br>
+    <b>sc2dt??: </b>Sound 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;<br>
+    <b>sc3w???: </b>Sound 3 Waveform (??? = 000~031)<br>
+    &nbsp;&nbsp;*Label names can only be used for Sound 3 (<a
+    href="../yougo.html#Sound3WaveformSettings" target="yougo">Waveform Setup</a> described
+    below.)<br>
+    &nbsp;&nbsp;*Up to 32 waveforms can be registered for use with Sound 3.&nbsp;<br>
+    <b>sc4st??: </b>Number of Sound 4 Stages (?? = 15 or 07)<br>
+    (No Default)</p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#PorQ">P or Q</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="attack_speed_PQ">
+  <tr>
+    <td><h5><a name="10_attack"></a><b>Attack Speed (<font size="2" color="#2e8b57">attack</font><font
+    color="navy"> : </font><font size="2" color="teal">99</font><font color="navy">)</font></b></h5>
+    <p><b>0 ~ 99</b> (However, this is actually 7 stages due to hardware limitations.)<br>
+    The larger the value, the faster the start up. (Default Value: 99.)</p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#PorQ">P or Q</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="decay_speed_PQ">
+  <tr>
+    <td><h5><a name="10_decay"></a><b>Decay Speed (<font size="2" color="#2e8b57">decay</font><font
+    color="navy"> : </font><font size="2" color="teal">80</font><font color="navy">)</font></b></h5>
+    <p><b>0 ~ 99</b> (However, this is actually 7 stages due to hardware limitations.)<br>
+    The larger the value, the faster the start up.&nbsp; (Default Value: 99.)</p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#PorQ">P or Q</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="sustain_level_PQ">
+  <tr>
+    <td><h5><a name="10_sustain"></a><b>Sustain Level (<font size="2" color="#2e8b57">sustain</font><font
+    color="navy"> : </font><font size="2" color="teal">85</font><font color="navy">)</font></b></h5>
+    <p><b>0 ~ 99</b> (However, this is actually 15 stages due to hardware limitations.)<br>
+    The larger the value, the greater the level.&nbsp; (Default Value: 99.)</p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#PorQ">P or Q</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="release_speed_PQ">
+  <tr>
+    <td><h5><a name="10_release"></a><b>Release Speed (<font size="2" color="#2e8b57">release</font><font
+    color="navy"> : </font><font size="2" color="teal">64</font><font color="navy">)</font></b></h5>
+    <p><b>0 ~ 99</b> (However, this is actually 7 stages due to hardware limitations.)<br>
+    The larger the value, the faster the attenuation.&nbsp; (Default Value: 99.)</p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#PorQ">P or Q</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="rhythmset_pitch">
+  <tr>
+    <td><h5><a name="10_rhykey"></a><b>Scale Produced when the Rhythm Set is Used&nbsp; (<font
+    size="2" color="#2e8b57">rhykey</font><font color="navy"> : </font><font size="2"
+    color="teal">60</font><font color="navy">)</font></b></h5>
+    <p><b>00 ~ 127 (C - 2 ~ G8). </b>The scale that this tone color is produced with when the
+    current tone color groups are used as the rhythm set.&nbsp; (Default Value: 60.)</p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#PorQ">P or Q</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="rhythmset_pan">
+  <tr>
+    <td><h5><a name="10_rhypan"></a><b>Panpot when the Rhythm Set is Used&nbsp; (<font
+    size="2" color="#2e8b57">rhypan</font><font color="navy"> : </font><font size="2"
+    color="teal">off</font><font color="navy">)</font></b></h5>
+    <p><b>-64 ~ 63 or off. </b>The panpot that this tone color will be produced with when the
+    current tone color groups are used as the rhythmset.&nbsp; When &quot;off,&quot; it will
+    be produced with the panpot for that particular track.&nbsp; (Default Value: off.)</p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#PorQ">P or Q</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-2-5">
+  <tr>
+    <td><h5><a name="10_length"></a>Length Data&nbsp; (<font size="2" color="#2e8b57">length</font>
+    : <font size="2" color="teal">0</font>)</h5>
+    <p><b>0 ~ 63 (For Sound 3, 0 ~ 255). </b>Determines how many 256ths of a second a note
+    will be. When &quot;0,&quot; it does not function. (Default Value: 0.)</p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#PorQ">P or Q</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-2-6">
+  <tr>
+    <td><h5 class="navy"><a name="10_sweep"></a>Sweep Value&nbsp; (<font size="2"
+    color="#2e8b57">sweep</font> : <font size="2" color="teal">0</font>)</h5>
+    <p><b>00 ~ 7F (Hexadecimal). </b>This is the value written into the hardware register
+    &quot;0x04000060&quot; and is only valid for Sound 1. When &quot;0,&quot; it does not
+    function.&nbsp;<br>
+    When this value is set to anything other than &quot;0,&quot; the panpot in the rhythm set
+    will stop functioning.(Default Value: 0.)</p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#PorQ">P or Q</a></h5>
+    </td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-2-7">
+  <tr>
+    <td>When the above examples are abbreviated, they can be written as follows.<br>
+    <p><font color="teal">(Example of Abbreviated Syntax)<br>
+    <tt><b>&nbsp;&nbsp;p000 = P, sc1dt50, 99, 80, 85, 64</b></tt><br>
+    <tt><b>&nbsp;&nbsp;p001 = P,sinewave, 99, 80, 85, 64</b></tt></font></p>
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#PorQ">P or Q</a></h5>
+    </td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_10-3">
+  <tr>
+    <td><h5 class="darkred"><a name="R"></a>R (Rhythm Set) Setup</h5>
+    <p><font color="#2e8b57">(Syntax)<br>
+    <tt><b>&nbsp;&nbsp;p??? = type, vgroup, btmkey</b></tt></font></p>
+    <pre><font color="#2e8b57"><tt>&nbsp;&nbsp;vgroup : 0 ~ 999                          </tt>The vgroups to be used as the rhythm set.&nbsp;</font>
+<font
+color="#2e8b57"><tt>&nbsp; btmkey : 0 ~ 127 (C-2 ~ G8)        </tt>Lower MIDI Key Number Limit</font></pre>
+    <p><font color="teal">(Syntax Example)<br>
+    <tt><b>&nbsp;&nbsp;p127 = R, 1, c1</b></tt></font></p>
+    <p>When this type of tone color is selected as a MIDI program change, separate tone colors
+    will be allocated for the subsequent individual tracks, making it a useful mode for Rhythm
+    and other tracks.&nbsp;</p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-3-1">
+  <tr>
+    <td><h5 class="navy">Tone Color Group to be Used as the Rhythm Set (vgroup) (<font
+    size="2" color="#2e8b57">vgroup</font> : <font size="2" color="teal">1</font>)</h5>
+    <p><b>0 ~ 999. </b>There will be a one to one correspondence between the tone colors
+    selected in the <a href="#ini_9">vgroup</a> and their corresponding tracks.<br>
+    Allocations will be made in order. For example, C1 = p036, C#1 = p037, D1 = P038...<br>
+    (Default Value: 0.)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#R">R</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-3-2">
+  <tr>
+    <td><h5 class="navy">Lower MIDI Key Number Limit (<font size="2" color="#2e8b57">btmkey</font>
+    : <font size="2" color="teal">c1</font>)</h5>
+    <p><b>0 ~ 127 (C - 2 ~ G8). </b>Here, the MIDI Key Number Setup will correspond to
+    p000.&nbsp;<br>
+    For example, if C1 was specified here, the relationship between the scale and the tone
+    color would take the following order: C1 = p000, C#1 = p001, D1 = p002.... (Default Value:
+    0 (C-2).)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#R">R</a></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_10-4">
+  <tr>
+    <td><h5 class="darkred"><a name="S"></a>s (Key Split Tone Color) Setup</h5>
+    <p><font color="#2e8b57">(Syntax)<br>
+    <tt><b>&nbsp;&nbsp;p??? = type, table, vgroup, btmkey</b></tt></font></p>
+    <pre><font color="#2e8b57"><tt>&nbsp;     table : 0 ~ 31                           </tt>Key Split Table Number (See Below)</font>
+<font
+color="#2e8b57">   <tt>vgroup : 0 ~ 999                        </tt>vgroup used as Key Split Tone Color&nbsp;</font>
+<font
+color="#2e8b57"><tt>&nbsp; btmkey : 0 ~ 127 (C-2 ~ G8)       </tt>Lower MIDI Key Number Limit</font></pre>
+    <p><font color="teal">(Syntax Example)<br>
+    <tt><b>&nbsp;&nbsp;p024 = S, 0, 2, c1</b></tt></font></p>
+    <p>When this type of tone color is selected with the MIDI Program Change, subsequent
+    tracks can be allocated to any scale and any tone color. This is a useful mode for when
+    the entire range of sound cannot be covered by a single type of tone color, like live
+    piano.&nbsp;</p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-4-1">
+  <tr>
+    <td><h5 class="navy">Key Split Table Number&nbsp;&nbsp; (<font size="2" color="#2e8b57">table</font>
+    : <font size="2" color="teal">0</font>)</h5>
+    <p><b>0 ~ 31.&nbsp;</b> This sets the number of the <a href="#ini_11">Key Split Table</a>
+    described below. Here, there is a one to one correspondence between each of the elements
+    within the selected table and the scale for that track.&nbsp;<br>
+    For example, allocations can be made in order: C1 = t??? [36], C#1 = t??? [37], D1 = t???
+    [38]...(Default Value: 0.)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#S">S</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-4-2">
+  <tr>
+    <td><h5 class="navy">Tone Color Groups Used as Key Split Tone Colors (vgroup)&nbsp; (<font
+    size="2" color="#2e8b57">vgroup</font> : <font size="2" color="teal">2</font>)</h5>
+    <p><b>0 ~ 999. The scale of a track is first converted to a tone color number using the </b><a
+    href="#ini_11">Key Split Table</a> and, ultimately, a tone color in the <a href="#ini_9">vgroup</a>
+    selected here will be selected.&nbsp;<br>
+    (Default Value: 0.)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#S">S</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_10-4-3">
+  <tr>
+    <td><h5 class="navy">Lower MIDI Key Number Limit (<font size="2" color="#2e8b57">btmkey</font>
+    : <font size="2" color="teal">c1</font>)</h5>
+    <p><b>0 ~ 127 (C - 2 ~ G8) </b>MIDI Key Numbers specified here correspond to the initial
+    elements in the <a href="#ini_11">Key Split Table</a>. For example, if C1 were specified
+    here, the relationship between the scale and the tone color would take the order C1 = T???
+    [0], C#1 = t??? [1], D1 = t??? [2]...&nbsp; (Default Value: 0 (C-2).</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#S">S</a></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_11">
+  <tr>
+    <td><h4><a name="ini_11"></a>(11) t??? = Key Split Table Setup</h4>
+    <pre><font color="#2e8b57">(Syntax)</font>
+<font color="#2e8b57"><tt><b>  t??? = xxx, xxx, xxx, xxx, ...</b></tt></font>
+
+<font
+color="#2e8b57"><tt>  t??? : t000 ~ t031                           </tt>Key Split Table Number</font>
+<font
+color="#2e8b57"><tt>     xxx : 0 ~ 127 (p000~p127)         </tt>Tone Color Number</font>
+
+<font
+color="teal">(Syntax Example)</font>
+<font color="teal"><tt><b>  t000 = 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,</b></tt></font>
+<font
+color="teal"><tt><b>         00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,</b></tt></font>
+<font
+color="teal"><tt><b>         00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00,</b></tt></font>
+<font
+color="teal"><tt><b>         01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01,</b></tt></font>
+<font
+color="teal"><tt><b>         01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01,</b></tt></font>
+<font
+color="teal"><tt><b>         01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01</b></tt></font></pre>
+    <p>This registers the Key Split Table. The &quot;???&quot; of &quot;t???&quot; is a
+    three-digit, single-byte Table Number. The range &quot;000 ~ 031&quot; can be used. These
+    numbers do not have to be consecutive, but the same number may not be used more than
+    once.&nbsp;<br>
+    <br>
+    As many tone color numbers (000 ~ 127) as necessary are written after the
+    &quot;t???,&quot; separated by commas. Carriage returns can also be used after the
+    commas.&nbsp;</p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_12">
+  <tr>
+    <td><h4><a name="ini_12"></a>(12)w??? = Sound 3 Waveform Setup</h4>
+    <pre><font color="#2e8b57">(Syntax)</font>
+<font color="#2e8b57"><tt><b>  w??? = data_array, label</b></tt></font>
+
+<font
+color="#2e8b57"><tt>           w??? : w000 ~ w031                              </tt>Corresponds to sc3w??? of Tone Color Setup.</font>
+<font
+color="#2e8b57"><tt>  data_array : 32 character </tt>hexadecimals          Waveform Data Array</font>
+<font
+color="#2e8b57"><tt>            label : Up to 16 alphanumerics                </tt>Label Name</font>
+
+<font
+color="teal">(Syntax Example)</font>
+<font color="teal"><tt><b>  w000 = 0011235689ACDEEFFFEEDCA986532110, sinewave</b></tt></font></pre>
+    <p>Registers the Sound 3 Waveforms. The &quot;???&quot; in &quot;w???&quot; is a
+    three-digit, single-byte number from &quot;000 ~ 031.&quot; These numbers do not have to
+    be consecutive, but the same number cannot be used more than once.&nbsp;<br>
+    <br>
+    The following content follows the &quot;w??? = &quot; and is separated by commas.&nbsp;</p>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_12-1">
+  <tr>
+    <td><h5 class="navy">Waveform Data Array&nbsp;&nbsp; (<font size="2" color="#2e8b57">data_array</font>
+    : <font size="2" color="teal">0011235689ACDEEFFFEEDCA986532110</font>)</h5>
+    <p>This 32-character hexadecimal registers the waveform.</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_12">(12) w???</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_12-2">
+  <tr>
+    <td><h5 class="navy">Label Name&nbsp; (<font size="2" color="#2e8b57">label</font> : <font
+    size="2" color="teal">sinewave</font>)</h5>
+    <p>16 single-byte alphanumerics or less. This label name is a <a href="#WaveformName">Waveform
+    Name</a>&nbsp; in the <a href="#ini_10">Tone Color Setup&nbsp;</a> described above, and
+    may be used instead of the &quot;sc3w???.&quot; (May be omitted.)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_12">(12) W???</a></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_13">
+  <tr>
+    <td><h4><a name="ini_13"></a>(13) mp?? = Music Player Setup</h4>
+    <pre><font color="#2e8b57">(Syntax)</font>
+<font color="#2e8b57"><tt><b>  mp?? = track</b></tt></font>
+
+<font
+color="#2e8b57"><tt>   mp?? : mp00 ~ mp31            </tt>Music Player Number</font>
+<font
+color="#2e8b57"><tt>     track : 1 ~ 16                          </tt>Number of Tracks</font>
+
+<font
+color="teal">(Syntax Example)</font>
+<font color="teal"><tt><b>  mp00 = 8</b></tt></font>
+<font
+color="teal"><tt><b>  mp01 = 6</b></tt></font></pre>
+    <p><a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_12-1">
+  <tr>
+    <td><h5 class="navy">Music Player Number&nbsp;&nbsp;&nbsp; (<font size="2" color="#2e8b57">mp??</font>
+    : <font size="2" color="teal">mp00</font>)</h5>
+    <p>These are two-digit, single-byte Music Player numbers. The values &quot;000 ~ 031&quot;
+    may be used. These numbers do not have to be consecutive, but the same number may not be
+    used more than once.&nbsp;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_13">(13) mp??</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_12-1">
+  <tr>
+    <td><h5 class="navy">Number of Tracks&nbsp;&nbsp; (<font size="2" color="#2e8b57">track</font>
+    : <font size="2" color="teal">8</font>)</h5>
+    <p>Indicates the maximum number of tracks that the player in question can play and follows
+    &quot;mp?? = .&quot;&nbsp;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_13">(13) mp??</a></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="ini_tbl_14">
+  <tr>
+    <td><h4><a name="ini_14"></a>(14) x??? = Song Setup</h4>
+    <pre><font color="#2e8b57">(Syntax)</font>
+<font color="#2e8b57"><tt><b>  s??? = filename, m_player, vgroup, master_vol, priority, reverb, options</b></tt></font>
+<font
+color="#2e8b57"><tt>             s??? : s000 ~ s999          Song Number</tt></font>
+<font
+color="#2e8b57"><tt><tt>      filename : .MID file                   </tt><a
+href="#ini_song_filename">MIDI File Name</a></tt></font>
+<font color="#2e8b57"><tt><tt>     m_player : 0 ~ 31                  </tt>   <a
+href="#14_m_player">Music Player Used during Performance</a></tt></font>
+<font color="#2e8b57"><tt><tt>          vgroup : 0 ~ 999       </tt>          <a
+href="#14_vgroup">Tone Color Groups Used during Performance</a></tt></font>
+<font
+color="#2e8b57"><tt><tt>  master_vol : 0 ~ 127       </tt>            <a href="#14_master_vol">Master Volume</a></tt></font>
+<font
+color="#2e8b57"><tt><tt>          priority : 0 ~ 255       </tt>           <a
+href="#14_priority">Priorities</a></tt></font>
+<font color="#2e8b57"><tt><tt>           reverb : off, 0 ~ 127  </tt>         <a
+href="#14_reverb">Reverb (No change if off.)</a></tt></font>
+<font color="#2e8b57"><tt><tt>         options : -x            </tt>               <a
+href="#ini_14op">Doubles the resolution.</a></tt></font>
+<font color="#2e8b57"><tt><tt>                       : -e            </tt>              <a
+href="#ini_14op">Doesn't shorten the gate time.</a></tt></font>
+<font color="#2e8b57"><tt><tt>                       : -n                      </tt>    <a
+href="#ini_14op">Doesn't compress the sheet music data.</a></tt></font>
+
+<font color="teal"><tt>(Syntax Example)</tt></font>
+<font
+color="teal"><tt><tt><b>  s000 = m_samp.mid, 0, 0, 100, 0, off, -e</b></tt></tt></font></pre>
+    <p><tt>Registers the <a href="../yougo.html#Song Data" target="yougo">Song Data</a>.<br>
+    When beginning a song, the number specified here is used.&nbsp;</tt></p>
+    <p><a href="#index"><tt>Return to Top</tt></a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_14-1">
+  <tr>
+    <td><h5 class="navy">Song Number&nbsp;&nbsp; (<font size="2" color="#2e8b57">s???</font> :
+    <font size="2" color="teal">s001</font>)</h5>
+    <p>The &quot;???&quot; in &quot;s???&quot; is a single-byte numeral for the song number.
+    Numbers from <b>000 ~ 1999</b> can be used. These numbers do not have to be consecutive,
+    but the same number cannot be used more than once.&nbsp;<br>
+    The following content is listed after the &quot;s??? = &quot; and is separated using
+    commas.&nbsp;<br>
+    <b>All parameters but the &quot;Song File Name&quot; may be omitted.&nbsp;</b></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_14">(14) s???</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_14-2">
+  <tr>
+    <td><h5 class="navy"><a name="ini_song_filename"></a>MIDI File Name&nbsp; (<font size="2"
+    color="#2e8b57">filename</font> : <font size="2" color="teal">m_samp.mid</font>)</h5>
+    <p>Lists the song data file name. The extension may be omitted if it is .mid. The same
+    file name may not be used more than once.&nbsp;<br>
+    Note that as long as this file is 64 characters or less, the relative path (referenced to
+    mid_dir) may be included.&nbsp;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_14">(14) s???</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_14-3">
+  <tr>
+    <td><h5 class="navy"><a name="14_m_player"></a>Music Player Number&nbsp; (<font size="2"
+    color="#2e8b57">m_player</font> : <font size="2" color="teal">0</font>)</h5>
+    <p>0 ~ 31. The music player number used when playing the song data in question.&nbsp;<br>
+    (Default Value: 0.)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_14">(14) s???</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_14-4">
+  <tr>
+    <td><h5 class="navy"><a name="14_vgroup"></a>Tone Color Group&nbsp; (<font size="2"
+    color="#2e8b57">vgroup</font> : <font size="2" color="teal">0</font>)</h5>
+    <p><b>0 ~ 999. </b>The <a href="#ini_9">Tone Color Group</a> Number used when playing the
+    song data in question.&nbsp;<br>
+    (Default Value: 0.)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_14">(14) s???</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_14-5">
+  <tr>
+    <td><h5 class="navy"><a name="14_master_vol"></a>Master Volume&nbsp; (<font size="2"
+    color="#2e8b57">master_vol</font> : <font size="2" color="teal">100</font>)</h5>
+    <p><b>0 ~ 127. </b>The overall volume of a song. For example, this might be used when
+    making final adjustments to game sounds in order to preserve the balance of the volume
+    between other songs or sound effects.&nbsp;<br>
+    (Default Value: 127.)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_14">(14) s???</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_14-6">
+  <tr>
+    <td><h5 class="navy"><a name="14_priority"></a>Priority&nbsp; (<font size="2"
+    color="#2e8b57">priority</font> : <font size="2" color="teal">0</font>)</h5>
+    <p><b>0 ~ 255. </b>The sound production priorities when playing on a music player.<br>
+    The higher the value, the higher the priority.(Default Value: 0.)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_14">(14) s???</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_14-7">
+  <tr>
+    <td><h5 class="navy"><a name="14_reverb"></a>Reverb&nbsp; (<font size="2" color="#2e8b57">reverb</font>
+    : <font size="2" color="teal">off</font>)</h5>
+    <p><b>0 ~ 127 or off.&nbsp;</b> Direct Sound Reverb value. Once the song in question
+    starts, this level of reverb will be applied to that and all subsequent direct sounds. <font
+    color="red"><b>This does not affect CGB compatible sounds.&nbsp;</b></font><br>
+    When off, the song will be started without any change to the reverb.&nbsp; (Default Value:
+    off.)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_14">(14) s???</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="ini_tbl_14-8">
+  <tr>
+    <td><h5 class="navy"><a name="ini_14op"></a>Option&nbsp; (<font size="2" color="#2e8b57">options</font>
+    : <font size="2" color="teal">-e</font>)</h5>
+    <p>This is an option used when converting a <a href="../yougo.html#{songname}.mid"
+    target="yougo">.mid</a> File to an <a href="../yougo.html#{songname}.s" target="yougo">.s</a>
+    File. The following functions can be specified.<br>
+    Separate these elements with spaces.&nbsp;<br>
+    <br>
+    <b>-x:</b> Doubles the resolution.(Half notes will be considered whole notes and the tempo
+    will double, so this function doubles the apparent resolution. It is useful on songs that
+    have extremely fast tempos.)<br>
+    <br>
+    <b>-e:</b> Doesn't shorten the gate time.&nbsp;<br>
+    <br>
+    <b>-n:</b> Doesn't compress the song data.</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_14">(14) s???</a></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="CENTER" summary="pbymidi">
+  <tr>
+    <td><h4><a name="ini_15"></a>(15) pbymidi = MIDI Input Performance Setup</h4>
+    <pre><font color="#2e8b57">(Syntax)</font>
+<font color="#2e8b57"><tt><b>  pbymidi = switch, vgroup, master_vol, priority, tempo</b></tt></font>
+
+<font
+color="#2e8b57">           switch : 0 or 1              Normal 0, MIDI input performance 1.</font>
+<font
+color="#2e8b57">          vgroup : 0 ~ 999           Tone Color Groups for MIDI performance</font>
+<font
+color="#2e8b57">  master_vol : 0 ~ 127             Master Volume for MIDI performance.</font>
+<font
+color="#2e8b57">           priority : 0 ~ 255          MIDI performance priorities.</font>
+<font
+color="#2e8b57">           tempo : 2 ~ 510           MIDI performance Tempo(Affects LFO Speed)</font>
+
+<font
+color="teal">(Syntax Example)</font>
+<font color="teal"><b>  pbymidi = 0, 0, 120, 200, 120</b></font></pre>
+    <p><font color="black">If an AGB development system that is compatible with Intelligent
+    Systems' MIDI input is used as the simple monitor that goes with this system, it becomes
+    possible to perform MIDI sequencer output real time in AGB. This makes all sorts of
+    settings for those operations.&nbsp;</font></p>
+    <p><a href="#index"><font color="#2e8b57">Return to Top</font></a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="pbymidi_switch">
+  <tr>
+    <td><h5 class="navy">MIDI Input Performance Switch (<font size="2" color="#2e8b57">switch</font>
+    : <font size="2" color="teal">0</font>)</h5>
+    <p><b>0 or 1</b>. When creating normal game sound data use 0, for MIDI input performance
+    use 1. (If omitted 0)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_15">(15)</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="pbymidi_vgroup">
+  <tr>
+    <td><h5 class="navy">Tone Color Groups Used with MIDI Input Performance&nbsp; (<font
+    size="2" color="#2e8b57">vgroup</font> : <font size="2" color="teal">0</font>)</h5>
+    <p><b>0 ~ 999. </b>Tone color group number used with MIDI input performance.&nbsp;
+    (Default Value: 0.)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_15">(15)</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="pbymidi_master_vol">
+  <tr>
+    <td><h5 class="navy">Master Volume for MIDI Input Performance&nbsp; (<font size="2"
+    color="#2e8b57">master_vol</font> : <font size="2" color="teal">120</font>)</h5>
+    <p><b>0 ~ 127. </b>Master volume for the entire track for MIDI Input Performance. (Default
+    Value: 127.)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_15">(15)</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="pbymidi_priority">
+  <tr>
+    <td><h5 class="navy">Priorities for MIDI Input Performance&nbsp; (<font size="2"
+    color="#2e8b57">priority</font> : <font size="2" color="teal">200</font>)</h5>
+    <p><b>0 ~ 255. </b>Sound production priorities for MIDI input performance. (Default Value:
+    255.)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_15">(15)</a></td>
+  </tr>
+</table>
+
+<table width="565" align="CENTER" summary="pbymidi_tempo">
+  <tr>
+    <td><h5 class="navy">Tempo of MIDI Input Performance&nbsp; (<font size="2" color="#2e8b57">tempo</font>
+    : <font size="2" color="teal">120</font>)</h5>
+    <p><b>2 ~ 510. </b>Tempo information cannot be obtained from the MIDI-IN signal, so
+    pseudo-tempo settings are made here. These values affect the LFO speeds (modulation and
+    other features).&nbsp;<br>
+    (Default Value: 150.)</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="#ini_15">(15)</a></td>
+  </tr>
+</table>
+
+<pre>
+
+		</pre>
+
+<table width="600" align="center" summary="memacc_s">
+  <tr>
+    <td><h4><a name="ini_16"></a>(16) memacc_s = Memory Access Area Size</h4>
+    <p><font style="color:#008080">(Syntax Example)<br>
+    <b>&nbsp;&nbsp;memacc_s = 16</b></font><br>
+    <br>
+    In this system, you can access a special RAM area by placing a MEMACC instruction in the
+    song data. Designate the size of this RAM area to be between 0~255.<br>
+    (Default Value: 16)<br>
+    <br>
+    This area can be referenced externally from the main program using the array name,
+    m4a_memacc_area[ ].<br>
+    <br>
+    <a href="#index">Return to Top</a></td>
+  </tr>
+</table>
+
+<hr width="600">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="max_line">
+  <tr>
+    <td><h4><a NAME="ini_17">(17) max_line = Maximum Lines for Processing Time of
+    m4aSoundMain()</a></h4>
+    <p><font style="color:#008080">(Syntax Example)<br>
+    <b>&nbsp;&nbsp;max_line = 80</b></font> <br>
+    <br>
+    The processing time for m4aSoundMain( ) in each 1/60 second frame is limited by the
+    approximate number of scan lines. This setting value is <font COLOR="#FF0000"><b>the
+    amount of time allowed for processing in lines</b></font>, and <font COLOR="#FF0000"><b>not
+    the location where processing is stopped when scan lines reach it</b></font>. It is
+    impossible to accurately limit time so in actuality, the setting value is exceeded by a
+    certain number of lines. If 0 is set, this function becomes ineffective. <br>
+    (*This function cannot be set when <a HREF="../yougo.html#SystemROMUseSwitch"
+    TARGET="yougo">using code in system ROM</a>.)<br>
+    <br>
+    <a HREF="#index">Return to Top</a> </td>
+  </tr>
+</table>
+
+<pre>
+
+
+
+
+
+</pre>
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="only_dma1">
+  <tr>
+    <td><h4><a NAME="ini_18">(18) only_dma1 = DMA Limit Switch</a></h4>
+    <p><font style="color:#008080">(Syntax Example)<br>
+    <b>&nbsp;&nbsp;only_dma1 = 0</b></font> </p>
+    <p>This system normally uses 2 channels for the AGB DMA function. When a value other than
+    0 is set here, it will only use one channel. Then the output of the direct sound becomes
+    monaural, but the processing time becomes faster. If a programmer requests, enable this
+    switch.<br>
+    <br>
+    <a href="#index">Return to Top</a> </td>
+  </tr>
+</table>
+
+<pre>
+
+
+
+
+
+</pre>
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="sys_rom">
+  <tr>
+    <td><h4><a NAME="ini_19">(19) sys_rom = System ROM Use Switch</a></h4>
+    <p><font style="color:#008080">(Syntax Example)<br>
+    <b>&nbsp;&nbsp;sys_rom = 1</b></font> <br>
+    <br>
+    If this is set to a value other than &quot;0&quot;, the sound code in system ROM is used,
+    and the code in Game Pak ROM and internal RAM can be minimized with the following
+    restrictions:<br>
+    <br>
+    <font COLOR="#FF0000">- Slower speed than the internal RAM execution version (sys_rom = 0)</font><br>
+    <font COLOR="#FF0000">- No <a HREF="../yougo.html#ProcessingTimeMaxLine" TARGET="yougo">max_line</a>
+    function</font><br>
+    <font COLOR="#FF0000">- Must use 2 channels for DMA</font><br>
+    <font COLOR="#FF0000">-Tone color is slightly different</font><br>
+    <font COLOR="#FF0000">- Does not operate with development boards prior to TS3</font><br>
+    <br>
+    <a HREF="#index">Return to Top</a> </td>
+  </tr>
+</table>
+
+<hr width="600">
+
+<table width="600" align="CENTER" summary="link">
+  <tr>
+    <td><b>Next:</b>[ <a href="mplaynum.html">Number of Music Player Tracks</a> ]<br>
+    <b>Back:</b>[ <a href="song.html">Making Song Data&nbsp;</a> ]<br>
+    <b>Top :</b>[ <a href="../index.html">Table of Contents</a> ]</td>
+  </tr>
+</table>
+</body>
+</html>

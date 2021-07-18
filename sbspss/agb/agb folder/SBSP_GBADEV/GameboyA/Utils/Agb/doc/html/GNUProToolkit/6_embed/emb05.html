@@ -1,0 +1,583 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Frederick Geers">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Hewlett Packard development</title>
+</head>
+<body>
+
+<div CLASS="ChapterTitle">
+<div CLASS="ChapterTitle"><a NAME="Top"></a><a NAME="Hewlett Packard"></a><a NAME="26770"></a><a href="../../emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embARM.html">Previous</a>|<a href="embHitachi_h8300_targets.html#Top">Next</a></div>
+
+<p><br><font face="Futura Md BT"><font size=+3>Hewlett Packard development</font></font></div>
+
+<hr SIZE=6 WIDTH="100%">
+<div CLASS="BodyAfterHead"><a NAME="pgfId=1013724"></a><font size=+1>The
+following documentation discusses cross-development with the Hewlett Packard
+processors.</font></div>
+
+<ul TYPE=SQUARE>
+<li CLASS="Bullet">
+<a NAME="pgfId=1013728"></a><font size=+1><a href="#15769" CLASS="XRef">Compiling
+for HP targets</a></font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1013732"></a><font size=+1><a href="#34585" CLASS="XRef">Assembler
+options for HP targets</a></font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1013736"></a><font size=+1><a href="#34585" CLASS="XRef">Debugging
+for HP targets</a></font></li>
+</ul>
+
+<div CLASS="Body"><a NAME="pgfId=1013737"></a><font size=+1>For more information,
+see <i><b>HP Precision Architecture Instruction Set Manual</b> </i>(v1.1,
+3rd edition).</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1013907"></a><font size=+1>See <a href="#14944" CLASS="XRef">Host
+naming conventions</a> for naming conventions for the specific host platform.</font></div>
+
+<br>&nbsp;
+<div CLASS="TableTitle"><a NAME="pgfId=1013908"></a><a NAME="14944"></a><b><i><font size=+2>Host&nbsp;<a NAME="Hewlett Packard"></a>naming
+conventions</font></i></b></div>
+
+<table BORDER >
+<tr>
+<td>
+<div CLASS="CellHeading"><a NAME="pgfId=1013930"></a><b><font size=+1>Canonical
+triplet name&nbsp;</font></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><a NAME="pgfId=1013932"></a><b><font size=+1>Platform</font></b></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1013926"></a><tt><font size=+1>hppa1.1-hp-hpux10</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1013914"></a><font size=+1>HP 9000/700,
+HP-UX B.10.01</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1013916"></a><tt><font size=+1>hppa1.1-hp-hpux10.20</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1013918"></a><font size=+1>HP 9000/700,
+HP-UX B.10.20</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1013920"></a><tt><font size=+1>hppa1.1-hp-hpux11</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1013922"></a><font size=+1>HP 9000/700,
+HP-UX B.11.0</font></div>
+</td>
+</tr>
+</table>
+
+<h3 CLASS="Heading1">
+<a NAME="pgfId=1013741"></a><a NAME="15769"></a><b><i><font size=+2>Compiling
+for&nbsp;<a NAME="marker=1014063"></a>HP targets</font></i></b></h3>
+
+<div CLASS="Body"><a NAME="pgfId=1013742"></a><font size=+1>The following
+<tt>-m</tt>
+options are defined for the HPPA family of computers.</font></div>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013744"></a><tt><font size=+1>-mpa-risc-1-0</font></tt></div>
+
+<blockquote><font size=+1>Generate code for a PA 1.0 processor.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013746"></a><tt><font size=+1>-mpa-risc-1-1</font></tt></div>
+
+<blockquote><font size=+1>Generate code for a PA 1.1 processor.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013747"></a><tt><font size=+1>-mbig-switch</font></tt></div>
+
+<blockquote><font size=+1>Generate code suitable for big switch tables.
+Use this option only if the assembler/linker complain about out of range
+branches within a switch table.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013749"></a><tt><font size=+1>-mjump-in-delay</font></tt></div>
+
+<blockquote><font size=+1>Fill delay slots of function calls with unconditional
+jump instructions by modifying the return pointer for the function call
+to be the target of the conditional jump.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013751"></a><tt><font size=+1>-mdisable-fpregs</font></tt></div>
+
+<blockquote><font size=+1>Prevent floating point registers from being used
+in any manner. This is necessary for compiling kernels which perform lazy
+context switching of floating point registers. If you use this option and
+attempt to perform floating point operations, the compiler will abort.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013753"></a><tt><font size=+1>-mdisable-indexing</font></tt></div>
+
+<blockquote><font size=+1>Prevent the compiler from using indexing address
+modes. This avoids some rather obscure problems when compiling MIG generated
+code under MACH.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013755"></a><tt><font size=+1>-mno-space-regs</font></tt></div>
+
+<blockquote><font size=+1>Generate code that assumes the target has no
+space registers.</font>
+
+<p CLASS="BodyListFollow"><a NAME="pgfId=1013756"></a><font size=+1>This
+allows GCC to generate faster indirect calls and use unscaled index address
+modes. Such code is suitable for level 0 PA systems and kernels.</font><a NAME="marker=1013757"></a></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013759"></a><tt><font size=+1>-mfast-indirect-calls</font></tt></div>
+
+<blockquote><font size=+1>Generate code that assumes calls never cross
+space boundaries. This allows GCC to emit code which performs faster indirect
+calls.</font>
+
+<p CLASS="BodyListFollow"><a NAME="pgfId=1013760"></a><font size=+1>This
+option will not work in the presence of shared libraries or nested functions.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013762"></a><tt><font size=+1>-mspace</font></tt></div>
+
+<blockquote><font size=+1>Optimize for space rather than execution time.
+Currently this only enables out of line function prologues and epilogues.
+This option is incompatible with PIC code generation and profiling.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013764"></a><tt><font size=+1>-mlong-load-store</font></tt></div>
+
+<blockquote><font size=+1>Generate 3-instruction load and store sequences
+as some-times required by the HP/UX 10 linker. This is equivalent to the&nbsp;<a NAME="marker=1014118"></a><tt>+k</tt>
+option to the HP compilers.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013767"></a><tt><font size=+1>-mportable-runtime</font></tt></div>
+
+<blockquote><font size=+1>Use the portable calling conventions proposed
+by HP for ELF systems.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013769"></a><tt><font size=+1>-mgas</font></tt></div>
+
+<blockquote><a NAME="marker=1013768"></a><font size=+1>Enable the use of
+assembler directives only GAS understands.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013771"></a><tt><font size=+1>-mschedule=<i>cpu
+type</i></font></tt></div>
+
+<blockquote><font size=+1>Schedule code according to the constraints for
+the machine type (signified by the <tt>cpu type</tt>). The choices for
+<i><tt>cpu
+type</tt></i> are <tt>700 </tt>for <tt>7<i>n</i>0
+</tt>machines,
+<tt>7100
+</tt>for <tt>7<i>n</i>5 </tt>machines, and <tt>7100 </tt>for <tt>7<i>n</i>2
+</tt>machines.
+<tt>7100
+</tt>is the default for <i><tt>cpu type</tt></i>.</font></blockquote>
+
+<blockquote>
+<div CLASS="Label"><a NAME="pgfId=1013772"></a><font size=+1>Note:</font></div>
+
+<div CLASS="Note"><a NAME="pgfId=1013773"></a><font size=+1>The <tt>7100LC
+</tt>scheduling
+information is incomplete and using <tt>7100LC </tt>often leads to bad
+schedules. For now it’s probably best to use <tt>7100
+</tt>instead of <tt>7100LC
+</tt>for
+the <tt>7<i>n</i>2 </tt>machines.</font></div>
+</blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013775"></a><tt><font size=+1>-mlinker-opt</font></tt></div>
+
+<blockquote><font size=+1>Enable the optimization pass in the HP/UX linker.</font></blockquote>
+
+<blockquote>
+<div CLASS="Label"><a NAME="pgfId=1013777"></a><font size=+1>Note:</font></div>
+
+<div CLASS="Note"><a NAME="pgfId=1013778"></a><font size=+1>This makes
+symbolic debugging impossible. It also triggers a bug in the HP/UX 8 and
+HP/UX 9 linkers in which they give bogus error messages when linking some
+programs.</font><a NAME="marker=1014133"></a><a NAME="marker=1014132"></a></div>
+</blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013780"></a><tt><font size=+1>-msoft-float</font></tt></div>
+
+<blockquote><font size=+1>Generate output containing library calls for
+floating point.</font>
+<br>&nbsp;
+<div CLASS="Label">
+<blockquote><a NAME="pgfId=1013781"></a><b><i><font size=+1>Warning:</font></i></b></blockquote>
+</div>
+
+<blockquote>
+<div CLASS="Note"><a NAME="pgfId=1013782"></a><font size=+1>The requisite
+libraries are not available for all HPPA targets. Normally the facilities
+of the machine's usual C compiler are used, but this cannot be done directly
+in cross-compilation. You must make your own arrangements to provide suitable
+library functions for cross-compilation. The embedded target <tt>hppa1.1-*-pro
+</tt>does
+provide software floating point support.</font></div>
+</blockquote>
+</blockquote>
+
+<div CLASS="BodyListFollow">
+<blockquote><a NAME="pgfId=1013783"></a><font size=+1><tt>-msoft-float
+</tt>changes
+the calling convention in the output file; therefore, it is only useful
+if you compile all of a program with this option. In particular, you need
+to compile <tt>libgcc.a</tt>, the library that comes with GCC, with <tt>-msoft-float
+</tt>in
+order for this to work.</font></blockquote>
+</div>
+
+<h3 CLASS="Heading1">
+<a NAME="pgfId=1013786"></a><a NAME="10451"></a><b><i><font size=+2>Assembler
+options for&nbsp;<a NAME="marker=1014064"></a>HP targets</font></i></b></h3>
+
+<div CLASS="Body"><a NAME="pgfId=1013789"></a><font size=+1>To use the
+GNU assembler&nbsp;<a NAME="marker=1013787"></a><a NAME="marker=1013788"></a>to
+assemble GCC output, configure GCC with the switch, <tt>--with-gnu-as</tt>
+(in GNUPro Toolkit distributions) or with the <tt>-mgas</tt> option.</font></div>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013790"></a><tt><font size=+1>-mgas</font></tt></div>
+
+<blockquote><font size=+1>Compile using <tt>as</tt> to assemble GCC output.</font>
+
+<p CLASS="Body"><a NAME="pgfId=1013791"></a><font size=+1>As a back end
+for GNU CC ,<tt>as </tt>has been thoroughly tested and should work extremely
+well for the HPPA targets. It has been tested only minimally on hand-written
+assembly code and no one has tested it much on the assembly output from
+the HP compilers.</font>
+
+<p CLASS="Body"><a NAME="pgfId=1013792"></a><font size=+1>The format of
+the debugging sections has changed since the original <tt>as </tt>port
+(version 1.3<i><tt>X</tt></i>) was released; therefore, you must rebuild
+all HPPA objects and libraries with the new assembler so that you can debug
+the final executable.</font><a NAME="marker=1013793"></a>
+
+<p CLASS="Body"><a NAME="pgfId=1013795"></a><font size=+1>The HPPA&nbsp;<a NAME="marker=1013794"></a><tt>as
+</tt>port
+generates a small subset of the relocations available in the SOM and ELF
+object file formats. Additional relocation support will be added as it
+becomes necessary.</font>
+<br>&nbsp;</blockquote>
+
+<div CLASS="Body"><a NAME="pgfId=1013797"></a><font size=+1><i><tt>as</tt></i>has
+no machine-dependent command-line options for the HPPA.</font><a NAME="marker=1013796"></a></div>
+
+<h4 CLASS="Heading2">
+<a NAME="pgfId=1013801"></a><b><i><font size=+2>HPPA syntax</font></i></b><a NAME="marker=1014065"></a></h4>
+
+<div CLASS="Body"><a NAME="pgfId=1013803"></a><font size=+1>The assembler
+syntax closely follows the HPPA instruction set reference manual; assembler
+directives and general syntax closely follow the HPPA assembly language
+reference manual, with a few noteworthy differences.</font><a NAME="marker=1013802"></a></div>
+
+<div CLASS="Body"><a NAME="pgfId=1013804"></a><font size=+1>First, a colon
+may immediately follow a label definition. This is simply for compatibility
+with how most assembly language programmers write code.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1013805"></a><font size=+1>Some obscure
+expression parsing problems may affect hand written code which uses the
+<tt>spop</tt>instructions,
+or code which makes significant use of the !line separator.</font></div>
+
+
+<p CLASS="Body"><a NAME="pgfId=1013806"></a><font size=+1><tt>as </tt>is
+much less forgiving about missing arguments and other similar oversights
+than the HP assembler. <tt>as</tt>notifies you of missing arguments as
+syntax errors; this is regarded as a feature, not a bug.</font>
+
+<p CLASS="Body"><a NAME="pgfId=1013900"></a><font size=+1>Special characters
+for HPPA targets include the following.</font>
+
+<p CLASS="Body"><a NAME="pgfId=1013901"></a><font size=+1><tt>; </tt>is
+the line comment character.</font>
+
+<p CLASS="Body"><a NAME="pgfId=1013902"></a><font size=+1><tt>! </tt>can
+be used instead of a newline to separate statements.</font>
+
+<p CLASS="Body"><a NAME="pgfId=1013903"></a><font size=+1>Since <tt>$</tt>
+has no special meaning, you may use it in symbol names.</font>
+
+<p CLASS="Body"><a NAME="pgfId=1013807"></a><font size=+1>Finally, <tt>as</tt>allows
+you to use an external symbol without explicitly importing the symbol.</font>
+<br>&nbsp;
+<blockquote>
+<div CLASS="Label"><a NAME="pgfId=1013808"></a><b><font size=+1>Warning:</font></b></div>
+
+<div CLASS="Note"><a NAME="pgfId=1013809"></a><font size=+1>In the future
+this allowance will be an error for HPPA targets.</font></div>
+</blockquote>
+
+<h4 CLASS="Heading2">
+<a NAME="pgfId=1013817"></a><b><i><font size=+2>HPPA floating point</font></i></b><a NAME="marker=1014066"></a></h4>
+
+<div CLASS="Body"><a NAME="pgfId=1013819"></a><font size=+1>The HPPA family
+uses&nbsp;<a NAME="marker=1013818"></a>IEEE floating-point numbers.</font></div>
+
+<h4 CLASS="Heading2">
+<a NAME="pgfId=1013824"></a><b><i><font size=+2>HPPA assembler directives</font></i></b><a NAME="marker=1014067"></a></h4>
+
+<div CLASS="Body"><a NAME="pgfId=1013826"></a><font size=+1><tt>as </tt>for
+the HPPA supports many additional directives for compatibility with the
+native assembler. The following documentation only briefly describes them.
+For detailed information on HPPA-specific assembler directives, see&nbsp;<a NAME="marker=1013825"></a><i><b>HP9000
+Series 800 Assembly Language Reference Manual </b>(HP 92432-90001).</i></font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1013827"></a><font size=+1><tt>as </tt>does
+not support the following assembler directives described in the HP manual:</font></div>
+
+<br>&nbsp;
+<blockquote>
+<div CLASS="Body"><a NAME="pgfId=1013828"></a><tt><font size=+1>.endm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+listoff&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; macro</font></tt></div>
+
+<p><br><tt><font size=+1>.enter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; liston</font></tt>
+<br><tt><font size=+1>.leave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; locct</font></tt></blockquote>
+
+<div CLASS="Body"><a NAME="pgfId=1013829"></a><font size=+1>Beyond those
+implemented for compatibility, <tt>as </tt>supports one additional assembler
+directive for the HPPA: <tt>.param</tt>. It conveys register argument locations
+for static functions. Its syntax closely follows the <tt>.export </tt>directive.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1013831"></a><font size=+1>The following
+are the additional directives in <tt>as </tt>for the HPPA:&nbsp;</font><a NAME="marker=1013830"></a></div>
+
+
+<p CLASS="BodyHang1"><a NAME="pgfId=1013832"></a><tt><font size=+1>.block
+<i>n</i></font></tt>
+<div CLASS="BodyHang1List"><a NAME="pgfId=1013833"></a><tt><font size=+1>.blockz
+<i>n</i></font></tt></div>
+
+<blockquote><font size=+1>Reserve <i><tt>n</tt>-</i>bytes of storage, and
+initialize them to zero.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013834"></a><tt><font size=+1>.call</font></tt></div>
+
+<blockquote><font size=+1>Mark the beginning of a procedure call. Only
+the special case with no arguments is allowed.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013835"></a><tt><font size=+1>.callinfo
+[<i>param</i>=<i>value</i>, ...][<i>flag</i>, ...]</font></tt></div>
+
+<blockquote><font size=+1>Specify a number of parameters and flags that
+define the environment for a procedure. <i><tt>param</tt></i> may be any
+of frame (frame size), <tt>entry_gr </tt>(end of general register range),
+<tt>entry_fr
+</tt>(end of float register range), <tt>entry_sr
+</tt>(end of space register
+range). The values for <i><tt>flag</tt></i> are
+<tt>calls
+</tt>or <tt>caller
+</tt>(<i><tt>proc</tt></i> has subroutines),
+<tt>no_calls
+</tt>(<i><tt>proc</tt></i>
+does not call subroutines), <tt>save_rp
+</tt>(preserve return pointer),
+<tt>save_sp </tt>(<i><tt>proc</tt></i> preserves stack pointer), <tt>no_unwind
+</tt>(do not unwind this
+<i><tt>proc</tt></i>),
+<tt>hpux_int </tt>(<tt><i>proc</i>&nbsp;</tt>
+is interrupt routine).</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013836"></a><tt><font size=+1>.code</font></tt></div>
+
+<blockquote><font size=+1>Assemble into the standard section called <tt>$TEXT$</tt>,
+subsection <tt>$CODE$</tt>.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013837"></a><tt><font size=+1>.copyright
+"<i>string</i>"</font></tt></div>
+
+<blockquote><font size=+1>In the SOM object format, insert <i><tt>string</tt></i>
+into the object code, marked as a copyright string.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013838"></a><tt><font size=+1>.enter</font></tt></div>
+
+<blockquote><font size=+1>Not yet supported; the assembler rejects programs
+containing this directive.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013839"></a><tt><font size=+1>.entry</font></tt></div>
+
+<blockquote><font size=+1>Mark the beginning of a procedure.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013840"></a><tt><font size=+1>.exit</font></tt></div>
+
+<blockquote><font size=+1>Mark the end of a procedure.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013841"></a><tt><font size=+1>.export
+<i>name</i>[,<i>typ</i>][,<i>param</i>=<i>r</i>]</font></tt></div>
+
+<blockquote><font size=+1>Make a procedure <i><tt>name</tt> </i>available
+to callers.<i> <tt>typ</tt></i>, if present, must be one of <tt>absolute</tt>,
+<tt>code
+</tt>(ELF
+only, not SOM), <tt>data</tt>, <tt>entry</tt>,
+<tt>data</tt>,
+<tt>entry</tt>,
+<tt>millicode</tt>,
+<tt>plabel</tt>, <tt>pri_prog</tt>, or <tt>sec_prog</tt>.</font></blockquote>
+
+<blockquote>
+<div CLASS="BodyListFollow"><a NAME="pgfId=1013842"></a><i><font size=+1><tt>param</tt>,
+</font></i><font size=+1>if
+present, provides either relocation information for the procedure arguments
+and result, or a privilege level. <i><tt>param</tt></i>may be <tt>argw<i>n
+</i></tt>(where <i><tt>n</tt> </i>ranges from 0 to 3, and indicates one
+of four one-word arguments); <tt>rtnval
+</tt>(the procedure's result);
+or <tt>priv_lev </tt>(privilege level). For arguments or the result, <i><tt>r</tt>
+</i>specifies how to relocate, and must be one of <tt>no</tt>(not relocatable),
+<tt>gr</tt>(argument is in general register), <tt>fr</tt>(in floating point
+register), or `<tt>fu</tt>' (upper half of float register). For <tt>priv_lev</tt>,<i>
+<tt>r</tt></i> is an integer.</font></div>
+</blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013843"></a><tt><font size=+1>.half
+<i>n</i></font></tt></div>
+
+<blockquote><font size=+1>Define a two-byte integer constant <i><tt>n</tt></i>;
+synonym for the portable <tt>as </tt>directive, <tt>.short</tt><i>.</i></font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013844"></a><tt><font size=+1>.import
+<i>name</i>[,<i>typ</i>]</font></tt></div>
+
+<blockquote><font size=+1>Converse of <tt>.export</tt>; make a procedure
+available to call. The arguments use the same conventions as the first
+two arguments for <tt>.export</tt>.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013845"></a><tt><font size=+1>.label
+<i>name</i></font></tt></div>
+
+<blockquote><font size=+1>Define <i><tt>name</tt></i> as a label for the
+current assembly location.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013846"></a><tt><font size=+1>.leave</font></tt></div>
+
+<blockquote><font size=+1>Not yet supported; the assembler rejects programs
+containing this directive.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013847"></a><tt><font size=+1>.origin
+<i>lc</i></font></tt></div>
+
+<blockquote><font size=+1>Advance location counter to <i><tt>lc</tt></i>.
+Synonym for the <tt>{No value for "as"}</tt>portable directive <tt>.org</tt>.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013848"></a><tt><font size=+1>.param
+<i>name</i>[,<i>typ</i>][,<i>param</i>=<i>r</i>]</font></tt></div>
+
+<blockquote><font size=+1>Similar to <tt>.export</tt>, but used for static
+procedures.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013849"></a><tt><font size=+1>.proc</font></tt></div>
+
+<blockquote><font size=+1>Use preceding the first statement of a procedure.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013850"></a><tt><font size=+1>.procend</font></tt></div>
+
+<blockquote><font size=+1>Use following the last statement of a procedure.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013851"></a><tt><font size=+1>label.reg
+<i>expr</i></font></tt></div>
+
+<blockquote><font size=+1>Synonym for <tt>.equ</tt>; define <tt>label</tt>
+with the absolute expression, <i><tt>expr</tt></i>, as its value.</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013852"></a><tt><font size=+1>.space
+<i>secnam</i>[,<i>params</i>]</font></tt></div>
+
+<blockquote><font size=+1>Switch to section <i><tt>secnam</tt></i>, creating
+a new section by that name if necessary. You may only use <i><tt>params</tt></i>when
+creating a new section, not when switching to an existing one.
+<tt><i>secnam</i>&nbsp;</tt>
+may identify a section by number rather than by name. If specified, the
+list <i><tt>params</tt></i> declares attributes of the section, identified
+by keywords. The keywords recognized are <tt>spnum=<i>exp</i></tt>(identify
+this section by the number, <i><tt>exp</tt></i>, an absolute expression),
+<tt>sort=<i>exp</i>
+</tt>(order sections according to this sort key when linking; <i><tt>exp</tt></i>
+is an absolute expression),
+<tt>unloadable </tt>(section contains no loadable
+data), <tt>notdefined
+</tt>(this section defined elsewhere), and <tt>private
+</tt>(data in this section not available to other programs).</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013853"></a><tt><font size=+1>.spnum
+<i>secnam</i></font></tt></div>
+
+<blockquote><font size=+1>Allocate four bytes of storage, and initialize
+them with the section number of the section named <i><tt>secnam</tt></i>.
+(You can define the section number with the HPPA <tt>.space
+</tt>directive.)</font></blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013854"></a><tt><font size=+1>.string
+"<i>str</i>"</font></tt></div>
+
+<blockquote><font size=+1>Copy the characters in the string, <i><tt>str</tt></i>,
+to the object file.</font></blockquote>
+
+<blockquote>
+<div CLASS="Label">
+<blockquote><a NAME="pgfId=1013858"></a><b><i><font size=+1>Warning:</font></i></b></blockquote>
+</div>
+
+<blockquote>
+<div CLASS="Note"><a NAME="pgfId=1013859"></a><font size=+1>The HPPA version
+of <tt>.string </tt>differs from the usual <tt>as </tt>definition: it does
+not write a zero byte after copying <i><tt>str</tt></i>.</font></div>
+</blockquote>
+</blockquote>
+
+<div CLASS="BodyHang1"><a NAME="pgfId=1013860"></a><tt><font size=+1>.stringz
+"<i>str</i>"</font></tt></div>
+
+<blockquote><font size=+1>Like <tt>.string</tt>, but appends a zero byte
+after copying <i><tt>str</tt></i> to object file.</font></blockquote>
+
+<h3 CLASS="Heading1">
+<a NAME="pgfId=1013864"></a><a NAME="34585"></a><b><i><font size=+2>Debugging
+for HP targets</font></i></b></h3>
+
+<div CLASS="Body"><a NAME="pgfId=1013866"></a><font size=+1>For HPPA targets,
+GDB&nbsp;<a NAME="marker=1013865"></a>is called with the following input;
+see <a href="#14944" CLASS="XRef">Host naming conventions</a> for the actual
+canonical name for your platform to replace with <i><tt>&lt;canonical triplet></tt></i>.</font></div>
+
+<blockquote>
+<blockquote>
+<pre CLASS="CodeExample"><a NAME="pgfId=1013867"></a><font size=+1><i>&lt;canonical triplet></i> -gdb</font></pre>
+</blockquote>
+</blockquote>
+
+<div CLASS="Body"><a NAME="pgfId=1013868"></a><font size=+1>GDB needs to
+know the following specifications.</font></div>
+
+<ul TYPE=SQUARE>
+<li CLASS="Bullet">
+<a NAME="pgfId=1013869"></a><font size=+1>Specifications for what serial
+device connects your host to your HP board (the first serial device available
+on your host is the default).</font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1013870"></a><font size=+1>Specifications for what speed
+to use over the serial device (if you are using a Unix host)<a NAME="marker=1013871"></a>.</font></li>
+</ul>
+
+<div CLASS="Body"><a NAME="pgfId=1001705"></a></div>
+
+<div CLASS="Body">
+<hr SIZE=5 WIDTH="100%"></div>
+
+<center><a href="#Top">Top</a>|<a href="../../emb.html">Contents</a>|<a href="embindex.html">Index</a>|<a href="embARM.html">Previous</a>|<a href="embHitachi_h8300_targets.html#Top">Next</a></center>
+
+</body>
+</html>

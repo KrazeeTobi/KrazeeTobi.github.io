@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Uses of Header Files</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppHeader_Files.html">Previous</A>|<A HREF="cppThe_include_Directive.html">Next</A>
+<BR>&nbsp;<A NAME="off_98990"></A><A NAME="f7fe28cc"></A><A NAME="off_98990"></A><A NAME="f7fe28cc"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3><B>Uses
+of header files&nbsp;</B>&nbsp;</FONT></FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Header
+files serve two kinds of purposes.</FONT></FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>System header files declare
+the interfaces to parts of the operating system. You include them in your
+program to supply the definitions and declarations you need to invoke system
+calls and libraries.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Your own header files contain
+declarations for interfaces between the source files of your program. Each
+time you have a group of related declarations and macro definitions all
+or most of which are needed in several different source files, it is a
+good idea to create a header file for them.</FONT></FONT></LI>
+</UL>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Including
+a header file produces the same results in C compilation as copying the
+header file into each source file that needs it. But such copying would
+be time-consuming and error-prone. With a header file, the related declarations
+appear in only one place. If they need to be changed, they can be changed
+in one place, and programs that include the header file will automatically
+use the new version when next recompiled. The header file eliminates the
+labor of finding and changing all the copies as well as the risk that a
+failure to find one copy will result in inconsistencies within a program.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+usual convention is to give header files names that end with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.h</FONT></FONT><FONT SIZE=+1>,
+a<FONT FACE="Times New Roman">voiding unusual characters in header file
+names since they reduce portability.</FONT></FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppHeader_Files.html">Previous</A>|<A HREF="cppThe_include_Directive.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

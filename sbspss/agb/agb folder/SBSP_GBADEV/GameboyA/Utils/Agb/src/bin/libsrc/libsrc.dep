@@ -1,0 +1,231 @@
+# Microsoft Developer Studio Generated Dependency File, included by libsrc.mak
+
+.\char16set.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\bmpstruct.h"\
+	"..\include\char16set.h"\
+	"..\include\character.h"\
+	"..\include\character16.h"\
+	"..\include\charset.h"\
+	"..\include\color.h"\
+	"..\include\filename.h"\
+	"..\include\fImage.h"\
+	"..\include\Image.h"\
+	"..\include\maptextunit.h"\
+	"..\include\palette.h"\
+	"..\include\pathname.h"\
+	"..\include\picture.h"\
+	
+
+.\char256set.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\bmpstruct.h"\
+	"..\include\char16set.h"\
+	"..\include\char256set.h"\
+	"..\include\character.h"\
+	"..\include\character16.h"\
+	"..\include\charset.h"\
+	"..\include\color.h"\
+	"..\include\filename.h"\
+	"..\include\fImage.h"\
+	"..\include\Image.h"\
+	"..\include\maptextunit.h"\
+	"..\include\palette.h"\
+	"..\include\pathname.h"\
+	"..\include\picture.h"\
+	
+
+.\character.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\character.h"\
+	"..\include\color.h"\
+	"..\include\filename.h"\
+	"..\include\Image.h"\
+	"..\include\pathname.h"\
+	
+
+.\character16.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\character.h"\
+	"..\include\character16.h"\
+	"..\include\color.h"\
+	"..\include\filename.h"\
+	"..\include\Image.h"\
+	"..\include\pathname.h"\
+	
+
+.\charset.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\bmpstruct.h"\
+	"..\include\character.h"\
+	"..\include\charset.h"\
+	"..\include\color.h"\
+	"..\include\filename.h"\
+	"..\include\fImage.h"\
+	"..\include\Image.h"\
+	"..\include\maptextunit.h"\
+	"..\include\palette.h"\
+	"..\include\pathname.h"\
+	"..\include\picture.h"\
+	
+
+.\color.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\color.h"\
+	"..\include\filename.h"\
+	"..\include\pathname.h"\
+	
+
+.\filename.cpp : \
+	"..\include\filename.h"\
+	"..\include\pathname.h"\
+	
+
+.\hpicture.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\bmpstruct.h"\
+	"..\include\color.h"\
+	"..\include\filename.h"\
+	"..\include\fImage.h"\
+	"..\include\hpicture.h"\
+	"..\include\Image.h"\
+	"..\include\pathname.h"\
+	
+
+.\image.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\color.h"\
+	"..\include\filename.h"\
+	"..\include\Image.h"\
+	"..\include\pathname.h"\
+	
+
+.\map.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\bmpstruct.h"\
+	"..\include\character.h"\
+	"..\include\charset.h"\
+	"..\include\color.h"\
+	"..\include\filename.h"\
+	"..\include\fImage.h"\
+	"..\include\Image.h"\
+	"..\include\map.h"\
+	"..\include\mapsrimage.h"\
+	"..\include\maptextimage.h"\
+	"..\include\maptextunit.h"\
+	"..\include\palette.h"\
+	"..\include\pathname.h"\
+	"..\include\picture.h"\
+	
+
+.\map16.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\bmpstruct.h"\
+	"..\include\char16set.h"\
+	"..\include\character.h"\
+	"..\include\character16.h"\
+	"..\include\charset.h"\
+	"..\include\color.h"\
+	"..\include\filename.h"\
+	"..\include\fImage.h"\
+	"..\include\Image.h"\
+	"..\include\map.h"\
+	"..\include\map16.h"\
+	"..\include\mapsrimage.h"\
+	"..\include\maptextimage.h"\
+	"..\include\maptextunit.h"\
+	"..\include\palette.h"\
+	"..\include\pathname.h"\
+	"..\include\picture.h"\
+	
+
+.\map256.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\bmpstruct.h"\
+	"..\include\char16set.h"\
+	"..\include\char256set.h"\
+	"..\include\character.h"\
+	"..\include\character16.h"\
+	"..\include\character256.h"\
+	"..\include\charset.h"\
+	"..\include\color.h"\
+	"..\include\filename.h"\
+	"..\include\fImage.h"\
+	"..\include\Image.h"\
+	"..\include\map.h"\
+	"..\include\map256.h"\
+	"..\include\mapsrimage.h"\
+	"..\include\maptextimage.h"\
+	"..\include\maptextunit.h"\
+	"..\include\palette.h"\
+	"..\include\pathname.h"\
+	"..\include\picture.h"\
+	
+
+.\mapsrimage.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\color.h"\
+	"..\include\filename.h"\
+	"..\include\fImage.h"\
+	"..\include\Image.h"\
+	"..\include\mapsrimage.h"\
+	"..\include\maptextimage.h"\
+	"..\include\maptextunit.h"\
+	"..\include\pathname.h"\
+	
+
+.\maptextimage.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\color.h"\
+	"..\include\filename.h"\
+	"..\include\fImage.h"\
+	"..\include\Image.h"\
+	"..\include\maptextimage.h"\
+	"..\include\maptextunit.h"\
+	"..\include\pathname.h"\
+	
+
+.\maptextunit.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\filename.h"\
+	"..\include\maptextunit.h"\
+	"..\include\pathname.h"\
+	
+
+.\mcfile.cpp : \
+	"..\include\mcfile.h"\
+	
+
+.\palette.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\color.h"\
+	"..\include\filename.h"\
+	"..\include\Image.h"\
+	"..\include\palette.h"\
+	"..\include\pathname.h"\
+	
+
+.\pathname.cpp : \
+	"..\include\pathname.h"\
+	
+
+.\picture.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\bmpstruct.h"\
+	"..\include\character.h"\
+	"..\include\character16.h"\
+	"..\include\color.h"\
+	"..\include\filename.h"\
+	"..\include\fImage.h"\
+	"..\include\Image.h"\
+	"..\include\palette.h"\
+	"..\include\pathname.h"\
+	"..\include\picture.h"\
+	
+
+.\util.cpp : \
+	"..\include\agbtypes.h"\
+	"..\include\color.h"\
+	"..\include\filename.h"\
+	"..\include\pathname.h"\
+	

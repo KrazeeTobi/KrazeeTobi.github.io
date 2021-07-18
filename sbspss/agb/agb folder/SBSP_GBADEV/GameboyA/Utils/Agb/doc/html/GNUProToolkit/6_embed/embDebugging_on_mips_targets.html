@@ -1,0 +1,207 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Debugging on mips targets</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="emb.html">Contents</A>|<A HREF="embindex.html">Index</A>|<A HREF="embAssembler_options_for_mips.html">Previous</A>|<A HREF="embFurther_documentation_for_mips.html">Next</A>
+<BR><A NAME="off_722192"></A><A NAME="07251dfa"></A><A NAME="off_722192"></A><A NAME="07251dfa"></A><A NAME="off_722192"></A><A NAME="07251dfa"></A><A NAME="off_722192"></A><A NAME="07251dfa"></A><A NAME="off_722192"></A><A NAME="07251dfa"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Debugging
+on MIPS targets</FONT></FONT></FONT></B><FONT SIZE=+1>&nbsp;</FONT>&nbsp;
+<HR SIZE=3 WIDTH="100%">
+<BR><FONT SIZE=+1>The following documentation discusses debugging with
+MIPS.</FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT SIZE=+1><A HREF="#Linking_GOFAST">Linking MIPS with the GOFAST library</A></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><A HREF="#GOFAST_library">Full compatibility with the GOFAST
+library for MIPS</A></FONT></LI>
+</UL>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>GDB needs to know the following
+things to talk to your MIPS target.</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Specifications for what serial
+device connects your host to your MIPS board (the first serial device available
+on your host is the default).</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Specifications for what speed
+to use over the serial device.</FONT></FONT></LI>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Use one of the following GDB
+commands to specify the connection to your target board.</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>target mips <I>port</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>To run a program on the
+board, start up GDB with the name of your program as the argument.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>To connect to the board, use
+the command, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>target
+mips port</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>, where
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>port</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the name of the serial port connected to the board. If the program has
+not already been downloaded to the board, you may use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>load</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command to download it.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You can then use all the usual
+GDB commands.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>For example, the following sequence
+connects to the target board through a serial port, and loads and runs
+a program called </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>prog</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through the debugger.</FONT></FONT></DT>
+
+<UL TYPE=SQUARE>
+<PRE><B><FONT FACE="Courier New"><FONT SIZE=+1>host$ mips-elf-gdb <I>prog</I>&nbsp;
+GDB is free software and...&nbsp;
+(gdb) </FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+1>target mips /dev/ttyb&nbsp;
+<B>...&nbsp;
+(gdb) </B>load&nbsp;
+<B>...&nbsp;
+(gdb) </B>run</FONT></FONT></PRE>
+</UL>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>target mips <I>hostname</I>: <I>portnumber</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>You can specify a TCP/IP
+connection instead of a serial port, using the syntax </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>hostname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>:
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>portnumber </FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>(assuming
+your board is connected so that this makes sense; for instance, to a serial
+line managed by a terminal concentrator).</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>GDB also supports the special
+command,</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0> set mipsfpu
+off</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>, for targets.</FONT></FONT></DT>
+
+<DT>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>If your
+target board does not support the MIPS floating point coprocessor, you
+should use the command, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+mipsfpu off</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> (you
+may wish to put this in your </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.gdbinit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file). This tells GDB how to find the return value of functions which return
+floating point values. It also allows GDB to avoid saving the floating
+point registers when calling functions on the board.</FONT></FONT></FONT></DT>
+
+<DT>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>If you
+neglect to use the command, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+mipsfpu off</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>, some
+calls will fail, such as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print
+strlen("abc")</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>set remotedebug <I>n</I></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>You can see some debugging
+information about communications with the board by setting the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>remotedebug</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+variable. If you set it to 1 using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+remotedebug 1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+every packet will be displayed. If you set it to 2, every character will
+be displayed. You can check the current value at any time with the command
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>show remotedebug</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;</UL>
+<A NAME="Linking_GOFAST"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Linking
+MIPS with the GOFAST library</FONT></FONT></I></B>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The GOFAST library is available
+with two interfaces; </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gcc
+-msoft-float</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> output
+places all arguments in registers, which (for subroutines using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>double</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+arguments) is compatible with the interface identified as “</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Interface
+1: all arguments in registers</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>”
+in the GOFAST documentation. For full compatibility with all GOFAST subroutines,
+you need to make a slight modification to some of the subroutines in the
+GOFAST library.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you purchase and install
+the GOFAST library, you can link your code to that library in a number
+of different ways, depending on where and how you install the library.
+To focus on the issue of linking, the following examples assume you’ve
+already built object modules with appropriate options (including </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-msoft-float</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This is the simplest case;
+it assumes that you’ve installed the GOFAST library as the file,</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+fp.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>, in the same
+directory where you do development, as shown in the GOFAST documentation.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>mips-idt-ecoff-gcc -o prog prog.o...-lc fp.a</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In a shared development environment,
+the following example may be more realistic; it assumes you’ve installed
+the GOFAST library as</FONT></FONT> <FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>uss</I>-<I>dir</I>/libgofast.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+where ‘</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>ussdir</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is any convenient directory on your development system.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>mips-idt-ecoff-gcc -o program program.o... \&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -lc -L<I>ussdir</I> -lgofast</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Finally, you can eliminate the
+need for a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-L</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option with a little more setup, using an environment variable like the
+following example (the example assumes you use a command shell compatible
+with the Bourne shell):</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>LIBRARY_PATH= ussdir; export LIBRARY_PATH&nbsp;
+mips-idt-ecoff-gcc -o program program.o...-lc -lgofast</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>As for the previous example,
+the GOFAST library is installed in the directory, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>uss</I>-<I>dir</I>/libgofast.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The environment variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>LIBRARY_PATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+instructs </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>GCC</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to look for the library in </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>ussdir</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+(The syntax shown here for setting the environment variable is the Unix
+Bourne Shell, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/bin/sh</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+syntax; adjust as needed for your system.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Notice that all the variations
+on linking with the GOFAST library explicitly include </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-lc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+before the GOFAST library. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-lc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the standard C subroutine library; normally, you don’t have to specify
+this subroutine, since linking with the GOFAST library is automatic.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When you link with an alternate
+software floating-point library, however, the order of linking is important.
+In this situation, specify ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-lc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to the left of the GOFAST library, to ensure that standard library subroutines
+also use the GOFAST floating-point code.</FONT></FONT>
+
+<P><A NAME="GOFAST_library"></A><FONT FACE="Times New Roman,Times"><B><I><FONT SIZE=+2>Full
+compatibility with the GOFAST library for MIPS</FONT></I></B></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The GCC calling convention
+for functions whose first and second arguments have type float is not completely
+compatible with the definitions of those functions in the GOFAST library,
+as shipped. The following functions are affected.</FONT></FONT>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; fpcmp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fpadd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fpsub&nbsp;
+&nbsp;&nbsp;&nbsp; fpmul&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fpdiv&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fpfmod&nbsp;
+&nbsp;&nbsp;&nbsp; fpacos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fpasin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fpatan&nbsp;
+&nbsp;&nbsp;&nbsp; fpatan2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fppow</FONT></FONT></PRE>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Since the GOFAST library is
+normally shipped with source, you can make these functions compatible with
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gcc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+convention by adding the following instruction to the beginning of each
+affected function, then rebuilding the library.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>move $5,$6</FONT></FONT></PRE>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="emb.html">Contents</A>|<A HREF="embindex.html">Index</A>|<A HREF="embAssembler_options_for_mips.html">Previous</A>|<A HREF="embFurther_documentation_for_mips.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

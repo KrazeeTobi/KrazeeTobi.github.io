@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Archive Members as Targets</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeUsing_make_to_Update_Archive_Fil.html">Previous</A>|<A HREF="makeImplicit_Rule_for_Archive_Member.html">Next</A>
+<BR><A NAME="off_2393329"></A><A NAME="3ad78176"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Archive
+members as targets</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>An individual
+member of an archive file can be used as a target or dependency in </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+You specify the member named </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>member</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in archive file, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>archive</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>as follows:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0><I>archive</I>(<I>member</I>)</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This construct is available
+only in targets and dependencies, not in commands! Most programs that you
+might use in commands do not support this syntax and cannot act directly
+on archive members. Only </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>ar</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and other programs specifically designed to operate on archives can do
+so. Therefore, valid commands to update an archive member target probably
+must use </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>ar</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+For instance, this rule says to create a member, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>hack.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+in archive, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foolib</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+by copying the file, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>hack.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+as in the following.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>foolib(hack.o) : hack.o</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ar cr foolib hack.o</FONT></FONT>
+<BR>&nbsp;</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In fact, nearly all archive
+member targets are updated in just this way and there is an implicit rule
+to do it for you.</FONT></FONT>
+<BR>&nbsp;
+<UL>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+flag to </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>ar</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is required if the archive file does not already exist.</FONT></FONT>
+<BR>&nbsp;</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>To specify several members in
+the same archive, write all the member names together between the parentheses,
+as in the following example.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>foolib(hack.o kludge.o)</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The previous statement is
+equivalent to the following statement.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>foolib(hack.o) foolib(kludge.o)</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can also use shell-style
+wildcards in an archive member reference. See <FONT COLOR="#008000"><A HREF="makeUsing_Wildcard_Characters_in_Fil.html">Using
+wildcard characters in file names</A></FONT>. For example, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foolib(*.o)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+expands to all existing members of the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foolib</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+archive whose names end in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’;
+perhaps ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foolib(hack.o)
+foolib(kludge.o)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeUsing_make_to_Update_Archive_Fil.html">Previous</A>|<A HREF="makeImplicit_Rule_for_Archive_Member.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

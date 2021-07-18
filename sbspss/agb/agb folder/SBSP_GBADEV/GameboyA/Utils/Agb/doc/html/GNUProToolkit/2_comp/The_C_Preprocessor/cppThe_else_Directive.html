@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>The #else Directive</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppThe__if__Directive.html">Previous</A>|<A HREF="cppThe_elif_Directive.html">Next</A>
+<BR><A NAME="off_720896"></A><A NAME="b9bb1c9f"></A><A NAME="off_720896"></A><A NAME="b9bb1c9f"></A><B><FONT COLOR="#000000"><FONT FACE="Futura Md BT"><FONT SIZE=+3>The
+</FONT></FONT><TT><FONT POINT-SIZE="24">#else</FONT></TT><FONT FACE="Futura Md BT"><FONT SIZE=+3>
+directive&nbsp;</FONT></FONT></FONT></B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>&nbsp;</FONT></FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#else</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive can be added to a conditional to provide alternative text to
+be used if the condition is false. The following example shows what it
+resembles.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#if <I>expression</I>&nbsp;
+<I>text</I>-<I>if</I>-<I>true</I>&nbsp;
+#else /* Not <I>expression</I> */</FONT></FONT></PRE>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1><I>text</I>-<I>if</I>-<I>false</I></FONT></FONT></PRE>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#endif /* Not <I>expression</I> */</FONT></FONT></PRE>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>If </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>expression
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>is nonzero,
+and thus the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text-if-true</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is active, then </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#else</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+acts like a failing conditional and the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text-if-false</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is ignored. Contrarily, if the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#if</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+conditional fails, the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text-if-false</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is considered included.</FONT></FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppThe__if__Directive.html">Previous</A>|<A HREF="cppThe_elif_Directive.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

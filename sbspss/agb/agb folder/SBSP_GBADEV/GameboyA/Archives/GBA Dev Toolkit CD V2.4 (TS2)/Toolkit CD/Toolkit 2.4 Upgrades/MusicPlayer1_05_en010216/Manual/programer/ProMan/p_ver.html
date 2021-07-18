@@ -1,0 +1,109 @@
+<!DOCTYPE html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+
+<head><!-- Edited by Tracy B 02/12/01-->
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Revision History</title>
+</head>
+
+<body>
+
+<p><br>
+</p>
+
+<h2 ALIGN="CENTER"><a NAME="version_0">Revision History</a></h2>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="version_up_info">
+  <tr>
+    <td><br>
+    (Version 1.04 <img src="right.gif" align="absmiddle" width="13" height="5"> 1.05)<br>
+    1. Made it possible to use a portion of the sound code in the system ROM. Added the object
+    file which is used with &quot;m4aLibUSC.o&quot;.<br>
+    2. The panpot specification of the rhythm set is no longer being affected by the
+    sound produced from other players.<br>
+    3. Made an execution version of the high speed internal RAM.<br>
+    4. Enabled one to limit the processing time of m4aSoundMain() during each frame.<br>
+    5. Enabled the registration of song data number 1999.<br>
+    6. Made it possible to set the loop position for each track with the MIDI control check
+    number.<br>
+    <br>
+    (Version 1.03c <img src="right.gif" align="absmiddle" width="13" height="5"> 1.04)<br>
+    <br>
+    1. Fixed problem with interval when value was zero with the functions <font
+    face="courier new">m4aMPlayModDepthSet()</font> and <font face="courier new">m4aMPlayLFOSpeedSet()</font>.<br>
+    2. Fixed problem of not being able to set the sweep value to ineffective with compatible
+    sound 1.<br>
+    3. Fixed abnormality due to fade out with volume of part where tremolo used.<br>
+    4. Changed the function name for <font face="courier new">MPlayAllContinue()</font> to <font
+    face="courier new">m4aMPlayAllContinue()</font>.<br>
+    5. Added the function <font face="courier new">m4aMPlayImmInit()</font>, which immediately
+    initializes the various tracks of the song you plan on starting to play.<br>
+    6. Fixed problem of abnormal operation due to timing when interrupting with <font
+    face="courier new">m4aSoundVSync()</font> during change of direct sound playback
+    frequency.<br>
+    7. Made so you can separate the segments of the program executed with RAM from other work
+    areas with linker script.<br>
+    <br>
+    (Version 1.03 <img src="right.gif" align="absmiddle" width="13" height="5"> 1.03c)<br>
+    <br>
+    1. Fixed calculation of total size display for simple monitor.<br>
+    2. Fixed problem with value for m4a_mplay???.stat when performance ends.<br>
+    3. Changed compatibility of MEMACC, PRIO with MIDI Control Change Number.<br>
+    4. Changed addition value of MIDI Undefined Control Change Number to avoid redundancy from
+    20 to 30.<br>
+    <br>
+    (Version 1.02 <img src="right.gif" align="absmiddle" width="13" height="5"> 1.03)<br>
+    <br>
+    1. Fixed problem of vibrato not functioning properly.<br>
+    2. Added display of total size of all sound objects to simple monitor.<br>
+    3. Added display of number of CH currently being used by direct sound with the simple
+    monitor.<br>
+    4. Changed the addition value used with this system's MIDI Undefined Control Change Number
+    from 88 to 20.<br>
+    5. Added the MEMACC instruction to the song data. Added memacc_s to
+    &quot;mks4agb.ini&quot;.&nbsp;&nbsp;&nbsp;<br>
+    <br>
+    <br>
+    (Version 1.01 <img src="right.gif" align="absmiddle" width="13" height="5"> 1.02)<br>
+    <br>
+    1. Fixed the problem of incomplete initialization of the Music Player work area.<br>
+    2. Fixed rare problem of an infinite loop occurring if a new song was started on the same
+    Music Player during chord play on the same track.<br>
+    3. Made possible to create code that uses only 1 channel DMA. Added object file used with
+    this.<br>
+    4. Reduced the number of stacks used for the function <font face="courier new">m4aSoundMain()</font>.<br>
+    5. Changed so that .aif files without INST-chunk can be converted now.<br>
+    6. Changed the spelling of pan from &quot;pam&quot; to &quot;pan&quot;.<br>
+    <br>
+    <br>
+    (Version 1.00 <img src="right.gif" align="absmiddle" width="13" height="5"> 1.01)<br>
+    <br>
+    1. Upgraded the Simple Monitor. The data files of the Simple Monitor
+    &quot;SndMonDat.s&quot; and &quot;SndMonDat.o&quot; were output.<br>
+    2. Fixed the bug of not running if the long name of the directory was used in the
+    directory for this system.<br>
+    3. Fixed the bug of the values of Attack, Decay, and Release for CGB compatible sound not
+    working normally for the tone color settings in &quot;mks4agb.ini&quot;.<br>
+    <br>
+    <br>
+    <br>
+    </td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="link">
+  <tr>
+    <td><b>Top :</b>[ <a HREF="../p_index.html">Table of Contents</a> ]<br>
+    </td>
+  </tr>
+</table>
+
+<p><br>
+</p>
+</body>
+</html>

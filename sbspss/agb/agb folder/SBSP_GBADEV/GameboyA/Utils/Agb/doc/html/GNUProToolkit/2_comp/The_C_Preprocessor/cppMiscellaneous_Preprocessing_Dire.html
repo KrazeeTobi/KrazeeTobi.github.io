@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Miscellaneous Preprocessing Directives</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppCombining_Source_Files.html">Previous</A>|<A HREF="cppC_Preprocessor_Output.html">Next</A>
+<BR><A NAME="off_854050"></A><A NAME="bdcb2856"></A><A NAME="off_854050"></A><A NAME="bdcb2856"></A><A NAME="off_854050"></A><A NAME="bdcb2856"></A><A NAME="off_854050"></A><A NAME="bdcb2856"></A><A NAME="off_854050"></A><A NAME="bdcb2856"></A><A NAME="off_854050"></A><A NAME="bdcb2856"></A><A NAME="off_854050"></A><A NAME="bdcb2856"></A><A NAME="off_854050"></A><A NAME="bdcb2856"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><B><FONT SIZE=+3>Miscellaneous
+preprocessing directives&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>There
+are three preprocessing directives that are not very useful, but are mentioned
+for completeness.</FONT></FONT></FONT>
+<UL>
+<UL TYPE=SQUARE>
+<LI>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The <I>null
+directive</I> consists of a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+followed by a Newline, with only whitespace (including comments) in between.
+A null directive is understood as a preprocessing directive but has no
+effect on the preprocessor output. The primary significance of the existence
+of the null directive is that an input line consisting of just a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will produce no output, rather than a line of output containing just a
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Supposedly some old C programs contain such lines.</FONT></FONT></FONT></LI>
+
+<LI>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The ANSI
+standard specifies that the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive has an arbitrary, implementation-defined effect. In the GNU C
+preprocessor, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directives are not used, except for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+once</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> (see </FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="cppOnceOnly_Include_Files.html">Once-only
+include files</A></FONT><FONT COLOR="#000000">). However, they are left
+in the preprocessor output, so they are available to the compilation pass.</FONT></FONT></FONT></LI>
+
+<LI>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#ident</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive is supported for compatibility with certain other systems. It
+is followed by a line of text. On some systems, the text is copied into
+a special place in the object file; on most systems, the text is ignored
+and this directive has no effect. Typically, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#ident</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is only used in header files supplied with those systems where it is meaningful.</FONT></FONT></FONT></LI>
+</UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppCombining_Source_Files.html">Previous</A>|<A HREF="cppC_Preprocessor_Output.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

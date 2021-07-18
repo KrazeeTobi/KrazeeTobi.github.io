@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>The foreach Function</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeFunctions_for_File_Names.html">Previous</A>|<A HREF="makeThe_origin_Function.html">Next</A>
+<BR><A NAME="off_1608468"></A><A NAME="ce80322b"></A><B><FONT SIZE=+3><FONT FACE="Futura Md BT">The
+</FONT><FONT FACE="Courier New">foreach</FONT><FONT FACE="Futura Md BT">
+function</FONT></FONT></B><FONT FACE="Futura Md BT"></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foreach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function is very different from other functions. It causes one piece of
+text to be used repeatedly, each time with a different substitution performed
+on it. It resembles the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>for</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command in the shell </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sh</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foreach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command in the C-shell, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>csh</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The syntax of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foreach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function is: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(foreach
+<I>var</I>,<I>list</I>,<I>text</I>)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The first two arguments,
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>var</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+are expanded before anything else is done; the last argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is not expanded at the same time. Then for each word of the expanded value
+of list, the variable named by the expanded value of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>var</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is set to that word, and </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>is expanded.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Presumably </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+contains references to that variable, so its expansion will be different
+each time.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The result is that </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is expanded as many times as there are whitespace-separated words in </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The multiple expansions of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are concatenated, with spaces between them, to make the result of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foreach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The following example sets
+the variable, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>files</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+to the list of all files in the directories in the list, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>dirs</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>dirs := a b c d</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>files := $(foreach dir,$(dirs),$(wildcard
+$(dir)/*))</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>With the previous example, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(wildcard $(dir)/*)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+The first repetition finds the value ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>dir</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+so it produces the same result as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(wildcard
+a/*)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’; the second
+repetition produces the result of ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(wildcard
+b/*)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’; and the
+third, that of ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(wildcard
+c/*)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’. The previous
+example has the same result (except for setting ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>dirs</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’)
+as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>files:= $(wildcard
+a/* b/* c/* d/*)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>text</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is complicated, you can improve readability by giving it a name, with an
+additional variable, as in the following.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>find_files = $(wildcard $(dir)/*)</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>dirs := a b c d</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>files := $(foreach dir,$(dirs),$(find_files))</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In the previous example, we
+use the variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>find_files</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+this way. We use plain ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to define a recursively-expanding variable, so that its value contains
+an actual function call to be re-expanded under the control of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foreach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+a simply-expanded variable would not do, since </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>wildcard</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+would be called only once at the time of defining </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>find_files</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foreach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function has no permanent effect on the variable, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>var</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+its value and flavor after the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foreach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function call are the same as they were beforehand. The other values which
+are taken from </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>list</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are in effect only temporarily, during the execution of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foreach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The variable, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>var</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is a simply-expanded variable during the execution of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foreach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.If
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>var </FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>was
+undefined before the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foreach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function call, it is undefined after the call. See <FONT COLOR="#008000"><A HREF="makeThe_Two_Flavors_of_Variables.html">The
+two flavors of variables</A></FONT>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You must take care when using
+complex variable expressions that result in variable names because many
+strange things are valid variable names, and are probably not what you
+intended. Consider the following, for example.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>files := $(foreach Esta escrito
+en espanol!,b c ch,$(find_files))</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This expression might be
+useful if the value of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>find_files</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+references the variable whose name is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Esta
+escrito en espanol!</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+(es un nombre bastante largo, no?), but it is more likely to be a mistake.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeFunctions_for_File_Names.html">Previous</A>|<A HREF="makeThe_origin_Function.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

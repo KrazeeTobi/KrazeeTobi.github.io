@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>ilogb, ilogbf[get exponent of floating point number]</TITLE>
+</HEAD>
+<BODY>
+<A HREF="libm.html">Contents</A>|<A HREF="libmindex.html">Index</A>|<A HREF="libmhypot_hypotfdistance_from_origin.html">Previous</A>|<A HREF="libminfinity_infinityfrepresentation.html">Next</A>
+
+<P><A NAME="off_262593"></A><A NAME="41741e6a"></A><A NAME="off_262593"></A><A NAME="41741e6a"></A><A NAME="off_262593"></A><A NAME="41741e6a"></A><A NAME="off_262593"></A><A NAME="41741e6a"></A><A NAME="off_262593"></A><A NAME="41741e6a"></A><A NAME="off_262593"></A><A NAME="41741e6a"></A><A NAME="off_262593"></A><A NAME="41741e6a"></A><FONT SIZE=+3><FONT FACE="Courier New">ilogb</FONT><FONT FACE="Times New Roman">,
+</FONT><FONT FACE="Courier New">ilogbf</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+3>[get exponent of floating
+point number]</FONT></FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+1>#include &lt;math.h></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+1>int ilogb(double <I>val</I>);</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+1>int ilogbf(float <I>val</I>);</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>All non zero, normal numbers
+can be described as </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>m</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>*
+2**</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>p</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ilogb</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ilogbf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">examine the argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>val</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and return </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>p</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The functions, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>frexp</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>frexpf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+are similar to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ilogb</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ilogbf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+although both also return </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>m</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>ilogb</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ilogbf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">return the power of two used to form
+the floating point argument. If </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>val</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+they return </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-INT_MAX
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>(</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>INT_MAX</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is defined in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>limits.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+If </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>val</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is infinite, or </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>NaN</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+they return </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>INT_MAX</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Neither </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ilogb</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">nor </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ilogbf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is required by ANSI C or by the System
+V Interface Definition (Issue 2).</FONT></FONT>
+</BODY>
+</HTML>

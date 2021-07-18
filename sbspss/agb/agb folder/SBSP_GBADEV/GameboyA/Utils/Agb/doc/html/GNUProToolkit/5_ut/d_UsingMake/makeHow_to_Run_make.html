@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>How to Run make</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeThe_shell_Function.html">Previous</A>|<A HREF="makeArguments_to_Specify_the_Makefil.html">Next</A>
+<BR><A NAME="off_1704698"></A><A NAME="1db1ad59"></A><B><FONT SIZE=+3><FONT FACE="Futura Md BT">How
+to run </FONT><FONT FACE="Courier New">make</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>A makefile
+that says how to recompile a program can be used in more than one way.
+The simplest use is to recompile every file that is out of date.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>See the following documentation
+for more discussion.</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeArguments_to_Specify_the_Makefil.html">Arguments
+to specify the makefile</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeArguments_to_Specify_the_Goals.html">Arguments
+to specify the goals</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeInstead_of_Executing_the_Command.html">Instead
+of executing the commands</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeAvoiding_Recompilation_of_Some_F.html">Avoiding
+recompilation of some files</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeOverriding_Variables.html">Overriding
+variables</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeTesting_the_Compilation_of_a_Pro.html">Testing
+the compilation of a program</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="makeSummary_of_Options.html">Summary
+of options</A></FONT></FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Usually, makefiles are written
+so that if you run </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with no arguments, it does just that.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>However, you might want to
+update only some of the files; you might want to use a different compiler
+or different compiler options; you might want just to find out which files
+are out of date without changing them. By giving arguments when you run
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+you can do any of these things and many others.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The exit status of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is always one of the following three values.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The exit status is zero
+if </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is successful.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>2</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The exit status is two if
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+encounters any errors. It will print messages describing the particular
+errors.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>1</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The exit status is one if
+you use the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-q</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+flag and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+determines that some target is not already up to date.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeThe_shell_Function.html">Previous</A>|<A HREF="makeArguments_to_Specify_the_Makefil.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

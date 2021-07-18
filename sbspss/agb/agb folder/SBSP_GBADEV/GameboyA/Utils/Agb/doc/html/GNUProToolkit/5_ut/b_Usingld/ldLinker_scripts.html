@@ -1,0 +1,3082 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE> Linker scripts</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<DIV CLASS="ChapterTitle"><A NAME="Top"></A><A HREF="ld.html">Contents</A>|<A HREF="ldindex.html">Index</A>|<A HREF="ldEnvironment_Variables.html">Previous</A>|<A HREF="ldMachine_Dependent_Features.html">Next</A></DIV>
+
+<DIV CLASS="ChapterTitle"><A NAME="pgfId=1002958"></A><A NAME="42018"></A><FONT SIZE=+3><FONT FACE="Futura Md BT"><FONT COLOR="#000000">Linker
+scripts&nbsp;&nbsp;</FONT></FONT>&nbsp;</FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%"></DIV>
+<A NAME="pgfId=1002965"></A><FONT SIZE=+1>A linker script&nbsp;<A NAME="marker=1007222"></A>controls
+every link. Such a script is written in the linker command language. The
+main purpose of the linker script is to describe how the sections in the
+input files should be mapped into the output file, and to control the memory
+layout of the output file. However, when necessary, the linker script can
+also direct the linker to perform many other operations, using the linker
+commands. The following documentation discusses using the linker script
+and its commands.</FONT>
+<UL>
+<UL>
+<UL>
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="#Concepts">Basic linker script concepts</A></FONT></LI>
+
+<UL>
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="#formats">Linker script format</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="#example">Simple linker script example</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="#Commands">Simple linker script commands</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Entry_point">Setting the entry point</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Commands_dealing">Commands dealing with files</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#OFF">Commands dealing with object file formats</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Other_commands">Other linker script commands</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="#Assigning_values_symbols">Assigning values to symbols</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="#Simple_assignments">Simple assignments</A></FONT></LI>
+</UL>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#PROVIDE_command"><TT>PROVIDE</TT> command</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="#SECTIONS_command"><TT>SECTIONS</TT> command</A></FONT></LI>
+
+<UL>
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Output_section_description">Output section description</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Output_section_name">Output section name</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Output_section_address">Output section address</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Input_section_description">Input section description</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Input_section_basics">Input section basics</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Input_section_wildcard_patterns">Input section
+wildcard patterns</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Input_section_for_common_symbols">Input section
+for common symbols</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Input_section_example">Input section example</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Output_section_data">Output section data</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Output_section_keywords">Output section keywords</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Output_section_discarding">Output section discarding</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Output_section_attributes">Output section attributes</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Output_section_type">Output section type</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Output_section_LMA">Output section LMA</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Output_section_region">Output section region</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Output_section_phdr">Output section <TT>phdr</TT></A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Output_section_fill">Output section fill</A></FONT></LI>
+</UL>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Overlay_description">Overlay description</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="#MEMORY_command"><TT>MEMORY</TT> command</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="#PHDRS_command"><TT>PHDRS</TT> command</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="#VERSION_command"><TT>VERSION</TT> command</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="#Expressions_in _linker_scripts">Expressions in
+linker scripts</A></FONT></LI>
+
+<UL>
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="#Constants">Constants</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Symbol_names">Symbol names</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#The_location_counter">The location counter</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Operators">Operators</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Evaluation">Evaluation</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#The_section_of_an_expression">The section of an
+expression</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="#Builtin_functions">Builtin functions</A></FONT></LI>
+</UL>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Heading1">&nbsp;
+
+<P><A NAME="pgfId=1002969"></A><A NAME="_Toc417794832"></A><A NAME="Concepts"></A><B><I><FONT SIZE=+2>Basic
+linker script concepts</FONT></I></B></DIV>
+
+
+<P><A NAME="pgfId=1002966"></A><FONT SIZE=+1>The linker always uses a linker
+script. If you do not supply one yourself, the linker will use a default
+script that is compiled into the linker executable. You can use the&nbsp;
+<TT>--verbose</TT> command line option to display the default linker script.
+Certain command line options, such as&nbsp; <TT>-r</TT> or <TT>-N</TT>,
+will affect the default linker script. You may supply your own linker script
+by using the <TT>-T</TT> command line option. When you do this, your linker
+script will replace the default linker script.</FONT>
+<DIV CLASS="Body">
+<DIV CLASS="Body"><A NAME="pgfId=1002967"></A><FONT SIZE=+1>You may also
+use linker scripts implicitly by naming them as input files to the linker,
+as though they were files to be linked. If the linker opens a file, which
+it can not recognize as an object file or as an archive file, it will try
+to read it as a linker script. If the file can not be parsed as a linker
+script, the linker will report an error. An implicit linker script will
+not replace the default linker script. Typically an implicit linker script
+would contain only the <TT>INPUT</TT>, <TT>GROUP</TT>, or <TT>VERSION</TT>
+commands.</FONT></DIV>
+<A NAME="pgfId=1002970"></A><FONT SIZE=+1>We need to define some basic
+concepts and vocabulary in order to describe the linker script language.&nbsp;</FONT><A NAME="marker=1007232"></A></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1002971"></A><FONT SIZE=+1>The linker
+combines input files into a single output file. The output file and each
+input file are in a special data format known as an object file format&nbsp;<A NAME="marker=1007227"></A>.
+Each file is called an object file&nbsp;<A NAME="marker=1007229"></A>.
+The output file is often called an executable&nbsp;<A NAME="marker=1007228"></A>,
+but for our purposes we will also call it an object file. Each object file
+has, among other things, a list of sections. We sometimes refer to a section
+in an input file as an input section&nbsp;<A NAME="marker=1007231"></A>;
+similarly, a section in the output file is an output section&nbsp;<A NAME="marker=1007230"></A>.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1002972"></A><FONT SIZE=+1>Each section
+in an object file has a name and a size. Most sections also have an associated
+block of data, known as the section contents&nbsp;<A NAME="marker=1007233"></A>.
+A section may be marked as loadable&nbsp;<A NAME="marker=1007235"></A>,
+meaning that the contents should be loaded into memory when the output
+file is run. A section with no contents may be allocatable&nbsp;<A NAME="marker=1007234"></A>,
+which means that an area in memory should be set aside, but nothing in
+particular should be loaded there (in some cases this memory must be zeroed
+out). A section, which is neither loadable nor allocatable, typically contains
+some sort of debugging information.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1002973"></A><FONT SIZE=+1>Every loadable
+or allocatable output section has two addresses. The first is the&nbsp;<A NAME="marker=1007240"></A>VMA&nbsp;<A NAME="marker=1007237"></A>,
+or virtual memory address&nbsp;<A NAME="marker=1007236"></A>. This is the
+address the section will have when the output file is run. The second is
+the LMA&nbsp;<A NAME="marker=1007238"></A>, or load memory address&nbsp;<A NAME="marker=1007239"></A>.
+This is the address at which the section will be loaded. In most cases
+the two addresses will be the same. An example of when they might be different
+is when a data section is loaded into ROM, and then copied into RAM when
+the program starts up (this technique is often used to initialize global
+variables in a ROM based system). In this case the ROM address would be
+the&nbsp;<A NAME="marker=1007241"></A>LMA, and the RAM address would be
+the VMA.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1002974"></A><FONT SIZE=+1>You can see
+the sections in an object file by using the <TT>objdump</TT> program with
+the <TT>-h</TT> option.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1002975"></A><FONT SIZE=+1>Every object
+file also has a list of symbols&nbsp;<A NAME="marker=1007242"></A>, known
+as the symbol table&nbsp;<A NAME="marker=1007243"></A>. A symbol may be
+defined or undefined. Each symbol has a name, and each defined symbol has
+an address, among other information. If you compile a C or C++ program
+into an object file, you will get a defined symbol for every defined function
+and global or static variable. Every undefined function or global variable,
+which is referenced in the input file, will become an undefined symbol.
+You can see the symbols in an object file by using the&nbsp;<A NAME="marker=1007245"></A><A NAME="marker=1007246"></A><A NAME="marker=1007247"></A><TT>nm</TT>
+program, or by using the <TT>objdump</TT>&nbsp;<A NAME="marker=1007244"></A>
+program with the <TT>-t</TT> option.</FONT>
+
+<P>&nbsp;</DIV>
+
+<DIV CLASS="Heading1"><A NAME="pgfId=1002977"></A><A NAME="_Toc417794833"></A><A NAME="formats"></A><B><I><FONT SIZE=+2>Linker
+script format</FONT></I></B></DIV>
+
+
+<P>&nbsp;<A NAME="pgfId=1002978"></A><FONT SIZE=+1>Linker scripts are text
+files. You write a linker script as a series of commands. Each command
+is either a keyword, possibly followed by arguments or an assignment to
+a symbol. You may separate commands using semicolons. Whitespace is generally
+ignored.&nbsp;<A NAME="marker=1007248"></A></FONT>
+<DIV CLASS="Body"><A NAME="pgfId=1002979"></A><FONT SIZE=+1>Strings such
+as file or format names can normally be entered directly. If the file name
+contains a character such as a comma, which would otherwise serve to separate
+file names, you may put the file name in double quotes. There is no way
+to use a double quote character in a file name.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1002980"></A><FONT SIZE=+1>You may include
+comments in linker scripts just as in C, delimited by&nbsp;<A NAME="marker=1007250"></A><TT>/*</TT>
+and <TT>*/</TT>. As in C, comments are syntactically equivalent to whitespace.&nbsp;<A NAME="marker=1007253"></A></FONT>
+
+<P>&nbsp;</DIV>
+
+<DIV CLASS="Heading1"><A NAME="pgfId=1002982"></A><A NAME="_Toc417794834"></A><A NAME="example"></A><B><I><FONT SIZE=+2>Simple
+linker script example</FONT></I></B></DIV>
+
+
+<P>&nbsp;<A NAME="pgfId=1002983"></A><FONT SIZE=+1>Many linker scripts
+are fairly simple. The simplest possible linker script has just one command:&nbsp;<A NAME="marker=1007254"></A><TT>SECTIONS</TT>.
+You use the <TT>SECTIONS</TT> command to describe the memory layout of
+the output file. The <TT>SECTIONS</TT> command is a powerful command. Here
+we will describe a simple use of it. Lets assume your program consists
+only of code, initialized data, and uninitialized data. These will be in
+the&nbsp;<A NAME="marker=1007260"></A><A NAME="marker=1007261"></A><TT>.text</TT>
+, <TT>.data</TT>, and <TT>.bss</TT> sections, respectively. Lets assume
+further that these are the only sections, which appear in your input files.</FONT>
+<DIV CLASS="Body"><A NAME="pgfId=1002984"></A><FONT SIZE=+1>For this example,
+lets say that the code should be loaded at address <TT>0x10000</TT> , and
+that the data should start at address <TT>0x8000000</TT>. The following
+linker script will do this function.</FONT></DIV>
+&nbsp;
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1002985"></A><FONT SIZE=+1>SECTIONS</FONT></PRE>
+
+<PRE><FONT SIZE=+1>{</FONT></PRE>
+
+<PRE><FONT SIZE=+1>. = 0x10000;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>.text : { *(.text) }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>. = 0x8000000;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>.data : { *(.data) }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>.bss : { *(.bss) }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1002986"></A><FONT SIZE=+1>You write the
+<TT>SECTIONS</TT> command as the keyword <TT>SECTIONS</TT>, followed by
+a series of symbol assignments and output section descriptions enclosed
+in curly braces. The first line in the above example sets the special symbol
+<TT>.</TT>, which is the location counter. If you do not specify the address
+of an output section in some other way (other ways are described later),
+the address is set from the current value of the location counter. The
+location counter is then incremented by the size of the output section.
+The second line defines an output section, <TT>.text</TT>. The colon is
+required syntax, which may be ignored for now. Within the curly braces
+after the output section name, you list the names of the input sections,
+which should be placed into this output section. The <TT>*</TT> is a wildcard
+which matches any file name. The expression <TT>*(.text)</TT>&nbsp;<A NAME="marker=1007255"></A>
+means all <TT>.text</TT>&nbsp;<A NAME="marker=1007256"></A>input sections
+in all input files.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1002987"></A><FONT SIZE=+1>Since the location
+counter is <TT>0x10000</TT> when the output section <TT>.text</TT> is defined,
+the linker will set the address of the <TT>.text</TT>&nbsp;<A NAME="marker=1007259"></A>
+section in the output file to be <TT>0x10000</TT>. The remaining lines
+define the <TT>.data</TT> and <TT>.bss</TT> sections in the output file.
+The <TT>.data</TT> output section will be at address <TT>0x8000000</TT>
+. When the <TT>.bss</TT> output section is defined, the value of the location
+counter will be <TT>0x8000000</TT> plus the size of the ` <TT>.data</TT>
+output section. The effect is that the <TT>.bss</TT>&nbsp;<A NAME="marker=1007257"></A>
+output section will follow immediately after the <TT>.data</TT>&nbsp;<A NAME="marker=1007258"></A>
+output section in memory.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1005897"></A><FONT SIZE=+1>Thats it! Thats
+a simple and complete linker script.</FONT>
+
+<P>&nbsp;</DIV>
+
+<DIV CLASS="Heading1"><A NAME="pgfId=1002989"></A><A NAME="_Toc417794835"></A><A NAME="Commands"></A><B><I><FONT SIZE=+2>Simple
+linker script commands</FONT></I></B></DIV>
+
+
+<P>&nbsp;<A NAME="pgfId=1002990"></A><FONT SIZE=+1>In the following documentation,
+the discussion describes the simple linker script commands. See also <A HREF="ldCommand_Line_Options.html" CLASS="XRef">Command
+line options for ld</A> and <A HREF="ldBFD.html" CLASS="XRef">BFD</A>.</FONT>
+
+<P>&nbsp;
+
+<P CLASS="Heading2"><A NAME="pgfId=1002992"></A><A NAME="_Toc417794836"></A><A NAME="Entry_point"></A><B><I><FONT SIZE=+2>Setting
+the entry point</FONT></I></B>
+<BR>&nbsp;
+<DIV CLASS="Body"><A NAME="pgfId=1002993"></A><FONT SIZE=+1>The first instruction
+to execute in a program is called the entry point<A NAME="marker=1007262"></A>.
+You can use the <TT>ENTRY</TT> linker script command to set the entry point.
+The argument is a symbol name:</FONT></DIV>
+
+<UL>
+<PRE CLASS="Body"><A NAME="pgfId=1005902"></A><FONT SIZE=+1><TT>ENTRY (</TT><I>symbol</I><TT>)</TT></FONT></PRE>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1002994"></A><FONT SIZE=+1>There are several
+ways to set the entry point. The linker will set the entry point by trying
+each of the following methods in order, and stopping when one of them succeeds:</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<LI CLASS="Bullet">
+<A NAME="pgfId=1002995"></A><FONT SIZE=+1>The <TT>-e</TT> entry&nbsp;<A NAME="marker=1007263"></A>command-line
+option;</FONT></LI>
+
+<LI CLASS="Bullet">
+<A NAME="pgfId=1002996"></A><FONT SIZE=+1>The <TT>ENTRY (<I>symbol</I>)</TT>
+command in a linker script;</FONT></LI>
+
+<LI CLASS="Bullet">
+<A NAME="pgfId=1002997"></A><FONT SIZE=+1>The value of the symbol, <TT>start</TT>,
+if defined;</FONT></LI>
+
+<LI CLASS="Bullet">
+<A NAME="pgfId=1002998"></A><FONT SIZE=+1>The address of the first byte
+of the <TT>.text</TT> section, if present;</FONT></LI>
+
+<LI CLASS="Bullet">
+<A NAME="pgfId=1002999"></A><FONT SIZE=+1>The address, <TT>0</TT>.</FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003001"></A><A NAME="_Toc417794837"></A><A NAME="Commands_dealing"></A><B><I><FONT SIZE=+2>Commands
+dealing with files</FONT></I></B></DIV>
+
+
+<P>&nbsp;<A NAME="pgfId=1003002"></A><FONT SIZE=+1>Several linker script
+commands deal with files. See also <A HREF="ldCommand_Line_Options.html" CLASS="XRef">Command
+line options for ld</A> and <A HREF="ldBFD.html" CLASS="XRef">BFD</A>.</FONT>
+<DIV CLASS="BodyHang1">
+<UL><A NAME="pgfId=1003003"></A><TT><FONT SIZE=+1>INCLUDE <I>filename</I></FONT></TT>
+<UL><FONT SIZE=+1>Include the linker script, <I><TT>filename</TT></I>,
+at this point. The file will be searched for in the current directory,
+and in any directory specified with the <TT>-L</TT> option. You can nest
+calls to <TT>INCLUDE</TT> up to 10 levels deep.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><A NAME="pgfId=1003004"></A><TT><FONT SIZE=+1>INPUT (<I>file</I>, <I>file</I>,
+...)</FONT></TT>
+<BR><A NAME="pgfId=1003005"></A><TT><FONT SIZE=+1>INPUT (<I>file file</I>
+...)</FONT></TT>
+<UL><FONT SIZE=+1>The <TT>INPUT</TT> command directs the linker to include
+the named files in the link, as though they were named on the command line.</FONT></UL>
+&nbsp;
+<UL><A NAME="pgfId=1003006"></A><FONT SIZE=+1>For example, if you always
+want to include <TT>subr.o</TT> any time you do a link, but you cant be
+bothered to put it on every link command line, then you can put <TT>INPUT
+(subr.o)</TT> in your linker script. In fact, if you like, you can list
+all of your input files in the linker script, and then invoke the linker
+with nothing but a <TT>-T</TT> option. The linker will first try to open
+the file in the current directory. If it is not found, the linker will
+search through the archive library search path. See the description of
+<TT>-L</TT> . If you use <TT>INPUT (-l</TT> <TT><I>file</I>)</TT>, <TT>ld</TT>
+will transform the name to <TT>lib</TT> <TT><I>file</I>.a</TT> , as with
+the command line argument, <TT>-l</TT>. When you use the <TT>INPUT</TT>
+command in an implicit linker script, the files will be included in the
+link at the point at which the linker script file is included. This can
+affect archive searching.</FONT>
+<BR>&nbsp;</UL>
+<TT><FONT SIZE=+1>GROUP(FILE, FILE, ...)</FONT></TT>
+<BR><A NAME="pgfId=1003007"></A><TT><FONT SIZE=+1>GROUP (file<I> file</I></FONT></TT><FONT SIZE=+1>
+<TT>...)</TT></FONT>
+<UL><FONT SIZE=+1>The <TT>GROUP</TT> command is like <TT>INPUT</TT> , except
+that the named files should all be archives, and they are searched repeatedly
+until no new undefined references are created.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><A NAME="pgfId=1003008"></A><FONT SIZE=+1><TT>OUTPUT</TT> <TT>(<I>filename</I>)</TT></FONT>
+<UL><FONT SIZE=+1>The <TT>OUTPUT</TT> command names the output file. Using
+<TT>OUTPUT(FILENAME)</TT> in the linker script is exactly like using <TT>-o</TT>
+filename on the command line. If both are used, the command line option
+takes precedence.</FONT></UL>
+&nbsp;
+<UL><A NAME="pgfId=1003009"></A><FONT SIZE=+1>You can use the <TT>OUTPUT</TT>
+command to define a default name for the output file other than the usual
+default of <TT>a.out</TT>.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><A NAME="pgfId=1006079"></A><TT><FONT SIZE=+1>SEARCH_DIR (<I>path</I>)</FONT></TT>
+<UL><FONT SIZE=+1>The <TT>SEARCH_DIR</TT> command adds path to the list
+of paths where <TT>ld</TT> looks for archive libraries. Using <TT>SEARCH_DIR
+(<I>path</I>)</TT> is exactly like using <TT>-L </TT>path on the command
+line; see <A HREF="ldCommand_Line_Options.html" CLASS="XRef">Command line
+options for ld</A>. If both are used, then the linker will search both
+paths. Paths specified using the command line option are searched first.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><A NAME="pgfId=1003010"></A><FONT SIZE=+1><TT>STARTUP (</TT> <I><TT>filename</TT></I>
+<TT>)</TT></FONT>
+<UL><FONT SIZE=+1>The <TT>STARTUP</TT> command is just like the <TT>INPUT</TT>
+command, except that filename will become the first input file to be linked,
+as though it were specified first on the command line. This may be useful
+when using a system in which the entry point is always the start of the
+first file.</FONT>
+<BR>&nbsp;</UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003012"></A><A NAME="_Toc417794838"></A><A NAME="OFF"></A><B><I><FONT SIZE=+2>Commands
+dealing with object file formats</FONT></I></B></DIV>
+
+
+<P><A NAME="pgfId=1003013"></A><FONT SIZE=+1>A couple of linker script
+commands deal with object file formats. See also&nbsp;<A NAME="marker=1007264"></A><A HREF="ldCommand_Line_Options.html" CLASS="XRef">Command
+line options for <TT>ld</TT></A> and <A HREF="ldBFD.html" CLASS="XRef">BFD</A>.</FONT>
+<DIV CLASS="BodyHang1">
+<UL><A NAME="pgfId=1003014"></A><TT><FONT SIZE=+1>OUTPUT_FORMAT (<I>bfdname</I>)</FONT></TT>
+<BR><A NAME="pgfId=1003015"></A><TT><FONT SIZE=+1>OUTPUT_FORMAT(default,
+big, little)</FONT></TT>
+<UL><FONT SIZE=+1>The <TT>OUTPUT_FORMAT</TT> command names which BFD format
+to use for the output file. Using <TT>OUTPUT_FORMAT (<I>bfdname</I>)</TT>
+is exactly like using <TT>-oformat&nbsp;</TT> <I><TT>bfdname</TT></I> on
+the command line . If both are used, the command line option takes precedence.</FONT></UL>
+</UL>
+</DIV>
+
+<UL>
+<UL>
+<DIV CLASS="BodyListFollow"><A NAME="pgfId=1003016"></A><FONT SIZE=+1>You
+can use <TT>OUTPUT_FORMAT</TT> with three arguments to use different formats
+based on the <TT>-EB</TT> and <TT>-EL</TT> command line options. This permits
+the linker script to set the output format based on the desired endianness.
+If neither <TT>-EB</TT> nor <TT>-EL</TT> is used, then the output format
+will be the first argument, <TT>DEFAULT</TT> . If <TT>-EB</TT> is used,
+the output format will be the second argument, <TT>BIG</TT>. If <TT>-EL</TT>
+is used, the output format will be the third argument, <TT>LITTLE</TT>.
+For example, the default linker script for the MIPS ELF target uses the
+following command:</FONT></DIV>
+&nbsp;
+<UL>&nbsp;<A NAME="pgfId=1003017"></A><TT><FONT SIZE=+1>OUTPUT_FORMAT(elf32-bigmips,
+elf32-bigmips, elf32-littlemips)</FONT></TT></UL>
+</UL>
+&nbsp;
+<UL><A NAME="pgfId=1003018"></A><FONT SIZE=+1>This says that the default
+format for the output file is <TT>elf32-bigmips</TT>, but if the user uses
+the <TT>-EL</TT> command line option, the output file will be created in
+the <TT>elf32-littlemips</TT> format.</FONT></UL>
+</UL>
+
+<DIV CLASS="BodyHang1">
+<UL><A NAME="pgfId=1006288"></A><TT><FONT SIZE=+1>TARGET(<I>bfdname</I>)</FONT></TT>
+<UL><FONT SIZE=+1>The <TT>TARGET</TT> command names which BFD format to
+use when reading input files. It affects subsequent <TT>INPUT</TT> and
+<TT>GROUP</TT> commands. This command is like using <TT>-b </TT>bfdname
+on the command line. If the <TT>TARGET</TT> command is used but <TT>OUTPUT_FORMAT</TT>
+is not, then the last <TT>TARGET</TT> command is also used to set the format
+for the output file.</FONT>
+<BR>&nbsp;</UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003020"></A><A NAME="_Toc417794839"></A><A NAME="Other_commands"></A><B><I><FONT SIZE=+2>Other
+linker script commands</FONT></I></B></DIV>
+
+
+<P>&nbsp;<A NAME="pgfId=1003021"></A><FONT SIZE=+1>The following options
+are a few other linker scripts commands. See also&nbsp;<A NAME="marker=1007265"></A><A HREF="ldCommand_Line_Options.html" CLASS="XRef">Command
+line options for <TT>ld</TT></A> and <A HREF="ldBFD.html" CLASS="XRef">BFD</A>.</FONT>
+<DIV CLASS="BodyHang1">
+<UL>
+<UL>
+<UL>
+<LI>
+<A NAME="pgfId=1003022"></A><TT><FONT SIZE=+1>FORCE_COMMON_ALLOCATION</FONT></TT></LI>
+
+<BR><FONT SIZE=+1>This command has the same effect as the <TT>-d</TT> command-line
+option: to make <TT>ld</TT> assign space to common symbols even if a relocatable
+output file is specified (using the option, <TT>-r</TT>).</FONT></UL>
+</UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL>
+<UL>
+<UL>
+<LI>
+<A NAME="pgfId=1003023"></A><FONT SIZE=+1><TT>NOCROSSREFS(</TT> <TT><I>section
+section </I>...)</TT></FONT></LI>
+
+<BR><FONT SIZE=+1>This command may be used to tell <TT>ld</TT> to issue
+an error about any references among certain output sections.</FONT></UL>
+</UL>
+</UL>
+</DIV>
+
+<UL>
+<UL>
+<UL>&nbsp;<A NAME="pgfId=1003024"></A><FONT SIZE=+1>In certain types of
+programs, particularly on embedded systems when using overlays, when one
+section is loaded into memory, another section will not be. Any direct
+references between the two sections would be errors. For example, it would
+be an error if code in one section called a function defined in the other
+section. The <TT>NOCROSSREFS</TT> command takes a list of output section
+names. If <TT>ld</TT> detects any cross-references between the sections,
+it reports an error and returns a non-zero exit status. Remember that the
+<TT>NOCROSSREFS</TT> command uses output section names, not input section
+names.</FONT></UL>
+</UL>
+</UL>
+
+<DIV CLASS="BodyHang1">
+<UL>
+<UL>
+<UL>
+<LI>
+<A NAME="pgfId=1006365"></A><FONT SIZE=+1><TT>OUTPUT_ARCH(</TT> <I><TT>bfdarch</TT></I>
+<TT>)</TT></FONT></LI>
+
+<BR><FONT SIZE=+1>Specify a particular output machine architecture, <I><TT>bfdarch</TT></I>.
+The argument is one of the names used by the BFD library. You can see the
+architecture of an object file by using the <TT>objdump</TT> program with
+the <TT>-f</TT> option.</FONT></UL>
+</UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Heading1">&nbsp;
+
+<P><A NAME="pgfId=1003026"></A><A NAME="_Toc417794840"></A><A NAME="Assigning_values_symbols"></A><B><I><FONT SIZE=+2>Assigning
+values to symbols</FONT></I></B></DIV>
+
+
+<P>&nbsp;<A NAME="pgfId=1003027"></A><FONT SIZE=+1>You may assign a value
+to a symbol in a linker script. This will define the symbol as a global
+symbol.&nbsp;<A NAME="marker=1007268"></A></FONT>
+<BR>&nbsp;
+<BR>&nbsp;
+
+<P CLASS="Heading2"><A NAME="pgfId=1003029"></A><A NAME="_Toc417794841"></A><A NAME="Simple_assignments"></A><B><I><FONT SIZE=+2>Simple
+assignments</FONT></I></B>
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003030"></A><FONT SIZE=+1>You may assign to a symbol
+using any of the C assignment operators:&nbsp;</FONT><A NAME="marker=1007266"></A><A NAME="marker=1007267"></A></DIV>
+
+<DIV CLASS="CodeExample">
+<UL>
+<UL>
+<UL>
+<UL><A NAME="pgfId=1003031"></A><TT><FONT SIZE=+1><I>symbol</I> = <I>expression</I>;</FONT></TT>
+<BR><TT><FONT SIZE=+1><I>symbol</I> += <I>expression</I>;</FONT></TT>
+<BR><TT><FONT SIZE=+1><I>symbol</I> -= <I>expression</I>;</FONT></TT>
+<BR><TT><FONT SIZE=+1><I>symbol</I> *= <I>expression</I>;</FONT></TT>
+<BR><TT><FONT SIZE=+1><I>symbol</I> /= <I>expression</I>;</FONT></TT>
+<BR><TT><FONT SIZE=+1><I>symbol</I> &lt;&lt;= <I>expression</I>;</FONT></TT>
+<BR><TT><FONT SIZE=+1><I>symbol</I> >>= <I>expression</I>;</FONT></TT>
+<BR><TT><FONT SIZE=+1><I>symbol</I> &amp;= <I>expression</I>;</FONT></TT>
+<BR><TT><FONT SIZE=+1><I>symbol</I> |= <I>expression</I>;</FONT></TT></UL>
+</UL>
+</UL>
+</UL>
+</DIV>
+
+<UL>
+<UL>
+<UL>
+<LI CLASS="Bullet">
+<A NAME="pgfId=1003032"></A><FONT SIZE=+1>The first case will define <I><TT>symbol</TT></I>
+to the value of <I><TT>expression</TT></I>. In the other cases, <I><TT>symbol</TT></I>
+must already be defined, and the value will be accordingly adjusted.</FONT></LI>
+
+<LI CLASS="Bullet">
+<A NAME="pgfId=1003033"></A><FONT SIZE=+1>The special symbol name <TT>.</TT>
+indicates the location counter. You may only use this within a&nbsp;<A NAME="marker=1007269"></A><TT>SECTIONS</TT>
+command.</FONT></LI>
+
+<LI CLASS="Bullet">
+<A NAME="pgfId=1003034"></A><FONT SIZE=+1>The semicolon after <I><TT>expression</TT></I>
+is required.</FONT></LI>
+
+<LI CLASS="Bullet">
+<A NAME="pgfId=1003035"></A><FONT SIZE=+1>See <A HREF="#Expressions_in _linker_scripts" CLASS="XRef">Expressions
+in linker scripts</A>.</FONT></LI>
+
+<LI CLASS="Bullet">
+<A NAME="pgfId=1003036"></A><FONT SIZE=+1>You may write symbol assignments
+as commands in their own right, or as statements within a <TT>SECTIONS</TT>
+command, or as part of an output section description in a <TT>SECTIONS</TT>
+command.</FONT></LI>
+
+<LI CLASS="Bullet">
+<A NAME="pgfId=1003037"></A><FONT SIZE=+1>The section of the <I><TT>symbol</TT></I>
+will be set from the section of the <I><TT>expression</TT></I>; for more
+information, see <A HREF="#Expressions_in _linker_scripts" CLASS="XRef">Expressions
+in linker scripts</A>.</FONT></LI>
+
+<LI CLASS="Bullet">
+<A NAME="pgfId=1003038"></A><FONT SIZE=+1>The following is an example showing
+the three different places that symbol assignments may be used:</FONT></LI>
+
+<UL>
+<UL>
+<PRE CLASS="CodeExample2"><A NAME="pgfId=1003039"></A><FONT SIZE=+1>floating_point = 0;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>SECTIONS</FONT></PRE>
+
+<PRE><FONT SIZE=+1>{</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; .text :</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *(.text)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _etext = .;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; _bdata = (. + 3) &amp; ~ 4;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; .data : { *(.data) }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+</UL>
+</UL>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003040"></A><FONT SIZE=+1>In the previous
+example, the <TT>floating_point</TT> symbol will be defined as zero. The
+<TT>_etext</TT> symbol will be defined as the address following the last
+<TT>.text</TT> input section. The <TT>_bdata</TT> symbol will be defined
+as the address following the <TT>.text</TT> output section aligned upward
+to a 4 byte boundary.</FONT>
+
+<P>&nbsp;</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003042"></A><A NAME="_Toc417794842"></A><A NAME="PROVIDE_command"></A><B><TT><FONT SIZE=+3>PROVIDE</FONT></TT><I><FONT SIZE=+2>
+command</FONT></I></B></DIV>
+
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003043"></A><FONT SIZE=+1>In some cases, it is desirable
+for a linker script to define a symbol only if it is referenced and is
+not defined by any object included in the link. For example, traditional
+linkers defined the symbol, <TT>etext</TT>. However, ANSI C requires that
+the user be able to use <TT>etext</TT> as a function name without encountering
+an error. The <TT>PROVIDE</TT>&nbsp;<A NAME="marker=1007270"></A> keyword
+may be used to define a symbol, such as <TT>etext</TT>, only if it is referenced
+but not defined.</FONT>
+
+<P><FONT SIZE=+1>The syntax is <TT>PROVIDE(</TT> <I><TT>symbol</TT></I>
+<TT>= <I>expression</I>)</TT>.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003044"></A><FONT SIZE=+1>The following
+example shows how to use <TT>PROVIDE</TT> to define <TT>etext.</TT></FONT></DIV>
+&nbsp;
+<UL>
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003045"></A><FONT SIZE=+1>SECTIONS</FONT></PRE>
+
+<PRE><FONT SIZE=+1>{</FONT></PRE>
+
+<PRE><FONT SIZE=+1>.text :</FONT></PRE>
+
+<PRE><FONT SIZE=+1>{</FONT></PRE>
+
+<PRE><FONT SIZE=+1>*(.text)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>_etext = .;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>PROVIDE(etext = .);</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003046"></A><FONT SIZE=+1>In the previous
+example, if the program defines <TT>_etext</TT>, the linker will give a
+multiple definition error. If, on the other hand, the program defines <TT>etext</TT>,
+the linker will silently use the definition in the program. If the program
+references <TT>etext</TT> but does not define it, the linker will use the
+definition in the linker script.</FONT></DIV>
+&nbsp;
+
+<P CLASS="Heading1"><A NAME="pgfId=1003048"></A><A NAME="_Toc417794843"></A><A NAME="SECTIONS_command"></A><B><TT><FONT SIZE=+3>SECTIONS</FONT></TT><I><FONT SIZE=+2>
+command</FONT></I></B>
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003049"></A><FONT SIZE=+1>The <TT>SECTIONS</TT>&nbsp;<A NAME="SECTIONS"></A>
+command tells the linker how to map input sections into output sections,
+and how to place the output sections in memory. The format of the <TT>SECTIONS</TT>
+command is:</FONT></DIV>
+&nbsp;
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003050"></A><FONT SIZE=+1>SECTIONS</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp; <I>sections - command</I></FONT></PRE>
+
+<PRE><I><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp; sections - command</FONT></I></PRE>
+
+<UL>
+<UL>
+<UL>
+<PRE><FONT SIZE=+1>...</FONT></PRE>
+</UL>
+</UL>
+</UL>
+
+<PRE><FONT SIZE=+1>&nbsp; }</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003051"></A><FONT SIZE=+1>Each <I><TT>sections
+- command</TT></I> may of be one of the following:</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<LI CLASS="Bullet">
+<A NAME="pgfId=1003052"></A><FONT SIZE=+1>An <TT>ENTRY</TT> command (see
+<A HREF="#Entry_point">Setting the entry point</A>)</FONT></LI>
+
+<LI CLASS="Bullet">
+<A NAME="pgfId=1003053"></A><FONT SIZE=+1>A symbol assignment (see <A HREF="#Simple_assignments">Simple
+assignments</A>)</FONT></LI>
+
+<LI CLASS="Bullet">
+<A NAME="pgfId=1003054"></A><FONT SIZE=+1>An output section description
+(see <A HREF="#Output_section_description">Output section description</A>)</FONT></LI>
+
+<LI CLASS="Bullet">
+<A NAME="pgfId=1003055"></A><FONT SIZE=+1>An overlay description (see <A HREF="#Overlay_description">Overlay
+description</A>)</FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003056"></A><FONT SIZE=+1>The <TT>ENTRY</TT>
+command and symbol assignments are permitted inside the&nbsp;<A NAME="symbol assignments"></A><TT>SECTIONS</TT>
+command for convenience in using the location counter in those commands.
+This can also make the linker script easier to understand because you can
+use those commands at meaningful points in the layout of the output file.
+See <A HREF="#Output_section_description">Output section description</A>
+and <A HREF="#Overlay_description">Overlay description</A>.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003057"></A><FONT SIZE=+1>If you do not
+use a <TT>SECTIONS</TT> command in your linker script, the linker will
+place each input section into an identically named output section in the
+order that the sections are first encountered in the input files. If all
+input sections are present in the first file, for example, the order of
+sections in the output file will match the order in the first input file.
+The first section will be at address-zero.</FONT>
+<BR><FONT SIZE=+1></FONT>&nbsp;</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003059"></A><A NAME="_Toc417794844"></A><A NAME="Output_section_description"></A><B><I><FONT SIZE=+2>Output
+section description</FONT></I></B>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003060"></A><FONT SIZE=+1>The full description
+of an output section looks like the following statement.&nbsp;</FONT><A NAME="output section"></A></DIV>
+
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003061"></A><FONT SIZE=+1>SECTION [<I>address</I>] [(<I>type</I>)] : [AT(<I>LMA</I>)]</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; {</FONT></PRE>
+
+<PRE><I><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output-sections-command</FONT></I></PRE>
+
+<PRE><I><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output-sections-command</FONT></I></PRE>
+
+<UL>
+<UL>
+<UL>
+<PRE><FONT SIZE=+1>...</FONT></PRE>
+</UL>
+</UL>
+</UL>
+
+<PRE><FONT SIZE=+1>} [><I>region</I>] [: <I>phdr</I> : <I>phdr</I> ...] [=<I>fillexp</I>]</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003062"></A><FONT SIZE=+1>Most output
+sections do not use most of the optional section attributes. The whitespace
+around <TT>SECTION</TT> is required, so that the section name is unambiguous.
+The colon and the curly braces are also required. The line breaks and other
+white space are optional. The expression, <I><TT>LMA</TT></I>, that follows
+the <TT>AT</TT> keyword specifies the load address of the section. This
+feature is designed to make it easy to build a ROM image; see also <A HREF="#Output_section_LMA">Output
+section <I><TT>LMA</TT></I></A><B>.</B></FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003063"></A><FONT SIZE=+1>Each <I><TT>output-sections-command</TT></I>
+may be one of the following:</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<LI CLASS="Bullet">
+<A NAME="pgfId=1003064"></A><FONT SIZE=+1>A symbol assignment (see <A HREF="#Simple_assignments">Simple
+assignments</A>)</FONT></LI>
+
+<LI CLASS="Bullet">
+<A NAME="pgfId=1003065"></A><FONT SIZE=+1>An input section description
+(see <A HREF="#Input_section_description">Input section description</A>)</FONT></LI>
+
+<LI CLASS="Bullet">
+<A NAME="pgfId=1003066"></A><FONT SIZE=+1>Data values to include directly
+(see <A HREF="#Output_section_data">Output section data</A>)</FONT></LI>
+
+<LI CLASS="Bullet">
+<A NAME="pgfId=1003067"></A><FONT SIZE=+1>A special output section keyword
+(see <A HREF="#Output_section_keywords">Output section keywords</A>)</FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003069"></A><A NAME="_Toc417794845"></A><A NAME="Output_section_name"></A><B><I><FONT SIZE=+2>Output
+section name</FONT></I></B></DIV>
+&nbsp;
+<DIV CLASS="Body"><A NAME="pgfId=1003070"></A><FONT SIZE=+1>The name of
+the output section is&nbsp;<A NAME="marker=1006643"></A><I><TT>section</TT></I>.
+<I><TT>section</TT></I> must meet the constraints of your output format.
+In formats which only support a limited number of sections, such as <TT>a.out</TT>,
+the name must be one of the names supported by the format (<TT>a.out</TT>,
+for example, allows only <TT>.text</TT>, <TT>.data</TT> or <TT>.bss</TT>).
+If the output format supports any number of sections, but with numbers
+and not names (as is the case for Oasys), the name should be supplied as
+a quoted numeric string&nbsp;<A NAME="marker=1006642"></A>. A section name
+may consist of any sequence of characters, but a name, which contains any
+unusual characters such as commas, must be quoted. The output section name
+<TT>/DISCARD/</TT> is special. See <A HREF="#Output_section_discarding">Output
+section discarding</A>.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003072"></A><A NAME="_Toc417794846"></A><A NAME="Output_section_address"></A><B><I><FONT SIZE=+2>Output
+section address</FONT></I></B></DIV>
+
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003073"></A><FONT SIZE=+1>The <I><TT>address</TT></I>
+is an expression for the&nbsp;<A NAME="marker=1007274"></A><TT>VMA</TT>
+(the virtual memory address) of the output section. If you do not provide&nbsp;<A NAME="marker=1007279"></A><I><TT>address</TT></I>,
+the linker will set it based on <TT>REGION</TT> if present, or otherwise
+based on the current value of the location counter.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003074"></A><FONT SIZE=+1>If you provide
+<I><TT>address</TT></I>, the address of the output section will be set
+to precisely that specification. If you provide neither <I><TT>address</TT></I>
+nor <I><TT>region</TT></I>, then the address of the output section will
+be set to the current value of the location counter aligned to the alignment
+requirements of the output section. The alignment requirement of the output
+section is the strictest alignment of any input section contained within
+the output section.&nbsp;</FONT><A NAME="marker=1007280"></A></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003075"></A><FONT SIZE=+1>For example,&nbsp;
+the following two declarations are subtly different.</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<LI CLASS="CodeExample">
+<A NAME="pgfId=1003076"></A><TT><FONT SIZE=+1>.text . : { *(.text) }</FONT></TT><A NAME="pgfId=1003077"></A></LI>
+</UL>
+</UL>
+</UL>
+
+<UL>
+<UL>
+<UL>
+<LI CLASS="CodeExample">
+<A NAME="pgfId=1003078"></A><TT><FONT SIZE=+1>.text : { *(.text) }</FONT></TT></LI>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003079"></A><FONT SIZE=+1>The first will
+set the address of the <TT>.text</TT> output section to the current value
+of the location counter. The second will set it to the current value of
+the location counter aligned to the strictest alignment of a&nbsp;<A NAME="marker=1006688"></A><TT>.text</TT>
+input section.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003080"></A><FONT SIZE=+1>The address
+may be an arbitrary expression. See <A HREF="#Expressions_in _linker_scripts" CLASS="XRef">Expressions
+in linker scripts</A>. For example, if you want to align the section on
+a 0x10 byte boundary, so that the lowest four bits of the section address
+are zero, you could use something like the following declaration.&nbsp;</FONT><A NAME="marker=1006687"></A></DIV>
+
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003081"></A><FONT SIZE=+1>.text ALIGN(0x10) : { *(.text) }</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003082"></A><FONT SIZE=+1>This works
+because <TT>ALIGN</TT> returns the current location counter aligned upward
+to the specified value.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003083"></A><FONT SIZE=+1>Specifying
+address for a section will change the value of the location counter.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003085"></A><A NAME="_Toc417794847"></A><A NAME="Input_section_description"></A><B><I><FONT SIZE=+2>Input
+section description</FONT></I></B></DIV>
+&nbsp;
+<DIV CLASS="Body"><A NAME="pgfId=1003086"></A><FONT SIZE=+1>The most common
+output section command is an input section description&nbsp;<A NAME="marker=1006686"></A>.
+The input section description is the most basic linker script operation.
+You use output sections to tell the linker how to lay out your program
+in memory. You use input section descriptions to tell the linker how to
+map the input files into your memory layout.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003087"></A><A NAME="Input_section_basics"></A><B><I><FONT SIZE=+2>Input
+section basics</FONT></I></B></DIV>
+&nbsp;
+<DIV CLASS="Body"><A NAME="pgfId=1003088"></A><FONT SIZE=+1>An input section
+description&nbsp;<A NAME="marker=1007281"></A>consists of a file name optionally
+followed by a list of section names in parentheses. The file name and the
+section name may be wildcard patterns, which we describe; see <A HREF="#Input_section_wildcard_patterns">Input
+section wildcard patterns</A>. The most common input section description
+is to include all input sections with a particular name in the output section.
+For example, to include all input <TT>.text</TT> sections, you would write:</FONT></DIV>
+
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003089"></A><FONT SIZE=+1>*(.text)</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003090"></A><FONT SIZE=+1>Here the <TT>*</TT>
+is a wildcard which matches any file name.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003091"></A><FONT SIZE=+1>There are two
+ways to include more than one section:</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<UL>
+<LI CLASS="CodeExample">
+<A NAME="pgfId=1003092"></A><TT><FONT SIZE=+1>*(.text .rdata)</FONT></TT></LI>
+
+<LI CLASS="CodeExample">
+<A NAME="pgfId=1003093"></A><TT><FONT SIZE=+1>*(.text) *(.rdata)</FONT></TT></LI>
+</UL>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003094"></A><FONT SIZE=+1>The difference
+between these is the order in which the <TT>.text</TT> and <TT>.rdata</TT>
+input sections will appear in the output section. In the first example,
+they will be intermingled. In the second example, all <TT>.text</TT> input
+sections will appear first, followed by all <TT>.rdata</TT> input sections.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003095"></A><FONT SIZE=+1>You can specify
+a file name to include sections from a particular file. You would do this
+if one or more of your files contain special data that needs to be at a
+particular location in memory. For example, use the following input.</FONT></DIV>
+&nbsp;
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003096"></A><FONT SIZE=+1>data.o(.data)</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003097"></A><FONT SIZE=+1>If you use
+a file name without a list of sections, then all sections in the input
+file will be included in the output section. This is not commonly done,
+but it may by useful on occasion. For example, use the following input.</FONT></DIV>
+&nbsp;
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003098"></A><FONT SIZE=+1>data.o</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003099"></A><FONT SIZE=+1>When you use
+a file name, which does not contain any wild card characters, the linker
+will first see if you also specified the file name on the linker command
+line or in an <TT>INPUT</TT> command. If you did not, the linker will attempt
+to open the file as an input file, as though it appeared on the command
+line. This differs from an <TT>INPUT</TT> command, because the linker will
+not search for the file in the archive search path.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003100"></A><A NAME="Input_section_wildcard_patterns"></A><A NAME="35935"></A><B><I><FONT SIZE=+2>Input
+section wildcard patterns</FONT></I></B></DIV>
+&nbsp;
+<DIV CLASS="Body"><A NAME="pgfId=1003101"></A><FONT SIZE=+1>In an input
+section description, either the file name or the section name or both may
+be wildcard patterns. The file name of&nbsp;<A NAME="marker=1007282"></A><A NAME="marker=1007283"></A><TT>*</TT>
+seen in many examples is a simple wildcard pattern for the file name. The
+wildcard patterns are like those used by the Unix shell.</FONT></DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><A NAME="pgfId=1003102"></A><TT><FONT SIZE=+1>*</FONT></TT>
+<UL><FONT SIZE=+1>Matches any number of characters.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><A NAME="pgfId=1003103"></A><TT><FONT SIZE=+1>?</FONT></TT>
+<UL><FONT SIZE=+1>Matches any single character.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><A NAME="pgfId=1003104"></A><TT><FONT SIZE=+1>[<I>chars</I>]</FONT></TT>
+<UL><FONT SIZE=+1>Matches a single instance of any of the <I><TT>chars</TT></I>;
+the <TT>-</TT> character may be used to specify a range of characters,
+as in <TT>[a-z]</TT> to match any lower case letter.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><A NAME="pgfId=1003105"></A><TT><FONT SIZE=+1>\</FONT></TT>
+<UL><FONT SIZE=+1>Quotes the following character.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003106"></A><FONT SIZE=+1>When a file
+name is matched with a wildcard, the wildcard characters will not match
+a <TT>/</TT> character (used to separate directory names on Unix). A pattern
+consisting of a single <TT>*</TT> character is an exception; it will always
+match any file name, whether it contains a <TT>/</TT> or not. In a section
+name, the wildcard characters will match a <TT>/</TT> character.</FONT>
+
+<P><A NAME="pgfId=1003107"></A><FONT SIZE=+1>File name wildcard patterns
+only match files which are explicitly specified on the command line or
+in an&nbsp;<A NAME="marker=1007284"></A><TT>INPUT</TT> command. The linker
+does not search directories to expand wildcards.</FONT>
+
+<P><A NAME="pgfId=1003108"></A><FONT SIZE=+1>If a file name matches more
+than one wildcard pattern, or if a file name appears explicitly and is
+also matched by a wildcard pattern, the linker will use the first match
+in the linker script. For example, the following input uses a sequence
+of input section descriptions that is probably in error, because the <TT>data.o</TT>
+rule will not be used.</FONT>
+<UL>
+<UL>
+<DIV CLASS="CodeExample">
+<UL><A NAME="pgfId=1003109"></A><TT><FONT SIZE=+1>.data : {*(.data) }</FONT></TT></UL>
+</DIV>
+
+<UL><TT><FONT SIZE=+1>.data1 : {data.o(.data)}</FONT></TT></UL>
+</UL>
+</UL>
+<A NAME="pgfId=1003110"></A><FONT SIZE=+1>If you ever get confused about
+where input sections are going, use the <TT>-M</TT> linker option to generate
+a map file. The map file shows precisely how input sections are mapped
+to output sections.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003111"></A><FONT SIZE=+1>This example
+shows how wildcard patterns might be used to partition files. This linker
+script directs the linker to place all <TT>.text</TT> sections in <TT>.text</TT>
+and all <TT>.bss</TT> sections in <TT>.bss</TT>. The linker will place
+the <TT>.data</TT> section from all files beginning with an upper case
+character in <TT>.DATA</TT>; for all other files, the linker will place
+the <TT>.data</TT> section in <TT>.data</TT>.</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003112"></A><FONT SIZE=+1>SECTIONS {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; .text : { *(.text) }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; .DATA : { [A-Z]*(.data) }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; .data : { *(.data) }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; .bss : { *(.bss) }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003113"></A><A NAME="Input_section_for_common_symbols"></A><B><I><FONT SIZE=+2>Input
+section for common symbols</FONT></I></B></DIV>
+
+
+<P>&nbsp;<A NAME="pgfId=1003114"></A><FONT SIZE=+1>A special notation is
+needed for common symbols because, in many object file formats, common
+symbols do not have a particular input section. The linker treats common
+symbols as though they are in an input section named&nbsp;<A NAME="marker=1007285"></A><TT>COMMON</TT>.</FONT>
+<DIV CLASS="Body"><A NAME="pgfId=1003115"></A><FONT SIZE=+1>You may use
+file names with the <TT>COMMON</TT> section just as with any other input
+sections. You can use this to place common symbols from a particular input
+file in one section while common symbols from other input files are placed
+in another section.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003116"></A><FONT SIZE=+1>In most cases,
+common symbols in input files will be placed in the <TT>.bss</TT> section
+in the output file. For example, use the following input.</FONT></DIV>
+
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003117"></A><FONT SIZE=+1>.bss { *(.bss) *(COMMON) }</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003118"></A><FONT SIZE=+1>Some object
+file formats have more than one type of common symbol. For example, the
+MIPS ELF object file format distinguishes standard common symbols and small
+common symbols. In this case, the linker will use a different special section
+name for other types of common symbols. In the case of MIPS ELF, the linker
+uses <TT>COMMON</TT> for standard common symbols and <TT>.scommon</TT>
+for small common symbols. This permits you to map the different types of
+common symbols into memory at different locations.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003119"></A><FONT SIZE=+1>You will sometimes
+see <TT>[COMMON]</TT> in old linker scripts. This notation is now considered
+obsolete. It is equivalent to <TT>*(COMMON)</TT>.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003120"></A><A NAME="Input_section_example"></A><B><I><FONT SIZE=+2>Input
+section example</FONT></I></B></DIV>
+
+<DIV CLASS="Body">&nbsp;
+
+<P><A NAME="pgfId=1003121"></A><FONT SIZE=+1>The following example is a
+complete linker script that tells the linker to read all of the sections
+from file, <TT>all.o</TT>, and place them at the start of output section,
+<TT>outputa</TT>, which starts at a location, <TT>0x10000</TT> . All of
+section <TT>.input1</TT> from file, <TT>foo.o</TT>, follows immediately,
+in the same output section. All of section <TT>.input2</TT> from <TT>foo.o</TT>
+goes into output section <TT>outputb</TT>, followed by section <TT>.input1
+</TT>from <TT>foo1.o</TT>. All of the remaining <TT>.input1</TT> and <TT>.input2</TT>
+sections from any files are written to output section&nbsp;<A NAME="marker=1007286"></A><TT>outputc</TT>
+.</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003122"></A><FONT SIZE=+1>SECTIONS {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; outputa 0x10000 :</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; all.o</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; foo.o (.input1)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; outputb :</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; foo.o (.input2)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; foo1.o (.input1)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; outputc :</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; *(.input1)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; *(.input2)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003124"></A><A NAME="_Toc417794848"></A><A NAME="Output_section_data"></A><B><I><FONT SIZE=+2>Output
+section data</FONT></I></B></DIV>
+&nbsp;
+<DIV CLASS="Body"><A NAME="pgfId=1003125"></A><FONT SIZE=+1>You can include
+explicit bytes of data in an output section by using <TT>BYTE</TT>, <TT>SHORT</TT>,
+<TT>LONG</TT>, <TT>QUAD</TT>, or <TT>SQUAD</TT> as an output section command.
+Each keyword is followed by an expression in parentheses providing the
+value to store; see <A HREF="#Expressions_in _linker_scripts" CLASS="XRef">Expressions
+in linker scripts</A>. The value of the expression is stored at the current
+value of the location counter.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003126"></A><FONT SIZE=+1>The <TT>BYTE</TT>
+, <TT>SHORT</TT>, <TT>LONG</TT>, and <TT>QUAD</TT> commands store one,
+two, four, and eight bytes (respectively). After storing the bytes, the
+location counter is incremented by the number of bytes stored. For example,
+this will store the byte 1 followed by the four byte value of the symbol,
+<I><TT>addr</TT></I>:</FONT></DIV>
+&nbsp;
+<UL>
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003127"></A><FONT SIZE=+1>BYTE(1)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>LONG(<I>addr</I>)</FONT></PRE>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003128"></A><FONT SIZE=+1>When using
+a 64-bit host or target, <TT>QUAD</TT> and <TT>SQUAD</TT> are the same;
+they both store an 8-byte, or 64-bit, value. When both host and target
+are 32 bits, an expression is computed as 32 bits. In this case <TT>QUAD</TT>
+stores a 32-bit value zero extended to 64 bits, and <TT>SQUAD</TT> stores
+a 32-bit value sign extended to 64 bits.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003129"></A><FONT SIZE=+1>If the object
+file format of the output file has an explicit endianness, which is the
+normal case, the value will be stored in that endianness. When the object
+file format does not have an explicit endianness, as is true of, for example,
+S-records, the value will be stored in the endianness of the first input
+object file.&nbsp;</FONT><A NAME="marker=1006763"></A></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003130"></A><FONT SIZE=+1>You may use
+the <TT>FILL</TT> command to set the fill pattern for the current section.
+It is followed by an expression in parentheses. Any otherwise unspecified
+regions of memory within the section (for example, gaps left due to the
+required alignment of input sections) are filled with the two least significant
+bytes of the expression, repeated as necessary. A <TT>FILL</TT> statement
+covers memory locations after the point at which it occurs in the section
+definition; by including more than one <TT>FILL</TT> statement, you can
+have different fill patterns in different parts of an output section.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003131"></A><FONT SIZE=+1>This example
+shows how to fill unspecified regions of memory with the value, <TT>0x9090</TT>
+:</FONT></DIV>
+
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003132"></A><FONT SIZE=+1>FILL(0x9090)</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003133"></A><FONT SIZE=+1>The <TT>FILL</TT>
+command is similar to the <TT>=<I>fillexp</I></TT> output section attribute
+(see <A HREF="#Output_section_fill">Output section fill</A>); but it only
+affects the part of the section following the <TT>FILL</TT> command, rather
+than the entire section. If both are used, the <TT>FILL</TT> command takes
+precedence.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003135"></A><A NAME="_Toc417794849"></A><A NAME="Output_section_keywords"></A><B><I><FONT SIZE=+2>Output
+section keywords</FONT></I></B></DIV>
+&nbsp;
+<DIV CLASS="Body"><A NAME="pgfId=1003136"></A><FONT SIZE=+1>There are a
+couple of keywords, which can appear as output section commands.&nbsp;</FONT><A NAME="marker=1007287"></A></DIV>
+
+<DIV CLASS="BodyHang1">
+<UL>
+<UL>
+<UL>
+<LI>
+<A NAME="pgfId=1003137"></A><TT><FONT SIZE=+1>CREATE_OBJECT_SYMBOLS</FONT></TT></LI>
+
+<BR><A NAME="marker=1007293"></A><FONT SIZE=+1>The command tells the linker
+to create a symbol for each input file. The name of each symbol will be
+the name of the corresponding input file. The section of each symbol will
+be the output section in which the <TT>CREATE_OBJECT_SYMBOLS</TT> command
+appears.</FONT></UL>
+</UL>
+</UL>
+</DIV>
+
+<UL>
+<UL>
+<UL>
+<DIV CLASS="BodyListFollow"><A NAME="pgfId=1003138"></A><FONT SIZE=+1>This
+is conventional for the <TT>a.out</TT> object file format. It is not normally
+used for any other object file format.</FONT></DIV>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="BodyHang1">
+<UL>
+<UL>
+<UL>
+<LI>
+<A NAME="pgfId=1003139"></A><TT><FONT SIZE=+1>CONSTRUCTORS</FONT></TT></LI>
+
+<BR><A NAME="marker=1007294"></A><FONT SIZE=+1>When linking, using the
+<TT>a.out</TT> object file format, the linker uses an unusual set construct
+to support C++ global constructors and destructors. When linking object
+file formats, which do not support arbitrary sections, such as <TT>ECOFF</TT>
+and <TT>XCOFF</TT>, the linker will automatically recognize C++ global
+constructors and destructors by name. For these object file formats, the&nbsp;<A NAME="marker=1007292"></A><TT>CONSTRUCTORS</TT>
+command tells the linker to place constructor information in the output
+section where the <TT>CONSTRUCTORS</TT> command appears. The <TT>CONSTRUCTORS</TT>
+command is ignored for other object file formats.</FONT></UL>
+</UL>
+</UL>
+</DIV>
+
+<UL>
+<UL>
+<UL>
+<DIV CLASS="BodyListFollow"><A NAME="pgfId=1003140"></A><FONT SIZE=+1>The
+<TT>__CTOR_LIST__ </TT>symbol marks the start of the global constructors,
+and the <TT>__DTOR_LIST </TT>symbol marks the end. The first word in the
+list is the number of entries, followed by the address of each constructor
+or destructor, followed by a zero word. The compiler must arrange to actually
+run the code. For these object file formats, GNU C++ normally calls constructors
+from a subroutine,&nbsp;<A NAME="marker=1007290"></A><A NAME="marker=1007291"></A><TT>__main<A NAME="marker=1007288"></A></TT>;
+a call to <TT>__main</TT> is automatically inserted into the startup code
+for <TT>main</TT>. GNU C++ normally runs destructors either by using&nbsp;<A NAME="marker=1007289"></A><TT>atexit</TT>,
+or directly from the function, <TT>exit</TT>.</FONT></DIV>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="BodyListFollow">
+<UL>
+<UL>
+<UL><A NAME="pgfId=1003141"></A><FONT SIZE=+1>For object file formats such
+as <TT>COFF</TT> or <TT>ELF</TT>, which support arbitrary section names,
+GNU C++ will normally arrange to put the addresses of global constructors
+and destructors into the <TT>.ctors</TT> and <TT>.dtors</TT> sections.
+Placing the following sequence into your linker script will build the sort
+of table that the GNU C++ runtime code expects to see.</FONT></UL>
+</UL>
+</UL>
+</DIV>
+
+<UL>
+<UL>
+<UL>
+<UL>
+<UL>
+<PRE CLASS="CodeExample2"><A NAME="pgfId=1003142"></A><FONT SIZE=+1>__CTOR_LIST__ = .;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>LONG((__CTOR_END__ - __CTOR_LIST__) / 4 - 2)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>*(.ctors)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>LONG(0)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>__CTOR_END__ = .;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>__DTOR_LIST__ = .;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>LONG((__DTOR_END__ - __DTOR_LIST__) / 4 - 2)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>*(.dtors)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>LONG(0)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>__DTOR_END__ = .;</FONT></PRE>
+</UL>
+</UL>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="BodyListFollow">
+<UL>
+<UL>
+<UL><A NAME="pgfId=1003143"></A><FONT SIZE=+1>Normally the compiler and
+linker will handle these issues automatically, and you will not need to
+concern yourself with them. However, you may need to consider this occurrence,
+if you are using C++ and writing your own linker scripts.</FONT>
+<BR>&nbsp;</UL>
+</UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003145"></A><A NAME="_Toc417794850"></A><A NAME="Output_section_discarding"></A><B><I><FONT SIZE=+2>Output
+section discarding</FONT></I></B></DIV>
+
+
+<P><A NAME="pgfId=1003146"></A><FONT SIZE=+1>The linker will not create
+output section which do not have any contents. This is for convenience
+when referring to input sections that may or may not be present in any
+of the input files. For example, the following input&nbsp;<A NAME="pgfId=1003148"></A>will
+only create a <TT>.foo</TT> section in the output file if there is a <TT>.foo</TT>
+section in at least one input file.</FONT>
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003147"></A><FONT SIZE=+1>.foo { *(.foo) }</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body">&nbsp;</DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003149"></A><FONT SIZE=+1>If you use
+anything other than an input section description as an output section command,
+such as a symbol assignment, then the output section will always be created,
+even if there are no matching input sections.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003150"></A><FONT SIZE=+1>The special
+output section name, <TT>/DISCARD/</TT> may be used to discard input sections.
+Any input sections which are assigned to an output section named <TT>/DISCARD/</TT>
+are not included in the output file.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003152"></A><A NAME="_Toc417794851"></A><A NAME="Output_section_attributes"></A><B><I><FONT SIZE=+2>Output
+section attributes</FONT></I></B></DIV>
+
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003153"></A><FONT SIZE=+1>We showed with <A HREF="#Output_section_description">Output
+section description</A> that the full description of an output section
+looked like the following input.</FONT></DIV>
+
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1006809"></A><FONT SIZE=+1>SECTION [<I>address</I>] [(<I>type</I>)] : [AT(<I>LMA</I>)]</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <I>output-sections-command</I></FONT></PRE>
+
+<PRE><I><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output-sections-command</FONT></I></PRE>
+
+<PRE><FONT SIZE=+1>...</FONT></PRE>
+
+<PRE><FONT SIZE=+1>} [> <I>region</I> ] [: <I>phdr</I> : <I>phdr</I> ...] [=<I>fillexp</I>]</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003156"></A><FONT SIZE=+1>We’ve already
+described <I><TT>section</TT></I>, <I><TT>address</TT></I>, and <I><TT>output-sections-command</TT></I>.
+In the following discussion, we will describe the remaining section attributes.&nbsp;<A NAME="marker=1007297"></A></FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003157"></A><A NAME="Output_section_type"></A><B><I><FONT SIZE=+2>Output
+section type</FONT></I></B></DIV>
+&nbsp;
+<DIV CLASS="Body"><A NAME="pgfId=1003158"></A><FONT SIZE=+1>Each output
+section may have a type. The type is a keyword in parentheses. The following
+types are defined:</FONT></DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><A NAME="pgfId=1003159"></A><TT><FONT SIZE=+1>NOLOAD</FONT></TT>
+<UL><A NAME="marker=1007298"></A><FONT SIZE=+1>The section should be marked
+as not loadable, so that it will not be loaded into memory when the program
+is run.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Body">
+<UL><A NAME="pgfId=1003160"></A><FONT SIZE=+1><TT>DSECT</TT>&nbsp;<A NAME="marker=1007299"></A></FONT>
+<BR><A NAME="pgfId=1003161"></A><FONT SIZE=+1><TT>COPY</TT>&nbsp;<A NAME="marker=1007300"></A></FONT>
+<BR><A NAME="pgfId=1003162"></A><FONT SIZE=+1><TT>INFO</TT>&nbsp;<A NAME="marker=1007301"></A></FONT>
+<BR><A NAME="pgfId=1003163"></A><TT><FONT SIZE=+1>OVERLAY</FONT></TT>
+<UL><A NAME="marker=1007302"></A><FONT SIZE=+1>These type names are supported
+for backward compatibility, and are rarely used. They all have the same
+effect: the section should be marked as not allocatable, so that no memory
+is allocated for the section when the program is run.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyListFollow"><A NAME="pgfId=1003164"></A><FONT SIZE=+1>The
+linker normally sets the attributes of an output section, based on the
+input sections, which map into it. You can override this by using the section
+type. For example, in the script sample below, the <TT>ROM</TT> section
+is addressed at memory location <TT>0</TT> and does not need to be loaded
+when the program is run. The contents of the <TT>ROM</TT> section will
+appear in the linker output file as usual.</FONT></DIV>
+
+<UL>
+<UL>
+<PRE CLASS="CodeExample2"><A NAME="pgfId=1003165"></A><FONT SIZE=+1>SECTIONS {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; ROM 0 (NOLOAD) : { ... }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp; ...</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003166"></A><A NAME="26303"></A><A NAME="marker=1007303"></A><A NAME="Output_section_LMA"></A><B><I><FONT SIZE=+2>Output
+section LMA</FONT></I></B></DIV>
+
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003167"></A><FONT SIZE=+1>Every section has a virtual
+address (VMA) and a load address (LMA); see <A HREF="#Concepts">Basic linker
+script concepts</A>. The address expression that, may appear in an output
+section description sets the VMA. The linker will normally set the LMA
+equal to the VMA. You can change that by using the <TT>AT</TT> keyword.
+The expression, <I><TT>LMA</TT></I>, that follows the <TT>AT</TT> keyword
+specifies the load address of the section. This feature is designed to
+make it easy to build a ROM image. For example, the following linker script
+creates three output sections: one called <TT>.text</TT>, which starts
+at <TT>0x1000</TT>, one called <TT>.mdata</TT>, which is loaded at the
+end of the <TT>.textsection</TT> even though its VMA is <TT>0x2000</TT>,
+and one called <TT>.bssto</TT> hold uninitialized data at address, <TT>0x3000</TT>.
+The symbol <TT>_data</TT> is defined with the value, <TT>0x2000</TT>, which
+shows that the location counter holds the VMA value, not the LMA value.</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003168"></A><FONT SIZE=+1>SECTIONS</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .text 0x1000 : { *(.text) _etext = . ; }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .mdata 0x2000 :</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AT ( ADDR (.text) + SIZEOF (.text) )</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { _data = . ; *(.data); _edata = . ; }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .bss 0x3000 :</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { _bstart = . ; *(.bss) *(COMMON) ; _bend = . ;}</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003169"></A><FONT SIZE=+1>The run-time
+initialization code for use with a program generated with this linker script
+would include something like the following, to copy the initialized data
+from the ROM image to its runtime address. Notice how this code takes advantage
+of the symbols defined by the linker script.</FONT></DIV>
+
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003170"></A><FONT SIZE=+1>extern char _etext, _data, _edata, _bstart, _bend;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>char *src = &amp;_etext;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>char *dst = &amp;_data;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>/* ROM has data at end of text; copy it. */</FONT></PRE>
+
+<PRE><FONT SIZE=+1>while (dst &lt; &amp;_edata) {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; *dst++ = *src++;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+
+<PRE><FONT SIZE=+1>/* Zero bss */</FONT></PRE>
+
+<PRE><FONT SIZE=+1>for (dst = &amp;_bstart; dst&lt; &amp;_bend; dst++)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; *dst = 0;</FONT></PRE>
+</UL>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003171"></A><A NAME="Output_section_region"></A><B><I><FONT SIZE=+2>Output
+section </FONT><TT><FONT POINT-SIZE="20">region</FONT></TT><FONT SIZE=+2>&nbsp;</FONT></I></B><A NAME="10159"></A></DIV>
+&nbsp;
+<DIV CLASS="Body"><A NAME="pgfId=1003172"></A><FONT SIZE=+1>You can assign
+a section to a previously defined <I>region</I> of memory by using&nbsp;<A NAME="marker=1007304"></A><TT>><I>region</I></TT>,
+where <I><TT>region</TT></I> is the defined region for the section. The
+following example shows usage.</FONT>
+<BR>&nbsp;</DIV>
+&nbsp;
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003173"></A><FONT SIZE=+1>MEMORY { rom : ORIGIN = 0x1000, LENGTH = 0x1000 }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>SECTIONS { ROM : { *(.text) } >rom }</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003174"></A><A NAME="Output_section_phdr"></A><B><I><FONT SIZE=+2>Output
+section </FONT><TT><FONT POINT-SIZE="20">phdr</FONT></TT><FONT SIZE=+2>&nbsp;</FONT></I></B><A NAME="30813"></A><A NAME="marker=1007305"></A></DIV>
+&nbsp;
+<DIV CLASS="Body"><A NAME="pgfId=1003175"></A><FONT SIZE=+1>You can assign
+a section to a previously defined program segment by using <TT>:<I>phdr</I></TT>.
+If a section is assigned to one or more segments, then all subsequent allocated
+sections will be assigned to those segments as well, unless they use an
+explicitly <TT>:<I>phdr</I></TT> modifier. To prevent a section from being
+assigned to a segment when it would normally default to one, use <TT>:NONE</TT>.
+See <A HREF="#PHDRS_command"><TT>PHDRS</TT> command</A>.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003176"></A><FONT SIZE=+1>The following
+example shows usage.</FONT>
+<BR>&nbsp;</DIV>
+
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003177"></A><FONT SIZE=+1>PHDRS { text PT_LOAD ; }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>SECTIONS { .text : { *(.text) } :text }</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003178"></A><A NAME="Output_section_fill"></A><B><I><FONT SIZE=+2>Output
+section </FONT><TT><FONT POINT-SIZE="20">fill</FONT></TT><FONT SIZE=+2>&nbsp;</FONT></I></B><A NAME="41365"></A><A NAME="marker=1007306"></A></DIV>
+&nbsp;
+<DIV CLASS="Body"><A NAME="pgfId=1003179"></A><FONT SIZE=+1>You can set
+the fill pattern for an entire section by using <TT>=<I>fillexp</I></TT>.
+<I><TT>fillexp</TT></I> is an expression; see <A HREF="#Expressions_in _linker_scripts" CLASS="XRef">Expressions
+in linker scripts</A>. Any otherwise unspecified regions of memory within
+the output section (for example, gaps left due to the required alignment
+of input sections) will be filled with the two least significant bytes
+of the value, repeated as necessary.&nbsp;</FONT><A NAME="marker=1007307"></A></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003180"></A><FONT SIZE=+1>You can also
+change the fill value with a <TT>FILL</TT> command in the output section
+commands. See <A HREF="#Output_section_data">Output section data</A>.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003181"></A><FONT SIZE=+1>Here is a simple
+example:</FONT></DIV>
+
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003182"></A><FONT SIZE=+1>SECTIONS { .text : { *(.text) } =0x9090 }</FONT></PRE>
+
+<PRE CLASS="CodeExample"><FONT SIZE=+1></FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003184"></A><A NAME="_Toc417794852"></A><A NAME="Overlay_description"></A><B><I><FONT SIZE=+2>Overlay
+description</FONT></I></B></DIV>
+
+
+<P><A NAME="pgfId=1003185"></A><FONT SIZE=+1>An overlay description provides
+an easy way to describe sections, which are to be loaded as part of a single
+memory image but are to be run at the same memory address. At run time,
+some sort of overlay manager will copy the overlaid sections in and out
+of the runtime memory address as required, perhaps by simply manipulating
+addressing bits. This approach can be useful, for example, when a certain
+region of memory is faster than another region of memory.&nbsp;<A NAME="marker=1007308"></A></FONT>
+<DIV CLASS="Body"><A NAME="pgfId=1003186"></A><FONT SIZE=+1>Overlays are
+described using the <TT>OVERLAY</TT> command. The <TT>OVERLAY</TT> command
+is used within a <TT>SECTIONS</TT> command, like an output section description.
+The full syntax of the <TT>OVERLAY</TT> command is as follows:</FONT></DIV>
+&nbsp;
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003187"></A><FONT SIZE=+1>OVERLAY [ start ] : [NOCROSSREFS] [AT (<A NAME="marker=1007311"></A><I>ldaddr</I>)]</FONT></PRE>
+
+<PRE><FONT SIZE=+1>{</FONT></PRE>
+
+<PRE><FONT SIZE=+1>secname1</FONT></PRE>
+
+<PRE><FONT SIZE=+1>{</FONT></PRE>
+
+<UL>
+<PRE><I><FONT SIZE=+1>output-section-command</FONT></I></PRE>
+
+<PRE><I><FONT SIZE=+1>output-section-command</FONT></I></PRE>
+
+<PRE><I><FONT SIZE=+1>...</FONT></I></PRE>
+</UL>
+
+<PRE><FONT SIZE=+1>} [:PHDR...] [=FILL]</FONT></PRE>
+
+<PRE><FONT SIZE=+1>secname2</FONT></PRE>
+
+<PRE><FONT SIZE=+1>{</FONT></PRE>
+
+<UL>
+<PRE><I><FONT SIZE=+1>output-section-command</FONT></I></PRE>
+
+<PRE><I><FONT SIZE=+1>output-section-command</FONT></I></PRE>
+
+<PRE><I><FONT SIZE=+1>...</FONT></I></PRE>
+</UL>
+
+<PRE><FONT SIZE=+1>} [:<I>phdr</I> ...] [=<I>fill</I>]</FONT></PRE>
+
+<PRE><FONT SIZE=+1>...</FONT></PRE>
+
+<PRE><FONT SIZE=+1>} [><I>region</I> ] [:<I>phdr</I> ...] [=<I>fill</I>]</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003188"></A><FONT SIZE=+1>Everything
+is optional except <TT>OVERLAY</TT>&nbsp;<A NAME="marker=1007309"></A>
+(a keyword), and each section must have a name (<TT>secname1</TT> and <TT>secname2</TT>
+in the previous examples input). The section definitions within the <TT>OVERLAY</TT>
+construct are identical to those within the general <TT>SECTIONS</TT>&nbsp;<A NAME="marker=1007312"></A>
+construct, except that no addresses and no memory regions may be defined
+for sections within an <TT>OVERLAY</TT>. See <A HREF="#SECTIONS_command"><TT>SECTIONS</TT>
+command</A>.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003189"></A><FONT SIZE=+1>The sections
+are all defined with the same starting address. The load addresses of the
+sections are arranged, so that they are consecutive in memory, starting
+at the load address used for the&nbsp;<A NAME="marker=1007310"></A><TT>OVERLAY</TT>
+as a whole (as with normal section definitions. The load address is optional,
+and defaults to the start address. The start address is also optional,
+and defaults to the current value of the location counter).</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003190"></A><FONT SIZE=+1>If the <TT>NOCROSSREFS</TT>
+keyword is used, and there any references among the sections, the linker
+will report an error. Since the sections all run at the same address, it
+normally does not make sense for one section to refer directly to another.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003191"></A><FONT SIZE=+1>For each section
+within the <TT>OVERLAY</TT>, the linker automatically defines two symbols.
+The symbol, <TT>__load_start_</TT> <TT>secname</TT>, is defined as the
+starting load address of the section. The symbol, <TT>__load_stop_</TT>
+<TT>secname</TT>, is defined as the final load address of the section.
+Any characters within <TT>secname</TT> that are not legal within C identifiers
+are removed. C (or assembler) code may use these symbols to move the overlaid
+sections around as necessary.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003192"></A><FONT SIZE=+1>At the end
+of the overlay, the value of the location counter is set to the start address
+of the overlay plus the size of the largest section.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003193"></A><FONT SIZE=+1>Here is an
+example. Remember that this would appear inside a <TT>SECTIONS</TT> construct.</FONT></DIV>
+&nbsp;
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003194"></A><FONT SIZE=+1>OVERLAY 0x1000 : AT (0x4000)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .text0 { o1/*.o(.text) }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .text1 { o2/*.o(.text) }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; }</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003195"></A><FONT SIZE=+1>This will define
+both <TT>.text0</TT> and <TT>.text1</TT> to start at address <TT>0x1000</TT>.
+<TT>.text0</TT> will be loaded at address <TT>0x4000</TT>, and .text1will
+be loaded immediately after <TT>.text0</TT>. The following symbols will
+be defined: <TT>__load_start_text0</TT>, <TT>__load_stop_text0</TT> , <TT>__load_start_text1</TT>,
+and <TT>__load_stop_text1</TT>.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003196"></A><FONT SIZE=+1>C code to copy
+overlay <TT>.text1</TT> into the overlay area might look like the following
+example input.</FONT></DIV>
+&nbsp;
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003197"></A><FONT SIZE=+1>extern char __load_start_text1, __load_stop_text1;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>memcpy ((char *) 0x1000, &amp;__load_start_text1,</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp;__load_stop_text1 - &amp;__load_start_text1);</FONT></PRE>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003198"></A><FONT SIZE=+1>Note that the
+<TT>OVERLAY</TT> command is just syntactic sugar, since everything it does
+can be done using the more basic commands. The previous example could have
+been input identically as follows.</FONT></DIV>
+
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003199"></A><TT><FONT SIZE=+1>.text0 0x1000 : AT (0x4000) { o1/*.o(.text) }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>__load_start_text0 = LOADADDR (.text0);</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>__load_stop_text0 = LOADADDR (.text0) + SIZEOF (.text0);</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>.text1 0x1000 : AT (0x4000 + SIZEOF (.text0)) { o2/*.o(.text) }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>__load_start_text1 = LOADADDR (.text1);</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>__load_stop_text1 = LOADADDR (.text1) + SIZEOF (.text1);</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>. = 0x1000 + MAX (SIZEOF (.text0), SIZEOF (.text1));</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1></FONT></TT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Heading1"><A NAME="pgfId=1003201"></A><A NAME="_Toc417794853"></A><A NAME="MEMORY_command"></A><B><TT><FONT SIZE=+3>MEMORY</FONT></TT><I><FONT SIZE=+2>
+command</FONT></I></B></DIV>
+
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003202"></A><FONT SIZE=+1>The linkers default configuration
+permits allocation of all available memory. You can override this by using
+the&nbsp;<A NAME="allocation"></A><TT>MEMORY</TT>&nbsp;<A NAME="MEMORY"></A>
+command.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003203"></A><FONT SIZE=+1>The <TT>MEMORY</TT>
+command describes the location and size of blocks of memory in the target.
+You can use it to describe which memory regions may be used by the linker,
+and which memory regions it must avoid. You can then assign sections to
+particular memory regions. The linker will set section addresses based
+on the memory regions, and will warn about regions that become too full.
+The linker will not shuffle sections around to fit into the available regions.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003204"></A><FONT SIZE=+1>A linker script
+may contain at most one use of the <TT>MEMORY</TT> command. However, you
+can define as many blocks of memory within it as you wish. The syntax is:</FONT></DIV>
+&nbsp;
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003205"></A><FONT SIZE=+1>MEMORY</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp; <I>name</I> [( <I>attr</I> )] : ORIGIN = <I>origin</I> , LENGTH = <I>len</I></FONT></PRE>
+
+<PRE><FONT SIZE=+1>...</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; }</FONT></PRE>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003206"></A><FONT SIZE=+1>The <I><TT>name</TT></I>
+is a name used in the linker script to refer to the region. The region
+name has no meaning outside of the linker script. Region names are stored
+in a separate name space, and will not conflict with symbol names, file
+names, or section names. Each memory region must have a distinct name.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003207"></A><FONT SIZE=+1>The <TT><I>attr</I>
+</TT>string is an optional list of attributes that specify whether to use
+a particular memory region for an input section, which is not explicitly
+mapped in the linker script. If you do not specify an output section for
+some input section, the linker will create an output section with the same
+name as the input section. If you define region attributes, the linker
+will use them to select the memory region for the output section that it
+creates. See <A HREF="#SECTIONS_command"><TT>SECTIONS</TT> command</A>.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003208"></A><FONT SIZE=+1>The <I><TT>attr</TT></I>
+string must consist only of the following characters:</FONT></DIV>
+
+<UL>
+<UL>
+<DIV CLASS="BodyHang1">
+<UL>
+<LI>
+<A NAME="pgfId=1003209"></A><TT><FONT SIZE=+1>R</FONT></TT></LI>
+
+<UL><FONT SIZE=+1>Read-only section</FONT></UL>
+
+<LI>
+<A NAME="pgfId=1003210"></A><TT><FONT SIZE=+1>W</FONT></TT></LI>
+
+<UL><FONT SIZE=+1>Read/write section</FONT></UL>
+
+<LI>
+<A NAME="pgfId=1003211"></A><TT><FONT SIZE=+1>X</FONT></TT></LI>
+
+<UL><FONT SIZE=+1>Executable section</FONT></UL>
+</UL>
+</DIV>
+
+<UL>
+<LI CLASS="BodyHang1">
+<A NAME="pgfId=1003212"></A><TT><FONT SIZE=+1>A</FONT></TT></LI>
+
+<UL><FONT SIZE=+1>Allocatable section</FONT></UL>
+
+<LI CLASS="BodyHang1">
+<A NAME="pgfId=1003213"></A><TT><FONT SIZE=+1>I</FONT></TT></LI>
+
+<UL>
+<DIV CLASS="BodyHang1"><FONT SIZE=+1>Initialized section</FONT></DIV>
+</UL>
+
+<LI CLASS="BodyHang1">
+<A NAME="pgfId=1003214"></A><TT><FONT SIZE=+1>L</FONT></TT></LI>
+
+<UL><FONT SIZE=+1>Same as <TT>I</TT></FONT></UL>
+
+<LI CLASS="BodyHang1">
+<A NAME="pgfId=1003215"></A><TT><FONT SIZE=+1>!</FONT></TT></LI>
+
+<UL><FONT SIZE=+1>Invert the sense of any of the preceding attributes.</FONT></UL>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003216"></A><FONT SIZE=+1>If an unmapped
+section matches any of the listed attributes other than <TT>!</TT>, it
+will be placed in the memory region. The <TT>!</TT> attribute reverses
+this test, so that an unmapped section will be placed in the memory region
+only if it does not match any of the listed attributes.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003217"></A><FONT SIZE=+1>The <TT>ORIGIN</TT>
+is an expression for the start address of the memory region. The expression
+must evaluate to a constant before memory allocation is performed, which
+means that you may not use any section relative symbols. The <TT>ORIGIN</TT>
+keyword may be abbreviated to <TT>org</TT> or <TT>o</TT> (but not, for
+example, to <TT>ORG</TT>).</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003218"></A><FONT SIZE=+1>The <I><TT>len</TT></I>
+is an expression for the size in bytes of the memory region. As with the
+origin expression, the expression must evaluate to a constant before memory
+allocation is performed. The <TT>LENGTH </TT>keyword may be abbreviated
+to <TT>len</TT> or <TT>l</TT>.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003219"></A><FONT SIZE=+1>In the following
+example, we specify that there are two memory regions available for allocation:
+one starting at <TT>0</TT> for 256 kilobytes, and the other starting at
+<TT>0x40000000</TT> for four megabytes. The linker will place into the
+<TT>rom</TT> memory region every section, which is not explicitly mapped
+into a memory region, and is either read-only or executable. The linker
+will place other sections, which are not explicitly mapped into a memory
+region into the <TT>ram</TT> memory region.</FONT></DIV>
+&nbsp;
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003220"></A><FONT SIZE=+1>MEMORY</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; rom (rx) : ORIGIN = 0, LENGTH = 256K</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; ram (!rx) : org = 0x40000000, l = 4M</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; }</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003221"></A><FONT SIZE=+1>If you have
+defined a memory region named <TT>mem</TT>, you can direct the linker to
+place specific output sections into that memory region by using the <TT>><I>region</I></TT>
+output section attribute. If no address was specified for the output section,
+the linker will set the address to the next available address within the
+memory region. If the combined output sections directed to a memory region
+are too large for the region, the linker will issue an error message. See
+<A HREF="#Output_section_region">Output section <I><TT>region</TT></I></A>.</FONT>
+
+<P>&nbsp;</DIV>
+
+<DIV CLASS="Heading1"><A NAME="pgfId=1003223"></A><A NAME="_Toc417794854"></A><A NAME="PHDRS_command"></A><B><TT><FONT SIZE=+3>PHDRS</FONT></TT><I><FONT SIZE=+2>
+command</FONT></I></B></DIV>
+
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003224"></A><FONT SIZE=+1>The ELF object file format
+uses program headers<A NAME="program headers"></A>, also knows as segments&nbsp;<A NAME="segments"></A>.
+The program headers describe how the program should be loaded into memory.
+You can print them out by using the <TT>objdump</TT> program with the <TT>-p</TT>
+option.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003225"></A><FONT SIZE=+1>When you run
+an ELF program on a native ELF system, the system loader reads the program
+headers in order to figure out how to load the program. This will only
+work if the program headers are set correctly. This documentation does
+not describe the details of how the system loader interprets program headers;
+for more information, see the ELF ABI.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003226"></A><FONT SIZE=+1>The linker
+will create reasonable program headers by default. However, in some cases,
+you may need to specify the program headers more precisely. You may use
+the <TT>PHDRS</TT> command for this purpose. When the linker sees the <TT>PHDRS</TT>
+command in the linker script, it will not create any program headers other
+than the ones specified.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003227"></A><FONT SIZE=+1>The linker
+only pays attention to the <TT>PHDRS</TT> command when generating an ELF
+output file. In other cases, the linker will simply ignore <TT>PHDRS</TT>.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003228"></A><FONT SIZE=+1>This is the
+syntax of the <TT>PHDRS</TT>&nbsp;<A NAME="PHDRS"></A>command. The words,
+<TT>PHDRS</TT>, <TT>FILEHDR</TT>, <TT>AT</TT>, and <TT>FLAGS</TT>, are
+keywords.</FONT></DIV>
+
+<UL>
+<UL>
+<UL><TT>&nbsp;<A NAME="pgfId=1003229"></A><FONT SIZE=+1>PHDRS</FONT></TT>
+<PRE><FONT SIZE=+1>{</FONT></PRE>
+
+<PRE><FONT SIZE=+1>name type [ FILEHDR ] [ PHDRS ] [ AT (<A NAME="FILEHDR"></A><A NAME="AT"></A><I>address</I>) ]</FONT></PRE>
+
+<PRE><FONT SIZE=+1>[ FLAGS (<A NAME="FLAGS"></A><I>flags</I>) ] ;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003230"></A><FONT SIZE=+1>The name is
+used only for reference in the <TT>SECTIONS</TT> command of the linker
+script. It is not put into the output file. Program header names are stored
+in a separate name space, and will not conflict with symbol names, file
+names, or section names. Each program header must have a distinct name.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003231"></A><FONT SIZE=+1>Certain program
+header types describe segments of memory, which the system loader will
+load from the file. In the linker script, you specify the contents of these
+segments by placing allocatable output sections in the segments. You use
+the <TT>: <I>phdr</I></TT> output section attribute to place a section
+in a particular segment. See <A HREF="#Output_section_phdr">Output section
+<I><TT>phdr</TT></I></A>.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003232"></A><FONT SIZE=+1>It is normal
+to put certain sections in more than one segment. This merely implies that
+one segment of memory contains another. You may repeat <TT>: <I>phdr</I></TT>,
+using it once for each segment which should contain the section.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003233"></A><FONT SIZE=+1>If you place
+a section in one or more segments using <TT>:</TT> phdr, then the linker
+will place all subsequent allocatable sections which do not specify <TT>:
+<I>phdr</I></TT> in the same segments. This is for convenience, since generally
+a whole set of contiguous sections will be placed in a single segment.
+To prevent a section from being assigned to a segment when it would normally
+default to one, use <TT>:NONE</TT>.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003234"></A><FONT SIZE=+1>You may use
+the <TT>FILEHDR</TT> and <TT>PHDRS</TT> keywords appear after the program
+header type to further describe the contents of the segment. The <TT>FILEHDR</TT>
+keyword means that the segment should include the ELF file header. The
+<TT>PHDRS</TT> keyword means that the segment should include the ELF program
+headers themselves.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003235"></A><FONT SIZE=+1>The type may
+be one of the following. The numbers indicate the value of the keyword.</FONT></DIV>
+
+<UL>
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003236"></A><TT><FONT SIZE=+1>PT_NULL
+(0)</FONT></TT></DIV>
+
+<UL><A NAME="PT_NULL"></A><FONT SIZE=+1>Indicates an unused program header.</FONT></UL>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003237"></A><TT><FONT SIZE=+1>PT_LOAD
+(1)</FONT></TT></DIV>
+
+<UL><A NAME="PT_LOAD"></A><FONT SIZE=+1>Indicates that this program header
+describes a segment to be loaded from the file.</FONT></UL>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003238"></A><TT><FONT SIZE=+1>PT_DYNAMIC
+(2)</FONT></TT></DIV>
+
+<UL><A NAME="PT_DYNAMIC"></A><FONT SIZE=+1>Indicates a segment where dynamic
+linking information can be found.</FONT></UL>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003239"></A><TT><FONT SIZE=+1>PT_INTERP
+(3)</FONT></TT></DIV>
+
+<UL><A NAME="PT_INTERP"></A><FONT SIZE=+1>Indicates a segment where the
+name of the program interpreter may be found.</FONT></UL>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003240"></A><TT><FONT SIZE=+1>PT_NOTE
+(4)</FONT></TT></DIV>
+
+<UL><A NAME="PT_NOTE"></A><FONT SIZE=+1>Indicates a segment holding note
+information.</FONT></UL>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003241"></A><TT><FONT SIZE=+1>PT_SHLIB
+(5)</FONT></TT></DIV>
+
+<UL><A NAME="PT_SHLIB"></A><FONT SIZE=+1>A reserved program header type,
+defined but not specified by the ELF ABI.</FONT></UL>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003242"></A><TT><FONT SIZE=+1>PT_PHDR
+(6)</FONT></TT></DIV>
+
+<UL><A NAME="PT_PHDR"></A><FONT SIZE=+1>Indicates a segment where the program
+headers may be found.</FONT></UL>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003243"></A><I><TT><FONT SIZE=+1>expression</FONT></TT></I></DIV>
+
+<UL><FONT SIZE=+1>An <I><TT>expression</TT></I> giving the numeric type
+of the program header. This may be used for types not defined above.</FONT></UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003244"></A><FONT SIZE=+1>You can specify
+that a segment should be loaded at a particular address in memory by using
+an <TT>AT</TT> expression. This is identical to the <TT>AT</TT> command
+used as an output section attribute. The <TT>AT</TT> command for a program
+header, overrides the output section attribute. See <A HREF="#Output_section_LMA">Output
+section, <I><TT>LMA</TT></I></A>.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003245"></A><FONT SIZE=+1>The linker
+will normally set the segment flags based on the sections, which comprise
+the segment. You may use the <TT>FLAGS</TT> keyword to specify the segment
+flags, explicitly. The value of flags must be an integer. It is used to
+set the <TT>p_flags</TT> field of the program header.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003246"></A><FONT SIZE=+1>The following
+example shows the script for <TT>PHDRS</TT>. This shows a typical set of
+program headers used on a native ELF system.&nbsp;</FONT><A NAME="ELF system, native"></A></DIV>
+
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003247"></A><FONT SIZE=+1>PHDRS</FONT></PRE>
+
+<PRE><FONT SIZE=+1>{</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; headers PT_PHDR PHDRS ;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; interp PT_INTERP ;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; text PT_LOAD FILEHDR PHDRS ;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; data PT_LOAD ;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; dynamic PT_DYNAMIC ;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+
+<PRE><FONT SIZE=+1>SECTIONS</FONT></PRE>
+
+<PRE><FONT SIZE=+1>{</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; . = SIZEOF_HEADERS;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; .interp : { *(.interp) } :text :interp</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; .text : { *(.text) } :text</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; .rodata : { *(.rodata) } /* defaults to :text */</FONT></PRE>
+
+<PRE><FONT SIZE=+1>...</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; . = . + 0x1000; /* move to a new page in memory */</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; .data : { *(.data) } :data</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; .dynamic : { *(.dynamic) } :data :dynamic</FONT></PRE>
+
+<PRE><FONT SIZE=+1>...</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Heading1"><A NAME="pgfId=1003249"></A><A NAME="_Toc417794855"></A><A NAME="VERSION_command"></A><B><TT><FONT SIZE=+3>VERSION</FONT></TT><I><FONT SIZE=+2>
+command</FONT></I></B></DIV>
+
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003250"></A><FONT SIZE=+1>The linker supports symbol
+versions when using ELF. Symbol versions are only useful when using shared
+libraries. The dynamic linker can use symbol versions to select a specific
+version of a function when it runs a program that may have been linked
+against an earlier version of the shared library.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003251"></A><FONT SIZE=+1>You can include
+a version script directly in the main linker script, or you can supply
+the version script as an implicit linker script. You can also use the <TT>--version-script</TT>&nbsp;<A NAME="--version-script linker option"></A>
+linker option.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003252"></A><FONT SIZE=+1>The syntax
+of the <TT>VERSION</TT> command is a simple declaration like the following
+example.</FONT></DIV>
+
+<DIV CLASS="CodeExample">
+<UL>
+<UL><A NAME="pgfId=1003253"></A><TT><FONT SIZE=+1>VERSION {<I>version-script-commands</I>}</FONT></TT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003254"></A><FONT SIZE=+1>The format
+of the version script commands is identical to that used by Suns linker
+in Solaris 2.5. The version script defines a tree of version nodes. You
+specify the node names and interdependencies in the version script. You
+can specify which symbols are bound to which version nodes, and you can
+reduce a specified set of symbols to local scope so that they are not globally
+visible outside of the shared library.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003255"></A><FONT SIZE=+1>The easiest
+way to demonstrate the version script language is with a few examples.</FONT></DIV>
+
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003256"></A><FONT SIZE=+1>VERS_1.1 {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; global:</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; foo1;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; local:</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; old*;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; original*;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; new*;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; };</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; VERS_1.2 {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; foo2;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; } VERS_1.1;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; VERS_2.0 {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp; bar1; bar2;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; } VERS_1.2;&nbsp;</FONT><A NAME="VERS"></A></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003257"></A><FONT SIZE=+1>This example
+version script defines three version nodes. The first version node defined
+is <TT>VERS_1.1</TT>; it has no other dependencies. The script binds the
+symbol, <I><TT>foo1</TT></I>, to <TT>VERS_1.1</TT>. It reduces a number
+of symbols to local scope so that they are not visible outside of the shared
+library.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003258"></A><FONT SIZE=+1>Next, the version
+script defines node, <TT>VERS_1.2</TT>. This node depends upon <TT>VERS_1.1</TT>
+. The script binds the symbol, <I><TT>foo2</TT></I>, to the version node,
+<TT>VERS_1.2</TT>.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003259"></A><FONT SIZE=+1>Finally, the
+version script defines node, <TT>VERS_2.0</TT>. This node depends upon
+<TT>VERS_1.2</TT>. The script binds the symbols, <TT>bar1</TT> and <TT>bar2</TT>,
+to the version node, <TT>VERS_2.0</TT>.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003260"></A><FONT SIZE=+1>When the linker
+finds a symbol defined in a library, which is not specifically bound to
+a version node, it will effectively bind it to an unspecified base version
+of the library. You can bind all otherwise unspecified symbols to a given
+version node by using <TT>global: *</TT> somewhere in the version script.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003261"></A><FONT SIZE=+1>The names of
+the version nodes have no specific meaning other than what they might suggest
+to the person reading them. The <TT>2.0</TT> version could just as well
+have appeared in between <TT>1.1</TT> and <TT>1.2</TT>. However, this would
+be a confusing way to write a version script.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003262"></A><FONT SIZE=+1>When you link
+an application against a shared library that has versioned symbols, the
+application itself knows which version of each symbol it requires, and
+it also knows which version nodes it needs from each shared library it
+is linked against. Thus at runtime, the dynamic loader can make a quick
+check to make sure that the libraries you have linked against do in fact
+supply all of the version nodes that the application will need to resolve
+all of the dynamic symbols. In this way it is possible for the dynamic
+linker to know with certainty that all external symbols that it needs will
+be resolvable without having to search for each symbol reference.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003263"></A><FONT SIZE=+1>The symbol
+versioning is in effect a much more sophisticated way of doing minor version
+checking that SunOS does. The fundamental problem that is being addressed
+here is that typically references to external functions are bound on an
+as-needed basis, and are not all bound when the application starts up.
+If a shared library is out of date, a required interface may be missing;
+when the application tries to use that interface, it may suddenly and unexpectedly
+fail. With symbol versioning, the user will get a warning when they start
+their program if the libraries being used with the application are too
+old.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003264"></A><FONT SIZE=+1>There are several
+GNU extensions to Suns versioning approach. The first of these is the ability
+to bind a symbol to a version node in the source file where the symbol
+is defined instead of in the versioning script. This was done mainly to
+reduce the burden on the library maintainer. You can do this by putting
+something like this in the C source file:</FONT></DIV>
+
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003265"></A><FONT SIZE=+1>__asm__(".symver original_foo,foo@VERS_1.1");</FONT></PRE>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003266"></A><FONT SIZE=+1>This renames
+the function, <TT>original_foo</TT>, to be an alias for <TT>foo</TT> bound
+to the version node <TT>VERS_1.1</TT>. The <TT>local:</TT> directive can
+be used to prevent the symbol, <TT>original_foo</TT>, from being exported.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003267"></A><FONT SIZE=+1>The second
+GNU extension is to allow multiple versions of the same function to appear
+in a given, shared library. In this way you can make an incompatible change
+to an interface without increasing the major version number of the shared
+library, while still allowing applications linked against the old interface
+to continue to function.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003268"></A><FONT SIZE=+1>To do this,
+you must use multiple <TT>.symver</TT> directives in the source file. The
+following example shows the usage.</FONT></DIV>
+&nbsp;
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003269"></A><TT><FONT SIZE=+1>__asm__(".symver original_foo,foo@");</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>__asm__(".symver old_foo,foo@VERS_1.1");</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>__asm__(".symver old_foo1,foo@VERS_1.2");</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>__asm__(".symver new_foo,foo@@VERS_2.0");</FONT></TT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003270"></A><FONT SIZE=+1>In this example,
+<TT>foo@</TT> represents the symbol, <TT>foo</TT>, bound to the unspecified
+base version of the symbol. The source file that contains this example
+would define four C functions: <TT>original_foo</TT>, <TT>old_foo</TT>
+, <TT>old_foo1</TT>, and <TT>new_foo</TT>.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003271"></A><FONT SIZE=+1>When you have
+multiple definitions of a given symbol, there needs to be some way to specify
+a default version to which external references to this symbol will be bound.
+You can do this with the <TT>foo@@VERS_2.0</TT> type of <TT>.symver</TT>
+directive. You can only declare one version of a symbol as the default
+in this manner; otherwise you would effectively have multiple definitions
+of the same symbol.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003272"></A><FONT SIZE=+1>If you wish
+to bind a reference to a specific version of the symbol within the shared
+library, you can use the aliases of convenience (i.e., <TT>old_foo</TT>
+), or you can use the <TT>.symver</TT> directive to bind specifically to
+an external version of the function in question.</FONT>
+
+<P>&nbsp;</DIV>
+
+<DIV CLASS="Heading1"><A NAME="pgfId=1003274"></A><A NAME="_Toc417794856"></A><A NAME="Expressions_in _linker_scripts"></A><B><I><FONT SIZE=+2>Expressions
+in linker scripts</FONT></I></B></DIV>
+
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003275"></A><FONT SIZE=+1>The syntax for expressions
+in the linker script language is identical to that of C expressions. All
+expressions are evaluated as integers. All expressions are evaluated in
+the same size, which is 32 bits if both the host and target are 32 bits,
+and is otherwise 64 bits. You can use and set symbol values in expressions.
+The linker defines several special purpose builtin functions for use in
+expressions.</FONT>
+
+<P>&nbsp;</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003277"></A><A NAME="_Toc417794857"></A><A NAME="Constants"></A><B><I><FONT SIZE=+2>Constants</FONT></I></B></DIV>
+
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003278"></A><FONT SIZE=+1>All constants are integers.
+As in C, the linker considers an integer beginning with&nbsp;<A NAME="constants"></A><TT>0</TT>
+to be octal, and an integer beginning with <TT>0x</TT> or <TT>0X</TT> to
+be hexadecimal.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003279"></A><FONT SIZE=+1>The linker
+considers other integers to be decimal.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003280"></A><FONT SIZE=+1>In addition,
+you can use the suffixes <TT>K</TT> and <TT>M</TT> to scale a constant
+by <TT>1024</TT>, or <TT>1024*1024</TT>, respectively. For example, the
+following example declarations all refer to the same quantity.</FONT></DIV>
+&nbsp;
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003281"></A><FONT SIZE=+1>_fourk_1 = 4K;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>_fourk_2 = 4096;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>_fourk_3 = 0x1000;</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003283"></A><A NAME="_Toc417794858"></A><A NAME="Symbol_names"></A><B><I><FONT SIZE=+2>Symbol
+names</FONT></I></B></DIV>
+
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003284"></A><FONT SIZE=+1>Unless quoted, symbol names
+start with a letter, underscore, or period and may include letters, digits,
+underscores, periods, and hyphens. Unquoted symbol names must not conflict
+with any keywords. You can specify a symbol, which contains odd characters
+or has the same name as a keyword by surrounding the symbol name in double
+quotes.&nbsp;</FONT><A NAME="symbol names"></A></DIV>
+&nbsp;
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003285"></A><TT><FONT SIZE=+1>"SECTION" = 9;</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>"with a space" = "also with a space" + 10;</FONT></TT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003286"></A><FONT SIZE=+1>Since symbols
+can contain many non-alphabetic characters, it is safest to delimit symbols
+with spaces. For example, <TT>A-B</TT> is one symbol, whereas <TT>A - B</TT>
+is an expression involving subtraction.</FONT>
+<BR>&nbsp;
+
+<P>&nbsp;</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003288"></A><A NAME="_Toc417794859"></A><A NAME="The_location_counter"></A><B><I><FONT SIZE=+2>The
+location counter</FONT></I></B></DIV>
+
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003289"></A><FONT SIZE=+1>The special linker dot (<TT>.</TT>)
+variable always contains the current output location counter. Since the&nbsp;<A NAME="location counter"></A><TT>.</TT>
+symbol always refers to a location in an output section, it may only appear
+in an expression within a <TT>SECTIONS</TT> command. The <TT>.</TT> symbol
+may appear anywhere that an ordinary symbol is allowed in an expression.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003290"></A><FONT SIZE=+1>Assigning a
+value to <TT>.</TT> symbol will cause the location counter to be moved.
+This may be used to create holes in the output section. The location counter
+may never be moved backwards.</FONT></DIV>
+&nbsp;
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003291"></A><FONT SIZE=+1>SECTIONS</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; output :</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; file1(.text)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . = . + 1000;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; file2(.text)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . += 1000;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; file3(.text)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } = 0x1234;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003292"></A><FONT SIZE=+1>In the previous
+example, the <TT>.text</TT> section from <TT>file1</TT> is located at the
+beginning of the output section, <TT>output</TT>. It is followed by a 1000
+byte gap. Then the <TT>.text</TT> section from <TT>file2</TT> appears,
+also with a 1000 byte gap following before the <TT>.text</TT> section from
+<TT>file3</TT>. The notation, <TT>= 0x1234</TT>, specifies data to write
+in the gaps.</FONT>
+
+<P>&nbsp;</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003294"></A><A NAME="_Toc417794860"></A><A NAME="Operators"></A><B><I><FONT SIZE=+2>Operators</FONT></I></B></DIV>
+
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003295"></A><FONT SIZE=+1>The linker recognizes the
+standard C set of arithmetic operators, with the standard bindings and
+precedence levels; see <A HREF="#bindings_associations" CLASS="XRef">Table
+1: Arithmetic operators with precedence levels and bindings associations</A>.&nbsp;</FONT><A NAME="operators"></A>
+<BR><FONT SIZE=+1></FONT>&nbsp;</DIV>
+&nbsp;
+<TABLE>
+<CAPTION>
+<CENTER><A NAME="pgfId=1004738"></A><A NAME="30822"></A><A NAME="bindings_associations"></A><FONT SIZE=+1><B>Table
+1: </B>Arithmetic operators with precedence levels and bindings associations</FONT></CENTER>
+</CAPTION>
+
+<TR BGCOLOR="#C0C0C0">
+<TD>
+<DIV CLASS="CellHeading"><A NAME="pgfId=1004590"></A><B><I><FONT SIZE=+1>Precedence&nbsp;</FONT></I></B><A NAME="Precedence"></A></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellHeading"><A NAME="pgfId=1004592"></A><B><I><FONT SIZE=+1>Association&nbsp;</FONT></I></B></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellHeading"><A NAME="pgfId=1004594"></A><B><I><FONT SIZE=+1>Operators&nbsp;</FONT></I></B></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellHeading"><A NAME="pgfId=1004596"></A><B><I><FONT SIZE=+1>Notes&nbsp;</FONT></I></B></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004598"></A><FONT SIZE=+1>(highest)&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004600"></A></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004602"></A></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004604"></A></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004606"></A><FONT SIZE=+1>1&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004608"></A><FONT SIZE=+1>left&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004610"></A><FONT SIZE=+1><TT>! -
+~</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004615"></A><SUP><FONT SIZE=-2><A HREF="#pgfId=1004614" CLASS="footnote">1</A></FONT></SUP><FONT SIZE=+1>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004617"></A><FONT SIZE=+1>2&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004619"></A><FONT SIZE=+1>left&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004621"></A><FONT SIZE=+1><TT>* /
+%</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004623"></A></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004625"></A><FONT SIZE=+1>3&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004627"></A><FONT SIZE=+1>left&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004629"></A><FONT SIZE=+1><TT>+ -</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004631"></A></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004633"></A><FONT SIZE=+1>4&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004635"></A><FONT SIZE=+1>left&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004637"></A><FONT SIZE=+1><TT>>>
+&lt;&lt;</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004639"></A></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004641"></A><FONT SIZE=+1>5&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004643"></A><FONT SIZE=+1>left&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004645"></A><FONT SIZE=+1><TT>==
+!= > &lt; &lt;= >=</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004647"></A></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004649"></A><FONT SIZE=+1>6&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004651"></A><FONT SIZE=+1>left&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004653"></A><FONT SIZE=+1><TT>&amp;</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004655"></A></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004657"></A><FONT SIZE=+1>7&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004659"></A><FONT SIZE=+1>left&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004661"></A><FONT SIZE=+1><TT>|</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004663"></A></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004665"></A><FONT SIZE=+1>8&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004667"></A><FONT SIZE=+1>left&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004669"></A><FONT SIZE=+1><TT>&amp;&amp;</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004671"></A></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004673"></A><FONT SIZE=+1>9&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004675"></A><FONT SIZE=+1>left&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004677"></A><FONT SIZE=+1><TT>||</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004685"></A><SUP><FONT SIZE=-2><A HREF="#pgfId=1004684" CLASS="footnote">2</A>&nbsp;</FONT></SUP></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004687"></A><FONT SIZE=+1>10&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004689"></A><FONT SIZE=+1>right&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004691"></A><FONT SIZE=+1><TT>? :</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004693"></A></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004695"></A><FONT SIZE=+1>11&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004697"></A><FONT SIZE=+1>right&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004699"></A><FONT SIZE=+1><TT>&amp;=
++= -= *= /=</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004701"></A></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004703"></A><FONT SIZE=+1>(lowest)&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004705"></A></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004707"></A></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><A NAME="pgfId=1004709"></A></DIV>
+</TD>
+</TR>
+</TABLE>
+&nbsp;
+<DIV CLASS="Body"><A NAME="pgfId=1007149"></A></DIV>
+
+<HR>
+<DIV CLASS="footnotes">
+<DIV CLASS="footnote">
+<DIV CLASS="TableFootnote"><SPAN CLASS="footnoteNumber"><FONT SIZE=+1>1.</SPAN>&nbsp;<A NAME="pgfId=1004614"></A>Prefix
+operators&nbsp;</FONT><A NAME="Prefix operators"></A></DIV>
+</DIV>
+
+<DIV CLASS="footnote">
+<DIV CLASS="TableFootnote"><SPAN CLASS="footnoteNumber"><FONT SIZE=+1>2.</SPAN>&nbsp;<A NAME="pgfId=1004684"></A>See
+<A HREF="#Assigning_values_symbols">Assigning values to symbols</A>.</FONT>
+<BR>&nbsp;
+
+<P>&nbsp;</DIV>
+</DIV>
+</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003420"></A><A NAME="_Toc417794861"></A><A NAME="Evaluation"></A><B><I><FONT SIZE=+2>Evaluation</FONT></I></B></DIV>
+
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003421"></A><FONT SIZE=+1>The linker evaluates expressions
+lazily. It only computes the value of an expression when absolutely necessary.&nbsp;</FONT><A NAME="evaluation"></A></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003422"></A><FONT SIZE=+1>The linker
+needs some information, such as the value of the start address of the first
+section, and the origins and lengths of memory regions, in order to do
+any linking at all. These values are computed as soon as possible when
+the linker reads in the linker script.&nbsp;</FONT><A NAME="start address"></A><A NAME="memory regions"></A></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003423"></A><FONT SIZE=+1>However, other
+values (such as symbol values) are not known or needed until after storage
+allocation. Such values are evaluated later, when other information (such
+as the sizes of output sections) is available for use in the symbol assignment
+expression.&nbsp;</FONT><A NAME="storage allocation"></A></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003424"></A><FONT SIZE=+1>The sizes of
+sections cannot be known until after allocation, so assignments dependent
+upon these are not performed until after allocation.&nbsp;</FONT><A NAME="assignments"></A></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003425"></A><FONT SIZE=+1>Some expressions,
+such as those depending upon the location counter <TT>.</TT>, must be evaluated
+during section allocation.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003426"></A><FONT SIZE=+1>If the result
+of an expression is required, but the value is not available, then an error
+results. For example, a script, like the following, will cause the error
+message, <TT>non constant expression for initial address</TT>:</FONT></DIV>
+&nbsp;
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003427"></A><FONT SIZE=+1>SECTIONS</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .text 9+this_isnt_constant :</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { *(.text) }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; }</FONT></PRE>
+
+<PRE><FONT SIZE=+1></FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003429"></A><A NAME="_Toc417794862"></A><A NAME="The_section_of_an_expression"></A><B><I><FONT SIZE=+2>The
+section of an expression</FONT></I></B></DIV>
+
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003430"></A><FONT SIZE=+1>When the linker evaluates
+an expression, the result is either absolute or relative to some section.
+A relative expression is expressed as a fixed offset from the base of a
+section.&nbsp;</FONT><A NAME="expression"></A></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003431"></A><FONT SIZE=+1>The position
+of the expression within the linker script determines whether it is absolute
+or relative. An expression, which appears within an output section definition,
+is relative to the base of the output section. An expression, which appears
+elsewhere, will be absolute.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003432"></A><FONT SIZE=+1>A symbol set
+to a relative expression will be relocatable if you request relocatable
+output using the <TT>-r</TT> option. That means that a further link operation
+may change the value of the symbol. The symbols section will be the section
+of the relative expression.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003433"></A><FONT SIZE=+1>A symbol set
+to an absolute expression will retain the same value through any further
+link operation. The symbol will be absolute, and will not have any particular
+associated section.</FONT></DIV>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003434"></A><FONT SIZE=+1>You can use
+the builtin function <TT>ABSOLUTE</TT> to force an expression to be absolute
+when it would otherwise be relative. For example, to create an absolute
+symbol set to the address of the end of the output section <TT>.data</TT>
+:</FONT></DIV>
+&nbsp;
+<UL>
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><A NAME="pgfId=1003435"></A><FONT SIZE=+1>SECTIONS</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .data : { *(.data) _edata = ABSOLUTE(.); }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><A NAME="pgfId=1003436"></A><FONT SIZE=+1>If <TT>ABSOLUTE</TT>
+were not used, <TT>_edata</TT> would be relative to the <TT>.data</TT>
+section.</FONT>
+
+<P>&nbsp;</DIV>
+
+<DIV CLASS="Heading2"><A NAME="pgfId=1003438"></A><A NAME="_Toc417794863"></A><A NAME="Builtin_functions"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Builtin
+functions</FONT></FONT></I></B></DIV>
+
+<DIV CLASS="Body">
+
+<P><A NAME="pgfId=1003439"></A><FONT SIZE=+1>The linker script language
+includes a number of builtin functions for use in linker script expressions.&nbsp;</FONT><A NAME="builtin functions"></A>
+<BR><FONT SIZE=+1></FONT>&nbsp;
+<BR><FONT SIZE=+1></FONT>&nbsp;</DIV>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003440"></A><FONT SIZE=+1><TT>ABSOLUTE(</TT>&nbsp;<A NAME="ABSOLUTE"></A><I><TT>exp</TT></I>
+<TT>)</TT></FONT></DIV>
+
+<UL><FONT SIZE=+1>Return the absolute (non-relocatable, as opposed to non-negative)
+value of the <I><TT>exp</TT></I> expression. Primarily useful to assign
+an absolute value to a symbol within a section definition, where symbol
+values are normally section relative. See <A HREF="#Expressions_in _linker_scripts">Expressions
+in linker scripts</A>.</FONT></UL>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003441"></A><FONT SIZE=+1><TT>ADDR(</TT>&nbsp;<A NAME="ADDR"></A><I><TT>section</TT></I>
+<TT>)</TT></FONT>
+<UL><FONT SIZE=+1>Return the absolute address (the <TT>VMA</TT>) of the
+named section. Your script must previously have defined the location of
+that section. In the following example, <TT>symbol_1</TT> and <TT>symbol_2</TT>
+are assigned identical values:</FONT></UL>
+</DIV>
+
+<UL>
+<UL>
+<UL><TT>&nbsp;<A NAME="pgfId=1003442"></A><FONT SIZE=+1>SECTIONS { ...</FONT></TT></UL>
+</UL>
+</UL>
+
+<UL>
+<UL>
+<UL>
+<PRE><FONT SIZE=+1>&nbsp; .output1 :</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; start_of_output_1 = ABSOLUTE(.);</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; ...</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; .output :</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; symbol_1 = ADDR(.output1);</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; symbol_2 = start_of_output_1;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>...</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003443"></A><TT><FONT SIZE=+1>ALIGN(<A NAME="ALIGN"></A><I>exp</I>)</FONT></TT>
+<UL><FONT SIZE=+1>Return the location counter (<TT>.</TT>) aligned to the
+next <I><TT>exp</TT></I> boundary. <I><TT>exp</TT></I> must be an expression
+whose value is a power of two. This is equivalent to:</FONT></UL>
+</DIV>
+
+<UL>
+<UL>
+<UL>
+<PRE CLASS="CodeExample2"><A NAME="pgfId=1003444"></A><FONT SIZE=+1>(. + <I>exp</I> - 1) &amp; ~( <I>exp</I> - 1)</FONT></PRE>
+</UL>
+</UL>
+&nbsp;<A NAME="pgfId=1003445"></A><FONT SIZE=+1><TT>ALIGN</TT> doesnt change
+the value of the location counter, it just does arithmetic on it. The following
+example&nbsp; aligns the output <TT>.data</TT> section to the next <TT>0x2000</TT>
+byte boundary after the preceding section and sets a variable within the
+section to the next <TT>0x8000</TT> boundary after the input sections:</FONT></UL>
+
+<UL>
+<UL>
+<UL>
+<UL>
+<PRE CLASS="CodeExample2"><A NAME="pgfId=1005462"></A><FONT SIZE=+1>SECTIONS { ...</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; .data ALIGN(0x2000): {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; *(.data)</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; variable = ALIGN(0x8000);</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>...</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+</UL>
+</UL>
+&nbsp;<A NAME="pgfId=1005463"></A><FONT SIZE=+1>The first use of <TT>ALIGN</TT>
+in this example specifies the location of a section because it is used
+as the optional <TT>ADDRESS</TT> attribute of a section definition. The
+second use of <TT>ALIGN</TT> is to define the value of a symbol. The builtin
+function, <TT>NEXT</TT>, is closely related to <TT>ALIGN</TT>. See <A HREF="#Output_section_address">Output
+section address</A>.</FONT></UL>
+</UL>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003448"></A><TT><FONT SIZE=+1>BLOCK(<A NAME="BLOCK"></A><I>exp</I>)</FONT></TT>
+<UL><FONT SIZE=+1>This is a synonym for <TT>ALIGN</TT>, for compatibility
+with older linker scripts. It is most often seen when setting the address
+of an output section.</FONT></UL>
+</DIV>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003449"></A><TT><FONT SIZE=+1>DEFINED(<A NAME="DEFINED"></A><I>symbol</I>)</FONT></TT>
+<UL><FONT SIZE=+1>Return <TT>1</TT> if <I><TT>symbol</TT></I> is in the
+linker global symbol table and is defined, otherwise return <TT>0</TT>
+. You can use this function to provide default values for symbols. For
+example, the following script fragment shows how to set a global symbol
+<TT>begin</TT> to the first location in the <TT>.text</TT> section, but
+if a symbol called <TT>begin</TT> already existed, its value is preserved:</FONT></UL>
+</DIV>
+&nbsp;
+<UL>
+<UL>
+<UL>
+<UL>
+<PRE CLASS="CodeExample2"><A NAME="pgfId=1003450"></A><FONT SIZE=+1>SECTIONS{ ...</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; .text : {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; begin = DEFINED(begin) ? begin : . ;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>...</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; }</FONT></PRE>
+
+<PRE><FONT SIZE=+1>...</FONT></PRE>
+
+<PRE><FONT SIZE=+1>}</FONT></PRE>
+</UL>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003451"></A><TT><FONT SIZE=+1>LOADADDR(<A NAME="LOADADDR"></A><I>section</I>)</FONT></TT>
+<UL><FONT SIZE=+1>Return the absolute <I><TT>LMA</TT></I> of the named
+<TT>SECTION</TT>. This is normally the same as <TT>ADDR</TT>, but it may
+be different if the <TT>AT</TT> attribute is used in the output section
+definition.</FONT></UL>
+</DIV>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003452"></A><TT><FONT SIZE=+1>MAX(<A NAME="MAX"></A><I>exp1,
+exp2</I>)</FONT></TT>
+<UL><FONT SIZE=+1>Returns the maximum of <I><TT>exp1</TT></I> and <I><TT>exp2</TT></I>.</FONT></UL>
+</DIV>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003453"></A><TT><FONT SIZE=+1>MIN(<A NAME="MIN"></A><I>exp1,
+exp2</I>)</FONT></TT>
+<UL><FONT SIZE=+1>Returns the minimum of <I><TT>exp1</TT></I> and <I><TT>exp2</TT></I>.</FONT></UL>
+</DIV>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003454"></A><TT><FONT SIZE=+1>NEXT(<A NAME="NEXT"></A><I>exp</I>)</FONT></TT>
+<UL><FONT SIZE=+1>Return the next unallocated address that is a multiple
+of <I><TT>exp</TT></I>. This function is closely related to <TT>ALIGN(<A NAME="ALIGN"></A><I>exp</I>)</TT>;
+unless you use the <TT>MEMORY</TT> command to define discontinuous memory
+for the output file, the two functions are equivalent.</FONT></UL>
+</DIV>
+
+<DIV CLASS="BodyHang1"><A NAME="pgfId=1003455"></A><FONT SIZE=+1><TT>SIZEOF(</TT>&nbsp;<A NAME="SIZEOF"></A><I><TT>section</TT></I>
+<TT>)</TT></FONT>
+<UL><FONT SIZE=+1>Return the size in bytes of the named <I><TT>section</TT></I>,
+if that section has been allocated. If the section has not been allocated
+when this is evaluated, the linker will report an error. See <A HREF="#PHDRS_command"><TT>PHDRS</TT>
+command</A>. In the following example, <TT>symbol_1</TT> and <TT>symbol_2</TT>
+are assigned identical values:</FONT></UL>
+</DIV>
+&nbsp;
+<UL>
+<UL>
+<UL>
+<PRE CLASS="CodeExample2"><A NAME="pgfId=1003456"></A><FONT SIZE=+1>SECTIONS{ ...</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp; .output {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .start = . ;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>...</FONT></PRE>
+</UL>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="ld.html">Contents</A>|<A HREF="ldindex.html">Index</A>|<A HREF="ldEnvironment_Variables.html">Previous</A>|<A HREF="ldMachine_Dependent_Features.html">Next</A></CENTER>
+
+<DIV CLASS="footnotes">
+<DIV CLASS="footnote">&nbsp;</DIV>
+</DIV>
+
+</BODY>
+</HTML>

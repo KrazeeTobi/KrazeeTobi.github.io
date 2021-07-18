@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Debugging an already-running process</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbYour_programs_input_and_output.html">Previous</A>|<A HREF="gdbKilling_the_child_process.html">Next</A>
+<BR><A NAME="off_624629"></A><A NAME="2d648d3f"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Debugging
+an already-running process&nbsp;</FONT></FONT></FONT></B>
+<HR SIZE=3 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The following documentation
+discusses processes already running for a program invoked for use with
+GDB.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>attach <I>process-id</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This command attaches to
+a running process—one that was started outside GDB. (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info
+files</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman"> shows your
+active targets.) The command takes as argument a process ID. The usual
+way to find out the </FONT><I><TT>process-id</TT></I><FONT FACE="Times New Roman">
+of a Unix process is with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ps</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+utility, or with the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>jobs
+-l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ shell command.</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>attach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not repeat if you use </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Return</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+a second time after executing the command.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>To use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>attach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+your program must be running in an environment which supports processes;
+for example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>attach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not work for programs on bareboard targets that lack an operating
+system. You must also have permission to send the process a signal.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>When using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>attach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+you should first use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command to specify the program running in the process and load its symbol
+table. See <FONT COLOR="#008000"><A HREF="gdbCommands_to_specify_files.html">Commands
+to specify files</A></FONT>.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The first thing GDB does
+after arranging to debug the specified process is to stop it. You can examine
+and modify an attached process with all the GDB commands that are ordinarily
+available when you start processes with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+You can insert breakpoints; you can </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>step</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>continue</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+you can modify storage. If you would rather the process continue running,
+you may use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>continue</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command after attaching GDB to the process.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>detach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>When you have finished debugging
+the attached process, you can use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>detach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command to release it from GDB control. Detaching the process continues
+its execution. After the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>detach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command, that process and GDB become completely independent once more,
+and you are ready to attach another process or start one with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>detach</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not repeat if you use the </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Return</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+key again after executing the command.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If you exit GDB or use the
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command while you have an attached process, you kill that process. By default,
+GDB asks for confirmation if you try to do either of these things; you
+can control whether or not you need to confirm by using the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+confirm </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>command
+(see <FONT COLOR="#008000"><A HREF="gdbOptional_warnings_and_messages.html">Optional
+warnings and messages</A></FONT>).</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbYour_programs_input_and_output.html">Previous</A>|<A HREF="gdbKilling_the_child_process.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

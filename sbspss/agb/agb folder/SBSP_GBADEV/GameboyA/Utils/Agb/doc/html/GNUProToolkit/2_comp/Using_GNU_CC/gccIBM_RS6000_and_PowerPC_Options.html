@@ -1,0 +1,749 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>IBM RS/6000 and PowerPC Options</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccHPPA_Options.html">Previous</A>|<A HREF="gccIBM_RT_Options.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_1673001"></A><A NAME="e32ceb3f"></A><B><FONT SIZE=+3>IBM
+RS/6000 and PowerPC Options&nbsp;</FONT></B>&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>These </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-m</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options are defined for the IBM RS/6000 and PowerPC.</FONT></FONT>
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mpower</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-power</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mpower2</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-power2</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mpowerpc</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-powerpc</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mpowerpc-gpopt</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-powerpc-gpopt</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mpowerpc-gfxopt</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-powerpc-gfxopt</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mpowerpc64</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-powerpc64</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>GNU CC supports two related
+instruction set architectures for the RS/6000 and PowerPC. The <I>POWER
+</I>instruction set are those instructions supported by the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>rios</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+chip set used in the original RS/6000 systems and the <I>PowerPC</I> instruction
+set is the architecture of the Motorola MPC5<I>xx</I>, MPC6<I>xx</I>, MCP8<I>xx</I>
+and the IBM 4<I>xx</I> microprocessors.&nbsp;</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Neither architecture is
+a subset of the other. However there is a large common subset of instructions
+supported by both. An MQ register is included in processors supporting
+the POWER architecture.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>You use these options to
+specify which instructions are available on the processor you are using.
+The default value of these options is determined when configuring GNU CC.
+Specifying the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=<I>cpu_type</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+overrides the specification of these options.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>We recommend you use the
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=<I>cpu_type</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option rather than any of the above listed options.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpower</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option allows GNU CC to generate instructions that are found only in the
+POWER architecture and to use the MQ register. Specifying ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpower2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+implies ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-power</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and also allows GNU CC to generate instructions that are present in the
+POWER2 architecture but not the original POWER architecture.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpowerpc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option allows GNU CC to generate instructions that are found only in the
+32-bit subset of the PowerPC architecture. Specifying ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpowerpc-gpopt</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+implies ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpowerpc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and also allows GNU CC to use the optional PowerPC architecture instructions
+in the General Purpose group, including floating-point square root.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Specifying ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpowerpc-gfxopt</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+implies ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpowerpc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and also allows GNU CC to use the optional PowerPC architecture instructions
+in the Graphics group, including floating-point select.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New,Courier">-mpowerpc64</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option allows GNU CC to generate the additional 64-bit instructions that
+are found in the full PowerPC64 architecture and to treat GPRs as 64-bit,
+doubleword quantities. GNU CC defaults to </FONT></FONT><FONT FACE="Courier New,Courier">-mno-powerpc64</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If you specify both ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mno-power</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mno-powerpc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+GNU CC will use only the instructions in the common subset of both architectures
+plus some special AIX common-mode calls, and will not use the MQ register.
+Specifying both ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpower</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpowerpc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+permits GNU CC to use any instruction from either architecture and to allow
+use of the MQ register; specify this for the Motorola MPC601.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mnew-mnemonics</FONT></FONT></DT>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-mold-mnemonics</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Select which mnemonics to
+use in the generated assembler code.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mnew-mnemonics</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+requests output that uses the assembler mnemonics defined for the PowerPC
+architecture, while ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mold-mnemonics</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+requests the assembler mnemonics defined for the POWER architecture. Instructions
+defined in only one architecture have only one mnemonic; GNU CC uses that
+mnemonic irrespective of which of these options is specified.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>PowerPC assemblers support
+both the old and new mnemonics, as will later POWER assemblers. Current
+POWER assemblers only support the old mnemonics. Specify ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mnew-mnemonics</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+if you have an assembler that supports them, otherwise specify ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mold-mnemonics</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The default value of these
+options depends on how GNU CC was configured. Specifying ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=<I>cpu_type</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+sometimes overrides the value of these option. Unless you are building
+a cross-compiler, you should normally not specify either ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mnew-mnemonics</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mold-mnemonics</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+but should instead accept the default.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=<I>cpu_type</I></FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set architecture type, register
+usage, choice of mnemonics, and instruction scheduling parameters for machine
+type, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>cpu_type</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Supported values for </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>cpu_type</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>rs6000</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>rios1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>rios2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>rsc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>601</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>602</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>603</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>603e</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>604</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>604e</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>620</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>power</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>power2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>powerpc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>403</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>505</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>801</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>821</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>823</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>860</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>common</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=power</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=power2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=powerpc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options specify generic POWER, POWER2 and pure PowerPC (i.e., not MPC601)
+architecture machine types, with an appropriate, generic processor model
+assumed for scheduling purposes.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Specifying ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=rios1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=rios2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=rsc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=power</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=power2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+enables the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpower</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option and disables the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpowerpc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option; ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=601</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+enables both the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpower</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpowerpc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options. All of the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=602</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=603</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=603e</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=604</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=620</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options enable the&nbsp; ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpowerpc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option&nbsp; and disable the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpower</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Exactly similarly, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=403</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=505</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=821</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=860</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=powerpc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+all enable the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpowerpc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option and disable the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpower</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option. ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=common</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’disables
+both the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpower</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpowerpc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>AIX versions 4 or greater
+selects ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=common</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+by default, so that code will operate on all members of the RS/6000 and
+PowerPC families. In that case, GNU CC will use only the instructions in
+the common subset of both architectures plus some special AIX common-mode
+calls, and will not use the MQ register. GNU CC assumes a generic processor
+model for scheduling purposes.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Specifying any of the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=rios1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=rios2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=rsc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=power</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=power2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options also disables the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>new-mnemonics</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option. Specifying ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=601</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=602</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=603</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=603e</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=604</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=620</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=403</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=powerpc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+also enables the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>new-mnemonics</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Specifying ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=403</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=821</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=860</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+also enables the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-msoft-float</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mtune=<I>cpu_type</I></FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set the instruction scheduling
+parameters for machine type </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>cpu_type</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+but do not set the architecture type, register usage, choice of mnemonics
+like ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=<I>cpu_type</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>would. The
+same values for </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>cpu_type
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>are used for
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mtune=<I>cpu_type</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>as for ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=<I>cpu_type</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mtune=<I>cpu_type</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’option
+overrides the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu=<I>cpu_type</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option in terms of instruction scheduling parameters.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mfull-toc</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-fp-in-toc</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-sum-in-toc</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mminimal-toc</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Modify generation of the
+TOC (Table Of Contents), which is created for every executable file. The
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mfull-toc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option is selected by default. In that case, GNU CC will allocate at least
+one TOC entry for each unique non-automatic variable reference in your
+program. GNU CC will also place floating-point constants in the TOC. However,
+only 16,384 entries are available in the TOC.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If you receive a linker error
+message that saying you have overflowed the available TOC space, you can
+reduce the amount of TOC space used with the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mno-fp-in-toc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mno-sum-in-toc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options. ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mno-fp-in-toc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+prevents GNU CC from putting floating-point constants in the TOC and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mno-sum-in-toc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+forces GNU CC to generate code to calculate the sum of an address and a
+constant at run-time instead of putting that sum into the TOC. You may
+specify one or both of these options. Each causes GNU CC to produce very
+slightly slower and larger code at the expense of conserving TOC space.</FONT></FONT></DT>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If you still run out of
+space in the TOC even when you specify both of these options, specify ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mminimal-toc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+instead. This option causes GNU CC to make only one TOC entry for every
+file. When you specify this option, GNU CC will produce code that is slower
+and larger but which uses extremely little TOC space. You may wish to use
+this option only on files that contain less frequently executed code.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-maix64</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-maix32</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>Enable AIX 64-bit
+ABI and calling convention: 64-bit pointers, 64-bit long type, and the
+infrastructure needed to support them. Specifying </FONT></FONT><FONT FACE="Courier New,Courier">-maix64</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>
+implies </FONT></FONT><FONT FACE="Courier New,Courier">-mpowerpc64</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New,Courier">-mpowerpc</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>,
+while </FONT></FONT><FONT FACE="Courier New,Courier">-maix32</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>
+disables the 64-bit ABI and implies </FONT></FONT><FONT FACE="Courier New,Courier">-mno-powerpc64</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>.
+GNU CC defaults to </FONT></FONT><FONT FACE="Courier New,Courier">-maix32</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mxl-call</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-xl-call</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On AIX, pass floating-point
+arguments to prototyped functions beyond the register save area (RSA) on
+the stack in addition to floating point register arguments. The AIX calling
+convention was extended but not initially documented to handle an obscure
+K&amp;R C case of calling a function that takes the address of its arguments
+with fewer arguments than declared. AIX XL compilers assume that floating
+point arguments which do not fit in the RSA are on the stack when they
+compile a subroutine without optimization. Because always storing floating-point
+arguments on the stack is inefficient and rarely needed, this option is
+not enabled by default and only is necessary when calling subroutines compiled
+by AIX XL compilers without optimization.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mthreads</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Support <I>AIX Threads</I>.
+Link an application written to use <I>pthreads</I> with special libraries
+and startup code to enable the application to run.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mpe</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Support <I>IBM RS/6000 SP
+Parallel Environment</I> (PE). Link an application written to use message
+passing with special startup code to enable the application to run. The
+system must have PE installed in the standard location (‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/usr/lpp/ppe.poe/</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’),
+or the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>specs</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+file must be overridden with the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-specs=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option to specify the appropriate directory location.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The Parallel Environment
+does not support threads, so the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mpe</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option and the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mthreads</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option are incompatible.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-msoft-float</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mhard-float</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate code that does
+not use (or uses) the floating-point register set. Software floating point
+emulation is provided if you use the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-msoft-float</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option, and pass the option to GNU CC when linking.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mmultiple</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-multiple</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate code that uses
+(or does not use) the load multiple word instructions and the store multiple
+word instructions. These instructions are generated by default on POWER
+systems, and not generated on PowerPC systems. Do not use ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mmultiple</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+on little endian PowerPC systems, since those instructions do not work
+when the processor is in little endian mode.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mstring</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-string</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate code that uses
+(or does not use) the load string instructions and the store string word
+instructions to save multiple registers and do small block moves. These
+instructions are generated by default on POWER systems, and not generated
+on PowerPC systems.</FONT></FONT>
+<BR>&nbsp;
+<UL><B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Warning:</FONT></FONT></I></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Do not use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mstring</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+on little endian PowerPC systems, since those instructions do not work
+when the processor is in little endian mode.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mupdate</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mnoupdate</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>Generate code that
+uses (or does not use) the load or store instructions that update the base
+register to the address of the calculated memory location. These instructions
+are generated by default. If you use </FONT></FONT><FONT FACE="Courier New,Courier">-mno-update</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>,
+there is a small window between the time that the stack pointer is updated
+and the address of the previous frame is stored, which means code that
+walks the stack frame across interrupts or signals may get corrupted data.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mfused-madd</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-fused-madd</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>Generate code that
+uses (or does not use) the oating point multiply and accumulate instructions.
+These instructions are generated by default if hardware floating is used.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-bit-align</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mbit-align</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On System V.4 and embedded
+PowerPC systems do not (or do) force structures and unions that contain
+bit fields to be aligned to the base type of the bit field. For example,
+by default a structure containing nothing but 8 unsigned bitfields of length
+1 would be aligned to a 4 byte boundary and have a size of 4 bytes. By
+using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mno-bit-align</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the structure would be aligned to a 1 byte boundary and be one byte in
+size.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-strict-align</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mstrict-align</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On System V.4 and embedded
+PowerPC systems do not (or do) assume that unaligned memory references
+will be handled by the system.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mrelocatable</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-relocatable</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On embedded PowerPC systems
+generate code that allows (or does not allow) the program to be relocated
+to a different address at runtime. If you use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mrelocatable</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+on any module, all objects linked together must be compiled with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mrelocatable</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mrelocatable-lib</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mrelocatable-lib</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-relocatable-lib</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On embedded PowerPC systems
+generate code that allows (or does not allow) the program to be relocated
+to a different address at runtime. Modules compiled with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mreloctable-lib</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+can be linked with either modules compiled without ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mrelocatable</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mrelocatable-lib</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or with modules compiled with the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mrelocatable</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-toc</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mtoc</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On System V.4 and embedded
+PowerPC systems do not (or do) assume that register 2 contains a pointer
+to a global area pointing to the addresses used in the program.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-traceback</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mtraceback</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On embedded PowerPC systems
+do not (or do) generate a trace-back tag before the start of the function.
+This tag can be used by the debugger to identify where the start of a function
+is.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mlittle</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mlittle-endian</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On System V.4 and embedded
+PowerPC systems compile code for the processor in little endian mode. The
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mlittle-endian</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option is the same as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mlittle</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mbig</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mbig-endian</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On System V.4 and embedded
+PowerPC systems compile code for the processor in big endian mode. The
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mbig-endian</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option is the same as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mbig</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mcall-sysv</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On System V.4 and embedded
+PowerPC systems compile code using calling conventions that adheres to
+the March 1995 draft of the System V Application Binary Interface (ABI),
+PowerPC processor supplement. This is the default unless you configured
+GCC using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>powerpc-*-eabiaix</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mcall-sysv-eabi</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Specify both ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcall-sysv</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-meabi</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mcall-sysv-noeabi</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Specify both ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mcall-sysv</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mnoeabi</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mcall-aix</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On System V.4 and embedded
+PowerPC systems compile code using calling conventions that are similar
+to those used on AIX. This is the default if you configured GCC using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>powerpc-*-eabiaix</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mcall-solaris</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On System V.4 and embedded
+PowerPC systems, compile code for the Solaris operating system.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mcall-linux</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On System V.4 and embedded
+PowerPC systems, compile code for the Linux operating system.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mprototype</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-prototype</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On System V.4 and embedded
+PowerPC systems assume that all calls to variable argument functions are
+properly prototyped. Otherwise, the compiler must insert an instruction
+before every non prototyped call to set or clear bit 6 of the condition
+code register (</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>CR</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+to indicate whether floating point values were passed in the floating point
+registers in case the function takes a variable arguments.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>With ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mprototype</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+only calls to prototyped variable argument functions will set or clear
+the bit.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-msim</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On embedded PowerPC systems,
+assume that the startup module is called </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sim-crt0.o
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>and the standard
+C libraries are </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libsim.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libc.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+This is default for ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>powerpc-*-eabisim</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+configurations.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mmvme</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On embedded PowerPC systems,
+assume that the startup module is called </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mvme-crt0.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and the standard C libraries are ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libmvme.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libc.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mads</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>On embedded PowerPC
+systems, assume that the startup module is called </FONT></FONT><FONT FACE="Courier New,Courier">crt0.o</FONT><FONT SIZE=+1><FONT FACE="Times New Roman,Times">,
+and the standard C libraries are </FONT><FONT FACE="Times New Roman">‘</FONT></FONT><FONT FACE="Courier New,Courier">libads.a</FONT><FONT SIZE=+1><FONT FACE="Times New Roman">’</FONT><FONT FACE="Times New Roman,Times">
+and </FONT><FONT FACE="Times New Roman">‘</FONT></FONT><FONT FACE="Courier New,Courier">libc.a</FONT><FONT SIZE=+1><FONT FACE="Times New Roman">’</FONT><FONT FACE="Times New Roman,Times">.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-myellowknife</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>On embedded PowerPC
+systems, assume that the startup module is called </FONT></FONT><FONT FACE="Courier New,Courier">crt0.o</FONT><FONT SIZE=+1><FONT FACE="Times New Roman,Times">,
+and the standard C libraries are </FONT><FONT FACE="Times New Roman">‘</FONT></FONT><FONT FACE="Courier New,Courier">libyk.a</FONT><FONT SIZE=+1><FONT FACE="Times New Roman">’</FONT><FONT FACE="Times New Roman,Times">
+and </FONT><FONT FACE="Times New Roman">‘</FONT></FONT><FONT FACE="Courier New,Courier">libc.a</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-memb</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On embedded PowerPC systems,
+set the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>PPC_EMB</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+bit in the ELF flags header to indicate that </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>eabi</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+extended relocations are used.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-meabi</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-eabi</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On System V.4 and embedded
+PowerPC systems do (or do not) adhere to the Embedded Applications Binary
+Interface (hence, </FONT></FONT><FONT FACE="Courier New,Courier">eabi</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+which is a set of modifications to the System V.4 specifications. Selecting
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-meabi</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+means that the stack is aligned to an 8 byte boundary, a function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__eabi</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is called to from </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>main</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to set up the EABI environment, and the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-msdata</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option can use both </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r13</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to point to two separate small data areas.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Selecting </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mno-eabi</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+means that the stack is aligned to a 16 byte boundary, and that there is
+no call of an initialization function from main, and the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-msdata</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option will only use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r13</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to point to a single small data area. The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-meabi</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option is on by default if you configured GCC using one of the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>powerpc*-*-eabi*</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-msdata=eabi</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On System V.4 and embedded
+PowerPC systems, put small initialized const global and static data in
+the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.sdata2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+section, which is pointed to by register </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Put small initialized non-const global and static data in the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.sdata</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+section, which is pointed to by register </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r13</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Put small uninitialized global and static data in the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.sbss</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+section, which is adjacent to the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.sdata</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+section. The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-msdata=eabi</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option is incompatible with the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mrelocatable</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option. The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-msdata=eabi</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option also sets the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-memb</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-msdata=sysv</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On System V.4 and embedded
+PowerPC systems, put small global and static data in the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.sdata</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+section, which is pointed to by register </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r13</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Put small uninitialized global and static data in the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.sbss</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+section, which is adjacent to the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.sdata</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+section. The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-msdata=sysv</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option is incompatible with the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mrelocatable</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-msdata=default</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-msdata</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On System V.4 and embedded
+PowerPC systems, if ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-meabi</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is used, compile code the same as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-msdata=eabi</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+otherwise compile code the same as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-msdata=sysv</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-msdata-data</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On System V.4 and embedded
+PowerPC systems, put small global and static data in the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.sdata</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+section. Put small uninitialized global and static data in the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.sbss</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+section. Do not use register </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r13</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to address small data however.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This is the default behavior
+unless other ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-msdata</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options are used.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-msdata=none</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-sdata</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On embedded PowerPC systems,
+put all initialized global and static data in the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.data</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+section, and all uninitialized data in the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.bss</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+section.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-G</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>num</FONT></FONT></I></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On embedded PowerPC systems,
+put global and static items less than or equal to </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>num</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+bytes into the small data or bss sections instead of the normal data or
+bss section. By default, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>num</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is 8. The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-G</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>num</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+switch is also passed to the linker. All modules should be compiled with
+the same ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-G</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>num</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+value.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mregnames</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-mno-regnames</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>On System V.4 and embedded
+PowerPC systems, do (or do not) emit register names in the assembly language
+output using symbolic forms.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccHPPA_Options.html">Previous</A>|<A HREF="gccIBM_RT_Options.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,10 @@
+main.o : main.c data.h C:/agb/include/Agb.h C:/agb/include/AgbTypes.h \
+ C:/agb/include/AgbDefine.h C:/agb/include/AgbMemoryMap.h \
+ C:/agb/include/AgbMacro.h C:/agb/include/AgbSystemCall.h \
+ C:/agb/include/AgbSound.h C:/agb/include/AgbMultiBoot.h \
+ C:/agb/include/IsAgbPrint.h
+data.o : data.c C:/agb/include/Agb.h C:/agb/include/AgbTypes.h \
+ C:/agb/include/AgbDefine.h C:/agb/include/AgbMemoryMap.h \
+ C:/agb/include/AgbMacro.h C:/agb/include/AgbSystemCall.h \
+ C:/agb/include/AgbSound.h C:/agb/include/AgbMultiBoot.h \
+ C:/agb/include/IsAgbPrint.h

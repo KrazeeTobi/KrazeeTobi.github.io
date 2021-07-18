@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Labeled Elements in Initializers</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccConstructor_Expressions.html">Previous</A>|<A HREF="gccCase_Ranges.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_3507763"></A><A NAME="2fb1aaaf"></A><B><FONT SIZE=+3>Labeled
+elements in initializers&nbsp;</FONT></B>&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Standard C requires the
+elements of an initializer to appear in a fixed order, the same as the
+order of the elements in the array or structure being initialized. In GNU
+C you can give the elements in any order, specifying the array indices
+or structure field names they apply to. This extension is not implemented
+in GNU C++. To specify an array index, write ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>[index]</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>[index]=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+before the element value. Use the following example.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>int a[6] = { [4] 29, [2] = 15 };</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The previous specification is
+equivalent to the following.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>int a[6] = { 0, 0, 15, 0, 29, 0 };</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The index values must be constant
+expressions, even if the array being initialized is automatic. To initialize
+a range of elements to the same value, write ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>[
+first... last]=value</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Use the following example.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>int widths[] = { [0 ... 9] = 1, [10 ... 99] = 2, [100] = 3 };</FONT></FONT></PRE>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The length of the array
+is the highest value specified + 1.</FONT></FONT></UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In a structure initializer,
+specify the name of a field to initialize with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fieldname:</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+before the element value. For example given </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct
+point { int x, y; };</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the initialization,</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+struct point p = { y: yvalue, x: xvalue }; </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>is
+equivalent to: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>point
+p = { xvalue, yvalue struct };.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Another syntax which has
+the same meaning is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.<I>fieldname</I>=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+as in the following statement.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>struct point p = { .y = yvalue, .x = xvalue };</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You can also use an element
+label (with either the colon syntax or the period-equal syntax) when initializing
+a union, to specify which element of the union should be used. For example,
+the following will convert 4 to a double to store it in the union using
+the second element.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>union foo { int i; double d; };&nbsp;
+
+union foo f = { d: 4 };</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>By contrast, casting 4 to type
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+would store it into the union as the integer ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>i</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+since it is an integer. (See <A HREF="gccCast_to_a_Union_Type.html">Cast
+to a union type</A>.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can combine this technique
+of naming elements with ordinary C initialization of successive elements.
+Each initializer element that does not have a label applies to the next
+consecutive element of the array or structure. For example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int
+a[6] = { [1] = v1, v2, [4] = v4 }; </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>is
+equivalent to: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int
+a[6] = { 0, v1, v2, 0, v4, 0 };.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Labeling the elements of
+an array initializer is especially useful when the indices are characters
+or belong to an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>enum</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+type, as in the following example.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>int whitespace[256]&nbsp;
+&nbsp; = { ['&nbsp; '] = 1, ['\t'] = 1, ['\h'] = 1,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ['\f'] = 1, ['\n'] = 1, ['\r'] = 1 };</FONT></FONT></PRE>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccConstructor_Expressions.html">Previous</A>|<A HREF="gccCase_Ranges.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

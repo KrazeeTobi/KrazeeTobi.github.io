@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Convenience variables</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbValue_history.html">Previous</A>|<A HREF="gdbRegisters.html">Next</A>
+<BR><A NAME="off_1639625"></A><A NAME="a4f24455"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Convenience
+variables</FONT></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB
+provides <I>convenience variables</I> that you can use within GDB to hold
+on to a value and refer to it later. These variables exist entirely within
+GDB; they are not part of your program, and setting a convenience variable
+has no direct effect on further execution of your program. That is why
+you can use them freely.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Convenience variables are
+prefixed with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Any name preceded by ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+can be used for a convenience variable, unless it is one of the predefined
+machine-specific register names (see <FONT COLOR="#008000"><A HREF="gdbRegisters.html">Registers</A></FONT>).
+(Value history references, in contrast, are <I>numbers</I> preceded by
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+See <FONT COLOR="#008000"><A HREF="gdbValue_history.html">Value history</A></FONT>.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can save a value in a
+convenience variable with an assignment expression, just as you would set
+a variable in your program. For example, set </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$foo
+= *object_ptr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+would save in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+the value contained in the object pointed to by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>object_ptr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Using a convenience variable
+for the first time creates it, but its value is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>void</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+until you assign a new value. You can alter the value with another assignment
+at any time. Convenience variables have no fixed types. You can assign
+a convenience variable any type of value, including structures and arrays,
+even if that variable already has a value of a different type. The convenience
+variable, when used as an expression, has the type of its current value.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>show convenience</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print a list of convenience
+variables used so far, and their values. Abbreviated </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>show
+con</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>One of the ways to use a
+convenience variable is as a counter to be incremented or a pointer to
+be advanced. For instance, to print a field from successive elements of
+an array of structures, use the following as an example.</FONT></FONT>
+<BR>&nbsp;
+<UL><B><FONT FACE="Courier New"><FONT SIZE=+0>set $i = 0</FONT></FONT></B>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>print bar[$i++]->contents</FONT></FONT></B></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Repeat that command by using
+the </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Return</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+key. The following convenience variables are created automatically by GDB
+and given values likely to be useful.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>$_</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$_</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is automatically set by the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command to the last address examined (see <FONT COLOR="#008000"><A HREF="gdbExamining_memory.html">Examining
+memory</A></FONT>). Other commands which provide a default address for
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to examine also set </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$_</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to that address; these commands include </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info
+line</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info
+breakpoint</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>. The
+type of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$_</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>void</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+except when set by the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command, in which case it is a pointer to the type of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+</UL>
+&nbsp;
+<UL>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>$__</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is automatically set by the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command to the value found in the last address examined. Its type is chosen
+to match the format in which the data was printed.</FONT></FONT></UL>
+</UL>
+&nbsp;
+<UL>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>$_exitcode</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$_exitcode</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is automatically set to the exit code when the program being debugged terminates.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbValue_history.html">Previous</A>|<A HREF="gdbRegisters.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

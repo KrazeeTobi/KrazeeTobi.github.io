@@ -1,0 +1,237 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Command Line Options</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="onlonl.html">Contents</A>|<A HREF="onlindex.html">Index</A>|<A HREF="onlGNU_Online_Documentation_Overvie.html">Previous</A>|<A HREF="onlMoving_the_Cursor.html">Next</A>
+<BR><A NAME="off_35324"></A><A NAME="23ddc264"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Command
+line options</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>GNU
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+accepts several options to control the initial node being viewed, and to
+specify which directories to search for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+files. The following is a template showing an invocation of GNU </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+from the shell.</FONT></FONT>
+<UL>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>info [-- option-name option-value] menu-item ...</FONT></FONT></PRE>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The following </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>option-names</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">are available when invoking </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+from the shell.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>&nbsp;
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--directory <I>directory-path</I></FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-d <I>directory-path</I></FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Adds </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>directory-path</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to the list of directory paths searched when Info needs to find a file.
+You may issue </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--directory</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+multiple times; once for each directory which contains info files.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Alternatively, you may specify
+a value for the environment variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>INFOPATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+if </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--directory</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is not given, the value of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>INFOPATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is used. The value of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>INFOPATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a colon separated list of directory names. If you do not supply </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>INFOPATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--directory-path</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+a default path is used.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0></FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--file <I>filename</I></FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-f <I>filename</I></FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Specifies a particular </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file to visit. Instead of visiting the file, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>dir</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will start with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>(<I>filename</I>)
+Top</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> as the first
+file and node.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0></FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--node <I>nodename</I></FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-n <I>nodename</I></FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Specifies a particular node
+to visit in the initial file loaded. This is especially useful in conjunction
+with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Of course, you can specify both the file and node in a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--node</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command; but don’t forget to escape the open and close parentheses from
+the shell as in:</FONT></FONT><FONT SIZE=+0><FONT FACE="Courier New"> info
+--node </FONT><FONT FACE="Times New Roman">’</FONT><FONT FACE="Courier New">(emacs)Buffers</FONT><FONT FACE="Times New Roman">’</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You can specify </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--node</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+multiple times. For an interactive Info session, each </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>nodename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is visited in its own window. For a non-interactive Info (such as when
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--output</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is given), each </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>node-name
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>is processed
+sequentially.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0></FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--output <I>filename</I></FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-o <I>filename</I></FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Specify </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as the name of a file to output to. Each node that Info visits will be
+output to </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Times New Roman">
+instead of interactively viewed. A value of ‘</FONT><B><FONT FACE="Arial Narrow">-</FONT></B><FONT FACE="Times New Roman">’
+for </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename </FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>specifies
+the standard output.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0></FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--subnodes</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This option only has meaning
+given in conjunction with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--output</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+It means to recursively output the nodes appearing in the menus of each
+node being output. Menu items which resolve to external info files are
+not output, and neither are menu items which are members of an index. Each
+node is only output once.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0></FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--help</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-h</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT SIZE=+1><FONT FACE="Times New Roman">Produces a relatively brief
+description of the available </FONT><TT>info</TT><FONT FACE="Times New Roman">
+options.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0></FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>--version</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Prints the version information
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and exits.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></DT>
+</UL>
+
+<DT>
+<I><FONT FACE="Courier New"><FONT SIZE=+0></FONT></FONT></I></DT>
+
+<DT>
+<I><FONT FACE="Courier New"><FONT SIZE=+0>menu-item</FONT></FONT></I></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Remaining arguments to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are treated as the names of menu items. The first argument would be a menu
+item in the initial node visited, while the second argument would be a
+menu item in the first argument’s node. You can easily move to the node
+of your choice by specifying the menu names which describe the path to
+that node, as in the following example.</FONT></FONT></DT>
+</UL>
+</UL>
+
+<UL>
+<UL>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>info emacs buffers</FONT></FONT></PRE>
+</UL>
+</UL>
+</UL>
+
+<UL>
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This input example selects the
+menu item ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Emacs</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in the node ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>(dir)Top</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+and then selects the menu item ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Buffers</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in the node ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>(emacs)Top</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></DT>
+</UL>
+</UL>
+
+<CENTER>
+<DT>
+
+<HR SIZE=3 WIDTH="100%"></DT></CENTER>
+
+<CENTER>
+<DT>
+<A HREF="#Top">Top</A>|<A HREF="onlonl.html">Contents</A>|<A HREF="onlindex.html">Index</A>|<A HREF="onlGNU_Online_Documentation_Overvie.html">Previous</A>|<A HREF="onlMoving_the_Cursor.html">Next</A></DT></CENTER>
+
+</BODY>
+</HTML>

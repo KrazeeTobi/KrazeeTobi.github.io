@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>jN, jNf, yN, yNf[Bessel functions]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libm.html">Contents</A>|<A HREF="libmindex.html">Index</A>|<A HREF="libmatanh_atanhfinverse_hyperbolic_t.html">Previous</A>|<A HREF="libmcbrt_cbrtfcube_root.html">Next</A>
+</P>
+
+<P><A NAME="off_131072"></A><A NAME="a252430c"></A><A NAME="off_131072"></A><A NAME="a252430c"></A><A NAME="off_131072"></A><A NAME="a252430c"></A><A NAME="off_131072"></A><A NAME="a252430c"></A><A NAME="off_131072"></A><A NAME="a252430c"></A><A NAME="off_131072"></A><A NAME="a252430c"></A><A NAME="off_131072"></A><A NAME="a252430c"></A><A NAME="off_131072"></A><A NAME="a252430c"></A><A NAME="off_131072"></A><A NAME="a252430c"></A><FONT SIZE=+3><FONT FACE="Courier New">jN</FONT><FONT FACE="Times New Roman">,
+</FONT><FONT FACE="Courier New">jNf</FONT><FONT FACE="Times New Roman">,
+</FONT><FONT FACE="Courier New">yN</FONT><FONT FACE="Times New Roman">,
+</FONT><FONT FACE="Courier New">yNf</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+4>
+<BR>
+</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=+3>[Bessel functions]
+</FONT></FONT></B></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS </FONT></FONT></B></P>
+
+<UL>
+<PRE>
+<FONT FACE="Courier New"><FONT SIZE=+1>#include &lt;math.h&gt; 
+double j0(double <I>x</I>); 
+float j0f(float <I>x</I>); 
+double j1(double <I>x</I>); 
+float j1f(float <I>x</I>); 
+double jn(int <I>n</I>, double <I>x</I>); 
+float jnf(int <I>n</I>, float <I>x</I>); 
+double y0(double <I>x</I>); 
+float y0f(float <I>x</I>); 
+double y1(double <I>x</I>); 
+float y1f(float <I>x</I>); 
+double yn(int <I>n</I>, double <I>x</I>); 
+float ynf(int <I>n</I>, float <I>x</I>); </FONT></FONT></PRE>
+</UL>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION </FONT></FONT></B></P>
+
+<UL>
+<P><BR>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The Bessel functions are a family
+of functions that solve the following differential equation.</FONT></FONT></P>
+
+<UL>
+<P><IMG SRC="libm00000002.gif" ALT="libm00000002.gif" HEIGHT=45 WIDTH=213><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT></P>
+</UL>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>These functions have many
+applications in engineering and physics. </FONT></FONT></P>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>jn</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">calculates the Bessel function of the
+first kind of order </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>j0</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>j1</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">are special cases for order 0 and order
+1 respectively. Similarly, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>yn</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">calculates the Bessel function of the
+second kind of order </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>y0</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>y1</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">are special cases for order 0 and 1.
+</FONT></FONT></P>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>jnf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>j0f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>j1f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ynf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>y0f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>y1f</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">perform the same calculations, but
+on </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>float</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">rather than </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>double</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">values. </FONT></FONT></P>
+</UL>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS </FONT></FONT></B></P>
+
+<UL>
+<P><BR>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The value of each Bessel function
+at </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is returned. </FONT></FONT></P>
+</UL>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE </FONT></FONT></B></P>
+
+<UL>
+<P><BR>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>None of the Bessel functions
+are in ANSI C. </FONT></FONT></P>
+</UL>
+
+</BODY>
+</HTML>

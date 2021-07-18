@@ -1,0 +1,131 @@
+< How to Avoid Loss of SRAM Data By Insert/Remove of a Game Pak With the Power ON >
+
+[Important Notice for Developers using SRAM for Back-up Data]
+
+It was discovered that during game play if the Game Pak was removed or 
+inserted with the power ON, there was a problem with backup SRAM 
+data being destroyed easily.
+
+This "hot plug-in/removal" is prohibited in the Instruction Booklet for the 
+general consumer.  However, if backup data is lost a large volume of complaints
+from consumers can be expected.  In order to assure that this problem does not 
+occur the software needs to be revised.  Therefore, regardless of lot check 
+pass/fail the measures described below (Support Level 1) must be taken.
+
+
+[Summary]
+
+Use a Game Pak interrupt. Program the Game Pak interrupt so that the program
+enters an infinite loop when an the interrupt occurs. Make sure that a Game Pak 
+interrupt is always enabled when a program runs with a Game Pak.
+
+
+[Submitting Master ROM] 
+
+When submitting the Software Specification Sheet, add an item in the remarks area 
+stating "Program to Avoid Loss of SRAM-Support Level 1" so that we can verify it. 
+
+
+[Support Level 1 (must be followed strictly)] 
+
+As a sample to support this, "simple_en010115.zip" has been uploaded to the SDSG 
+Web Site (http://www.noa-engineering.com). The following example 
+describes only the changes according to the existing sample source.  
+
+1) Enable a Game Pak interrupt as much as possible during a main loop 
+x(including sub-routines).   
+ 
+(However, with a program which downloads using multi-play boot, disable  
+the Game Pak interrupt. There is a possibility that if ROM registration data
+of a Game Pak is checked and no Game Pak is inserted, a noise may be 
+generated due to the open connector and a Game Pak interrupt would occur. 
+
+If a Game Pak is inserted, enable a Game Pak interrupt so that abnormal data
+will not be read by removing the Game Pak during access. 
+  
+When starting a Game Pak program from a download program, the IE flag is 
+cleared once. So, enable a Game Pak interrupt again in the Game Pak program.  
+It is possible to include it in a normal initialization routine of a Game Pak.)
+
+Example: simple / main.c / AgbMain() / Line 96 
+
+    *(vu16 *)REG_IME = 1;                      // Set IME
+    *(vu16 *)REG_IE  = V_BLANK_INTR_FLAG       // Enable V Blank interrupt
+                     | CASSETTE_INTR_FLAG;     // Enable Game Pak interrupt
+
+
+2) Make sure to enter into infinite loop when a Game Pak interrupt occurs.
+
+Example: simple / crt0.s / intr_main() /  Line 95
+         reintr / crt0.s / intr_main() /  Line 102
+
+     ands r0, r1, #CASSETTE_INTR_FLAG  @ Game Pak interrupt
+loop: bne loop
+jump_intr:
+
+
+3) Give the highest priority to Game Pak interrupt.
+   (You don't have to change priorities for multiple interrupt.)
+
+Example: simple / crt0.s / intr_main() /  Line 54
+
+       and     r1, r2, r2, lsr #16         @ r1: IE & IF
+       ands    r0, r1, #CASSETTE_INTR_FLAG @ Game Pak interrupt
+loop:  bne     loop
+       mov     r2, #0
+       ands    r0, r1, #V_BLANK_INTR_FLAG  @ V blank interrupt
+       bne     jump_intr
+       add     r2, r2, #4
+        .
+        .
+        .
+       ands    r0, r1, #KEY_INTR_FLAG      @ Key interrupt
+jump_intr:
+
+
+[Support Level 2 (recommended)] 
+
+1) Do [Support Level 1].
+
+2) Execute routine on the RAM if Game Pak interrupt cannot be made
+   (Such as routine which turns off IME temporarily).
+
+3) Minimize interrupt routines
+
+
+Example: multi_sio / crt0.s / intr_main()  /  Line 60
+                     main.c / AgbMain()    /  Line 119
+                              VBlankIntr() /  Line 150
+
+Try not to use V blank interrupt routines more than updating sound DMA 
+or setting interrupt flags. Execute routines to update VRAM or OAM 
+during V blank in the main loop.
+
+
+[Support Level 3 (recommended)] 
+
+To explain this, there is a sample "reintr_en010115.zip" on the SDSG Web Site. 
+The example below shows just changed lines in the previous sample.
+
+
+1) Do [Support Level 2].
+
+2) Select either one of the two methods below.
+
+2a) Enable multiple interrupt to allow a Game Pak interrupt.
+    This makes it possible to avoid unexpected results during process of
+    interrupt routines on the Game Pak.
+
+
+Exapmple: reintr / crt0.s / intr_main() / Line 105
+
+                                                 @ Set IE <- Select multiple interrupt
+        ldr    r1, =CASSETTE_INTR_FLAG | TIMER0_INTR_FLAG
+        strh   r1, [r3]
+
+
+2b) Execute all the interrupt routines on the RAM.
+
+End
+
+

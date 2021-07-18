@@ -1,0 +1,628 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>M680x0 Dependent Features</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asIntel_960_Dependent_Features.html">Previous</A>|<A HREF="asMIPS_Dependent_Features.html">Next</A>
+<BR><A NAME="off_1474560"></A><A NAME="504afc3b"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>M68K
+dependent features</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>See
+the following documentation for the Motorola M68K architecture’s features
+and options for the assembler.</FONT></FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1><A HREF="#options">Options
+for M68K</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1><A HREF="#syntax">Syntax
+for M68K</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1><A HREF="#floatpoint">Floating
+point for M68K</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1><A HREF="#machinedirs">Machine
+directives for M68K</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1><A HREF="#branch">Branch
+improvement for M68K</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1><A HREF="#Specialchars">Special
+characters for M68K</A></FONT></FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+
+
+<P><A NAME="options"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Options
+for M68K</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+Motorola 68K version of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has a few machine dependent options.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>You
+can use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option to shorten the size of references to undefined symbols. If you do
+not use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option, references to undefined symbols are wide enough for a full </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>long</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(32 bits). (Since as cannot know where these symbols end up, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can only allocate space for the linker to fill in later. Since as does
+not know how far away these symbols are, it allocates as much space as
+it can.) If you use this option, the references are only one word wide
+(16 bits). This may be useful if you want the object file to be as small
+as possible, and you know that the relevant symbols are always less than
+17 bits away. For some configurations, especially those where the compiler
+normally does not prepend an underscore to the names of user variables,
+the assembler requires a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+before any use of a register name. This is intended to let the assembler
+distinguish between C variables and functions named </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a7</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and so on. The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is always accepted, but is not required for certain configurations, notably
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sun3</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--register-prefix-optional</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option may be used to permit omitting the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+even for configurations for which it is normally required. If this is done,
+it will generally be impossible to refer to C variables and functions with
+the same names as register names.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can assemble code for several different members of the Motorola 68K family.
+The default depends upon how </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+was configured when it was built; normally, the default is to assemble
+code for the 68020 microprocessor. The following options may be used to
+change the default. These options control which instructions and addressing
+modes are permitted. The members of the 68K family are very similar. For
+detailed information about the differences, see the Motorola manuals.</FONT></FONT></FONT>
+<UL>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-m68000</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-m68008</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-m68302</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Assemble for the 68000.
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-m68008</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-m68302</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are synonyms for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-m68000</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+since the chips are the same from the point of view of the assembler.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-m68010</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Assemble for the 68010.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-m68020</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Assemble for the 68020.
+This is normally the default.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-m68030</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Assemble for the 68030.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-m68040</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Assemble for the 68040.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-m68060</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Assemble for the 68060.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-mcpu32</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-m68331</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-m68332</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-m68333</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-m68340</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-m68360</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Assemble for the CPU32 family
+of chips.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-m68881</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-m68882</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Assemble 68881 floating
+point instructions. This is the default for the 68020, 68030, and the CPU32.
+The 68040 and 68060 always support floating point instructions.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-mno-68881</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Do not assemble 68881 floating
+point instructions. This is the default for 68000 and the 68010. The 68040
+and 68060 always support floating point instructions, even if this option
+is used.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-m68851</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Assemble 68851 MMU instructions.
+This is the default for the 68020, 68030, and 68060. The 68040 accepts
+a somewhat different set of MMU instructions; </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-m68851</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-m68040</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+should not be used together.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-mno-68851</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Do not assemble 68851 MMU
+instructions. This is the default for the 68000, 68010, and the CPU32.
+The 68040 accepts a somewhat different set of MMU instructions.</FONT></FONT></UL>
+</UL>
+
+
+<P><A NAME="syntax"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Syntax
+for M68K</FONT></FONT></I></B>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>This
+syntax for the Motorola 68K was developed at MIT.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+68K version of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+uses instructions names and syntax compatible with the Sun assembler. Intervening
+periods are ignored; for example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>movl</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is equivalent to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mov.l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>In
+the following, note that </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>apc</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+stands for any of the address registers (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%a0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%a7</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+the program counter (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%pc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+the zero-address relative to the program counter (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%zpc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+a suppressed address register (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%za0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%za7</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+or it may be omitted entirely.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+use of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+means one of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>w</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and it may be omitted, along with the leading colon, unless a scale is
+also specified. The use of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>scale</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+means one of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>4</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>8</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and it may always be omitted along with the leading colon.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>The
+following addressing modes are understood.</FONT></FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Immediate</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>#<I>number</I></FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Data Register</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>%d0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0> %d7</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Address Register</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>%a0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%a7</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>%a7</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is also known as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%sp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+i.e., the Stack Pointer.</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>%a6</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is also known as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%fp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+i.e., the Frame Pointer.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Address Register Indirect</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>%a0@</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0> %a7@</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Address Register Postincrement</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>%a0@+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%a7@+</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Address Register Predecrement</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>%a0@-</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%a7@-</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Indirect Plus Offset</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0><I>apc</I>@(<I>number</I>)</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Index</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0><I>apc</I>@(<I>number</I>,<I>register</I>:<I>size</I>:<I>scale</I>)</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>number</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may be omitted.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Postindex</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0><I>apc</I>@(<I>number</I>)@(<I>onumber</I>,<I>register</I>:<I>size</I>:<I>scale</I>)</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>onumber</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>register</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+but not both, may be omitted.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Preindex</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0><I>apc</I>@(<I>number</I>,<I>register</I>:<I>size</I>:<I>scale</I>)@(<I>onumber</I>)</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The number may be omitted.
+Omitting the register produces the Postindex addressing mode.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Absolute</FONT></FONT></I></LI>
+
+<BR><I><FONT FACE="Courier New"><FONT SIZE=+0>symbol</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>digits</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+optionally followed by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>:b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>:w</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>:l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+</UL>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The standard
+Motorola syntax for this chip differs from the syntax already discussed.
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can accept Motorola syntax for operands, even if MIT syntax is used for
+other operands in the same instruction. The two kinds of syntax are fully
+compatible. In the following, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>apc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+stands for any of the address registers (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%a0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%a7</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+the program counter (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%pc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+the zero-address relative to the program counter (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%zpc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+or a suppressed address register (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%za0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%za7</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+The use of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+means one of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>w</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>l</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and it may always be omitted along with the leading dot. The use of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>scale</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+means one of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>4</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>8</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and it may always be omitted along with the leading asterisk. The following
+additional addressing modes are understood.</FONT></FONT></FONT>
+<UL>
+<UL>
+<UL>
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Address Register Indirect</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>%a0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%a7</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>%a7</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is also known as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%sp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+i.e., the Stack Pointer.</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>%a6</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is also known as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%fp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+i.e., the Frame Pointer.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Address Register Postincrement</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>(%a0)+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>(%a7)+</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Address Register Predecrement</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>-(%a0)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-(%a7)</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Indirect Plus Offset</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0><I>number</I>(<I>%a0</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+through </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>number</I>(<I>%a7</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>number</I>(<I>%pc</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The number may also appear
+within the parentheses, as in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>(<I>number</I>,<I>%a0</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+When used with the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>pc</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>number</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may be omitted (with an address register, omitting the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>number</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+produces <I>Address Register Indirect</I> mode).</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Index</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0><I>number</I>(<I>apc</I>,<I>register</I>.<I>size</I>*<I>scale</I>)</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>number</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may be omitted, or it may appear within the parentheses. The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>apc</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may be omitted. The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>register</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>apc</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may appear in either order. If both </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>apc</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>register</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are address registers, and the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>scale</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are omitted, then the first register is taken as the base register, and
+the second as the index register.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Postindex</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>([<I>number</I>,<I>apc</I>],<I>register</I>.<I>size</I>*<I>scale</I>,<I>onumber</I>)</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>onumber</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>register</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or both, may be omitted. Either the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>number</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>apc</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may be omitted, but not both.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1>Preindex</FONT></FONT></I></LI>
+
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>([<I>number</I>,<I>apc</I>,<I>register</I>.<I>size</I>*<I>scale</I>],<I>onumber</I>)</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>number</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>apc</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>register</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or any two of them, may be omitted. The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>onumber</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may be omitted. The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>register</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>apc</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may appear in either order. If both </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>apc</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>register</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are address registers, and the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and scale are omitted, then the first register is taken as the base register,
+and the second as the index register.</FONT></FONT></UL>
+</UL>
+</UL>
+</UL>
+
+
+<P><A NAME="floatpoint"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Floating
+point for M68K</FONT></FONT></I></B>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Packed
+decimal (P) format floating literals are not supported. Feel free to add
+the code!</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>The
+floating point formats generated by directives are the following.</FONT></FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>.float</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>Single</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+precision floating point constants.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>.double</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>Double</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+precision floating point constants.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>.extend</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>.ldouble</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>Extended</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+precision (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>long double</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+floating point constants.</FONT></FONT></UL>
+</UL>
+
+
+<P><A NAME="machinedirs"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Machine
+directives for M68K</FONT></FONT></I></B>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>In
+order to be compatible with the Sun assembler, the 68K assembler understands
+the following directives.</FONT></FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>.data1</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Similar to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.data
+1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> directive.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>.data2</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Similar to a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.data
+2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> directive.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>.even</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>A special case of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.align</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive; it aligns the output to an even byte boundary.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>.skip</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Similar to a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.space</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive.</FONT></FONT></UL>
+</UL>
+
+
+<P><A NAME="branch"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Branch
+improvement for M68K</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Certain
+pseudo opcodes are permitted for branch instructions. They expand to the
+shortest branch instruction that reach the target. Generally these mnemonics
+are made by substituting </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>j</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+at the start of a Motorola mnemonic. The following summarizes the pseudo-operations.</FONT></FONT></FONT>
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Displacement</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++--------------------------------------------------</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+68020 68000/10</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>Pseudo-Op |BYTE&nbsp;&nbsp;
+WORD&nbsp;&nbsp;&nbsp; LONG&nbsp;&nbsp;&nbsp; LONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+non-PC relative</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++--------------------------------------------------</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp; jbsr
+|bsrs&nbsp;&nbsp; bsr&nbsp;&nbsp;&nbsp;&nbsp; bsrl&nbsp;&nbsp;&nbsp; jsr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+jsr</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+jra |bras&nbsp;&nbsp; bra&nbsp;&nbsp;&nbsp;&nbsp; bral&nbsp;&nbsp;&nbsp;
+jmp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jmp</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>*&nbsp;&nbsp;&nbsp;&nbsp; jXX
+|bXXs&nbsp;&nbsp; bXX&nbsp;&nbsp;&nbsp;&nbsp; bXXl&nbsp;&nbsp;&nbsp; bNXs;jmpl&nbsp;&nbsp;
+bNXs;jmp</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>*&nbsp;&nbsp;&nbsp; dbXX |dbXX&nbsp;&nbsp;
+dbXX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dbXX;bra;jmpl</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>*&nbsp;&nbsp;&nbsp; fjXX |fbXXw&nbsp;
+fbXXw&nbsp;&nbsp; fbXXl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fbNXw;jmp</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>XX: condition</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>NX: negative of condition XX</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<BR><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</FONT></FONT><B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>See the
+following description.</FONT></FONT></I></B></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>jbsr</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>jra</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>These are the simplest jump
+pseudo-operations; they always map to one particular machine instruction,
+depending on the displacement to the branch target.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>J<I>XX</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Here, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>j<I>XX</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+stands for an entire family of pseudo-operations, where </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>XX</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a conditional branch or condition-code test. The full list of pseudo-ops
+in this family is the following:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>&nbsp;
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>jhi&nbsp;&nbsp; jls&nbsp;&nbsp;
+jcc&nbsp;&nbsp; jcs&nbsp;&nbsp; jne&nbsp;&nbsp; jeq&nbsp;&nbsp; jvc</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>jvs&nbsp;&nbsp; jpl&nbsp;&nbsp;
+jmi&nbsp;&nbsp; jge&nbsp;&nbsp; jlt&nbsp;&nbsp; jgt&nbsp;&nbsp; jle</FONT></FONT></UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For the cases of non-PC relative
+displacements and long displacements on the 68000 or 68010, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+issues a longer code fragment in terms of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>NX</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the opposite condition to </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>XX</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>&nbsp;
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>j<I>XX</I> foo</FONT></FONT></UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For the non-PC relative case
+in the previous example , </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+gives the following.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>&nbsp;
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+b<I>NX</I>s&nbsp; oof</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+jmp&nbsp; foo</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>oof:</FONT></FONT></UL>
+</UL>
+</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>db<I>XX</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The full family of pseudo-operations
+meant by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>db<I>XX</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the following.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>&nbsp;
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>dbhi&nbsp;&nbsp; dbls&nbsp;&nbsp;
+dbcc&nbsp;&nbsp; dbcs&nbsp;&nbsp; dbne&nbsp;&nbsp; dbeq&nbsp;&nbsp; dbvc</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>dbvs&nbsp;&nbsp; dbpl&nbsp;&nbsp;
+dbmi&nbsp;&nbsp; dbge&nbsp;&nbsp; dblt&nbsp;&nbsp; dbgt&nbsp;&nbsp; dble</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>dbf&nbsp;&nbsp;&nbsp; dbra&nbsp;&nbsp;
+dbt</FONT></FONT></UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Other than for word and byte
+displacements, when the source reads </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>dbXX
+foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>, </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+emits the following output.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>&nbsp;
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+db<I>XX</I> oo1</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+bra oo2</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;oo1:&nbsp;&nbsp;&nbsp;&nbsp;
+jmpl foo</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>oo2:</FONT></FONT></UL>
+</UL>
+</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>fj<I>XX</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This family includes the
+following.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>&nbsp;
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>fjne&nbsp;&nbsp;&nbsp; fjeq&nbsp;&nbsp;&nbsp;
+fjge&nbsp;&nbsp;&nbsp; fjlt&nbsp;&nbsp;&nbsp; fjgt&nbsp;&nbsp;&nbsp; fjle&nbsp;&nbsp;&nbsp;&nbsp;
+fjf</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>fjt&nbsp;&nbsp;&nbsp;&nbsp;
+fjgl&nbsp;&nbsp;&nbsp; fjgle&nbsp;&nbsp; fjnge&nbsp;&nbsp; fjngl&nbsp;&nbsp;
+fjngle&nbsp;&nbsp; fjngt</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>fjnle&nbsp;&nbsp; fjnlt&nbsp;&nbsp;
+fjoge&nbsp;&nbsp; fjogl&nbsp;&nbsp; fjogt&nbsp;&nbsp; fjole&nbsp;&nbsp;&nbsp;
+fjolt</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>fjor&nbsp;&nbsp;&nbsp; fjseq&nbsp;&nbsp;
+fjsf&nbsp;&nbsp;&nbsp; fjsne&nbsp;&nbsp; fjst&nbsp;&nbsp;&nbsp; fjueq&nbsp;&nbsp;&nbsp;
+fjuge</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>fjugt&nbsp;&nbsp; fjule&nbsp;&nbsp;
+fjult&nbsp;&nbsp; fjun</FONT></FONT></UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For branch targets that are
+not PC relative, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+emits the following when it encounters </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fj<I>XX</I>
+foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>fb<I>NX</I> oof</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>jmp foo</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>oof:</FONT></FONT></UL>
+</UL>
+</UL>
+</UL>
+
+
+<P><A NAME="Specialchars"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Special
+characters for M68K</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+immediate character is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for Sun compatibility. The line-comment character is </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>|</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+appears at the beginning of a line, it is treated as a comment unless it
+looks like </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>line</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+in which case it is treated normally.</FONT></FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asIntel_960_Dependent_Features.html">Previous</A>|<A HREF="asMIPS_Dependent_Features.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,106 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Examining Data</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbSource_and_machine_code.html">Previous</A>|<A HREF="gdbExpressions.html">Next</A>
+<BR><A NAME="off_1344541"></A><A NAME="8bce74ed"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Examining
+data</FONT></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>See
+the following documentation for more specific discussion on examining your
+data using GDB.</FONT></FONT>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="gdbExpressions.html">Expressions</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="gdbProgram_variables.html">Program
+variables</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="gdbArtificial_arrays.html">Artificial
+arrays</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="gdbOutput_formats.html">Output
+formats</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="gdbExamining_memory.html">Examining
+memory</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="gdbAutomatic_display.html">Automatic
+display</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="gdbPrint_settings.html">Print
+settings</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="gdbValue_history.html">Value
+history</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="gdbConvenience_variables.html">Convenience
+variables</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="gdbRegisters.html">Registers</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="gdbFloating_point_hardware.html">Floating
+point hardware</A></FONT></FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The usual way to examine data
+in your program is with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command (abbreviated </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>p</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+or its synonym, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>inspect</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+It evaluates and prints the value of an expression of the language your
+program is written in (see <FONT COLOR="#008000"><A HREF="gdbUsing_GDB_with_Different_Languag.html">Using
+GDB with different languages</A></FONT>).</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>exp</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>print /<I>f exp</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><I><FONT FACE="Courier New"><FONT SIZE=+0>exp</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is an expression (in the source language). By default the value of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>exp</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is printed in a format appropriate to its data type; you can choose a different
+format by specifying ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/<I>f</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+where </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>f</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a letter specifying the format; see <FONT COLOR="#008000"><A HREF="gdbOutput_formats.html">Output
+formats</A></FONT>.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>print /<I>f</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>If you omit </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>exp</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+GDB displays the last value again (from the <I>value history</I>; see <FONT COLOR="#008000"><A HREF="gdbValue_history.html">Value
+history</A></FONT>). This allows you to conveniently inspect the same value
+in an alternative format.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>A more low-level way of
+examining data is with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command. It examines data in memory at a specified address and prints it
+in a specified format. See <FONT COLOR="#008000"><A HREF="gdbExamining_memory.html">Examining
+memory</A></FONT>.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If you are interested in
+information about types, or about how the fields of a struct or class are
+declared, use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ptype</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>exp</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command rather than </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+See <FONT COLOR="#008000"><A HREF="gdbExamining_the_Symbol_Table.html">Examining
+the symbol table</A></FONT>.</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbSource_and_machine_code.html">Previous</A>|<A HREF="gdbExpressions.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

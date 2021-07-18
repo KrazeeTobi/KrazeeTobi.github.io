@@ -1,0 +1,212 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Reading and writing files</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioClasses_for_Files_and_Strings.html">Previous</A>|<A HREF="libioReading_and_writing_in_memory.html">Next</A>
+<BR><A NAME="off_458958"></A><A NAME="742daf19"></A><A NAME="off_458958"></A><A NAME="742daf19"></A><A NAME="off_458958"></A><A NAME="742daf19"></A><A NAME="off_458958"></A><A NAME="742daf19"></A><A NAME="off_458958"></A><A NAME="742daf19"></A><A NAME="off_458958"></A><A NAME="742daf19"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Reading
+and writing files</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>These
+methods are declared in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fstream.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+You can read data from class </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ifstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with any operation from class </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>istream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+There are also a few specialized facilities, as in the following methods.</FONT></FONT>
+<UL><FONT SIZE=+1><B><FONT FACE="Times New Roman">ifstream::ifstream </FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">()&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Constructor</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Make an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ifstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+associated with a new file for input. (If you use this version of the constructor,
+you need to call </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ifstream::open</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+before actually reading anything)</FONT></FONT></UL>
+</UL>
+
+<UL><FONT SIZE=+1><B><FONT FACE="Times New Roman">ifstream::ifstream </FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">(int
+<I>fd</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Constructor</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Make an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ifstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for reading from a file that was already open, using file descriptor, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>fd</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+(This constructor is compatible with other versions of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>iostreams</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for POSIX systems, although it is not part of the ANSI working paper.)</FONT></FONT></UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><FONT SIZE=+1><B><FONT FACE="Times New Roman">ifstream::ifstream </FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">(const
+char* <I>fname </I></FONT></FONT><FONT FACE="Times New Roman">[</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">,
+int <I>mode </I></FONT></FONT><FONT FACE="Times New Roman">[</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">,
+int <I>prot</I></FONT></FONT><FONT FACE="Times New Roman">]]</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Constructor</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Open a file, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>*fname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+for this </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ifstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+object.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>By default, the file is opened
+for input (with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::in</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">
+as </FONT><I><FONT FACE="Courier New"><FONT COLOR="#000000">mode</FONT></FONT></I><FONT FACE="Times New Roman">).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you use this constructor,
+the file will be closed when the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ifstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is destroyed.&nbsp;<A NAME="ifstream_ifstream"></A>You can use the following
+optional arguments for </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>mode</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to specify how to open the file, by combining these enumerated values (with
+bitwise or, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>|</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’).
+(These values are actually defined in class, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+so that all file-related streams may inherit them.) Only some of these
+modes are defined in the latest draft ANSI specification; if portability
+is important, you may wish to avoid the others.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>&nbsp;
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>ios::in</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Open for input. (Included
+in ANSI draft.)</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>ios::out</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Open for output. (Included
+in ANSI draft.)</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>ios::ate</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Set the initial input (or
+output) position to the end of the file.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>ios::app</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Seek to end of file before
+each write. (Included in ANSI draft.)</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>ios::trunc</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Guarantee a fresh file;
+discard any contents that were previously associated with it.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>ios::nocreate</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Guarantee an existing file;
+fail if the specified file did not already exist.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>ios::noreplace</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Guarantee a new file; fail
+if the specified file al-ready existed.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>ios::binary</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Open as a binary file (on
+systems where binary and text files have different properties, typically
+how </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\n</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is mapped; included in ANSI draft).</FONT></FONT></UL>
+</UL>
+</UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The last optional argument,
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>prot</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is specific to Unix-like systems; it specifies the file protection (by
+default, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>644</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">void </FONT></FONT><B><FONT FACE="Times New Roman">ifstream::open
+</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">(const char*
+<I>fname </I></FONT></FONT><FONT FACE="Times New Roman">[</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">,
+int <I>mode </I></FONT></FONT><FONT FACE="Times New Roman">[</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">,
+int <I>prot</I></FONT></FONT><FONT FACE="Times New Roman">]]</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Open a file explicitly after
+the associated </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ifstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+object already exists (for instance, after using the default constructor).
+The arguments, options and defaults all have the same meanings as in the
+fully specified </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><A HREF="#ifstream_ifstream">ifstream</A></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+constructor.</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can write data to class
+ofstream with any operation from class ostream. The following documentation
+discusses a few specialized facilities.</FONT></FONT></UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><FONT SIZE=+1><B><FONT FACE="Times New Roman">ofstream::ofstream</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">
+()&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Constructor</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Make an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ofstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+associated with a new file for output.</FONT></FONT></UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><FONT SIZE=+1><B><FONT FACE="Times New Roman">ofstream::ofstream</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">
+(int <I>fd</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Constructor</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Make an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ofstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for writing to a file that was already open, using file descriptor, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fd</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><FONT SIZE=+1><B><FONT FACE="Times New Roman">ofstream::ofstream </FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">(const
+char*</FONT><B> </B><I><FONT COLOR="#000000">fname </FONT></I></FONT><FONT FACE="Times New Roman">[</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">,int</FONT><B>
+</B><I><FONT COLOR="#000000">mode </FONT></I></FONT><FONT FACE="Times New Roman">[</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">,int</FONT><B>
+</B><I><FONT COLOR="#000000">prot</FONT></I></FONT><FONT FACE="Times New Roman">]]</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Constructor</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Open a file, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>*fname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+for this </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ofstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+object.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>By default, the file is opened
+for output (with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::out</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as mode). You can use the optional argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>mode</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to specify how to open the file, just as described for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><A HREF="#ifstream_ifstream">ifstream::ifstream</A></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The last optional argument,
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>prot</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+specifies the file protection (by default, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>644</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT></UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><FONT SIZE=+1><B><FONT FACE="Times New Roman">ofstream::~ofstream</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">
+()&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Destructor</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The files associated with
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ofstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+objects are closed when the corresponding object is destroyed.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">void</FONT></FONT><FONT FACE="Times New Roman">
+<B>ofstream::open </B></FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(const
+char*</FONT><B> </B><I><FONT COLOR="#000000">fname </FONT></I></FONT><FONT FACE="Times New Roman">[</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">,int</FONT><B>
+</B><I><FONT COLOR="#000000">mode </FONT></I></FONT><FONT FACE="Times New Roman">[</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">,int</FONT><B>
+</B><I><FONT COLOR="#000000">prot</FONT></I></FONT><FONT FACE="Times New Roman">]]</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Open a file explicitly after
+the associated </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ofstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+object already exists (for instance, after using the default constructor).
+The arguments, options and defaults all have the same meanings as in the
+fully specified </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ofstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+constructor.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The class, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+combines the facilities of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ifstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ofstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+just as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>iostream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+combines </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>istream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The class, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fstreambase</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+underlies both </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ifstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ofstream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+They both inherit the following additional method.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">void</FONT></FONT><FONT FACE="Times New Roman">
+<B>fstreambase::close </B></FONT><FONT FACE="Courier New"><FONT COLOR="#000000">()&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Close the file associated
+with this object, and set </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::fail</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in this object to mark the event.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioClasses_for_Files_and_Strings.html">Previous</A>|<A HREF="libioReading_and_writing_in_memory.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Managing output streams: class ostream</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioReaching_the_underlying_streambu.html">Previous</A>|<A HREF="libioWriting_on_an_ostream.html">Next</A>
+<BR><A NAME="off_263817"></A><A NAME="61c1f4b9"></A><A NAME="off_263817"></A><A NAME="61c1f4b9"></A><A NAME="off_263817"></A><A NAME="61c1f4b9"></A><A NAME="off_263817"></A><A NAME="61c1f4b9"></A><A NAME="off_263817"></A><A NAME="61c1f4b9"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Managing
+output streams: class </FONT></FONT><FONT FACE="Courier New"><FONT POINT-SIZE="26">ostream</FONT><FONT SIZE=+2></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Objects
+of class, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+inherit the generic methods from </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and in addition have the following methods available. Declarations for
+this class come from </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>iostream.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>See also the following documentation’s
+discussion for more information.</FONT></FONT>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><A HREF="libioWriting_on_an_ostream.html"><FONT FACE="Times New Roman">Writing
+on an </FONT><B><FONT FACE="Courier New">ostream</FONT></B></A></FONT><FONT FACE="Times New Roman"></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><A HREF="libioRepositioning_an_ostream.html"><FONT FACE="Times New Roman">Repositioning
+an </FONT><B><FONT FACE="Courier New">ostream</FONT></B></A></FONT><FONT FACE="Times New Roman"></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><A HREF="libioMiscellaneous_ostream_utilities.html"><FONT FACE="Times New Roman">Miscellaneous
+</FONT><B><FONT FACE="Courier New">ostream</FONT></B><FONT FACE="Times New Roman">
+utilities</FONT></A></FONT><FONT FACE="Times New Roman"></FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><FONT SIZE=+1><B><FONT FACE="Times New Roman">ostream::ostream </FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">()&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Constructor</FONT></I></B></FONT>
+<UL TYPE=SQUARE><FONT FACE="Times New Roman"><FONT SIZE=+1>The simplest
+form of the constructor for an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+simply initializes a new </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+object.</FONT></FONT></UL>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><FONT SIZE=+1><FONT FACE="Times New Roman"><B>ostream::ostream</B> </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(streambuf*
+<I>sb</I> </FONT></FONT><FONT FACE="Times New Roman">[</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">,
+ostream <I>tie</I></FONT></FONT><FONT FACE="Times New Roman">]</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Constructor</FONT></I></B></FONT>
+<UL TYPE=SQUARE><FONT FACE="Times New Roman"><FONT SIZE=+1>This alternative
+constructor requires a first argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>sb</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+(of type, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>streambuf*</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+to use an existing open stream for output. It also accepts an optional
+second argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>tie</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to specify a related </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostream*</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as the initial value for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::tie</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+&nbsp;
+<UL TYPE=SQUARE><FONT FACE="Times New Roman"><FONT SIZE=+1>If you use this
+constructor, the argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>sb</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is not destroyed (or deleted or closed) when the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is destroyed.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioReaching_the_underlying_streambu.html">Previous</A>|<A HREF="libioWriting_on_an_ostream.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

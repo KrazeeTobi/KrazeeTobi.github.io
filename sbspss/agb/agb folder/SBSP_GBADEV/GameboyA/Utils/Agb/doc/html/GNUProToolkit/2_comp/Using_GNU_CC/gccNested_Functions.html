@@ -1,0 +1,134 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Nested Functions</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccLabels_as_Values.html">Previous</A>|<A HREF="gccConstructing_Function_Calls.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_3277686"></A><A NAME="a51dddb3"></A><B><FONT SIZE=+3>Nested
+functions&nbsp;</FONT></B>&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>A <I>nested function</I>
+is a function defined inside another function. (Nested functions are not
+supported for GNU C++.) The nested function’s name is local to the block
+where it is defined. For instance, the following example shows how to define
+a nested function named </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>square</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and then calls it twice.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>foo (double a, double b)&nbsp;
+{&nbsp;
+&nbsp;&nbsp; double square (double z) { return z * z; }&nbsp;
+
+&nbsp;&nbsp; return square (a) + square (b);&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The nested function can access
+all the variables of the containing function that are visible at the point
+of its definition. This is called <I>lexical scoping</I>. For instance,
+the following example shows a nested function which uses an inherited variable
+named </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>offset</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>bar (int *array, int offset, int size)&nbsp;
+{&nbsp;
+&nbsp; int access (int *array, int index)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; { return array[index + offset]; }&nbsp;
+&nbsp; int i;&nbsp;
+&nbsp; ...&nbsp;
+&nbsp; for (i = 0; i &lt; size; i++)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; ... access (array, i) ...&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Nested function definitions
+are permitted within functions in the places where variable definitions
+are allowed; that is, in any block, before the first statement in the block.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>It is possible to call the
+nested function from outside the scope of its name by storing its address
+or passing the address to another function, as in the following.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>hack (int *array, int size)&nbsp;
+{&nbsp;
+&nbsp; void store (int index, int value)&nbsp;
+&nbsp;&nbsp;&nbsp; { array[index] = value; }&nbsp;
+
+&nbsp; intermediate (store, size);&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Within this block, the function
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>intermediate</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+receives the address of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>store</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as an argument. If </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>intermediate</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+calls </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>store</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the arguments given to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>store</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are used to store into </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>array</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+But this technique works only so long as the containing function (</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>hack</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+in the previous example) does not exit.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you try to call the nested
+function through its address after the containing function has exited,
+all hell will break loose. If you try to call it after a containing scope
+level has exited, and if it refers to some of the variables that are no
+longer in scope, you may be lucky, but it’s not wise to take the risk.
+If, however, the nested function does not refer to anything that has gone
+out of scope, you should be safe.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>GNU CC implements taking
+the address of a nested function using a technique called <I>trampolines</I>.</FONT></FONT>
+<BR><FONT SIZE=+1><FONT FACE="Times New Roman">A paper describing trampolines
+is available as </FONT><TT><A HREF="http://master.debian.org/~karlheg/Usenix88-lexic.pdf">http://master.debian.org/~karlheg/Usenix88-lexic.pdf</A></TT><FONT FACE="Times New Roman">.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>A nested function can jump
+to a label inherited from a containing function, provided the label was
+explicitly declared in the containing function (see <A HREF="gccLocally_Declared_Labels.html">Locally
+Declared Labels</A>). Such a jump returns instantly to the containing function,
+exiting the nested function which did the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>goto</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and any intermediate functions as well. The following is an example.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>bar (int *array, int offset, int size)&nbsp;
+{&nbsp;
+&nbsp;&nbsp; __label__ failure;&nbsp;
+&nbsp;&nbsp; int access (int *array, int index)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (index > size)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; goto failure;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return array[index + offset];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }&nbsp;
+&nbsp;&nbsp; int i;&nbsp;
+&nbsp;&nbsp; ...&nbsp;
+&nbsp;&nbsp; for (i = 0; i &lt; size; i++)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; ...access (array, i) ...&nbsp;
+...&nbsp;
+return 0;&nbsp;
+
+/* Control comes here from access if it detects an error.<I> </I>*/&nbsp;
+failure:&nbsp;
+return -1;&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>A nested function always has
+internal linkage. Declaring one with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>extern</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is erroneous. If you need to declare the nested function before its definition,
+use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>auto</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(which is otherwise meaningless for function declarations).</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>bar (int *array, int offset, int size)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __label__ failure;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; auto int access (int *, int);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int access (int *array, int index)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (index > size)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; goto failure;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return array[index + offset];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccLabels_as_Values.html">Previous</A>|<A HREF="gccConstructing_Function_Calls.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

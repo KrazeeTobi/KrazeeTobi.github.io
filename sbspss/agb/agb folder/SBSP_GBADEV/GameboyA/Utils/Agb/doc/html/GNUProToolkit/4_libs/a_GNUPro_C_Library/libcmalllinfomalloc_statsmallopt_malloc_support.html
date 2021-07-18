@@ -1,0 +1,124 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>malloc, realloc, free[manage memory]</TITLE>
+</HEAD>
+<BODY>
+<A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcmalloc_realloc_freemanage_memory.html">Previous</A>|<A HREF="libcmalloclockmallockunlockpool.html">Next</A>
+
+<P CLASS="Heading5"><A NAME="pgfId=461287"></A><FONT SIZE=+3><FONT FACE="Courier New">mallinfo</FONT><FONT COLOR="#000000">,&nbsp;<A NAME="26294"></A></FONT><FONT FACE="Courier New">malloc_stats</FONT><FONT COLOR="#000000">,
+</FONT><FONT FACE="Courier New">mallopt</FONT></FONT>
+<DIV CLASS="Descriptor"><A NAME="pgfId=461288"></A><FONT COLOR="#000000"><FONT SIZE=+3>[malloc
+support]</FONT></FONT></DIV>
+
+<H4>
+<B><FONT SIZE=+1>SYNOPSIS</FONT></B></H4>
+
+<PRE><FONT SIZE=+1>struct mallinfo mallinfo(void);</FONT></PRE>
+
+<PRE><FONT SIZE=+1>void malloc_stats(void);</FONT></PRE>
+
+<PRE><FONT SIZE=+1>int mallopt(int <I>parameter</I> , <I>value</I> );</FONT></PRE>
+
+<PRE><FONT SIZE=+1>struct mallinfo _mallinfo_r(void *<I> reent</I> );</FONT></PRE>
+
+<PRE><FONT SIZE=+1>void _malloc_stats_r(void * <I>reent</I> );</FONT></PRE>
+
+<PRE><FONT SIZE=+1>int _mallopt_r(void *<I> reent</I> , int <I>parameter</I> , <I>value</I> );</FONT></PRE>
+
+<H4>
+<B><FONT SIZE=+1>DESCRIPTION</FONT></B></H4>
+
+<DIV CLASS="Note"><A NAME="pgfId=461292"></A><FONT SIZE=+1><TT>mallinfo</TT>
+returns a structure describing the current state of memory allocation.
+The structure is defined in <TT>malloc.h</TT>. The following fields are
+defined:</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<LI CLASS="BulletSideHead">
+<A NAME="pgfId=461293"></A><FONT SIZE=+1><TT>arena</TT> is the total amount
+of space in the heap.</FONT></LI>
+
+<LI CLASS="BulletSideHead">
+<A NAME="pgfId=461294"></A><FONT SIZE=+1><TT>ordblks</TT> is the number
+of chunks which are not in use.</FONT></LI>
+
+<LI CLASS="BulletSideHead">
+<A NAME="pgfId=461295"></A><FONT SIZE=+1><TT>uordblks</TT> is the total
+amount of space allocated by <TT>malloc</TT> .</FONT></LI>
+
+<LI CLASS="BulletSideHead">
+<A NAME="pgfId=461296"></A><FONT SIZE=+1><TT>fordblks</TT> is the total
+amount of space not in use.</FONT></LI>
+
+<LI CLASS="BulletSideHead">
+<A NAME="pgfId=461297"></A><FONT SIZE=+1><TT>keepcost</TT> is the size
+of the top most memory block.</FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Note"><A NAME="pgfId=461298"></A><FONT SIZE=+1><TT>malloc_stats</TT>
+prints some statistics about memory allocation on standard error.</FONT></DIV>
+
+<DIV CLASS="Note"><A NAME="pgfId=461299"></A><FONT SIZE=+1><TT>mallopt</TT>
+takes a parameter and a value. The parameters are defined in <TT>malloc.h</TT>,
+and may be one of the following:</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<LI CLASS="BulletSideHead">
+<A NAME="pgfId=461300"></A><FONT SIZE=+1><TT>M_TRIM_THRESHOLD</TT> sets
+the maximum amount of unused space in the top most block before releasing
+it back to the system in free (the space is released by calling <TT>_sbrk_r</TT>
+with a negative argument).</FONT></LI>
+
+<LI CLASS="BulletSideHead">
+<A NAME="pgfId=461301"></A><FONT SIZE=+1><TT>M_TOP_PAD</TT> is the amount
+of padding to allocate whenever <TT>_sbrk_r</TT> is called to allocate
+more space.</FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Note"><A NAME="pgfId=461302"></A><FONT SIZE=+1>The alternate
+functions, <TT>_mallinfo_r</TT>, <TT>_malloc_stats_r</TT>, and <TT>_mallopt_r</TT>,
+are reentrant versions. The extra argument, <I><TT>reent</TT></I>, is a
+pointer to a reentrancy structure.</FONT></DIV>
+
+<H3>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS</FONT></FONT></B></H3>
+
+<DIV CLASS="Note"><A NAME="pgfId=461304"></A><FONT SIZE=+1><TT>mallinfo</TT>
+returns a <TT>mallinfo</TT> structure. The structure is defined in <TT>malloc.h</TT>.</FONT></DIV>
+
+<DIV CLASS="Note"><A NAME="pgfId=461305"></A><FONT SIZE=+1><TT>malloc_stats</TT>
+does not return a result.</FONT></DIV>
+
+<DIV CLASS="Note"><A NAME="pgfId=461306"></A><FONT SIZE=+1><TT>mallopt</TT>
+returns zero if the parameter could not be set, or non-zero if it could
+be set.</FONT></DIV>
+
+<BR>&nbsp;
+<H3>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE</FONT></FONT></B></H3>
+
+<DIV CLASS="Note"><A NAME="pgfId=461308"></A><FONT SIZE=+1><TT>mallinfo</TT>
+and <TT>mallopt</TT> are provided by SVR4, but <TT>mallopt</TT> takes different
+parameters on different systems.</FONT></DIV>
+
+<DIV CLASS="Note"><A NAME="pgfId=461309"></A><FONT SIZE=+1><TT>malloc_stats</TT>
+is not portable.</FONT></DIV>
+
+
+<P>&nbsp;
+<DIV CLASS="Note">&nbsp;</DIV>
+
+<DIV CLASS="Note">&nbsp;</DIV>
+
+</BODY>
+</HTML>

@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>pow, powf[x to the power y]</TITLE>
+</HEAD>
+<BODY>
+<A HREF="libm.html">Contents</A>|<A HREF="libmindex.html">Index</A>|<A HREF="libmnextafter_nextafterfget_next_num.html">Previous</A>|<A HREF="libmrint_rintf_remainder_remainderfr.html">Next</A>
+
+<P><A NAME="off_362144"></A><A NAME="417f7252"></A><A NAME="off_362144"></A><A NAME="417f7252"></A><A NAME="off_362144"></A><A NAME="417f7252"></A><A NAME="off_362144"></A><A NAME="417f7252"></A><A NAME="off_362144"></A><A NAME="417f7252"></A><FONT SIZE=+3><FONT FACE="Courier New">pow</FONT><FONT FACE="Times New Roman">,
+</FONT><FONT FACE="Courier New">powf</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+3>[x to the power y]</FONT></FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS</FONT></FONT></B>
+<BR><FONT FACE="Courier New">#include &lt;math.h></FONT>
+<BR><FONT FACE="Courier New">double pow(double <I>x</I>, double <I>y</I>);</FONT>
+<BR><FONT FACE="Courier New">float pow(float <I>x</I>, float <I>y</I>);</FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>pow</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>powf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">calculate </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">raised to the exp1.0nt</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>y</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+(That is, </FONT></FONT><I><FONT FACE="Courier New,Courier">xy</FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.)</FONT></FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>On success, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>pow</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>powf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">return the value calculated.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>When the argument values
+would produce overflow, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>pow</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">returns </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>HUGE_VAL</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and sets </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ERANGE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If the argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+passed to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>pow</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>powf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is a negative noninteger, and </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>y</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is also not an integer, then </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is set to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>EDOM</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>y</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">are both 0, then </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>pow</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>powf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">return </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can modify error handling
+for these functions using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>matherr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>pow</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is ANSI C. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>powf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is an extension.</FONT></FONT>
+</BODY>
+</HTML>

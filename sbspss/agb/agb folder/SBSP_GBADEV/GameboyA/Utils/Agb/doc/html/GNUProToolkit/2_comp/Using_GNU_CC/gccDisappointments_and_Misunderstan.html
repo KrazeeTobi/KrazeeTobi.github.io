@@ -1,0 +1,134 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Disappointments and Misunderstandings</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccStandard_Libraries.html">Previous</A>|<A HREF="gccCommon_Misunderstandings_with_GN.html">Next</A>
+<BR><A NAME="off_5080497"></A><A NAME="43724807"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><B><FONT SIZE=+3>Disappointments
+and misunderstandings&nbsp;</FONT></B>&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The following problems are
+perhaps regrettable, but we don’t know any practical way around them.</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Certain local variables aren’t
+recognized by debuggers when you compile with optimization.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This occurs because sometimes
+GNU CC optimizes the variable out of existence. There is no way to tell
+the debugger how to compute the value such a variable would have had and
+it is not clear that would be desirable anyway. So GNU CC simply does not
+mention the eliminated variable when it writes debugging information.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You have to expect a certain
+amount of disagreement between the executable and your source code, when
+you use optimization.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Users often think it is a bug
+when GNU CC reports an error for code like the following example’s declaration.</FONT></FONT></LI>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>int foo (struct mumble *);&nbsp;
+
+struct mumble { ... };&nbsp;
+
+int foo (struct mumble *x) { ... }</FONT></FONT></PRE>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This code really is erroneous,
+because the scope of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct
+mumble</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> in the
+prototype is limited to the argument list containing it. It does not refer
+to the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct mumble</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+defined with file scope in the following—they are two unrelated types with
+similar names in different scopes.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>But in the definition of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the file-scope type is used because that is available to be inherited.
+Thus, the definition and the prototype do not match, and you get an error.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This behavior may seem silly,
+but it’s what the ANSI standard specifies. It is easy enough for you to
+make your code work by moving the definition of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct
+mumble</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> above the
+prototype. It’s not worth being incompatible with ANSI C just to avoid
+an error for the example last shown.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Accesses to bitfields even in
+volatile objects works by accessing larger objects, such as a byte or a
+word. You cannot rely on what size of object is accessed in order to read
+or write the bitfield; it may even vary for a given bitfield according
+to the precise usage.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If you care about controlling
+the amount of memory that is accessed, use volatile but do not use bitfields.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>GNU CC comes with shell scripts
+to fix certain known problems in system header files. They install corrected
+copies of various header files in a special directory where only GNU CC
+will normally look for them. The scripts adapt to various systems by searching
+all the system header files for the problem cases that we know about.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If new system header files are
+installed, nothing automatically arranges to update the corrected header
+files. You will have to reinstall GNU CC to fix the new header files. More
+specifically, go to the build directory and delete the files ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stmp-fixinc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stmp-headers</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+and the subdirectory </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+then do ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make install</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+again.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On 68000 systems, you can get
+paradoxical results if you test the precise values of floating point numbers.
+For example, you can find that a floating point value which is not a NaN
+is not equal to itself. This results from the fact that the floating point
+registers hold a few more bits of precision than fit in a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>double</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in memory. Compiled code moves values between memory and floating point
+registers at its convenience, and moving them into memory truncates them.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You can partially avoid this
+problem by using the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-ffloat-store</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option (see <A HREF="gccOptions_That_Control_Optimizatio.html">Options
+that control optimization</A>).</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On the MIPS, variable argument
+functions using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>varargs.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+cannot have a floating point value for the first argument. The reason for
+this is that in the absence of a prototype in scope, if the first argument
+is a floating point, it is passed in a floating point register, rather
+than an integer register.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If the code is rewritten to
+use the ANSI standard ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdarg.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+method of variable arguments, and the prototype is in scope at the time
+of the call, everything will work fine.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On the H8/300 and H8/300H, variable
+argument functions must be implemented using the ANSI standard ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdarg.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+method of variable arguments. Furthermore, calls to functions using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdarg.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+variable arguments must have a prototype for the called function in scope
+at the time of the call.</FONT></FONT></LI>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><A HREF="#Top">Top</A><FONT SIZE=+1>|</FONT></FONT><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccStandard_Libraries.html">Previous</A>|<A HREF="gccCommon_Misunderstandings_with_GN.html">Next</A></CENTER>
+
+<CENTER><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>&nbsp;</CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>How make Processes a Makefile</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeA_Simple_Makefile.html">Previous</A>|<A HREF="makeVariables_Make_Makefiles_Simpler.html">Next</A>
+<BR><A NAME="off_166083"></A><A NAME="fa0c1974"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>How
+</FONT></FONT><TT><FONT POINT-SIZE="26">make</FONT></TT><FONT FACE="Futura Md BT"><FONT SIZE=+3>
+processes a makefile</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>By default,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+starts with the first rule (not counting rules whose target names start
+with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’).
+This is called the default goal.(Goals are the targets that </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+strives ultimately to update. See <FONT COLOR="#008000"><A HREF="makeArguments_to_Specify_the_Goals.html">Arguments
+to specify the goals</A></FONT>.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In the example shown in <FONT COLOR="#008000"><A HREF="makeA_Simple_Makefile.html">A
+simple makefile</A></FONT>, the default goal is to update the executable
+program ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>edit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’;
+therefore, we put that rule first.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When you give the command,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+reads the makefile in the current directory and begins by processing the
+first rule. In the example, this rule is for relinking </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>edit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+but before </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can fully process this rule, it must process the rules for the files that
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>edit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+depends on; in this case, they are the object files. Each of these files
+is processed according to its own rule. These rules say to update each
+‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>.o</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+file by compiling its source file. The recompilation must be done if the
+source file, or any of the header files named as dependencies, is more
+recent than the object file, or if the object file does not exist.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The other rules are processed
+because their targets appear as dependencies of the goal. If some other
+rule is not depended on by the goal (or anything it depends on, etc.),
+that rule is not processed, unless you tell </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to do so (with a command such as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make
+clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Before recompiling an object
+file, </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+considers updating its dependencies, the source file and header files.
+This makefile does not specify anything to be done for them—the ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>.c</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>.h</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+files are not the targets of any rules—so </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does nothing for these files. But </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+would update automatically generated C programs, such as those made by
+Bison or Yacc, by their own rules at this time.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>After recompiling whichever
+object files need it, make decides whether to relink ‘edit’. This must
+be done if the file ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>edit</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+does not exist, or if any of the object files are newer than it. If an
+object file was just recompiled, it is now newer than ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>edit</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+so ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>edit</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is relinked.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Thus, if we change the file
+‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>insert.c</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and run </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will compile that file to update ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>insert.o</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+and then link ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>edit</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+If we change the ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>command.h</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+file and run </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will recompile the object files, ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>kbd.o</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+along with ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>command.o</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>files.o</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+and then link the file, ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>edit</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeA_Simple_Makefile.html">Previous</A>|<A HREF="makeVariables_Make_Makefiles_Simpler.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,308 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Specifying Attributes of Variables</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccInquiring_on_Alignment_of_Types_.html">Previous</A>|<A HREF="gccSpecifying_Attributes_of_Types.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_3736864"></A><A NAME="d0348315"></A><B><FONT SIZE=+3>Specifying
+attributes of variables&nbsp;</FONT></B>&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The keyword, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__attribute__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+allows you to specify special attributes of variables or structure fields.
+This keyword is followed by an at-tribute specification inside double parentheses.
+Eight attributes are currently defined for variables: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>aligned</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mode</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>nocommon</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>packed</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>section</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>transparent_union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>unused</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>weak</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Other attributes are available for functions (see <A HREF="gccDeclaring_Attributes_of_Function.html">Declaring
+attributes of functions</A>) and for types (see <A HREF="gccSpecifying_Attributes_of_Types.html">Specifying
+attributes of types</A>). You may also specify attributes with ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>__</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+preceding and following each keyword. This allows you to use them in header
+files without being concerned about a possible macro of the same name.
+For example, you may use</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+__aligned__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> instead
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>aligned</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>aligned (<I>alignment</I>)</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This attribute specifies
+a minimum alignment for the variable or structure field, measured in bytes.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>For example, the following declaration
+causes the compiler to allocate the global variable </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+on a 16-byte boundary.</FONT></FONT></DT>
+
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>int x __attribute__ ((aligned (16))) = 0;</FONT></FONT></PRE>
+</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On a 68040, this could be used
+in conjunction with an </FONT></FONT><FONT FACE="Courier New">asm</FONT><FONT FACE="Times New Roman">
+<FONT SIZE=+1>expression to access the </FONT></FONT><FONT SIZE=+1><FONT FACE="Courier New">move16</FONT><FONT FACE="Times New Roman">
+instruction which requires 16-byte aligned operands. You can also specify
+the alignment of structure fields.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>For example, to create a double-word
+aligned </FONT></FONT><FONT FACE="Courier New">int</FONT><FONT FACE="Times New Roman">
+<FONT SIZE=+1>pair, you could write:</FONT></FONT></DT>
+
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>struct foo { int x[2] __attribute__ ((aligned (8))); };</FONT></FONT></PRE>
+</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This is an alternative to creating
+a union with a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>double</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+member that forces the union to be double-word aligned. It is not possible
+to specify the alignment of functions; the alignment of functions is determined
+by the machine’s requirements and cannot be changed.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You cannot specify alignment
+for a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>typedef</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+name because such a name is just an alias, not a distinct type.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>As in the preceding examples,
+you can explicitly specify the alignment (in bytes) that you wish the compiler
+to use for a given variable or structure field.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Alternatively, you can leave
+out the alignment factor and just ask the compiler to align a variable
+or field to the maximum useful alignment for the target machine you are
+compiling for. For example, you could write:</FONT></FONT></DT>
+
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>short array[3] __attribute__ ((aligned));</FONT></FONT></PRE>
+</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Whenever you leave out the alignment
+factor in an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>aligned</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attribute specification, the compiler automatically sets the alignment
+for the declared variable or field to the largest alignment which is ever
+used for any data type on the target machine you are compiling for. Doing
+this can often make copy operations more efficient, because the compiler
+can use whatever instructions copy the biggest chunks of memory when performing
+copies to or from the variables or fields that you have aligned this way.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>aligned</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attribute can only increase the alignment; but you can decrease it by specifying
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>packed</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as well. (See <A HREF="#packed">attribute specifications for </A></FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><A HREF="#packed">packed</A></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.)</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT></DT>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The effectiveness of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>aligned</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attributes may be limited by inherent limitations in your linker. On many
+systems, the linker is only able to arrange for variables to be aligned
+up to a certain maximum alignment. (For some linkers, the maximum supported
+alignment may be very very small.)</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If your linker is only able
+to align variables up to a maximum of 8 byte alignment, then specifying
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>aligned(16)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in an</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0> __attribute__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will still only provide you with 8 byte alignment.</FONT></FONT></DT>
+
+<DT>
+<FONT SIZE=+1><FONT FACE="Times New Roman">See <A HREF="gccSpecifying_Attributes_of_Types.html">Specifying
+attributes of types</A>, and see <A HREF="../../5_ut/b_Usingld/ldLinker_scripts.html">Linker
+scripts</A> and <A HREF="../../5_ut/b_Usingld/ld.html"><I>Using </I></A></FONT><TT><A HREF="../../5_ut/b_Usingld/ld.html">ld</A></TT><FONT FACE="Times New Roman">
+in <B><I>GNUPro Utilities</I></B> for further information.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>mode (<I>mode</I>)</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This attribute specifies
+the data type for the declaration— whichever type corresponds to the mode
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>mode</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+This in effect lets you request an integer or floating point type according
+to its width.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You may also specify a mode
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>byte</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__byte__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to indicate the mode corresponding to a one-byte integer, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>word</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__word__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for the mode of a one-word integer, and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>pointer</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__pointer__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for the mode used to represent pointers.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>nocommon</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This attribute specifies
+requests GNU CC not to place a variable “common” but instead to allocate
+space for it directly. If you specify the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fno-common</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+flag, GNU CC will do this for all variables.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Specifying the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>nocommon</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+attribute for a variable provides an initialization of zeros. A variable
+may only be initialized in one source file.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<A NAME="packed"></A><FONT FACE="Courier New"><FONT SIZE=+0>packed</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>packed</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attribute specifies that a variable or structure field should have the
+smallest possible alignment—one byte for a variable, and one bit for a
+field, unless you specify a larger value with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>aligned</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attribute.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The following example is a structure
+in which the field ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is packed, so that it immediately follows ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’:</FONT></FONT></DT>
+
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>struct foo&nbsp;
+{&nbsp;
+&nbsp;&nbsp; char a;&nbsp;
+&nbsp;&nbsp; int x[2] __attribute__ ((packed));&nbsp;
+};</FONT></FONT></PRE>
+</UL>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>section ("section-name")</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Normally, the compiler places
+the objects it generates in sections like </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>data</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bss</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Sometimes, however, you need additional sections, or you need certain particular
+variables to appear in special sections, for example to map to special
+hardware.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>section</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attribute specifies that a variable (or function) lives in a particular
+section. For example, the following small program uses several specific
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>section</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+names.</FONT></FONT></DT>
+
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>struct duart a __attribute__ \&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ((section ("DUART_A"))) = { 0 };&nbsp;
+struct duart b __attribute__ \&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ((section ("DUART_B"))) = { 0 };&nbsp;
+char stack[10000] __attribute__ \&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ((section ("STACK"))) ={0 };&nbsp;
+int init_data_copy __attribute__ \&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ((section ("INITDATACOPY"))) = 0;&nbsp;
+main()&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Initialize stack pointer */&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; init_sp (stack + sizeof (stack));&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Initialize initialized data */&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; memcpy (&amp;init_data_copy, &amp;data, &amp;edata - &amp;data);&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Turn on the serial ports */&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; init_duart (&amp;a); init_duart (&amp;b);&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>section</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attribute with an <I>initialized</I> definition of a <I>global</I> variable,
+as shown in the example. GNU CC issues a warning and otherwise ignores
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>section</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attribute in uninitialized variable declarations.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You may only use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>section</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attribute with a fully initialized global definition because of the way
+linkers work. The linker requires each object be defined once, with the
+exception that uninitialized variables tentatively go in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>common</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bss</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+section and can be multiply-defined. You can force a variable to be initialized
+with the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fno-common</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+flag or the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>nocommon</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+attribute. Some file formats do not support arbitrary sections so the section
+attribute is not available on all platforms. If you need to map the entire
+contents of a module to a particular section, consider using the facilities
+of the linker instead.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>transparent_union</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This attribute, attached
+to a function parameter which is a union, means that the corresponding
+argument may have the type of any union member, but the argument is passed
+as if its type were that of the first union member. For more details, see
+<A HREF="gccSpecifying_Attributes_of_Types.html">Specifying attributes
+of types</A>. You can also use this attribute on a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>typedef</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for a union data type; then it applies to all function parameters with
+that type.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>unused</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This attribute, attached
+to a variable, means that the variable is meant to be possibly unused.
+GNU CC will not produce a warning for this variable.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>weak</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>weak</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+attribute is described in <A HREF="gccDeclaring_Attributes_of_Function.html">Declaring
+attributes of functions</A>.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>To specify multiple attributes,
+separate them by commas within double parentheses; for example, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__attribute__((aligned
+(16), packed))</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New,Courier">model (<I>model-name</I>)</FONT></DT>
+
+<UL>
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use this attribute on the
+M32R/D to set the addressability of an object, and the code generated for
+a function. The identifier model-name is one of </FONT></FONT><FONT FACE="Courier New,Courier">small</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New,Courier">medium</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or </FONT></FONT><FONT FACE="Courier New,Courier">large</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+representing each of the code models.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Small model objects live
+in the lower 16MB of memory (so that their addresses can be loaded with
+the </FONT></FONT><FONT FACE="Courier New,Courier">ld24</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instruction).</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Medium and large model objects
+may live anywhere in the 32 bit address space (the compiler will generate
+</FONT></FONT><FONT FACE="Courier New,Courier">seth/add3</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instructions to load their addresses).</FONT></FONT></DT>
+</DL>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>To specify multiple attributes,
+separate them by commas within the double parentheses: for example, </FONT></FONT><FONT FACE="Courier New,Courier">__attribute__
+((aligned (16), packed))</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccInquiring_on_Alignment_of_Types_.html">Previous</A>|<A HREF="gccSpecifying_Attributes_of_Types.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

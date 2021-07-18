@@ -1,0 +1,143 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Command completion</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbCommand_syntax.html">Previous</A>|<A HREF="gdbGetting_help.html">Next</A>
+<BR><A NAME="off_428242"></A><A NAME="267823e6"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Command
+completion&nbsp;</FONT></FONT></FONT></B>
+<HR SIZE=3 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB can fill in the rest
+of a word in a command for you, if there is only one possibility; it can
+also show you, at any time, what the valid possibilities are for the next
+word in a command. This works for GDB commands, GDB subcommands, and the
+names of symbols in your program.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Use the </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Tab</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+key whenever you want GDB to fill out the rest of a word. If there is only
+one possibility, GDB fills in the word, and waits for you to finish the
+command (or use </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Return</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to enter it). For example, if you type </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>(gdb)
+info bre</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>, and
+use the </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Tab</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+key, GDB fills in the rest of the word ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>breakpoints</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+since that is the only </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+subcommand beginning with ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>bre</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can either use </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Return</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+at this point, to run the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>breakpoints</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command, or use the </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>BACKSPACE</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+key and enter something else, if ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>breakpoints</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+does not look like the command you expected. (If you were sure you wanted
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info breakpoints</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in the first place, you might as well just use </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Return</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+immediately after ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info
+bre</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’, to exploit
+command abbreviations rather than command completion). If there is more
+than one possibility for the next word when you use the </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Tab</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+key, GDB sounds a bell. You can either supply more characters and try again,
+or just use the </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Tab</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+key a second time; GDB displays all the possible completions for that word.
+For example, you might want to set a breakpoint on a subroutine whose name
+begins with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make_</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+but when you type </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make_ </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>and
+use the</FONT></FONT><FONT SIZE=+0><FONT FACE="Courier New"> </FONT><B><FONT FACE="Arial">Tab</FONT></B></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+key, GDB just sounds the bell. Using the </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Tab</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+key again displays all the function names in your program that begin with
+those characters. For example, you type </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>(gdb)
+b make_</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> and then
+use the </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Tab</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+key. GDB sounds the bell; you use the </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Tab</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+key again, to see the following display.</FONT></FONT>
+<BR>&nbsp;
+<UL><B><FONT FACE="Courier New"><FONT SIZE=+0>make_a_section_from_file&nbsp;&nbsp;&nbsp;
+make_environ</FONT></FONT></B>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>make_abs_section&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+make_function_type</FONT></FONT></B>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>make_blockvector&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+make_pointer_type</FONT></FONT></B>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>make_cleanup&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+make_reference_type</FONT></FONT></B>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>make_command&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+make_symbol_completion_list</FONT></FONT></B>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>(gdb)&nbsp;&nbsp;&nbsp; b
+make_</FONT></FONT></B>
+<BR>&nbsp;</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>After displaying the available
+possibilities, GDB copies your partial input (in the example, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b
+make_</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’) so you
+can finish the command. If you just want to see the list of alternatives
+in the first place, you can get </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>help</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+by using the command key sequence, </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>M-?</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+rather than using </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Tab</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+twice.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B><I>IMPORTANT</I></B>:</FONT></FONT>
+<BR><B><FONT FACE="Arial"><FONT SIZE=+0>M-?</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+means using the </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>META</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+key (if there is one, usually the diamond-shaped character is on the key;&nbsp;
+else, use </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>ESC</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+and the ‘</FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>?</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+key. This is a command key sequence with which you may or may not be familiar.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Sometimes the string you
+need, while logically a <I>word</I>, may contain parentheses or other characters
+that GDB normally excludes from its notion of a word. To permit word completion
+to work in this situation, you may enclose words in single quote marks
+in GDB commands.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The most likely situation
+where you might need this is in typing the name of a C++ function. This
+is because C++ allows function overloading (multiple definitions of the
+same function, distinguished by argument type). For example, when you want
+to set a breakpoint you may need to distinguish whether you mean the version
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>name</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+that takes an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+parameter, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>name(int)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or the version that takes a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>float</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+parameter, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>name(float)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+To use the word-completion facilities in this situation, type a single
+quote, </FONT><B><FONT SIZE=+0>’</FONT></B><FONT SIZE=+1>, at the beginning
+of the function name. This alerts GDB that it may need to consider more
+information than usual when you use the </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Tab</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+key or </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>M-?</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to request word completion, as in the following example.</FONT></FONT>
+<BR>&nbsp;
+<UL><B><FONT SIZE=+0><FONT FACE="Courier New">(gdb) b </FONT><FONT FACE="Times New Roman">’</FONT><FONT FACE="Courier New">bubble(</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0></FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Use the </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>M-?</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command key sequence this point.</FONT></FONT>
+<BR>&nbsp;
+<UL><B><FONT FACE="Courier New"><FONT SIZE=+0>bubble(double,double) bubble(int,int)</FONT></FONT></B>
+<BR><B><FONT SIZE=+0><FONT FACE="Courier New">(gdb) b </FONT><FONT FACE="Times New Roman">’</FONT><FONT FACE="Courier New">bubble(</FONT></FONT></B></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In some cases, GDB can tell
+that completing a name requires using quotes. When this happens, GDB inserts
+the quote for you (while completing as much as it can) if you do not type
+the quote in the first place:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0><B>(gdb) b bub</B></FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Use the </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Tab</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+key at this point.GDB alters your input line to the following, and rings
+a bell.</FONT></FONT>
+<BR>&nbsp;
+<UL><B><FONT SIZE=+0><FONT FACE="Courier New">(gdb) b </FONT><FONT FACE="Times New Roman">’</FONT><FONT FACE="Courier New">bubble(</FONT></FONT></B></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In general, GDB can tell
+that a quote is needed (and inserts it) if you have not yet started typing
+the argument list when you ask for completion on an overloaded symbol.</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbCommand_syntax.html">Previous</A>|<A HREF="gdbGetting_help.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

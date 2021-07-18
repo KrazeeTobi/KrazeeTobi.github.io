@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Prompt</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbControlling_GDB.html">Previous</A>|<A HREF="gdbCommand_editing.html">Next</A>
+<BR><A NAME="off_230100"></A><A NAME="1f7995a8"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><B><FONT SIZE=+3>Prompt&nbsp;</FONT></B>&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB indicates its readiness
+to read a command by printing a string called the <I>prompt</I>. This string
+is normally ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>(gdb)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+You can change the prompt string with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+prompt</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> command.
+For instance, when debugging GDB with GDB, it is useful to change the prompt
+in one of the GDB sessions so that you can always tell which one you are
+talking to.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>set prompt</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+no longer adds a space for you after the prompt you set. This allows you
+to set a prompt which ends in a space or a prompt that does not.</FONT></FONT></UL>
+&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>set prompt</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>newprompt</FONT></FONT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Directs GDB to use </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>newprompt</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as its prompt string henceforth.</FONT></FONT></UL>
+</UL>
+
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>show prompt</FONT></FONT>
+<UL><FONT SIZE=+1><FONT FACE="Times New Roman">Prints a line of the form:
+‘</FONT><TT>gdb’s prompt is: your-prompt</TT><FONT FACE="Times New Roman">’.</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbControlling_GDB.html">Previous</A>|<A HREF="gdbCommand_editing.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

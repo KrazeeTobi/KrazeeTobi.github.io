@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>ld and the H8/300</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="ld.html">Contents</A>|<A HREF="ldindex.html">Index</A>|<A HREF="ldMachine_Dependent_Features.html">Previous</A>|<A HREF="ldld_and_the_Intel_960_family.html">Next</A>
+<BR><A NAME="off_690389"></A><A NAME="3d42e019"></A><B><FONT SIZE=+3><FONT FACE="Courier New">ld</FONT><FONT FACE="Futura Md BT">
+and the H8/300</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>For
+the H8/300, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can perform these global optimizations when you specify the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-relax</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+command-line option.</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><I>relaxing address modes</I></FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+finds all </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>jsr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>jmp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instructions whose targets are within eight bits, and turns them into eight-bit
+program-counter relative </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bsr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bra</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instructions, respectively.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><I>synthesizing instructions</I></FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+finds all </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mov.b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instructions which use the sixteen-bit absolute address form, but refer
+to the top page of memory, and changes them to use the eight-bit address
+form. (That is, the linker turns ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mov.b
+@ aa:16</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ into
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mov.b @ aa:8</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+whenever the address </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>aa
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>is in the
+top page of memory).</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="ld.html">Contents</A>|<A HREF="ldindex.html">Index</A>|<A HREF="ldMachine_Dependent_Features.html">Previous</A>|<A HREF="ldld_and_the_Intel_960_family.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

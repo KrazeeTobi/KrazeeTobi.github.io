@@ -1,0 +1,81 @@
+<HEAD>
+	<link rel="stylesheet" type="text/css" href="../ProMan/style.css">
+                <!-- Edited by Matt P., 01/04/01 -->
+    <STYLE TYPE="text/css">
+	<!--
+		H2 { color:black; text-align:center }
+		H4 { color:#4169E1 }
+		TABLE { border:0; padding:5; margin:1 }
+		TD { color:#303050; background-color:white }
+	-->
+	</STYLE>
+
+	<TITLE>Explanation of Waveform Data Structure "WaveData"</TITLE>
+</HEAD>
+
+
+<H2>Explanation of Waveform Data Structure "WaveData"</H2>
+
+
+<HR WIDTH="600" ALIGN="CENTER">
+
+
+<TABLE WIDTH="600" ALIGN="CENTER" SUMMARY="wav_dat_param"><TR><TD>
+The various elements of the structure WaveData have the following values.<BR>
+<BR>
+<FONT COLOR="#008080"><B>
+&nbsp;&nbsp;u16 type<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Waveform Type
+</B></FONT><BR>
+<BR>
+&nbsp;Always 0x0000.<BR>
+<BR>
+<BR>
+<FONT COLOR="#008080"><B>
+&nbsp;&nbsp;u16 stat<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Status
+</B></FONT><BR>
+<BR>
+&nbsp;If a loop waveform 0x4000, if a 1 shot waveform 0x0000.<BR>
+<BR>
+<BR>
+<FONT COLOR="#008080"><B>
+&nbsp;&nbsp;u32 freq<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Frequency Calculation Value
+</B></FONT><BR>
+<BR>
+&nbsp;Numerical value requested with (sampling frequency) * ((180-(original key))/12)^2.<BR>
+<BR>
+<BR>
+<FONT COLOR="#008080"><B>
+&nbsp;&nbsp;u32 loop<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Loop Start Location
+</B></FONT><BR>
+<BR>
+&nbsp;Loop location calculated from start of sampling data.<BR>
+<BR>
+<BR>
+<FONT COLOR="#008080"><B>
+&nbsp;&nbsp;u32 size<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Sampling Number
+</B></FONT><BR>
+<BR>
+&nbsp;Sampling end location calculated from start of sampling data.<BR>
+<BR>
+<BR>
+<FONT COLOR="#008080"><B>
+&nbsp;&nbsp;s8 data[size+1]<SPAN STYLE="font-family:Terminal">;</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Sampling Data Array + 1
+</B></FONT><BR>
+<BR>
+&nbsp;After arranging the signed 8 bit/non-compressed sampling data, you need to add
+the same <br>
+&nbsp;value as the data in the loop start location.<BR><BR>
+&nbsp;Additionally, you can convert the AIFF format waveform file to this driver's WaveData <br>
+&nbsp;with the tool aif2agb<SPAN STYLE="font-family:Terminal">.</SPAN>exe.
+</TD></TR></TABLE><BR>
+
+
+<HR WIDTH="600" ALIGN="CENTER">
+
+
+<CENTER><p>
+[ | <A HREF="snd_chn.html">Back</A> | <A HREF="../p_index.html">Programmer's Manual Table of Contents</A> | <A HREF="u_index.html">Using the Sound Driver Table of Contents
+</A> | ]
+</center>
+
+

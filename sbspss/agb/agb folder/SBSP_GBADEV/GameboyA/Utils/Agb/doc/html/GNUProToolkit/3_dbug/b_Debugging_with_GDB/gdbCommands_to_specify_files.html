@@ -1,0 +1,274 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Commands to specify files</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbGDB_Files.html">Previous</A>|<A HREF="gdbErrors_reading_symbol_files.html">Next</A>
+<BR><A NAME="off_2229586"></A><A NAME="3150f516"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Commands
+to specify files</FONT></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>You
+may want to specify executable and core dump file names. The usual way
+to do this is at start-up time, using the arguments to GDB’s start-up commands
+(see <FONT COLOR="#008000"><A HREF="gdbGetting_In_and_Out_of_GDB.html">Getting
+in and out of GDB</A></FONT>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Occasionally it is necessary
+to change to a different file during a GDB session. Or you may run GDB
+and forget to specify a file you want to use. In these situations the GDB
+commands to specify new files are useful.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as the program to be debugged. It is read for its symbols and for the contents
+of pure memory. It is also the program executed when you use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command. If you do not specify a directory and the file is not found in
+the GDB working directory, GDB uses the environment variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>PATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+as a list of directories to search, just as the shell does when looking
+for a program to run. You can change the value of this variable, for both
+GDB and your program, using the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>path</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>On systems with memory-mapped
+files, an auxiliary file, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>filename</I>.syms</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+may hold symbol table information for </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If so, GDB maps in the symbol table from ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>filename</I>.syms</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+starting up more quickly. See the descriptions of the file options, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mapped</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-readnow</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(available on the command line, and with the commands, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>add-symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+described in the following), for more information.</FONT></FONT>
+<BR>&nbsp;</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with no argument makes GDB discard any information it has on both executable
+file and the symbol table.</FONT></FONT>
+<BR>&nbsp;</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>exec-file [<I>filename</I>]</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Specify that the program
+to be run (but not the symbol table) is found in </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+GDB searches the environment variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>PATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+if necessary to locate your program. Omitting </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+means to discard information on the executable file.</FONT></FONT>
+<BR>&nbsp;</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>symbol-file [<I>filename</I>]</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Read symbol table information
+from file, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>PATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is searched when necessary. Use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command to get both symbol table and program to run from the same file.</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with no argument clears out GDB information on your program’s symbol table.
+The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command causes GDB to forget the contents of its convenience variables,
+the value history, and all breakpoints and auto-display expressions. This
+is because they may contain pointers to the internal data recording symbols
+and data types, which are part of the old symbol table data being discarded
+inside GDB.</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not repeat if you use </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Return</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+again after executing it once.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>When GDB is configured for
+a particular environment, it understands debugging information in whatever
+format is the standard generated for that environment; you may use either
+a GNU compiler, or other compilers that adhere to the local conventions.
+Best results are usually obtained from GNU compilers; for example, using
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gcc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+you can generate debugging information for optimized code.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>On some kinds of object
+files, the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command does not normally read the symbol table in full right away. Instead,
+it scans the symbol table quickly to find which source files and which
+symbols are present. The details are read later, one source file at a time,
+as they are needed.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The purpose of this two-stage
+reading strategy is to make GDB start up faster. For the most part, it
+is invisible except for occasional pauses while the symbol table details
+for a particular source file are being read. (The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+verbose</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> command
+can turn these pauses into messages if desired. See <FONT COLOR="#008000"><A HREF="gdbOptional_warnings_and_messages.html">Optional
+warnings and messages</A></FONT>.)</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>We have not implemented
+the two-stage strategy for COFF yet. When the symbol table is stored in
+COFF format, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+reads the symbol table data in full right away.</FONT></FONT></UL>
+</UL>
+
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>symbol-file <I>filename</I>[-readnow][-mapped]</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>file <I>filename</I>[-readnow][-mapped]</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>You can override the GDB
+two-stage strategy for reading symbol tables by using the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-readnow</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option with any of the commands that load symbol table information, if
+you want to be sure GDB has the entire symbol table available.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If memory-mapped files are
+available on your system through the mmap system call, you can use another
+option, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mapped</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+to cause GDB to write the symbols for your program into a reusable file.
+Future GDB debugging sessions map in symbol information from this auxiliary
+symbol file (if the program has not changed), rather than spending time
+reading the symbol table from the executable program.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Using the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mapped</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option has the same effect as starting GDB with the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mapped</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+command-line option.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>You can use both options
+together, to make sure the auxiliary symbol file has all the symbol information
+for your program. The auxiliary symbol file for a program called </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>myprog</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is called ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>myprog</I>.syms</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Once this file exists (so long as it is newer than the corresponding executable),
+GDB always attempts to use it when you debug </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>myprog</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+no special options or commands are needed.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.syms</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+file is specific to the host machine where you run GDB. It holds an exact
+image of the internal GDB symbol table. It cannot be shared across multiple
+host platforms.</FONT></FONT></UL>
+</UL>
+
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>core-file [<I>filename</I>]</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Specify the whereabouts
+of a core dump file to be used as the “contents of memory”. Traditionally,
+core files contain only some parts of the address space of the process
+that generated them; GDB can access the executable file itself for other
+parts.</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>core-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with no argument specifies that no core file is to be used.</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The core file is ignored
+when your program is actually running under GDB. So, if you have been running
+your program and you wish to debug a core file instead, you must kill the
+subprocess in which the program is running. To do this, use the kill command
+(see <FONT COLOR="#008000"><A HREF="gdbKilling_the_child_process.html">Killing
+the child process</A></FONT>).</FONT></FONT>
+<BR>&nbsp;</UL>
+</UL>
+</UL>
+
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>load</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Depending on what remote
+debugging facilities are configured into GDB, the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>load</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command may be available. Where it exists, it is meant to make </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>(an executable)
+available for debugging on the remote system—by downloading, or dynamic
+linking, for example. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>load</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+also records the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+symbol table in GDB, like the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>add-symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If your GDB does not have
+a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>load</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command, attempting to execute it gets the error message, </FONT></FONT><FONT SIZE=+0><FONT FACE="Courier New">You
+can</FONT><FONT FACE="Times New Roman">’</FONT><FONT FACE="Courier New">t
+do that when your target is</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>...</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The file is loaded at whatever
+address is specified in the executable. For some object file formats, you
+can specify the load address when you link the program; for other formats,
+like a.out, the object file format specifies a fixed address.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>On VxWorks, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>load</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+links </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+dynamically on the current target system as well as adding its symbols
+in GDB.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>With the Nindy interface
+to an Intel 960 board, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>load</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+downloads </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to the 960 as well as adding its symbols in GDB.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>When you select remote debugging
+to a Hitachi SH, H8/300, or H8/500 board (see <FONT COLOR="#008000"><A HREF="gdbGDB_and_Hitachi_microprocessors.html">GDB
+and Hitachi Microprocessors</A></FONT>), the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>load</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command downloads your program to the Hitachi board and also opens it as
+the current executable target for GDB on your host (like the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command).</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>load</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not repeat if you use </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Return</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+again after using it.</FONT></FONT>
+<BR>&nbsp;</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>add-symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename address</FONT></FONT></I>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>add-symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>filename address</I>[-readnow][-mapped]</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>add-symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command reads additional symbol table information from the file, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+You would use this command when </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has been dynamically loaded (by some other means) into the program that
+is running. </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>address</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+should be the memory address at which the file has been loaded; GDB cannot
+figure this out for itself. You can specify </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>address
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>as an expression.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The symbol table of the
+file, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is added to the symbol table originally read with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command. You can use the command, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>add-symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+any number of times; the new symbol data thus read keeps adding to the
+old. To discard all old symbol data instead, use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command.</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>add-symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not repeat if, after using it, you use </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Return</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>You can use the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-mapped</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-readnow</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options, just as with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command, to change how GDB manages the symbol table information for </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>filename</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+</UL>
+
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>add-shared-symbol-file</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>add-shared-symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command can be used only under Harris’ CXUX operating system for the Motorola
+88k. GDB automatically looks for shared libraries, however if GDB does
+not find yours, you can run </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>add-shared-symbol-file</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+It takes no arguments.</FONT></FONT></UL>
+</UL>
+
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>section</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>section</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command changes the base address of section, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SECTION</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+of the exec file to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ADDR</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+This can be used if the exec file does not contain section addresses (such
+as in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a.out</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+format), or when the addresses specified in the file itself are wrong.
+Each section must be changed separately. The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info
+files</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> command
+lists all the sections and their addresses.</FONT></FONT></UL>
+</UL>
+
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>info files</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>info target</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>info files</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info target</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are synonymous; both print the current target (see <FONT COLOR="#008000"><A HREF="gdbSpecifying_a_Debugging_Target.html">Specifying
+a debugging target</A></FONT>), including the names of the executable and
+core dump files currently in use by GDB, and the files from which symbols
+were loaded. The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>help
+target</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> command
+lists all possible targets rather than current ones.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>All file-specifying commands
+allow both absolute and relative file names as arguments. GDB always converts
+the file name to an absolute file name and remembers it that way.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB supports SunOS, SVr4,
+Irix 5, and IBM RS/6000 shared libraries. GDB automatically loads symbol
+definitions from shared libraries when you use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command, or when you examine a core file. (Before you issue the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command, remember that GDB does not understand references to a function
+in a shared library, <I>unless</I> you are debugging a core file).</FONT></FONT></UL>
+</UL>
+
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>info share</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>info sharedlibrary</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print the names of the shared
+libraries which are currently loaded.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>sharedlibrary</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>regex</FONT></FONT></I>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>share</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>regex</FONT></FONT></I>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Load shared object library
+symbols for files matching a Unix regular expression. As with files loaded
+automatically, it only loads shared libraries required by your program
+for a core file or after using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>run</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>regex</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is omitted, all shared libraries required by your program are loaded.</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbGDB_Files.html">Previous</A>|<A HREF="gdbErrors_reading_symbol_files.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

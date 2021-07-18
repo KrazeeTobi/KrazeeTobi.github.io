@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>goto and Destructors in GNU C++</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccMinimum_and_Maximum_Operators_in.html">Previous</A>|<A HREF="gccDeclarations_and_Definitions_in_.html">Next</A>
+<BR><FONT COLOR="#000000">&nbsp;<A NAME="off_4360593"></A><A NAME="abbef899"></A><B><FONT SIZE=+3><FONT FACE="Courier New">goto</FONT><FONT FACE="Futura Md BT">
+and destructors in GNU C++&nbsp;</FONT></FONT></B><FONT FACE="Futura Md BT">&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>In C++ programs, you can
+safely use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>goto</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+statement. When you use it to exit a block which contains aggregates requiring
+destructors, the destructors will run before the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>goto</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+transfers control. (In ANSI C++, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>goto</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is restricted to targets within the current function.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The compiler still forbids
+using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>goto</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to <I>enter</I> a scope that requires constructors.</FONT></FONT>
+</BODY>
+</HTML>

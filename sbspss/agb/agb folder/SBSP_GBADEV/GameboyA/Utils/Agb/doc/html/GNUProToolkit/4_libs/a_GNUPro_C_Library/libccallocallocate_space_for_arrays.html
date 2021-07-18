@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>calloc[allocate space for arrays]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcbsearchbinary_search.html">Previous</A>|<A HREF="libcdivdivide_two_integers.html">Next</A>
+</P>
+
+<P><A NAME="off_197196"></A><A NAME="a7f97e96"></A><A NAME="off_197196"></A><A NAME="a7f97e96"></A><A NAME="off_197196"></A><A NAME="a7f97e96"></A><FONT SIZE=+3><FONT FACE="Courier New">calloc
+<BR>
+</FONT><FONT FACE="Times New Roman">[allocate space for arrays] </FONT></FONT></P>
+
+<PRE><B><FONT FACE="Times New Roman"><FONT SIZE=+2>SYNOPSIS 
+</FONT></FONT></B><FONT SIZE=+1><FONT FACE="Courier New">#include &lt;stdlib.h&gt; 
+void *calloc(size_t <I>n</I>, size_t <I>s</I>); 
+void *calloc_r(void * <I>reent</I>, size_t &lt;n&gt;, &lt;size_t&gt; <I>s</I>);</FONT><FONT FACE="Times New Roman"> </FONT></FONT></PRE>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>DESCRIPTION <BR>
+</B>Use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>calloc</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">to request a block of memory sufficient
+to hold an array of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">elements, each of which has size, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>s</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The memory allocated by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>calloc</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">comes out of the same memory pool used
+by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>malloc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+but the memory block is initialized to all zero bytes. (To avoid the overhead
+of initializing the space, use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>malloc</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">instead.) </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The alternate function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>_calloc_r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is reentrant. The extra argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>reent</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is a pointer to a reentrancy structure. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>RETURNS <BR>
+</B>If successful, a pointer to the newly allocated space. If unsuccessful,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NULL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>calloc</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is ANSI. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Supporting OS subroutines
+required: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>close</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fstat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>isatty</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>lseek</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>read</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sbrk</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>write</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+</BODY>
+</HTML>

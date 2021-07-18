@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>ferror[test whether read/write error has occurred]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcfeoftest_for_end_of_file.html">Previous</A>|<A HREF="libcfflushflush_buffered_file_output.html">Next</A>
+</P>
+
+<P><A NAME="off_688981"></A><A NAME="c7ef7452"></A><A NAME="off_688981"></A><A NAME="c7ef7452"></A><FONT SIZE=+3><FONT FACE="Courier New">ferror
+<BR>
+</FONT><FONT FACE="Times New Roman">[test whether read/write error has
+occurred] </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>&lt;stdio.h&gt;</FONT><FONT SIZE=-1> <BR>
+</FONT><FONT SIZE=+0>int</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>ferror(FILE</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>*<I>fp</I>); </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>DESCRIPTION <BR>
+</B>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdio</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">functions maintain an error indicator
+with each file pointer </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>fp</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to record whether any read or write errors have occurred on the associated
+file or stream. Use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ferror</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">to query this indicator. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>See </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>clearerr</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">to reset the error indicator. </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>ferror</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">returns </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">if no errors have occurred; it returns
+a nonzero value otherwise. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>COMPLIANCE <BR>
+</B>ANSI C</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=-1> </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>requires</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>ferror</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>No supporting OS subroutines
+are required. </FONT></FONT></P>
+
+</BODY>
+</HTML>

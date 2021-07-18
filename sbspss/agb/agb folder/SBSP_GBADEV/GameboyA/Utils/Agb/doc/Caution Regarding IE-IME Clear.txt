@@ -1,0 +1,11 @@
+Interrupts may occur during execution of instructions to clear the IE or IME flag.
+
+If you would like to clear the IE flag, clear the IME flag first, so that an inconsistency
+in interrupt checking will not occur.
+
+When using multiple interrupts, and an interrupt coincides with clearing the IME flag,
+the interrupt routine will still occur, even though interrupts are disabled
+( IME flag is cleared ). This will cause the interrupt routines to become "out of sync"
+with the IME flag. Therefore, please program the interrupt routines to save the IME flag
+and IE/IF registers, and then re-enable the IME flag so that multiple interrupts can occur.
+This condition is pretty rare, but must be considered when programming your game.

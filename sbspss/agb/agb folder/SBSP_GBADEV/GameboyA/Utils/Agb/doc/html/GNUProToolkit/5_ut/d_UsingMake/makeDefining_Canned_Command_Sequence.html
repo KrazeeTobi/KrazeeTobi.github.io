@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Defining Canned Command Sequences</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeThe_printdirectory_Option.html">Previous</A>|<A HREF="makeUsing_Empty_Commands.html">Next</A>
+<BR><A NAME="off_1051067"></A><A NAME="07a9fd31"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Defining
+canned command sequences</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>When
+the same sequence of commands is useful in making various targets, you
+can define it as a canned sequence with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>define</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive, and refer to the canned sequence from the rules for those targets.
+The canned sequence is actually a variable, so the name must not conflict
+with other variable names.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The following is an example
+of defining a canned sequence of commands.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>define run-yacc</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>yacc $(firstword $ˆ)</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>mv y.tab.c $@</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>endef</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>run-yacc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the name of the variable being defined; </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>endef</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+marks the end of the definition; the lines in between are the commands.
+The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>define</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive does not expand variable references and function calls in the
+canned sequence; the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+characters, parentheses, variable names, and so on, all become part of
+the value of the variable you are defining. See <FONT COLOR="#008000"><A HREF="makeDefining_Variables_Verbatim.html">Defining
+variables verbatim</A></FONT> for a complete explanation of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>define</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The first command in this
+example runs Yacc on the first dependency of whichever rule uses the canned
+sequence. The output file from Yacc is always named ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>y.tab.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+The second command moves the output to the rule’s target file name.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To use the canned sequence,
+substitute the variable into the commands of a rule. You can substitute
+it like any other variable (see <FONT COLOR="#008000"><A HREF="makeBasics_of_Variable_References.html">Basics
+of variable references</A></FONT>). Because variables defined by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>define</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are recursively expanded variables, all the variable references you wrote
+inside the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>define</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are expanded now. Use the following for example.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>foo.c : foo.y</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$(run-yacc)</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.y</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+will be substituted for the variable ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$ˆ</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+when it occurs in run-yacc’s value, and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+for ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$@</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+This is a realistic example, but this particular one is not needed in practice
+because </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has an implicit rule to figure out these commands based on the file names
+involved (see <FONT COLOR="#008000"><A HREF="makeUsing_Implicit_Rules.html">Using
+implicit rules</A></FONT>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In command execution, each
+line of a canned sequence is treated just as if the line appeared on its
+own in the rule, preceded by a tab. In particular, </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+invokes a separate subshell for each line.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can use the special prefix
+characters that affect command lines (‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>@</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘-’, and ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’)
+on each line of a canned sequence. See <FONT COLOR="#008000"><A HREF="makeWriting_the_Commands_in_Rules.html">Writing
+the commands in rules</A></FONT>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For instance, use the following
+example of a canned sequence.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>define frobnicate</FONT></FONT>
+<BR><FONT SIZE=+0><FONT FACE="Courier New">@echo </FONT><FONT FACE="Times New Roman">“</FONT><FONT FACE="Courier New">frobnicating
+target $@</FONT><FONT FACE="Times New Roman">”</FONT><FONT FACE="Courier New"></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>frob-step-1 $&lt; -o $@-step-1</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>frob-step-2 $@-step-1 -o $@</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>endef</FONT></FONT></UL>
+
+
+<P><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will not echo the first line, the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>echo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command. But it will echo the following two command lines. On the other
+hand, prefix characters on the command line that refers to a canned sequence
+apply to every line in the sequence. So the following rule statement does
+not echo any commands. (See <FONT COLOR="#008000"><A HREF="makeCommand_Echoing.html">Command
+echoing </A></FONT>for a full explanation of ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>@</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.)</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>frob.out: frob.in</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>@$(frobnicate)</FONT></FONT></UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeThe_printdirectory_Option.html">Previous</A>|<A HREF="makeUsing_Empty_Commands.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

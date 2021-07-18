@@ -1,0 +1,243 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<head><!-- Edited by Tracy B, 2/13/01-->
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>.s File Content</title>
+</head>
+
+<body>
+
+<p><br>
+</p>
+
+<h2 ALIGN="CENTER">.s File Content</h2>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="565" ALIGN="CENTER" SUMMARY="tuto3_3">
+  <tr>
+    <td>As seen in the Background Music and the Sound Effect examples in the demonstration,
+    nearly all of the functions can be written into the <a href="../yougo.html#{songname}.mid"
+    TARGET="yougo">.mid File.</a>&nbsp; However, it is sometimes easier to make detailed
+    adjustments directly in the <a href="../yougo.html#{songname}.s" TARGET="yougo">.s Files</a>
+    &nbsp; following conversion than in the .mid Files.&nbsp; Below is the .s file after
+    converting the m_Sample_01.mid file.<br>
+    When editing, use the .s file as a reference. (Note: This is not in the Demo.)</td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="565" ALIGN="CENTER" SUMMARY="sfile_fig">
+  <tr>
+    <td><tt><font STYLE="color:#008080">&nbsp;&nbsp;&nbsp;&nbsp;.include
+    &quot;MPlayDef.s&quot; <br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.equ&nbsp;&nbsp;&nbsp;m_Sample_01_grp, _voicegroup003 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.equ&nbsp;&nbsp;&nbsp;m_Sample_01_pri, 0 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.equ&nbsp;&nbsp;&nbsp;m_Sample_01_rev, 0 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.equ&nbsp;&nbsp;&nbsp;m_Sample_01_mvl, 120 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.equ&nbsp;&nbsp;&nbsp;m_Sample_01_key, 0 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.equ&nbsp;&nbsp;&nbsp;m_Sample_01_tbs, 1 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.equ&nbsp;&nbsp;&nbsp;m_Sample_01_exg, 0 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.equ&nbsp;&nbsp;&nbsp;m_Sample_01_cmp, 1 <br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.section .rodata <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.global m_Sample_01 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.align 2 <br>
+    <br>
+    @**************** Track 1 (Midi-Chn.1) ****************@ <br>
+    <br>
+    m_Sample_01_1: <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;<a href="../yougo.html#KEYSH"
+    TARGET="yougo">KEYSH</a> , m_Sample_01_key+0 <br>
+    @ 000 ---------------------------------------- <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;<a href="../yougo.html#TEMPO"
+    TARGET="yougo">TEMPO</a> , 69*m_Sample_01_tbs/2 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;<a href="../yougo.html#VOICE"
+    TARGET="yougo">VOICE</a> , 1 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;<a href="../yougo.html#VOL" TARGET="yougo">VOL</a>
+    , 100*m_Sample_01_mvl/mxv <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;<a href="../yougo.html#PAN" TARGET="yougo">PAN</a>
+    , c_v-54 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;<a href="../yougo.html#TUNE" TARGET="yougo">TUNE</a>
+    , c_v-59 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;<a href="../yougo.html#Nxx" TARGET="yougo">N12</a>
+    , Cn3 , v100 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;<a href="../yougo.html#Wxx" TARGET="yougo">W24</a>
+    <br>
+    m_Sample_01_1_B1: <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N12
+    , Cs3 , v100 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W23 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PAN
+    , c_v+0 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W01 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N12
+    , Dn3&nbsp; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W23 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VOICE
+    , 4 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W01 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N36,
+    Ds3&nbsp; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W05 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="../yougo.html#BENDR" TARGET="yougo">BENDR</a> , 4 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="../yougo.html#BEND" TARGET="yougo">BEND</a> , c_v-16 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W05 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c_v-32
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W05 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c_v-47
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W05 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c_v-24
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W04 <br>
+    @ 001 ---------------------------------------- <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c_v+0
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W05 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c_v+15
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W05 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c_v+31
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W05 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c_v+46
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W05 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c_v+62
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W03 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c_v+0
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W01 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N48
+    , En3&nbsp; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W05 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="../yougo.html#LFOS" TARGET="yougo">LFOS</a> , 100 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="../yougo.html#LFODL" TARGET="yougo">LFODL</a> , 10 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="../yougo.html#MOD" TARGET="yougo">MOD</a> , 120 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="../yougo.html#MODT" TARGET="yougo">MODT</a> , 2 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W66 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;TEMPO , 69*m_Sample_01_tbs/2 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W01 <br>
+    @ 002 ---------------------------------------- <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;TEMPO , 80*m_Sample_01_tbs/2 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="../yougo.html#xIECV" TARGET="yougo">XCMD , xIECV</a> , 20 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="../yougo.html#xIECL" TARGET="yougo">xIECL</a> , 20 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N12
+    , Fn3&nbsp; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W48 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XCMD
+    , xIECV , 40 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xIECL
+    , 40 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N12
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W48 <br>
+    @ 003 ---------------------------------------- <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XCMD
+    , xIECV , 80 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xIECL
+    , 80 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N12&nbsp;
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W48 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XCMD
+    , xIECV , 100 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xIECL
+    , 100 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N12
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W48 <br>
+    @ 004 ---------------------------------------- <br>
+    m_Sample_01_1_004: <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N24
+    , Cn3 , v080 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W48 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;En3
+    , v060 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W48 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;<a href="../yougo.html#PEND" TARGET="yougo">PEND</a>
+    <br>
+    @ 005 ---------------------------------------- <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;<a href="../yougo.html#PATT" TARGET="yougo">PATT</a>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.word&nbsp;&nbsp;m_Sample_01_1_004 <br>
+    @ 006 ---------------------------------------- <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="../yougo.html#TIE" TARGET="yougo">TIE</a> , Gn3 , v060 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W96 <br>
+    @ 007 ---------------------------------------- <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W48 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+    href="../yougo.html#EOT" TARGET="yougo">EOT</a> <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;W48 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;<a href="../yougo.html#GOTO" TARGET="yougo">GOTO</a>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.word&nbsp;&nbsp;m_Sample_01_1_B1 <br>
+    m_Sample_01_1_B2: <br>
+    @ 008 ---------------------------------------- <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;<a href="../yougo.html#FINE" TARGET="yougo">FINE</a>
+    <br>
+    <br>
+    @******************************************************@ <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.align&#129;@2 <br>
+    <br>
+    m_Sample_01: <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;1&nbsp;&nbsp;@ NumTrks <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;0&nbsp;&nbsp;@ NumBlks <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;m_Sample_01_pri @ Priority <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.byte&nbsp;&nbsp;m_Sample_01_rev @ Reverb. <br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.word&nbsp;&nbsp;m_Sample_01_grp <br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.word&nbsp;&nbsp;m_Sample_01_1 <br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;.end</font></tt></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="565" ALIGN="CENTER" SUMMARY="download">
+  <tr>
+    <td>Examples of a pre-conversion m_Sample_01.mid file and the m_Sample_01.s file from
+    above are available.&nbsp; Refer to them to see how .mid files are converted.&nbsp; <br>
+    <br>
+    * <a href="../SoundData/m_Sample.zip">Download m_Sample.zip File.&nbsp;</a> (m_Sample.zip
+    2KB)</td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<table WIDTH="565" ALIGN="CENTER" SUMMARY="to_next">
+  <tr>
+    <td>This concludes the&quot;.s File Content.&quot;&nbsp; <br>
+    Proceed to the next category.&nbsp; <br>
+    <br>
+    <b>Next: </b><a href="tuto3_4.html">Incorporation Into the Main Program</a></td>
+  </tr>
+</table>
+
+<hr WIDTH="600" ALIGN="CENTER">
+
+<p align="center">[ | <a href="tuto3_2.html">Back</a> | <a href="../index.html">User's
+Manual Table of Contents</a> | <a href="tuto0.html">Tutorial Table of Contents</a> | <a
+href="tuto3_4.html">Next</a> | ] <br>
+</p>
+</body>
+</html>

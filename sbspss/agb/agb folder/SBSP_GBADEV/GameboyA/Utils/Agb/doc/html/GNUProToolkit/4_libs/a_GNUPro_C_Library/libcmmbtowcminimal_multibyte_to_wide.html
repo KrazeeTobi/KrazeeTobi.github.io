@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>mmbtowc[minimal multibyte to wide char converter]</TITLE>
+</HEAD>
+<BODY>
+<A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcmalloclockmallockunlockpool.html">Previous</A>|<A HREF="libcqsortsort_an_array.html">Next</A>
+
+<P><A NAME="off_330178"></A><A NAME="5d5e2141"></A><A NAME="off_330178"></A><A NAME="5d5e2141"></A><A NAME="off_330178"></A><A NAME="5d5e2141"></A><FONT FACE="Courier New"><FONT SIZE=+3>mmbtowc</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+3>[minimal multibyte to wide
+char converter]</FONT></FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>&lt;stdlib.h></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>int</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>mbtowc(wchar_t</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>*<I>pwc</I>,</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>const</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>char</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>*<I>s</I>,</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>size_t</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0><I>n</I>);</FONT></FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>This is a minimal ANSI-conforming
+implementation of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mbtowc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The only “multibyte character sequences” recognized are single bytes, and
+they are “converted” to themselves.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Each call to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mbtowc</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">copies one character from </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*<I>s</I></FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*<I>pwc</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+unless </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>s </FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>is
+a null pointer.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In this implementation, the
+argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Times New Roman">,</FONT><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is ignored.</FONT></FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>This implementation of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mbtowc</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">returns </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">if </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>s</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NULL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+it returns </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>1</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">otherwise (reporting the length of
+the character “sequence” used).</FONT></FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>mbtowc</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is required in the ANSI C standard.
+However, the precise effects vary with the locale.</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>mbtowc</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">requires no supporting OS subroutines.</FONT></FONT>
+</BODY>
+</HTML>

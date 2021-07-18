@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>log, logf[natural logarithms]</TITLE>
+</HEAD>
+<BODY>
+<A HREF="libm.html">Contents</A>|<A HREF="libmindex.html">Index</A>|<A HREF="libmldexp_ldexpfload_exponent.html">Previous</A>|<A HREF="libmlog10_log10fbase_10_logarithms.html">Next</A>
+
+<P><A NAME="off_295490"></A><A NAME="d8b598f8"></A><A NAME="off_295490"></A><A NAME="d8b598f8"></A><A NAME="off_295490"></A><A NAME="d8b598f8"></A><A NAME="off_295490"></A><A NAME="d8b598f8"></A><A NAME="off_295490"></A><A NAME="d8b598f8"></A><A NAME="off_295490"></A><A NAME="d8b598f8"></A><A NAME="off_295490"></A><A NAME="d8b598f8"></A><A NAME="off_295490"></A><A NAME="d8b598f8"></A><FONT SIZE=+3><FONT FACE="Courier New">log</FONT><FONT FACE="Times New Roman">,
+</FONT><FONT FACE="Courier New">logf</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+3>[natural logarithms]</FONT></FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS</FONT></FONT></B>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#include &lt;math.h>&nbsp;
+double log(double <I>x</I>);&nbsp;
+float logf(float <I>x</I>);</FONT></FONT></PRE>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Return the natural logarithm
+of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+that is, its logarithm base, <I>e</I> (where <I>e</I> is the base of the
+natural system of logarithms, 2.71828...). </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>log</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>logf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">are identical, save for the return
+and argument types.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can use the (non-ANSI)
+function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>matherr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to specify error handling for these functions.</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Normally, returns the calculated
+value. When </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is zero, the returned value is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-HUGE_VAL</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is set to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ERANGE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+When </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is negative, the returned value is
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-HUGE_VAL</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is set to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>EDOM</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+You can control the error behavior via </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>matherr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>log</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is ANSI, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>logf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is an extension.</FONT></FONT>
+</BODY>
+</HTML>

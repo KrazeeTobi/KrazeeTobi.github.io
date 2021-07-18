@@ -1,0 +1,137 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Intel 960 Options</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccIntel_386_Options.html">Previous</a>|<a href="gccMN10200_options.htm">Next</a>
+<br><a NAME="off_2031894"></a><a NAME="776e2739"></a><font face="Futura Md BT"><font color="#000000"><b><font size=+3>Intel
+960 options&nbsp;</font></b>&nbsp;</font></font>
+<hr SIZE=6 WIDTH="100%">
+<br><font face="Times New Roman"><font size=+1>The following ‘</font></font><font face="Courier New"><font size=+0>-m</font></font><font face="Times New Roman"><font size=+1>’
+options are defined for the Intel 960 implementations.</font></font>
+<br>&nbsp;
+<ul>
+<dt>
+<font face="Courier New"><font size=+0>-m<i>cpu type</i></font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Assume the defaults for
+the machine type </font></font><i><font face="Courier New"><font size=+0>cputype
+</font></font></i><font face="Times New Roman"><font size=+1>for some of
+the other options, including instruction scheduling, floating-point support,
+and addressing modes. The choices for </font></font><i><font face="Courier New"><font size=+0>cpu
+type</font></font></i><font face="Times New Roman"><font size=+1> are </font></font><font face="Courier New"><font size=+0>ka</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>kb</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>mc</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>ca</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>cf</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>sa</font></font><font face="Times New Roman"><font size=+1>,
+and </font></font><font face="Courier New"><font size=+0>sb</font></font><font face="Times New Roman"><font size=+1>.
+The default is </font></font><font face="Courier New"><font size=+0>kb</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mnumerics</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-msoft-float</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>The </font></font><font face="Courier New"><font size=+0>-mnumerics</font></font><font face="Times New Roman"><font size=+1>
+option indicates that the processor does support floating-point instructions.
+The </font></font><font face="Courier New"><font size=+0>-msoft-float</font></font><font face="Times New Roman"><font size=+1>
+option indicates that floating-point support should not be assumed.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mleaf-procedures</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-leaf-procedures</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Do (or do not) attempt to
+alter leaf procedures to be callable with the </font></font><font face="Courier New"><font size=+0>bal</font></font><font face="Times New Roman"><font size=+1>
+instruction as well as </font></font><font face="Courier New"><font size=+0>call</font></font><font face="Times New Roman"><font size=+1>.
+This will result in more efficient code for explicit calls when the </font></font><font face="Courier New"><font size=+0>bal</font></font><font face="Times New Roman"><font size=+1>
+instruction can be substituted by the assembler or linker, but less efficient
+code in other cases, such as calls via function pointers, or using a linker
+that doesn’t support this optimization.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mtail-call</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-tail-call</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Do (or do not) make additional
+attempts (beyond those of the machine-independent portions of the compiler)
+to optimize tail-recursive calls into branches. You may not want to do
+this because the detection of cases where this is not valid is not totally
+complete.</font></font>
+<br><font face="Times New Roman"><font size=+1>The default is </font></font><font face="Courier New"><font size=+0>-mno-tail-call</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mcomplex-addr</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-complex-addr</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Assume (or do not assume)
+that the use of a complex addressing mode is a win on this implementation
+of the i960. Complex addressing modes may not be worthwhile on the K-series,
+but they definitely are on the C-series. The default is currently </font></font><font face="Courier New"><font size=+0>-mcomplex-addr</font></font><font face="Times New Roman"><font size=+1>
+for all processors except the CB and CC.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mcode-align</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-code-align</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Align code to 8-byte boundaries
+for faster fetching (or don’t bother). Currently turned on by default for
+C-series implementations only.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mic-compat</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mic2.0-compat</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mic3.0-compat</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Enable compatibility with
+iC960 v2.0 or v3.0.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-masm-compat</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mintel-asm</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Enable compatibility with
+the iC960 assembler.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mstrict-align</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-mno-strict-align</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Do not permit (do permit)
+unaligned accesses.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-mold-align</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Enable structure-alignment
+compatibility with Intel’s GCC release version 1.3 (based on GCC 1.37).
+This option implies </font></font><font face="Courier New"><font size=+0>-mstrict-align</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+</ul>
+
+<center>
+<hr SIZE=3 WIDTH="100%">
+<br><a href="#Top">Top</a>|<a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccIntel_386_Options.html">Previous</a>|<a href="gccMN10200_options.htm">Next</a></center>
+
+</body>
+</html>

@@ -1,0 +1,1893 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE> NEC V850 development</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<DIV CLASS="ChapterTitle"><A NAME="Top"></A><A HREF="emb.html">Contents</A>|<A HREF="embDebugging_on_Motorola__m68k_targ.html">Previous</A>|<A HREF="embPowerPC.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT SIZE=+3>NEC V850 development</FONT></FONT></DIV>
+
+<DIV CLASS="BodyAfterHead">
+<HR SIZE=3 WIDTH="100%"><FONT SIZE=+1>The following documentation discusses
+the NEC V850 family of processors for GNUPro tools.</FONT></DIV>
+
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="embV850.html#Toolchain" CLASS="XRef">Toolchain features
+for V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="embV850.html#ABI" CLASS="XRef">ABI summary for the
+V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Compiler" CLASS="XRef">Compiler issues for V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Assembler" CLASS="XRef">Assembler information for
+V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Linker" CLASS="XRef">Linker information for V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Debug_issues" CLASS="XRef">Debugger issues for
+V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Standalone_simulator" CLASS="XRef">Stand-alone
+simulator issues for V850</A></FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><FONT SIZE=+1>For more specific information on the V850
+processor, see <B><I>V850 User's Manual</I></B>, <B><I>V851 Hardware User's
+Manual</I></B> (NEC document #U10954EU1V0UM00, January 1996), <B><I>V850_EVA</I>
+</B>(Revision C), and <I><B>System V Application Binary Interface</B> (</I>Prentice
+Hall, 1990<I>).</I></FONT></DIV>
+
+<DIV CLASS="Heading1"><A NAME="Toolchain"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Toolchain
+features for V850</FONT></FONT></I></B></DIV>
+&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>The following documentation describes the
+main features of the tools addressing the V850 family of processors.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Bullet"><FONT SIZE=+1>The V851 version of the V850 family of
+processors is supported with the GNUPro tools.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Bullet"><FONT SIZE=+1>The V850 tools support the ELF object
+file format. To produce <A HREF="#Srecords">S-records</A>, use the GNU
+linker, <TT>ld</TT> (see <A HREF="../5_ut/b_Usingld/ld.html"><I>Using </I><TT>ld</TT></A>
+in <B><I>GNUPro Utilities</I></B> for more information) or <TT>objcopy</TT>
+(see <A HREF="../5_ut/c_Usingbinutils/bin.html"><I>Using </I><TT>binutils</TT></A>
+in <B><I>GNUPro Utilities</I></B> for more information).</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Bullet"><FONT SIZE=+1>For the V850 processor, file names are
+case sensitive under Unix. Case sensitivity for Windows 95 and Windows
+NT is dependent on system configuration. By default, file names under Windows
+95 and Windows NT are not case sensitive for the V850 processor.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Bullet"><FONT SIZE=+1>The following case sensitive issues under
+Unix, Windows 95, and Windows NT apply to the V850 processor.</FONT></DIV>
+
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<LI CLASS="Bullet2">
+<FONT SIZE=+1>command line options</FONT></LI>
+
+<LI CLASS="Bullet2">
+<FONT SIZE=+1>assembler labels</FONT></LI>
+
+<LI CLASS="Bullet2">
+<FONT SIZE=+1>linker script commands</FONT></LI>
+
+<LI CLASS="Bullet2">
+<FONT SIZE=+1>section names</FONT></LI>
+</UL>
+</UL>
+
+<DIV CLASS="Bullet"><FONT SIZE=+1>The following case sensitive issues under
+Unix, Windows 95, or Windows NT do not apply to the V850 processor.</FONT></DIV>
+
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<LI CLASS="Bullet2">
+<FONT SIZE=+1>GDB commands</FONT></LI>
+
+<LI CLASS="Bullet2">
+<FONT SIZE=+1>assembler instructions and register names</FONT></LI>
+</UL>
+</UL>
+
+<DIV CLASS="Bullet"><FONT SIZE=+1>GNUPro Toolkit includes tools for converting
+legacy source code, originally written for other compilers, into GNUPro
+compiler (GCC) compliant code.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Bullet"><FONT SIZE=+1>For the Windows 95/NT toolchain, the
+libraries install in different locations. Therefore, the Windows 95/NT
+hosted toolchain requires the following environmental settings to function
+properly. Assume the release is installed in <TT>C:\USR\CYGNUS</TT> . The
+<I>&lt;<TT>yymmdd</TT>></I> variable indicates the release date found on
+the CD.</FONT></DIV>
+
+<DIV CLASS="CodeExample2">
+<UL>
+<UL>
+<PRE><FONT SIZE=+1>SET PROOT=C:\usr\cygnus\V850-&lt;<TT><I>yymmdd</I>></TT></FONT></PRE>
+</UL>
+</UL>
+</DIV>
+
+<UL>
+<UL>
+<PRE><FONT SIZE=+1>SET PATH=%PROOT%\H-i386-cygwin32\BIN;%PATH%</FONT></PRE>
+
+<PRE><FONT SIZE=+1>SET GCC_EXEC_PREFIX=%PROOT%\H-i386-cygwin32\lib\gcc-lib\</FONT></PRE>
+
+<PRE><FONT SIZE=+1>SET INFOPATH=%PROOT%\info</FONT></PRE>
+
+<PRE><FONT SIZE=+1>REM Set TMPDIR to point to a ramdisk if you have one</FONT></PRE>
+
+<PRE><FONT SIZE=+1>SET TMPDIR=%PROOT%</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Label">
+<UL>
+<UL>
+<UL><B><I><FONT SIZE=+1>Note:</FONT></I></B>
+<BR><FONT SIZE=+1>The trailing back slash ( <TT>\</TT> ) in ` <TT>GCC_EXEC_PREFIX</TT>
+' is necessary.</FONT></UL>
+</UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Bullet"><FONT SIZE=+1>Programs may be developed for and debugged
+on the GNUPro Instruction Set Simulator. The ICE (In-circuit Emulator)
+for V851</FONT><B><SUP><FONT SIZE=-2><A HREF="#Footnote1" CLASS="footnote">1</A></FONT></SUP></B><FONT SIZE=+1>
+is in development.</FONT>&nbsp;&nbsp;
+<HR SIZE=3 WIDTH="100%"></DIV>
+
+<DIV CLASS="Bullet">
+<DIV CLASS="footnotes">
+<DIV CLASS="footnote">
+<DIV CLASS="Footnote"><SPAN CLASS="footnoteNumber">1.</SPAN>&nbsp;<A NAME="Footnote1"></A>See
+<B><I>IE-703000-MC-A In-circuit Emulator for V851 User's Manual</I></B>
+(from NEC Electronics Inc.) for details.
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT SIZE=+1>Cross-development tools in GNUPro
+Toolkit normally have names that reflect the target processor and the object
+file format output by the tools (ELF). This makes it possible to install
+more than one set of tools in the same binary directory, including both
+native and cross-development tools.</FONT></DIV>
+</DIV>
+</DIV>
+&nbsp;</DIV>
+
+<DIV CLASS="BodyListFollow"><FONT SIZE=+1>The complete tool name is a three-part
+hyphenated string. The first part indicates the processor or processor
+family (<TT>V850</TT>). The second part indicates the file format output
+by the tool (<TT>elf</TT>). The third part is the generic tool name (<TT>gcc</TT>).
+For example, the GCC compiler for the NEC V850 family of processors is
+<TT>V850-elf-gcc</TT>.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Bullet"><FONT SIZE=+1>The V850 package includes the following
+supported tools.</FONT></DIV>
+
+<UL>&nbsp;
+<TABLE BORDER >
+<TR BGCOLOR="#C0C0C0">
+<TH ALIGN=LEFT VALIGN=TOP>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><I>Tool Description</I>&nbsp;</FONT></DIV>
+</TH>
+
+<TH ALIGN=LEFT VALIGN=TOP>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><I>Tool Name</I>&nbsp;</FONT></DIV>
+</TH>
+</TR>
+
+<TR>
+<TD VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1>GCC compiler&nbsp;</FONT></DIV>
+</TD>
+
+<TD VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>gcc</TT>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><FONT SIZE=+1>G++ compiler&nbsp;</FONT></DIV>
+</TD>
+
+<TD VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>g++</TT>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><FONT SIZE=+1>C++ compiler&nbsp;</FONT></DIV>
+</TD>
+
+<TD VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>c++</TT>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><FONT SIZE=+1>C++ demangler&nbsp;</FONT></DIV>
+</TD>
+
+<TD VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>c++filt</TT>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><FONT SIZE=+1>GNU assembler&nbsp;</FONT></DIV>
+</TD>
+
+<TD VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>as</TT>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><FONT SIZE=+1>GNU linker<I>&nbsp;</I></FONT></DIV>
+</TD>
+
+<TD VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>ld</TT>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><FONT SIZE=+1>Standalone simulator&nbsp;</FONT></DIV>
+</TD>
+
+<TD VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>run</TT>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1>Binary utilities&nbsp;</FONT></DIV>
+</TD>
+
+<TD VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>ar</TT></FONT></DIV>
+<FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>nm</TT>&nbsp;</FONT>&nbsp;
+<BR><FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>objcopy</TT>&nbsp;</FONT>&nbsp;
+<BR><FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>objdump</TT>&nbsp;</FONT>&nbsp;
+<BR><FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>ranlib</TT>&nbsp;</FONT>&nbsp;
+<BR><FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>size</TT>&nbsp;</FONT>&nbsp;
+<BR><FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>strings</TT>&nbsp;</FONT>&nbsp;
+<BR><FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>strip</TT>&nbsp;</FONT></TD>
+</TR>
+
+<TR>
+<TD ALIGN=LEFT VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1>GDB debugger&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>gdb</TT>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<DIV CLASS="CellBody"><FONT SIZE=+1>Cygnus Insight, the GNUPro visual debugger<I>&nbsp;</I></FONT></DIV>
+<FONT SIZE=+1>(<I>Windows</I> <I>95/NT only</I>)&nbsp;</FONT></TD>
+
+<TD VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>V850</TT><I>-</I><TT>elf</TT><I>-</I><TT>gdbtk</TT>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+</TABLE>
+<FONT SIZE=+1>&nbsp;</FONT></UL>
+
+<DIV CLASS="Label">
+<UL><B><I><FONT SIZE=+1>Important:</FONT></I></B>
+<BR><FONT SIZE=+1>The binaries for a Windows 95/NT hosted toolchain are
+installed with an <TT>.exe</TT> suffix. However, the <TT>.exe</TT> suffix
+does not need to be specified when running the executable.</FONT></UL>
+</DIV>
+
+<DIV CLASS="Heading1"><A NAME="ABI"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>ABI
+summary for the V850</FONT></FONT></I></B></DIV>
+&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>The following documentation discusses the
+ABI for the V850 processor.</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Data_types_alignment" CLASS="XRef">Data types and
+alignment for V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Calling_conv" CLASS="XRef">Calling conventions
+for V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Register_alloca" CLASS="XRef">Register allocation
+for V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Stack_frame" CLASS="XRef">Stack frame information
+for V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Args_passing" CLASS="XRef">Argument passing for
+V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Func_return_value" CLASS="XRef">Function return
+values for V850</A></FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Heading2"><A NAME="Data_types_alignment"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Data
+types and alignment for V850</FONT></FONT></I></B></DIV>
+&nbsp;<FONT SIZE=+1>The following table describes the data types and their
+alignment sizes for the V850 processor.</FONT>
+<BR>&nbsp;
+<TABLE BORDER >
+<TR>
+<TD ALIGN=RIGHT>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><TT>char</TT><B> :&nbsp;</B></FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><I>1 byte</I>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=RIGHT>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><TT>short</TT><B> :&nbsp;</B></FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><I>2 bytes</I>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=RIGHT>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><TT>int</TT><B> :&nbsp;</B></FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><I>4 bytes</I>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=RIGHT>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><TT>long</TT><B> :&nbsp;</B></FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><I>4 bytes</I>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=RIGHT>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><TT>long long</TT><B> :&nbsp;</B></FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><I>4 bytes</I>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=RIGHT>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><TT>float</TT><B> :&nbsp;</B></FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><I>4 bytes</I>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=RIGHT>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><TT>double</TT><B> :&nbsp;</B></FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><I>4 bytes</I>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=RIGHT>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><TT>long double</TT><B> :&nbsp;</B></FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><I>8 bytes</I>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=RIGHT>
+<DIV CLASS="CellHeading"><FONT SIZE=+1><I>pointer</I><B> :&nbsp;</B></FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellHeading"><I><FONT SIZE=+1>4 bytes</FONT></I>&nbsp;</DIV>
+</TD>
+</TR>
+</TABLE>
+&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>The stack is aligned to a four byte boundary.
+One byte is used for characters (including structure/unions made entirely
+of <TT>chars</TT>), and two byte alignment for everything else. Basic data
+types shorter than a word are promoted to a word when passed as arguments
+or return values.</FONT></DIV>
+
+<DIV CLASS="Heading2"><A NAME="Calling_conv"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Calling
+conventions for V850&nbsp;</FONT></FONT></I></B></DIV>
+
+<BR>&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>GCC will use up to four registers for passing
+parameters (<TT>r6 </TT>through <TT>r9</TT>). A parameter may be split
+between registers and memory if it does not fit within the remaining available
+parameter registers. Alignment of parameters within the parameter list
+is the same as their basic alignment. This implies that <TT>doubles</TT>
+and <TT>long long</TT> types need not be 8-byte aligned in parameter lists.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>Calling a <TT>varargs</TT> or <TT>stdarg</TT>
+function does not change how parameters are passed. However, the callee
+will flush all parameter registers back to a caller allocated parameter
+flush back area in the stack. This allows the callee to then treat all
+parameters as if they had been passed in the stack. The caller is responsible
+for allocating the 16-byte parameter flush back area at the bottom of the
+current stack. The callee is free to use that 16-byte area for any purpose
+in a non-<TT>varargs</TT> or a non-<TT>stdarg</TT> function.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>Structures greater than 8 bytes in length,
+passed by value, are automatically converted into pass-by-invisible-reference
+structures (i.e., the compiler arranges to pass a pointer instead of the
+entire structure). The callee must make a copy of the structure if the
+callee modifies the pass-by-invisible reference structure.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>Values are returned in the same manner
+as the GHS compilers, including the use of <TT>r6</TT> as a return-structure-pointer
+when returning large structures. <TT>r31</TT>, also known as <TT>lp</TT>
+(link pointer), is used as a return pointer during a call instruction;
+the callee is responsible for saving <TT>r31</TT> into the stack if the
+callee performs any additional function calls or uses <TT>r31</TT> as a
+scratch register.</FONT></DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>Stack arguments are located at increasing
+addresses from <TT>entry_sp</TT>. The <TT>varargs</TT> flush back area
+uses:</FONT></DIV>
+
+<DIV CLASS="CodeExample">
+<UL>
+<UL><TT><FONT SIZE=+1>entry_sp (r6)</FONT></TT>
+<BR><TT><FONT SIZE=+1>entry_sp + 4 (r7)</FONT></TT>
+<BR><TT><FONT SIZE=+1>entry_sp + 8 (r8)</FONT></TT>
+<BR><TT><FONT SIZE=+1>entry_sp + 12 (r9)</FONT></TT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>The callee can use the flush back area
+for any purposes if the callee does not use <TT>varargs</TT> or <TT>stdarg</TT>
+facilities.</FONT></DIV>
+
+<DIV CLASS="Heading2"><A NAME="Register_alloca"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Register
+allocation for V850</FONT></FONT></I></B></DIV>
+
+<BR>&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>Fixed registers are never available for
+register allocation in the compiler. By default the following registers
+are fixed in GCC: <TT>r0</TT> (zero), <TT>r1</TT> and <TT>r3</TT> (sp),
+<TT>r4</TT> (gp), <TT>r30</TT> (ep). Caller saved registers can be used
+by the compiler to hold values that do not live across function calls.
+The caller saved registers are <TT>r2</TT>, <TT>r5</TT> through <TT>r19</TT>,
+and <TT>r31</TT>. Callee saved registers retain their value across function
+calls. The callee saved registers are <TT>r20</TT> through <TT>r2</TT>
+.</FONT></DIV>
+
+<DIV CLASS="Label">
+<UL><I><FONT SIZE=+1>Note:</FONT></I>
+<BR><FONT SIZE=+1><TT>r6</TT> through <TT>r9</TT> are parameter registers
+while <TT>r10</TT> and <TT>r11</TT> are function return registers. <TT>r31</TT>
+is the return pointer.</FONT></UL>
+</DIV>
+
+<DIV CLASS="Note"><FONT SIZE=+1><TT>r29</TT> is used as the frame pointer
+in some functions.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>GCC will always create a frame pointer
+when not optimizing. The frame pointer will be eliminated when optimizing,
+except for functions which allocate dynamic stack space (functions which
+call <TT>alloca</TT>). Interrupt functions can never have a frame pointer;
+so, when compiling an interrupt function, you must either specify optimization
+(using the <TT>-O</TT> option) or by explicitly making the compiler not
+generate a frame pointer (by using the <TT>-fomit-frame-pointer</TT> option).
+Interrupt functions can not use <TT>alloca</TT> calls, nor can they have
+very large stacks (less than 32K, in size).</FONT></DIV>
+
+<DIV CLASS="Heading2"><A NAME="Stack_frame"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Stack
+frame information for V850</FONT></FONT></I></B></DIV>
+
+<BR>&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>The following documentation discusses the
+stack frame for the V850 processor's usage, especially for the debugging
+processes. See <A HREF="#Stack1">stack frame</A> and also <A HREF="#Stack_frame_wvars" CLASS="XRef">stack
+frames for functions taking a variable number of arguments</A>.</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<LI CLASS="Bullet">
+<FONT SIZE=+1>The stack grows downwards from high addresses to low addresses.</FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1>A leaf function need not allocate a stack frame if it doesn't
+need one.</FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1>A frame pointer need not be allocated.</FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1>The stack pointer shall always be aligned to 4 byte boundaries.</FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1>The register save area shall be aligned to a 4 byte boundary.</FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="FigureTitle">
+<HR SIZE=3 WIDTH="100%"><A NAME="Stack1"></A><FONT FACE="Futura Md BT">Stack
+frame for V850</FONT></DIV>
+
+<OL>
+<DIV CLASS="Figure"><MAP NAME="embV850-2"></MAP><IMG SRC="embV850-2.gif" HEIGHT=315 WIDTH=365></DIV>
+</OL>
+
+<DIV CLASS="Label">&nbsp;
+<TABLE BORDER WIDTH="369" >
+<TR>
+<TD WIDTH="100"><TT>* </TT><FONT SIZE=+1><FONT FACE="Arial Narrow">FP</FONT>
+points to the same location as <FONT FACE="Arial Narrow">SP</FONT>.</FONT></TD>
+</TR>
+</TABLE>
+&nbsp;</DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>Stack frames for functions that take a
+variable number of arguments have usage as shown by <A HREF="#Stack_frame_wvars" CLASS="XRef">Stack
+frames for functions taking a variable number of arguments</A>.</FONT></DIV>
+
+<DIV CLASS="FigureTitle">&nbsp;
+
+<P>
+<HR SIZE=3 WIDTH="100%"><A NAME="Stack_frame_wvars"></A><FONT FACE="Futura Md BT">Stack
+frames for functions taking a variable number of arguments</FONT></DIV>
+
+<OL><A NAME="Stack2"></A><MAP NAME="embV850-3"></MAP><IMG SRC="embV850-3.gif" HEIGHT=392 WIDTH=365></OL>
+
+<DIV CLASS="Heading2">&nbsp;
+<TABLE BORDER WIDTH="369" >
+<TR>
+<TD WIDTH="100"><TT>* </TT><FONT SIZE=+1><FONT FACE="Arial Narrow">FP</FONT>
+points to the same location as <FONT FACE="Arial Narrow">SP</FONT>.</FONT></TD>
+</TR>
+</TABLE>
+
+<HR SIZE=3 WIDTH="100%"></DIV>
+
+<DIV CLASS="Heading2"><A NAME="Args_passing"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Argument
+passing for V850</FONT></FONT></I></B></DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>Arguments are passed to a function using
+(1) registers and (2) memory, if the argument passing registers are depleted.
+Each register is assigned an argument until all are used. Unused argument
+registers have undefined values on entry. Use the following rules.</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<LI CLASS="Bullet">
+<FONT SIZE=+1>Quantities of size 8 bytes or less are passed in registers
+if available, then as memory. Larger quantities are passed by reference.
+Arguments passed by reference are passed by making a copy of the argument
+on the stack and passing a pointer to that copy.</FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1>If a data type would overflow the register arguments, then
+it is passed in registers and memory. A <TT>long long</TT> data type passed
+in <TT>r9</TT> would be passed in <TT>r9</TT> and in the first 4 bytes
+of the stack.</FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1>Arguments passed on the stack begin at <TT>sp</TT> with respect
+to the caller.</FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1>Each argument passed on the stack is aligned on a 4 byte
+boundary.</FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1>Space for all arguments is rounded up to a multiple of 4
+bytes.</FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1>The first argument register is <TT>r6</TT>.</FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1>The last argument register is <TT>r9</TT>.</FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1>A call to a function, procedure, or subroutine uses a <TT>jarl</TT>
+routine, a <TT>lp</TT> instruction which saves the return address in <TT>r31</TT>
+(<TT>lp</TT>). The return uses a <TT>jump[r31]</TT> instruction.</FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Heading2"><A NAME="Func_return_value"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Function
+return values for V850</FONT></FONT></I></B></DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>Scalar or pointer return values are returned
+in <TT>r10</TT> and sign-extended or zero-extended to 32 bits for types
+smaller than 32 bits.</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<LI CLASS="Bullet">
+<FONT SIZE=+1>32-bit floating point values are returned in <TT>r10</TT>.</FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1>64-bit floating point values are returned in the register
+pair, <TT>r10</TT> and <TT>r11</TT>.</FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><FONT SIZE=+1>To call a function which returns a structure
+or union in C and C++, the address of a temporary of the return type is
+passed by the caller in <TT>r6</TT>. The function returns the structure
+value by copying the return value to the address pointed to by <TT>r6</TT>,
+and copies <TT>r6</TT> into <TT>r10</TT> before returning to the caller.</FONT></DIV>
+
+<DIV CLASS="Heading1"><A NAME="Compiler"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Compiler
+issues for V850</FONT></FONT></I></B></DIV>
+
+<BR>&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>The following documentation discusses the
+ABI for the V850 processor.</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Commandline_opts" CLASS="XRef">V850-specific command-line
+options for GCC</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Preproc_symbols" CLASS="XRef">Preprocessor symbols
+for V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Spec_data_areas" CLASS="XRef">Special data areas
+on the V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#depragma" CLASS="XRef"><TT>depragmaize</TT> for
+V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Structure_conversion" CLASS="XRef">Structure conversion
+for V850</A></FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Heading2"><A NAME="Commandline_opts"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>V850-specific
+command-line options for GCC</FONT></FONT></I></B></DIV>
+
+
+<P>&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>For a list of available generic compiler
+options, see GNU CC command options in <I>Using GNU CC</I> in <B><I>GNUPro
+Compiler Tools</I></B>.</FONT>
+
+<P><FONT SIZE=+1>The V850-specific command-line options are supported.</FONT></DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>-mep</FONT></TT>
+<BR><TT><FONT SIZE=+1>-mno-ep</FONT></TT>
+<UL><FONT SIZE=+1>Enables (disables) the checking of pointers in the basic
+blocks and if a pointer is heavily used, it will copy the pointer into
+the <I>Element Pointer</I> (<TT>r30</TT>) so it can use the shorter SLD
+and SST instructions for that basic block. The default is <TT>-mep</TT>
+when optimization is on.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>-mprolog-function</FONT></TT>
+<BR><TT><FONT SIZE=+1>-mno-prolog-function</FONT></TT>
+<UL><FONT SIZE=+1>Enables (disables) the use of external functions to save
+and restore the registers in the function prologue. The default is <TT>-mprolog-function</TT>
+when optimization is on.</FONT></UL>
+</UL>
+</DIV>
+<FONT SIZE=+1>For more detailed information on the use of the following
+three compiler options, see <A HREF="#Spec_data_areas" CLASS="XRef">Special
+data areas on the V850</A>.</FONT>
+<DIV CLASS="BodyHang1">
+<UL><FONT SIZE=+1><TT>-msda=</TT> &lt;<I><TT>n</TT></I>></FONT>
+<UL><FONT SIZE=+1>Enables automatic placement of static / global data in
+the small data area (<TT>sda</TT>) off of <I>Global Pointer</I> (<TT>r4</TT>).
+This enables data access with one instead of two 32-bit instructions.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><FONT SIZE=+1><TT>-mtda=</TT> &lt;<I><TT>n</TT></I>></FONT>
+<UL><FONT SIZE=+1>Enables automatic placement of <I>static</I>/<I>global</I>
+data in the tiny data area (<TT>tda</TT>) off of <I>Element Pointer</I>
+(<TT>r30</TT>). This enables data access with one 16-bit instruction instead
+of two 32-bit instructions.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><FONT SIZE=+1><TT>-mzda=</TT> &lt;<I><TT>n</TT></I>></FONT>
+<UL><FONT SIZE=+1>Enables automatic placement of static / global data in
+the zero data area (<TT>zda</TT>) off of <I>Zero Register</I> (<TT>r0</TT>).
+This enables data access with one instead of two 32-bit instructions.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Heading2"><A NAME="Preproc_symbols"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Preprocessor
+symbols for V850</FONT></FONT></I></B></DIV>
+
+<BR>&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>By default, the compiler defines the preprocessor
+symbols as <TT>__v850__</TT>, <TT>__v851__</TT>, and <TT>__v850</TT>.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Heading2"><A NAME="Spec_data_areas"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Special
+data areas on the V850</FONT></FONT></I></B></DIV>
+
+
+<P>&nbsp;<FONT SIZE=+1>There are 3 distinct data areas on the V850: <TT>zda</TT>
+(zero data area), <TT>sda</TT> (small data area), and <TT>tda</TT> (tiny
+data area).</FONT>
+<DIV CLASS="Body">
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT SIZE=+1><TT>zda</TT> variables are stored in the <TT>.zdata</TT>
+and <TT>.zbss</TT> sections, which together must be no more than 64K bytes,
+unless the bottom area of the address map is reserved for an internal ROM/PROM
+in which case the limit is 32K. The linker puts them in memory at negative
+offsets of -1 to -32K from 0, and if no internal ROM/PROM is present, from
+0 to +32K as well (so that the zero pointer, <TT>r0</TT>, can be used to
+point to the variables).</FONT></LI>
+</UL>
+</UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Body">
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT SIZE=+1><TT>sda</TT> variables are stored in the <TT>.sdata</TT>
+and <TT>.sbss</TT> sections, which together must be no more than 64K bytes.
+The runtime startup code is responsible for loading up the <TT>gp</TT>
+global pointer with an address within the region.</FONT></LI>
+</UL>
+</UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Body">
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT SIZE=+1><TT>tda</TT> variables are stored in the <TT>.tdata</TT>
+section, which must be no more than 256 bytes. The runtime startup code
+is responsible for loading up the <TT>ep</TT> elemenmt pointer with an
+address within the region. The <TT>-mep</TT> switch also uses the <TT>ep</TT>
+element pointer, but restores it after it is done.</FONT></LI>
+</UL>
+</UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>It is also possible to use GCC attribute
+extension to the C language to explicitly specify which data area will
+contain a given variable. For example, the following declaration's syntax
+will put the integer variable, <TT>fred</TT>, into the zero data area.</FONT></DIV>
+
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><FONT SIZE=+1>int __attribute((zda)) fred;</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><FONT SIZE=+1>If no special attributes or switches are
+used, it normally takes two 32-bit instructions to reference any global/static
+variable (one to get the high bits of the address into a register, and
+the other to do the memory reference). Both <TT>zda</TT> and <TT>sda</TT>
+static/global references take one 32-bit instruction, while <TT>tda</TT>
+references take one 16-bit instruction. Thus, you can put the most frequently
+used variables in the tiny data area and put most of the remaining variables
+into either the zero or small data areas to cut down on the size of the
+code space.</FONT></DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>The variable, &lt;<I><TT>n</TT></I>> in
+<TT>-mzda=</TT> &lt;<I><TT>n</TT></I>>, <TT>-msda=</TT> &lt;<I><TT>n</TT></I>>,
+and <TT>-mtda=</TT> &lt;<I><TT>n</TT></I>> compiler options indicates variable
+size in bytes. Variables that aren't put into a specific section with an
+attribute, and whose size is less than or equal to &lt;<I><TT>n</TT></I>>
+bytes, are put into the indicated data section. For <TT>-mtda=</TT> &lt;<TT>n</TT>>,
+the maximum for &lt;<I><TT>n</TT></I>> is 256 bytes. For <TT>-mzda=</TT>
+&lt;<I><TT>n</TT></I>>, the maximum for &lt;<I><TT>n</TT></I>> is 32768
+bytes. The maximum for <TT>-msda=</TT> &lt;<I><TT>n</TT></I>> is 65536
+bytes. You can combine these switches, and the compiler first looks at
+<TT>tda</TT>, then <TT>sda</TT>, and finally, <TT>zda</TT>. The following
+example's input shows the appropriate declaration to provide.</FONT></DIV>
+
+<UL>
+<PRE CLASS="CodeExample"><FONT SIZE=+1>-mtda=4 -msda=256</FONT></PRE>
+</UL>
+
+<DIV CLASS="Body"><FONT SIZE=+1>This combination would indicate all static
+or global variables less than or equal to 4 bytes, which would become <TT>tda</TT>
+references, while all static or global variables less than 4 and greater
+than or equal to 256 bytes become <TT>sda</TT> references.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>Consider the following code.</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><FONT SIZE=+1>struct fred { int a, int b; };</FONT></PRE>
+
+<PRE><FONT SIZE=+1>int main (void) { return fred.a + fred.b; }</FONT></PRE>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><FONT SIZE=+1>If compiled with no options, the compiler
+will put the <TT>fred</TT> structure into the normal data section of the
+program. This means that it will take two 32-bit instructions to fetch
+the contents of <TT>fred.a</TT>, and another two 32-bit instructions to
+fetch the contents of <TT>fred.b</TT> for the program. If the program is
+compiled with a <TT>-msda=8</TT> declaration, then the compiler will put
+the <TT>fred</TT> structure into the small data area (since <TT>fred</TT>
+is 8 bytes in length, and the <TT>-msda=8</TT> option tells the compiler
+to put all variables of size 8 or less into the small data area). Now it
+will only take one 32-bit instruction to fetch <TT>fred.a</TT>, and one
+to fetch <TT>fred.b</TT> for compiling. If the program had been compiled
+with the <TT>-mtda=8</TT> declaration, then <TT>fred</TT> would have been
+put into the tiny data area, and fetching <TT>fred.a</TT> would have required
+only one 16-bit instruction.</FONT></DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>As an alternative, the following code has
+been changed.</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><FONT SIZE=+1>struct __attribute__ ((zda)) fred { int a; int b; };</FONT></PRE>
+
+<PRE><FONT SIZE=+1>int main (void) { return fred.a + fred.b; }</FONT></PRE>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><FONT SIZE=+1>When this code is compiled (with or without
+any special command line options), the <TT>fred</TT> structure is placed
+into the zero data area and fetching either <TT>fred.a</TT> or <TT>fred.b</TT>
+requires one 32-bit instruction apiece.</FONT></DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>The default behaviour is to place variables
+into the (ordinary) data section. Adding <TT>_attribute__ ((zda))</TT>
+forces that particular variable to go into the zero data area, but has
+no effect on other variables. Specifying <TT>-mzda=</TT> <I><TT>&lt;n></TT></I>
+on the command line forces all variables whose size is less than or equal
+to <I><TT>&lt;n></TT></I> bytes into the zero data area. It is up to the
+programmer to determine what value to use for <I><TT>&lt;n></TT></I>. If
+the value is too large, then too many variables will be put into the zero
+data area and error messages will be produced by the linker (after all,
+the <TT>zda</TT> only has room for 32K bytes of data).</FONT></DIV>
+
+<DIV CLASS="Heading2"><A NAME="depragma"></A><FONT SIZE=+2><B><TT>depragmaize</TT></B><I><FONT FACE="Times New Roman,Times">
+for V850</FONT></I></FONT></DIV>
+
+<BR>&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1><TT>depragmaize</TT> modifies source code
+and associated header files. <TT>depragmaize</TT> converts uses of certain
+pragmas in C code to uses of equivalent GCC attributes. Pragmas, often
+used to implement vendor specific features, are in many circumstances very
+difficult to maintain both in the compiler and in the source code that
+maintains them. For those machine-specific features affecting declarations
+or symbols, attributes are a much better way to implement these features,
+again both for the compiler maintainer and for the source code maintainer.
+GCC has a well defined mechanism for adding new attributes to the compiler.</FONT></DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>For more information about GCC's attributes,
+see <I><A HREF="../2_comp/Using_GNU_CC/gcc.html">Using GNU CC</A></I> or
+use the <TT>gcc.info</TT> on-line help file.</FONT></DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>In order to convert a particular source
+file, the source file must contain C code compilable by GCC (which, of
+course, includes ANSI C code as well as any GCC extensions). <TT>depragmaize</TT>
+only converts a limited set of pragmas; see <A HREF="#Conversions" CLASS="XRef">Conversions</A>
+for a current list.</FONT></DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1><TT>depragmaize</TT> is intended to be
+simple to use. The following descriptions for suggestions of the conversion
+process will answer most questions. For instance, see <A HREF="#deprag_options" CLASS="XRef"><TT>depragmaize</TT>
+options</A>&nbsp; for the options that <TT>depragmaize</TT> accepts.</FONT></DIV>
+
+<DIV CLASS="TableTitle">
+<HR SIZE=3 WIDTH="100%"><A NAME="Conversions"></A><FONT FACE="Futura Md BT"><FONT SIZE=+1>Conversions</FONT></FONT></DIV>
+&nbsp;
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=TOP>
+<DIV CLASS="CellBody"><TT><FONT SIZE=+1>#pragma ghs start<I>XXX</I></FONT></TT></DIV>
+<TT><FONT SIZE=+1>#pragma ghs end<I>XXX</I></FONT></TT><FONT SIZE=+1>&nbsp;</FONT></TD>
+
+<TD ALIGN=LEFT VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><I><TT>XXX</TT></I> is <TT>tda</TT>,
+<TT>sda</TT>, or <TT>zda</TT>. <TT>depragmaize</TT> will add the <TT>__attribute__((section("tda")))
+</TT>pragma to the appropriate symbols between the start and end pragmas.
+If the <TT>-R</TT> option is specified, <TT>depragmaize</TT> will also
+remove these pragmas from the source.&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=LEFT VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>#pragma ghs interrupt</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD ALIGN=LEFT VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1>To the function containing the pragma,
+<TT>__attribute__((interrupt))</TT>, <TT>depragmaize</TT> will add <TT>__attribute__((interrupt))</TT>.
+If the <TT>-R</TT> option is specified, <TT>depragmaize</TT> will also
+remove this pragma from the source.&nbsp;</FONT></DIV>
+</TD>
+</TR>
+</TABLE>
+
+<HR SIZE=3 WIDTH="100%">
+<DIV CLASS="Body"><A NAME="pgfId=1031504"></A><FONT SIZE=+1>To do the conversion,
+<TT>depragmaize</TT> makes use of GCC to find all the parts of the source
+that need changing. That's why the source code must be compatible with
+the GCC compiler source code in order for <TT>depragmaize</TT> to convert
+it. Unfortunately, most real source code is not just compilable. Usually,
+some number of compile time options must be passed to the compiler in order
+for the particular source code to be properly compiled by the compiler.
+Also, source code is often compiled under a number of different sets of
+compile time options to produce different executables. See the following
+documentation for further discussion of such issues. In the simplest case
+(if your source code is very simple) you would invoke <TT>depragmaize</TT>
+as the following example declaration suggests (where <TT>&lt;<I>file</I>.c></TT>
+is the name of the source code file to be converted).</FONT></DIV>
+
+<DIV CLASS="CodeExample">
+<UL>
+<UL>
+<PRE><A NAME="pgfId=1031506"></A><FONT SIZE=+1>depragmaize &lt;<I>file</I>.c></FONT></PRE>
+</UL>
+</UL>
+<FONT SIZE=+1><TT>depragmaize</TT> and <TT>&lt;<I>file</I>.c></TT> must
+be in the current working directory. <TT>depragmaize</TT> will convert
+<TT>&lt;<I>file</I>.c></TT> and any header files that the <TT>&lt;<I>file</I>.c></TT>
+includes, if those header files reside in the current working directory.
+The actual conversions done are described in the following discussions.
+<TT>depragmaize</TT> only converts files that are in the current working
+directory unless the <TT>-d</TT> option is used. <TT>depragmaize</TT> will
+save a copy of the unconverted source file in&nbsp; <TT>&lt;<I>file</I>.c>save</TT>,
+unless the <TT>-N</TT> option is used. Any number of source files can be
+specified on a single invocation of <TT>depragmaize</TT>.</FONT>
+
+<P><FONT SIZE=+1>If a source file, or set of source files, uses header
+files that are not in the current working directory, and those header files
+<B>also</B> must be converted, specify with the <TT>-d</TT> option. For
+instance, the following declaration specifies that <TT>depragmaize</TT>
+should convert <TT>&lt;<I>file</I>.c></TT> and any headers used by <TT>&lt;<I>file</I>.c></TT>,
+if those headers are in the current working directory or in another directory,
+<I><TT>other_directory</TT></I>.</FONT></DIV>
+
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><FONT SIZE=+1><TT>depragmaize</TT> -d <I>other_directory file</I>.c</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><FONT SIZE=+1>Often your source code will require some
+compile time options to successfully compile.</FONT></DIV>
+
+<UL>
+<UL>
+<PRE CLASS="Body"><TT><FONT SIZE=+1>-c "-DMACRO1=1 -I../include_files" <I>file</I>.c</FONT></TT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><FONT SIZE=+1>The previous declaration will pass <TT>-DMACRO1=1</TT>
+and <TT>-I../include_files</TT> to GCC. Typically, the kinds of options
+that will need to be passed to GCC will be <TT>-D</TT> options and <TT>-I</TT>
+options. Someone familiar with building the source code involved will need
+to determine the exact list of options required to compile that source.</FONT></DIV>
+
+<DIV CLASS="Label">
+<UL>
+<UL><I><FONT SIZE=+1>Note:</FONT></I>
+<BR><FONT SIZE=+1>Options like <TT>-O</TT> and <TT>-g</TT> are not required
+for proper conversion, though it will not hurt the process if they are
+specified.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>For some source code, the list of symbols
+actually seen by the compiler is affected by the options given to the compiler.
+For instance, use the following example to generate symbol lists.</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><FONT SIZE=+1>#ifdef MACRO1</FONT></PRE>
+
+<PRE><FONT SIZE=+1>int a;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>#else</FONT></PRE>
+
+<PRE><FONT SIZE=+1>int b;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>#endif</FONT></PRE>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><FONT SIZE=+1>If <TT>MACRO1</TT> is defined on the command
+line, the compiler will see the symbol, <TT>a</TT>, but not <TT>b</TT>;
+and the opposite if <TT>MACRO1</TT> is not defined. <TT>depragmaize</TT>
+can only convert code actually seen by the compiler. In a case like this
+<TT>depragmaize</TT> must be invoked twice, once with <TT>MACRO1</TT> defined,
+once without such a declaration. Of course, if <TT>MACRO1</TT> does not
+make code converted, you need not use this definition. For some source
+code, the actual conversion required will depend on the command line arguments.
+The most likely example of this would be cases where the tokens of the
+<TT>#pragmas</TT> changed, depending on the command line arguments. Unfortunately,
+the complexity of the conversions required by these cases is beyond <TT>depragmaize</TT>'s
+ability to handle automatically. You will need to make these conversions
+by hand first, and then let <TT>depragmaize</TT> handle the other more
+common cases.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>Finally, because of the possibility that
+some source code may need to be run through <TT>depragmaize</TT> more than
+once to effect complete conversion, and <TT>depragmaize</TT> does not remove
+the pragma's from the source code until the <TT>-R</TT> option is specified.
+If your source code does not need to be run through <TT>depragmaize</TT>
+more than once, you can use <TT>-R</TT> on that invocation, otherwise use
+<TT>-R</TT> on the last invocation.</FONT></DIV>
+
+<DIV CLASS="Heading2"><A NAME="deprag_options"></A><B><FONT SIZE=+2><TT>depragmaize</TT><I><FONT FACE="Times New Roman,Times">
+options</FONT></I></FONT></B></DIV>
+
+<BR>&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>The following documentation discusses the
+<TT>depragmaize</TT> options. The following example shows the standard
+approach for a <TT>depragmaize</TT> declaration.</FONT></DIV>
+
+<UL>
+<PRE CLASS="CodeExample"><FONT SIZE=+1>depragmaize [<I>options</I> ...] <I>file</I> ...</FONT></PRE>
+</UL>
+
+<DIV CLASS="Body"><FONT SIZE=+1>Each file and any header files it includes
+are converted.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>Files and headers are only converted if
+they reside in the current directory or a directory specified by the <TT>-d</TT>
+option. For each file that is converted, and for which some change is actually
+made, <TT>depragmaize</TT> will create a copy of the original unconverted
+file under the name, <TT><I>XXX</I>.save</TT>, where <I><TT>XXX</TT></I>
+is the name of the converted file (so&nbsp; <TT>file.c</TT> is saved under
+<TT>file.c.save</TT>). If <TT><I>XXX</I>.save</TT> already exists, <TT>depragmaize</TT>
+will not overwrite it, and simply does not do this copy. The <TT>-N</TT>
+option tells <TT>depragmaize</TT> not to make these copies.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>-V</FONT></TT>
+<BR><TT><FONT SIZE=+1>-v</FONT></TT>
+<BR><TT><FONT SIZE=+1>--version</FONT></TT>
+<UL><FONT SIZE=+1>Specifies that <TT>depragmaize</TT> should convert <TT>file.c</TT>
+and any headers used by <TT>file.c</TT>, if those headers in the current
+working directory, or in <I><TT>other_directory</TT></I>, are being used.
+This option also causes somewhat more verbose messages to be printed.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>-q</FONT></TT>
+<BR><TT><FONT SIZE=+1>--quiet</FONT></TT>
+<BR><TT><FONT SIZE=+1>--silent</FONT></TT>
+<UL><FONT SIZE=+1>Don't print warning and informational messages (only
+print errors).</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>-n</FONT></TT>
+<BR><TT><FONT SIZE=+1>--nochange</FONT></TT>
+<UL><FONT SIZE=+1>Don't actually convert the source files, just print messages
+about what would be done.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>-c "<I>STRING</I>"</FONT></TT>
+<BR><TT><FONT SIZE=+1>--compiler-options "<I>STRING</I>"</FONT></TT>
+<UL><FONT SIZE=+1>Pass <TT>"<I>STRING</I>"</TT> as options to the compiler
+during the compilation part of the conversion process.</FONT></UL>
+</UL>
+</DIV>
+
+<UL>
+<UL><FONT SIZE=+1><I><TT>STRING</TT></I> should be a space separated list
+of options for the compiler used. Use the following example's declaration.</FONT>
+<BR>&nbsp;
+<UL>
+<PRE CLASS="CodeExample2"><TT><FONT SIZE=+1>depragmaize -c "-DMACRO1 -DMACRO2" t1.c</FONT></TT></PRE>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>-R</FONT></TT>
+<BR><TT><FONT SIZE=+1>--remove_pragmas</FONT></TT>
+<UL><FONT SIZE=+1>This option causes <TT>depragmaize</TT> to remove the
+pragmas from the source in addition to converting them attributes.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>-d &lt;<I>DIRECTORY</I>></FONT></TT>
+<BR><TT><FONT SIZE=+1>--directory &lt;<I>DIRECTORY</I>></FONT></TT>
+<UL><FONT SIZE=+1>Add <TT>&lt;<I>DIRECTORY</I>></TT> to the list of directories
+containing files which can be converted. The current directory is always
+on this list. Files are not converted unless they are in a directory on
+this list.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>-x &lt;<I>FILENAME</I>></FONT></TT>
+<BR><TT><FONT SIZE=+1>--exclude &lt;<I>FILENAME</I>></FONT></TT>
+<UL><FONT SIZE=+1>Do not convert <TT>&lt;<I>FILENAME</I>></TT>.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>-p &lt;<I>COMPILER</I>></FONT></TT>
+<BR><TT><FONT SIZE=+1>--file_name &lt;<I>COMPILER</I>></FONT></TT>
+<UL><FONT SIZE=+1>Use <TT>&lt;<I>COMPILER</I>></TT> as the compiler for
+the compilation part of the conversion process. By default, <TT>gcc</TT>
+is used. <TT>&lt;<I>COMPILER</I>></TT> should be the name of an executable
+and it must work with a version of GCC which is compatible with <TT>depragmaize</TT>.
+This is only useful for specifying a a GNU compiler program that is compatible
+with <TT>depragmaize</TT>, unless that is not on your <TT>PATH</TT>.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>-N</FONT></TT>
+<BR><TT><FONT SIZE=+1>--nosave</FONT></TT>
+<UL><FONT SIZE=+1>Don't keep a copy of the original source.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>-k</FONT></TT>
+<BR><TT><FONT SIZE=+1>--keep</FONT></TT>
+<UL><FONT SIZE=+1>Keep a copy of the intermediate file. Only useful for
+debugging <TT>depragmaize</TT>.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Heading2"><A NAME="Structure_conversion"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Structure
+conversion for V850</FONT></FONT></I></B></DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>Structure conversion is done, using the
+GCC <TT>offset-info</TT> option.</FONT></DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>The <TT>-offset-info output-file</TT> option
+simplifies access to C struct's from the assembler.</FONT></DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>For each member of each structure, the
+compiler will output a <TT>.equ</TT> directive to associate a symbol with
+the member's offset in bytes into the structure.</FONT></DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>The symbol itself is the concatenation
+of the structure's tag name and the member's name, separated by an underscore.
+This option will output to the specified <TT>output-file</TT> an assembler
+<TT>.equ</TT> directive for each member of each structure found in each
+compilation. The <TT>.equ</TT> directives for the structures in a single
+header file can be obtained as follows, where <TT>m.h</TT> is the header
+containing the structures, and <TT>m.s</TT> is where the directives are
+output.</FONT></DIV>
+
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><FONT SIZE=+1>gcc -fsyntax-only -offset-info m.s -x c m.h</FONT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><FONT SIZE=+1>The following is a short example of output
+produced by the <TT>-offset-info</TT> option.</FONT></DIV>
+<FONT SIZE=+1>&nbsp;</FONT>
+<UL>
+<UL>
+<UL>
+<PRE CLASS="CodeExample"><FONT SIZE=+1>input file </FONT><FONT POINT-SIZE="14"><FONT FACE="Times New Roman,Times">(</FONT>m.h<FONT FACE="Times New Roman,Times">, <I>for example</I>)</FONT></FONT><FONT SIZE=+1>:</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; struct W {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; double d;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; int i;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; };</FONT></PRE>
+
+<PRE><FONT SIZE=+1>struct X {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; int a;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; int b;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>struct Y {</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; int a;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; int b;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; };</FONT></PRE>
+
+<PRE><FONT SIZE=+1>struct Y y;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>struct Y yy[10];</FONT></PRE>
+
+<PRE><FONT SIZE=+1>struct Y* p;</FONT></PRE>
+
+<PRE><FONT SIZE=+1>};</FONT></PRE>
+
+<PRE><FONT SIZE=+1>output file </FONT><FONT POINT-SIZE="14"><FONT FACE="Times New Roman,Times">(</FONT>m.s<FONT FACE="Times New Roman,Times">, <I>for example</I>)</FONT></FONT><FONT SIZE=+1>:</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .equ W_d,0</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .equ W_i,8</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .equ Y_a,0</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .equ Y_b,4</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .equ X_a,0</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .equ X_b,4</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .equ X_y,8</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .equ X_yy,16</FONT></PRE>
+
+<PRE><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; .equ X_p,96</FONT></PRE>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><FONT SIZE=+1>The <TT>-offset-info</TT> option has the
+following caveats.</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<LI CLASS="Bullet">
+<FONT SIZE=+1>No directives are output for bit-field members.</FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1>No directives are output for members who's offsets (as measured
+in bits) is greater than the word size of the host.</FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1>No directives are output for members who's offsets are not
+constants. This can happened only in structures which use some gcc specific
+extensions which allow for variable sized members.</FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Heading1"><A NAME="Assembler"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Assembler
+information for V850</FONT></FONT></I></B></DIV>
+
+<BR>&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>The following documentation discusses the
+assembler issues for the V850 tools.</FONT></DIV>
+
+<UL>
+<UL>
+<UL>
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Register_names" CLASS="XRef">Register names for
+V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Addressing_modes" CLASS="XRef">Addressing modes
+for V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Float_ptvalues" CLASS="XRef">Floating point values
+for V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Opcodes" CLASS="XRef">Opcodes for V850</A></FONT></LI>
+
+<LI CLASS="Bullet">
+<FONT SIZE=+1><A HREF="#Assembler_errormessg" CLASS="XRef">Assembler error
+messages for V850</A></FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<DIV CLASS="Body"><FONT SIZE=+1>For a list of available generic assembler
+options, see <A HREF="../5_ut/a_Using_AS/asCommandLine_Options.html">Command-line
+options</A> in <A HREF="../5_ut/a_Using_AS/as.html"><I>Using</I> <TT>as</TT></A>
+in <B><I>GNUPro Utilities</I></B>. There are no V850-specific assembler
+command-line options. The V850 syntax is based on the syntax in NEC's <B><I>V850
+User's Manual</I></B>.</FONT></DIV>
+
+<DIV CLASS="Heading2"><A NAME="Register_names"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Register
+names for V850</FONT></FONT></I></B></DIV>
+
+<BR>&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>You can use the predefined symbols, <TT>r0</TT>
+through <TT>r31</TT>, to refer to the V850 registers. V850 also has predefined
+symbols for the following general registers.</FONT></DIV>
+<FONT SIZE=+1>&nbsp;</FONT>
+<TABLE BORDER >
+<TR>
+<TD ALIGN=LEFT VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>ep</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><FONT SIZE=+1>element ptr, synonym for <TT>r30</TT>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD><TT><FONT SIZE=+1>gp</FONT></TT></TD>
+
+<TD><FONT SIZE=+1>global ptr, synonym for ` <TT>r4</TT> '</FONT></TD>
+</TR>
+
+<TR>
+<TD ALIGN=LEFT VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>hp</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><FONT SIZE=+1>synonym for ` <TT>r2</TT> handler stack
+ptr, '&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=LEFT VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>lp</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><FONT SIZE=+1>link ptr, synonym for ` <TT>r31</TT>
+'&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=LEFT VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>sp</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><FONT SIZE=+1>stack ptr, synonym for ` <TT>r3</TT>
+'&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=LEFT VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>tp</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><FONT SIZE=+1>text ptr, synonym for ` <TT>r5</TT>
+'&nbsp;</FONT></DIV>
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=LEFT VALIGN=TOP>
+<DIV CLASS="CellBody"><FONT SIZE=+1><TT>zero</TT>&nbsp;</FONT></DIV>
+</TD>
+
+<TD>
+<DIV CLASS="CellBody"><FONT SIZE=+1>zero register, synonym for ` <TT>r0</TT>
+'&nbsp;</FONT></DIV>
+</TD>
+</TR>
+</TABLE>
+<FONT SIZE=+1>&nbsp;</FONT>
+
+<P CLASS="Heading2"><A NAME="Addressing_modes"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Addressing
+modes for V850</FONT></FONT></I></B>
+<BR>&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>The assembler understands the following
+addressing modes for the V850. The symbol, <TT>R<I>n</I></TT>, in the following
+examples refers to any of the specifically numbered registers or register
+pairs, but not the control registers (where <I><TT>n</TT></I> signifies
+the actual number to specify; see the <B><I>V850 User's Manual</I></B>
+for actual specifications).</FONT></DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>R<I>n</I></FONT></TT>
+<UL><FONT SIZE=+1>Register direct.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>[R<I>n</I>]</FONT></TT>
+<UL><FONT SIZE=+1>Register indirect.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>&lt;<I>expr</I>></FONT></TT>
+<UL><FONT SIZE=+1>Immediate data (angle brackets are not part of the syntax).</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>disp[R<I>n</I>]</FONT></TT>
+<UL><FONT SIZE=+1>Register indirect with displacement.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>cccc</FONT></TT>
+<UL><FONT SIZE=+1>Condition code (<TT>c</TT>, <TT>e</TT>, <TT>ge</TT>,
+<TT>gt</TT>, <TT>h</TT>, <TT>l</TT>, <TT>le</TT>, <TT>lt</TT>, <TT>n</TT>,
+<TT>nc</TT>, <TT>ne</TT>, <TT>nh</TT>, <TT>nl</TT>, <TT>ns</TT>, <TT>nv</TT>,
+<TT>nz</TT>, <TT>p</TT>, <TT>s</TT>, <TT>sa</TT>, <TT>t</TT>, <TT>v</TT>,
+or <TT>z</TT>).</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Heading2"><A NAME="Float_ptvalues"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Floating
+point values for V850</FONT></FONT></I></B></DIV>
+&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>Although the V850 has no hardware floating
+point, the assembler supports software floating point. The <TT>.float</TT>
+and <TT>.double</TT> directives generate IEEE-format floating-point values
+for compatibility with other development tools.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Heading2"><A NAME="Opcodes"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Opcodes
+for V850</FONT></FONT></I></B></DIV>
+&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>For detailed information on the V850 machine
+instruction set, see <B><I>V850 User's Manual</I></B>. The assembler implements
+all the standard V850 opcodes.</FONT></DIV>
+
+<DIV CLASS="Heading2"><A NAME="Assembler_errormessg"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Assembler
+error messages for V850</FONT></FONT></I></B></DIV>
+&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>The following messages output as assembler
+error messages.</FONT></DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><B><TT><FONT SIZE=+1>Error: bad instruction</FONT></TT></B>
+<UL><FONT SIZE=+1>The instruction is misspelled or there is a syntax error
+somewhere.</FONT></UL>
+</UL>
+</DIV>
+
+<UL>
+<DIV CLASS="BodyHang1"><B><TT><FONT SIZE=+1>Error: expression too complex</FONT></TT></B></DIV>
+
+<DIV CLASS="BodyHang1List"><B><TT><FONT SIZE=+1>Error: unresolved expression
+that must be resolved</FONT></TT></B></DIV>
+
+<UL><FONT SIZE=+1>The instruction contains an expression that is too complex;
+no relocation exists to handle it.</FONT></UL>
+</UL>
+
+<UL>
+<DIV CLASS="BodyHang1"><B><TT><FONT SIZE=+1>Error: relocation overflow</FONT></TT></B></DIV>
+
+<UL><FONT SIZE=+1>The instruction contains an expression that is too large
+to fit in the field.</FONT></UL>
+</UL>
+
+<DIV CLASS="Heading1"><A NAME="Linker"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Linker
+information for V850</FONT></FONT></I></B></DIV>
+&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>For a list of available generic linker
+options, see <A HREF="../5_ut/b_Usingld/ldLinker_scripts.html">Linker scripts</A>
+in <A HREF="../5_ut/b_Usingld/ld.html"><I>Using</I> <TT>ld</TT></A> in
+<B><I>GNUPro Utilities</I></B>. In addition, the following V850-specific
+command-line option is supported:</FONT></DIV>
+
+<DIV CLASS="BodyHang1">
+<UL><TT><FONT SIZE=+1>--defsym _stack=0xnnnn</FONT></TT>
+<UL><FONT SIZE=+1>Specify the initial value for the stack pointer. This
+assumes the application loads the stack pointer with the value of <TT>_stack</TT>
+in the start up code.</FONT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="BodyListFollow"><FONT SIZE=+1>See also <A HREF="#Linkerscript">linker
+script for the V850 processor</A> and <A HREF="#Srecords" CLASS="XRef">Producing
+S-records for V850</A>.</FONT>
+
+<P><FONT SIZE=+1>The initial value for the stack pointer is defined in
+the linker script with the <TT>PROVIDE</TT> linker command. This allows
+the user to specify a new value on the command line with the standard linker
+option, <TT>--defsym</TT>.</FONT>
+<BR><FONT SIZE=+1></FONT>&nbsp;</DIV>
+
+<DIV CLASS="Heading2">
+
+<P><A NAME="Linkerscript"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Linker
+script for V850</FONT></FONT></I></B></DIV>
+&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>The GNU linker uses a linker script to
+determine how to process each section in an object file, and how to lay
+out the executable. The linker script is a declarative program consisting
+of a number of directives. For instance, the <TT>ENTRY()</TT> directive
+specifies the symbol in the executable that will be the executable's entry
+point. Since linker scripts can be complicated to write, the linker includes
+one built-in script that defines the default linking process.</FONT><FONT SIZE=+1></FONT>
+
+<P><FONT SIZE=+1>For the V850 tools, the following example shows the <A HREF="embV850.html#Linkerscript">default
+script for the V850</A>.</FONT>
+
+<P><FONT SIZE=+1>Although this script is somewhat lengthy, it is a generic
+script that will support all ELF situations. In practice, generation of
+sections like <TT>.rela.dtors</TT> are unlikely when compiling using embedded
+ELF tools.</FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"></DIV>
+
+<DIV CLASS="CodeExample">
+<UL>
+<UL>
+<PRE><TT><FONT SIZE=+1>OUTPUT_FORMAT("elf32-v850", "elf32-v850", "elf32-v850")</FONT></TT></PRE>
+</UL>
+</UL>
+</DIV>
+
+<UL>
+<UL>
+<PRE><TT><FONT SIZE=+1>OUTPUT_ARCH(v850)</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>ENTRY(_start)</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>SEARCH_DIR(<I>&lt;installation directory path></I>);</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>SECTIONS</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>{</FONT></TT></PRE>
+
+<PRE><I><TT><FONT SIZE=+1>/* Read-only sections, merged into text segment: */</FONT></TT></I></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; . = 0x200000;</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .interp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.interp)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .hash&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.hash)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .dynsym&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.dynsym)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .dynstr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.dynstr)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rel.text&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rel.text)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rela.text&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rela.text)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rel.data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rel.data)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rela.data&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rela.data)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rel.rodata&nbsp;&nbsp;&nbsp; : { *(.rel.rodata)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rela.rodata&nbsp;&nbsp; : { *(.rela.rodata)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rel.got&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rel.got)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rela.got&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rela.got)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rel.ctors&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rel.ctors)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rela.ctors&nbsp;&nbsp;&nbsp; : { *(.rela.ctors)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rel.dtors&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rel.dtors)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rela.dtors&nbsp;&nbsp;&nbsp; : { *(.rela.dtors)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rel.init&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rel.init)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rela.init&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rela.init)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rel.fini&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rel.fini)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rela.fini&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rela.fini)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rel.bss&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rel.bss)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rela.bss&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rela.bss)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rel.plt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rel.plt)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rela.plt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rela.plt)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .init&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.init)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } =0</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .plt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.plt)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .text&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; {</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; *(.text)</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; <I>/* .gnu.warning sections are handled specially by</I></FONT></TT></PRE>
+
+<PRE><I><TT><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elf32.em.&nbsp; */</FONT></TT></I></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; *(.gnu.warning)</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; *(.gnu.linkonce.t*)</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; } =0</FONT></TT></PRE>
+
+<PRE CLASS="CodeExample"><TT><FONT SIZE=+1>&nbsp; _etext = .;</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; PROVIDE (etext = .);</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .fini&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.fini)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } =0</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rodata&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rodata) *(.gnu.linkonce.r*) }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .rodata1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.rodata1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; <I>/* Adjust the address for the data segment. We want to</I></FONT></TT></PRE>
+
+<PRE><I><TT><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp; adjust up to the same address within the page on the</FONT></TT></I></PRE>
+
+<PRE><I><TT><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp; next page up.&nbsp; */</FONT></TT></I></PRE>
+
+<PRE CLASS="CodeExample"><TT><FONT SIZE=+1>&nbsp; . = ALIGN(32) + (ALIGN(8) &amp; (32 - 1));</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; {</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; *(.data)</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; *(.gnu.linkonce.d*)</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp;&nbsp;&nbsp; CONSTRUCTORS</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .data1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.data1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .ctors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.ctors)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .dtors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.dtors)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .got&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.got.plt) *(.got)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .dynamic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.dynamic)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; <I>/* We want the small data sections together, so</I></FONT></TT></PRE>
+
+<PRE><I><TT><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp; single-instruction offsets can access them all, and</FONT></TT></I></PRE>
+
+<PRE><I><TT><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp; initialized data all before uninitialized, so we can</FONT></TT></I></PRE>
+
+<PRE><I><TT><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp; shorten the on-disk segment size.&nbsp; */</FONT></TT></I></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .sdata&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.sdata)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; _edata&nbsp; =&nbsp; .;</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; PROVIDE (edata = .);</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; __bss_start = .;</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .sbss&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.sbss) *(.scommon)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .bss&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.dynbss) *(.bss) *(COMMON)&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; _end = . ;</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; PROVIDE (end = .);</FONT></TT></PRE>
+
+<PRE><I><TT><FONT SIZE=+1>&nbsp; /* Stabs debugging sections.&nbsp; */</FONT></TT></I></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .stab 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : { *(.stab)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .stabstr 0&nbsp;&nbsp;&nbsp;&nbsp; : { *(.stabstr)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .stab.excl 0&nbsp;&nbsp; : { *(.stab.excl)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .stab.exclstr&nbsp; 0 : { *(.stab.exclstr)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .stab.index&nbsp;&nbsp;&nbsp; 0 : { *(.stab.index)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .stab.indexstr 0 : { *(.stab.indexstr)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .comment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 : { *(.comment)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE CLASS="CodeExample"><I><TT><FONT SIZE=+1>/* DWARF debug sections.</FONT></TT></I></PRE>
+
+<PRE><I><TT><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp; Symbols in the .debug DWARF section are relative to the</FONT></TT></I></PRE>
+
+<PRE><I><TT><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp; beginning of the section so we begin .debug at 0. It's</FONT></TT></I></PRE>
+
+<PRE><I><TT><FONT SIZE=+1>&nbsp;&nbsp;&nbsp;&nbsp; not clear yet what needs to happen for the others.&nbsp;&nbsp; */</FONT></TT></I></PRE>
+
+<PRE CLASS="CodeExample"><TT><FONT SIZE=+1>&nbsp; .debug&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 : { *(.debug)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .debug_srcinfo&nbsp; 0 : { *(.debug_srcinfo)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .debug_aranges&nbsp; 0 : { *(.debug_aranges)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .debug_pubnames 0 : { *(.debug_pubnames)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .debug_sfnames&nbsp; 0 : { *(.debug_sfnames)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>&nbsp; .line&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 : { *(.line)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>PROVIDE (_stack = 0x3ffffc);</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>}</FONT></TT></PRE>
+</UL>
+</UL>
+
+<DIV CLASS="Body">
+<HR SIZE=3 WIDTH="100%"></DIV>
+
+<DIV CLASS="Heading2"><A NAME="Srecords"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Producing
+S-records for V850</FONT></FONT></I></B></DIV>
+&nbsp;
+<DIV CLASS="Body"><FONT SIZE=+1>The following command reads the contents
+of <TT>hello.x</TT>, converts the code and data into S-records, and puts
+the result into <TT>hello.srec</TT>.</FONT></DIV>
+
+<DIV CLASS="CodeExample">
+<UL>
+<UL><TT><FONT SIZE=+1>v850-elf-objcopy -O srec hello.x hello.srec</FONT></TT></UL>
+</UL>
+</DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>Here are the first few lines of <TT>hello.srec</TT>:</FONT></DIV>
+
+<UL>
+<PRE CLASS="CodeExample"><TT><FONT SIZE=+1>S00D000068656C6C6F2E7372656303</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>S31A00100000000220A6FF0000A880AEFFFF401E2000231E0000403B</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>S31A00100015F610003EF6A86E402611002426A8EE40361000263637</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>S31A0010002AA86E403E1000273EE06EE7319105460700000636011C</FONT></TT></PRE>
+
+<PRE><TT><FONT SIZE=+1>S31A0010003F00E731B1FD80FFA200031EF4FF0032003A004280FF6E</FONT></TT></PRE>
+</UL>
+
+<DIV CLASS="Heading1"><A NAME="Debug_issues"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Debugger
+issues for V850</FONT></FONT></I></B></DIV>
+
+<DIV CLASS="Body">&nbsp;
+<DIV CLASS="Body">
+<DIV CLASS="Bullet"><FONT SIZE=+1>There are no V850-specific debugger command-line
+options.</FONT>
+<BR>&nbsp;</DIV>
+</DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>For all available debugger options, see
+<A HREF="../3_dbug/b_Debugging_with_GDB/gdb.html">Debugging with GDB</A>
+in <B><I>GNUPro Debugging Tools</I></B>.</FONT></DIV>
+<FONT SIZE=+1>GDB's built-in software simulation of the V850 processor
+allows the debugging of programs compiled for the V850 without requiring
+any access to actual hardware. Activate this mode in GDB by the command,
+<TT>target sim</TT>. Then load code into the simulator by the command,
+<TT>load</TT>, and debug it in the normal fashion.</FONT>
+<BR>&nbsp;</DIV>
+
+<DIV CLASS="Body">
+<DIV CLASS="Bullet"><FONT SIZE=+1>The <FONT FACE="Arial Narrow">Target
+Selection</FONT> window for the <A HREF="../1_GS/int06.html">GNUPro visual
+debugger, Cygnus Insight</A>, has additional functionality. Accessible
+from Insight's <A HREF="../1_GS/int06a.html#Source_Window">Source Window</A>,
+V850 users developing with ICE select a target by entering the name of
+the ICE target into the <FONT FACE="Arial Narrow">Target Selection</FONT>
+window's dialog box.</FONT>
+<BR>&nbsp;</DIV>
+</DIV>
+
+<DIV CLASS="Heading1"><A NAME="Standalone_simulator"></A><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Stand-alone
+simulator issues for V850</FONT></FONT></I></B></DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>The simulator supports general registers,
+<TT>r0</TT> through <TT>r31</TT>, <TT>PC</TT> (program counter, low 24
+bits only), and <TT>PSW</TT> (low 5 bits only). It does not support any
+of the additional system registers or memory mapped registers.</FONT></DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>Registers are all uninitialized at startup.</FONT></DIV>
+
+<DIV CLASS="Body"><FONT SIZE=+1>There are no V850-specific stand-alone
+simulator command-line options.</FONT></DIV>
+
+<DIV CLASS="footnotes">
+<DIV CLASS="footnote">
+<DIV CLASS="Footnote">
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="emb.html">Contents</A>|<A HREF="embDebugging_on_Motorola__m68k_targ.html">Previous</A>|<A HREF="embPowerPC.html">Next</A></CENTER>
+</DIV>
+</DIV>
+</DIV>
+
+</BODY>
+</HTML>

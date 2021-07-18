@@ -1,0 +1,101 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Brief description of gcov data files</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccUsing_gcov_with_GCC_Optimization.html">Previous</A>|<A HREF="gccKnown_Causes_of_Trouble_with_GNU.html">Next</A>
+<BR><FONT COLOR="#000000"><FONT FACE="Futura Md BT">&nbsp;<A NAME="off_4621492"></A><A NAME="bcb6027e"></A><B><FONT SIZE=+3>Brief
+description of </FONT></B></FONT><B><TT><FONT POINT-SIZE="24">gcov</FONT></TT><FONT FACE="Futura Md BT"><FONT SIZE=+3>
+data files&nbsp;</FONT></FONT></B><FONT FACE="Futura Md BT">&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>gcov</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+uses three files for doing profiling. The names of these files are derived
+from the original <I>source</I> file by substituting the file suffix with
+either </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.bb</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.bbg</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,or
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.da</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+All of these files are placed in the same directory as the source file,
+and contain data stored in a platform-independent method.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.bb</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.bbg</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+files are generated when the source file is compiled with the GNU CC ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-ftest-coverage</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option. The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.bb</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file contains a list of source files (including headers), functions within
+those files, and line numbers corresponding to each basic block in the
+source file.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.bb</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file format consists of several lists of 4-byte integers which correspond
+to the line numbers of each basic block in the file. Each list is terminated
+by a line number of 0. A line number of -1 is used to designate that the
+source file name (padded to a 4-byte boundary and followed by another -1)
+follows. In addition, a line number of -2 is used to designate that the
+name of a function (also padded to a 4-byte boundary and followed by a
+-2) follows.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.bbg</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file is used to reconstruct the program flow graph for the source file.
+It contains a list of the program flow arcs (possible branches taken from
+one basic block to another) for each function which, in combination with
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.bb</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file, enables </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gcov</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to reconstruct the program flow.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.bbg</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file, the format is the following.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>number of basic blocks for function #0 (4-byte number)&nbsp;
+total number of arcs for function #0 (4-byte number)&nbsp;
+count of arcs in basic block #0 (4-byte number)&nbsp;
+destination basic block of arc #0 (4-byte number)&nbsp;
+flag bits (4-byte number)&nbsp;
+destination basic block of arc #1 (4-byte number)&nbsp;
+flag bits (4-byte number)&nbsp;
+...&nbsp;
+destination basic block of arc #N (4-byte number)</FONT></FONT></PRE>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>flag bits (4-byte number)&nbsp;
+count of arcs in basic block #1 (4-byte number)&nbsp;
+destination basic block of arc #0 (4-byte number)&nbsp;
+flag bits (4-byte number)&nbsp;
+...</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>A -1 (stored as a 4-byte number)
+is used to separate each function’s list of basic blocks, and to verify
+that the file has been read correctly.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.da</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file is generated when a program containing object files built with the
+GNU CC ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fprofile-arcs</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option is executed. A separate </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.da</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file is created for each source file compiled with this option, and the
+name of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.da</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file is stored as an absolute pathname in the resulting object file. This
+path name is derived from the source file name by substituting a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.da</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+suffix.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The format of the</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+.da</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> file is fairly
+simple. The first 8-byte number is the number of counts in the file, followed
+by the counts (stored as 8-byte numbers). Each count corresponds to the
+number of times each arc in the program is executed. The counts are cumulative;
+each time the program is executed, it attemps to combine the existing </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.da</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+files with the new counts for this invocation of the program. It ignores
+the contents of any </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.da</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+files whose number of arcs doesn’t correspond to the current program, and
+merely overwrites them instead.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>All three of these files
+use the functions in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gcov-io.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to store integers; the functions in this header provide a machine independent
+mechanism for storing and retrieving data from a stream.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccUsing_gcov_with_GCC_Optimization.html">Previous</A>|<A HREF="gccKnown_Causes_of_Trouble_with_GNU.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

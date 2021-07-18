@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Letting make Deduce the Commands</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeVariables_Make_Makefiles_Simpler.html">Previous</A>|<A HREF="makeAnother_Style_of_Makefile.html">Next</A>
+<BR><A NAME="off_229376"></A><A NAME="8273bcca"></A><B><FONT SIZE=+3><FONT FACE="Futura Md BT">Letting
+</FONT><FONT FACE="Courier New">make</FONT><FONT FACE="Futura Md BT"> deduce
+the commands</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>It is
+not necessary to spell out the commands for compiling the individual C
+source files, because </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can figure them out: it has an implicit rule for updating a ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>.o</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+file from a correspondingly named ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>.c</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+file using a ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cc -c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+command.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, it will use
+the command ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cc -c
+main.c -o main.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to compile ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>main.c</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+into ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>main.o</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+We can therefore omit the commands from the rules for the object files.
+See <FONT COLOR="#008000"><A HREF="makeImplicit_Rules.html">Implicit rules</A></FONT>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When a ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>.c</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+file is used automatically in this way, it is also automatically added
+to the list of dependencies. We can therefore omit the ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>.c</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+files from the dependencies, provided we omit the commands. The following
+is the entire example, with both of these changes, and a variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>objects</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(as previously suggested in <FONT COLOR="#008000"><A HREF="makeVariables_Make_Makefiles_Simpler.html">Variables
+make makefiles simpler</A></FONT>).</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>objects = main.o kbd.o command.o
+display.o \</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+insert.o search.o files.o utils.o</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>edit : $(objects)</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+cc -o edit $(objects)</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>main.o : defs.h</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>kbd.o : defs.h command.h</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>command.o : defs.h command.h</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>display.o : defs.h buffer.h</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>insert.o : defs.h buffer.h</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>search.o : defs.h buffer.h</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>files.o : defs.h buffer.h command.h</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>utils.o : defs.h</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>.PHONY : clean</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>clean :</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-rm edit $(objects)</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The example in <FONT COLOR="#008000"><A HREF="makeAnother_Style_of_Makefile.html">Another
+style of makefile</A></FONT> shows how to write the makefile in actual
+practice. (The complications associated with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+are described in <FONT COLOR="#008000"><A HREF="makePhony_Targets.html">Phony
+targets</A></FONT> and in <FONT COLOR="#008000"><A HREF="makeErrors_in_Commands.html">Errors
+in commands</A></FONT>.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Because implicit rules are
+so convenient, they are used frequently.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeVariables_Make_Makefiles_Simpler.html">Previous</A>|<A HREF="makeAnother_Style_of_Makefile.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

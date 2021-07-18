@@ -1,0 +1,264 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- Edited by Ron D., 10/6/00 -->
+		<title>Using the Simple Monitor</title>
+	</head>
+
+	<br>
+	<center>
+		<h2>Using the Simple Monitor</h2>
+	</center>
+	<p>
+	<hr width="600">
+	<table width="600" align="CENTER" summary="tuto2_5_0">
+		<tr>
+			<td>The <a href="../yougo.html#SoundObject" target="yougo">Sound Object</a>&nbsp; that is output when <a href="../yougo.html#mks4agb.exe" target="yougo">mks4agb.exe</a> is run can be linked directly to the main program. However, this alone will not allow sound changes to be made when the main program is not complete. The Simple Monitor is a program that has been developed for the express purpose of running sound checks to avoid this sort of situation.<br> 
+				<br> 
+				<font color="red">* The Simple Monitor is still in development, so it is possible that the operating methods and screen display specifications could change.&nbsp;</font></td> 
+		</tr> 
+	</table> 
+	<hr width="600"> 
+	<table width="600" align="CENTER" summary="tuto2_5_1"> 
+		<tr> 
+			<td>After running <a href="../yougo.html#mks4agb.exe" target="yougo">mks4agb.exe</a>, please have the <a href="../yougo.html#SoundMon.elf" target="yougo">SoundMon.elf</a> that is output to the <a href="../yougo.html#WorkDirectory" target="yougo">Work Directory</a> read into the emulator. When this is run, a screen like the one below should be displayed.</td> 
+		</tr> 
+	</table> 
+	<center> 
+		<p><b>Figure: Simple Monitor Screen (Immediately After Execution)</b><br> 
+		<img src="../img/mon.jpg" width="480" height="320" alt="SimpleMonitorScreen" usemap="#monitor"><map name="monitor"><area shape="rect" href="../yougo.html#SONG" target="yougo" coords="33,33,94,176" alt="SONG"><area shape="rect" href="../yougo.html#PLY" target="yougo" coords="129,33,174,176" alt="PLY"><area shape="rect" href="../yougo.html#VGR" target="yougo" coords="193,33,238,176" alt="VGR"><area shape="rect" href="../yougo.html#VOL" target="yougo" coords="257,33,303,176" alt="VOL"><area shape="rect" href="../yougo.html#PRI" target="yougo" coords="321,33,366,176" alt="PRI"><area shape="rect" href="../yougo.html#TRACK" target="yougo" coords="385,33,462,176" alt="TRACK"><area shape="rect" href="../yougo.html#REVERB" target="yougo" coords="17,193,190,208" alt="REVERB"><area shape="rect" href="../yougo.html#CHN" target="yougo" coords="17,225,190,240" alt="MAX_CH"><area shape="rect" href="../yougo.html#FREQ" target="yougo" coords="17,257,190,272" alt="FREQ"><area shape="rect" href="../yougo.html#DA_BIT" target="yougo" coords="17,289,190,304" alt="DA_BIT"><area shape="rect" href="../yougo.html#SIZE" target="yougo" coords="257,257,462,272" alt="SIZE"><area shape="rect" href="../yougo.html#LINES" target="yougo" coords="257,289,462,304" alt="LINES"></map> <br> 
+		<font size="2">*Clicking on any category will display the explanation.</font></p> 
+	</center> 
+	<p><br> 
+	<br> 
+	</p> 
+	<p> 
+	<hr width="545"> 
+	<table border="1" width="545" align="center" summary="sheet"> 
+		<tr> 
+			<th colspan="2" style="background-color:white">Operating Methods</th> 
+		</tr> 
+		<tr> 
+			<td>Up, Down Buttons</td> 
+			<td>Select Categories (The arrows move vertically.)</td> 
+		</tr> 
+		<tr> 
+			<td>Left, Right Buttons</td> 
+			<td>Changes the value of the selected category.<br> 
+				(SONG, REVERB, CHN, FREQ, D/A BIT)</td> 
+		</tr> 
+		<tr> 
+			<td>A Button</td> 
+			<td>Starts a <a href="../yougo.html#Song" target="yougo">Song</a> (Only when there is an arrow in the SONG column)<br> 
+				The number of <a href="../yougo.html#MusicPlayer" target="yougo">Music Players</a> used is displayed in the PLY column.</td> 
+		</tr> 
+		<tr> 
+			<td>B Button</td> 
+			<td>Stops or continues <a href="../yougo.html#Song" target="yougo">Song</a><br> 
+				(Only when there is an arrow in the SONG column)<br> 
+				If the B Button is pressed while music is stopped, it will restart from the point it was stopped. It cannot restart when song data has already ended.</td> 
+		</tr> 
+		<tr> 
+			<td>SELECT</td> 
+			<td>Resets the maximum value for LINES.</td> 
+		</tr> 
+		<tr> 
+			<td>START</td> 
+			<td>Stops <a href="../yougo.html#Song" target="yougo">Songs</a> that are playing on all <a href="../yougo.html#MusicPlayer" target="yougo">Music Players</a>.&nbsp;</td> 
+		</tr> 
+	</table> 
+	<p> 
+	<hr width="600"> 
+	<table width="600" align="CENTER" summary="tuto2_5_3"> 
+		<tr> 
+			<td>Next, a series of operations will be displayed. This will explain in order, what happens immediately after starting up.&nbsp;<br> 
+				Run <a href="../yougo.html#SoundMon.elf" target="yougo">SoundMon.elf</a>. The parentheses <font color="teal"><b>( ) </b></font>contain the relevant monitor screen category.&nbsp;</td> 
+		</tr> 
+	</table> 
+	<hr width="600"> 
+	<table width="545" align="CENTER" summary="song_select"> 
+		<tr> 
+			<td> 
+				<h4>Select Song&nbsp;&nbsp;&nbsp;&nbsp;</h4> 
+				<p>Press Left/Right on the Control Pad to select the song number to be played on the&nbsp; <a href="../yougo.html#MusicPlayer" target="yougo">Music Player</a>.<br> 
+				Press Left on the Control Pad twice and select song number 14. (This is background music for demonstration use.)<br> 
+				The settings for Song Number 14 will be displayed in each category in the row for Song Number 14.&nbsp; 
+				<pre><a href="../yougo.html#PLY" target="yougo"><tt>PLY</tt></a><tt> : &nbsp;&nbsp;&nbsp;&nbsp; 0 </tt>(Played on MusicPlayer No. 0)
+<a href="../yougo.html#VGR" target="yougo"><tt>VGR</tt></a><tt> : &nbsp;&nbsp;&nbsp;&nbsp; 0 </tt>(Uses Tone Color Group No. 0)
+<a href="../yougo.html#VOL" target="yougo"><tt>VOL</tt></a><tt> : &nbsp;&nbsp; 100 </tt>(Master volume of SONG No. 14)
+<a href="../yougo.html#PRI" target="yougo"><tt>PRI</tt></a><tt> : &nbsp;&nbsp;&nbsp;&nbsp; 0 </tt>(Priority of SONG No. 14)
+<a href="../yougo.html#TRACK" target="yougo"><tt>TRACK</tt></a><tt> :  0/8 </tt>(Music Player No. 0 has set aside an area of 8 tracks.)</pre> 
+				<p>The numbers in the SONG column are being selected so they flash.</td> 
+		</tr> 
+	</table> 
+	<hr width="545"> 
+	<table width="545" align="CENTER" summary="tuto2_5_4"> 
+		<tr> 
+			<td> 
+				<h4>Playing, Stopping, Restarting Song Data</h4> 
+				<p>Press the A Button.&nbsp; <a href="../yougo.html#Song" target="yougo">Song</a>&nbsp; number 14 is played by using&nbsp; <a href="../yougo.html#MusicPlayer" target="yougo">Music Player</a> No. 0.<br> 
+				The number 14 that was flashing in the SONG column no longer flashes.&nbsp; The TRACK is displayed as: 
+				<pre><a href="../yougo.html#TRACK" target="yougo"><tt>TRACK</tt></a><tt> : 7/8</tt></pre> 
+				<p>The numerator that has changed to 7 from 0 indicates that the number of the track used in song number 14 is 7.&nbsp; The song stops when the B Button is pressed.&nbsp; While a song is stopped, the numerator of the TRACK flashes.&nbsp; By pressing the B Button one more time, the song restarts from the point it was stopped.</td> 
+		</tr> 
+	</table> 
+	<hr width="545"> 
+	<table width="545" align="CENTER" summary="tuto2_5_5"> 
+		<tr> 
+			<td> 
+				<h4>Selecting Another Music Player</h4> 
+				<p>Press Down on the Control Pad once to move the red arrow to the next row.</td> 
+		</tr> 
+	</table> 
+	<hr width="545"> 
+	<table width="545" align="CENTER" summary="tuto2_5_6"> 
+		<tr> 
+			<td> 
+				<h4>Playing Songs Simultaneously</h4> 
+				<p>It is possible to start playing a song on another Music Player while a song is already playing on <a href="../yougo.html#MusicPlayer" target="yougo">Music Player</a> No. 0.<br> 
+				<br> 
+				Press Right on the Control Pad once to specify Song Number 1. The settings for Song Number 13 will be displayed in each category in the row for song number 13. 
+				<pre><a href="../yougo.html#PLY" target="yougo"><tt>PLY</tt></a><tt> : &nbsp;&nbsp;&nbsp;&nbsp; 3 </tt>(Played on Music Player No. 3)
+<a href="../yougo.html#VGR" target="yougo"><tt>VGR</tt></a><tt> : &nbsp;&nbsp;&nbsp;&nbsp; 0 </tt>(Uses Tone Color Group No. 0)
+<a href="../yougo.html#VOL" target="yougo"><tt>VOL</tt></a><tt> : &nbsp;&nbsp; 127 </tt>(Master volume of song number 1)
+<a href="../yougo.html#PRI" target="yougo"><tt>PRI</tt></a><tt> : &nbsp;&nbsp;&nbsp; 10 </tt>(Priority of song number 1)
+<a href="../yougo.html#TRACK" target="yougo"><tt>TRACK</tt></a><tt> :  0/2 </tt>(Music Player No. 3 has set aside an area of 2 tracks.)</pre> 
+				<p>You can verify that song number 1 is set to be played on Music Player No. 3.<br> 
+				When the A Button is pressed, the sound effect of sound number 1 is played, but at the same time, song number 14 on MusicPlayer No. 0 continues to play as well.&nbsp;<br> 
+				<br> 
+				During actual use, this feature can be used by playing background music on one Music Player while playing sound effects on another.<br> 
+				However, <font color="#ee0000"><b>more than the maximum number of simultaneous sounds will not be played.</b></font></td> 
+		</tr> 
+	</table> 
+	<hr width="545"> 
+	<table width="545" align="CENTER" summary="tuto2_5_7"> 
+		<tr> 
+			<td> 
+				<h4>Selecting the Reverb Value&nbsp;&nbsp;&nbsp;&nbsp;<b>(</b><font size="2"> <a href="../yougo.html#REVERB" target="yougo">REVERB</a> </font><b>)</b></h4> 
+				<p>Press Down on the Control Pad and point the arrow at REVERB. Pressing Right/Left on the Control Pad will change the reverb value. Settings can be made from 0 ~ 127 in increments of 1.&nbsp;<br> 
+				You can set the reverb value to get an echo effect, but it slows the processing down.&nbsp;</td> 
+		</tr> 
+	</table> 
+	<hr width="545"> 
+	<table width="545" align="CENTER" summary="tuto2_5_8"> 
+		<tr> 
+			<td> 
+				<h4>Selecting the Maximum Number of Simultaneously-Produced Sounds<font size="2"> ( </font><a href="../yougo.html#CHN" target="yougo"><font color="teal" size="2">CHN</font></a> )</h4> 
+				<p>Press Down on the Control Pad and point the arrow at CHN.<br> 
+				The figure on the right side is the maximum number of simultaneously-produced direct sounds. You can change the value with Right/Left on the Control Pad.<br> 
+				<br> 
+				You can test this feature by setting this value to 1 and playing song number 14.&nbsp; You should only be able to hear a sound.<br> 
+				<br> 
+				The figure on the left side is the number of channels(number of sounds produced) currently being used by direct sound.<br> 
+				If the maximum number of simultaneously-produced sounds is set to 1, as implied, values of 1 or higher will not be shown.<br> 
+			</td> 
+		</tr> 
+	</table> 
+	<hr width="545"> 
+	<table width="545" align="CENTER" summary="tuto2_5_9"> 
+		<tr> 
+			<td> 
+				<h4>Selecting the PlayBack Frequency&nbsp;&nbsp;&nbsp;&nbsp;<b>(</b><font size="2"> <a href="../yougo.html#FREQ" target="yougo">FREQ</a> </font><b>)</b></h4> 
+				<p>This selects the playback frequency of Direct Sounds.&nbsp;<br> 
+				Press Down on the Control Pad and point the arrow to FREQ. Pressing Right/Left on the Control Pad will change the value of the playback frequency. The larger the value, the better the sound quality will be, but the processing will become slower. The values that can be selected will be limited by the specifications of your hardware.&nbsp;</td> 
+		</tr> 
+	</table> 
+	<hr width="545"> 
+	<table width="545" align="CENTER" summary="tuto2_5_9"> 
+		<tr> 
+			<td> 
+				<h4>Select Final Output DA Conversion Bit Count <font size="2">( <a href="../yougo.html#DA_BIT" target="yougo">D/A BIT</a>)</font></h4> 
+				<p>With AGB hardware specifications, it is necessary to set up a DA conversion bit count (amplitude resolution) for the final output waveform of sound. In this tutorial &quot;8&quot; is recommended. For details, please see:<br> 
+				<a href="../Man/sndbit.html">Sound Output DA Conversion Frequencies (Bit Counts)</a> in the User's Manual.<br> 
+				The values can be selected in the range of&nbsp; <b>6 ~ 9.</b></td> 
+		</tr> 
+	</table> 
+	<hr width="545"> 
+	<table width="545" align="CENTER" summary="tuto2_5_10"> 
+		<tr> 
+			<td> 
+				<h4>Size <font size="2">( <a href="../yougo.html#SIZE" target="yougo">SIZE</a> ) </font></h4> 
+				<p>This is the total size of all sound objects incorporated into the game.<br> 
+			</td> 
+		</tr> 
+	</table> 
+	<hr width="545"> 
+	<table width="545" align="CENTER" summary="tuto2_5_11"> 
+		<tr> 
+			<td> 
+				<h4>Number of Lines <font size="2">( <a href="../yougo.html#LINES" target="yougo">LINES</a> ) </font></h4> 
+				<p>The figure on the left side is the average value for every 0.25 seconds of processing time for each V-SYNC of sound related functions. If this value is 228, it means that 100% of the CPU's processing time is being used by sound related functions. It is only a display and cannot be changed.<br> 
+				<br> 
+				The figure on the right side is the maximum value of the processing time for each V-SYNC, from a reset to the present. By pressing SELECT you can do a reset.</td> 
+		</tr> 
+	</table> 
+	<br> 
+	<hr width="600"> 
+	<table width="545" align="CENTER" summary="tuto2_5_midi"> 
+		<tr> 
+			<td> 
+				<h4><a name="MIDI_IN"></a>(Items Added with MIDI Input Performance)</h4> 
+				<p>When MIDI input performance is used, the following items are added to the screen.<br> 
+				When MIDI input performance is used, the following debugger setting must be selected:<br> 
+				&quot;Option&quot;<img src="../man/right.gif">&quot;Memory&quot;<img src="../man/right.gif">&quot;ROM: 
+                internal memory, RAM: external memory&quot;.<br>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<center>
+		<p><font size="2"><b>Lower portion of simple monitor screen</b> (When using real time MIDI input)</font><br>
+		<img src="../img/mon_midi.jpg" width="480" height="132" alt="Real Time MIDI Input Screen" usemap="#monitor_midi"><map name="monitor_midi"><area shape="rect" href="../yougo.html#REVERB" target="yougo" coords="16,5,189,20" alt="REVERB"><area shape="rect" href="../yougo.html#CHN" target="yougo" coords="16,37,189,52" alt="MAX_CH"><area shape="rect" href="../yougo.html#FREQ" target="yougo" coords="16,69,189,84" alt="FREQ"><area shape="rect" href="../yougo.html#DA_BIT" target="yougo" coords="16,101,189,116" alt="DA_BIT"><area shape="rect" href="../yougo.html#MIDI_VGR" target="yougo" coords="256,5,445,20" alt="MIDI_VGR"><area shape="rect" href="../yougo.html#MIDI_VOL" target="yougo" coords="326,21,445,36" alt="MIDI_VOL"><area shape="rect" href="../yougo.html#MIDI_PRI" target="yougo" coords="326,37,445,52" alt="MIDI_PRI"><area shape="rect" href="../yougo.html#SIZE" target="yougo" coords="256,69,463,84" alt="SIZE"><area shape="rect" href="../yougo.html#LINES" target="yougo" coords="256,101,463,116" alt="LINES"></map> <br>
+		<font size="2">*Clicking on any category will display the explanation.</font><br>
+		<br>
+		<br>
+	</center>
+	<p>
+	<hr width="545">
+	<table width="545" align="CENTER" summary="tuto2_5_midi_vgr">
+		<tr>
+			<td>
+				<h4>The tone color group number used with MIDI input performance.<font size="2" color="black"> (</font><a href="../yougo.html#MIDI_VGR" target="yougo"><font color="black" size="2">MIDI:VGR</font></a><font size="2" color="black">)</font></h4>
+				<p>When the arrow points to &quot;D/A BIT&quot; and you press Down on the Control Pad, the arrow moves to this item. With Left/Right on the Control Pad, you can select the tone color group to use with MIDI input performance.<br>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr width="545">
+	<table width="545" align="CENTER" summary="tuto2_5_midi_vol">
+		<tr>
+			<td>
+				<h4>Value for master volume of MIDI input performance.<font size="2" color="black"> (</font><a href="../yougo.html#MIDI_VOL" target="yougo"><font color="teal" size="2">:VOL</font></a><font size="2" color="black">)</font></h4>
+				<p>Press Down on the Control Pad and line up the arrow with :VOL.<br>
+				You can change the master volume of the MIDI input performance with Right/Left on the Control Pad.<br>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr width="545">
+	<table width="545" align="CENTER" summary="tuto2_5_midi_pri">
+		<tr>
+			<td>
+				<h4>Value for priority of MIDI input performance.<font size="2" color="black"> (</font><a href="../yougo.html#MIDI_PRI" target="yougo"><font color="teal" size="2">:PRI</font></a><font size="2" color="black">)</font></h4>
+				<p>Press Down on the Control Pad and line up the arrow with :PRI.<br>
+				You can change the priority of the MIDI input performance with Right/Left on the Control Pad.<br>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr width="600">
+	<table width="600" align="CENTER" summary="tuto2_5_12">
+		<tr>
+			<td>This concludes our explanation of how to use the Simple Monitor. Proceed to the next section.&nbsp;<br> 
+				<br> 
+				<b>Next: </b><a href="tuto3_1.html">Making an SE</a></td> 
+		</tr> 
+	</table> 
+	<p> 
+	<hr width="600" align="CENTER"> 
+	<center> 
+		<p>[ | <a href="tuto2_4.html">Back</a> | <a href="../index.html">User's Manual Table of Contents</a> | <a href="tuto0.html">Tutorial Table of Contents</a> | <a href="tuto3_1.html">Next</a> | ]</p> 
+	</center> 
+	<p><br> 
+</html> 

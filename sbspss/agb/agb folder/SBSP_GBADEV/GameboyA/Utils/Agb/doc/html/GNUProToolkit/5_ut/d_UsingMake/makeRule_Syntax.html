@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Rule Syntax</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeWriting_Rules.html">Previous</A>|<A HREF="makeUsing_Wildcard_Characters_in_Fil.html">Next</A>
+<BR><A NAME="off_426137"></A><A NAME="d6820ca4"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Rule
+syntax</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>In general,
+a rule looks like the following example’s declaration.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0><I>targets</I> : <I>dependencies</I></FONT></FONT>
+<BR><I><FONT FACE="Courier New"><FONT SIZE=+0>command</FONT></FONT></I>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>...</FONT></FONT>
+<BR>&nbsp;</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Or like the following.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0><I>targets</I> : <I>dependencies</I>
+; <I>command</I></FONT></FONT>
+<BR><I><FONT FACE="Courier New"><FONT SIZE=+0>command</FONT></FONT></I>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>...</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>targets</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are file names, separated by spaces. Wildcard characters may be used (see
+<FONT COLOR="#008000"><A HREF="makeUsing_Wildcard_Characters_in_Fil.html">Using
+wildcard characters in file names</A></FONT>) and a name of the form ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>a</I>(<I>m</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+represents member </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>m</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in archive file </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>a
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>(see <FONT COLOR="#008000"><A HREF="makeArchive_Members_as_Targets.html">Archive
+members as targets</A></FONT>). Usually there is only one target per rule,
+but occasionally there is a reason to have more (see <FONT COLOR="#008000"><A HREF="makeMultiple_Targets_in_a_Rule.html">Multiple
+targets in a tule</A></FONT>). The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>command</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+lines start with a tab character. The first command may appear on the line
+after the dependencies, with a tab character, or may appear on the same
+line, with a semicolon. Either way, the effect is the same. See <FONT COLOR="#008000"><A HREF="makeWriting_the_Commands_in_Rules.html">Writing
+the commands in tules</A></FONT>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Because dollar signs are
+used to start variable references, if you really want a dollar sign in
+a rule you must write two of them, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$$</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">’
+(see <FONT COLOR="#008000"><A HREF="makeHow_to_Use_Variables.html">How
+to use variables</A></FONT>). You may split a long line by inserting a
+backslash followed by a newline, but this is not required, as </FONT><TT>make</TT><FONT FACE="Times New Roman">
+places no limit on the length of a line in a makefile.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>A rule tells </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+two things: when the targets are out of date, and how to update them when
+necessary.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The criterion for being out
+of date is specified in terms of the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>dependencies</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+which consist of file names separated by spaces. Wildcards and archive
+members (see <FONT COLOR="#008000"><A HREF="makeUsing_make_to_Update_Archive_Fil.html">Using
+</A></FONT></FONT></FONT><FONT COLOR="#008000"><A HREF="makeUsing_make_to_Update_Archive_Fil.html"><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to update archive files</FONT></FONT></A></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+are allowed too. A target is out of date if it does not exist or if it
+is older than any of the dependencies (by comparison of last-modification
+times). The idea is that the contents of the target file are computed based
+on infor-mation in the dependencies, so if any of the dependencies changes,
+the contents of the existing target file are no longer necessarily valid.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>How to update is specified
+by </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>commands</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+These are lines to be executed by the shell (normally, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sh</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’),
+but with some extra features (see <FONT COLOR="#008000"><A HREF="makeWriting_the_Commands_in_Rules.html">Writing
+the commands in rules</A></FONT>).</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeWriting_Rules.html">Previous</A>|<A HREF="makeUsing_Wildcard_Characters_in_Fil.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

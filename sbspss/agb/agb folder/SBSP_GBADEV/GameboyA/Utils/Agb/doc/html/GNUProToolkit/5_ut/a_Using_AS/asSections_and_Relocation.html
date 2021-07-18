@@ -1,0 +1,192 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Sections and Relocation</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asNumber_Constants.html">Previous</A>|<A HREF="asld_Sections.html">Next</A>
+<BR><A NAME="off_459091"></A><A NAME="40599af5"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Sections
+and relocation</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>The
+following documentation discusses <I>sections</I>, <I>object files</I>,
+<I>addressing</I> and <I>relocation</I>.</FONT></FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asld_Sections.html"><B><FONT FACE="Courier New">ld</FONT></B><FONT FACE="Times New Roman">
+sections</FONT></A></FONT><FONT FACE="Times New Roman"></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asas_Internal_Sections.html"><B><FONT FACE="Courier New">as</FONT></B><FONT FACE="Times New Roman">
+internal sections</FONT></A></FONT><FONT FACE="Times New Roman"></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asSubSections.html">Sub-sections</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="asbss_Section.html">bss
+section</A></FONT></FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>A section
+is a range of addresses, with no gaps; all data <I>in</I> those addresses
+is treated the same for some particular purpose. For example there may
+be a <I>read-only</I> section.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+linker, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+reads many object files (partial programs) and combines their contents
+to form a runnable program. When </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+emits an object file, the partial program is assumed to start at address,
+0. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+assigns the final addresses for the partial program, so that different
+partial programs do not overlap. This is actually an oversimplification,
+but it suffices to explain how </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+uses sections.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+moves blocks of bytes of your program to their run-time addresses. These
+blocks slide to their run-time addresses as rigid units; their length does
+not change and neither does the order of bytes within them. Such a rigid
+unit is called a <I>section</I>. Assigning run-time addresses to sections
+is called <I>relocation</I>. It includes the task of adjusting mentions
+of object-file addresses so they refer to the proper run-time addresses.
+For the H8/300 and H8/500, and for the Hitachi SH, as pads sections if
+needed to ensure they end on a word (sixteen bit) boundary.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>An
+object file written by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has at least three sections, any of which may be empty. These are named
+<I>text</I>, <I>data</I> and <I>bss</I> sections.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>When
+it generates COFF output, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can also generate whatever other named sections you specify using the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.section</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">
+directive (see </FONT></FONT></FONT><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#008000"><A HREF="asAssembler_Directives.html#ba439edf">.section
+<I>name</I>, <I>subsection</I></A></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman">).
+If you do not use any directives that place output in the </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>.text</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.data</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+sections, these sections still exist, but are empty.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>When
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+generates SOM or ELF output for the HPPA, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can also generate whatever other named sections you specify using the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.space</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.subspace</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directives.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>See
+<B><I>HP9000 Series 800 Assembly Language Reference Manual</I></B> (HP
+92432-90001) for details on the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.space</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.subspace</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+assembler directives.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Additionally,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+uses different names for the standard text, data, and bss sections when
+generating SOM output. Program text is placed into the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$CODE$</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+section, data into </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$DATA$</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and bss into </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$BSS$</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Within
+the object file, the text section starts at address </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the data section follows, and the bss section follows the data section.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>When
+generating either SOM or ELF output files on the HPPA, the text section
+starts at address, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the data section at address, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0x4000000</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and the bss section follows the data section.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>To
+let </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+know which data changes when the sections are relocated, and how to change
+that data, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+also writes to the object file details of the relocation needed. To perform
+relocation, each time an address in the object file is mentioned,</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> must know the
+following criteria.</FONT></FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Where in the object file is
+the beginning of this reference to an address?</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>How long (in bytes) is this
+reference?</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Which section does the address
+refer to? What is the numeric value of (</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>address</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>)</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>-</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>(</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>start-address
+of section</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>)?</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Is the reference to an address
+“Program-Counter relative”?</FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In fact, every address </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+ever uses is expressed as the following example infers.</FONT></FONT>
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>(<I>section</I>) <B>+</B> (<I>offset
+into section</I>)</FONT></FONT></UL>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Further,
+most expressions </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+computes have this section-relative nature. (For some object formats, such
+as SOM for the HPPA, some expressions are symbol-relative instead.) In
+this documentation, we use the notation, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>{<I>secname</I>
+<I>N</I>}</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>, to
+mean “offset </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>N</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+into section, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>secname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.”</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Apart
+from text, data and bss sections you need to know about the <I>absolute</I>
+section. When </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+mixes partial programs, addresses in the absolute section remain unchanged.
+For example, address, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>{absolute
+0}</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>, is “relocated”
+to run-time address, 0, by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Although the linker never arranges two partial programs’ data sections
+with overlapping addresses after linking, by definition, their absolute
+sections <I>must</I> overlap. Address, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>{absolute
+239}</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>, in one part
+of a program is always the same address when the program is running as
+address, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>{absolute
+239}</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>, in any other
+part of the program.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+idea of sections is extended to the <I>undefined</I> section. Any address
+whose section is unknown at assembly time is, by definition, rendered as
+“</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>{</FONT></FONT><FONT SIZE=+1><TT>undefined</TT><FONT FACE="Times New Roman">
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>U</I>}</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>”
+where </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>U</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is filled in later. Since numbers are always defined, the only way to generate
+an undefined address is to mention an undefined symbol. A reference to
+a named common block would be such a symbol; its value is unknown at assembly
+time so it has an <I>undefined </I>section.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>By
+analogy the word, <I>section</I>, is used to describe groups of sections
+in the linked program. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+puts all partial programs’ text sections in contiguous addresses in the
+linked program. It is customary to refer to the text section of a program,
+meaning all the addresses of all partial programs’ <I>text sections</I>,
+likewise for data and bss sections. Some sections are manipulated by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+others are invented for use of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and have no meaning except during assembly.</FONT></FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="asNumber_Constants.html">Previous</A>|<A HREF="asld_Sections.html">Next</A></CENTER>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>&nbsp;
+</BODY>
+</HTML>

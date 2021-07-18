@@ -1,0 +1,658 @@
+Archive member included       because of file (symbol)
+
+./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx.o)
+                              main.o (musyxInit)
+./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_synth.o)
+                              ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx.o) (_musyxResetHardware)
+./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_samples.o)
+                              ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx.o) (_musyxInitSamples)
+./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_macros.o)
+                              ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_synth.o) (_musyxHandleMacros)
+./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_sequencer.o)
+                              main.o (musyxInitSong)
+./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_memory.o)
+                              main.o (musyxCalcMemUsage)
+./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_mixer.o)
+                              ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx.o) (_musyxIRQEnableHW)
+/agb/lib/libagbsyscall.a(AgbSysCpuFastSet.o)
+                              main.o (CpuFastSet)
+/agb/lib/libagbsyscall.a(AgbSysCpuSet.o)
+                              MultiSio.o (CpuSet)
+/agb/lib/libagbsyscall.a(AgbSysRegisterRamReset.o)
+                              main.o (RegisterRamReset)
+/agb/lib/libagbsyscall.a(AgbSysVBlankIntrWait.o)
+                              main.o (VBlankIntrWait)
+C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_call_via_rX.o)
+                              MultiSio.o (_call_via_r0)
+C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_divsi3.o)
+                              ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_synth.o) (__divsi3)
+C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_dvmd_tls.o)
+                              C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_divsi3.o) (__div0)
+C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_fixunssfsi.o)
+                              ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_samples.o) (__fixunssfsi)
+C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_udivsi3.o)
+                              ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx.o) (__udivsi3)
+C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_umodsi3.o)
+                              ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx.o) (__umodsi3)
+C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(fp-bit.o)
+                              ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_samples.o) (__addsf3)
+C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_muldi3.o)
+                              C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(fp-bit.o) (__muldi3)
+C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(dp-bit.o)
+                              C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(fp-bit.o) (__make_dp)
+C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_lshrdi3.o)
+                              C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(dp-bit.o) (__lshrdi3)
+C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_negdi2.o)
+                              C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(dp-bit.o) (__negdi2)
+
+Allocating common symbols
+Common symbol       size              file
+
+UsrSendBuf          0x10              main.o
+IntrTableBuf        0x38              main.o
+Cont                0x4               main.o
+_musyxVars          0x4               ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx.o)
+IntrFuncBuf         0x100             MultiSio.o
+Trg                 0x4               main.o
+SioFlags            0x4               main.o
+IntrMainBuf         0x400             main.o
+UsrRecvBuf          0x40              main.o
+Ms                  0x1b0             MultiSio.o
+OamBak              0x400             main.o
+RecvFuncBuf         0x40              MultiSio.o
+BgBak               0x800             main.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD crt0.o
+LOAD MultiSioAsm.o
+LOAD main.o
+LOAD data.o
+LOAD MultiSio.o
+LOAD demo.o
+LOAD ./libMusyX_thumb.a
+LOAD /agb/lib/libagbsyscall.a
+LOAD /agb/lib/libisagbprn.a
+LOAD C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a
+LOAD C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/lib/libg.a
+LOAD C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/lib/libc.a
+LOAD C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a
+Address of section .text set to 0x8000000
+Address of section .bss set to 0x3000000
+                0x00008000                .=0x8000
+
+.interp
+ *(.interp)
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x08000000     0x849c
+ *(.text)
+ .text          0x08000000      0x21c crt0.o
+                0x080000fc                irqEnable
+                0x08000114                irqDisable
+                0x08000000                _start
+                0x080000c0                start_vector
+                0x0800012c                intr_main
+ .text          0x0800021c      0x138 MultiSioAsm.o
+                0x0800025c                MultiSioIntr
+                0x0800021c                MultiSioRecvBufChange
+ .text          0x08000354      0x314 main.o
+                0x08000638                IntrDummy
+                0x080005dc                VBlankIntr
+                0x0800063c                KeyRead
+                0x08000610                timerIRQ
+                0x08000354                AgbMain
+ .text          0x08000668      0x334 MultiSio.o
+                0x08000668                MultiSioInit
+                0x08000770                MultiSioMain
+                0x08000874                MultiSioRecvDataCheck
+                0x08000824                MultiSioSendDataSet
+ .text          0x0800099c      0xe34 ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx.o)
+                0x080015d0                musyxMasterVolFX
+                0x0800154c                musyxSetFlags
+                0x08001654                _musyxRndMax
+                0x080014ac                musyxFXGetPitch
+                0x080010b0                musyxFXSetPitch
+                0x0800160c                _musyxBZero
+                0x08000b1c                musyxDelayParam
+                0x080016a4                _musyxIRQDisable
+                0x0800103c                musyxFXGetPanning
+                0x08001128                _musyxStreamInit
+                0x08001248                _musyxStreamVolume
+                0x08001684                _musyxIRQEnable
+                0x080015f8                musyxGBVolScaler
+                0x080013c8                musyxFXKeyoffAll
+                0x08001560                musyxGetFlag
+                0x08001348                musyxSetNewNumberOfSampleVoices
+                0x08001508                musyxDelayEnable
+                0x08001598                musyxClearFlag
+                0x08000c28                musyxShutdown
+                0x08001540                musyxGetFlags
+                0x08000f48                musyxFXPanning
+                0x08000b84                musyxSilence
+                0x080015e8                musyxAGBVolScaler
+                0x08001620                _musyxMemcpy
+                0x08001774                _musyxStreamDelay
+                0x080016c8                _musyxStreamStart
+                0x0800099c                musyxInit
+                0x08001298                _musyxStreamUpdate
+                0x0800138c                musyxFXKeyoff
+                0x08001410                musyxFXActive
+                0x08000ea8                musyxFXVolume
+                0x08001638                _musyxRnd
+                0x08000c78                musyxFXStart
+                0x08001578                musyxSetFlag
+                0x080017b4                _musyxStreamQueryBlockSize
+                0x08001740                _musyxStreamPanning
+                0x080015b8                musyxMasterVolSong
+                0x08001454                musyxFXGetVolume
+                0x080016fc                _musyxStreamStop
+ .text          0x080017d0     0x14d8 ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_synth.o)
+                0x08002184                _musyxSetADSR
+                0x08002700                musyxHandle
+                0x08001e84                _musyxLastPortamento
+                0x08002b8c                _musyxSetPitchSweep
+                0x080017d0                _musyxResetHardware
+                0x080019b0                _musyxSoundOff
+                0x08002be0                _musyxKeyOffVoice
+                0x08002208                _musyxSetEnvelope
+                0x08001cb8                _musyxSetVibrato
+                0x08001b00                _musyxAddPanning
+                0x08001dc0                _musyxSetPortamento
+                0x08001a50                _musyxSetPanning
+                0x08002624                _musyxUpdateSampleVolume
+                0x08002a74                _musyxSetNoise
+                0x08002ae0                _musyxSoundOn
+                0x08002b20                _musyxLoadWaveRAM
+                0x08002c50                _musyxUpdateSamplePitch
+                0x08002a80                _musyxSetHardEnvelope
+                0x08002a60                _musyxSetDutyCycle
+ .text          0x08002ca8      0x854 ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_samples.o)
+                0x08003480                _musyxDirectSoundRestart
+                0x08003454                _musyxClearDelayBuffer
+                0x080031c8                musyxTimerIRQ
+                0x08002ca8                _musyxInitSamples
+                0x08003398                _musyxCalcDelayBufBlocks
+                0x08003148                _musyxDirectSoundStop
+                0x080033b4                _musyxGetSamplingScale
+                0x08003348                _musyxCalcRealMixRate
+ .text          0x080034fc     0x1aac ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_macros.o)
+                0x080047c4                _musyxHandleMacros
+ .text          0x08004fa8      0xe54 ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_sequencer.o)
+                0x08005c7c                musyxGetSeqStateSize
+                0x08005c38                musyxChangeSongSpeed
+                0x08005dac                _musyxInitSampleVarsBare
+                0x080053f0                musyxSaveSeqState
+                0x080054d8                musyxRestoreSeqState
+                0x08005284                musyxPauseSong
+                0x08005bd8                musyxStartSong
+                0x08005010                musyxInitSong
+                0x08005b80                _musyxInitPSGVarsBare
+                0x08005d84                _musyxAllocSound
+                0x08005798                _musyxHandleSequencer
+                0x080051cc                musyxStopSong
+                0x08005c84                _musyxInitSequencer
+                0x08005a78                _musyxInitSampleVars
+                0x08005c04                musyxResumeSong
+                0x08005ae8                _musyxInitPSGVars
+                0x08005cfc                _musyxAllocVoice
+                0x08005338                musyxSongActive
+ .text          0x08005dfc      0x204 ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_memory.o)
+                0x08005fe8                musyxCalcSimpleMemLayout
+                0x08005dfc                musyxCalcMemUsage
+ .text          0x08006000      0xa8c ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_mixer.o)
+                0x080068c4                musyxProcessDelayPatch
+                0x080061e4                musyxMixSample
+                0x08006a88                musyxProcessDelayMEND
+                0x08006580                musyxMixSamplePatchM
+                0x0800601c                _musyxIRQDisableHW
+                0x080063c4                musyxMixSampleSN
+                0x080069e4                musyxProcessDelayM
+                0x080061e4                musyxDownMixMEND
+                0x0800614c                musyxDownMixM
+                0x08006550                musyxMixSampleSNEND
+                0x080063c4                musyxMixSampleEND
+                0x08006890                musyxMixSampleMNEND
+                0x08006704                musyxMixSampleMN
+                0x08006220                musyxMixSamplePatch
+                0x08006038                musyxDownMix
+                0x0800614c                musyxDownMixEND
+                0x08006154                musyxDownMixPatchM
+                0x08006550                musyxMixSampleM
+                0x08006934                musyxProcessDelayMS
+                0x08006040                musyxDownMixPatch
+                0x08006734                musyxMixSamplePatchMN
+                0x08006934                musyxProcessDelayEND
+                0x08006a18                musyxProcessDelayPatchM
+                0x08006704                musyxMixSampleMEND
+                0x08006968                musyxProcessDelayPatchMS
+                0x080069e4                musyxProcessDelayMSEND
+                0x08006000                _musyxIRQEnableHW
+                0x08006400                musyxMixSamplePatchSN
+                0x08006890                musyxProcessDelay
+ .text          0x08006a8c        0x4 /agb/lib/libagbsyscall.a(AgbSysCpuFastSet.o)
+                0x08006a8c                CpuFastSet
+ .text          0x08006a90        0x4 /agb/lib/libagbsyscall.a(AgbSysCpuSet.o)
+                0x08006a90                CpuSet
+ .text          0x08006a94        0x4 /agb/lib/libagbsyscall.a(AgbSysRegisterRamReset.o)
+                0x08006a94                RegisterRamReset
+ .text          0x08006a98        0x8 /agb/lib/libagbsyscall.a(AgbSysVBlankIntrWait.o)
+                0x08006a98                VBlankIntrWait
+ .text          0x08006aa0       0x3c C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_call_via_rX.o)
+                0x08006aa8                _call_via_r2
+                0x08006ab8                _call_via_r6
+                0x08006ab4                _call_via_r5
+                0x08006aac                _call_via_r3
+                0x08006acc                _call_via_fp
+                0x08006ac0                _call_via_r8
+                0x08006abc                _call_via_r7
+                0x08006aa0                _call_via_r0
+                0x08006ac8                _call_via_sl
+                0x08006ad4                _call_via_sp
+                0x08006ac4                _call_via_r9
+                0x08006ab0                _call_via_r4
+                0x08006aa4                _call_via_r1
+                0x08006ad0                _call_via_ip
+                0x08006ad8                _call_via_lr
+ .text          0x08006adc       0x94 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_divsi3.o)
+                0x08006adc                __divsi3
+ .text          0x08006b70        0x4 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_dvmd_tls.o)
+                0x08006b70                __div0
+ .text          0x08006b74       0x34 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_fixunssfsi.o)
+                0x08006b74                __fixunssfsi
+ .text          0x08006ba8       0x78 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_udivsi3.o)
+                0x08006ba8                __udivsi3
+ .text          0x08006c20       0xc0 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_umodsi3.o)
+                0x08006c20                __umodsi3
+ .text          0x08006ce0      0x94c C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(fp-bit.o)
+                0x08007154                __divsf3
+                0x0800755c                __fixsfsi
+                0x080075e8                __make_fp
+                0x08006fbc                __subsf3
+                0x080074b4                __lesf2
+                0x08007600                __extendsfdf2
+                0x08007394                __nesf2
+                0x08006d98                __unpack_f
+                0x080073dc                __gtsf2
+                0x08006ce0                __pack_f
+                0x080074fc                __floatsisf
+                0x0800734c                __eqsf2
+                0x080075c4                __negsf2
+                0x08007324                __cmpsf2
+                0x0800746c                __ltsf2
+                0x08006ff0                __mulsf3
+                0x08007424                __gesf2
+                0x08007240                __fpcmp_parts_f
+                0x08006f90                __addsf3
+ .text          0x0800762c       0x70 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_muldi3.o)
+                0x0800762c                __muldi3
+ .text          0x0800769c      0xd9c C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(dp-bit.o)
+                0x080080c0                __cmpdf2
+                0x080080ec                __eqdf2
+                0x08008184                __gtdf2
+                0x080083cc                __make_dp
+                0x080082b4                __floatsidf
+                0x0800821c                __ltdf2
+                0x080077e4                __unpack_d
+                0x08007b28                __adddf3
+                0x08008330                __fixdfsi
+                0x08008268                __ledf2
+                0x08007fc0                __fpcmp_parts_d
+                0x080083a4                __negdf2
+                0x08007e38                __divdf3
+                0x08007b90                __muldf3
+                0x080083f4                __truncdfsf2
+                0x08008138                __nedf2
+                0x080081d0                __gedf2
+                0x08007b58                __subdf3
+                0x0800769c                __pack_d
+ .text          0x08008438       0x34 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_lshrdi3.o)
+                0x08008438                __lshrdi3
+ .text          0x0800846c       0x18 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_negdi2.o)
+                0x0800846c                __negdi2
+ *(.text.*)
+ *(.stub)
+ *(.gnu.warning)
+ *(.gnu.linkonce.t*)
+ *(.glue_7t)
+ .glue_7t       0x08008484       0x18 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_negdi2.o)
+                0x08008484                __irqEnable_from_thumb
+                0x08008494                ___musyxIRQEnableHW_from_thumb
+                0x0800848c                ___musyxIRQDisableHW_from_thumb
+                0x08008490                ___musyxIRQDisableHW_change_to_arm
+                0x08008488                __irqEnable_change_to_arm
+                0x08008498                ___musyxIRQEnableHW_change_to_arm
+ *(.glue_7)
+                0x0800849c                _etext=.
+                0x0800849c                PROVIDE (etext, .)
+
+.fini
+ *(.fini)
+
+.rodata         0x0800849c     0x2404
+ *(.rodata)
+ .rodata        0x0800849c       0x38 main.o
+                0x0800849c                IntrTable
+ .rodata        0x080084d4     0x2320 data.o
+                0x080089d4                OamData_Sample
+                0x080089f4                PlttData_Sample
+                0x08008bf4                CharData_Sample
+                0x080084d4                BgScData_Sample
+ .rodata        0x0800a7f4       0xac ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_synth.o)
+ *(.rodata.*)
+ *(.gnu.linkonce.r*)
+
+.rodata1
+ *(.rodata1)
+                0x0800a9a0                .=(ALIGN(0x100)+(.&0xff))
+
+.data           0x0800a9a0    0x1207c
+ *(.data)
+ .data          0x0800a9a0    0x11ce4 demo.o
+                0x0801c684                _binary_demo_proj_end
+                0x0800a9a0                _binary_demo_proj_start
+ .data          0x0801c684       0x30 ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_synth.o)
+ .data          0x0801c6b4      0x290 ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_samples.o)
+                0x0801c6b4                _musyxPWMWave
+ .data          0x0801c944       0xd8 ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx_macros.o)
+ *(.data.*)
+ *(.gnu.linkonce.d*)
+
+.data1
+ *(.data1)
+
+.ctors
+ EXCLUDE_FILE ( *crtend.o )*(.ctors)
+ *(SORT(.ctors.*))
+ *crtend(.ctors)
+
+.dtors
+ EXCLUDE_FILE ( *crtend.o )*(.dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+
+.got
+ *(.got.plt)
+ *(.got)
+
+.dynamic
+ *(.dynamic)
+
+.sdata
+ *(.sdata)
+ *(.sdata.*)
+                0x0801ca1c                _edata=.
+                0x0801ca1c                PROVIDE (edata, .)
+                0x0801ca1c                __bss_start=.
+                0x0801ca1c                __bss_start__=.
+
+.sbss
+ *(.sbss)
+ *(.scommon)
+
+.bss            0x03000000     0x63c4
+ *(.dynbss)
+ *(.bss)
+ .bss           0x03000000     0x5008 main.o
+ .bss           0x03005008       0x10 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(fp-bit.o)
+ .bss           0x03005018       0x14 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(dp-bit.o)
+ *(.bss.*)
+ *(COMMON)
+ *fill*         0x0300502c        0x4
+ COMMON         0x03005030     0x10a0 main.o
+                                  0x0 (size before relaxing)
+                0x03005030                UsrSendBuf
+                0x03005040                IntrTableBuf
+                0x03005078                Cont
+                0x0300507c                Trg
+                0x03005080                SioFlags
+                0x03005090                IntrMainBuf
+                0x03005490                UsrRecvBuf
+                0x030054d0                OamBak
+                0x030058d0                BgBak
+ COMMON         0x030060d0      0x2f0 MultiSio.o
+                                  0x0 (size before relaxing)
+                0x030060d0                IntrFuncBuf
+                0x030061d0                Ms
+                0x03006380                RecvFuncBuf
+ COMMON         0x030063c0        0x4 ./libMusyX_thumb.a(d:/Projects/AGB/MusyX/obj/musyx.o)
+                                  0x0 (size before relaxing)
+                0x030063c0                _musyxVars
+                0x030063c4                .=ALIGN(0x4)
+                0x030063c4                .=ALIGN(0x4)
+                0x030063c4                _end=.
+                0x030063c4                _bss_end__=.
+                0x030063c4                __bss_end__=.
+                0x030063c4                PROVIDE (end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x100
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 main.o
+ .debug_aranges
+                0x00000020       0x20 MultiSio.o
+ .debug_aranges
+                0x00000040       0x20 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_fixunssfsi.o)
+ .debug_aranges
+                0x00000060       0x20 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(fp-bit.o)
+ .debug_aranges
+                0x00000080       0x20 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_muldi3.o)
+ .debug_aranges
+                0x000000a0       0x20 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(dp-bit.o)
+ .debug_aranges
+                0x000000c0       0x20 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_lshrdi3.o)
+ .debug_aranges
+                0x000000e0       0x20 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_negdi2.o)
+
+.debug_pubnames
+                0x00000000      0x46e
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0xd4 main.o
+ .debug_pubnames
+                0x000000d4       0x61 data.o
+ .debug_pubnames
+                0x00000135       0x8d MultiSio.o
+ .debug_pubnames
+                0x000001c2       0x23 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_fixunssfsi.o)
+ .debug_pubnames
+                0x000001e5      0x116 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(fp-bit.o)
+ .debug_pubnames
+                0x000002fb       0x1f C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_muldi3.o)
+ .debug_pubnames
+                0x0000031a      0x115 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(dp-bit.o)
+ .debug_pubnames
+                0x0000042f       0x20 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_lshrdi3.o)
+ .debug_pubnames
+                0x0000044f       0x1f C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_negdi2.o)
+
+.debug_info     0x00000000     0xa74c
+ *(.debug_info)
+ .debug_info    0x00000000     0x3741 main.o
+ .debug_info    0x00003741     0x2e60 data.o
+ .debug_info    0x000065a1     0x32c9 MultiSio.o
+ .debug_info    0x0000986a       0xc5 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_fixunssfsi.o)
+ .debug_info    0x0000992f      0x5ee C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(fp-bit.o)
+ .debug_info    0x00009f1d       0xc1 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_muldi3.o)
+ .debug_info    0x00009fde      0x5ed C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(dp-bit.o)
+ .debug_info    0x0000a5cb       0xc1 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_lshrdi3.o)
+ .debug_info    0x0000a68c       0xc0 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_negdi2.o)
+
+.debug_abbrev   0x00000000      0x54b
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x181 main.o
+ .debug_abbrev  0x00000181      0x101 data.o
+ .debug_abbrev  0x00000282      0x16f MultiSio.o
+ .debug_abbrev  0x000003f1       0x20 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_fixunssfsi.o)
+ .debug_abbrev  0x00000411       0x6d C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(fp-bit.o)
+ .debug_abbrev  0x0000047e       0x20 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_muldi3.o)
+ .debug_abbrev  0x0000049e       0x6d C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(dp-bit.o)
+ .debug_abbrev  0x0000050b       0x20 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_lshrdi3.o)
+ .debug_abbrev  0x0000052b       0x20 C:\cygnus\thumbelf-000512\H-i686-cygwin32\bin/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_negdi2.o)
+
+.debug_line     0x00000000      0x61b
+ *(.debug_line)
+ .debug_line    0x00000000      0x2f5 main.o
+ .debug_line    0x000002f5      0x326 MultiSio.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.stack          0x00080000        0x0
+                0x00080000                _stack=.
+ *(.stack)
+OUTPUT(multi_sio.elf elf32-littlearm)

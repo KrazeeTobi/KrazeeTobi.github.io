@@ -1,0 +1,147 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Arguments to Specify the Goals</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeArguments_to_Specify_the_Makefil.html">Previous</A>|<A HREF="makeInstead_of_Executing_the_Command.html">Next</A>
+<BR><A NAME="off_1706515"></A><A NAME="2fbc2399"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Arguments
+to specify the goals</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+<I>goals</I> are the targets that </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+should strive ultimately to update. Other targets are updated as well if
+they appear as dependencies of goals, or dependencies of dependencies of
+goals, etc.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>By default, the goal is the
+first target in the makefile (not counting targets that start with a period).
+Therefore, makefiles are usually written so that the first target is for
+compiling the entire program or programs they describe. If the first rule
+in the makefile has several targets, only the first target in the rule
+becomes the default goal, not the whole list.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can specify a different
+goal or goals with arguments to </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Use the name of the goal as an argument. If you specify several goals,
+make processes each of them in turn, in the order you name them. Any target
+in the makefile may be specified as a goal (unless it starts with ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>-</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or contains an ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>=</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+in which case it will be parsed as a switch or variable definition, respectively).
+Even targets not in the makefile may be specified, if </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can find implicit rules that say how to make them.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>One use of specifying a goal
+is if you want to compile only a part of the program, or only one of several
+programs. Specify as a goal each file that you wish to remake. For example,
+consider a directory containing several programs, with a makefile that
+starts like the following example declaration.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>.PHONY: all all: size nm ld
+ar as</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you are working on the
+program, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+you might want to say ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make
+size</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ so that
+only the files of that program are recompiled.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Another use of specifying
+a goal is to make files that are not normally made. For example, there
+may be a file of debugging output, or a version of the program that is
+compiled specially for testing, which has a rule in the makefile but is
+not a dependency of the default goal.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Another use of specifying
+a goal is to run the commands associated with a phony target (see <FONT COLOR="#008000"><A HREF="makePhony_Targets.html">Phony
+targets</A></FONT>) or empty target (see <FONT COLOR="#008000"><A HREF="makeEmpty_Target_Files_to_Record_Eve.html">Empty
+target files to record events</A></FONT>). Many makefiles contain a phony
+target named ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+which deletes everything except source files. Naturally, this is done only
+if you request it explicitly with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make
+clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Following is a list of typical
+phony and empty target names. See <FONT COLOR="#008000"><A HREF="makeStandard_Targets_for_Users.html">Standard
+targets for users</A></FONT> for a detailed list of all the standard target
+names which GNU software packages use.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>all</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Makes all the top-level
+targets about which the makefile knows.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Deletes all files that are
+normally created by running </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mostlyclean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Like ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+but may refrain from deleting a few files that people normally don’t want
+to recompile. For example, the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>mostlyclean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+target for GCC does not delete ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+because recompiling it is rarely necessary and takes a lot of time.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>distclean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>realclean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>clobber</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Any of these targets might
+be defined to delete more files than ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+does. For example, this would delete configuration files or links that
+you would normally create as preparation for compilation, even if the makefile
+itself cannot create these files.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>install</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Copies the executable file
+into a directory that users typically search for commands; copy any auxiliary
+files that the executable uses into the directories where it will look
+for them.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Prints listings of the source
+files that have changed.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>tar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Creates a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>tar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file of the source files.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>shar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Creates a shell archive
+(</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>shar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file) of the source files.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>dist</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Creates a distribution file
+of the source files. This might be a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>tar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file, or a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>shar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file, or a compressed version of one of the previous targets, or even more
+than one of the previous targets.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>TAGS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Updates a tags table for
+this program.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>check</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>test</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Performs self tests on the
+program this makefile builds.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeArguments_to_Specify_the_Makefil.html">Previous</A>|<A HREF="makeInstead_of_Executing_the_Command.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

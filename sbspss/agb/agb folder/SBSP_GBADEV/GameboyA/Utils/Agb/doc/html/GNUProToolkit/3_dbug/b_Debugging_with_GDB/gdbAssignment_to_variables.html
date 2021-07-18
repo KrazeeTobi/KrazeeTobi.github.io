@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Assignment to variables</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbAltering_Execution.html">Previous</A>|<A HREF="gdbContinuing_at_a_different_addres.html">Next</A>
+<BR><A NAME="off_2162688"></A><A NAME="69f97501"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Assignment
+to variables</FONT></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>To alter
+the value of a variable, evaluate an assignment expression. See <FONT COLOR="#008000"><A HREF="gdbExpressions.html">Expressions</A></FONT>.
+For example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print
+x=4 </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>stores the
+value 4 into the variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and then prints the value of the assignment expression (which is 4). See
+<FONT COLOR="#008000"><A HREF="gdbUsing_GDB_with_Different_Languag.html">Using
+GDB with different languages</A></FONT> for more information on operators
+in supported languages.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you are not interested
+in seeing the value of the assignment, use the set command instead of the
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is really the same as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+except that the expression’s value is not printed and is not put in the
+value history (see <FONT COLOR="#008000"><A HREF="gdbValue_history.html">Value
+history</A></FONT>). The expression is evaluated only for its effects.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If the beginning of the argument
+string of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command appears identical to a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+subcommand, use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+variable</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> command
+instead of only </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+This command is identical to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+except for its lack of subcommands.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, if your program
+has a variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>width</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+you get an error if you try to set a new value with just ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+width=13</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’, because
+GDB has the command </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+width</FONT></FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>, as
+the following example shows.</FONT></FONT>
+<UL><TT><FONT SIZE=+1><B>(gdb)</B> whatis width<B></B></FONT></TT>
+<BR><B><TT><FONT SIZE=+1>type = double</FONT></TT></B>
+<BR><TT><FONT SIZE=+1><B>(gdb)</B> p width</FONT></TT>
+<BR><B><TT><FONT SIZE=+1>$4 = 13</FONT></TT></B>
+<BR><TT><FONT SIZE=+1><B>(gdb)</B> set width=47</FONT></TT>
+<BR><B><TT><FONT SIZE=+1>Invalid syntax in expression.</FONT></TT></B>
+<BR>&nbsp;</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The invalid expression, of course,
+is ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>=47</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+In order to actually set the program’s variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>width</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>(gdb) set var
+width=47</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB allows more implicit
+conversions in assignments than C; you can freely store an integer value
+into a pointer variable or vice versa, and you can convert any structure
+to any other structure that is the same length or shorter. To store values
+into arbitrary places in memory, use the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>{...}</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+construct to generate a value of specified type at a specified address
+(see <FONT COLOR="#008000"><A HREF="gdbExpressions.html">Expressions</A></FONT>).
+For example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>{int}0x83040
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>refers to memory
+location </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0x83040</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as an integer (which implies a certain size and representation in memory),
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set {int}0x83040
+= 4</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> stores the
+value 4 into that memory location.</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbAltering_Execution.html">Previous</A>|<A HREF="gdbContinuing_at_a_different_addres.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

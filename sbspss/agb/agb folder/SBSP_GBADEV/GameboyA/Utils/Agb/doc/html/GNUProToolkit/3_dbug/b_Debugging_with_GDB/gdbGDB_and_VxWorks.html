@@ -1,0 +1,149 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>GDB and VxWorks</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbGDB_with_a_Tandem_ST2000.html">Previous</a>|<a href="gdbGDB_and_SPARClet.html">Next</a>
+<br><a NAME="off_2722566"></a><a NAME="92aee712"></a><b><font face="Futura Md BT"><font size=+3>GDB
+and VxWorks</font></font></b>
+<br>
+<hr SIZE=3 WIDTH="100%"><font face="Times New Roman"><font size=+1>GDB
+enables developers to spawn and debug tasks running on networked VxWorks
+targets from a Unix host. Already-running tasks spawned from the VxWorks
+shell can also be debugged. GDB uses code that runs on both the Unix host
+and on the VxWorks target. The program gdb is installed and executed on
+the Unix host. (It may be installed with the name, </font></font><font face="Courier New"><font size=+0>vxgdb</font></font><font face="Times New Roman"><font size=+1>,
+to distinguish it from a GDB for debugging programs on the host itself.)</font></font>
+<ul><font face="Courier New"><font size=+0>VxWorks-timeout<i>args</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>All VxWorks-based targets
+now support the option </font></font><font face="Courier New"><font size=+0>vxworks-timeout</font></font><font face="Times New Roman"><font size=+1>.
+This option is set by the user, and </font></font><i><font face="Courier New"><font size=+0>args
+</font></font></i><font face="Times New Roman"><font size=+1>represents
+the number of seconds GDB waits for responses to rpc’s. You might use this
+if your VxWorks target is a slow software simulator or is on the far side
+of a thin network line.</font></font></ul>
+</ul>
+<font face="Times New Roman"><font size=+1>The following information on
+connecting to VxWorks was current when this documentation was produced;
+newer releases of VxWorks may use revised procedures.</font></font>
+<ul>
+<ul>
+<ul>
+<li>
+<font face="Times New Roman"><font size=+1><a href="#Connect">Connecting
+to VxWorks</a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1><a href="#download">VxWorks
+download</a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1><a href="#tasks">Running tasks</a></font></font></li>
+</ul>
+</ul>
+</ul>
+<font face="Times New Roman"><font size=+1>To use GDB with VxWorks, you
+must rebuild your VxWorks kernel to include the remote debugging interface
+routines in the VxWorks library ‘</font></font><font face="Courier New"><font size=+0>rdb.a</font></font><font face="Times New Roman"><font size=+1>’.
+To do this, define </font></font><font face="Courier New"><font size=+0>INCLUDE_RDB</font></font><font face="Times New Roman"><font size=+1>
+in the VxWorks configuration file ‘</font></font><font face="Courier New"><font size=+0>configAll.h</font></font><font face="Times New Roman"><font size=+1>’
+and rebuild your VxWorks kernel. The resulting kernel contains ‘</font></font><font face="Courier New"><font size=+0>rdb.a</font></font><font face="Times New Roman"><font size=+1>’,
+and spawns the source debugging task, </font></font><font face="Courier New"><font size=+0>tRdbTask</font></font><font face="Times New Roman"><font size=+1>,
+when VxWorks is booted. For more information on configuring and remaking
+VxWorks, see the manufacturer’s manual. Once you have included ‘</font></font><font face="Courier New"><font size=+0>rdb.a</font></font><font face="Times New Roman"><font size=+1>’
+in your VxWorks system image and set your Unix execution search path to
+find GDB, you are ready to run GDB. From your Unix host, run </font></font><font face="Courier New"><font size=+0>gdb</font></font><font face="Times New Roman"><font size=+1>
+(or </font></font><font face="Courier New"><font size=+0>vxgdb</font></font><font face="Times New Roman"><font size=+1>,
+depending on your installation). GDB comes up showing the prompt, </font></font><b><font face="Courier New"><font size=+0>(vxgdb)</font></font></b><font face="Times New Roman"><font size=+1>.</font></font>
+<p><a NAME="Connect"></a><b><i><font face="Times New Roman"><font size=+2>Connecting
+to VxWorks</font></font></i></b>
+<p><font face="Times New Roman"><font size=+1>The GDB command target lets
+you connect to a VxWorks target on the network. To connect to a target
+whose host name is “</font></font><font face="Courier New"><font size=+0>tt</font></font><font face="Times New Roman"><font size=+1>”,
+type at the </font></font><b><font face="Courier New"><font size=+0>(vxgdb)
+</font></font></b><font face="Times New Roman"><font size=+1>prompt:</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0><b>(vxgdb) </b>target vxworks
+tt</font></font></ul>
+<font face="Times New Roman"><font size=+1>GDB displays messages like these:</font></font>
+<br>&nbsp;
+<ul><b><font face="Courier New"><font size=+0>Attaching remote machine
+across net...</font></font></b>
+<br><b><font face="Courier New"><font size=+0>Connected to tt.</font></font></b></ul>
+<font face="Times New Roman"><font size=+1>GDB then attempts to read the
+symbol tables of any object modules loaded into the VxWorks target since
+it was last booted. GDB locates these files by searching the directories
+listed in the command search path (see <font color="#008000"><a href="gdbYour_programs_environment.html">Your
+program’s environment</a></font>); if it fails to find an object file,
+it displays a message such as the following example of output.</font></font>
+<br>&nbsp;
+<ul><b><font face="Courier New"><font size=+0>prog.o: No such file or directory.</font></font></b></ul>
+<font face="Times New Roman"><font size=+1>When this happens, add the appropriate
+directory to the search path with the GDB command path, and execute the
+target command again.</font></font>
+<p><a NAME="download"></a><b><i><font face="Times New Roman"><font size=+2>VxWorks
+download</font></font></i></b>
+<p><font face="Times New Roman"><font size=+1>If you have connected to
+the VxWorks target and you want to debug an object that has not yet been
+loaded, you can use the GDB </font></font><font face="Courier New"><font size=+0>load</font></font><font face="Times New Roman"><font size=+1>
+command to download a file from Unix to VxWorks incrementally.</font></font>
+<p><font face="Times New Roman"><font size=+1>The object file given as
+an argument to the </font></font><font face="Courier New"><font size=+0>load</font></font><font face="Times New Roman"><font size=+1>
+command is actually opened twice: first by the VxWorks target in order
+to download the code, then by GDB in order to read the symbol table. This
+can lead to problems if the current working directories on the two systems
+differ.</font></font>
+<p><font face="Times New Roman"><font size=+1>If both systems have had
+NFS mount the same filesystems, you can avoid these problems by using absolute
+paths. Otherwise, it is simplest to set the working directory on both systems
+to the directory in which the object file resides, and then to reference
+the file by its name, without any path.</font></font>
+<p><font face="Times New Roman"><font size=+1>For instance, a program ‘</font></font><font face="Courier New"><font size=+0>prog.o</font></font><font face="Times New Roman"><font size=+1>’
+may reside in ‘</font></font><font face="Courier New"><font size=+0><i>vxpath</i>/vw/demo/rdb</font></font><font face="Times New Roman"><font size=+1>’
+in VxWorks and in ‘</font></font><font face="Courier New"><font size=+0><i>hostpath</i>/vw/demo/rdb</font></font><font face="Times New Roman"><font size=+1>’
+on the host.</font></font>
+<p><font face="Times New Roman"><font size=+1>To load this program on VxWorks,
+type: </font></font><font size=+0><font face="Courier New">-> cd </font><font face="Times New Roman">“</font><font face="Courier New"><i>vxpath</i>/vw/demo/rdb</font><font face="Times New Roman">”</font></font>
+<p><font face="Times New Roman"><font size=+1>Then, in GDB, type the following
+commands at the
+</font></font><b><font face="Courier New"><font size=+0>(vxgdb)</font></font></b><font face="Times New Roman"><font size=+1>prompt:</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0>cd <i>hostpath</i>/vw/demo/rdb</font></font>
+<br><font face="Courier New"><font size=+0>load prog.o</font></font></ul>
+<font face="Times New Roman"><font size=+1>GDB displays a response similar
+to to the following output.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0><b>Reading symbol data from
+</b><i>wherever</i><b>/vw/demo/rdb/prog.o</b></font></font>
+<br><b><font face="Courier New"><font size=+0>...</font></font></b>
+<br><b><font face="Courier New"><font size=+0>Done.</font></font></b></ul>
+<font face="Times New Roman"><font size=+1>You can also use the </font></font><font face="Courier New"><font size=+0>load</font></font><font face="Times New Roman"><font size=+1>
+command to reload an object module after editing and recompiling the corresponding
+source file.</font></font>
+<br>&nbsp;
+<ul><font face="Times New Roman"><font size=+1><i>Note</i>:</font></font>
+<br><font face="Times New Roman"><font size=+1>This makes GDB delete all
+currently-defined breakpoints, auto-displays, and convenience variables,
+and clears the value history. (This is necessary in order to preserve the
+integrity of debugger data structures that reference the target system’s
+symbol table.)</font></font></ul>
+
+<p><br><a NAME="tasks"></a><b><i><font face="Times New Roman"><font size=+2>Running
+tasks</font></font></i></b>
+<p><font size=+1><font face="Times New Roman">You can also attach to an
+existing task using the </font><tt>attach</tt><font face="Times New Roman">
+command as follows.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0>attach <i>task</i></font></font></ul>
+<i><font face="Courier New"><font size=+0>task</font></font></i><font face="Times New Roman"><font size=+1>
+is the VxWorks hexadecimal task ID. The task can be running or suspended
+when you attach to it. Running tasks are suspended at the time of attachment.</font></font>
+<br>
+<hr SIZE=3 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbGDB_with_a_Tandem_ST2000.html">Previous</a>|<a href="gdbGDB_and_SPARClet.html">Next</a></center>
+
+</body>
+</html>

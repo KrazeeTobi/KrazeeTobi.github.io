@@ -1,0 +1,77 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Microsoft FrontPage 4.0">
+		<title>Problems with the CGB Compatible Sound Envelope</title>
+		<!-- Edited by Matt P., 8/10/00-added link to style sheet
+Matt P., 9/29/00, reformatted back to original format per discussion by Tahara/Ron/Raychole-->
+		<link rel="stylesheet" type="text/css" href="style.css">
+	<STYLE TYPE="text/css">
+	<!--
+		H2 { color:black; text-align:center }
+		TABLE { border:0; padding:5; margin:1 }
+		TD { color:#303050; background-color:white }
+	-->
+	</STYLE>
+	</head>
+<BODY TEXT="#303050" BGCOLOR="#CCCCCC">
+
+	<br>
+	<center>
+		<h2><a name="cgbenv_0"></a>CGB Compatible Sound Envelope Problems</h2>
+	</center>
+	<p>
+	<hr width="600">
+	<table width="600" align="CENTER" summary="cgbenv_tbl_0">
+		<tr>
+			<td><!--If you try to operate the volume while producing sound with the old Game Boy sound circuit, noise is produced. So an envelope with software is not possible.  Therefore... -->
+				In this system, envelopes are created using hardware functions. For this reason, there are the following limitations.</td>
+		</tr>
+	</table>
+	<br>
+	<table width="600" align="CENTER" summary="cgbenv_tbl_1">
+		<tr>
+			<td>(1) Attenuation of the volume makes linear, not exponential changes, so it sounds unnatural to the ear.<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;(It sounds like the sound disappears too quickly.)</td>
+		</tr>
+	</table>
+	<br>
+	<table width="600" align="CENTER" summary="cgbenv_tbl_2">
+		<tr>
+			<td>(2) During amplification and attenuation, volume adjustments (changes in volume, tremolo, etc.) cannot be made.<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;The volume adjustment level will work only at the following times.&nbsp;<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;1) When a voice (sound/song) starts.&nbsp;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;2) When there is a shift from attack to decay.&nbsp;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;3) When there is a sustained sound.<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;4) When a release starts.&nbsp;<br>
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;(From the opposite perspective, the volume adjustment will work at these times, so it does not actually seem very restricted at
+              all.)&nbsp;</td>
+		</tr>
+	</table>
+	<br>
+	<table width="600" align="CENTER" summary="cgbenv_tbl_3">
+		<tr>
+			<td>(3) The range of possible settings for each envelope level&nbsp; (Attack, Decay, Release) is narrow and approximate.&nbsp;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;There are 7 stages, so it is really hard to get the tone color the way you want it.&nbsp;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;(In <a href="../yougo.html#mks4agb.ini" target="yougo">mks4agb.ini</a> , the settings range from 0 to 99, but these are actually converted to 7 stages.)</td>
+		</tr>
+	</table>
+	<p>
+	<hr width="600">
+	<table width="600" align="CENTER" summary="link">
+		<tr>
+			<td><b>Next:</b>[ <a href="cgbsnd4.html">CGB Compatible Sound 4 (Noise)
+              Scale</a> ]<br>
+				<b>Back:</b>[ <a href="sndbit.html"> Sound Output DA Conversion Frequencies
+              (Bit Counts)</a>]<br>
+				<b>TOP :</b>[ <a href="../index.html">Table of Contents</a> ]</td>
+		</tr>
+	</table>
+
+</html>

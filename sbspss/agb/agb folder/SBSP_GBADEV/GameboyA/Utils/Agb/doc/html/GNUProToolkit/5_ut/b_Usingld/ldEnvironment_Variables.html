@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Environment Variables</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="ld.html">Contents</A>|<A HREF="ldindex.html">Index</A>|<A HREF="ldCommand_Line_Options.html">Previous</A>|<A HREF="ldLinker_scripts.html">Next</A>
+<BR><A NAME="off_296787"></A><A NAME="6d98a721"></A><FONT FACE="Futura Md BT"><B><FONT SIZE=+3>Environment
+variables</FONT></B></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>You
+can change the behavior of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with the environment variable </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>GNUTARGET</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>GNUTARGET</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+determines the input-file object format if you don’t use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(or its synonym, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-format</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’).
+Its value should be one of the BFD names for an input format (see <FONT COLOR="#008000"><A HREF="ldBFD.html">BFD</A></FONT>).
+If there is no </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>GNUTARGET</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in the environment, l</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>d</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+uses the natural format of the target. If </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>GNUTARGET</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is set to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>default</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+, then BFD attempts to discover the input format by examining binary input
+files; this method often succeeds, but there are potential ambiguities,
+since there is no method of ensuring that the magic number used to specify
+object-file formats is unique. However, the configuration procedure for
+BFD on each system places the conventional format for that system first
+in the search-list, so ambiguities are resolved in favor of convention.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="ld.html">Contents</A>|<A HREF="ldindex.html">Index</A>|<A HREF="ldCommand_Line_Options.html">Previous</A>|<A HREF="ldLinker_scripts.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

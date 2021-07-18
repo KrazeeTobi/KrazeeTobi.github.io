@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Compiling for debugging</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbRunning_Programs_Under_GDB.html">Previous</A>|<A HREF="gdbStarting_your_program.html">Next</A>
+<BR><A NAME="off_525887"></A><A NAME="7eb721f1"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Compiling
+for debugging&nbsp;</FONT></FONT></FONT></B>
+<HR SIZE=3 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>In order to debug a program
+effectively, you need to generate debugging information when you compile
+it. This debugging information is stored in the object file; it describes
+the data type of each variable or function and the correspondence between
+source line numbers and addresses in the executable code.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To request debugging information,
+specify the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-g</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option when you run the compiler.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Many C compilers are unable
+to handle the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-g</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options together. Using those compilers, you cannot generate optimized
+executables containing debugging information.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>GCC, the GNU C compiler,
+supports ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-g</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+with or without ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+making it possible to debug optimized code. We recommend that you always
+use ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-g</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+whenever you compile a program. You may think your program is correct,
+but there is no sense in pushing your luck.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When you debug a program
+compiled with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-g
+-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’, remember
+that the optimizer is rearranging your code; the debugger shows you what
+is really there. Do not be too surprised when the execution path does not
+exactly match your source file! An extreme example: if you define a variable,
+but never use it, GDB never sees that variable—because the compiler optimizes
+it out of existence.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Some things do not work as
+well with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-g -O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+as with just ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-g</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+particularly on machines with instruction scheduling. If in doubt, recompile
+with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-g</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+alone, and if this fixes the problem, please report it to us as a bug (including
+a test case!).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Older versions of the GNU
+C compiler permitted a variant option ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-gg</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+for debugging information. GDB no longer supports this format; if your
+GNU C compiler has this option, <B><I>do not use</I></B> it.</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbRunning_Programs_Under_GDB.html">Previous</A>|<A HREF="gdbStarting_your_program.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

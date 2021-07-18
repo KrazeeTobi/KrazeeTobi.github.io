@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Constructor Expressions</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccNonConstant_Initializers.html">Previous</A>|<A HREF="gccLabeled_Elements_in_Initializers.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_3506176"></A><A NAME="a6ae7966"></A><B><FONT SIZE=+3>Constructor
+expressions&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GNU C supports constructor
+expressions. A constructor looks like a cast containing an initializer.
+Its value is an object of the type specified in the cast, containing the
+elements specified in the initializer.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Usually, the specified type
+is a structure. Assume that </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct
+foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>structure</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are declared as shown in the following.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>struct foo {int a; char b[2];} structure;</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The following is an example
+of constructing a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct
+foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> with a constructor.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>structure = ((struct foo) {x + y, 'a', 0});</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This is equivalent to writing
+the following.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>{&nbsp;
+&nbsp;&nbsp; struct foo temp = {x + y, 'a', 0};&nbsp;
+&nbsp;&nbsp; structure = temp;&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You can also construct an array.
+If all the elements of the constructor are (made up of) simple constant
+expressions, suitable for use in initializers, then the constructor is
+an lvalue and can be coerced to a pointer to its first element, as shown
+in the following.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>char **foo = (char *[]) { "x", "y", "z" };</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Array constructors whose elements
+are not simple constants are not very useful, because the constructor is
+not an lvalue. There are only two valid ways to use it: to subscript it,
+or initialize an array variable with it. The former is probably slower
+than a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>switch</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+statement, while the latter does the same thing an ordinary C initializer
+would do. The following is an example of subscripting an array constructor.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>output = ((int[]) { 2, x, 28 }) [input];</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Constructor expressions for
+scalar types and union types are is also allowed, but then the constructor
+expression is equivalent to a cast.</FONT></FONT>
+</BODY>
+</HTML>

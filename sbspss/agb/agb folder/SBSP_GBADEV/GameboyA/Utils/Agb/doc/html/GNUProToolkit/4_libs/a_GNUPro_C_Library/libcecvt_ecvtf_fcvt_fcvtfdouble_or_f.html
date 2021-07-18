@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>ecvt, ecvtf, fcvt, fcvtf[double or float to string]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcdivdivide_two_integers.html">Previous</A>|<A HREF="libcgvcvt_gcvtfformat_double_or_floa.html">Next</A>
+</P>
+
+<P><A NAME="off_229376"></A><A NAME="0aa7f9a0"></A><A NAME="off_229376"></A><A NAME="0aa7f9a0"></A><A NAME="off_229376"></A><A NAME="0aa7f9a0"></A><A NAME="off_229376"></A><A NAME="0aa7f9a0"></A><A NAME="off_229376"></A><A NAME="0aa7f9a0"></A><A NAME="off_229376"></A><A NAME="0aa7f9a0"></A><A NAME="off_229376"></A><A NAME="0aa7f9a0"></A><FONT SIZE=+3><FONT FACE="Courier New">ecvt</FONT><FONT FACE="Times New Roman">,
+</FONT><FONT FACE="Courier New">ecvtf</FONT><FONT FACE="Times New Roman">,
+</FONT><FONT FACE="Courier New">fcvt</FONT><FONT FACE="Times New Roman">,
+</FONT><FONT FACE="Courier New">fcvtf <BR>
+</FONT><FONT FACE="Times New Roman">[double or float to string] </FONT></FONT></P>
+
+<PRE><B><FONT FACE="Times New Roman"><FONT SIZE=+2>SYNOPSIS 
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+1>#include &lt;stdlib.h&gt; </FONT></FONT></PRE>
+
+<PRE><FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>char *ecvt(double <I>val</I>, int <I>chars</I>, int *<I>decpt</I>, int *<I>sgn</I>); 
+char *ecvtf(float <I>val</I>, int <I>chars</I>, int *<I>decpt</I>, int *<I>sgn</I>); 
+
+char *fcvt(double <I>val</I>, int <I>decimals</I>, int *<I>decpt</I>, int *<I>sgn</I>); 
+char *fcvtf(float <I>val</I>, int <I>decimals</I>, int *<I>decpt</I>, int *<I>sgn</I>); </FONT></FONT></FONT></PRE>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>ecvt</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fcvt</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">produce (null-terminated) strings of
+digits representing the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>double</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">number </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>val</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ecvtf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fcvtf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">produce the corresponding character
+representations of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>float</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">numbers. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>(The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdlib</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">functions, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ecvtbuf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fcvtbuf</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">,</FONT><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">are reentrant versions of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ecvt</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fcvt</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.)
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The only difference between
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ecvt</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fcvt</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is the interpretation of the second
+argument (</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>chars</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">or </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>decimals</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+For </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ecvt</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the second argument </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>chars</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">specifies the total number of characters
+to write (which is also the number of significant digits in the formatted
+string, since these two functions write only digits). For </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fcvt</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the second argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>decimals</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+specifies the number of characters to write after the decimal point; all
+digits for the integer part of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>val</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">are always included. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Since </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ecvt</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fcvt</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">write only digits in the output string,
+they record the location of the decimal point in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*<I>decpt</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and the sign of the number in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*<I>sgn</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+After formatting a number, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*<I>decpt
+</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>contains the
+number of digits to the left of the decimal point. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*<I>sgn
+</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>contains </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">if the number is positive, and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>1</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">if it is negative. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>RETURNS <BR>
+</B>All four functions return a pointer to the new string containing a
+character representation of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>val</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>COMPLIANCE <BR>
+</B>None of these functions are ANSI C. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Supporting OS subroutines
+required: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>close</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fstat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>isatty</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>lseek</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>read</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sbrk</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>write</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+</BODY>
+</HTML>

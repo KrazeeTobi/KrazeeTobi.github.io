@@ -1,0 +1,115 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Break conditions</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbDisabling_breakpoints.html">Previous</a>|<a href="gdbBreakpoint_command_lists.html">Next</a>
+<br><a NAME="off_918800"></a><a NAME="0d124b5a"></a><b><font face="Futura Md BT"><font color="#000000"><font size=+3>Break
+conditions&nbsp;</font></font></font></b>
+<hr SIZE=3 WIDTH="100%">
+<br><font face="Times New Roman"><font size=+1>The simplest sort of breakpoint
+breaks every time your program reaches a specified place. You can also
+specify a <i>condition</i> for a breakpoint. A condition is just a Boolean
+expression in your programming language (see <font color="#008000"><a href="gdbExpressions.html">Expressions</a></font>).
+A breakpoint with a condition evaluates the expression each time your program
+reaches it, and your program stops only if the condition is <i>true</i>.</font></font>
+<p><font face="Times New Roman"><font size=+1>This is the converse of using
+assertions for program validation; in that situation, you want to stop
+when the assertion is violated—that is, when the condition is false. In
+C, if you want to test an assertion expressed by the condition, </font></font><i><font face="Courier New"><font size=+0>assert</font></font></i><font face="Times New Roman"><font size=+1>,
+you should set the condition ‘</font></font><font face="Courier New"><font size=+0>!
+<i>assert</i></font></font><font face="Times New Roman"><font size=+1>’
+on the appropriate breakpoint.</font></font>
+<p><font face="Times New Roman"><font size=+1>Conditions are also accepted
+for watchpoints; you may not need them, since a watchpoint is inspecting
+the value of an expression anyhow—but it might be simpler, say, to just
+set a watchpoint on a variable name, and specify a condition that tests
+whether the new value is an interesting one.</font></font>
+<p><font face="Times New Roman"><font size=+1>Break conditions can have
+side effects, and may even call functions in your program. This can be
+useful, for example, to activate functions that log program progress, or
+to use your own print functions to format special data structures. The
+effects are completely predictable unless there is another enabled breakpoint
+at the same address. (In that case, GDB might see the other breakpoint
+first and stop your program without checking the condition of this one.)
+Note that breakpoint commands are usually more convenient and flexible
+for the purpose of performing side effects when a breakpoint is reached
+(see <font color="#008000"><a href="gdbBreakpoint_command_lists.html">Breakpoint
+command lists</a></font>).</font></font>
+<p><font face="Times New Roman"><font size=+1>Break conditions can be specified
+when a breakpoint is set, by using ‘</font></font><font face="Courier New"><font size=+0>if</font></font><font face="Times New Roman"><font size=+1>’
+in the arguments to the </font></font><font face="Courier New"><font size=+0>break</font></font><font face="Times New Roman"><font size=+1>
+command. See <font color="#008000"><a href="gdbSetting_breakpoints.html">Setting
+breakpoints</a></font>. They can also be changed at any time with the </font></font><font face="Courier New"><font size=+0>condition</font></font><font face="Times New Roman"><font size=+1>
+command. The </font></font><font face="Courier New"><font size=+0>watch</font></font><font face="Times New Roman"><font size=+1>
+command does not recognize the </font></font><font face="Courier New"><font size=+0>if</font></font><font face="Times New Roman"><font size=+1>
+keyword; </font></font><font face="Courier New"><font size=+0>condition</font></font><font face="Times New Roman"><font size=+1>
+is the only way to impose a further condition on a watchpoint.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0>condition<i>bnum expression</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Specify </font></font><i><font face="Courier New"><font size=+0>expression
+</font></font></i><font face="Times New Roman"><font size=+1>as
+the break condition for breakpoint, watchpoint or catchpoint number, </font></font><i><font face="Courier New"><font size=+0>bnum</font></font></i><font face="Times New Roman"><font size=+1>.
+After you set a condition, breakpoint </font></font><i><font face="Courier New"><font size=+0>bnum</font></font></i><font face="Times New Roman"><font size=+1>
+stops your program only if the value of </font></font><i><font face="Courier New"><font size=+0>expression
+</font></font></i><font face="Times New Roman"><font size=+1>is
+true (nonzero, in C). When you use </font></font><font face="Courier New"><font size=+0>condition</font></font><font face="Times New Roman"><font size=+1>,
+GDB checks </font></font><i><font face="Courier New"><font size=+0>expression</font></font></i><font face="Times New Roman"><font size=+1>
+immediately for syntactic correctness, and to determine whether symbols
+in it have referents in the context of your breakpoint. GDB does not actually
+evaluate </font></font><i><font face="Courier New"><font size=+0>expression</font></font></i><font face="Times New Roman"><font size=+1>
+at the time the condition command is given, however. See <font color="#008000"><a href="gdbExpressions.html">Expressions</a></font>.</font></font></ul>
+<font face="Courier New"><font size=+0>condition<i>bnum</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Remove the condition from
+breakpoint number, </font></font><i><font face="Courier New"><font size=+0>bnum</font></font></i><font face="Times New Roman"><font size=+1>.
+It becomes an ordinary unconditional breakpoint.</font></font>
+<br><font size=+1><font face="Times New Roman">A special case of a breakpoint
+condition is to stop only when the breakpoint has been reached a certain
+number of times. This is so useful that there is a special way to do it,
+using the </font><tt>ignore</tt><i><font face="Times New Roman"> </font><tt>count</tt></i><font face="Times New Roman">
+command for the breakpoint. Every breakpoint has an ignored </font><i><tt>count</tt></i><font face="Times New Roman">,
+which is an integer. Most of the time, the count is zero, and therefore
+has no effect. But if your program reaches a breakpoint whose ignore count
+is positive, then instead of stopping, it just decrements the ignore count
+by one and continues. As a result, if the ignore count value is </font></font><i><font face="Courier New"><font size=+0>n</font></font></i><font face="Times New Roman"><font size=+1>,
+the breakpoint does not stop the next </font></font><i><font face="Courier New"><font size=+0>n
+</font></font></i><font face="Times New Roman"><font size=+1>times
+your program reaches it.</font></font></ul>
+<font face="Courier New"><font size=+0>ignore<i>bnum count</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Set the ignore count of
+breakpoint number </font></font><i><font face="Courier New"><font size=+0>bnum</font></font></i><font face="Times New Roman"><font size=+1>
+to </font></font><i><font face="Courier New"><font size=+0>count</font></font></i><font face="Times New Roman"><font size=+1>.
+The next </font></font><i><font face="Courier New"><font size=+0>count</font></font></i><font size=+1><font face="Times New Roman">
+times the breakpoint is reached, your program’s execution does not stop;
+other than to decrement the ignored </font><i><tt>count</tt></i><font face="Times New Roman">,
+GDB takes no action.</font></font>
+<br><font face="Times New Roman"><font size=+1>To make the breakpoint stop
+the next time it is reached, specify a count of zero.</font></font>
+<br><font face="Times New Roman"><font size=+1>When you use </font></font><font face="Courier New"><font size=+0>continue</font></font><font face="Times New Roman"><font size=+1>
+to resume execution of your program from a breakpoint, you can specify
+an ignore count directly as an argument to </font></font><font face="Courier New"><font size=+0>continue</font></font><font face="Times New Roman"><font size=+1>,
+rather than using </font></font><font face="Courier New"><font size=+0>ignore</font></font><font face="Times New Roman"><font size=+1>.
+See <font color="#008000"><a href="gdbContinuing_and_stepping.html">Continuing
+and stepping</a></font>.</font></font>
+<br><font size=+1><font face="Times New Roman">If a breakpoint has a positive
+ignore count and a condition, the condition is not checked. Once the ignored
+</font><i><tt>count</tt></i><font face="Times New Roman">
+reaches zero, GDB resumes checking the condition.</font></font>
+<br><font size=+1><font face="Times New Roman">You could achieve the effect
+of the ignored </font><i><tt>count</tt></i><font face="Times New Roman">
+with a condition such as ‘</font></font><font face="Courier New"><font size=+0>$foo--
+&lt;= 0</font></font><font face="Times New Roman"><font size=+1>’ using
+a debugger convenience variable that is decremented each time. See <font color="#008000"><a href="gdbConvenience_variables.html">Convenience
+variables</a></font>.</font></font></ul>
+<font face="Times New Roman"><font size=+1></font></font>
+<p><br><font face="Times New Roman"><font size=+1>Ignore counts apply to
+breakpoints, watchpoints, and catchpoints.</font></font></ul>
+
+<hr SIZE=3 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbDeleting_breakpoints.html">Previous</a>|<a href="gdbBreak_conditions.html">Next</a></center>
+
+</body>
+</html>

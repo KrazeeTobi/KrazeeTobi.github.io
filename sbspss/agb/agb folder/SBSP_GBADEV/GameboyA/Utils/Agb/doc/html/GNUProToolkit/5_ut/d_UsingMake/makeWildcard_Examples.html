@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Wildcard Examples</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeUsing_Wildcard_Characters_in_Fil.html">Previous</A>|<A HREF="makePitfalls_of_Using_Wildcards.html">Next</A>
+<BR><A NAME="off_458823"></A><A NAME="1cb40e50"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Wildcard
+examples</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Wildcards
+can be used in the commands of a rule, where they are expanded by the shell.
+For example, here is a rule to delete all the object files:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>clean:</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+rm -f *.o</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Wildcards are also useful
+in the dependencies of a rule. With the following rule in the makefile,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+will print all the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+files that have changed since the last time you printed them:</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>print: *.c</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+lpr -p $?</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+touch print</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This rule uses ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+as an empty target file; see <FONT COLOR="#008000"><A HREF="makeEmpty_Target_Files_to_Record_Eve.html">Empty
+target files to record events</A></FONT>. (The automatic variable, ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>$?</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+is used to print only those files that have changed; see <FONT COLOR="#008000"><A HREF="makeAutomatic_Variables.html">Automatic
+variables</A></FONT>.) Wildcard expansion does not happen when you define
+a variable. Thus, if you write </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>objects
+= <B>*</B>.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+then the value of the variable objects is the actual string ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><B>*.</B>o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+However, if you use the value of objects in a target, dependency or command,
+wildcard expansion will take place at that time. To set objects to the
+expansion, instead use: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>objects
+:= <B>$</B>(wildcard <B>*</B>.o)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+See <FONT COLOR="#008000"><A HREF="makeThe_Function_wildcard.html">The
+function, </A></FONT></FONT></FONT><B><FONT FACE="Courier New"><FONT COLOR="#008000"><FONT SIZE=+0><A HREF="makeThe_Function_wildcard.html">wildcard</A></FONT></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeUsing_Wildcard_Characters_in_Fil.html">Previous</A>|<A HREF="makePitfalls_of_Using_Wildcards.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

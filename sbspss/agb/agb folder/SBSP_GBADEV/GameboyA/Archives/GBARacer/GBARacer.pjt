@@ -1,0 +1,72 @@
+;Codewright Project File (do not remove or modify this line)
+[ProjInit]
+ProjSetConfigFlags=0x04010940
+ProjCheckPath='C:\Temp\GBARacer\\'
+
+[Files]
+C:\TEMP\GBARACER\crt0.s
+C:\TEMP\GBARACER\data.c
+C:\TEMP\GBARACER\data.h
+C:\TEMP\GBARACER\data_math_table.c
+C:\TEMP\GBARACER\data_math_table.h
+C:\TEMP\GBARACER\data_tile_proc.c
+C:\TEMP\GBARACER\data_tile_proc.h
+C:\TEMP\GBARACER\main.c
+C:\TEMP\GBARACER\render.c
+C:\TEMP\GBARACER\render.h
+C:\TEMP\GBARACER\rom_header.s
+
+
+[State]
+SysSetCwd='C:\Temp\GBARacer'
+SrchSetFlags=0x041220ba
+FileSortMode=0x0
+StateWindowFrame=66,66,600,393,0x624935fa
+_StateWindow=22,22,681,381,0x00100018,'C:\TEMP\GBARACER\crt0.s',26,154,244,4,20,12,46,26,126,176,8,4294967295,4294967295,1,11,'',13,0,48,0,10,281,0,0,538,252,249,1,1,400,0,26,26,26,26,538,538,538,538,26,80,0,253,224,14,1,1,208,1,6
+_StateBuffer='C:\TEMP\GBARACER\crt0.s',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,1
+_StateBuffer='C:\TEMP\GBARACER\data_math_table.c',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\TEMP\GBARACER\render.c',0x0400048e,107,13,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\TEMP\GBARACER\data_tile_proc.c',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\TEMP\GBARACER\data.c',0x0400048e,34,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\TEMP\GBARACER\main.c',0x0400048e,50,13,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\TEMP\GBARACER\rom_header.s',0x0400048e,34,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\TEMP\GBARACER\data.h',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\TEMP\GBARACER\data_math_table.h',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\TEMP\GBARACER\render.h',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateBuffer='C:\TEMP\GBARACER\data_tile_proc.h',0x0000048e,1,1,25,'5 9','',0x0,'',1,72,0
+_StateHistory=FILELIST,'C:\TEMP\GBARACER\data.c','c:\projects\gameboy\4climax\sbspants\source\yos_main.c','C:\TEMP\GBARACER\data_tile_proc.h','C:\TEMP\GBARACER\render.h','C:\TEMP\GBARACER\data_math_table.h','C:\TEMP\GBARACER\data.h','C:\TEMP\GBARACER\rom_header.s','C:\TEMP\GBARACER\data_tile_proc.c','C:\TEMP\GBARACER\data_math_table.c'
+_StateHistory=SEARCH,'render_fill_from','rend_fill_from_bux','intr_main'
+_StateHistory=XSYMBOL,'AgbMain'
+
+[Editor]
+VCSProject=''
+VCSProjectPath=''
+VCSProjectLocalPath=''
+ClipboardSetTermStr='\r\n',0
+ClipboardEnableTermStr=1
+ClipboardSetSepStr='\r\n',0
+ClipboardEnableSepStr=1
+ScrapSetCount=1
+
+[Compiler]
+TagSetFile=''
+BrowseSetFile=''
+CompilerNewExt=.pas
+CompilerNewExt=.ini
+CompilerNewExt=.txt
+TagSetCmd='${HOME}${WTAGS} -oc -d -t${TAGFILE}.tag -p${TAGFILE}.ptg',0x8000060
+
+[VersionControl:PVCS]
+VCSSetCmd=VCS_CHECKIN_ID,'put -n -T@%Q -M@%Q %b%e',0x8000040
+VCSSetCmd=VCS_CHECKINLOCK_ID,'put -n -T@%Q -M@%Q -l %b%e',0x8000040
+VCSSetCmd=VCS_CHECKOUT_ID,'get -y %b%e',0x8000040
+VCSSetCmd=VCS_CHECKOUTLOCK_ID,'get -y -l %b%e',0x8000040
+VCSSetCmd=VCS_CHECKLOCK_ID,'vcs -y -l %b%e',0x8000040
+VCSSetCmd=VCS_CHECKUNLOCK_ID,'vcs -y -u %b%e',0x8000040
+VCSSetCmd=VCS_CHECKLABEL_ID,'vcs -y -v"${VCSLABEL}" %b%e',0x8000040
+VCSSetCmd=VCS_CHECKLOG_ID,'vlog %b%e',0x8000040
+VCSSetCmd=VCS_CHECKPROP_ID,'vlog -b %b%e',0x8000040
+VCSSetCmd=VCS_CHECKDIFF_ID,'vdiff -r %b%e',0x8000040
+VCSSetCmd=VCS_CHECKMENU_ID,'pvcsvmwn',0x8000000
+VCSSetCmd=VCS_ADD_ID,'vcs -i -t@%Q %b%e',0x8000040
+VCSSetCmd=VCS_REMOVE_ID,'del /f %b%{??v|___}e',0x8000040

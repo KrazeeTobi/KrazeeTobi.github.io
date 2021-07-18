@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>putc[write a character (macro)]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcperrorprint_an_error_message_on_.html">Previous</A>|<A HREF="libcputcharwrite_a_character_macro.html">Next</A>
+</P>
+
+<P><A NAME="off_983998"></A><A NAME="2f6a5509"></A><A NAME="off_983998"></A><A NAME="2f6a5509"></A><A NAME="off_983998"></A><A NAME="2f6a5509"></A><FONT SIZE=+3><FONT FACE="Courier New">putc
+<BR>
+</FONT><FONT FACE="Times New Roman">[write a character (macro)] </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>&lt;stdio.h&gt;</FONT><FONT SIZE=-1> <BR>
+</FONT><FONT SIZE=+0>int</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>putc(int</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>ch,</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>FILE</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>*<I>fp</I>); </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>putc</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is a macro, defined in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdio.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>putc</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">writes the argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>ch</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Times New Roman">,</FONT><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">to the file or stream identified by
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>fp</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+after converting it from an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">to an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>unsigned</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>char</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If the file was opened with
+append mode (or if the stream cannot support positioning), then the new
+character goes at the end of the file or stream. Otherwise, the new character
+is written at the current value of the position indicator, and the position
+indicator advances by one. </FONT></FONT></P>
+
+<P><FONT SIZE=+1><FONT FACE="Times New Roman">For a subroutine version
+of this macro, see </FONT><FONT FACE="Courier New"><FONT COLOR="#008000"><A HREF="libcfputcwrite_a_character_on_a_stre.html">fputc</A></FONT></FONT><FONT FACE="Times New Roman">.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>RETURNS <BR>
+</B>If successful, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>putc</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">returns its argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>ch</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If an error intervenes, the result is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>EOF</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+You can use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ferror(<I>fp</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to query for errors. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>COMPLIANCE <BR>
+</B>ANSI C</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=-1> </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>requires
+by</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=-1> </FONT><FONT SIZE=+0>putc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+it suggests, but does not require, that </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>putc</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">be implemented as a macro. The standard
+explicitly permits macro implementations of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>putc</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">to use the </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>fp</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">argument more than once; therefore,
+in a portable program, you should not use an expression with side effects
+as this argument. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Supporting OS subroutines
+required: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>close</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fstat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>isatty</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>lseek</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>read</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sbrk</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>write</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Switching between source languages</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbUsing_GDB_with_Different_Languag.html">Previous</A>|<A HREF="gdbList_of_filename_extensions_and_.html">Next</A>
+<BR><A NAME="off_1736704"></A><A NAME="71634ea5"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Switching
+between source languages</FONT></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>There
+are two ways to control the working language—either have GDB set it automatically,
+or select it manually yourself. You can use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+language</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> command
+for either purpose. On startup, GDB defaults to setting the language automatically.
+The working language is used to determine how expressions you type are
+interpreted, how values are printed, etc.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In addition to the working
+language, every source file that GDB knows about has its own working language.
+For some object file formats, the compiler might indicate which language
+a particular source file is in. However, most of the time GDB infers the
+language from the name of the file. The language of a source file controls
+whether C++ names are demangled—this way </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>backtrace</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can show each frame appropriately for its own language. There is no way
+to set the language of a source file from within GDB. This is most commonly
+a problem when you use a program, such as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cfront</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>f2c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+that generates C but is written in another language. In that case, make
+the program use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#line</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directives in its C output; that way GDB will know the correct language
+of the source code of the original program, and will display that source
+code, not the generated C code.</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbUsing_GDB_with_Different_Languag.html">Previous</A>|<A HREF="gdbList_of_filename_extensions_and_.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

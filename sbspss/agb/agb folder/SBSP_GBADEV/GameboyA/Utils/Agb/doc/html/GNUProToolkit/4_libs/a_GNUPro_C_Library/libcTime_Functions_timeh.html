@@ -1,0 +1,129 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Time Functions (time.h)</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcsignalspecify_handler_subroutine.html">Previous</A>|<A HREF="libcasctimeformat_time_as_string.html">Next</A>
+<BR><A NAME="off_1738716"></A><A NAME="14755a37"></A><A NAME="off_1738716"></A><A NAME="14755a37"></A><A NAME="off_1738716"></A><A NAME="14755a37"></A><A NAME="off_1738716"></A><A NAME="14755a37"></A><A NAME="off_1738716"></A><A NAME="14755a37"></A><A NAME="off_1738716"></A><A NAME="14755a37"></A><A NAME="off_1738716"></A><A NAME="14755a37"></A><A NAME="off_1738716"></A><A NAME="14755a37"></A><A NAME="off_1738716"></A><A NAME="14755a37"></A><A NAME="off_1738716"></A><A NAME="14755a37"></A><A NAME="off_1738716"></A><A NAME="14755a37"></A><A NAME="off_1738716"></A><A NAME="14755a37"></A><A NAME="off_1738716"></A><A NAME="14755a37"></A><A NAME="off_1738716"></A><A NAME="14755a37"></A><A NAME="off_1738716"></A><A NAME="14755a37"></A><A NAME="off_1738716"></A><A NAME="14755a37"></A><A NAME="off_1738716"></A><A NAME="14755a37"></A><FONT SIZE=+3><FONT FACE="Futura Md BT">Time
+functions (</FONT><B><FONT FACE="Courier New">time.h</FONT></B><FONT FACE="Futura Md BT">)</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+following documentation discusses functions used either for reporting on
+time (elapsed, current, or compute time) or to perform calculations based
+on time.</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="libcasctimeformat_time_as_string.html">asctime</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="libcclockcumulative_processor_time.html">clock</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="libcctimeconvert_time_to_local_and_f.html">ctime</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="libcdifftimesubtract_two_times.html">difftime</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="libcgmtimeconvert_time_to_UTC_tradit.html">gmtime</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="libclocaltimeconvert_time_to_local_r.html">localtime</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="libcmktimeconvert_time_to_arithmetic.html#eab8196e">mktime</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="libcstrftimeflexible_calendar_time_f.html">strftime</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="libctimeget_current_calendar_time_as.html">time</A></FONT></FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The header file, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>time.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+defines three types. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>clock_t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>time_t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are both used for representations of time particularly suitable for arithmetic.
+(In this implementation, quantities of type, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>clock_t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+have the highest resolution possible on your machine, and quantities of
+type, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>time_t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+resolve to seconds.) </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>size_t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is also defined if necessary for quantities representing sizes.</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>time.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+also defines the structure, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>tm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+for the traditional representation of Gregorian calendar time as a series
+of numbers, with the following fields.</FONT></FONT>
+<BR>&nbsp;
+<CENTER><TABLE BORDER >
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>tm_sec</FONT><FONT SIZE=-1>&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Times New Roman"><FONT SIZE=+1>Seconds.&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>tm_min</FONT><FONT SIZE=-1>&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Times New Roman"><FONT SIZE=+1>Minutes.&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>tm_hour</FONT><FONT SIZE=-1>&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Times New Roman"><FONT SIZE=+1>Hours.&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>tm_mday</FONT><FONT SIZE=-1>&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Times New Roman"><FONT SIZE=+1>Day.&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>tm_mon</FONT><FONT SIZE=-1>&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Times New Roman"><FONT SIZE=+1>Month.&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>tm_year</FONT><FONT SIZE=-1>&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Times New Roman"><FONT SIZE=+1>Year (since 1900).&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>tm_wday</FONT><FONT SIZE=-1>&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Times New Roman"><FONT SIZE=+1>Day of week: the number
+of days since Sunday.&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>tm_yday</FONT><FONT SIZE=-1>&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Times New Roman"><FONT SIZE=+1>Number of days elapsed since
+last January 1.&nbsp;</FONT></FONT></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD><FONT FACE="Courier New"><FONT SIZE=+0>tm_isdst</FONT><FONT SIZE=-1>&nbsp;</FONT></FONT></TD>
+
+<TD><FONT FACE="Times New Roman"><FONT SIZE=+1>Daylight Savings Time flag:
+positive means DST in effect, zero means DST not in effect, negative means
+no information about DST is available.&nbsp;</FONT></FONT></TD>
+</TR>
+</TABLE></CENTER>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcsignalspecify_handler_subroutine.html">Previous</A>|<A HREF="libcasctimeformat_time_as_string.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

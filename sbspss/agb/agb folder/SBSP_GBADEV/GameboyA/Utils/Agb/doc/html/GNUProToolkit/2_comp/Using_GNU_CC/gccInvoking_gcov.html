@@ -1,0 +1,162 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Invoking gcov</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccIntroduction_to_gcov.html">Previous</a>|<a href="gccUsing_gcov_with_GCC_Optimization.html">Next</a>
+<br><a NAME="off_4557344"></a><a NAME="59595d51"></a><b><font color="#000000"><font size=+3><font face="Futura Md BT">Invoking
+the
+</font><font face="Courier New">gcov</font><font face="Futura Md BT"> </font></font></font></b><font face="Futura Md BT"><font color="#000000"><font size=+3>program</font></font></font>
+<hr SIZE=6 WIDTH="100%">
+<br><font face="Times New Roman"><font size=+1>The following documentation
+discusses invoking </font></font><font face="Courier New"><font size=+0>gcov</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<ul TYPE=SQUARE>
+<pre><font face="Courier New"><font size=+1>gcov [-b] [-v] [-n] [-l] [-f] [-o directory] <i>sourcefile</i></font></font></pre>
+
+<li>
+<font face="Courier New"><font size=+0>-b</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>Write branch
+frequencies to the output file. Write branch summary info to standard output.
+This option allows you to see how often each branch was taken.</font></font></ul>
+
+<li>
+<font face="Courier New"><font size=+0>-v</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>Display the
+</font></font><font face="Courier New"><font size=+0>gcov</font></font><font face="Times New Roman"><font size=+1>
+version number (on the standard error stream).</font></font></ul>
+
+<li>
+<font face="Courier New"><font size=+0>-n</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>Do not create
+the </font></font><font face="Courier New"><font size=+0>gcov</font></font><font face="Times New Roman"><font size=+1>
+output file.</font></font></ul>
+
+<li>
+<font face="Courier New"><font size=+0>-l</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>Create long
+filenames for included source files. For example, if the header file, ‘</font></font><font face="Courier New"><font size=+0>x.h</font></font><font face="Times New Roman"><font size=+1>’,
+contains code, and was included in the file, ‘</font></font><font face="Courier New"><font size=+0>a.c</font></font><font face="Times New Roman"><font size=+1>’,
+then running </font></font><font face="Courier New"><font size=+0>gcov</font></font><font face="Times New Roman"><font size=+1>
+on the file,</font></font><font face="Courier New"><font size=+0> </font></font><font face="Times New Roman"><font size=+1>‘</font></font><font face="Courier New"><font size=+0>a.c</font></font><font face="Times New Roman"><font size=+1>’,
+will produce an output file ‘</font></font><font face="Courier New"><font size=+0>a.c.x.h.gcov</font></font><font face="Times New Roman"><font size=+1>’
+instead of ‘</font></font><font face="Courier New"><font size=+0>x.h.gcov</font></font><font face="Times New Roman"><font size=+1>’.
+This can be useful if ‘</font></font><font face="Courier New"><font size=+0>x.h</font></font><font face="Times New Roman"><font size=+1>’
+is included in multiple source files.</font></font></ul>
+
+<li>
+<font face="Courier New"><font size=+0>-f</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>Output summaries
+for each function in addition to the file level summary.</font></font></ul>
+
+<li>
+<font face="Courier New"><font size=+0>-o</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>The directory
+where the object files live. </font></font><font face="Courier New"><font size=+0>gcov</font></font><font face="Times New Roman"><font size=+1>
+will search for ‘</font></font><font face="Courier New"><font size=+0>.bb</font></font><font face="Times New Roman"><font size=+1>’</font></font><font face="Courier New"><font size=+0>,
+</font></font><font face="Times New Roman"><font size=+1>‘</font></font><font face="Courier New"><font size=+0>.bbg</font></font><font face="Times New Roman"><font size=+1>’,
+and ‘</font></font><font face="Courier New"><font size=+0>.da</font></font><font face="Times New Roman"><font size=+1>’
+files in this directory.</font></font></ul>
+</ul>
+<font face="Times New Roman"><font size=+1>To use </font></font><font face="Courier New"><font size=+0>gcov</font></font><font face="Times New Roman"><font size=+1>,
+first compile your program with two special GNU CC options: ‘</font></font><font face="Courier New"><font size=+0>-fprofile-arcs</font></font><font face="Times New Roman"><font size=+1>’and
+‘</font></font><font face="Courier New"><font size=+0>-ftest-coverage</font></font><font face="Times New Roman"><font size=+1>’.
+This tells the compiler to generate additional information needed by </font></font><font face="Courier New"><font size=+0>gcov</font></font><font face="Times New Roman"><font size=+1>
+(basically a flow graph of the program) and also includes additional code
+in the object files for generating the extra profiling information needed
+by </font></font><font face="Courier New"><font size=+0>gcov</font></font><font face="Times New Roman"><font size=+1>.
+These additional files are placed in th directory where the source code
+is located.</font></font>
+<p><font face="Times New Roman"><font size=+1>Running </font></font><font face="Courier New"><font size=+0>gcov</font></font><font face="Times New Roman"><font size=+1>
+will cause profile output to be generated. For each source file compiled
+with </font></font><font face="Courier New"><font size=+0>-fprofile-arcs</font></font><font face="Times New Roman"><font size=+1>,
+and accompanying file, </font></font><font face="Courier New"><font size=+0>.da</font></font><font face="Times New Roman"><font size=+1>,
+will be placed in the source directory.</font></font>
+<p><font face="Times New Roman"><font size=+1>Running </font></font><font face="Courier New"><font size=+0>gcov</font></font><font face="Times New Roman"><font size=+1>
+with your program’s source file names as arguments will now produce a listing
+of the code along with frquency of execution for each line. For example,
+if your program is called ‘</font></font><font face="Courier New"><font size=+0>tmp.c</font></font><font face="Times New Roman"><font size=+1>’,
+you’ll see the following when you use the </font></font><font face="Courier New"><font size=+0>gcov</font></font><font face="Times New Roman"><font size=+1>
+facility.</font></font>
+<p><font face="Times New Roman"><font size=+1>For example, if your program
+is called ‘</font></font><font face="Courier New"><font size=+0>tmp.c</font></font><font face="Times New Roman"><font size=+1>’,
+the following is what you see when you use the basic </font></font><font face="Courier New"><font size=+0>gcov</font></font><font face="Times New Roman"><font size=+1>
+facility.</font></font>
+<ul>
+<pre><b><font face="Courier New"><font size=+1>$ gcc -fprofile-arcs -ftest-coverage tmp.c&nbsp;
+$ a.out&nbsp;
+$ gcov tmp.c&nbsp;
+&nbsp; 87.50% of 8 source lines executed in file tmp.c&nbsp;
+Creating tmp.c.gcov.</font></font></b></pre>
+</ul>
+<font face="Times New Roman"><font size=+1>The file, ‘</font></font><font face="Courier New"><font size=+0>tmp.c.gcov</font></font><font face="Times New Roman"><font size=+1>’,
+contains output from </font></font><font face="Courier New"><font size=+0>gcov</font></font><font face="Times New Roman"><font size=+1>.
+The following is a sample.</font></font>
+<ul>
+<pre><font face="Courier New"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> main()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; int i, total;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; total = 0;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; for (i = 0; i &lt; 10; i++)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp; total += i;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; if (total != 45)&nbsp;
+######&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf ("Failure\n");&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; printf ("Success\n");&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; }</b></font></font></pre>
+
+<pre><b><font face="Courier New"><font size=+1>call 0 returns = 100%&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 }</font></font></b></pre>
+</ul>
+<font face="Times New Roman"><font size=+1>For each basic block, a line
+is printed after the last line of the basic block describing the branch
+or call that ends the basic block. There can be multiple branches and calls
+listed for a single source line if there are multiple basic blocks that
+end on that line. In this case, the branches and calls are each given a
+number. There is no simple way to map these branches and calls back to
+source constructs. In general, though, the lowest numbered branch or call
+will correspond to the leftmost construct on the source line.</font></font>
+<p><font face="Times New Roman"><font size=+1>For a branch, if it was executed
+at least once, then a percentage indicating the number of times the branch
+was taken divided by the number of times the branch was executed will be
+printed. Otherwise, the message “</font></font><b><font face="Courier New"><font size=+0>never
+executed</font></font></b><font face="Times New Roman"><font size=+1>”
+is printed.</font></font>
+<p><font face="Times New Roman"><font size=+1>For a call, if it was executed
+at least once, then a percentage indicating the number of times the call
+returned divided by the number of times the call was executed will be printed.</font></font>
+<p><font face="Times New Roman"><font size=+1>This will usually be 100%,
+but may be less for functions, </font></font><font face="Courier New"><font size=+0>exit</font></font><font face="Times New Roman"><font size=+1>
+or </font></font><font face="Courier New"><font size=+0>longjmp</font></font><font face="Times New Roman"><font size=+1>,
+and thus may not return every time they are called.</font></font>
+<p><font face="Times New Roman"><font size=+1>The execution counts are
+cumulative. If the example program were executed again without removing
+the </font></font><font face="Courier New"><font size=+0>.da</font></font><font face="Times New Roman"><font size=+1>
+file, the count for the number of times each line in the source was executed
+would be added to the results of the previous run(s). This is potentially
+useful in several ways. For example, it could be used to accumulate data
+over a number of program runs as part of a test verification suite, or
+to provide more accurate long-term information over a large number of program
+runs.</font></font>
+<p><font face="Times New Roman"><font size=+1>The data in the </font></font><font face="Courier New"><font size=+0>.da</font></font><font face="Times New Roman"><font size=+1>
+files is saved immediately before the program exits. For each source file
+compiled with </font></font><font face="Courier New"><font size=+0>-fprofile-arcs</font></font><font face="Times New Roman"><font size=+1>,
+the profiling code first attempts to read in an existing </font></font><font face="Courier New"><font size=+0>.da</font></font><font face="Times New Roman"><font size=+1>
+file; if the file doesn’t match the executable (differing number of basic
+block counts) it will ignore the contents of the file. It then adds in
+the new execution counts and finally writes the data to the file.</font></font>
+<center>
+<hr SIZE=3 WIDTH="100%">
+<br><a href="#Top">Top</a>|<a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccIntroduction_to_gcov.html">Previous</a>|<a href="gccUsing_gcov_with_GCC_Optimization.html">Next</a></center>
+
+</body>
+</html>

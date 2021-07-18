@@ -1,0 +1,61 @@
+******************************************************************************
+  
+		     CRC Calculation of AGB Master Data 
+
+******************************************************************************
+
+								12/18/2000
+
+	--------------------------------------------------------------------
+	Copyright (C) 	2000 NINTENDO Co., Ltd.  
+			2000 NINTENDO Product Evaluation & Engineering Dept.
+	--------------------------------------------------------------------
+
+
+ The attached utility, "nrdc" is used for the CRC calculation of 
+ the AGB Master Data.  
+
+ Originally, "nrdc" was a utility that was only used for master data management 
+ and  Nintendo 64.  However, the function to "calculate CRC of data" can also be 
+ used for AGB Master Data.
+
+ [Note] Other functions of "nrdc" like "Patch in the ROM registration data area"
+ and "Dump the ROM registration data" cannot be used for AGB Master Data because 
+ these functions are used exclusively for Nintendo 64 Master Data. 
+	
+          Usage:	
+
+          This command line utility is executed from the DOS prompt in Windows.  
+
+       	  nrdc [Option] [Filename]
+
+          The following options can be used with AGB:
+
+               -h          Help display 
+               -l          Specify as little endian 
+               -c          CRC calculation
+
+  [Note] Using other options is prohibited with AGB.  
+
+  About Endianness 
+
+  This program is based on the condition that the order in which the file data is 
+  stored is handled by little endian.   
+      	  
+  The mask ROM for Nintendo 64 has 16 bit wide data.  Therefore, in case of big 
+  endian, the upper byte is stored in the even number address of the file, and 
+  the lower byte is stored in the odd number address of the file.  In case of 
+  little endian, it will be opposite. When neither "-b" nor "-l" is specified, it 
+  checks the last one character of the file name.  If "B", it's identified as big 
+  endian, and if "L", it's identified as little endian. 
+
+          Reference:
+
+     	  >nrdc -c -l ******.SRL
+
+  *Unify the extension of a file name for the AGB Master Data as "SRL".  
+  *Get a result of the calculation for the AGB Master Data by little endian. 
+  *Since the result may not be accurate if an extension is changed, 
+   specify little endian by adding  "-l" (lower case l) option as much  
+   as possible. 
+

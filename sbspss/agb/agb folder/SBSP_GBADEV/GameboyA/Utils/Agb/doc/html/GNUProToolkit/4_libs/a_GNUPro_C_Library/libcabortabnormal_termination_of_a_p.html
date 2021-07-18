@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>abort[abnormal termination of a program]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcStandard_Utility_Functions_stdli.html">Previous</A>|<A HREF="libcabsinteger_absolute_value_magnit.html">Next</A>
+</P>
+
+<P><A NAME="off_98903"></A><A NAME="ea61edcf"></A><A NAME="off_98903"></A><A NAME="ea61edcf"></A><FONT SIZE=+3><FONT FACE="Courier New">abort
+<BR>
+</FONT><FONT FACE="Times New Roman">[abnormal termination of a program]
+</FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>&lt;stdlib.h&gt;</FONT><FONT SIZE=-1> <BR>
+</FONT><FONT SIZE=+0>void</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>abort(void);
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>DESCRIPTION <BR>
+</B>Use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>abort</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to signal that your program has detected a condition it cannot deal with.
+Normally, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>abort</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+ends your program’s execution. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Before terminating your program,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>abort</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+raises the exception </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SIGABRT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>raise(SIGABRT)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+If you have used </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>signal</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to register an exception handler for this condition, that handler has the
+opportunity to retain control, thereby avoiding program termination. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In this implementation, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>abort</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not perform any stream- or file-related cleanup (the host environment
+may do so; if not, you can arrange for your program to do its own cleanup
+with a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SIGABRT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+exception handler). </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>abort</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">does not return to its caller. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>COMPLIANCE <BR>
+</B>ANSI C requires </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>abort</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Supporting OS subroutines
+required: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>getpid</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>kill</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+</BODY>
+</HTML>

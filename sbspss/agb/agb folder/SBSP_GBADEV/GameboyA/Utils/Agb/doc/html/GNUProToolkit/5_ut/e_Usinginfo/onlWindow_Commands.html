@@ -1,0 +1,143 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Window Commands</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="onlonl.html">Contents</A>|<A HREF="onlindex.html">Index</A>|<A HREF="onlThe_Mode_Line.html">Previous</A>|<A HREF="onlThe_Echo_Area.html">Next</A>
+<BR><A NAME="off_231489"></A><A NAME="9e331544"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Window
+commands</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>To
+view more than one node at a time, </FONT></FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>info</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#000000">
+can display more than one window. Each window has its own mode line (see
+</FONT><FONT COLOR="#008000"><A HREF="onlThe_Mode_Line.html">The mode line</A></FONT><FONT COLOR="#000000">.)
+and history of nodes viewed in that window (see </FONT></FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>history-node</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#000000">
+in </FONT><FONT COLOR="#008000"><A HREF="onlSelecting_a_New_Node.html">Selecting
+a new node</A></FONT><FONT COLOR="#000000">.).</FONT></FONT></FONT>
+<UL>
+<DT>
+<FONT SIZE=+1><B><FONT FACE="Arial Narrow">C-x</FONT></B><FONT FACE="Times New Roman">,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>next-window</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT SIZE=+1><FONT FACE="Times New Roman">Selects the next window on the
+screen. The echo area can <I>only</I> be selected if it is already in use,
+and you have left it temporarily. Normally, </FONT><B><FONT FACE="Arial Narrow">C-x</FONT></B><FONT FACE="Times New Roman">,
+</FONT><B><FONT FACE="Arial Narrow">o</FONT></B><FONT FACE="Times New Roman">
+simply moves the cursor into the next window on the screen, or if you are
+already within the last window, into the first window on the screen. Given
+a numeric argument, </FONT><B><FONT FACE="Arial Narrow">C-x</FONT></B><FONT FACE="Times New Roman">,
+</FONT><B><FONT FACE="Arial Narrow">o</FONT></B><FONT FACE="Times New Roman">
+moves over that many windows. A negative argument causes </FONT><B><FONT FACE="Arial Narrow">C-x</FONT></B><FONT FACE="Times New Roman">,
+</FONT><B><FONT FACE="Arial Narrow">o</FONT></B><FONT FACE="Times New Roman">
+to select the previous window on the screen.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT SIZE=+1><B><FONT FACE="Arial Narrow">M-x</FONT></B><FONT FACE="Times New Roman">
+(</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>prev-window</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT SIZE=+1><FONT FACE="Times New Roman">Selects the previous window
+on the screen. This is identical to </FONT><B><FONT FACE="Arial Narrow">C-x</FONT></B><FONT FACE="Times New Roman">,
+</FONT><B><FONT FACE="Arial Narrow">o</FONT></B><FONT FACE="Times New Roman">
+with a negative argument.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT SIZE=+1><B><FONT FACE="Arial Narrow">C-x</FONT></B><FONT FACE="Times New Roman">,</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+</FONT></FONT><FONT SIZE=+1><B><FONT FACE="Arial Narrow">2</FONT></B><FONT FACE="Times New Roman">
+(</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>split-window</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Splits the current window into
+two windows, both showing the same node. Each window is one half the size
+of the original window, and the cursor remains in the original window.
+The variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>automatic-tiling</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+can cause all of the windows on the screen to be resized for you automatically,
+please see </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><A HREF="onlManipulating_Variables.html#autotile">automatic-tiling</A></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in <FONT COLOR="#008000"><A HREF="onlManipulating_Variables.html">Manipulating
+variables</A></FONT> for more information.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT SIZE=+1><B><FONT FACE="Arial Narrow">C-x</FONT></B><FONT FACE="Times New Roman"><FONT COLOR="#000000">,
+</FONT></FONT><B><FONT FACE="Arial Narrow">0</FONT></B></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>(</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>delete-window</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Deletes the current window from
+the screen. If you have made too many windows and your screen appears cluttered,
+this is the way to get rid of some of them.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT SIZE=+1><B><FONT FACE="Arial Narrow">C-x</FONT></B><FONT FACE="Times New Roman"><FONT COLOR="#000000">,
+</FONT></FONT><B><FONT FACE="Arial Narrow">1</FONT></B></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>(</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>keep-one-window</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Deletes all of the windows excepting
+the current one.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT SIZE=+1><B><FONT FACE="Arial Narrow">Esc</FONT></B><FONT FACE="Times New Roman">
+</FONT><B><FONT FACE="Arial Narrow">C-v</FONT></B><FONT FACE="Times New Roman">
+(</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>scroll-other-window</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT SIZE=+1><FONT FACE="Times New Roman">Scrolls the other window, in
+the same fashion that ‘</FONT><B><FONT FACE="Arial Narrow">C-v</FONT></B><FONT FACE="Times New Roman">’
+might scroll the current window. Given a negative argument, the <I>other</I>
+window is scrolled backward.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT SIZE=+1><B><FONT FACE="Arial Narrow">C-x</FONT></B><FONT FACE="Times New Roman">,</FONT><B><FONT FACE="Arial Narrow">ˆ</FONT></B><FONT FACE="Times New Roman">
+(</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>grow-window</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Grows (or shrinks) the current
+window. Given a numeric argument, grows the current window that many lines;
+with a negative numeric argument, the window is shrunk instead.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT SIZE=+1><B><FONT FACE="Arial Narrow">C-x</FONT></B><FONT FACE="Times New Roman">,
+</FONT><B><FONT FACE="Arial Narrow">t</FONT></B><FONT FACE="Times New Roman">
+(</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>tile-windows</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)</FONT></FONT></DT>
+
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Divides the available screen
+space among all of the visible windows. Each window is given an equal portion
+of the screen in which to display its contents. The variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>automatic-tiling</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+can cause </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>tile-windows</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to be called when a window is created or deleted. See </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><A HREF="onlManipulating_Variables.html#autotile">automatic-tiling</A></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in <FONT COLOR="#008000"><A HREF="onlManipulating_Variables.html">Manipulating
+variables</A></FONT> for more information.</FONT></FONT></DT>
+</UL>
+</UL>
+
+<CENTER>
+<DT>
+
+<HR SIZE=3 WIDTH="100%"></DT></CENTER>
+
+<CENTER>
+<DT>
+<A HREF="#Top">Top</A>|<A HREF="onlonl.html">Contents</A>|<A HREF="onlindex.html">Index</A>|<A HREF="onlThe_Mode_Line.html">Previous</A>|<A HREF="onlThe_Echo_Area.html">Next</A></DT></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,737 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Installing GNU CC</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccCompile_C_C_or_Objective_C.html">Previous</a>|<a href="gccConfigurations_Supported_by_GNU_.html">Next</a>
+<br><a NAME="off_2328005"></a><a NAME="93873bc3"></a><b><font face="Futura Md BT"><font color="#000000"><font size=+3>Installing
+GNU CC&nbsp;</font></font></font></b>
+<hr SIZE=6 WIDTH="100%">
+<br><font face="Times New Roman"><font size=+1>The following documentation
+discusses installation and what you need to get the GNU compiler, GCC,
+to work for you.</font></font>
+<ul TYPE=SQUARE>
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="#Install_UNIX">Installing
+GCC on UNIX systems</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccConfigurations_Supported_by_GNU_.html">Configurations
+supported by GNU CC</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccCompilation_in_a_Separate_Direct.html">Compilation
+in a separate directory</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccBuilding_and_Installing_a_CrossC.html">Building
+and installing a cross-compiler</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccConfiguring_a_CrossCompiler.html">Configuring
+a cross-compiler</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccTools_and_Libraries_for_a_CrossC.html">Tools
+and libraries for a cross-compiler</a></font></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="gcclibgcca_and_CrossCompilers.html"><b><font face="Courier New">libgcc.a</font></b><font face="Times New Roman">
+and cross-compilers</font></a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccSteps_of_CrossCompilation.html">Steps
+of cross-compilation</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccCrossCompilers_and_Header_Files.html">Cross-Compilers
+and header files</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccStandard_Header_File_Directories.html">Standard
+header file directories</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccActually_Building_the_CrossCompi.html">Actually
+building the cross-compiler</a></font></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="gcccollect2.html"><b><font face="Courier New">collect2</font></b>
+and cross-compiling</a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccInstalling_GNU_CC_on_the_Sun.html">Installing
+GNU CC on the Sun</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccInstalling_GNU_CC_on_VMS.html">Installing
+GNU CC on VMS</a></font></font></font></li>
+</ul>
+<font face="Times New Roman"><font size=+1>In the following documentation,
+we assume you compile in the same directory that contains the source files;
+see <a href="gccCompilation_in_a_Separate_Direct.html">Compilation in a
+separate directory</a> to find out how to compile in a separate directory
+on Unix systems.</font></font>
+<p><font face="Times New Roman"><font size=+1>You cannot install GNU CC
+by itself on MSDOS; it will not compile under any MSDOS compiler except
+itself. You need to get the complete compilation package, DJGPP, which
+includes binaries as well as sources, and includes all the necessary compilation
+tools and libraries.</font></font><font face="Times New Roman"><font size=+1></font></font>
+<p><a NAME="Install_UNIX"></a><b><i><font face="Times New Roman"><font size=+3>Installing
+on UNIX systems</font></font></i></b><b><i><font face="Times New Roman"><font size=+1></font></font></i></b>
+<p><font face="Times New Roman"><font size=+1>What follows is the procedure
+for installing GCC on a UNIX system. In this documentation, we assume you
+compile in the same directory that contains the source files; see <a href="gccCompilation_in_a_Separate_Direct.html">Compilation
+in a separate directory</a> to find out how to compile in a separate directory
+on UNIX systems.</font></font>
+<br><font face="Times New Roman"><font size=+1>For Sun systems, see <font color="#008000"><a href="gccInstalling_GNU_CC_on_the_Sun.html">Installing
+GNU CC on the Sun</a></font>. For VMS systems, see <font color="#008000"><a href="gccInstalling_GNU_CC_on_VMS.html">Installing
+GNU CC on VMS</a></font>. For Windows, you need to get the complete compilation
+package, DJGPP, which includes binaries as well as sources along with all
+the necessary compilation tools and libraries (see <a href="http://sourceware.cygnus.com/cygwin/">Sourceware</a>
+page for details).</font></font>
+<p><font face="Arial"><font size=+1>1.</font></font>
+<br><font face="Times New Roman"><font size=+1>If you have built GNU CC
+previously in the same directory for a different target machine, do </font></font><font face="Courier New"><font size=+0>make
+distclean</font></font><font face="Times New Roman"><font size=+1> to delete
+all files that might be invalid. One of the files that </font></font><font face="Courier New"><font size=+0>makedistclean
+</font></font><font face="Times New Roman"><font size=+1>deletes
+is </font></font><font face="Courier New"><font size=+0>Makefile</font></font><font face="Times New Roman"><font size=+1>;
+if </font></font><font face="Courier New"><font size=+0>makedistclean</font></font><font face="Times New Roman"><font size=+1>
+complains that </font></font><font face="Courier New"><font size=+0>Makefile</font></font><font face="Times New Roman"><font size=+1>
+does not exist, it probably means that the directory is already suitably
+clean.</font></font>
+<p><font face="Arial"><font size=+1>2.</font></font>
+<br><font face="Times New Roman"><font size=+1>On a System V release 4
+system, make sure </font></font><font face="Courier New"><font size=+0>/usr/bin</font></font><font face="Times New Roman"><font size=+1>
+precedes </font></font><font face="Courier New"><font size=+0>/usr/ucb</font></font><font face="Times New Roman"><font size=+1>
+in </font></font><font face="Courier New"><font size=+0>PATH</font></font><font face="Times New Roman"><font size=+1>.
+The </font></font><font face="Courier New"><font size=+0>cc</font></font><font face="Times New Roman"><font size=+1>
+command in </font></font><font face="Courier New"><font size=+0>/usr/ucb</font></font><font face="Times New Roman"><font size=+1>
+uses libraries which have bugs.</font></font>
+<p><font face="Arial"><font size=+1>3.</font></font>
+<br><font face="Times New Roman"><font size=+1>Specify the host, build
+and target machine configurations. You do this by running the file, </font></font><font face="Courier New"><font size=+0>configure</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<p><font face="Times New Roman"><font size=+1>The <i>build</i> machine
+is the system which you are using, the <i>host</i> machine is the system
+where you want to run the resulting compiler (normally the build machine),
+and the <i>target</i> machine is the system for which you want the compiler
+to generate code.</font></font>
+<p><font face="Times New Roman"><font size=+1>If you are building a compiler
+to produce code for the machine it runs on (a native compiler), you normally
+do not need to specify any operands to </font></font><font face="Courier New"><font size=+0>configure</font></font><font face="Times New Roman"><font size=+1>;
+it will try to guess the type of machine you are on and use that as the
+build, host and target machines. So you don’t need to specify a configuration
+when building a native compiler unless </font></font><font face="Courier New"><font size=+0>configure</font></font><font face="Times New Roman"><font size=+1>
+cannot figure out what your configuration is or guesses wrong.</font></font>
+<p><font face="Times New Roman"><font size=+1>In those cases, specify the
+build machine’s <i>configuration name</i> with the option,</font></font><font face="Courier New"><font size=+0>
+--build</font></font><font face="Times New Roman"><font size=+1>; the host
+and target will default to be the same as the build machine. The following
+is an example of a specification command.</font></font>
+<ul>
+<pre><font size=+1><font face="Courier New">./configure</font><font face="Times New Roman">—</font><font face="Courier New">build=sparc-sun-sunos4.1</font></font></pre>
+</ul>
+<font face="Times New Roman"><font size=+1>A configuration name may be
+canonical or it may be more or less abbreviated. A canonical configuration
+name has three parts, separated by dashes. It uses the following parts.</font></font>
+<ul>
+<pre><font face="Courier New"><font size=+1><i>cpu</i>-<i>company</i>-<i>system</i></font></font></pre>
+</ul>
+<font face="Times New Roman"><font size=+1>The three parts may themselves
+contain dashes; </font></font><font face="Courier New"><font size=+0>configure</font></font><font face="Times New Roman"><font size=+1>
+can figure out which dashes serve which purpose. For example, </font></font><font face="Courier New"><font size=+0>m68k-sun-sunos4.1</font></font><font face="Times New Roman"><font size=+1>
+specifies a Sun 3. (If you are building a cross-compiler, see <a href="gccBuilding_and_Installing_a_CrossC.html">Building
+and installing a cross-compiler</a>.)</font></font>
+<p><font face="Times New Roman"><font size=+1>You can also replace parts
+of the configuration by nicknames or aliases. For example, </font></font><font face="Courier New"><font size=+0>sun3</font></font><font face="Times New Roman"><font size=+1>
+stands for </font></font><font face="Courier New"><font size=+0>m68k-sun</font></font><font face="Times New Roman"><font size=+1>,
+so </font></font><font face="Courier New"><font size=+0>sun3-sunos4.1</font></font><font face="Times New Roman"><font size=+1>
+is another way to specify a Sun 3. You can also use </font></font><font face="Courier New"><font size=+0>sun3-sunos</font></font><font face="Times New Roman"><font size=+1>,
+since the version of SunOS is, by default, version 4.</font></font>
+<p><font face="Times New Roman"><font size=+1>You can specify a version
+number after any of the system types, and some of the CPU types. In most
+cases, the version is irrelevant, and will be ignored. So you might as
+well specify the version if you know it.</font></font>
+<ul><font face="Times New Roman"><font size=+1><b><i>Warning</i></b>:</font></font>
+<br><font face="Times New Roman"><font size=+1>See <a href="gccConfigurations_Supported_by_GNU_.html">Configurations
+supported by GNU CC</a> for a list of supported configuration names and
+notes on many of the configurations. <i>Check the notes in that section
+before proceeding any further with the installation of GNU CC</i>.</font></font></ul>
+<font face="Times New Roman"><font size=+1>There are four additional options
+you can specify independently to describe variant hardware and software
+configurations: </font></font><font face="Courier New"><font size=+0>--with-gnu-as</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>--with-gnu-ld</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>--with-stabs</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>--nfp</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<ul TYPE=SQUARE>
+<li>
+<font face="Courier New"><font size=+0>--with-gnu-as</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>If you will
+use GNU CC with the GNU assembler (GAS), you should declare this by using
+the </font></font><font face="Courier New"><font size=+0>--with-gnu-as</font></font><font face="Times New Roman"><font size=+1>
+option when you run </font></font><font face="Courier New"><font size=+0>configure</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<dt>
+<font face="Times New Roman"><font size=+1>Using this option does not install
+GAS. It only modifies the output of GNU CC to work with GAS. Building and
+installing GAS is up to you.</font></font></dt>
+
+<dt>
+<font face="Times New Roman"><font size=+1>Conversely, if you do <i>not</i>
+wish to use GAS <i>and</i> do <i>not</i> specify </font></font><font face="Courier New"><font size=+0>--with-gnu-as</font></font><font face="Times New Roman"><font size=+1>
+when building GNU CC, it is up to you to make sure that GAS is <i>not</i>
+installed.</font></font></dt>
+
+<dt>
+<font face="Times New Roman"><font size=+1>GNU CC searches for a program
+named </font></font><font face="Courier New"><font size=+0>as</font></font><font face="Times New Roman"><font size=+1>
+in various directories; if the program it finds is GAS, then it runs GAS.
+If you are not sure where GNU CC finds the assembler it is using, try specifying
+</font></font><font face="Courier New"><font size=+0>-v</font></font><font face="Times New Roman"><font size=+1>
+when you run it.</font></font></dt>
+
+<dt>
+<font face="Times New Roman"><font size=+1>The systems where it makes a
+difference whether you use GAS are </font></font><font face="Courier New"><font size=+0>hppa1.0-<i>any</i>-<i>any</i></font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>hppa1.1-<i>any</i>-<i>any</i></font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>i386-<i>any</i>-sysv</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>i386-<i>any</i>-isc</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>i860-<i>any</i>-bsd</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>m68k-bull-sysv</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>m68k-hp-hpux</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>m68k-sony-bsd</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>m68k-altos-sysv</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>m68000-hp-hpux</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>m68000-att-sysv</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0><i>any</i>-lynx-lynxos</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>mips-<i>any</i></font></font><font face="Times New Roman"><font size=+1>.
+On any other system, </font></font><font face="Courier New"><font size=+0>--with-gnu-as</font></font><font face="Times New Roman"><font size=+1>
+has no effect.</font></font></dt>
+
+<dt>
+<font face="Times New Roman"><font size=+1>On the previously listed systems
+(except for the HPPA, for ISC on the 386, and for </font></font><font face="Courier New"><font size=+0>mips-sgi-irix5.*</font></font><font face="Times New Roman"><font size=+1>),
+if you use GAS, you should also use the GNU linker (specifying with</font><font size=+0>—</font></font><font face="Courier New"><font size=+0>with-gnu-ld</font></font><font face="Times New Roman"><font size=+1>).</font></font></dt>
+</ul>
+
+<li>
+<font face="Courier New"><font size=+0>--with-gnu-ld</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>Specify the
+option, </font></font><font face="Courier New"><font size=+0>--with-gnu-ld</font></font><font face="Times New Roman"><font size=+1>,
+if you plan to use the GNU linker with GNU CC.</font></font>
+<dt>
+<font face="Times New Roman"><font size=+1>This option does not cause the
+GNU linker to be installed; it just modifies the behavior of GNU CC to
+work with the GNU linker. Specifically, it inhibits the installation of
+</font></font><font face="Courier New"><font size=+0>collect2</font></font><font face="Times New Roman"><font size=+1>,
+a program which otherwise serves as a front-end for the system’s linker
+on most configurations.</font></font></dt>
+</ul>
+
+<li>
+<font face="Courier New"><font size=+0>--with-stabs</font></font></li>
+
+<ul TYPE=SQUARE><a NAME="stabs"></a><font face="Times New Roman"><font size=+1>On
+MIPS based systems and on Alphas, you must specify whether you want GNU
+CC to create the normal ECOFF debugging format, or to use BSD-style </font></font><font face="Courier New"><font size=+0>stabs</font></font><font face="Times New Roman"><font size=+1>
+passed through the ECOFF symbol table. The normal ECOFF debug format cannot
+fully handle languages other than C. BSD stabs format can handle other
+languages, but it only works with the GNU debugger GDB.</font></font>
+<dt>
+<font face="Times New Roman"><font size=+1>Normally, GNU CC uses the ECOFF
+debugging format by default; if you prefer BSD stabs, specify </font></font><font face="Courier New"><font size=+0>--with-stabs
+</font></font><font face="Times New Roman"><font size=+1>when
+you configure GNU CC.</font></font></dt>
+
+<dt>
+<font face="Times New Roman"><font size=+1>No matter which default you
+choose when you configure GNU CC, the user can use the </font></font><font face="Courier New"><font size=+0>-gcoff
+</font></font><font face="Times New Roman"><font size=+1>and
+</font></font><font face="Courier New"><font size=+0>-gstabs+
+</font></font><font face="Times New Roman"><font size=+1>options
+to specify explicitly the debug format for a particular compilation.</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>--with-stabs </font></font><font face="Times New Roman"><font size=+1>is
+meaningful on the ISC system on the 386, also, if </font></font><font face="Courier New"><font size=+0>-with-gas
+</font></font><font face="Times New Roman"><font size=+1>is
+used. It selects use of stabs debugging information embedded in COFF output.
+This kind of debugging information supports C++ well; ordinary COFF debugging
+information does not.</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-with-stabs </font></font><font face="Times New Roman"><font size=+1>is
+also meaningful on 386 systems running SVR4. It selects use of </font></font><font face="Courier New"><font size=+0>stabs
+</font></font><font face="Times New Roman"><font size=+1>debugging
+information embedded in ELF output. The C++ compiler currently (2.6.0)
+does not support the DWARF debugging information normally used on 386 SVR4
+platforms; </font></font><font face="Courier New"><font size=+0>stabs
+</font></font><font face="Times New Roman"><font size=+1>provide
+a workable alternative. This requires </font></font><font face="Courier New"><font size=+0>gas</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>gdb</font></font><font face="Times New Roman"><font size=+1>,
+as the normal SVR4 tools can not generate or interpret </font></font><font face="Courier New"><font size=+0>stabs</font></font><font face="Times New Roman"><font size=+1>.</font></font></dt>
+</ul>
+
+<li>
+<font face="Courier New"><font size=+0>--nfp</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>On certain systems,
+you must specify whether the machine has a floating point unit. These systems
+include </font></font><font face="Courier New"><font size=+0>m68k-sun-sunos<i>n</i></font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>m68k-isi-bsd</font></font><font face="Times New Roman"><font size=+1>.
+On any other system, </font></font><font face="Courier New"><font size=+0>--nfp</font></font><font face="Times New Roman"><font size=+1>
+currently has no effect, though perhaps there are other systems where it
+could usefully make a difference.</font></font></ul>
+
+<li>
+<font face="Courier New"><font size=+0>--enable-objcthreads=<i>type</i></font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>Certain systems,
+notably Linux, can’t be relied on to supply a threads facility for the
+Objective C runtime and so will default to single-threaded runtime. They
+may, however, have a library threads implementation available, in which
+case threads can be enabled with this option by supplying a suitable </font></font><i><font face="Courier New"><font size=+0>type</font></font></i><font face="Times New Roman"><font size=+1>,
+probably ‘</font></font><font face="Courier New"><font size=+0>posix</font></font><font face="Times New Roman"><font size=+1>’.
+The possibilities for </font></font><i><font face="Courier New"><font size=+0>type</font></font></i><font face="Times New Roman"><font size=+1>
+are ‘</font></font><font face="Courier New"><font size=+0>single</font></font><font face="Times New Roman"><font size=+1>’,
+‘</font></font><font face="Courier New"><font size=+0>posix</font></font><font face="Times New Roman"><font size=+1>’,
+‘</font></font><font face="Courier New"><font size=+0>win32</font></font><font face="Times New Roman"><font size=+1>’,
+‘</font></font><font face="Courier New"><font size=+0>solaris</font></font><font face="Times New Roman"><font size=+1>’,
+‘</font></font><font face="Courier New"><font size=+0>irix</font></font><font face="Times New Roman"><font size=+1>’
+and ‘</font></font><font face="Courier New"><font size=+0>mach</font></font><font face="Times New Roman"><font size=+1>’.</font></font></ul>
+</ul>
+<font face="Times New Roman"><font size=+1>The ‘</font></font><font face="Courier New"><font size=+0>configure</font></font><font face="Times New Roman"><font size=+1>’
+script searches subdirectories of the source directory for other compilers
+that are to be integrated into GNU CC.</font></font>
+<p><font face="Times New Roman"><font size=+1>The GNU compiler for C++,
+called </font></font><font face="Courier New"><font size=+0>g++</font></font><font face="Times New Roman"><font size=+1>,
+is in a subdirectory named ‘</font></font><font face="Courier New"><font size=+0>cp</font></font><font face="Times New Roman"><font size=+1>’.
+‘</font></font><font face="Courier New"><font size=+0>configure</font></font><font face="Times New Roman"><font size=+1>’
+inserts rules into </font></font><font face="Courier New"><font size=+0>Makefile</font></font><font face="Times New Roman"><font size=+1>
+to build all of those compilers.</font></font>
+<p><font face="Times New Roman"><font size=+1>In the following, we clarify
+which files will be set up by </font></font><font face="Courier New"><font size=+0>configure</font></font><font face="Times New Roman"><font size=+1>.
+Normally you need not be concerned with these files.</font></font>
+<ul TYPE=SQUARE>&nbsp;
+<li>
+<font face="Times New Roman"><font size=+1>A file named ‘</font></font><font face="Courier New"><font size=+0>config.h</font></font><font face="Times New Roman"><font size=+1>’
+is created that contains a </font></font><font face="Courier New"><font size=+0>#include</font></font><font face="Times New Roman"><font size=+1>
+of the top-level configuration file for the machine you will run the compiler
+on (for a specific CPU and system, see <a href="gccConfigurations_Supported_by_GNU_.html">Configurations
+supported by GNU CC</a>).</font></font></li>
+
+<dt>
+<font face="Times New Roman"><font size=+1>This file is responsible for
+defining information about the host machine. It includes ‘</font></font><font face="Courier New"><font size=+0>tm.</font></font><font face="Times New Roman"><font size=+1>h’.</font></font></dt>
+
+<dt>
+<font face="Times New Roman"><font size=+1>The top-level configuration
+file is located in the subdirectory, ‘config’. Its name is always ‘xm-
+something.h’; usually,</font></font></dt>
+
+<br><font face="Times New Roman"><font size=+1>‘xm- machine.h’, but there
+are some exceptions.</font></font>
+<dt>
+<font face="Times New Roman"><font size=+1>If your system does not support
+symbolic links, you might want to set up ‘</font></font><font face="Courier New"><font size=+0>config.h</font></font><font face="Times New Roman"><font size=+1>’
+to contain a </font></font><font face="Courier New"><font size=+0>#include</font></font><font face="Times New Roman"><font size=+1>
+command which refers to the appropriate file.</font></font></dt>
+
+<li>
+<font face="Times New Roman"><font size=+1>A file named ‘</font></font><font face="Courier New"><font size=+0>tconfig.h</font></font><font face="Times New Roman"><font size=+1>’
+is created which includes the top-level configuration file for your target
+machine. This is used for compiling certain programs to run on that machine.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>A file named ‘</font></font><font face="Courier New"><font size=+0>tm.h</font></font><font face="Times New Roman"><font size=+1>’
+is created which includes the machine-description macro file for your target
+machine. It should be in the subdirectory ‘</font></font><font face="Courier New"><font size=+0>config</font></font><font face="Times New Roman"><font size=+1>’
+with the specific name of the system followed by </font></font><font face="Courier New"><font size=+0>.h
+</font></font><font face="Times New Roman"><font size=+1>(for
+a specific CPU and system, see <a href="gccConfigurations_Supported_by_GNU_.html">Configurations
+supported by GNU CC</a>).</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>The command file, ‘</font></font><font face="Courier New"><font size=+0>configure</font></font><font face="Times New Roman"><font size=+1>’,
+also constructs the file, ‘</font></font><font face="Courier New"><font size=+0>Makefile</font></font><font face="Times New Roman"><font size=+1>’,
+by adding some text to the template file, ‘</font></font><font face="Courier New"><font size=+0>Makefile.in</font></font><font face="Times New Roman"><font size=+1>’.
+The additional text comes from files in the </font></font><font face="Courier New"><font size=+0>config</font></font><font face="Times New Roman"><font size=+1>
+directory, named ‘</font></font><font face="Courier New"><font size=+0>t-target</font></font><font face="Times New Roman"><font size=+1>’
+and ‘</font></font><font face="Courier New"><font size=+0>x-host</font></font><font face="Times New Roman"><font size=+1>’.
+If these files do not exist, it means nothing needs to be added for a given
+target or host.</font></font></li>
+</ul>
+<font face="Arial"><font size=+1>4.</font></font>
+<br><font face="Times New Roman"><font size=+1>The standard directory for
+installing GNU CC is </font></font><font face="Courier New"><font size=+0>/usr/local/lib</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<p><font face="Times New Roman"><font size=+1>If you want to install its
+files somewhere else, specify ‘</font></font><font face="Courier New"><font size=+0>--prefix=<i>dir</i></font></font><font face="Times New Roman"><font size=+1>’
+when you run ‘</font></font><font face="Courier New"><font size=+0>configure</font></font><font face="Times New Roman"><font size=+1>’.
+</font></font><i><font face="Courier New"><font size=+0>dir</font></font></i><font face="Times New Roman"><font size=+1>
+is a directory name to use instead of </font></font><font face="Courier New"><font size=+0>/usr/local</font></font><font face="Times New Roman"><font size=+1>
+for all purposes with one exception: the directory </font></font><font face="Courier New"><font size=+0>/usr/local/include</font></font><font face="Times New Roman"><font size=+1>
+is searched for header files no matter where you install the compiler.
+To override this name, use the ‘</font></font><font face="Courier New"><font size=+0>--local-prefix</font></font><font face="Times New Roman"><font size=+1>’
+option in Step 5.</font></font>
+<p><font face="Arial"><font size=+1>5.</font></font>
+<br><font face="Times New Roman"><font size=+1>Specify ‘</font></font><font face="Courier New"><font size=+0>--local-prefix=<i>dir</i></font></font><font face="Times New Roman"><font size=+1>’
+if you want the compiler to search directory&nbsp; </font></font><font face="Courier New"><font size=+0><i>dir</i>/include</font></font><font face="Times New Roman"><font size=+1>
+for locally installed header files instead of </font></font><font face="Courier New"><font size=+0>/usr/local/include</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<p><font face="Times New Roman"><font size=+1>You should specify ‘</font></font><font face="Courier New"><font size=+0>--local-prefix</font></font><font face="Times New Roman"><font size=+1>’
+only if your site has a different convention (not </font></font><font face="Courier New"><font size=+0>/usr/local</font></font><font face="Times New Roman"><font size=+1>)
+for where to put site-specific files.</font></font>
+<p><font face="Times New Roman"><font size=+1>The default value for ‘</font></font><font face="Courier New"><font size=+0>--local-prefix</font></font><font face="Times New Roman"><font size=+1>’
+is ‘</font></font><font face="Courier New"><font size=+0>/usr/local</font></font><font face="Times New Roman"><font size=+1>’
+regardless of the value of ‘</font></font><font face="Courier New"><font size=+0>--prefix</font></font><font face="Times New Roman"><font size=+1>’.
+Specifying ‘</font></font><font face="Courier New"><font size=+0>--prefix</font></font><font face="Times New Roman"><font size=+1>’
+has no effect on which directory GNU CC searches for local header files.
+This may seem counterintuitive, but actually it is logical. The purpose
+of ‘</font></font><font face="Courier New"><font size=+0>--prefix</font></font><font face="Times New Roman"><font size=+1>’
+is to specify where to install GNU CC. The local header files in ‘</font></font><font face="Courier New"><font size=+0>/usr/local/include</font></font><font face="Times New Roman"><font size=+1>’—if
+you put any in that directory—are not part of GNU CC. They are part of
+other programs—perhaps many others. (GNU CC installs its own header files
+in another directory which is based on the ‘</font></font><font face="Courier New"><font size=+0>--prefix</font></font><font face="Times New Roman"><font size=+1>’
+value.)</font></font>
+<ul><b><i><font face="Times New Roman"><font size=+1>Warning:</font></font></i></b>
+<br><font face="Times New Roman"><font size=+1>Do not specify </font></font><font face="Courier New"><font size=+0>/usr</font></font><font face="Times New Roman"><font size=+1>
+as the ‘</font></font><font face="Courier New"><font size=+0>--local-prefix</font></font><font face="Times New Roman"><font size=+1>’!</font></font></ul>
+<font face="Times New Roman"><font size=+1>The directory you use for ‘</font></font><font face="Courier New"><font size=+0>--local-prefix</font></font><font face="Times New Roman"><font size=+1>’
+<b><i>must
+not</i></b> contain any of the system’s standard header files. If it did
+contain them, certain programs would be miscompiled (including GNU Emacs,
+on certain targets), because this would override and nullify the header
+file corrections made by the ‘</font></font><font face="Courier New"><font size=+0>fixincludes</font></font><font face="Times New Roman"><font size=+1>’
+script.</font></font>
+<p><font face="Times New Roman"><font size=+1>Indications are that people
+use this option use it based on mistaken ideas of its purpose. They use
+it as if it specified where to install GNU CC, perhaps on the assumption
+that installing GNU CC creates this directory.</font></font>
+<p><font face="Arial"><font size=+1>6.</font></font>
+<br><font face="Times New Roman"><font size=+1>Make sure the Bison parser
+generator is installed. (This is unnecessary if the Bison output files
+‘</font></font><font face="Courier New"><font size=+0>c-parse.c</font></font><font face="Times New Roman"><font size=+1>’
+and ‘</font></font><font face="Courier New"><font size=+0>cexp.c</font></font><font face="Times New Roman"><font size=+1>’
+are more recent than</font></font>
+<br><font face="Times New Roman"><font size=+1>‘</font></font><font face="Courier New"><font size=+0>c-parse.y</font></font><font face="Times New Roman"><font size=+1>’
+and ‘</font></font><font face="Courier New"><font size=+0>cexp.y</font></font><font face="Times New Roman"><font size=+1>’
+and you do not plan to change the ‘</font></font><font face="Courier New"><font size=+0>.y</font></font><font face="Times New Roman"><font size=+1>’
+files.)</font></font>
+<p><font face="Times New Roman"><font size=+1>Bison versions older than
+Sept 8, 1988 will produce incorrect output for ‘</font></font><font face="Courier New"><font size=+0>c-parse.c</font></font><font face="Times New Roman"><font size=+1>’.</font></font>
+<p><font face="Arial"><font size=+1>7.</font></font>
+<br><font face="Times New Roman"><font size=+1>If you have chosen a configuration
+for GNU CC which requires other GNU tools (such as GAS or the GNU linker)
+instead of the standard system tools, install the required tools in the
+build directory under the names </font></font><font face="Courier New"><font size=+0>as</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>ld</font></font><font face="Times New Roman"><font size=+1>,
+or whatever is appropriate. This will enable the compiler to find the proper
+tools for compilation of the program ‘</font></font><font face="Courier New"><font size=+0>enquire</font></font><font face="Times New Roman"><font size=+1>’.</font></font>
+<p><font face="Times New Roman"><font size=+1>Alternatively, you can do
+subsequent compilation using a value of the </font></font><font face="Courier New"><font size=+0>PATH</font></font><font face="Times New Roman"><font size=+1>
+environment variable such that the necessary GNU tools come before the
+standard system tools.</font></font>
+<p><font face="Arial"><font size=+1>8.</font></font>
+<br><font face="Times New Roman"><font size=+1>Build the compiler. Just
+type ‘</font></font><font face="Courier New"><font size=+0>make LANGUAGES=c</font></font><font face="Times New Roman"><font size=+1>’
+in the compiler directory. ‘</font></font><font face="Courier New"><font size=+0>LANGUAGES</font></font><font face="Times New Roman"><font size=+1>=</font></font><font face="Courier New"><font size=+0>c</font></font><font face="Times New Roman"><font size=+1>’
+specifies that only the C compiler should be compiled. The </font></font><font face="Courier New"><font size=+0>Makefile</font></font><font face="Times New Roman"><font size=+1>
+normally builds compilers for all the supported languages; currently, C,
+C++ and Objective C. However, C is the only language that is sure to work
+when you build with other non-GNU C compilers. In addition, building anything
+but C, at this stage, is a waste of time.</font></font>
+<p><font face="Times New Roman"><font size=+1>In general, you can specify
+the languages to build by typing the argument ‘</font></font><font face="Courier New"><font size=+0>LANGUAGES="<i>list"</i></font></font><font face="Times New Roman"><font size=+1>’
+where </font></font><i><font face="Courier New"><font size=+0>list</font></font></i><font face="Times New Roman"><font size=+1>
+is one or more words from the list </font></font><font face="Courier New"><font size=+0>c</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>c++</font></font><font face="Times New Roman"><font size=+1>,
+and </font></font><font face="Courier New"><font size=+0>objective-c</font></font><font face="Times New Roman"><font size=+1>.
+If you have any additional GNU compilers as subdirectories of the GNU CC
+source directory, you may also specify their names in this list.</font></font>
+<p><font face="Times New Roman"><font size=+1>Ignore any warnings you may
+see about “</font></font><b><font face="Courier New"><font size=+0>statement
+not reached</font></font></b><font face="Times New Roman"><font size=+1>”
+in ‘</font></font><font face="Courier New"><font size=+0>insn-emit.c</font></font><font face="Times New Roman"><font size=+1>’;
+they are normal. Also, warnings about “</font></font><b><font face="Courier New"><font size=+0>unknown
+escape sequence</font></font></b><font face="Times New Roman"><font size=+1>”
+are normal in ‘</font></font><font face="Courier New"><font size=+0>genopinit.</font></font><font face="Times New Roman"><font size=+1>’
+and perhaps some other files. Likewise, you should ignore warnings about
+“</font></font><b><font face="Courier New"><font size=+0>constant is so
+large that it is unsigned</font></font></b><font face="Times New Roman"><font size=+1>”
+in ‘</font></font><font face="Courier New"><font size=+0>insn-emit.c</font></font><font face="Times New Roman"><font size=+1>’
+and ‘</font></font><font face="Courier New"><font size=+0>insn-recog.c</font></font><font face="Times New Roman"><font size=+1>’
+and a warning about a comparison always being zero in ‘</font></font><font face="Courier New"><font size=+0>enquire.o</font></font><font face="Times New Roman"><font size=+1>’.
+Any other compilation errors may represent bugs in the port to your machine
+or operating system, and should be investigated and reported (see <a href="gccReporting_Bugs.html">Reporting
+bugs</a>). Some commercial compilers fail to compile GNU CC because they
+have bugs or limitations. For example, the Microsoft compiler is said to
+run out of macro space. Some Ultrix compilers run out of expression space;
+then you need to break up the statement where the problem happens.</font></font>
+<p><font face="Arial"><font size=+1>9.</font></font>
+<br><font face="Times New Roman"><font size=+1>If you are building a cross-compiler,
+stop here. See <a href="gccBuilding_and_Installing_a_CrossC.html">Building
+and installing a cross-compiler</a>.</font></font>
+<p><font face="Arial"><font size=+1>10.</font></font>
+<br><font face="Times New Roman"><font size=+1>Move the first-stage object
+files and executables into a subdirectory with the following command:</font></font>
+<ul>
+<pre><font face="Courier New"><font size=+1>make stage1</font></font></pre>
+</ul>
+<font face="Times New Roman"><font size=+1>The files are moved into a subdirectory
+named </font></font><font face="Courier New"><font size=+0>stage1</font></font><font face="Times New Roman"><font size=+1>.
+Once installation is complete, you may wish to delete these files with
+</font></font><font face="Courier New"><font size=+0>rm
+-r stage1</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<p><font face="Arial"><font size=+1>11.</font></font>
+<br><font face="Times New Roman"><font size=+1>If you have chosen a configuration
+for GNU CC which requires other GNU tools (such as GAS or the GNU linker)
+instead of the standard system tools, install the required tools in the
+</font></font><font face="Courier New"><font size=+0>stage1</font></font><font face="Times New Roman"><font size=+1>
+subdirectory under the names </font></font><font face="Courier New"><font size=+0>as</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>ld</font></font><font face="Times New Roman"><font size=+1>
+or whatever is appropriate. This will enable the stage 1 compiler to find
+the proper tools in the following stage.</font></font>
+<p><font face="Times New Roman"><font size=+1>Alternatively, you can do
+subsequent compilation using a value of the </font></font><font face="Courier New"><font size=+0>PATH</font></font><font face="Times New Roman"><font size=+1>
+environment variable such that the necessary GNU tools come before the
+standard system tools.</font></font>
+<p><font face="Arial"><font size=+1>12.</font></font>
+<br><font face="Times New Roman"><font size=+1>Recompile the compiler with
+itself, with the following command.</font></font>
+<ul>
+<pre><font face="Courier New"><font size=+1>make CC="stage1/xgcc&nbsp;&nbsp; -Bstage1/"&nbsp;&nbsp; CFLAGS="-g -O2"</font></font></pre>
+</ul>
+<font face="Times New Roman"><font size=+1>This is called making the stage
+2 compiler. The command shown in the previous example builds compilers
+for all the supported languages. If you don’t want them all, you can specify
+the languages to build by typing the argument ‘</font></font><font face="Courier New"><font size=+0>LANGUAGES<b>="</b><i>list</i><b>"</b></font></font><font face="Times New Roman"><font size=+1>’.
+Where </font></font><i><font face="Courier New"><font size=+0>list</font></font></i><font face="Times New Roman"><font size=+1>
+should contain one or more words from the list ‘</font></font><font face="Courier New"><font size=+0>c</font></font><font face="Times New Roman"><font size=+1>’,
+‘</font></font><font face="Courier New"><font size=+0>c++</font></font><font face="Times New Roman"><font size=+1>’,
+‘</font></font><font face="Courier New"><font size=+0>objective-c</font></font><font face="Times New Roman"><font size=+1>’,
+and ‘</font></font><font face="Courier New"><font size=+0>proto</font></font><font face="Times New Roman"><font size=+1>’.
+Separate the words with spaces. </font></font><font face="Courier New"><font size=+0>proto</font></font><font face="Times New Roman"><font size=+1>
+stands for the programs </font></font><font face="Courier New"><font size=+0>protoize</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>unprotoize</font></font><font face="Times New Roman"><font size=+1>;
+they are not a separate language, but you use </font></font><font face="Courier New"><font size=+0>LANGUAGES</font></font><font face="Times New Roman"><font size=+1>
+to enable or disable their installation. If you are going to build the
+stage 3 compiler, then you might want to build only the C language in stage
+2. Once you have built the stage 2 compiler, if you are short of disk space,
+you can delete the subdirectory </font></font><font face="Courier New"><font size=+0>stage1</font></font><font face="Times New Roman"><font size=+1>.
+On a 68000 or 68020 system lacking floating point hardware, unless you
+have selected a ‘</font></font><font face="Courier New"><font size=+0>tm.h</font></font><font face="Times New Roman"><font size=+1>’
+file that expects by default to find no hardware; instead, use the following
+command.</font></font>
+<ul>
+<pre><font face="Courier New"><font size=+1>make CC="stage1/xgcc -Bstage1/" CFLAGS="-g -O2 -msoft-float"</font></font></pre>
+</ul>
+<font face="Arial"><font size=+1>13.</font></font>
+<br><font face="Times New Roman"><font size=+1>If you wish to test the
+compiler by compiling it with itself one more time, install any other necessary
+GNU tools (such as GAS or the GNU linker) in the </font></font><font face="Courier New"><font size=+0>stage2</font></font><font face="Times New Roman"><font size=+1>
+subdirectory as you did in the </font></font><font face="Courier New"><font size=+0>stage1</font></font><font face="Times New Roman"><font size=+1>
+subdirectory; then, use the following. This is called making the stage
+3 compiler.</font></font>
+<ul>
+<pre><font face="Courier New"><font size=+1>make stage2&nbsp;
+make CC="stage2/xgcc -Bstage2/" CFLAGS="-g -O2"</font></font></pre>
+</ul>
+<font face="Times New Roman"><font size=+1>Aside from the ‘</font></font><font face="Courier New"><font size=+0>-B</font></font><font face="Times New Roman"><font size=+1>’
+option, the compiler options should be the same as when you made the stage
+2 compiler. But the </font></font><font face="Courier New"><font size=+0>LANGUAGES</font></font><font face="Times New Roman"><font size=+1>
+option need not be the same. The command in the previous example builds
+compilers for all the supported languages; if you don’t want them all,
+you can specify the languages to build by typing the argument ‘</font></font><font face="Courier New"><font size=+0>LANGUAGES="list"</font></font><font face="Times New Roman"><font size=+1>’
+as described in Step 8. If you don’t have to install any additional GNU
+tools, you may use the following command instead of making </font></font><font face="Courier New"><font size=+0>stage1</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>stage2</font></font><font face="Times New Roman"><font size=+1>,
+and performing the two compiler builds.</font></font>
+<ul>
+<pre><font face="Courier New"><font size=+1>make bootstrap&nbsp;&nbsp;&nbsp; LANGUAGES= language-list \&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BOOT_CFLAGS= option-list</font></font></pre>
+</ul>
+<font face="Arial"><font size=+1>14.</font></font>
+<br><font face="Times New Roman"><font size=+1>Then compare the latest
+object files with the stage 2 object files—they ought to be identical,
+aside from time stamps (if any).</font></font>
+<p><font face="Times New Roman"><font size=+1>On some systems, meaningful
+comparison of object files is impossible; they always appear “different”<i>.
+</i>This
+is currently true on Solaris and some systems that use ELF object file
+format. On some versions of Irix on SGI machines and DEC Unix (OSF/1) on
+Alpha systems, you will not be able to compare the files without specifying
+</font></font><font face="Courier New"><font size=+0>-save-temps</font></font><font face="Times New Roman"><font size=+1>;
+see the description of individual systems above to see if you get comparison
+failures. You may have similar problems on other systems. Use the following
+command to compare the files.</font></font>
+<ul>
+<pre><font face="Courier New"><font size=+1>make compare</font></font></pre>
+</ul>
+<font face="Times New Roman"><font size=+1>This will mention any object
+files that differ between stage 2 and stage 3. Any difference, no matter
+how innocuous, indicates that the stage 2 compiler has compiled GNU CC
+incorrectly, and is therefore a potentially serious bug which you should
+investigate and report (see <a href="gccReporting_Bugs.html">Reporting
+bugs</a>).</font></font>
+<p><font face="Times New Roman"><font size=+1>If your system does not put
+time stamps in the object files, then use the following as a faster way
+to compare them (using the Bourne shell).</font></font>
+<ul>
+<pre><font face="Courier New"><font size=+1>for file in *.o; do&nbsp;
+cmp $file stage2/$file&nbsp;
+done</font></font></pre>
+<font face="Times New Roman"><font size=+1><i>Note</i>:</font></font>
+<br><font face="Times New Roman"><font size=+1>If you built the compiler
+on MIPS machines with the option,</font></font><font face="Courier New"><font size=+0>
+-mno-mips-tfile</font></font><font face="Times New Roman"><font size=+1>,
+you can’t compare files.</font></font></ul>
+<font face="Arial"><font size=+1>15.</font></font>
+<br><font face="Times New Roman"><font size=+1>Install the compiler driver,
+the compiler’s passes and run-time support with ‘</font></font><font face="Courier New"><font size=+0>make
+install</font></font><font face="Times New Roman"><font size=+1>’. Use
+the same value for </font></font><font face="Courier New"><font size=+0>CC</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>CFLAGS</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>LANGUAGES</font></font><font face="Times New Roman"><font size=+1>
+that you used when compiling the files that are being installed. One reason
+this is necessary is that some versions of </font></font><font face="Courier New"><font size=+0>Make</font></font><font face="Times New Roman"><font size=+1>
+have bugs and recompile files gratuitously when you use this step. If you
+use the same variable values, those files will be properly recompiled.</font></font>
+<p><font face="Times New Roman"><font size=+1>For example, if you have
+built the stage 2 compiler, you can use the following command.</font></font>
+<ul>
+<pre><font face="Courier New"><font size=+1>make install CC="stage2/xgcc -Bstage2/" CFLAGS="-g -O" \&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LANGUAGES=" list"</font></font></pre>
+</ul>
+<font face="Times New Roman"><font size=+1>This copies the files ‘</font></font><font face="Courier New"><font size=+0>cc1</font></font><font face="Times New Roman"><font size=+1>’,
+‘</font></font><font face="Courier New"><font size=+0>cpp</font></font><font face="Times New Roman"><font size=+1>’
+and ‘</font></font><font face="Courier New"><font size=+0>libgcc.a</font></font><font face="Times New Roman"><font size=+1>’
+to files ‘</font></font><font face="Courier New"><font size=+0>cc1</font></font><font face="Times New Roman"><font size=+1>’,
+‘</font></font><font face="Courier New"><font size=+0>cpp</font></font><font face="Times New Roman"><font size=+1>’
+and ‘</font></font><font face="Courier New"><font size=+0>libgcc.a</font></font><font face="Times New Roman"><font size=+1>’
+in the directory </font></font><font face="Courier New"><font size=+0>/usr/local/lib/gcc-lib/<i>target</i>/<i>version</i></font></font><font face="Times New Roman"><font size=+1>,
+which is where the compiler driver program looks for them. In this case,
+</font></font><i><font face="Courier New"><font size=+0>target</font></font></i><font face="Times New Roman"><font size=+1>
+is the target machine type specified when you ran </font></font><font face="Courier New"><font size=+0>configure</font></font><font face="Times New Roman"><font size=+1>,
+and </font></font><i><font face="Courier New"><font size=+0>version</font></font></i><font face="Times New Roman"><font size=+1>
+is the version number of GNU CC.</font></font>
+<p><font face="Times New Roman"><font size=+1>This naming scheme permits
+various versions and/or cross-compilers to coexist. It also copies the
+executables for compilers for other languages (e.g., ‘</font></font><font face="Courier New"><font size=+0>cc1plus</font></font><font face="Times New Roman"><font size=+1>’
+for C++) to the same directory.</font></font>
+<p><font face="Times New Roman"><font size=+1>This also copies the driver
+program ‘</font></font><font face="Courier New"><font size=+0>xgcc</font></font><font face="Times New Roman"><font size=+1>’
+into </font></font><font face="Courier New"><font size=+0>/usr/local/bin/gcc</font></font><font face="Times New Roman"><font size=+1>,
+so that it appears in typical execution search paths.</font></font>
+<p><font face="Times New Roman"><font size=+1>It also copies ‘</font></font><font face="Courier New"><font size=+0>gcc.1</font></font><font face="Times New Roman"><font size=+1>’
+into </font></font><font face="Courier New"><font size=+0>/usr/local/man/man1</font></font><font face="Times New Roman"><font size=+1>
+and info pages into </font></font><font face="Courier New"><font size=+0>/usr/local/info</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<p><font face="Times New Roman"><font size=+1>On some systems, this command
+causes recompilation of some files. This is usually due to bugs in </font></font><font face="Courier New"><font size=+0>make</font></font><font face="Times New Roman"><font size=+1>.
+You should either ignore this problem, or use GNU Make.</font></font>
+<ul><b><i><font face="Times New Roman"><font size=+1>Warning:</font></font></i></b>
+<br><font face="Times New Roman"><font size=+1>There is a bug in </font></font><font face="Courier New"><font size=+0>alloca</font></font><font face="Times New Roman"><font size=+1>
+in the Sun library. To avoid this bug, be sure to<i> </i>install the executables
+of GNU CC that were compiled by GNU CC<i>.</i> (The executables from stage
+2 or 3, <i><b>not</b> </i>stage 1.) They use </font></font><font face="Courier New"><font size=+0>alloca</font></font><font face="Times New Roman"><font size=+1>
+as a built-in function, never<i> </i>the one in the library.</font></font></ul>
+<font face="Times New Roman"><font size=+1>(It is usually better to install
+GNU CC executables from stage 2 or 3, as they usually run faster than ones
+compiled with some other compiler.)</font></font>
+<p><font face="Arial"><font size=+1>16.</font></font>
+<br><font face="Times New Roman"><font size=+1>If you’re going to use C++,
+it’s likely that you need to also install the </font></font><font face="Courier New"><font size=+0>libg++</font></font><font face="Times New Roman"><font size=+1>
+distribution. It should be available from the same place where you got
+the GNU C distribution.</font></font>
+<p><font face="Times New Roman"><font size=+1>Just as GNU C does not distribute
+a C runtime library, it also does not include a C++ run-time library. All
+I/O functionality, special class libraries, etc., are available in the
+</font></font><font face="Courier New"><font size=+0>libg++</font></font><font face="Times New Roman"><font size=+1>
+distribution.</font></font>
+<p><font face="Arial"><font size=+1>17.</font></font>
+<br><font face="Times New Roman"><font size=+1>GNU CC includes a runtime
+library for Objective-C because it is an integral part of the language.
+You can find the files associated with the library in the subdirectory
+‘</font></font><font face="Courier New"><font size=+0>objc</font></font><font face="Times New Roman"><font size=+1>’.
+The GNU Objective-C Runtime Library requires header files for the target’s
+C library in order to be compiled,and also requires the header files for
+the target’s thread library if you want thread support. See <a href="gccCrossCompilers_and_Header_Files.html">Cross-compilers
+and header files</a> for discussion about header files issues for cross-compilation.</font></font>
+<p><font face="Times New Roman"><font size=+1>When you run ‘</font></font><font face="Courier New"><font size=+0>configure</font></font><font face="Times New Roman"><font size=+1>’,
+it picks the appropriate Objective-C thread implementation file for the
+target platform. In some situations, you may wish to choose a different
+back-end as some platforms support multiple thread implementations or you
+may wish to disable thread support completely. You do this by specifying
+a value for the </font></font><font face="Courier New"><font size=+0>OBJC_THREAD_FILE</font></font><font face="Times New Roman"><font size=+1>
+makefile variable on the command line when you run </font></font><font face="Courier New"><font size=+0>make</font></font><font face="Times New Roman"><font size=+1>.
+Use the folllowing example, for instance.</font></font>
+<ul>
+<pre><font face="Courier New"><font size=+1>make CC="stage2/xgcc -Bstage2/" CFLAGS="-g -O2" OBJC_THREAD_FILE=thr-single</font></font></pre>
+</ul>
+<font face="Times New Roman"><font size=+1>The following lists the currently
+available back-ends.</font></font>
+<ul TYPE=SQUARE>
+<li>
+<font face="Courier New"><font size=+0>thr-single</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>Disable thread
+support, should work for all platforms.</font></font></ul>
+
+<li>
+<font face="Courier New"><font size=+0>thr-decosf1</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>DEC OSF/1 thread
+support.</font></font></ul>
+
+<li>
+<font face="Courier New"><font size=+0>thr-irix</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>SGI IRIX thread
+support.</font></font></ul>
+
+<li>
+<font face="Courier New"><font size=+0>thr-mach</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>Generic MACH
+thread support, known to work on NEXTSTEP.</font></font></ul>
+
+<li>
+<font face="Courier New"><font size=+0>thr-os2</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>IBM OS/2 thread
+support.</font></font></ul>
+
+<li>
+<font face="Courier New"><font size=+0>thr-posix</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>Generix POSIX
+thread support.</font></font></ul>
+
+<li>
+<font face="Courier New"><font size=+0>thr-pthreads</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>PCThreads on
+Linux-based GNU systems.</font></font></ul>
+
+<li>
+<font face="Courier New"><font size=+0>thr-solaris</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>SUN Solaris
+thread support.</font></font></ul>
+
+<li>
+<font face="Courier New"><font size=+0>thr-win32</font></font></li>
+
+<ul TYPE=SQUARE><font face="Times New Roman"><font size=+1>Microsoft Win32
+API thread support.</font></font></ul>
+</ul>
+
+<center>
+<hr SIZE=3 WIDTH="100%">
+<br><a href="#Top">Top</a>|<a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccCompile_C_C_or_Objective_C.html">Previous</a>|<a href="gccConfigurations_Supported_by_GNU_.html">Next</a></center>
+
+</body>
+</html>

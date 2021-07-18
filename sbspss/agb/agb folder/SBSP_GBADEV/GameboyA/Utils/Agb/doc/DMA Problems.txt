@@ -1,0 +1,86 @@
+Problems with Automatic Start of DMA 
+(Sound DMA/H-DMA/V-DMA/Display Synchronization DMA
+/Game Pak Data Request DMA)
+
+
+When DMA is automatically started with a specified timing, sometimes DMA crashes at the moment it is automatically started, and does not return to CPU control if DMA is reset with a certain CPU.
+
+When enabling the DMA repeat function, sometimes the DMA controller will crash if a DMA is reset by the CPU at the moment the DMA is automatically started. Therefore, control does not return to the CPU.
+
+For Sound DMA/H-DMA/V-DMA, this problem could be avoided by stopping DMA with a timing that does not agree with the automatic start. However, in order to stop it more safely, follow the procedures below.
+
+In some cases, DMA starts up one extra time (even though the address setting remains unchanged), but the problem could be avoided.
+
+
+1) H-DMA/V-DMA
+
+(1)Write the following setting to DM*CNT_H in 16bit.
+
+Enable flag :"1"
+Start timing :"00" (immediately after)
+Transfer :Value when starting
+Repeat : type
+Source address control flag :Value when starting
+Destination address control flag :Value when starting
+Data request transfer flag of Game Pak side :"0" (DMA3 only)
+
+(2)Execute a dummy cycle of 4 clocks or more
+(3 NOP commands (or 3 LDRs)+ 1 STR command)
+
+(3)Then, write the following setting to DM*CNT_H.
+
+Enable flag :"0"
+Start timing :"00" (immediately after)
+Transfer :Value when starting
+Repeat : type
+Source address control flag :Value when starting
+Destination address control flag :Value when starting
+Data request transfer flag of Game Pak side :"0" (DMA3 only)
+
+*Because these DMAs do not occur except in the first several clocks of V blank. If DMA is stopped in the V blank period, the problem can be avoided.
+
+*When DMA repeat is not set at the time of start up, DMA stops automatically after DMA is executed once, therefore, do not forcibly clear the flag, but wait till it changes to "0".
+
+2) Sound DMA
+
+(1) Write the following setting to DM*CNT.
+However, if it is necessary to change a word count, write to DM*CNT_L using 32bit access. And if it is not necessary to change a word count, write to DM*CNT_H in 16bit.
+
+Enable flag :"1"
+Start timing :"00" (immediately after)
+Transfer :"1" (32bit)
+Repeat : type
+Source address control flag :Value when starting
+Destination address control flag :"10"(fixed)
+
+Word count :"0x0004"
+
+(2)Execute a dummy cycle of 4 clocks or more
+(3 NOP commands (or 3 LDRs)+ 1 STR command)
+
+(3)Then, write the following setting to DM*CNT_H in 16bit.
+
+Enable flag :"0"
+Start timing :"00" (immediately after)
+Transfer :"1" (32bit)
+Repeat : type
+Source address control flag :Value when starting
+Destination address control flag :"10"(fixed)
+
+*We recommend that you set Transfer/Destination address control flag/Word count to the above setting when starting setup.
+
+*When DMA repeat is not set at start up, DMA stops automatically after DMA is executed once, therefore, do not forcibly clear the flag, but wait till it changes to "0".
+
+3) Display Synchronization DMA
+
+*This DMA is used to store graphic data in VRAM of the single frame buffer using BG mode 3. After flag is set, it distinguishes a flag when V count value is 162, and starts transferring from the next frame. It stops automatically the next time the V count value is 162, therefore, do not forcibly clear the flag, but wait till it changes to "0".
+
+Future versions of the "AGB Programming Manual" will contain more details concerning this DMA.
+
+4) Game Pak Data Request DMA
+
+*Do not set Repeat.
+
+*It automatically stops after DMA is executed, therefore, do not forcibly clear flag, but wait till it changes to "0".
+
+

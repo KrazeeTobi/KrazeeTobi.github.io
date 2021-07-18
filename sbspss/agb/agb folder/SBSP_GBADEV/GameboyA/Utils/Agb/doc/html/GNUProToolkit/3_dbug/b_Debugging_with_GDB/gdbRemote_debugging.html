@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Remote debugging</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbChoosing_target_byte_order.html">Previous</A>|<A HREF="gdbThe_GDB_remote_serial_protocol.html">Next</A>
+<BR><A NAME="off_2427013"></A><A NAME="b0862df3"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Remote
+debugging</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>If you
+are trying to debug a program running on a machine that cannot run GDB
+in the usual way, it is often useful to use remote debugging. For example,
+you might use remote debugging on an operating system kernel, or on a small
+system which does not have a general purpose operating system powerful
+enough to run a full-featured debugger.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Some configurations of GDB
+have special serial or TCP/IP interfaces to make this work with particular
+debugging targets. In addition, GDB comes with a generic serial protocol
+(specific to GDB, but not specific to any particular target system) which
+you can use if you write the remote stubs—the code that runs on the remote
+system to communicate with GDB.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Other remote targets may
+be available in your configuration of GDB; use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>help
+target</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> to list
+them.</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbChoosing_target_byte_order.html">Previous</A>|<A HREF="gdbThe_GDB_remote_serial_protocol.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

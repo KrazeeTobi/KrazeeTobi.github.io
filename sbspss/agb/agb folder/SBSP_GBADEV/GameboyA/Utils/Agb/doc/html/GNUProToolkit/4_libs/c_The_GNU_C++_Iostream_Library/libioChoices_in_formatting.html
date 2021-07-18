@@ -1,0 +1,230 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Choices in formatting</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioChecking_the_state_of_a_stream.html">Previous</A>|<A HREF="libioChanging_stream_properties_using.html">Next</A>
+<BR><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><A NAME="off_133216"></A><A NAME="9ec09804"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Choices
+in formatting</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+following methods control (or report on) settings for some details of controlling
+streams, primarily to do with formatting output.</FONT></FONT>
+<UL>
+<UL><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">char </FONT></FONT><B><FONT FACE="Times New Roman">ios::fill
+</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">()const</FONT></FONT></FONT>
+<BR><B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Method</FONT></FONT></I></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Returns the current </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>padding</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+character.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">char </FONT></FONT><B><FONT FACE="Times New Roman">ios::fill
+</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">(char <I>padding</I>)</FONT></FONT></FONT>
+<BR><B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Method</FONT></FONT></I></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set the padding character.
+You can also use the manipulator, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>setfill</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+See <FONT COLOR="#008000"><A HREF="libioChanging_stream_properties_using.html">Changing
+stream properties using manipulators</A></FONT>.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Default: space.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int </FONT></FONT><B><FONT FACE="Times New Roman">ios::precision
+</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">()const&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Report the number of significant
+digits currently in use for output of floating point numbers.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Default: 6.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int </FONT></FONT><B><FONT FACE="Times New Roman">ios::precision
+</FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">(int <I>signif</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set the number of significant
+digits (for input and output numeric conversions) to </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>signif</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+You can also use the manipulator </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>setprecision</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for this purpose. See <FONT COLOR="#008000"><A HREF="libioChanging_stream_properties_using.html">Changing
+stream properties using manipulators</A></FONT>.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int </FONT></FONT><FONT FACE="Times New Roman"><B>ios::width</B>
+</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">()const&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Report the current output
+field width setting (the number of characters to write on the next </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>&lt;&lt;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+output operation).</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Default: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+which means to use as many characters as necessary.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int </FONT></FONT><FONT FACE="Times New Roman"><B>ios::width</B>
+</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(int <I>num</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set the input field width
+setting to </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>num</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Return the previous value for this stream. This value resets to zero (the
+default) every time you use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>&lt;&lt;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+it is essentially an additional implicit argument to that operator. You
+can also use the manipulator </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>setw</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for this purpose. See <FONT COLOR="#008000"><A HREF="libioChanging_stream_properties_using.html">Changing
+stream properties using manipulators</A></FONT>.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">fmtflags</FONT></FONT><FONT FACE="Times New Roman">
+<B>ios::flags</B> </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">()const&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Return the current value
+of the complete collection of flags controlling the format state. The following
+are the flags and their meanings when set.</FONT></FONT>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::dec</FONT></FONT></FONT></LI>
+
+<BR><FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::oct</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::hex</FONT></FONT></FONT>
+<BR><FONT SIZE=+1><FONT FACE="Times New Roman">Each of theses flags is
+for a numeric base to use in converting integers from internal to display
+representation, or vice versa: </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">ios::dec</FONT></FONT><FONT FACE="Times New Roman">,
+decimal, </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">ios::oct</FONT></FONT><FONT FACE="Times New Roman">,
+octal, or </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">ios::hex</FONT></FONT><FONT FACE="Times New Roman">,
+hexadecimal, respectively. (You can change the base using the manipulator
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>setbase</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or any of the manipulators </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>dec</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>oct</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>or hex</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+see <FONT COLOR="#008000"><A HREF="libioChanging_stream_properties_using.html">Changing
+stream properties using manipulators</A></FONT>.)</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>On input, if none of these
+flags is set, read numeric constants according to the prefix: decimal if
+no prefix (or a </FONT><I><FONT SIZE=+0>’</FONT></I></FONT><I><FONT SIZE=+0><FONT FACE="Courier New">.</FONT><FONT FACE="Times New Roman">’</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+suffix), octal if a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+prefix is present, hexadecimal if a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+prefix is present.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Default: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>dec</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::fixed</FONT></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Avoid scientific notation,
+and always show a fixed number of digits after the decimal point, according
+to the output precision in effect. Use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::precision</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to set precision.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::left</FONT></FONT></FONT></LI>
+
+<BR><FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::right</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::internal</FONT></FONT></FONT>
+<BR><FONT SIZE=+1><FONT FACE="Times New Roman">Where output is to appear
+in a fixed-width field: </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">ios::left</FONT></FONT><FONT FACE="Times New Roman">
+sets as left-justified, </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">ios::right</FONT></FONT><FONT FACE="Times New Roman">
+sets as right-justified, and </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">ios::internal</FONT></FONT><FONT FACE="Times New Roman">
+sets with padding in the middle (e.g., between a numeric sign and the associated
+value).</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::scientific</FONT></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Use scientific (exponential)
+notation to display numbers.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::showbase</FONT></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Display the conventional
+prefix as a visual indicator of the conversion base: no prefix for decimal,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for octal, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for hexadecimal.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::showpoint</FONT></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Display a decimal point
+followed by trailing zeros to fill out numeric fields, even when redundant.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::showpos</FONT></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Display a positive sign
+on display of positive numbers.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::skipws</FONT></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Skip white space. (On by
+default).</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::stdio</FONT></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Flush the C </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdio</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+streams </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdout</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stderr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+after each output operation (for programs that mix C and C++ output conventions).</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::unitbuf</FONT></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Flush after each output
+operation.</FONT></FONT>
+<LI>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1>ios::uppercase</FONT></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Use uppercase rather than
+lowercase characters in numeric displays; for instance, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0X7A</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+rather than </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0x7a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>3.14E+09</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+rather than </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>3.14e+09</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+</UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">fmtflags
+</FONT></FONT><FONT FACE="Times New Roman"><B>ios::flags</B> </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(fmtflags
+<I>value</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set value as the complete
+collection of flags controlling the format state. The flag values are described
+under </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::flags</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::setf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::unsetf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to change one property at a time.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">fmtflags
+</FONT></FONT><FONT FACE="Times New Roman"><B>ios::setf</B> </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(fmtflags
+<I>flag</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Set one particular flag
+(of those described for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::flags()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+return the complete collection of flags <I>previously</I> in effect. (Use
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::unsetf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to cancel.)</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">fmtflags
+</FONT></FONT><B><FONT FACE="Times New Roman">ios::setf </FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">(fmtflags
+<I>flag</I>, fmtflags <I>mask</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Clear
+the flag values indicated by </FONT></FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>mask</FONT></FONT></I><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>,
+then set any of them that are also in </FONT></FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>flag</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#000000">.
+(Flag values are described for</FONT> </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::flags</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.)
+Return the complete collection of flags <I>previously</I> in effect. (See
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::unsetf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for another way of clearing flags.)</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">fmtflags
+</FONT></FONT><FONT FACE="Times New Roman"><B>ios::unsetf </B>(</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">fmtflags
+<I>flag</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Make certain </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>flag</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(a combination of flag values described for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::flags</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+is not set for this stream; converse of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::setf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Returns the old values of those flags.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioChecking_the_state_of_a_stream.html">Previous</A>|<A HREF="libioChanging_stream_properties_using.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

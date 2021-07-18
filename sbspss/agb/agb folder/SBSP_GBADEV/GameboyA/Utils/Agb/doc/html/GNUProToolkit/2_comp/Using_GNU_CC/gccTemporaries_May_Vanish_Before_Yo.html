@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Temporaries May Vanish Before You Expect</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccDeclare_and_Define_Static_Member.html">Previous</A>|<A HREF="gccCaveats_of_using_protoize.html">Next</A>
+<BR><A NAME="off_5144924"></A><A NAME="b4bb87ef"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><B><FONT SIZE=+3>Temporaries
+may vanish before you expect&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT SIZE=+1><FONT FACE="Times New Roman">It is dangerous to use pointers
+or references to <I>portions</I> of a temporary object. The compiler may
+very well delete the object before you expect it to, leaving a pointer
+to garbage. The most common place where this problem crops up is in classes
+like the </FONT><TT>libg++</TT><FONT FACE="Times New Roman"> </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>string</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+class, that define a conversion function to type </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>char
+*</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>const
+char *</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>. However,
+any class that returns a pointer to some internal structure is potentially
+subject to this problem.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For instance, a program may
+use a function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>strfunc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+, that returns </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>string</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+objects, and another function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>charfunc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+, that operates on pointers to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>char</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+as in the following example.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>string strfunc ();&nbsp;
+void charfunc (const char *);</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In this situation, it may seem
+natural to write ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>charfunc
+(strfunc());</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+based on the knowledge that class </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>String</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has an explicit conversion to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>char</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+pointers. However, what really happens is akin to</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>charfunc
+(strfunc().convert());</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+where the convert method is a function to do the same data conversion normally
+performed by a cast. Since the last use of the temporary </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>String</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+object is the call to the conversion function, the compiler may delete
+that object before actually calling </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>charfunc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The compiler has no way of knowing that deleting the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>String</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+object will invalidate the pointer. The pointer then points to garbage,
+so that by the time </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>charfunc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is called, it gets an invalid argument.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Code like this may run successfully
+under some other compilers, especially those that delete temporaries relatively
+late. However, the GNU C++ behavior is also standard-conforming, so if
+your program depends on late destruction of temporaries it is not portable.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you think this is surprising,
+you should be aware that the ANSI C++ committee continues to debate the
+lifetime-of-temporaries problem.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For now, at least, the safe
+way to write such code is to give the temporary a name, which forces it
+to remain until the end of the scope of the name. For instance, use the
+following declaration.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>string&amp; tmp = strfunc ();&nbsp;
+charfunc (tmp);</FONT></FONT></PRE>
+</UL>
+
+</BODY>
+</HTML>

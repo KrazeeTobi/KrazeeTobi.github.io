@@ -1,0 +1,239 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Overview of ld, the GNU linker</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="ld.html">Contents</A>|<A HREF="ldindex.html">Index</A>|<A HREF="ldInvocation.html">Next</A>
+<BR><A NAME="off_1911"></A><A NAME="894b94f5"></A><B><FONT SIZE=+3><FONT FACE="Futura Md BT">Overview
+of </FONT><FONT FACE="Courier New">ld</FONT><FONT FACE="Futura Md BT">,
+the GNU linker</FONT></FONT></B><FONT FACE="Futura Md BT"></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+combines a number of object and archive files, relocates their data and
+ties up symbol references. Usually the last step in compiling a program
+is to run </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For specific discussion on
+the linker, see the following documentation.</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<B><FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="ldInvocation.html">Invocation</A></FONT></FONT></FONT></B></LI>
+
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="ldCommand_Line_Options.html">Command
+line options</A></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="ldEnvironment_Variables.html">Environment
+variables</A></FONT></FONT></FONT></LI>
+</UL>
+
+<LI>
+<B><FONT SIZE=+1><A HREF="ldLinker_scripts.html">Linker scripts</A></FONT></B></LI>
+
+<UL>
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Concepts">Basic linker script
+concepts</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#formats">Linker script format</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#example">Simple linker script
+example</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Commands">Simple linker script
+commands</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Entry_point">Setting the entry
+point</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Commands_dealing">Commands
+dealing with files</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#OFF">Commands dealing with
+object file formats</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Other_commands">Other linker
+script commands</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Assigning_values_symbols">Assigning
+values to symbols</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Simple_assignments">Simple
+assignments</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#PROVIDE_command"><TT>PROVIDE</TT>
+command</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#SECTIONS_command"><TT>SECTIONS</TT>
+command</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Output_section_description">Output
+section description</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Output_section_name">Output
+section name</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Output_section_address">Output
+section address</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Input_section_description">Input
+section description</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Input_section_basics">Input
+section basics</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Input_section_wildcard_patterns">Input
+section wildcard patterns</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Input_section_for_common_symbols">Input
+section for common symbols</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Input_section_example">Input
+section example</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Output_section_data">Output
+section data</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Output_section_keywords">Output
+section keywords</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Output_section_discarding">Output
+section discarding</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Output_section_attributes">Output
+section attributes</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Output_section_type">Output
+section type</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Output_section_LMA">Output
+section LMA</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Output_section_region">Output
+section region</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Output_section_phdr">Output
+section <TT>phdr</TT></A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Output_section_fill">Output
+section fill</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Overlay_description">Overlay
+description</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#MEMORY_command"><TT>MEMORY</TT>
+command</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#PHDRS_command"><TT>PHDRS</TT>
+command</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#VERSION_command"><TT>VERSION</TT>
+command</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Expressions_in _linker_scripts">Expressions
+in linker scripts</A></FONT></LI>
+
+<LI CLASS="Heading1">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Constants">Constants</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Symbol_names">Symbol names</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#The_location_counter">The
+location counter</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Operators">Operators</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Evaluation">Evaluation</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#The_section_of_an_expression">The
+section of an expression</A></FONT></LI>
+
+<LI CLASS="Heading2">
+<FONT SIZE=+1><A HREF="ldLinker_scripts.html#Builtin_functions">Builtin
+functions</A></FONT></LI>
+</UL>
+
+<LI CLASS="Heading2">
+<B><FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="ldMachine_Dependent_Features.html">Machine
+dependent features</A></FONT></FONT></FONT></B></LI>
+
+<LI>
+<B><FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="ldBFD.html">BFD</A></FONT></FONT></FONT></B></LI>
+
+<LI>
+<B><FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="ldMRI_Compatible_Script_Files.html">MRI
+compatible script files</A></FONT></FONT></FONT></B></LI>
+</UL>
+</UL>
+</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+accepts Linker Command Language files written in a superset of AT&amp;T’s
+Link Editor Command Language syntax, to provide explicit and total control
+over the linking process.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This version of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+uses the general purpose BFD libraries to operate on object files. This
+allows </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to read, combine, and write object files in many different formats—for
+example, COFF or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a.out</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Different formats may be linked together to produce any available kind
+of object file. See <FONT COLOR="#008000"><A HREF="ldBFD.html">BFD</A></FONT>
+for more information.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Aside from its flexibility,
+the GNU linker is more helpful than other linkers in providing diagnostic
+information. Many linkers abandon execution immediately upon encountering
+an error; whenever possible, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+continues executing, allowing you to identify other errors (or, in some
+cases, to get an output file in spite of the error).</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="ld.html">Contents</A>|<A HREF="ldindex.html">Index</A>|<A HREF="ldInvocation.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

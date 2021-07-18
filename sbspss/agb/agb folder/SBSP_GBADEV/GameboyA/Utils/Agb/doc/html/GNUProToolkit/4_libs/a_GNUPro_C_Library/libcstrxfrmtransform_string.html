@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>strxfrm[transform string]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcstrtokget_next_token_from_a_stri.html">Previous</A>|<A HREF="libcSignal_Handling_signalh.html">Next</A>
+</P>
+
+<P><A NAME="off_1671353"></A><A NAME="74a423a1"></A><A NAME="off_1671353"></A><A NAME="74a423a1"></A><FONT SIZE=+3><FONT FACE="Courier New">strxfrm
+<BR>
+</FONT><FONT FACE="Times New Roman">[transform string] </FONT></FONT></P>
+
+<PRE><B><FONT FACE="Times New Roman"><FONT SIZE=+2>SYNOPSIS 
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+1>#include &lt;string.h&gt; 
+size_t strxfrm(char *<I>s1</I>, const char *<I>s2</I>, size_t <I>n</I>); </FONT></FONT></PRE>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>strxfrm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+transforms the string pointed to by </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>s2</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and places the resulting string into the array pointed to by </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>s1</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The transformation is such that if the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>strcmp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function is applied to the two transformed strings, it returns a value
+greater than, equal to, or less than zero, corresponding to the result
+of a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>strcoll</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function applied to the same two original strings. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>No more than </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+characters are placed into the resulting array pointed to by </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>s1</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+including the terminating null character. If </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is zero, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>s1</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may be a null pointer. If copying takes place between objects that overlap,
+the behavior is undefined. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>With a C locale, this function
+just copies. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>RETURNS <BR>
+</B>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>strxfrm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function returns the length of the transformed string (not including the
+terminating null character). If the value returned is </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or more, the contents of the array pointed to by </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>s1</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are indeterminate. </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>strxfrm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is ANSI C. </FONT></FONT></P>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>strxfrm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+requires no supporting OS subroutines. </FONT></FONT></P>
+
+</BODY>
+</HTML>

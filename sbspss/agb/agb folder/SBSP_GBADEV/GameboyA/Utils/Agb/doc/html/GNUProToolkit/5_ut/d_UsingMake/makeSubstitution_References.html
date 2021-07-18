@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Substitution References</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeAdvanced_Features_for_Reference_.html">Previous</A>|<A HREF="makeComputed_Variable_Names.html">Next</A>
+<BR><A NAME="off_1182544"></A><A NAME="82aa1bf0"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Substitution
+references</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>A substitution
+reference substitutes the value of a variable with alterations that you
+specify. It has the form ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(<I>var</I>:</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>a</I>=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>b</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>{<I>var</I>:<I>a</I>=<I>b</I>}</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+and its meaning is to take the value of the variable, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>var</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+replace every </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+at the end of a word with </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>b</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in that value, and substitute the resulting string. When we say “at the
+end of a word”, we mean that </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+must appear either followed by whitespace or at the end of the value in
+order to be replaced; other occurrences of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>a
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>in the value
+are unaltered. Consider the following statement.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>foo := a.o b.o c.o</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>bar := $(foo:.o=.c)</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This input sets ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>a.c b.c c.c</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+See <FONT COLOR="#008000"><A HREF="makeSetting_Variables.html">Setting
+variables</A></FONT>. A substitution reference is actually an abbreviation
+for use of the patsubst expansion function (see <FONT COLOR="#008000"><A HREF="makeFunctions_for_String_Substitutio.html">Functions
+for string substitution and analysis</A></FONT>). We provide substitution
+references as well as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>patsubst</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for compatibility with other implementations of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Another type of substitution
+reference lets you use the full power of the patsubst function. It has
+the same form ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(<I>var</I>:<I>a</I>=<I>b</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+described above, except that now </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+must contain a single ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+character. This case is equivalent to ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(patsubst</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>a</I>,</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>b</I>,$(<I>var</I>))</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+See <FONT COLOR="#008000"><A HREF="makeFunctions_for_String_Substitutio.html">Functions
+for string substitution and analysis</A></FONT> for a description of the
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>patsubst</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function. Consider the following example.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>foo := a.o b.o c.o</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>bar := $(foo:%.o=%.c)</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This statement sets ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>a.c b.c c.c</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeAdvanced_Features_for_Reference_.html">Previous</A>|<A HREF="makeComputed_Variable_Names.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

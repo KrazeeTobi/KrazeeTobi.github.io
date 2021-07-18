@@ -1,0 +1,743 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+</head>
+<body>
+<a NAME="Top"></a><a href="../../index.html">GNUPro Toolkit Documentation</a>|<a href="gccindex.html">Index</a>|<a href="gccGNU_General_Public_License.html">Next</a><font color="#000000">|<a href="http://www.cygnus.com/htdig/">Search</a></font>
+<br>&nbsp;<font face="Futura Md BT"><font color="#000000"><font size=+3>Using
+GNU CC</font></font></font>
+<br>
+<hr SIZE=6 WIDTH="100%"><font face="Times New Roman"><font size=-2>Copyright
+&copy; 1988-1999&nbsp; Free Software Foundation, Inc.</font></font>
+<br><b><font size=-2>For EGCS-1.0</font></b>
+<br><font face="Times New Roman"><font size=-2>Permission is granted to
+make and distribute verbatim copies of this documentation</font></font>
+<br><font face="Times New Roman"><font size=-2>provided the copyright notice
+and this permission notice are preserved on all copies.</font></font>
+<br><font face="Times New Roman"><font size=-2>Permission is granted to
+copy and distribute modified versions of this documentation</font></font>
+<br><font face="Times New Roman"><font size=-2>under the conditions for
+verbatim copying, provided also that the “GNU General Public</font></font>
+<br><font face="Times New Roman"><font size=-2>License” is included exactly
+as in the original, and provided that the entire resulting</font></font>
+<br><font face="Times New Roman"><font size=-2>derived work is distributed
+under the terms of a permission notice identical to this one.</font></font>
+<br><font face="Times New Roman"><font size=-2>Permission is granted to
+copy and distribute translations of this documentation into</font></font>
+<br><font face="Times New Roman"><font size=-2>another language, under
+the above conditions for modified versions, except that the</font></font>
+<br><font face="Times New Roman"><font size=-2>sections entitled “<a href="gccGNU_General_Public_License.html">GNU
+General Public License</a>”and&nbsp; “<a href="gccFunding_Free_Software.html">Funding
+for Free Software</a>”</font></font>
+<br><font face="Times New Roman"><font size=-2>and this permission notice,
+may be included in translations approved by the Free</font></font>
+<br><font face="Times New Roman"><font size=-2>Software Foundation instead
+of in the original English.</font></font>
+<br><font face="Times New Roman"><font size=-2>This documentation has been
+prepared by Cygnus Technical Publications;</font></font>
+<br><font size=-2><font face="Times New Roman">to contact the Cygnus Solutions
+Technical Publications staff, email: </font><b><tt>doc@cygnus.com</tt><font face="Courier New">.</font></b></font>
+<br><font face="Times New Roman"><font size=-2>Copyright &copy; 1991-1999&nbsp;
+Cygnus&reg;.</font></font>
+<br><font face="Times New Roman"><font size=-2>All rights reserved.</font></font>
+<br><font face="Times New Roman"><font size=-2>GNUPro&reg;, the GNUPro
+logo, and&nbsp; the Cygnus logo are all trademarks of Cygnus.</font></font>
+<br><font face="Times New Roman"><font size=-2>All other brand and product
+names, trademarks and copyrights are the property of their</font></font>
+<br><font face="Times New Roman"><font size=-2>respective owners.</font></font>
+<br><font face="Times New Roman"><font size=-2>Permission is granted to
+make and distribute verbatim copies of this documentation,</font></font>
+<br><font face="Times New Roman"><font size=-2>provided the copyright notice
+and this permission notice are preserved on all copies.</font></font>
+<br><font face="Times New Roman"><font size=-2>Permission is granted to
+copy and distribute modified versions of this documentation</font></font>
+<br><font face="Times New Roman"><font size=-2>under the conditions for
+verbatim copying, provided also that the entire resulting</font></font>
+<br><font face="Times New Roman"><font size=-2>derived work is distributed
+under the terms of a permission notice identical to this one.</font></font>
+<br><font face="Times New Roman"><font size=-2>Permission is granted to
+copy and distribute translations of this documentation into</font></font>
+<br><font face="Times New Roman"><font size=-2>another language, under
+the above conditions for modified versions.</font></font>
+<br><font face="Times New Roman"><font size=-2>This documentation has been
+prepared by Cygnus Technical Publications; contact</font></font>
+<br><font size=-2><font face="Times New Roman">the Cygnus Technical Publications
+staff: </font><b><tt>doc@cygnus.com</tt></b><font face="Times New Roman">.</font></font>
+<br><font face="Times New Roman"><font size=-2>While every precaution has
+been taken in the preparation of this documentation, the</font></font>
+<br><font face="Times New Roman"><font size=-2>publisher assumes no responsibility
+for errors or omissions, or for damages resulting</font></font>
+<br><font face="Times New Roman"><font size=-2>from the use of the information
+within the documentation.</font></font>
+<br>
+<hr><font size=+1><font face="Times New Roman">The following documentation
+discusses the GNU compiler, </font><b><font face="Courier New">gcc</font></b><font face="Times New Roman">.</font></font>
+<ul TYPE=SQUARE>
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccGNU_General_Public_License.html">GNU
+General Public License</a></font></font></font></b></li>
+
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccPreamble.html">Preamble</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccTerms__Conditions_For_Copying_Di.html">Terms
+and conditions for copying, distribution and modification</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccHow_to_Apply_These_Terms_to_Your.html">How
+to apply these terms to your new programs</a></font></font></font></i></li>
+</ul>
+</ul>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccContributors_to_GNU_CC.html">Contributors
+to GNU CC</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccFunding_Free_Software.html">Funding
+free software</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccProtect_Your_Freedom_Fight_Look_.html">Protect
+your freedom; fight “Look and Feel”</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccCompile_C_C_or_Objective_C.html">Compile
+C, C++, or Objective C</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccInstalling_GNU_CC.html">Installing
+GNU CC</a></font></font></font></b></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccConfigurations_Supported_by_GNU_.html">Configurations
+supported by GNU CC</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccCompilation_in_a_Separate_Direct.html">Compilation
+in a separate directory</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccBuilding_and_Installing_a_CrossC.html">Building
+and installing a cross-compiler</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccSteps_of_CrossCompilation.html">Steps
+of cross-compilation</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccConfiguring_a_CrossCompiler.html">Configuring
+a cross-compiler</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccTools_and_Libraries_for_a_CrossC.html">Tools
+and libraries for a cross-compiler</a></font></font></font></i></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="gcclibgcca_and_CrossCompilers.html"><b><tt>libgcc.a</tt></b><i><font face="Times New Roman">
+and cross-compilers</font></i></a></font></font></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccCrossCompilers_and_Header_Files.html">Cross-Compilers
+and Header Files</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccActually_Building_the_CrossCompi.html">Actually
+building the cross-compiler</a></font></font></font></i></li>
+</ul>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccInstalling_GNU_CC_on_the_Sun.html">Installing
+GNU CC on the Sun</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccInstalling_GNU_CC_on_VMS.html">Iinstalling
+GNU CC on VMS</a></font></font></font></li>
+
+<li>
+<b><tt><font color="#008000"><font size=+1><a href="gcccollect2.html">collect2</a></font></font></tt></b></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccStandard_Header_File_Directories.html">Standard
+header file directories</a></font></font></font></li>
+</ul>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccGNU_CC_Command_Options.html">GNU
+CC command options</a></font></font></font></b></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccOption_Summary.html">Option
+summary</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccOptions_Controlling_the_Kind_of_.html">Options
+controlling the kind of output</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccCompiling_C_Programs.html">Compiling
+C programs</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccOptions_Controlling_C_Dialect.html">Options
+controlling C dialect</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccOptions_that_Control_C_Dialect.html">Options
+that control C++ dialect</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccOptions_to_Request_or_Suppress_W.html">Options
+to request or suppress warnings</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccOptions_for_Debugging_Your_Progr.html">Options
+for debugging your program or GNU CC</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccOptions_That_Control_Optimizatio.html">Options
+that control optimization</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccOptions_Controlling_the_Preproce.html">Options
+controlling the preprocessor</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccPassing_Options_to_the_Assembler.html">Passing
+options tothe assembler</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccOptions_for_Linking.html">Options
+for linking</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccOptions_for_Directory_Search.html">Options
+for directory search</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccSpecifying_Target_Machine_and_Co.html">Specifying
+target machine and compiler version</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccHardware_Models_and_Configuratio.html">Hardware
+models and configurations</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccAMD29K_Options.html">AMD29K
+options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccARC_options.html">ARC
+options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccARM_Options.html">ARM
+options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccThumb_options.html">ARM
+Thumb options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccClipper_Options.html">Clipper
+options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccConvex_Options.html">Convex
+options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccDEC_Alpha_Options.html">DEC
+Alpha options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccH8300_Options.html">Hitachi
+H8/300 options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccSH_Options.html">Hitachi
+SH options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccHPPA_Options.html">HPPA
+options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccIBM_RS6000_and_PowerPC_Options.html">IBM
+PowerPC options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccIBM_RS6000_and_PowerPC_Options.html">IBM
+RS/6000&nbsp; options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccIBM_RT_Options.html">IBM
+RT options</a></font></font></font></i></li>
+
+<li>
+<i><font color="#008000"><font size=+1><a href="gccIntel_386_Options.html"><font face="Times New Roman">Intel
+</font><tt>x</tt><font face="Times New Roman">86
+options</font></a></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccIntel_960_Options.html">Intel
+960 options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccMN10200_options.htm">Matsushita
+MN10200 options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccMN10300_options.html">Matsushita
+MN10300 options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccMIPS_Options.html">MIPS
+options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccD10V_options.html">Mitsubishi
+D10V options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccM32RDX_options.html">Mitsubishi
+M32R/D/X options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccM680x0_Options.html">Motorola
+68K options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccM88K_Options.html">Motorola
+88K options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccV850.htm">NEC
+V850 options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccSPARC_Options.html">SPARC
+options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccSystem_V_Options.html">System
+V options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccVAX_Options.html">VAX
+options</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccOption_Summary.html#Zilog">Zilog
+options</a></font></font></font></i></li>
+</ul>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccOptions_for_Code_Generation_Conv.html">Options
+for code generation conventions</a></font></font></font></li>
+
+<li>
+<font color="#008000"><a href="gccoffsetinfo_option.html"><font size=+1>The
+</font><b><font face="Courier New"><font size=+0>offset-info</font></font></b><font face="Times New Roman"><font size=+1>
+option</font></font></a></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccEnvironment_Variables_Affecting_.html">Environmental
+variables affecting GNU CC</a></font></font></font></li>
+</ul>
+</ul>
+
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li>
+<font color="#008000"><a href="gccRunning_protoize.html"><font face="Times New Roman"><font size=+1>Running
+the </font></font><b><font face="Courier New"><font size=+0>protoize</font></font></b><font size=+1>
+program</font></a></font></li>
+</ul>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccExtensions_to_the_C_Language_Fam.html">Extensions
+to the C language family</a></font></font></font></b></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccStatements_and_Declarations_in_E.html">Statements
+and declarations in expressions</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccLocally_Declared_Labels.html">Locally
+declared labels</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccLabels_as_Values.html">Labels
+as values</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccNested_Functions.html">Nested
+functions</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccConstructing_Function_Calls.html">Constructing
+function calls</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccNaming_an_Expressions_Type.html">Naming
+an expression’s type</a></font></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="gccReferring_to_a_Type_with_typeof.html"><font face="Times New Roman">Referring
+to a type with </font><b><tt>typeof</tt></b></a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccGeneralized_Lvalues.html">Generalized
+lvalues</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccConditionals_with_Omitted_Operan.html">Conditionals
+with omitted operands</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccDoubleWord_Integers.html">Double-word
+integers</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccComplex_Numbers.html">Complex
+numbers</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccArrays_of_Length_Zero.html">Arrays
+of length zero</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccArrays_of_Variable_Length.html">Arrays
+of variable length</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccMacros_with_Variable_Numbers_of_.html">Macros
+with variable number of arguments</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccNonLvalue_Arrays_May_Have_Subscr.html">Non-Lvalue
+arrays may have subscripts</a></font></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="gccArithmetic_on_void_and_FunctionP.html"><font face="Times New Roman">Arithmetic
+on </font><b><tt>void-</tt></b><font face="Times New Roman"> and </font><b><tt>function-</tt></b><font face="Times New Roman">
+pointers</font></a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccNonConstant_Initializers.html">Non-constant
+initializers</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccConstructor_Expressions.html">Constructor
+expressions</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccLabeled_Elements_in_Initializers.html">Labeled
+elements in initializers</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccCase_Ranges.html">Case
+ranges</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccCast_to_a_Union_Type.html">Cast
+to a union yype</a></font></font></font></i></li>
+</ul>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccDeclaring_Attributes_of_Function.html">Declaring
+attributes of functions</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccPrototypes_and_OldStyle_Function.html">Prototypes
+and old-style function definitions</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccCompiling_Functions_for_Interrup.html">Compiling
+functions for interrupt calls</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccC_Style_Comments.html">C++
+style comments</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccDollar_Signs_in_Identifier_Names.html">Dollar
+signs in identifier names</a></font></font></font></i></li>
+
+<li>
+<i><font color="#008000"><font size=+1><a href="gccThe_Character_ESC_in_Constants.html"><font face="Times New Roman">The
+</font><b><tt>ESC</tt></b><font face="Times New Roman">character
+in constants</font></a></font></font></i></li>
+</ul>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccInquiring_on_Alignment_of_Types_.html">Inquiring
+on alignment of types or variables</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccSpecifying_Attributes_of_Variabl.html">Specifying
+attributes of variables</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccSpecifying_Attributes_of_Types.html">Specifying
+attributes of types</a></font></font></font></i></li>
+</ul>
+
+<li>
+<font color="#008000"><font size=+1><a href="gccAn_inline_Function_is_As_Fast_As.html"><font face="Times New Roman">An
+</font><b><tt>inline</tt></b><font face="Times New Roman">
+function is as fast as a macro</font></a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccAssembler_Instructions_with_C_Ex.html">Assembler
+instructions with C expression operands</a></font></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="gccConstraints_for_asm_Operands.html"><font face="Times New Roman">Constraints
+for </font><b><tt>asm</tt></b><font face="Times New Roman"> operands</font></a></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccSimple_Constraints.html">Simple
+constraints</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccMultiple_Alternative_Constraints.html">Multiple
+alternative constraints</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccConstraint_Modifier_Characters.html">Constraint
+modifier characters</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccConstraints_for_Particular_Machi.html">Constraints
+for particular machines</a></font></font></font></i></li>
+</ul>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccControlling_Names_Used_in_Assemb.html">Controlling
+names used in assembler code</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccVariables_in_Specified_Registers.html">Variables
+in specified registers</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccDefining_Global_Register_Variabl.html">Defining
+global register variables</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccSpecifying_Registers_for_Local_V.html">Specifying
+registers for local variables</a></font></font></font></i></li>
+</ul>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccAlternate_Keywords.html">Alternate
+keywords</a></font></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="gccIncomplete_enum_Types.html"><font face="Times New Roman">Incomplete
+</font><b><tt>enum</tt></b><font face="Times New Roman">types</font></a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccFunction_Names_as_Strings.html">Function
+namers as strings</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccGetting_the_Return_or_Frame_Addr.html">Getting
+the return or frame address of a function</a></font></font></font></i></li>
+</ul>
+</ul>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccExtensions_to_the_C_Language.html">Extensions
+to the C++ language</a></font></font></font></b></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccNamed_Return_Values_in_C.html">Named
+return values in C++</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccMinimum_and_Maximum_Operators_in.html">Minimum
+and maximum operators in C++</a></font></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="gccgoto_and_Destructors_in_GNU_C.html"><b><tt>goto</tt></b><font face="Times New Roman">
+and destructors in GNU C++</font></a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccDeclarations_and_Definitions_in_.html">Declarations
+and definitions in one header</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccWheres_the_Template.html">Where's
+the template?</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccType_Abstraction_using_Signature.html">Type
+abstraction using signatures</a></font></font></font></li>
+</ul>
+
+<li>
+<b><font color="#008000"><font size=+1><a href="gccgcov_a_Test_Coverage_Program.html"><tt>gcov</tt><font face="Times New Roman">:
+a test coverage program</font></a></font></font></b></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font color="#008000"><font size=+1><a href="gccIntroduction_to_gcov.html#509e4788"><font face="Times New Roman">Introduction
+to </font><b><tt>gcov</tt></b></a></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="gccInvoking_gcov.html"><font face="Times New Roman">Invoking
+</font><b><tt>gcov</tt></b></a></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="gccUsing_gcov_with_GCC_Optimization.html"><font face="Times New Roman">Using
+</font><b><tt>gcov</tt></b><font face="Times New Roman">
+with GCC optimization</font></a></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="gccBrief_description_of_gcov_data_f.html"><font face="Times New Roman">Brief
+description of </font><b><tt>gcov</tt></b><font face="Times New Roman">
+data files</font></a></font></font></li>
+</ul>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccKnown_Causes_of_Trouble_with_GNU.html">Known
+causes of trouble with GNU CC</a></font></font></font></b></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccActual_Bugs_We_Havent_Fixed_Yet.html">Actual
+bugs we haven’t fixed yet</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccInstallation_Problems.html">Installation
+problems</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccCrossCompiler_Problems.html">Cross-compiler
+problems</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccInteroperation.html">Interoperation</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccProblems_Compiling_Certain_Progr.html">Problems
+compiling certain programs</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccIncompatibilities_of_GNU_CC.html">Incomaptibilites
+of GNU CC</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccFixed_Header_Files.html">Fixed
+header files</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccStandard_Libraries.html">Standard
+libraries</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccDisappointments_and_Misunderstan.html">Disappointments
+and misunderstandings</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccCommon_Misunderstandings_with_GN.html">Common
+misunderstanding with GNU C++</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccDeclare_and_Define_Static_Member.html">Declare
+and define static members</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font size=+1><a href="gccTemporaries_May_Vanish_Before_Yo.html">Temporaries
+may vanish before you expect</a></font></font></i></li>
+</ul>
+
+<li>
+<font color="#008000"><font size=+1><a href="gccCaveats_of_using_protoize.html"><font face="Times New Roman">Caveats
+of using </font><b><font face="Courier New">protoize</font></b></a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccCertain_Changes_We_Dont_Want_to_.html">Certain
+changes we don't want to make</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccWarning_Messages_and_Error_Messa.html">Warning
+messages and error messages</a></font></font></font></li>
+</ul>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccReporting_Bugs.html">Reporting
+bugs</a></font></font></font></b></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccHave_You_Found_a_Bug.html">Have
+you found a bug?</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccWhere_to_Report_Bugs.html">Where
+to report bugs</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccHow_to_Report_Bugs.html">How
+to report bugs</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccSending_Patches_for_GNU_CC.html">Sending
+patches for GNU CC</a></font></font></font></li>
+</ul>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccHow_To_Get_Help_with_GNU_CC.html">How
+to get help with GNU CC</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccUsing_GNU_CC_on_VMS.html">Using
+GNU CC on VMS</a></font></font></font></b></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccInclude_Files_and_VMS.html">Include
+files and VMS</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccGlobal_Declarations_and_VMS.html">Global
+declarations and VMS</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="gccOther_VMS_Issues.html">Other
+VMS issues</a></font></font></font></li>
+</ul>
+</ul>
+
+<li>
+<b><font face="Times New Roman"><font size=+1><a href="gccindex.html">Index</a></font></font></b></li>
+</ul>
+
+<hr SIZE=3 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="gccGNU_General_Public_License.html">Next</a></center>
+
+</body>
+</html>

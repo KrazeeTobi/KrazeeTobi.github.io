@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Forwarding I/O activity</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioBacking_up.html">Previous</A>|<A HREF="libioC_Input_and_Output.html">Next</A>
+<BR><A NAME="off_656012"></A><A NAME="ea14f307"></A><A NAME="off_656012"></A><A NAME="ea14f307"></A><A NAME="off_656012"></A><A NAME="ea14f307"></A><A NAME="off_656012"></A><A NAME="ea14f307"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Forwarding
+I/O activity</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>An </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>indirectbuf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is one that forwards all of its I/O requests to another streambuf.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>An </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>indirectbuf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can be used to implement Common Lisp synonym-streams and two-way-streams,
+as with the following example.</FONT></FONT>
+<UL>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>class synonymbuf : public indirectbuf
+{&nbsp;<BR>
+&nbsp;&nbsp; Symbol *sym;&nbsp;<BR>
+&nbsp;&nbsp; synonymbuf(Symbol *s) { sym = s; }&nbsp;<BR>
+&nbsp;&nbsp; virtual streambuf *lookup_stream(int mode) {&nbsp;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return coerce_to_streambuf(lookup_value(sym));
+}&nbsp;<BR>
+};</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioBacking_up.html">Previous</A>|<A HREF="libioC_Input_and_Output.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

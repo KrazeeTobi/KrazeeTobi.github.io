@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Stringification</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppNonstandard_Predefined_Macros.html">Previous</A>|<A HREF="cppConcatenation.html">Next</A>
+<BR><A NAME="off_395211"></A><A NAME="2bf7899d"></A><A NAME="off_395211"></A><A NAME="2bf7899d"></A><A NAME="off_395211"></A><A NAME="2bf7899d"></A><A NAME="off_395211"></A><A NAME="2bf7899d"></A><A NAME="off_395211"></A><A NAME="2bf7899d"></A><A NAME="off_395211"></A><A NAME="2bf7899d"></A><A NAME="off_395211"></A><A NAME="2bf7899d"></A><A NAME="off_395211"></A><A NAME="2bf7899d"></A><A NAME="off_395211"></A><A NAME="2bf7899d"></A><A NAME="off_395211"></A><A NAME="2bf7899d"></A><A NAME="off_395211"></A><A NAME="2bf7899d"></A><A NAME="off_395211"></A><A NAME="2bf7899d"></A><A NAME="off_395211"></A><A NAME="2bf7899d"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><B><FONT SIZE=+3>Stringification&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Stringification</I>
+means turning a code fragment into a string constant whose contents are
+the text for the code fragment. For example, stringifying </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo
+(z)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> results in
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>"foo (z)"</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>In
+the C preprocessor, stringification is an option available when macro arguments
+are substituted into the macro definition. In the body of the definition,
+when an argument name appears, the character </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+before the name specifies stringification of the corresponding actual argument
+when it is substituted at that point in the definition. The same argument
+may be substituted in other places in the definition without stringification
+if the argument name appears in those places with no </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>What
+follows is an example of a macro definition that uses stringification.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define WARN_IF(EXP) \&nbsp;
+do { if (EXP) \&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fprintf (stderr, "Warning: " #EXP "\n"); } \&nbsp;
+while (0)</FONT></FONT></PRE>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The actual
+argument for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>EXP</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is substituted once as given, into the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>if</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+statement, and once as stringified, into the argument to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fprintf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>do</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>while</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>(0)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are a work-around to make it possible to write </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>WARN_IF
+(<I>arg</I>);</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+which the resemblance of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>WARN_IF</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to a function would make C programmers want to do; see </FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="cppSwallowing_the_Semicolon.html">Swallowing
+the semicolon</A></FONT><FONT COLOR="#000000">.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+stringification feature is limited to transforming one macro argument into
+one string constant; there is no way to combine the argument with other
+text and then stringify it all together. The previous example shows how
+an equivalent result can be obtained in ANSI Standard C using the feature
+that adjacent string constants are concatenated as one string constant.
+The preprocessor stringifies the actual value of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>EXP</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+into a separate string constant, resulting in text like the following output.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>do {if (x==0)\&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fprintf (stderr, "Warning: " "x == 0" "\n"); } \&nbsp;
+while (0)</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>The C
+compiler then sees three consecutive string constants and concatenates
+them into one, producing, effectively, the following output.</FONT></FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>do {if (x==0)\&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fprintf (stderr, "Warning: x == 0\n"); } \&nbsp;
+while (0)</FONT></FONT></PRE>
+</UL>
+<FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Stringification
+in C involves more than putting doublequote characters around the fragment;
+it is necessary to put backslashes in front of all doublequote characters,
+and all backslashes in string and character constants, in order to get
+a valid C string constant with the proper contents. Thus, stringifying
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>p="foo\n";</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+results in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>"p=\"foo\\n\";"</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+However, backslashes that are not inside of string or character constants
+are not duplicated: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\n</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+by itself stringifies to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>"\n"</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>Whitespace
+(including comments) in the text being stringified is handled according
+to precise rules. All leading and trailing whitespace is ignored. Any sequence
+of whitespace in the middle of the text is converted to a single space
+in the stringified result.</FONT></FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="cpp.html">Contents</A>|<A HREF="cppindex.html">Index</A>|<A HREF="cppNonstandard_Predefined_Macros.html">Previous</A>|<A HREF="cppConcatenation.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

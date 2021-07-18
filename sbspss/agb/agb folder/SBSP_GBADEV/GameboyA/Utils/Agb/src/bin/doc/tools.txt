@@ -1,0 +1,173 @@
+------------------------------------------------------------
+============================================================
+------------------------------------------------------------
+
+Flow of the program common to tools in general
+
+It is processed in the following order:
+
+usage()
+{
+    Command Help
+}
+
+main()
+{
+    for( ... )
+	Analysis of option
+    }
+    Main process
+    Write in output
+}
+Depending on tool, it may jump at main process section to another file 
+of the same project.
+
+------------------------------------------------------------
+============================================================
+act2agb
+============================================================
+------------------------------------------------------------
+
+This utilizes (Can read and write) .act, which is a feature of
+Class "Palette".
+
+------------------------------------------------------------
+============================================================
+agbparts
+============================================================
+------------------------------------------------------------
+
+This is a tool that creates CharSet.  First, use Picture class 
+to read bitmap.
+Then select which of Charset, Char16Set, Char256Set is appropriate
+from the bit depth and -f option.
+Then, take out the bitmap that is read into Picture by 8 x 8 dot and 
+transfer it to the Character class created by CharSet.
+Then, register the Character to CharSet.
+End by saving it with the function that saves data in the bitmap in CharSet.
+
+------------------------------------------------------------
+============================================================
+bin2h
+============================================================
+------------------------------------------------------------
+
+Utilize a list (STL list) of Class and FileName.
+Use the command argument as its FileName, and register
+it to the list in order.
+After all has been registered, output while converting the 
+file name (in the loop) appropriately.
+
+------------------------------------------------------------
+============================================================
+bmp2bin
+============================================================
+------------------------------------------------------------
+
+By utilizing the list (STL list) of Class and FileName, 
+it is possible to convert multiple images.
+This tool reads images into Picture and HPicture, and 
+write the image in file using binary.
+
+------------------------------------------------------------
+============================================================
+bmp2map
+============================================================
+------------------------------------------------------------
+
+This is a tool that creates Map class.
+At first, the process is same as agbparts.exe. 
+From bitmap and -f option, determine which map to use from
+Map, Map16 and Map256.
+Then, it reads and adds characters as agbparts.exe does.
+At the same time, it creates screen data.
+Then, it calls save function that is a feature of this class 
+in order to save data either as binary or C source, depending 
+on a case.
+
+------------------------------------------------------------
+============================================================
+bmpgrid
+============================================================
+------------------------------------------------------------
+
+It reads bitmap by using Picture and HPicture.
+Then, creates Picture and HPicture which divided the bitmap,
+and transfer bitmap there to save.
+
+------------------------------------------------------------
+============================================================
+bmpred
+============================================================
+------------------------------------------------------------
+
+ColorSpace class is used in this project.
+This class is capable of creating palette.
+It reads bitmap into HPicture, creates a palette if necessary, then 
+reduces colors by using palette.
+Then, it registers the image, with reduced colors, to Picture class and 
+saves it as a bitmap.
+
+------------------------------------------------------------
+Class ColorSpace
+------------------------------------------------------------
+
+This class is a digital color space of the size 32 x 64 x 32.
+By registering HPicture class, it registers all the colors 
+of the image.
+By calling Palette creation function, it can create a palette
+by utilizing the median-cut method.
+
+------------------------------------------------------------
+Median-Cut Method
+------------------------------------------------------------
+
+Median-cut method is one of the palette creation algorithms used for
+color reduction.
+First, prepare a color space, then register the colors of all dots 
+of image to the color space.
+Process the color space as follows:
+
+In color space, narrow the range of red to the highest 
+value used in the image.
+For example, if the strongest red is not used, the top section 
+of red can be narrowed to its highest value.
+Repeat the same process for green and blue.
+Request the range of the value of each color.
+Devide the color space into two sections based on the color
+with the widest range of values.
+For this, class ColorCut displays the range of the color space.
+When dividing, try to have the same number of colors in the devided
+two color spaces.
+Repeat this process until the desired number of colors is obtained.
+
+If color cannot be decided in one point, take the average value of
+the final version of the space color and use it for the image.
+
+------------------------------------------------------------
+Color Reduction
+------------------------------------------------------------
+
+For the image of reduced colors, find the closest color from 
+the palette and apply it to the image.  It does not use dither.
+In order to obtain the closest color, for each color in palette, 
+set the colors in 8 bit precision: the color before color 
+reduction and the color in palette.  Select the color which has
+the smallest sum of the squared difference of each color. 
+
+------------------------------------------------------------
+============================================================
+sgi2bmp
+============================================================
+------------------------------------------------------------
+
+For the flow of the process, it loads SGI image, creates HPicture, 
+then saves it as bitmap.
+Although Function GlobalFnc.cpp is diverted from MultiTextureViewer, 
+it is used to load big endian.
+It loads SGI image in pic_create.cpp, processes transparent color 
+and creates HPicture.
+
+------------------------------------------------------------
+============================================================
+------------------------------------------------------------

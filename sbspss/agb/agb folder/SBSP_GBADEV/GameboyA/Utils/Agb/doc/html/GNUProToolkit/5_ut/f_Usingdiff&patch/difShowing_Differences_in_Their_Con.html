@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<TITLE>Showing Differences in Their Context</TITLE>
+</HEAD><BODY>
+<A HREF= "dif.html">Contents</A>|<A HREF= "difindex.html">Index</A>|<A HREF="difAn_Example_of_Normal_Format.html">Previous</A>|<A HREF="difContext_Format.html">Next</A>
+<P>
+<A NAME="off_264415"></A><A NAME="f6ffc9df"></A><FONT FACE="Times New Roman" SIZE="6"><B>Showing Differences in Their Context
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">Usually, when you are looking at the differences between files, you will also
+want to see the parts of the files near the lines that differ, to help you
+understand exactly what has changed. These nearby parts of the files are called the <I>context</I>.
+<P>
+GNU </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> provides two output formats that show context around the differing lines: <I>context format</I> and <I>unified format </I>(for more, see </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difContext_Format.html">Context Format</A></FONT><FONT FACE="Times New Roman" SIZE="4"> and </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difUnified_Format.html">Unified Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">). It can optionally show in which function or section of the file the
+differing lines are found (see </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difShowing_Which_Sections_Differenc.html">Showing Which Sections Differences Are in</A></FONT><FONT FACE="Times New Roman" SIZE="4"> and </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difShowing_Alternate_File_Names.html">Showing Alternate File Names</A></FONT><FONT FACE="Times New Roman" SIZE="4">. 
+<P>
+If you are distributing new versions of files to other people in the form of </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> output, you should use one of the output formats that show context so that
+they can apply the diffs even if they have made small changes of their own to the
+files. </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> can apply the diffs in this case by searching in the files for the lines of
+context around the differing lines; if those lines are actually a few lines away
+from where the </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> says they are, </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> can adjust the line numbers accordingly and still apply the </FONT><FONT FACE="Courier New" SIZE="3">diff</FONT><FONT FACE="Times New Roman" SIZE="4"> correctly. See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difApplying_Imperfect_Patches.html">Applying Imperfect Patches</A></FONT><FONT FACE="Times New Roman" SIZE="4"> for more information on using </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> to apply imperfect diffs.
+<P>
+</FONT></BODY>
+</HTML>

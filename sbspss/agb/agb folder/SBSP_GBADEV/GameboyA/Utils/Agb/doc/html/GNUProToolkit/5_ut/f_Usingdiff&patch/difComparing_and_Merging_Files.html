@@ -1,0 +1,122 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Comparing and Merging Files</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="dif.html#Top">Contents</a>|<a href="difindex.html">Index</a>|<a href="difWhat_Comparison_Means.html">Next</a>
+<br><a NAME="off_65536"></a><a NAME="b4598f4e"></a><b><font face="Futura Md BT"><font size=+3>Overview
+of Comparing and Merging Files</font></font></b>
+<br>
+<hr SIZE=3 WIDTH="100%"><font face="Times New Roman"><font size=+1>Computer
+users often find occasion to ask how two files differ. Perhaps one file
+is a newer version of the other file. Or maybe the two files started out
+as identical copies but were changed by different people.</font></font>
+<p><font face="Times New Roman"><font size=+1>This documentation first
+concentrates on making </font></font><font face="Courier New"><font size=+0>diffs</font></font><font face="Times New Roman"><font size=+1>,
+and later shows how to use </font></font><font face="Courier New"><font size=+0>diffs</font></font><font face="Times New Roman"><font size=+1>
+to update files. You can use the </font></font><font face="Courier New"><font size=+0>diff</font></font><font face="Times New Roman"><font size=+1>
+command to show differences between two files, or each corresponding file
+in two directories. </font></font><font face="Courier New"><font size=+0>diff</font></font><font face="Times New Roman"><font size=+1>
+outputs differences between files line by line in any of several formats,
+selectable by command line options. This set of differences is often called
+a <i>diff</i> or <i>patch</i>. For files that are identical, </font></font><font face="Courier New"><font size=+0>diff</font></font><font face="Times New Roman"><font size=+1>
+normally produces no output; for binary (non-text) files, </font></font><font face="Courier New"><font size=+0>diff</font></font><font face="Times New Roman"><font size=+1>
+normally reports only that they are different.</font></font>
+<p><font face="Times New Roman"><font size=+1>See <font color="#008000"><a href="difWhat_Comparison_Means.html">What
+Comparison Means</a></font> as a general introduction, and then on to other
+detailed documentation in the following.</font></font>
+<ul TYPE=SQUARE>
+<li>
+<font color="#008000"><a href="difdiff_Output_Formats.html"><b><font face="Courier New"><font size=+0>diff</font></font></b><font face="Times New Roman"><font size=+1>
+Output Formats</font></font></a></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="difComparing_Directories.html">Comparing
+Directories</a></font></font></font></li>
+
+<li>
+<font color="#008000"><a href="difMaking_diff_Output_Prettier.html"><font face="Times New Roman"><font size=+1>Making
+</font></font><b><font face="Courier New"><font size=+0>diff</font></font></b><font face="Times New Roman"><font size=+1>
+Output Prettier</font></font></a></font></li>
+
+<li>
+<font color="#008000"><a href="difdiff_Performance_Tradeoffs.html"><b><font face="Courier New"><font size=+0>diff</font></font></b><font face="Times New Roman"><font size=+1>
+Performance Tradeoffs</font></font></a></font></li>
+
+<li>
+<font color="#008000"><a href="difInvoking_diff.html"><font face="Times New Roman"><font size=+1>Invoking
+</font></font><b><font face="Courier New"><font size=+0>diff</font></font></b></a></font></li>
+</ul>
+<font face="Times New Roman"><font size=+1>For specific keyword searches
+in this documentation, see <font color="#008000"><a href="difindex.html#Top">Index
+for finding keyword text</a></font>.</font></font>
+<p><font face="Times New Roman"><font size=+1>You can use the </font></font><font face="Courier New"><font size=+0>cmp</font></font><font face="Times New Roman"><font size=+1>
+command to show the offsets and line numbers where two files differ. </font></font><font face="Courier New"><font size=+0>cmp</font></font><font size=+1><font face="Times New Roman">
+can also show all the characters that differ between the two files, side
+by side. Another way to compare two files character by character is the
+Emacs command, </font><b><font face="Arial">M-x</font></b></font><b><font face="Courier New"><font size=+0>compare-windows</font></font></b><font face="Times New Roman"><font size=+1>.
+In <b><i>The </i></b>GNU<b><i> Emacs Manual</i></b>, see "Comparing Files"
+for more information, particularly on that command. See <font color="#008000"><a href="difComparing_Three_Files.html">Comparing
+Three Files</a></font>, <font color="#008000"><a href="difInvoking_diff3.html">Invoking
+</a></font></font></font><b><font face="Courier New"><font color="#008000"><font size=+0><a href="difInvoking_diff3.html">diff3</a></font></font></font></b><font face="Times New Roman"><font size=+1>
+and <font color="#008000"><a href="difInvoking_cmp.html">Invoking </a></font></font></font><b><font face="Courier New"><font color="#008000"><font size=+0><a href="difInvoking_cmp.html">cmp</a></font></font></font></b><font face="Times New Roman"><font size=+1>
+for specific details on comparing files. You can use the </font></font><font face="Courier New"><font size=+0>diff3</font></font><font face="Times New Roman"><font size=+1>
+command to show differences among three files. When two people have made
+independent changes to a common original, </font></font><font face="Courier New"><font size=+0>diff3</font></font><font face="Times New Roman"><font size=+1>
+can report the differences between the original and the two changed versions,
+and can produce a merged file that contains both persons' changes together
+with warnings about conflicts. See <font color="#008000"><a href="difMerging_From_a_Common_Ancestor.html">Merging
+From a Common Ancestor</a></font>.</font></font>
+<p><font face="Times New Roman"><font size=+1>You can use the </font></font><font face="Courier New"><font size=+0>sdiff</font></font><font face="Times New Roman"><font size=+1>
+command to merge two files interactively. For more, see <font color="#008000"><a href="difInteractive_Merging_with_sdiff.html">Interactive
+Merging with </a></font></font></font><b><font face="Courier New"><font color="#008000"><font size=+0><a href="difInteractive_Merging_with_sdiff.html">sdiff</a></font></font></font></b><font face="Times New Roman"><font size=+1>
+and <font color="#008000"><a href="difInvoking_sdiff.html">Invoking </a></font></font></font><b><font face="Courier New"><font color="#008000"><font size=+0><a href="difInvoking_sdiff.html">sdiff</a></font></font></font></b><font face="Times New Roman"><font size=+1>.</font></font>
+<p><font face="Times New Roman"><font size=+1>You can use the set of differences
+produced by </font></font><font face="Courier New"><font size=+0>diff</font></font><font face="Times New Roman"><font size=+1>
+to distribute updates to text files (such as program source code) to other
+people. This method is especially useful when the differences are small
+compared to the complete files. Given </font></font><font face="Courier New"><font size=+0>diff</font></font><font face="Times New Roman"><font size=+1>
+output, you can use the patch program to update, or patch, a copy of the
+file. If you think of </font></font><font face="Courier New"><font size=+0>diff</font></font><font face="Times New Roman"><font size=+1>
+as subtracting one file from another to produce their difference, you can
+think of patch as adding the difference to one file to reproduce the other.
+See <font color="#008000"><a href="difMerging_with_patch.html">Merging
+with </a></font></font></font><b><font face="Courier New"><font color="#008000"><font size=+0><a href="difMerging_with_patch.html">patch</a></font></font></font></b><font face="Times New Roman"><font size=+1>
+and <font color="#008000"><a href="difTips_for_Making_Patch_Distributi.html">Tips
+for Making Patch Distributions</a></font> for more documentation on </font></font><font face="Courier New"><font size=+0>patch</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<p><font face="Times New Roman"><font size=+1>For discussion on future
+and on-going projects, see <font color="#008000"><a href="difFuture_Projects.html">Future
+Projects</a></font>.</font></font>
+<p><font face="Times New Roman"><font size=+1>GNU </font></font><font face="Courier New"><font size=+0>diff</font></font><font face="Times New Roman"><font size=+1>
+was written by Mike Haertel, David Hayes, Richard Stallman, Len Tower,
+and Paul Eggert. Wayne Davison designed and implemented the unified output
+format.</font></font>
+<p><font face="Times New Roman"><font size=+1>The basic algorithm is described
+in "An O(ND) Difference Algorithm and its Variations" by Eugene W. Myers,
+in <b><i>Algorithmica</i></b>; Vol. 1, No. 2, 1986; pp. 251–266; and in
+"A File Comparison Program" by Webb Miller and Eugene W. Myers, in <b><i>Software—Practice
+and Experience</i></b>; Vol. 15, No. 11, 1985; pp. 1025–1040.</font></font>
+<p><font face="Times New Roman"><font size=+1>The algorithm was independently
+discovered as described in "Algorithms for Approximate String Matching"
+by E. Ukkonen, in <b><i>Information and Control</i></b>; Vol. 64, 1985,
+pp. 100–118.</font></font>
+<p><font face="Times New Roman"><font size=+1>GNU </font></font><b><font face="Courier New"><font size=+0>diff3</font></font></b><font face="Times New Roman"><font size=+1>
+was written by Randy Smith.</font></font>
+<p><font face="Times New Roman"><font size=+1>GNU </font></font><b><font face="Courier New"><font size=+0>sdiff</font></font></b><font face="Times New Roman"><font size=+1>
+was written by Thomas Lord.</font></font>
+<p><font face="Times New Roman"><font size=+1>GNU </font></font><b><font face="Courier New"><font size=+0>cmp</font></font></b><font face="Times New Roman"><font size=+1>
+was written by Torbjorn Granlund and David MacKenzie.</font></font>
+<p><b><font face="Courier New"><font size=+0>patch</font></font></b><font face="Times New Roman"><font size=+1>
+was written mainly by Larry Wall; the GNU enhancements were written mainly
+by Wayne Davison and David MacKenzie.</font></font>
+<p><font face="Times New Roman"><font size=+1>Parts of this documentation
+are adapted from writings by Larry Wall with his permission.</font></font>
+<center>
+<hr SIZE=3 WIDTH="100%">
+<br><a href="difComparing_and_Merging_Files.html#Top">Top</a>|<a href="dif.html">Contents</a>|<a href="difindex.html#Top">Index</a>|<a href="difWhat_Comparison_Means.html">Next</a></center>
+
+</body>
+</html>

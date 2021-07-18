@@ -1,0 +1,116 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Registers</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbConvenience_variables.html">Previous</a>|<a href="gdbFloating_point_hardware.html">Next</a>
+<br><a NAME="off_1671482"></a><a NAME="65ec1a58"></a><b><font face="Futura Md BT"><font color="#000000"><font size=+3>Registers</font></font></font></b>
+<br>
+<hr SIZE=3 WIDTH="100%"><font face="Times New Roman"><font size=+1>You
+can refer to machine register contents, in expressions, as variables with
+names starting with ‘</font></font><font face="Courier New"><font size=+0>$</font></font><font face="Times New Roman"><font size=+1>’.
+The names of registers are different for each machine; use </font></font><font face="Courier New"><font size=+0>info
+registers</font></font><font face="Times New Roman"><font size=+1> to see
+the names used on your machine.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0>info registers</font></font>
+<ul><font face="Times New Roman"><font size=+1>Print the names and values
+of all registers except floating-point registers (in the selected stack
+frame).</font></font></ul>
+<font face="Courier New"><font size=+0>info all-registers</font></font>
+<ul><font face="Times New Roman"><font size=+1>Print the names and values
+of all registers, including floating-point registers.</font></font></ul>
+<font face="Courier New"><font size=+0>info registers<i>regname</i>...</font></font>
+<ul><font face="Times New Roman"><font size=+1>Print the <i>relativized</i>
+value of each specified register, </font></font><i><font face="Courier New"><font size=+0>regname</font></font></i><font face="Times New Roman"><font size=+1>.
+As discussed in the following, register values are normally relative to
+the selected stack frame. </font></font><i><font face="Courier New"><font size=+0>regname</font></font></i><font face="Times New Roman"><font size=+1>
+may be any register name valid on the machine you are using, with or without
+the initial ‘</font></font><font face="Courier New"><font size=+0>$</font></font><font face="Times New Roman"><font size=+1>’.</font></font></ul>
+</ul>
+<font face="Times New Roman"><font size=+1>GDB has four “standard” register
+names that are available (in expressions) on most machines—whenever they
+do not conflict with an architecture’s canonical mnemonics for registers.
+The register names, </font></font><font face="Courier New"><font size=+0>$pc</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>$sp</font></font><font face="Times New Roman"><font size=+1>,
+are used for the program counter register and the stack pointer. </font></font><font face="Courier New"><font size=+0>$fp</font></font><font face="Times New Roman"><font size=+1>
+is used for a register that contains a pointer to the current stack frame,
+and </font></font><font face="Courier New"><font size=+0>$ps</font></font><font face="Times New Roman"><font size=+1>
+is used for a register that contains the processor status. For example,
+you could print the program counter in hex with </font></font><font face="Courier New"><font size=+0>p/x
+$pc</font></font><font face="Times New Roman"><font size=+1>, or print
+the instruction to be executed next with </font></font><font face="Courier New"><font size=+0>x/i
+$pc</font></font><font face="Times New Roman"><font size=+1>, or add four
+to the stack pointer</font><b><font size=+2> </font></b><font size=+1>with
+</font></font><font face="Courier New"><font size=+0>set
+$sp += 4</font></font><font face="Times New Roman"><font size=+1>. This
+is a way of removing one word from the stack, on machines where stacks
+grow downward in memory (most machines, nowadays). This assumes that the
+innermost stack frame is selected; setting </font></font><font face="Courier New"><font size=+0>$sp</font></font><font face="Times New Roman"><font size=+1>
+is not allowed when other stack frames are selected. To pop entire frames
+off the stack, regardless of machine architecture, use the </font></font><b><font face="Arial"><font size=+0>Return</font></font></b><font face="Times New Roman"><font size=+1>
+key; see <font color="#008000"><a href="gdbReturning_from_a_function.html">Returning
+from a function</a></font>.</font></font>
+<p><font face="Times New Roman"><font size=+1>Whenever possible, these
+four standard register names are available on your machine even though
+the machine has different canonical mnemonics, so long as there is no conflict.
+The </font></font><font face="Courier New"><font size=+0>info registers</font></font><font face="Times New Roman"><font size=+1>
+command shows the canonical names. For example, on the SPARC, </font></font><font face="Courier New"><font size=+0>info
+registers</font></font><font face="Times New Roman"><font size=+1> displays
+the processor status register as </font></font><font face="Courier New"><font size=+0>$psr</font></font><font face="Times New Roman"><font size=+1>
+but you can also refer to it as </font></font><font face="Courier New"><font size=+0>$ps</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<p><font face="Times New Roman"><font size=+1>GDB always considers the
+contents of an ordinary register as an integer when the register is examined
+in this way. Some machines have special registers which can hold nothing
+but floating point; these registers are considered to have floating point
+values. There is no way to refer to the contents of an ordinary register
+as floating point value (although you can <i>print</i> it as a floating
+point value with ‘</font></font><font face="Courier New"><font size=+0>print/f
+$<i>regname</i></font></font><font face="Times New Roman"><font size=+1>’).</font></font>
+<p><font face="Times New Roman"><font size=+1>Some registers have distinct
+“raw” and “virtual” data formats. This means that the data format in which
+the register contents are saved by the operating system is not the same
+one that your program normally sees. For example, the registers of the
+68881 floating point coprocessor are always saved in “extended” (raw) format,
+but all C programs expect to work with “double” (virtual) format. In such
+cases, GDB normally works with the virtual format only (the format that
+makes sense for your program), but the </font></font><font face="Courier New"><font size=+0>info
+registers</font></font><font face="Times New Roman"><font size=+1> command
+prints the data in both formats.</font></font>
+<p><font face="Times New Roman"><font size=+1>Normally, register values
+are relative to the selected stack frame (see <font color="#008000"><a href="gdbSelecting_a_frame.html">Selecting
+a frame</a></font>). This means that you get the value that the register
+would contain if all stack frames farther in were exited and their saved
+registers restored. In order to see the true contents of hardware registers,
+you must select the innermost frame (with ‘</font></font><font face="Courier New"><font size=+0>frame
+0</font></font><font face="Times New Roman"><font size=+1>’).</font></font>
+<p><font face="Times New Roman"><font size=+1>However, GDB must deduce
+where registers are saved, from the machine code generated by your compiler.
+If some registers are not saved, or if GDB is unable to locate the saved
+registers, the selected stack frame makes no difference.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0>set rstack_high_address<i>address</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>On AMD 29000 family processors,
+registers are saved in a separate <i>register stack</i>. There is no way
+for GDB to determine the extent of this stack. Normally, GDB just assumes
+that the stack is <i>large enough</i>. This may result in GDB referencing
+memory locations that do not exist. If necessary, you can get around this
+problem by specifying the ending address of the register stack with the
+</font></font><font face="Courier New"><font size=+0>set
+rstack_high_ address</font></font><font face="Times New Roman"><font size=+1>
+command. The argument should be an address, which you probably want to
+precede with ‘</font></font><font face="Courier New"><font size=+0>0x</font></font><font face="Times New Roman"><font size=+1>’
+to specify in hexadecimal.</font></font></ul>
+<font face="Courier New"><font size=+0>show rstack_high_address</font></font>
+<ul><font face="Times New Roman"><font size=+1>Display the current limit
+of the register stack, on AMD 29000 family processors.</font></font></ul>
+</ul>
+
+<hr SIZE=3 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbConvenience_variables.html">Previous</a>|<a href="gdbFloating_point_hardware.html">Next</a></center>
+
+</body>
+</html>

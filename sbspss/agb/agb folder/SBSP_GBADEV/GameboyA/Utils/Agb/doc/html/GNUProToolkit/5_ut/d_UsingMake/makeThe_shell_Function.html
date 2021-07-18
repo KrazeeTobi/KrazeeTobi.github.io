@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>The shell Function</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeThe_origin_Function.html">Previous</A>|<A HREF="makeHow_to_Run_make.html">Next</A>
+<BR><A NAME="off_1673655"></A><A NAME="e4371f39"></A><B><FONT SIZE=+3><FONT FACE="Times New Roman">The
+</FONT><FONT FACE="Courier New">shell</FONT><FONT FACE="Times New Roman">
+Function</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>shell</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function is unlike any other function except the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>wildcard</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function (see <FONT COLOR="#008000"><A HREF="makeThe_Function_wildcard.html">The
+function, </A></FONT></FONT></FONT><B><FONT FACE="Courier New"><FONT COLOR="#008000"><FONT SIZE=+0><A HREF="makeThe_Function_wildcard.html">wildcard</A></FONT></FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+in that it communicates with the world outside of </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>shell</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function performs the same function that backquotes (</FONT><FONT SIZE=+0>‘‘’</FONT><FONT SIZE=+1>)
+perform in most shells: it does <I>command expansion</I>. This means that
+it takes an argument that is a shell command and returns the output of
+the command. The only processing </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does on the result, before substituting it into the surrounding text, is
+to convert newlines to spaces.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The commands run by calls
+to the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>shell</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function are run when the function calls are expanded. In most cases, this
+is when the makefile is read in. The exception is that function calls in
+the commands of the rules are expanded when the commands are run, and this
+applies to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>shell</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function calls like all others. The following is an example of the use
+of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>shell</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function which sets contents to the contents of the file, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+with a space (rather than a newline) separating each line.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>contents := $(shell cat foo)</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The following is an example
+of the use of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>shell</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function which sets files to the expansion of ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Unless </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is using a very strange shell, this has the same result as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(wildcard
+*.c)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>files := $(shell echo *.c)</FONT></FONT></UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeThe_origin_Function.html">Previous</A>|<A HREF="makeHow_to_Run_make.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

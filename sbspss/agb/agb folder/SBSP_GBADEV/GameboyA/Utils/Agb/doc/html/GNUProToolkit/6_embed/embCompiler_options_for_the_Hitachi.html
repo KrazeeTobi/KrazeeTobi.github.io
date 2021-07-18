@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Compiler options for the Hitachi h8/300</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="emb.html">Contents</A>|<A HREF="embindex.html">Index</A>|<A HREF="embUsing_C_for_the_Hitachi_h8300.html">Previous</A>|<A HREF="embPredefined_preprocessor_00000022.html">Next</A>
+<BR><A NAME="off_295127"></A><A NAME="c93c69e1"></A><A NAME="off_295127"></A><A NAME="c93c69e1"></A><A NAME="off_295127"></A><A NAME="c93c69e1"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3><B>Compiler
+options for the Hitachi H8/300, H8S and H8/300H&nbsp;</B></FONT></FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>When
+you run GCC, you can use command-line options to choose machine-specific
+details. For information on all the GCC command-line options, see <A HREF="../2_comp/Using_GNU_CC/gccGNU_CC_Command_Options.html">GNU
+CC command options</A> in <I><A HREF="../2_comp/Using_GNU_CC/gcc.html">Using
+GNU CC</A></I> in <B><I>GNUPro Compiler Tools</I></B>.</FONT></FONT>
+<BR>&nbsp;
+<H2>
+<B><FONT SIZE=+2><I><FONT FACE="Times New Roman,Times">General </FONT></I><TT>gcc</TT><I><FONT FACE="Times New Roman,Times">
+options for Hitachi H8/300, H8S and H8/300H</FONT></I></FONT></B></H2>
+
+<UL><FONT FACE="Courier New,Courier">-ms</FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate code for the H8S
+processor.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-mh</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Generate code for the H8/300H
+chip.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-mint32</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use 32-bit integers when
+compiling for the H8/300H.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>-g</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The compiler debugging option,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-g</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is essential to see interspersed high-level source statements, since, without
+debugging information, the assembler cannot tie most of the generated code
+to lines of the original source file.</FONT></FONT></UL>
+</UL>
+&nbsp;
+<BR><B><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+2>Floating point
+subroutines for Hitachi H8/300</FONT></FONT></I></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The Hitachi H8/300 has no
+floating point support. Two kinds of floating point subroutines are useful
+with GCC:</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Software implementations of
+the basic functions (floating-point multiply, divide, add, subtract), for
+use when there is no hardware floating-point support.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>General-purpose mathematical
+subroutines.</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GNUPro Toolkit includes
+an implementation of the standard C mathematical subroutine library. See
+<A HREF="../4_libs/b_GNUPro_Math_Library/libmMathematical_Functions_mathh.html">Mathematical
+functions (</A></FONT></FONT><A HREF="../4_libs/b_GNUPro_Math_Library/libmMathematical_Functions_mathh.html"><B><FONT FACE="Courier New"><FONT SIZE=+0>math.h</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>)</FONT></FONT></A><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in <I><A HREF="../4_libs/b_GNUPro_Math_Library/libm.html">GNUPro Math Library</A>
+</I>in <I><B>GNUPro Libraries</B>.</I></FONT></FONT></UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="emb.html">Contents</A>|<A HREF="embindex.html">Index</A>|<A HREF="embUsing_C_for_the_Hitachi_h8300.html">Previous</A>|<A HREF="embPredefined_preprocessor_00000022.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

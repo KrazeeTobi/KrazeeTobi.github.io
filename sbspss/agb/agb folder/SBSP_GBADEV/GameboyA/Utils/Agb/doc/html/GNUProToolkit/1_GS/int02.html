@@ -1,0 +1,1060 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title> Red flag alerts &amp; enhancements</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<div CLASS="ChapterTitle"><a NAME="Top"></a><a NAME="pgfId=1003272"></a><a NAME="36103"></a><a href="gsTOC.html">Contents</a>|<a href="int01.html">Previous</a>|<a href="int03.html">Next</a></div>
+
+<div CLASS="ChapterTitle"><font face="Futura Md BT"><font size=+3>Red flag
+alerts &amp; enhancements</font></font></div>
+
+<hr SIZE=6 WIDTH="100%"><a NAME="pgfId=1003864"></a><font size=+1>The following
+documentation discusses issues that serve as important&nbsp;<a NAME="marker=1009651"></a>warnings
+or isssues that are&nbsp;<a NAME="new issues"></a>new enhancements with
+this release.</font>
+
+<p CLASS="Body"><a NAME="pgfId=1008751"></a><font size=+1>These issues
+may provide clues that may help if you are a new user of the GNU tools
+or if you run into&nbsp;<a NAME="marker=1009652"></a>problems with the
+GNUPro tools.</font>
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li CLASS="Bullet">
+<a NAME="pgfId=1003865"></a><font size=+1><a href="#General_new" CLASS="XRef">General
+issues</a></font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1003914"></a><font size=+1><a href="#Compiler_new" CLASS="XRef">Compiler
+issues</a></font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1003866"></a><font size=+1><a href="#Debugger_issues" CLASS="XRef">Debugger
+issues</a></font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1003859"></a><font size=+1><a href="#Utils_issues" CLASS="XRef">Utilities
+issues</a></font></li>
+</ul>
+</ul>
+</ul>
+
+<div CLASS="Body"><a NAME="pgfId=1004813"></a><font size=+1>See also <a href="int03.html" CLASS="XRef">Issues
+from previous releases</a> for issues that may be pertinent from versions
+of GNUPro Toolkit prior to this release.</font>
+<p><font size=+1>For help with terms that are unfamiliar, see <a href="int05.html#Top">Cygnus
+glossary</a>.</font>
+<br>&nbsp;</div>
+
+<div CLASS="Heading1"><a NAME="pgfId=1004001"></a><a NAME="General_new"></a><b><i><font face="Times New Roman,Times"><font size=+2>General
+issues</font></font></i></b></div>
+
+<br>&nbsp;
+<div CLASS="Body"><a NAME="pgfId=1004002"></a><font size=+1>The following
+documentation discusses new features and alerts for this release of GNUPro
+Toolkit.</font></div>
+
+<ul TYPE=SQUARE>
+<li CLASS="Bullet">
+<font size=+1>There is new support for several hosts with this release:</font></li>
+
+<ul TYPE=SQUARE>
+<li CLASS="Bullet">
+<font size=+1>Hewlett Packard’s HP-UX 11.0</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>Hitachi’s SH4</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>RedHat’s Linux 5.1/5.2/6.0, Caldera’s Linux 2.2, S.u.S.E.’s
+Linux 6.1</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>Sun’s SPARC Solaris 7.0</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>Microsoft’s Windows 98</font></li>
+</ul>
+
+<li CLASS="Bullet">
+<font size=+1>See <a href="int01.html#Embedded_cross-configuration_support" CLASS="XRef">Embedded
+cross-configuration support</a> for the targets and their output format,
+and see <b><i><a href="../6_embed/emb.html">GNUPro Tools for Embedded Systems</a></i></b>
+for details of usage with specific hosts and targets.</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>For reporting problems with this or future releases, Cygnus
+now has only website support. See <a href="ins03.html" CLASS="Index">How
+to report problems</a> for information about using Web Support:</font></li>
+</ul>
+
+<div CLASS="CodeExample">
+<ul>
+<ul><a NAME="pgfId=1008892"></a><tt><font size=+1><a href="http://support.cygnus.com/">http://support.cygnus.com/</a></font></tt></ul>
+</ul>
+</div>
+
+<ul TYPE=SQUARE>
+<li CLASS="Bullet">
+<font size=+1>There are now different and improved installation procedures
+for GNUPro Toolkit, achieving better compression and archiving functionality.</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>GNUPro Toolkit now comes with Source Navigator</font><sup><font size=-2>TM</font></sup><font size=+1>,
+a source code comprehension tool. With Source Navigator, developers can
+extract information from existing code in C, C++, Java, Tcl, <tt>[incr
+tcl] </tt>(the C++ extension for Tcl), FORTRAN, Cobol, and assembly programs
+and use this information to build project databases. The database represents
+internal program structures and relationships between program components.
+Source-Navigator then uses this database to query symbols and relationships
+between components and graphically display them.</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>eCos</font><sup><font size=-2>TM</font></sup><font size=+1>
+(embedded Cygnus operating system), a full-featured, run-time solution
+under open-source licensing terms is available for using with the GNUPro
+tools. eCos, a royalty-free, highly configurable, application-specific
+operating system, allows embedded system developers to focus on differentiating
+their products instead of developing, maintaining, or configuring proprietary,
+real-time kernels. Details on eCos are available online at the following
+location.</font></li>
+
+<ul TYPE=SQUARE>&nbsp;
+<div CLASS="Bullet"><tt><font size=+1><a href="http://sourceware.cygnus.com/ecos/">http://sourceware.cygnus.com/ecos/</a></font></tt></div>
+</ul>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1009746"></a><font size=+1>The GNUPro visual debugger, Cygnus
+Insight</font><sup><font size=-2>TM</font></sup><font size=+1>, formerly
+known as <i>GDBTk</i> has many significant changes; see <a href="#Debugger_issues">Debugger
+issues</a> and <a href="int06.html">Working with Cygnus Insight, the visual
+debugger</a>, for details regarding usage and features of Insight.</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>There are several new C library functions; see <b><i><a href="../4_libs/a_GNUPro_C_Library/libc.html">GNUPro
+C Library</a></i></b> for specific functions and usage.</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>See Embedded cross-configurations supported, new to this
+release.</font></li>
+
+<div CLASS="Bullet"><font size=+1>See <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b> for details about using the tools
+for developing programs in the Win32 environment.</font></div>
+
+<div CLASS="BodyListFollow"><a NAME="pgfId=1009825"></a><a NAME="marker=1009837"></a><font size=+1>Rebuilding
+is now available for the Windows operating system. See <a href="reb.html" CLASS="XRef">Rebuilding
+from source</a> for details and instructions.</font></div>
+</ul>
+
+<ul TYPE=SQUARE>
+<li CLASS="Bullet">
+<a NAME="pgfId=1009500"></a><font size=+1>There is now support for several&nbsp;<a NAME="marker=1009647"></a><a href="#New_targets">new
+targets with this release</a>.</font></li>
+
+<div CLASS="TableTitle"><font size=+1><b>Table 1:<a NAME="New_targets"></a><a NAME="12203"></a></b>Embedded&nbsp;<a NAME="marker=1013983"></a>cross-configurations
+supported, new to this release </font><sup><font size=-1><a href="#T1NewFN2">*</a></font></sup></div>
+
+<table BORDER >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<th>
+<div CLASS="CellBody"><a NAME="pgfId=1013990"></a><b><i><font size=+1>Host</font></i></b></div>
+</th>
+
+<th>
+<div CLASS="CellBody"><a NAME="pgfId=1013992"></a><b><i><font size=+1>Target</font></i></b></div>
+</th>
+
+<th>
+<div CLASS="CellBody"><a NAME="pgfId=1013994"></a><b><i><font size=+1>Output
+Format</font></i></b></div>
+</th>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td ROWSPAN="9">
+<div CLASS="CellBody"><a NAME="pgfId=1013996"></a><b><font size=+1>Linux
+RHS 5.2</font></b><a NAME="marker=1014587"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1013998"></a><font size=+1>ARM 7/7T</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014000"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014004"></a><font size=+1>Hitachi
+H8/300</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014006"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014010"></a><font size=+1>Hitachi
+H8/300H</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014012"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014016"></a><font size=+1>Hitachi
+H8/S</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014018"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014022"></a><font size=+1>Hitachi
+SH1/2/3/4</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014024"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014028"></a><font size=+1>PowerPC</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014030"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014034"></a><font size=+1>Sun MicroSPARC</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014036"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014040"></a><font size=+1>Sun UltraSPARC</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014042"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014046"></a><font size=+1>Toshiba
+TX39</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014048"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td ROWSPAN="7">
+<div CLASS="CellBody"><a NAME="pgfId=1014050"></a><b><font size=+1>SPARC
+Solaris 2.5</font></b><a NAME="marker=1014588"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014052"></a><font size=+1>Hitachi
+SH4</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014054"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014058"></a><font size=+1>Matsushita
+MN10200</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014060"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014064"></a><font size=+1>Matsushita
+MN10300</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014066"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014070"></a><font size=+1>Matsushita
+Pana-X</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014072"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014076"></a><font size=+1>Mitsubishi
+D10V</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014078"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014082"></a><font size=+1>Mitsubishi
+M32R</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014084"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014088"></a><font size=+1>NEC MIPS
+V</font><sub><font size=-1><i>R</i> </font></sub><font size=+1>5400</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014090"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td ROWSPAN="7">
+<div CLASS="CellBody"><a NAME="pgfId=1014092"></a><b><font size=+1>SPARC
+SunOS 4.1.4</font></b><a NAME="marker=1014589"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014094"></a><font size=+1>Hitachi
+SH4</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014096"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014100"></a><font size=+1>Matsushita
+MN10200</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014102"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014106"></a><font size=+1>Matsushita
+MN10300</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014108"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014112"></a><font size=+1>Mitsubishi
+M32R</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014114"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014118"></a><font size=+1>NEC MIPS
+V</font><sub><font size=-1><i>R</i> </font></sub><font size=+1>5400</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014120"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014124"></a><font size=+1>Sun MicroSPARC</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014126"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014130"></a><font size=+1>Sun UltraSPARC</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014132"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td ROWSPAN="7">
+<div CLASS="CellBody"><a NAME="pgfId=1014134"></a><b><font size=+1>Windows</font></b><sup><font size=-1><a href="#T1NewFN2">†<a NAME="marker=1014590"></a></a></font></sup><b><font size=+1>NT4.0/95/98</font></b></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014136"></a><font size=+1>Hitachi
+SH4</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014138"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014142"></a><font size=+1>Matsushita
+MN10200</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014144"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014148"></a><font size=+1>Matsushita
+MN10300</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014150"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014154"></a><font size=+1>Matsushita
+Pana-X</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014156"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014160"></a><font size=+1>Mitsubishi
+M32R</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014162"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014166"></a><font size=+1>Sun MicroSPARC</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014168"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014172"></a><font size=+1>Sun UltraSPARC</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1014174"></a><font size=+1>ELF</font></div>
+</td>
+</tr>
+</table>
+
+<table WIDTH="100%" >
+<tr>
+<td><a NAME="T1NewFN1"></a><font size=-1>*&nbsp;</font></td>
+
+<td><font size=-1>For information on specific targets, see <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b>.</font></td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="TableTitle"><a NAME="T1NewFN2"></a><sup><font size=-1>†&nbsp;</font></sup></div>
+</td>
+
+<td>
+<div CLASS="TableTitle"><sup><font size=-1><b>IMPORTANT</b>: Windows 95/98
+have no support for rebuilding, only NT.</font></sup></div>
+</td>
+</tr>
+</table>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1014354"></a><font size=+1>Specific target boards have extended
+support packages, providing the following features:</font></li>
+
+<div CLASS="footnotes">
+<div CLASS="footnote">
+<div CLASS="TableFootnote">
+<blockquote>
+<li>
+<font size=+1>Cygmon support for using the CYGNUS ROM monitor for ARM/THUMB,
+NEC MIPS VR4100, MIPS V</font><sub><font size=-1><i>R</i> </font></sub><font size=+1>4300,
+MIPS V</font><sub><font size=-1><i>R</i> </font></sub><font size=+1>5<i><tt>xxx</tt></i>
+(5400, 5432, 5464 [N32 mode only]), Matsushita MN10200 and MN10300, MicroSPARC,
+Mitsubishi M32R, Motorola M68K, SPARClite, and Toshiba TX39 processors</font></li>
+
+<li>
+<font size=+1>Board initialization code for PowerPC for MBX 8<i><tt>xx</tt></i>,
+Cogent 860, ADS 8<i><tt>xx</tt></i></font></li>
+
+<li>
+<font size=+1>libstub, which is the necessary code to run GDB protocol,
+for PowerPC for MBX 8<i><tt>xx</tt></i>, Cogent 860, ADS 8<i><tt>xx</tt></i></font></li>
+
+<li>
+<font size=+1>Linker scripts enabling mapping of code, data or devices,
+for PowerPC for MBX 8<i><tt>xx</tt></i>, Cogent 860, ADS 8<i><tt>xx</tt></i></font></li>
+</blockquote>
+</div>
+</div>
+</div>
+</ul>
+
+<div CLASS="BodyListFollow">
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>With the growing popularity of the Win32 environment, the
+GNUPro tools now include Cygwin, a porting layer for applications that
+are generally functional only in UNIX environments. Cygwin has the following
+features that are new to this release (see also <a href="http://sourceware.cygnus.com/cygwin/usenix-98/cygwin.html">Cygwin:
+a free Win32 porting layer for UNIX applications</a>, <a href="http://sourceware.cygnus.com/cygwin/cygwin-ug-net/cygwin-ug-net.html">Cygwin
+User’s Guide</a> and <a href="http://sourceware.cygnus.com/cygwin/cygwin-api/cygwin-api.html">Cygwin
+API Reference</a> in <b><i><a href="../6_embed/emb.html">GNUPro Tools for
+Embedded Systems</a></i></b> for details):</font></li>
+
+<li>
+<font size=+1>Improved support for Windows 95/98</font></li>
+
+<li>
+<font size=+1>Windows NT rebuilding does have support; use rebuilding with
+caution with Windows 95/98 systems, since those operating systems have
+no support for rebuilding</font></li>
+
+<li>
+<font size=+1>10%-20% speed improvement for <tt>configure</tt>/<tt>make</tt></font></li>
+
+<li>
+<font size=+1>Capability of interrupting the I/O using a </font><font face="Arial,Helvetica">Ctrl-c</font><font size=+1>
+keystroke combination, especially important for GDB and serial I/O to target
+boards</font></li>
+
+<li>
+<font size=+1>A diagnostic tool for debugging installation problems</font></li>
+
+<li>
+<font size=+1>Improved emulation of UNIX termios serial I/O</font></li>
+
+<li>
+<font size=+1>Improved handling of select() call with serial I/O</font></li>
+
+<li>
+<font size=+1>Console input for the </font><font face="Arial,Helvetica">Ctrl-u</font><font size=+1>,
+</font><tt>Ctrl-w</tt><font size=+1>,
+</font><tt>Ctrl-d
+</tt><font size=+1>keystroke
+combinations, operating as expected to mimic more closely UNIX functionality</font></li>
+
+<li>
+<font size=+1>Command-line ‘<tt>@</tt>’ construct for long command lines
+now more closely mimics other Win32 utilities; defeat this construct by
+quoting</font></li>
+
+<li>
+<font size=+1>Improved thread safety</font></li>
+
+<li>
+<font size=+1>Limited support for POSIX pthreads</font></li>
+
+<li>
+<font size=+1><tt>gcc -pipe </tt>operability</font></li>
+
+<li>
+<font size=+1>Inclusion of the termcap library</font></li>
+
+<li>
+<font size=+1>Improved POSIX path name handling and mount table manipulation</font></li>
+
+<li>
+<font size=+1>Significant improvements in linking with dlltool, allowing
+for Windows users to write DLLs (<i>Dynamically Linked Libraries</i>);
+the resource compiler, <tt>windres</tt>, is also provided with the native
+Windows GNUPro tools and all tools are usable from the Microsoft command
+line prompt, with full support for normal Windows pathnames. The following
+features are improvements with the linker and the <tt>dlltool</tt>:</font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>Building a DLL in one pass using the <tt>-shared</tt> qualifier</font></li>
+
+<li>
+<font size=+1>Linking by using DLL on command line</font></li>
+
+<li>
+<font size=+1>Building and importing <tt>.a</tt> at the same time as a
+DLL</font></li>
+
+<li>
+<font size=+1>Accepting <tt>.def</tt> files on the command line (as if
+they were objects)</font></li>
+
+<li>
+<font size=+1>Producing a <tt>.def</tt> file corresponding to a final DLL</font></li>
+
+<li>
+<font size=+1>Auto-correcting <tt>stdcall</tt> or <tt>cdecl</tt> symbol
+mismatches (with warnings)</font></li>
+
+<li>
+<font size=+1>Auto-exporting of all global functions</font></li>
+</ul>
+
+<li>
+<font size=+1>There have been many GNU compiler improvements for the Cygwin
+tool:</font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>Using the ‘<tt>declspec</tt>’ method of labelling variables
+and functions for export/import to a DLL</font></li>
+
+<li>
+<font size=+1>GDB native improvements</font></li>
+
+<li>
+<font size=+1>Attaching to a running process</font></li>
+
+<li>
+<font size=+1>Managing Windows threads</font></li>
+
+<li>
+<font size=+1>Allowing for interrupting using </font><font face="Arial,Helvetica">Ctrl-c</font></li>
+
+<li>
+<font size=+1>Using the <tt>passwd</tt> command to change UNIX and Windows
+passwords</font></li>
+
+<li>
+<font size=+1>More UNIX-like output from the ‘<tt>ps</tt>’ command</font></li>
+
+<li>
+<font size=+1>Native <tt>expect</tt> operability</font></li>
+</ul>
+
+<li>
+<font size=+1>Regarding Year 200 Compliance (Y2K), Cygnus has the following
+three exceptions to its compliance agreement.</font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>Applications that call the <tt>strftime()</tt> function may
+encounter erroneous date data. <tt>strftime()</tt> is a part of the <tt>libc</tt>
+component of the GNUPro embedded library, <tt>newlib</tt>. This problem
+is limited to time values using the <tt>%y</tt> format that return a two-digit
+year. It is not a problem for time values using the <font face="Abadi MT Condensed Light">%Y</font>
+format which returns a four-digit year. Affects releases 98r1, 97r2.</font></li>
+
+<li>
+<font size=+1>Applications that use the CMA101 motherboard from Cogent
+Systems will encounter erroneous date data when using GNUPro MIPS toolkits
+to read the real-time clock (RTC) on the motherboard. Affects releases
+98r2, 98r1, 97r2.</font></li>
+
+<li>
+<font size=+1>Y2K non-compliance is limited to the Cygnus-provided PowerPC
+instruction set simulator included with GNUPro Toolkit for embedded PowerPC.
+The simulator does not return real-time clock values greater than 99 in
+the year field. However, no library code from Cygnus reads these values.
+In addition, applications running on actual embedded microprocessors will
+not encounter this problem. Affects releases 98r2, 98r1, 97r2.</font></li>
+</ul>
+</ul>
+
+<p><br>
+<hr SIZE=6 WIDTH="100%"><a NAME="pgfId=1008740"></a><font size=+1>For the
+complete list of supported hosts and targets, see <a href="int01.html#Embedded_cross-configuration_support" CLASS="XRef">Embedded
+cross-configuration support</a> and see <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b> for details about specific hosts
+and targets.</font></div>
+
+<div CLASS="Heading1">&nbsp;
+<h1>
+<a NAME="pgfId=1004016"></a><a NAME="_Toc405092898"></a><a NAME="Compiler_new"></a><b><i><font face="Times New Roman,Times"><font size=+2>Compiler
+issues</font></font></i></b></h1>
+</div>
+
+<div CLASS="Body"><a NAME="pgfId=1004017"></a><font size=+1>The following
+documentation concerns enhancement issues that may affect the API or ABI
+when working with the GNUPro compiler tools.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1009880"></a><font size=+1>For documentation
+specific to a particular processor, see the specific processor’s documentation
+as well as <b><i><a href="../6_embed/emb.html">GNUPro Tools for Embedded
+Systems</a></i></b>.</font>
+<p><font size=+1>The following issues are GCC improvements.</font></div>
+
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>There have been many GNU compiler improvements for the Cygwin
+tool:</font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>Using the ‘<tt>declspec</tt>’ method of labelling variables
+and functions for export/import to a DLL</font></li>
+
+<li>
+<font size=+1>GDB native improvements</font></li>
+
+<li>
+<font size=+1>Attaching to a running process</font></li>
+
+<li>
+<font size=+1>Managing Windows threads</font></li>
+
+<li>
+<font size=+1>Allowing for interrupting using </font><font face="Arial,Helvetica">Ctrl-c</font></li>
+
+<li>
+<font size=+1>Using the <tt>passwd</tt> command to change UNIX and Windows
+passwords</font></li>
+
+<li>
+<font size=+1>More UNIX-like output from the ‘<tt>ps</tt>’ command</font></li>
+
+<li>
+<font size=+1>Native <tt>expect</tt> operability</font></li>
+</ul>
+
+<li>
+<font size=+1>Target-independent register allocation has the following
+enhancements:</font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>Binary compatibility</font></li>
+
+<li>
+<font size=+1>Selective linking</font></li>
+
+<li>
+<font size=+1>New <tt>regmove</tt> optimizations</font></li>
+
+<li>
+<font size=+1>Additional <tt>reload</tt> inheritance</font></li>
+
+<li>
+<font size=+1>Local <i>spilling</i> in <tt>reload</tt></font></li>
+
+<li>
+<font size=+1>Post <tt>reload</tt> flow analysis</font></li>
+
+<li>
+<font size=+1>Weak and alias symbol handling</font></li>
+
+<li>
+<font size=+1>Constant equivalence handling for multiple-times set pseudos</font></li>
+
+<li>
+<font size=+1>Equivalences of pseudo-ops for handling stack slot addresses</font></li>
+</ul>
+
+<li>
+<font size=+1>The PowerPC 750 processor now has support.</font></li>
+
+<li>
+<font size=+1>There is now capability for using PowerPC scheduling of prologue
+and epilogue.</font></li>
+
+<li>
+<font size=+1>Comparisons optimization is simplified, transforming combinations
+of comparisons.</font></li>
+
+<li>
+<font size=+1>Intel’s i960 64-bit implementations are usable.</font></li>
+
+<li>
+<font size=+1>A data layout consistency testsuite is operative.</font></li>
+</ul>
+<font size=+1>The following issues are G++ improvements.</font>
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>The C++ compiler’s past behavior of being rather lenient
+in the enforcement of language rules has changed to bring existing code
+bases into compliance with the current C++ standard. <tt>g++</tt> now issues
+errors instead of warnings for violations of the standard. Use <tt>-fpermissive</tt>
+to return to the previous behavior.</font></li>
+
+<li>
+<font size=+1>Handling of pointers to member functions is more efficient
+for classes with no virtual functions.</font></li>
+
+<li>
+<font size=+1>A new option is available, <tt>-fvtable-gc</tt>, which discards
+unused virtual functions, if the GNUPro linker for your target also supports
+it for your system. Caution is necessary with <tt>-fvtable-gc</tt>, since
+error warnings may emit from the assembler.</font></li>
+
+<li>
+<font size=+1>C string constants are now of type, <tt>const char <i>n</i></tt>,
+rather than type, <tt>char <i>n</i></tt> (use <tt>-fno-const-strings</tt>
+to revert to the old behavior).</font></li>
+
+<li>
+<font size=+1>Many obsolete options have been removed: <tt>-fmemoize-lookups</tt>,
+<tt>-fsave-memoized</tt>,
+<tt>+e</tt>,
+<tt>-fall-virtual</tt>,
+<tt>-fenum-int-equivalence</tt>,
+and
+<tt>-fno-nonnull-objects</tt>.</font></li>
+
+<li>
+<font size=+1>There have been some changes to the <tt>libstdc++</tt> library:</font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>Upgrade of STL to the SGI STL 3.11 release</font></li>
+
+<li>
+<font size=+1>Various fixes related to namespaces</font></li>
+
+<li>
+<font size=+1>String class fixes</font></li>
+
+<li>
+<font size=+1>Fixes to the Makefile</font></li>
+
+<li>
+<font size=+1>Additional library tests</font></li>
+</ul>
+
+<li>
+<font size=+1>PowerPC table-driven exception handling is operative.</font></li>
+
+<li>
+<font size=+1><tt>-felide-constructors</tt>, which keeps temporary objects
+rather than optimizing them away, is now on by default; this does not represent
+a change in the compiler’s behavior, just the meaning of the flag.</font></li>
+
+<li>
+<font size=+1>Implicit function declarations are now suppressed by <tt>-fstrict-prototype</tt>.</font></li>
+
+<li>
+<font size=+1>A new option, <tt>-Wnon-template-friend</tt>, suppresses
+a warning about a friend declaration inside a template class that declares
+a non-template function.</font></li>
+
+<li>
+<font size=+1>References to functions are now supported.</font></li>
+
+<li>
+<font size=+1>A new option, <tt>-fno-implicit-inline-templates</tt>, suppresses
+out-of-line copies of implicitly instantiated inline template functions,
+which are normally generated even with <tt>-fno-implicit-templates</tt>
+(in order that the same set of explicit instantiations is needed with or
+without optimization).</font></li>
+
+<li>
+<font size=+1>For overload resolution, type conversion operators are treated
+as always coming from the argument’s class, even if they are really inherited.</font></li>
+
+<li>
+<font size=+1>Many small violations are newly diagnosed.</font></li>
+
+<li>
+<font size=+1>An explicit specialization of a static data member template
+is only considered a definition if it has an initializer.</font></li>
+</ul>
+
+<h2>
+<a NAME="pgfId=1004354"></a><a NAME="_Toc405092899"></a><a NAME="Debugger_issues"></a><b><i><font face="Times New Roman,Times"><font size=+2>Debugger
+issues</font></font></i></b></h2>
+
+<div CLASS="Body"><a NAME="pgfId=1004355"></a><font size=+1>The following
+documentation concerns the enhancement issues for the GNUPro debugger tools.</font></div>
+
+<ul TYPE=SQUARE>
+<li CLASS="Bullet">
+<a NAME="pgfId=1008752"></a><font size=+1>Continued enhancements have improved
+the GNUPro visual debugger, Cygnus&nbsp;<a NAME="marker=1009629"></a>Insight
+(formerly known as GDBTk).</font></li>
+
+<br><a NAME="pgfId=1009451"></a><font size=+1>See <a href="int06.html" CLASS="XRef">Working
+with Cygnus Insight, the visual debugger</a> for details regarding usage
+and features of Insight.</font></ul>
+
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li CLASS="Bullet">
+<font size=+1>The </font><font face="Arial,Helvetica">Function Browser</font><font size=+1>
+window enables interaction with the </font><font face="Arial,Helvetica">Source
+Window</font><font size=+1> for examining functions in source code using
+a dialog box for entering text, and for declaring functions as static or
+as regular expressions.</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>A new Threads window is available for working with threads.
+Threads functionality is not available for all target operating systems.</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>There is improved C++ handling. However, when debugging C++
+code, breakpoints and exceptions may not work and, so, the functionality
+of the </font><font face="Arial,Helvetica">Breakpoints</font><font size=+1>
+window may be inoperable.</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>Improvements make for faster variable display and update.</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>Introspect</font><sup><font size=-2>TM</font></sup><font size=+1>
+is a tracing facility that enables defining a trace experiment, starting
+and stopping trace data collection, and browsing the trace data that Insight
+collects.</font></li>
+
+<div CLASS="Bullet"><font size=+1>Tracepoint functionality is not available
+for all hosts and targets.</font></div>
+</ul>
+
+<li CLASS="Bullet">
+<font size=+1>The GNU debugger, GDB, is going through many changes in its
+emergence as version 5, available in a 1999 release. Some of the changes
+that have been made include the following features.</font></li>
+
+<ul TYPE=SQUARE>
+<li CLASS="Bullet">
+<font size=+1>There is now thread support for Windows NT4.0/95 operating
+systems, even though thread functionality is not available for all targets.</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>Remote protocol can now use 64-bit addresses for memory.</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>Remote protocol can get more information about threads.</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>There is control over overload and opaque type resolution
+for C++ programs.</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>There have been some additional Hewlett Packard improvements:</font></li>
+
+<ul TYPE=SQUARE>
+<li CLASS="Bullet">
+<font size=+1>PA 2.0 support</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>HP-UX kernel thread support</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>Hardware watchpoints for HP-UX</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>Catchpoints for HP-UX (catchpoints can stop on designated
+types of events, such as fork(), vfork(), or shared library loading)</font></li>
+
+<li CLASS="Bullet">
+<font size=+1>Ability to follow forks on HP-UX</font></li>
+</ul>
+</ul>
+</ul>
+
+<div CLASS="Heading1"><a NAME="pgfId=1004047"></a><a NAME="_Toc405092900"></a><a NAME="Utils_issues"></a><b><i><font face="Times New Roman,Times"><font size=+2>Utilities
+issues</font></font></i></b></div>
+
+<br>&nbsp;
+<div CLASS="Body"><a NAME="pgfId=1004777"></a><font size=+1>The following
+documentation concerns enhancement issues for GNUPro utilities.</font></div>
+
+<ul TYPE=SQUARE>
+<li CLASS="Bullet">
+<a NAME="pgfId=1003921"></a><font size=+1>The GNU linker tool has improved
+function and variable linking since the addition of a few supported targets
+(see <a href="int01.html#Embedded_cross-configuration_support" CLASS="XRef">Embedded
+cross-configuration support</a> for the complete listing of targets). This
+linking allows for selecting specific functions and variables in an object
+file when configuring, whereby the linking&nbsp;<a NAME="marker=1009628"></a>selectively
+(or <i>explicitly</i>) includes those libraries in the&nbsp;<a NAME="marker=1009615"></a>linking
+instruction. See the linker documentation for specific information; for
+instance, see <a href="../5_ut/b_Usingld/ldOverview_of_ld_the_GNU_linker.html">Overview
+of <tt>ld</tt>, the GNU linker</a> and <a href="../5_ut/b_Usingld/ldLinker_scripts.html">Linker
+scripts</a> in <a href="../5_ut/b_Usingld/ld.html"><i>Using</i> <tt>ld</tt></a>
+in <b><i>GNUPro Utilities</i></b>.</font></li>
+
+<li CLASS="Bullet">
+<a NAME="pgfId=1009610"></a><font size=+1>For specific assembler or linker
+details, consult the specific processor’s documentation and <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b>.</font><a NAME="pgfId=1009495"></a></li>
+</ul>
+
+<div CLASS="Body">&nbsp;</div>
+
+<center>
+<hr SIZE=3 WIDTH="100%"><a href="#Top">Top</a>|<a href="gsTOC.html">Contents</a>|<a href="int01.html">Previous</a>|<a href="int03.html">Next</a></center>
+
+<div CLASS="footnotes">
+<div CLASS="footnote">
+<div CLASS="TableFootnote">&nbsp;</div>
+</div>
+</div>
+
+</body>
+</html>

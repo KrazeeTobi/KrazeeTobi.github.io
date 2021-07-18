@@ -1,0 +1,421 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Installation Problems</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccActual_Bugs_We_Havent_Fixed_Yet.html">Previous</A>|<A HREF="gccCrossCompiler_Problems.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_4686206"></A><A NAME="e7fe4c69"></A><B><FONT SIZE=+3>Installation
+problems&nbsp;</FONT></B>&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The following describes
+a list of problems (and some apparent problems which don’t really mean
+anything is wrong) that show up during installation of GNU CC.</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On certain systems, defining
+certain environment variables such as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>CC</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can interfere with the functioning of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If you encounter seemingly strange
+errors when trying to build the compiler in a directory other than the
+source directory, it could be because you have previously configured the
+compiler in the source directory. Make sure you have done all the necessary
+preparations. See <A HREF="gccCompilation_in_a_Separate_Direct.html">Compilation
+in a separate directory</A>.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If you build GNU CC on a BSD
+system using a directory stored in a System V file system, problems may
+occur in running </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fixincludes</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+if the System V file system doesn’t support symbolic links. These problems
+result in a failure to fix the declaration of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>size_t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sys/types.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+If you find that </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>size_t</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a signed type and that type mismatches occur, this could be the cause.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The solution is not to use such
+a directory for building GNU CC.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In previous versions of GNU
+CC, the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gcc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+driver program looked for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in various places; for example, in files beginning with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/usr/local/lib/gcc-</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+GNU CC version 2 looks for them in the directory, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/usr/local/lib/gcc-lib/<I>target</I>/<I>version</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Thus, to use a version of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+that is not the system default, for example </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gas</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or GNU </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+you must put them in that directory (or make links to them from that directory).</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Some commands executed when
+making the compiler may fail (return a non-zero status) and be ignored
+by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+These failures, which are often due to files that were not found, are expected,
+and can safely be ignored.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>It is normal to have warnings
+in compiling certain files about unreachable code and about enumeration
+type clashes. The names of these files begin with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>insn-</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Also, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>real.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+may get some warnings that you can ignore.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Sometimes </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+recompiles parts of the compiler when installing the compiler. In one case,
+this was traced down to a bug in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Either ignore the problem or switch to GNU Make.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If you have installed a program
+known as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>purify</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+you may find that it causes errors while linking </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>enquire</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+which is part of building GNU CC. The fix is to get rid of the file </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>real-ld</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+which </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>purify</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+installs—so that GNU CC won’t try to use it.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On Linux SLS 1.01, there is
+a problem with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libc.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’;
+it does not contain the obstack functions. However, GNU CC assumes that
+the obstack functions are in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libc.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+when it is the GNU C library. To work around this problem, change the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__GNU_LIBRARY__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+conditional (around line 31) to ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#if
+1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On some 386 systems, building
+the compiler never finishes because </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>enquire</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+hangs due to a hardware problem in the motherboard—it reports floating
+point exceptions to the kernel incorrectly. You can install GNU CC except
+for ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>float.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+by patching out the command to run </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>enquire</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+You may also be able to fix the problem for real by getting a replacement
+motherboard. This problem was observed in Revision E of the Micronics motherboard,
+and is fixed in Revision F. It has also been observed in the MYLEX MXA-33
+motherboard.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If you encounter this problem,
+you may also want to consider removing the FPU from the socket during the
+compilation. Alternatively, if you are running SCO Unix, you can reboot
+and force the FPU to be ignored. To do this, type ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>hd(40)unix
+auto</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ignorefpu</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On some 386 systems, GNU CC
+crashes trying to compile ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>enquire.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+This happens on machines that don’t have a 387 FPU chip. On 386 machines,
+the system kernel is supposed to emulate the 387 when you don’t have one.
+The crash is due to a bug in the emulator. One of these systems is the
+Unix from Interactive Systems: 386/ix. On this system, an alternate emulator
+is provided, and it does work. To use it, execute the following command
+as super-user and then reboot the system.</FONT></FONT></LI>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>ln /etc/emulator.rel1 /etc/emulator</FONT></FONT></PRE>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>(The default emulator file remains
+present under the name, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>emulator.dflt</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.)</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Try using ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/etc/emulator.att</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+if you have such a problem on the SCO system.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Another system which has this
+problem is Esix. We don’t know whether it has an alternate emulator that
+works.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On NetBSD 0.8, a similar problem
+manifests itself as the following error messages:</FONT></FONT></DT>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>enquire.c: In function 'fprop':&nbsp;
+enquire.c:2328: floating overflow</FONT></FONT></PRE>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On SCO systems, when compiling
+GNU CC with the system’s compiler, do not use ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Some versions of the system’s compiler miscompile GNU CC with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Sometimes on a Sun 4 you may
+observe a crash in the program </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>genflags</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>genoutput</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+while building GNU CC. This is said to be due to a bug in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sh</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+You can probably get around it by running </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>genflags</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>genoutput</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+manually and then retrying the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On Solaris 2, executables of
+GNU CC version 2.0.2 are commonly available, but they have a bug that shows
+up when compiling current versions of GNU CC: undefined symbol errors occur
+during assembly if you use ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-g</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The solution is to compile the
+current version of GNU CC without</FONT></FONT></DT>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-g</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+That makes a working compiler which you can use to recompile with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-g</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Solaris 2 comes with a number
+of optional OS packages. Some of these packages are needed to use GNU CC
+fully. If you did not install all optional packages when installing Solaris,
+you will need to verify that the packages that GNU CC needs are installed.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>To check whether an optional
+package is installed, use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>pkginfo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command. To add an optional package, use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>pkgadd</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command. For further details, see the Solaris documentation. For Solaris
+2.0 and 2.1, GNU CC needs six packages: ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SUNWarc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SUNWbtool</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SUNWesu</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SUNWhea</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SUNWlibm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SUNWtoo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+For Solaris 2.2, GNU CC needs an additional seventh package: ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SUNWsprot</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On Solaris 2, trying to use
+the linker and other tools in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/usr/ucb</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to install GNU CC has been observed to cause trouble. For example, the
+linker may hang indefinitely. The fix is to remove ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/usr/ucb</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+from your </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>PATH</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If you use the 1.31 version
+of the MIPS assembler (such as was shipped with Ultrix 3.1), you need to
+use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fno-delayed-branch</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+switch when optimizing floating point code. Otherwise, the assembler will
+complain when the GCC compiler fills a branch delay slot with a floating
+point instruction, such as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>add.d</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If, on a MIPS system, you get
+an error message saying “</FONT></FONT><B><FONT SIZE=+0><FONT FACE="Courier New">does
+not have gp sections for all it</FONT><FONT FACE="Times New Roman">’</FONT><FONT FACE="Courier New">s
+</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>[sic]</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>
+sectons </FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>[sic]”,
+don’t worry about it. This happens whenever you use GAS with the MIPS linker,
+but there is not really anything wrong, and it is okay to use the output
+file. You can stop such warnings by installing the GNU linker.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>It would be nice to extend GAS
+to produce the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+tables, but they are optional, and there should not be a warning about
+their absence.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In Ultrix 4.0 on the MIPS machine,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdio.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+does not work with GNU CC at all unless it has been fixed with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fixincludes</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+This causes problems in building GNU CC. Once GNU CC is installed, the
+problems go away. To work around this problem, when making the stage 1
+compiler, specify the following option to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></LI>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>GCC_FOR_TARGET="./xgcc -B./ -I./include"</FONT></FONT></PRE>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>When making stage 2 and stage
+3, specify this option:</FONT></FONT></DT>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>CFLAGS="-g -I./include"</FONT></FONT></PRE>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Users have reported some problems
+with version 2.0 of the MIPS compiler tools that were shipped with Ultrix
+4.1. Version 2.10 which came with Ultrix 4.2 seems to work fine. Users
+have also reported some problems with version 2.20 of the MIPS compiler
+tools that were shipped with RISC/os 4.x. The earlier version 2.11 seems
+to work fine.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Some versions of the MIPS linker
+will issue an assertion failure when linking code that uses </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>alloca</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+against shared libraries on RISC-OS 5.0, and DEC’s OSF/1 systems.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This is a bug in the linker,
+that is supposed to be fixed in future revisions. To protect against this,
+GNU CC passes ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-non_shared</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to the linker unless you pass an explicit ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-shared</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-call_shared</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+switch.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On System V release 3, you may
+get the following error message while linking:</FONT></FONT></LI>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>ld fatal: failed to write symbol name <I>something</I>&nbsp;
+&nbsp;&nbsp; in strings table for file <I>whatever</I></FONT></FONT></PRE>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This probably indicates that
+the disk is full or your ULIMIT won’t allow the file to be as large as
+it needs to be. This problem can also result because the kernel parameter
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MAXUMEM</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is too small. If so, regenerate the kernel and make the value much larger.
+The default value is reported to be 1024; a value of 32768 is said to work.
+Smaller values may also work.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On System V, if you get an error
+like the following example shows, this indicates a problem with disk space,
+ULIMIT, or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MAXUMEM</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></LI>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>/usr/local/lib/bison.simple: In function 'yyparse':&nbsp;
+/usr/local/lib/bison.simple:625: virtual memory exhausted</FONT></FONT></PRE>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Current GNU CC versions probably
+do not work on version 2 of the NeXT operating system.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On NeXTStep 3.0, the Objective
+C compiler does not work, due, apparently, to a kernel bug that it happens
+to trigger. This problem does not happen on 3.1.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On the Tower models 4</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>0
+and 6</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>0,
+by default a process is not allowed to have more than one megabyte of memory.
+GNU CC cannot compile itself (or many other programs) with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in that much memory.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>To solve this problem, reconfigure
+the kernel adding the following line to the configuration file:</FONT></FONT></DT>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>MAXUMEM = 4096</FONT></FONT></PRE>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On HP 9000 series 300 or 400
+running HPUX release 8.0, there is a bug in the assembler that must be
+fixed before GNU CC can be built. This bug manifests during the first stage
+of compilation, while building ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc2.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.</FONT></FONT></LI>
+
+<PRE><FONT SIZE=+1><FONT FACE="Courier New">_floatdisf&nbsp;
+cc1: warning: </FONT><FONT FACE="Times New Roman">‘</FONT><FONT FACE="Courier New">-g</FONT><FONT FACE="Times New Roman">’</FONT><FONT FACE="Courier New"> option not supported on this of GCC&nbsp;
+cc1: warning: </FONT><FONT FACE="Times New Roman">‘</FONT><FONT FACE="Courier New">-g1</FONT><FONT FACE="Times New Roman">’</FONT><FONT FACE="Courier New"> option not supported on this version of GCC&nbsp;
+./xgcc: Internal compiler error: program as got fatal signal 11</FONT></FONT></PRE>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>archive/cph/hpux-8.0-assembler</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+a patched version of the assembler, is available by anonymous ftp from
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>altdorf.ai.mit.edu</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If you have HP software support, the patch can also be obtained directly
+from HP, as described in the following note:</FONT></FONT></DT>
+
+<UL>
+<PRE><FONT SIZE=+1><FONT FACE="Courier New">This is the patched assembler, to patch SR#1653-010439,&nbsp;
+where the assembler aborts on floating point constants.&nbsp;
+
+The bug is not really in the assembler, but in the shared&nbsp;
+library version of the function </FONT><FONT FACE="Times New Roman">“</FONT><FONT FACE="Courier New">cvtnum(3c)</FONT><FONT FACE="Times New Roman">”</FONT><FONT FACE="Courier New">.&nbsp;
+The bug on&nbsp; </FONT><FONT FACE="Times New Roman">“</FONT><FONT FACE="Courier New">cvtnum(3c)</FONT><FONT FACE="Times New Roman">”</FONT><FONT FACE="Courier New"> is SR#4701-078451.&nbsp;
+Anyway, the attached assembler uses the archive library&nbsp;
+version of </FONT><FONT FACE="Times New Roman">“</FONT><FONT FACE="Courier New">cvtnum(3c)</FONT><FONT FACE="Times New Roman">”</FONT><FONT FACE="Courier New"> and thus does not exhibit the bug.</FONT></FONT></PRE>
+</UL>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This patch is also known as
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>PHCO 4484</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On HP-UX version 8.05, but not
+on 8.07 or more recent versions, the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fixproto</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+shell script triggers a bug in the system shell. If you encounter this
+problem, upgrade your operating system or use BASH (the GNU shell) to run
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fixproto</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Some versions of the Pyramid
+C compiler are reported to be unable to compile GNU CC. You must use an
+older version of GNU CC for bootstrapping. One indication of this problem
+is if you get a crash when GNU CC compiles the function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>muldi3</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+in file, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc2.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></LI>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You may be able to succeed by
+getting GNU CC version 1, installing it, and using it to compile GNU CC
+version 2. The bug in the Pyramid C compiler does not seem to affect GNU
+CC version 1.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>There may be similar problems
+on System V Release 3.1 on 386 systems.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On the Intel Paragon (an i860
+machine), if you are using operating system version 1.0, you will get warnings
+or errors about redefinition of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>va_arg</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+when you build GNU CC. If this happens, then you need to link most programs
+with the library, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>iclib.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+You must also modify ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdio</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+as follows. Before the following lines, insert the line, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#if
+__PGC__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,</FONT></FONT></LI>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#if defined(__i860__) &amp;&amp; !defined(_VA_LIST)&nbsp;
+#include &lt;va_list.h></FONT></FONT></PRE>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>After the following lines, insert
+the line, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#endif /*
+__PGC__ */</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></DT>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>extern int vprintf(const char *, va_list );&nbsp;
+extern int vsprintf(char *, const char *, va_list );&nbsp;
+#endif</FONT></FONT></PRE>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>These problems don’t exist in
+operating system version 1.1.</FONT></FONT></DT>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On the Altos 3068, programs
+compiled with GNU CC won’t work unless you fix a kernel bug. This happens
+using system versions V.2.2 1.0gT1 and V.2.2 1.0e and perhaps later versions
+as well. See the file, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>README</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ALTOS</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>You will get several sorts of
+compilation and linking errors on the we32k if you don’t follow the special
+instructions. See <A HREF="gccConfigurations_Supported_by_GNU_.html">Configurations
+supported by GNU CC</A>.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>A bug in the HPUX 8.05 (and
+earlier) shell will cause the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fixproto</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+program to report an error of the following form.</FONT></FONT></LI>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>./fixproto: sh internal 1K buffer overflow</FONT></FONT></PRE>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>To fix this, change the first
+line of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fixproto</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+script to look like the following.</FONT></FONT></DT>
+
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#!/bin/ksh</FONT></FONT></PRE>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccActual_Bugs_We_Havent_Fixed_Yet.html">Previous</A>|<A HREF="gccCrossCompiler_Problems.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

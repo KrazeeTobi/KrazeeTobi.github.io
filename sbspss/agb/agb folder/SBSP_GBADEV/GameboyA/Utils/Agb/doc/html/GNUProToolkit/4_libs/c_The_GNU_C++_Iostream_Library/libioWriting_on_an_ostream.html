@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Writing on an ostream</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioManaging_output_streams_class_os.html">Previous</A>|<A HREF="libioRepositioning_an_ostream.html">Next</A>
+<BR><A NAME="off_294912"></A><A NAME="492e19c2"></A><A NAME="off_294912"></A><A NAME="492e19c2"></A><A NAME="off_294912"></A><A NAME="492e19c2"></A><A NAME="off_294912"></A><A NAME="492e19c2"></A><A NAME="off_294912"></A><A NAME="492e19c2"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Writing
+on an </FONT></FONT><FONT FACE="Courier New"><FONT POINT-SIZE="26">ostream</FONT><FONT SIZE=+2></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>These
+methods write on an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(you may also use the operator </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>&lt;&lt;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+see <FONT COLOR="#008000"><A HREF="libioOperators_and_Default_Streams.html">Operators
+and default streams</A></FONT>).</FONT></FONT>
+<UL><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">ostream&amp;</FONT></FONT><FONT FACE="Times New Roman">
+<B>ostream::put </B></FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(char
+<I>c</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Write the single character
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>c</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+</UL>
+
+<UL><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">ostream&amp;</FONT></FONT><FONT FACE="Times New Roman">
+<B>ostream::write </B></FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(<I>string</I>,
+int <I>length</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Write </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>length</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+characters of a string to this ostream, beginning at the pointer, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>string</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>string</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may have any of these types: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>char*</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>unsigned</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>char*</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>signed</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>char*</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">ostream&amp;</FONT></FONT><FONT FACE="Times New Roman">
+<B>ostream::form </B></FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(const
+char *<I>format</I>, ...)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>A GNU extension, similar
+to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fprintf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>(<I>file</I>, <I>format</I>,
+...)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><I><FONT FACE="Courier New"><FONT SIZE=+0>format</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>printf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>-style
+format control string, which is used to format the (variable number of)
+arguments, printing the result on this </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+See </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostream::vform</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for a version that uses an argument list rather than a variable number
+of arguments.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">ostream&amp;</FONT></FONT><FONT FACE="Times New Roman">
+<B>ostream::vform </B></FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(const
+char <I>format</I>, va_list <I>args</I>)<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>A GNU extension, similar
+to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>vfprintf(</FONT><I><FONT COLOR="#000000">file</FONT></I>,
+<I><FONT COLOR="#000000">format</FONT></I>, <I><FONT COLOR="#000000">args</FONT></I><FONT SIZE=+0>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>format</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>printf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>-style
+format control string, which is used to format the argument list </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>args</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+printing the result on this </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostream</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+See </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ostream::form</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+previously, for a version that uses a variable number of arguments rather
+than an argument list.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioManaging_output_streams_class_os.html">Previous</A>|<A HREF="libioRepositioning_an_ostream.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

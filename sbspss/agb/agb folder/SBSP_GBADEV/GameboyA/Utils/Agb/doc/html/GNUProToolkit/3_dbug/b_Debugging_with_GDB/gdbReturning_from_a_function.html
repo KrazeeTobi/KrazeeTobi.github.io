@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Returning from a function</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbGiving_your_program_a_signal.html">Previous</A>|<A HREF="gdbCalling_program_functions.html">Next</A>
+<BR><A NAME="off_2196626"></A><A NAME="d7f85d0c"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Returning
+from a function</FONT></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<BR><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>The following documentation
+discusses GDB’s </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>return
+</FONT></FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>command.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>return</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>return</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>expression</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>You can cancel execution
+of a function call with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>return</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command. If you give an </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>expression</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+argument, its value is used as the function’s return value.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>When you use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>return</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+GDB discards the selected stack frame (and all frames within it). You can
+think of this as making the discarded frame return prematurely. If you
+wish to specify a value to be returned, give that value as the argument
+to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>return</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>This pops the selected stack
+frame (see <FONT COLOR="#008000"><A HREF="gdbSelecting_a_frame.html">Selecting
+a frame</A></FONT>), and any other frames inside of it, leaving its caller
+as the innermost remaining frame. That frame becomes selected. The specified
+value is stored in the registers used for returning values of functions.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>return</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command does not resume execution; it leaves the program stopped in the
+state that would exist if the function had just returned.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>In contrast, the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>finish</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command (see <FONT COLOR="#008000"><A HREF="gdbContinuing_and_stepping.html">Continuing
+and stepping</A></FONT>) resumes execution until the selected stack frame
+returns naturally.</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbGiving_your_program_a_signal.html">Previous</A>|<A HREF="gdbCalling_program_functions.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

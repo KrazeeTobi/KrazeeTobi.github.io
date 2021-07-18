@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Suppressing Differences in Blank and Tab Spacing</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="dif.html">Contents</A>|<A HREF="difindex.html">Index</A>|<A HREF="difHunks.html">Previous</A>|<A HREF="difSuppressing_Differences_00000005.html">Next</A>
+</P>
+
+<P><A NAME="off_131541"></A><A NAME="f0409fbf"></A><B><FONT FACE="Times New Roman"><FONT SIZE=+3>Suppressing
+Differences in Blank and Tab Spacing </FONT></FONT></B></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+and '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--ignore-space-change</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'options
+ignore white space at line end, and considers all other sequences of one
+or more white space characters to be equivalent. With these options, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+considers the following two lines to be equivalent, where '</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>$</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+denotes the line end: </FONT></FONT></P>
+
+<P><B><FONT FACE="Courier New"><FONT SIZE=+0>Here lyeth muche rychnesse
+in lytell space. -- John Heywood$ <BR>
+Here lyeth muche rychnesse in lytell space. -- John Heywood $ </FONT></FONT></B></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-w</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+and '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--ignore-all-space</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+options are stronger than '</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>'.
+They ignore difference even if one file has white space where the other
+file has none. <I>White space</I> characters include tab, newline, vertical
+tab, form feed, carriage return, and space; some locales may define additional
+characters to be white space. With these options, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+considers the following two lines to be equivalent, where '</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>$</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+denotes the line end and '</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>ˆM</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>'
+denotes a carriage return: </FONT></FONT></P>
+
+<P><B><FONT FACE="Courier New"><FONT SIZE=+0>Here lyeth muche rychnesse
+in lytell space. -- John Heywood$ <BR>
+He relyeth much erychnes seinly tells pace. --John Heywood ˆM$ </FONT></FONT></B></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For more, see the following.
+</FONT></FONT></P>
+
+<UL TYPE=SQUARE>
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difHunks.html">Hunks</A></FONT>
+</FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT COLOR="#008000"><FONT SIZE=+1><A HREF="difSuppressing_Differences_00000005.html">Suppressing
+Differences in Blank Lines </A></FONT></FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difSuppressing_Case_Differences.html">Suppressing
+Case Differences</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difSuppressing_Lines_Matching_a_Reg.html">Suppressing
+Lines Matching a Regular Expression</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difSummarizing_Which_Files_Differ.html">Summarizing
+Which Files Differ</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="difBinary_Files_and_Forcing_Text_Co.html">Binary
+Files and Forcing Text Comparisons</A></FONT> </FONT></FONT></LI>
+
+<LI><FONT COLOR="#008000"><A HREF="difdiff_Output_Formats.html"><B><FONT FACE="Courier New"><FONT SIZE=+0>diff</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+Output Formats</FONT></FONT></A></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT></LI>
+</UL>
+
+</BODY>
+</HTML>

@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+
+<HEAD>
+
+<link rel="stylesheet" type="text/css" href="faq.css">
+<!-- Edited by Ron D. 2/9/01, modified format for separate release of FAQ -->
+
+<TITLE>AGB FAQ, General</TITLE>
+
+</HEAD>
+
+<BODY bgcolor="#ffffff"><A name="TOP"></A>
+
+<FORM name="jump" target="cont"><B><FONT face="Arial" color="#ff0000">FAQ MENU</FONT></B> <SELECT name="menu" onchange="location.href = document.jump.menu.options[document.jump.menu.selectedIndex].value">
+
+<OPTION value="faq_general.htm" selected>[FAQ]General</OPTION>
+
+<OPTION value="faq_backup.htm">[FAQ]Backup</OPTION>
+
+<OPTION value="faq_communication.htm">[FAQ]Communication</OPTION>
+
+<OPTION value="faq_gnu.htm">[FAQ]GNU</OPTION>
+
+<OPTION value="faq_graphic.htm">[FAQ]Graphics</OPTION>
+
+<OPTION value="faq_sound.htm">[FAQ]Sound</OPTION>
+
+</SELECT>
+
+</FORM>
+<H2>General Questions</h2>
+
+<HR size="4" noshade>
+
+<P>
+<FONT size="-1"><A href="#001">[Q001] Is there some general-purpose compression tool for binary data?</A></FONT><BR>
+
+<FONT size="-1"><A href="#002">[Q002] How do you link binary files?</A></FONT><BR>
+
+<FONT size="-1"><A href="#003">[Q003] Is it OK to make changes to startup routine (crt0.s)?</A></FONT><BR>
+
+<FONT size="-1"><A href="#004">[Q004] Can an H blank interrupt be used during a V blank?</A></FONT><BR>
+
+<FONT size="-1"><A href="#005">[Q005] Can data be written in units of bytes from the CPU to VRAM?</A></FONT><BR>
+
+<FONT size="-1"><A href="#006">[Q006] I want to program with thumb code in C language and arm code in assembly language, but what is the best way to link?</A></FONT><BR>
+
+<FONT size="-1"><A href="#007">[Q007] Tell me about access speeds for ROM and RAM.</A></FONT><BR>
+
+<FONT size="-1"><A href="#008">[Q008] When data is written to the two timer-related registers (TM*D &#38; TM*CNT) while the timer is operating, when do the new values become effective?</A></FONT><BR>
+
+<FONT size="-1"><A href="#009">[Q009] Can the timer be used to realize interrupts in agreement with the H counter?</A></FONT><BR>
+
+<FONT size="-1"><A href="#010">[Q010] When I use the system call LZ77UnCompVram (which expands LZ77 compressed data in VRAM), the first 1byte of data changes!</A></FONT><BR>
+
+<FONT size="-1"><A href="#011">[Q011] I want to write part of the program in assembly code.  What is the register configuration for calling the assembly routine?</A></FONT><BR>
+
+<FONT size="-1"><A href="#012">[Q012] Is it basically OK to change around the source programs supplied in .s (assembly code)?</A></FONT><BR>
+
+<FONT size="-1"><A href="#013">[Q013] The emulator runs fine under emulator, but sometimes it does not operate well when I burn a Flash Pak and try running it.</A></FONT></P>
+
+<HR>
+
+<H3><A name="001">[Q001]</A></H3>
+
+<P>Is there some general-purpose compression tool for binary data?</P>
+
+<H3>[A001]</H3>
+
+<P>Please use agbcomp, which is included in the Developers Kit. For data decompression use HuffUnComp, ALZ77UnCompWram, RLUnCompWram, etc.</A></P>
+
+<P align="right"><B><FONT size="-1"><A href="#TOP">[TOP]</A></FONT></B></P><HR>
+
+<H3><A name="002">[Q002]</A></H3>
+
+<P>How do you link binary files?</P>
+
+<H3>[A002]</H3>
+
+<P>Add the following descriptions to Makefile:<BR>
+      <BR>
+      .BINFILES &nbsp;= &nbsp;filename.bin<BR>
+      .OFILES &nbsp;&nbsp; = &nbsp;$(.SFILES:.s=.o) $(.CFILES:.c=.o) $(.BINFILES:.bin=.o)<BR>
+      .SUFFIXES: &nbsp;.bin $(SUFFIXES)<BR>
+      .bin.o:<BR>
+       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;objcopy -v -I binary -O elf32-little $&lt; $@</P>
+
+<P align="right"><B><FONT size="-1"><A href="#TOP">[TOP]</A></FONT></B></P><HR>
+
+<H3><A name="003">[Q003]</A></H3>
+
+<P>Is it OK to make changes to startup routine (crt0.s)?</P>
+
+<H3>[A003]</H3>
+
+<P>What's contained in the SDK is a sample, so you are free to modify it.</P>
+
+<P align="right"><B><FONT size="-1"><A href="#TOP">[TOP]</A></FONT></B></P><HR>
+
+<H3><A name="004">[Q004]</A></H3>
+
+<P>Can an H blank interrupt be used during a V blank?</P>
+
+<H3>[A004]</H3>
+
+<P>No, not according to the hardware specifications.</P>
+
+<P align="right"><B><FONT size="-1"><A href="#TOP">[TOP]</A></FONT></B></P><HR>
+
+<H3><A name="005">[Q005]</A></H3>
+
+<P>Can data be written in units of bytes from the CPU to VRAM?</P>
+
+<H3>[A005]</H3>
+
+<P>Access is prohibited in anything other than the byte width described in [Section 2.2 Memory Structure and Access Width] of the AGB Programming Manual. Therefore, data can only be written in units of half-words (16 bits) to VRAM.</P>
+
+<P align="right"><B><FONT size="-1"><A href="#TOP">[TOP]</A></FONT></B></P><HR>
+
+<H3><A name="006">[Q006]</A></H3>
+
+<P>I want to program with thumb code in C language and arm code in assembly language, but what is the best way to link?</P>
+
+<H3>[A006]</H3>
+
+<P>You already know about getting assembly code output to the compiler. But take a look at the startup part of crt0.s and the interrupt branch process, which both have a part where a thumb (16-bit) code instruction C language routine is called from an arm (32-bit) code instruction assembly routine (an arm (32-bit) code instruction C routine can also be called).</P>
+
+<P align="right"><B><FONT size="-1"><A href="#TOP">[TOP]</A></FONT></B></P><HR>
+
+<H3><A name="007">[Q007]</A></H3>
+
+<P>Tell me about access speeds for ROM and RAM.</P>
+
+<H3>[A007]</H3>
+
+<P>The access speed of mask ROM for commercial-version Game Paks is 3-1 (3 wait cycles/random access, 1 wait cycle/sequential access).<BR>
+      The CPU internal RAM is no-wait.  (There is no sequential access).<BR>
+      The CPU external WRAM is the  2 wait of the 16bit data bus.  (There is no sequential access).<BR>
+      Access during DMA transfers involves repeated actions of reading followed by writing, so the access time is the sum of the transfer source access time and transfer target access time.  So, for example, when the transfer source is the Game Pak's mask ROM and the transfer target is CPU external WRAM, the duration of the read complies to the mask ROM's 2nd cycle access speed, and the duration of the write becomes the access speed of the CPU external WRAM. </P>
+
+<P align="right"><B><FONT size="-1"><A href="#TOP">[TOP]</A></FONT></B></P><HR>
+
+<H3><A name="008">[Q008]</A></H3>
+
+<P>When data is written to the two timer-related registers (TM*D &#38; TM*CNT) while the timer is operating, when do the new values become effective?</P>
+
+<H3>[A008]</H3>
+
+<P>The value written to TM*D while the timer is operating is read into the counter when the timer has overflowed, but the value written to TM*CNT is reflected immediately upon being written.</P>
+
+<P align="right"><B><FONT size="-1"><A href="#TOP">[TOP]</A></FONT></B></P><HR>
+
+<H3><A name="009">[Q009]</A></H3>
+
+<P>Can the timer be used to realize interrupts in agreement with the H counter?</P>
+
+<H3>[A009]</H3>
+
+<P>The delay of execution of interrupt routine after the interrupt has been generated can vary by up to 10 clock cycles, depending on which instruction (or DMA) was executing at the time the interrupt was generated.<BR>
+      If you consider that it is 4 clocks per dot, you can see it would be difficult with the timer to get the timing down completely as planned.<BR>
+      <BR>
+      Furthermore, since accessing LCD control registers during display can cause faulty operations, we do not recommend this strategy.</P>
+
+<P align="right"><B><FONT size="-1"><A href="#TOP">[TOP]</A></FONT></B></P><HR>
+
+<H3><A name="010">[Q010]</A></H3>
+
+<P>When I use the system call LZ77UnCompVram (which expands LZ77 compressed data in VRAM), the first 1byte of data changes!</P>
+
+<H3>[A010]</H3>
+
+<P>A bug has been identified in the LZ77UnCompVram system call of AGB Target Board (TS2).  Please refrain from using this system call with TS2.  The problem has been fixed for Development AGB (TS4).</P>
+
+<P align="right"><B><FONT size="-1"><A href="#TOP">[TOP]</A></FONT></B></P>
+
+<HR>
+
+<H3><A name="011">[Q011]</A></H3>
+
+<P>I want to write part of the program in assembly code.  What is the register configuration for calling the assembly routine?</P>
+
+
+<H3>[A011]</H3>
+
+<P>R0 - R3 for function arguments, R0 for the return value.  R0 - R3 and R12 can be used without being saved in the stack area inside the function.<BR>
+      <BR>
+      These rules were devised by ARM Ltd. in their ARM Procedure Call Standard (APCS) / Thumb Procedure Call Standard (TPCS).<BR>
+      <BR>
+      For further details, see <a href="http://www.cygnus.com/pubs/gnupro/6_embed/embARM.html">http://www.cygnus.com/pubs/gnupro/6_embed/embARM.html</a><BR>
+      or <a href="http://www.arm.com/Documentation/ISTSpecs/ATPCSA05.pdf">http://www.arm.com/Documentation/ISTSpecs/ATPCSA05.pdf</a><BR>
+
+      <BR>
+      These documents are also explained in "ARM System-on-Chip Architecture" (written by S. Furber).</P>
+
+<P align="right"><B><FONT size="-1"><A href="#TOP">[TOP]</A></FONT></B></P>
+
+<HR>
+
+<H3><A name="012">[Q012]</A></H3>
+
+<P>Is it basically OK to change around the source programs supplied in .s (assembly code)?<P>
+
+<H3>[A012]</H3>
+
+<P>Yes, the source programs that come with the SDK are samples. You are free to change them at will.</P>
+
+<P align="right"><B><FONT size="-1"><A href="#TOP">[TOP]</A></FONT></B></P>
+
+<HR>
+
+<H3><A name="013">[Q013]</A></H3>
+
+<P>The emulator runs fine under emulator, but sometimes it does not operate well when I burn a Flash Pak and try running it.</P>
+
+<H3>[A013]</H3>
+
+<P>When you combine the target board with a Flash Pak, on extremely rare occasions noise can lead to faulty operations.</P>
+
+<P align="right"><B><FONT size="-1"><A href="#TOP">[TOP]</A></FONT></B></P>
+
+<HR>
+
+<P align="right">D.C.N. AGB-06-0027-001A (2/21/01)<BR>
+&copy; 2001 Nintendo of America Inc.</P>
+
+</BODY>
+
+</HTML>

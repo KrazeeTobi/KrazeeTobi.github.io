@@ -1,0 +1,154 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Declarations and Definitions in One Header</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccgoto_and_Destructors_in_GNU_C.html">Previous</A>|<A HREF="gccWheres_the_Template.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_4390912"></A><A NAME="cc481817"></A><B><FONT SIZE=+3>Declarations
+and definitions in one header&nbsp;</FONT></B>&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>C++ object definitions can
+be quite complex. In principle, your source code will need two kinds of
+things for each object that you use across more than one source file.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>First, you need an <I>interface</I>
+specification, describing its structure with type declarations and function
+prototypes. Second, you need the <I>implementation</I> itself. It can be
+tedious to maintain a separate interface description in a header file,
+in parallel to the actual implementation. It is also dangerous, since separate
+interface and implementation definitions may not remain parallel. With
+GNU C++, you can use a single header file for both purposes.</FONT></FONT>
+<UL><B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Warning:</FONT></FONT></I></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The mechanism to specify
+this is in transition. For the nonce, you must use one of two </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+commands; in a future release of GNU C++, an alternative mechanism will
+make these </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+commands unnecessary.</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The header file contains the
+full definitions, but is marked with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+interface</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ in
+the source code. This allows the compiler to use the header file only as
+an interface specification when ordinary source files incorporate it with
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+In the single source file where the full implementation belongs, you can
+use either a naming convention or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+implementation</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to indicate this alternate use of the header file.</FONT></FONT>
+<UL>&nbsp;
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>#pragma interface</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>#pragma interface "<I>subdir</I>/<I>objects</I>.h"</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use this directive in <I>header
+files</I> that define object classes, to save space in most of the object
+files that use those classes. Normally, local copies of certain information
+(backup copies of inline member functions, debugging information, and the
+internal tables that implement virtual functions) must be kept in each
+object file that includes class definitions. You can use this pragma to
+avoid such duplication.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>When a header file containing
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma interface</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is included in a compilation, this auxiliary information will not be generated
+(unless the main input source file itself uses ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+implementation</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’).
+Instead, the object files will contain references to be resolved at link
+time.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The second form of this directive
+is useful for the case where you have multiple headers with the same name
+in different directories. If you use this form, you must specify the same
+string to ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+implementation</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>#pragma implementation</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>#pragma implementation "objects.h"</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Use this pragma in a <I>main
+input file</I>, when you want full output from included header files to
+be generated (and made globally visible). The included header file, in
+turn, should use ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>interface</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Backup copies of inline member functions, debugging information, and the
+internal tables used to implement virtual functions are all generated in
+implementation files.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If you use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+implementation</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+with no argument, it applies to an include file with the same basename
+as your source file. For example, in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>allclass.cc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma implementation</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+by itself, is equivalent to ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+implementation</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+"</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>allclass.h"</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>A file’s <I>basename</I>
+was the name stripped of all leading path information and of trailing suffixes
+(such as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.C</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.cc)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In versions of GNU C++ prior
+to 2.6.0, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>allclass.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+was treated as an implementation file whenever you would include it from
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>allclass.cc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+even if you never specified ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+implementation</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+This was deemed to be more trouble than it was worth, however, and disabled.
+If you use an explicit ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>implementation</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+it must appear in your source file before you include the affected header
+files.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Use the string argument if you
+want a single implementation file to include code from multiple header
+files. (You must also use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to include the header file; ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+implementation</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+only specifies how to use the file—it doesn’t actually include it.) There
+is no way to split up the contents of a single header file into multiple
+implementation files.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>#pragma implementation</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma interface</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+also have an effect on function inlining.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If you define a class in a header
+file marked with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+interface</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’, the
+effect on a function defined in that class is similar to an explicit </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>extern</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+declaration—the compiler emits no code at all to define an independent
+version of the function. Its definition is used only for inlining with
+its callers.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Conversely, when you include
+the same header file in a main source file that declares it as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#pragma
+implementation</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+the compiler emits code for the function itself; this defines a version
+of the function that can be found via pointers (or by callers compiled
+without inlining). If all calls to the function can be inlined, you can
+avoid emitting the function by compiling with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fno-implement-inlines</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+If any calls were not inlined, you will get linker errors.</FONT></FONT></DT>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccgoto_and_Destructors_in_GNU_C.html">Previous</A>|<A HREF="gccWheres_the_Template.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

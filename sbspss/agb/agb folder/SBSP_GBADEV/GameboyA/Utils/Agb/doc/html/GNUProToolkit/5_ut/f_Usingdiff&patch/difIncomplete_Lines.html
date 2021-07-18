@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE>Incomplete Lines</TITLE>
+</HEAD><BODY>
+<A HREF= "dif.html">Contents</A>|<A HREF= "difindex.html">Index</A>|<A HREF="difOptions_to_sdiff.html">Previous</A>|<A HREF="difFuture_Projects.html">Next</A>
+<P>
+<A NAME="off_1345027"></A><A NAME="8e86b990"></A><FONT FACE="Times New Roman" SIZE="6"><B>Incomplete Lines
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">When an input file ends in a non-newline character, its last line is called an
+incomplete line because its last character is not a newline. All other lines
+are called full lines and end in a newline character. Incom-plete lines do not
+match full lines unless differences in white space are ignored (see </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difSuppressing_Differences_00000004.html">Suppressing Differences in Blank and Tab Spacing</A></FONT><FONT FACE="Times New Roman" SIZE="4">). 
+<P>
+An incomplete line is normally distinguished on output from a full line by a
+following line that starts with '</FONT><FONT FACE="Courier New" SIZE="3"><B>\</B></FONT><FONT FACE="Times New Roman" SIZE="4">'. However, the RCS format (see </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difRCS_Scripts.html">RCS Scripts</A></FONT><FONT FACE="Times New Roman" SIZE="4">) outputs the incomplete line as-is, without any trailing newline or following
+line. The side by side format normally represents incomplete lines as-is, but
+in some cases uses a '\ or '/' gutter marker; See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difControlling_Side_by_Side_Format.html">Controlling Side by Side Format</A></FONT><FONT FACE="Times New Roman" SIZE="4">. The if-then-else line format preserves a line's incompleteness with '</FONT><FONT FACE="Courier New" SIZE="3"><B>%</B>L</FONT><FONT FACE="Times New Roman" SIZE="4">', and discards the new-line with '</FONT><FONT FACE="Courier New" SIZE="3"><B>%</B>l</FONT><FONT FACE="Times New Roman" SIZE="4">'; See </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difLine_Formats.html">Line Formats</A></FONT><FONT FACE="Times New Roman" SIZE="4">. Finally, with the ed and forward ed output formats (see </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difdiff_Output_Formats.html">diff Output Formats</A></FONT><FONT FACE="Times New Roman" SIZE="4">, </FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difed_Scripts.html">ed</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difed_Scripts.html"> Scripts</A></FONT><FONT FACE="Times New Roman" SIZE="4"> and </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difForward_ed_Scripts.html">Forward </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difForward_ed_Scripts.html">ed</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difForward_ed_Scripts.html"> Scripts</A></FONT><FONT FACE="Times New Roman" SIZE="4">) diff cannot represent an incomplete line, so it pretends there was a newline
+and reports an error. For example, suppose '</FONT><FONT FACE="Courier New" SIZE="3">F</FONT><FONT FACE="Times New Roman" SIZE="4">' and '</FONT><FONT FACE="Courier New" SIZE="3">G</FONT><FONT FACE="Times New Roman" SIZE="4">' are one-byte files that contain just '</FONT><FONT FACE="Courier New" SIZE="3">f</FONT><FONT FACE="Times New Roman" SIZE="4">' and '</FONT><FONT FACE="Courier New" SIZE="3">g</FONT><FONT FACE="Times New Roman" SIZE="4">', respectively. Then '</FONT><FONT FACE="Courier New" SIZE="3">diff F</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3">G</FONT><FONT FACE="Times New Roman" SIZE="4">' outputs
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3"><B>1c1 
+<BR>&lt; f 
+<BR>\ No newline at end of file 
+<BR>--- 
+<BR>&gt; g 
+<BR>\ No newline at end of file
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">(The exact message may differ in non-English locales.) '</FONT><FONT FACE="Courier New" SIZE="3">diff -n F G</FONT><FONT FACE="Times New Roman" SIZE="4">' outputs the following without a trailing newline:
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3"><B>d1 1 
+<BR>a1 1 
+<BR>g
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">'</FONT><FONT FACE="Courier New" SIZE="3">diff -e F</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3">G</FONT><FONT FACE="Times New Roman" SIZE="4">' reports two errors and outputs the following:
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3"><B>1c 
+<BR>g 
+<BR>.
+<P>
+</B></FONT></BODY>
+</HTML>

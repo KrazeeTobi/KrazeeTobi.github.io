@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Actual Bugs We Haven't Fixed Yet</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccKnown_Causes_of_Trouble_with_GNU.html">Previous</A>|<A HREF="gccInstallation_Problems.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>&nbsp;<A NAME="off_4655313"></A><A NAME="c63b3d31"></A><B>Actual
+bugs we haven't fixed yet&nbsp;</B>&nbsp;</FONT></FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT COLOR="#000000"><FONT SIZE=+1>The following points concern unfixed
+problems.</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fixincludes</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+script interacts badly with automounters; if the directory of system header
+files is automounted, it tends to be unmounted while </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fixincludes</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is running. This would seem to be a bug in the automounter. We don’t know
+any good way to work around it.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fixproto</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+script will sometimes add prototypes for the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sigsetjmp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>siglongjmp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+functions that reference the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>jmp_buf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+type before that type is defined. To work around this, edit the offending
+file and place the typedef in front of the prototypes.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>There are several obscure cases
+of misusing </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>struct</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>union</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>enum</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+tags that are not detected as errors by the compiler.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>When ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-pedantic-errors</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is specified, GNU C will incorrectly give an error message when a function
+name is specified in an expression involving the comma operator.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Loop unrolling doesn’t work
+properly for certain C++ programs. This is a bug in the C++ front end.
+It sometimes emits incorrect debug info, and the loop unrolling code is
+unable to recover from this error.</FONT></FONT></LI>
+</UL>
+
+</BODY>
+</HTML>

@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>RCS Scripts</TITLE>
+</HEAD><BODY>
+<A HREF= "dif.html">Contents</A>|<A HREF= "difindex.html">Index</A>|<A HREF="difForward_ed_Scripts.html">Previous</A>|<A HREF="difMerging_Files_with_Ifthenelse.html">Next</A>
+<P>
+<A NAME="off_460198"></A><A NAME="a83832d5"></A><FONT FACE="Times New Roman" SIZE="6"><B>RCS Scripts
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">The RCS output format is designed specifically for use by the Revision Control
+System, which is a set of free programs used for organizing different versions
+and systems of files. Use the '</FONT><FONT FACE="Courier New" SIZE="3">-n</FONT><FONT FACE="Times New Roman" SIZE="4">' or '</FONT><FONT FACE="Courier New" SIZE="3">--rcs</FONT><FONT FACE="Times New Roman" SIZE="4">' option to select this output format. It is like the forward </FONT><FONT FACE="Courier New" SIZE="3">ed</FONT><FONT FACE="Times New Roman" SIZE="4"> format (see </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difForward_ed_Scripts.html">Forward </A></FONT><FONT FACE="Courier New" COLOR="#008000" SIZE="3"><B><A HREF="difForward_ed_Scripts.html">ed</A></B></FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difForward_ed_Scripts.html"> Scripts</A></FONT><FONT FACE="Times New Roman" SIZE="4">), but it can represent arbitrary changes to the contents of a file because it
+avoids the forward </FONT><FONT FACE="Courier New" SIZE="3">ed</FONT><FONT FACE="Times New Roman" SIZE="4"> format's problems with lines consisting of a single period and with
+incomplete lines. Instead of ending text sections with a line consisting of a single
+period, each command specifies the number of lines it affects; a combination of
+the '</FONT><FONT FACE="Courier New" SIZE="3">a</FONT><FONT FACE="Times New Roman" SIZE="4">' and '</FONT><FONT FACE="Courier New" SIZE="3">d</FONT><FONT FACE="Times New Roman" SIZE="4">' commands are used instead of '</FONT><FONT FACE="Courier New" SIZE="3">c</FONT><FONT FACE="Times New Roman" SIZE="4">'. Also, if the second file ends in a changed incomplete line, then the output
+also ends in an incomplete line. The following is the output of '</FONT><FONT FACE="Courier New" SIZE="3">diff -n lao tzu</FONT><FONT FACE="Times New Roman" SIZE="4">' (see </FONT><FONT FACE="Times New Roman" COLOR="#008000" SIZE="4"><A HREF="difTwo_Sample_Input_Files.html">Two Sample Input Files</A></FONT><FONT FACE="Times New Roman" SIZE="4"> for the complete contents of the two files):
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3"><B>d1  2 
+<BR>d4  1 
+<BR>a4  2 
+<BR>The named is the mother of all things.
+<BR>a11 3 
+<BR>They both may be called deep and profound.
+<BR>Deeper and more profound, 
+<BR>The door of all subtleties!
+<P>
+</B></FONT></BODY>
+</HTML>

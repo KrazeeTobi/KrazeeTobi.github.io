@@ -1,0 +1,129 @@
+Overview:
+The AGB Tasking System is non-pre-emptive tasking system.  This means that a task will continue 
+to execute until it turns control over to the tasking system.  When a task has completed it's 
+processing a call to sleep function is required.  Sleeping notifies the system that the current task has 
+completed and to execute the next task.  Pass the sleep function the number of frames the current 
+task is to sleep.  Tasks normally sleep for one frame, but there are cases when a task may need to 
+sleep longer.  To awaken a sleeping task call the resumeTask function.  Depending on the task 
+priority, it may or may not execute in the same frame that it was resumed.  If resumeTask is called 
+after the task has already tried to execute (but didn't due to it's sleep state), it will not execute until 
+the next frame. 
+
+Each task must sleep in order to relinquish control over to the next task otherwise no other tasks 
+will execute and the system will effectively halt!
+
+Task Stacks:
+Each task is given it's own stack space.  Stack variables and the number of functions called 
+determine the required stack size.  A checksum is placed at the top of each task's stack and is 
+verified every time it is executed.  If a task overruns its stack space, the system will detect the 
+overrun and halt.  If a stack overrun occurs, the system jumps to an error routine displaying the 
+stack overrun error message.  You may want to modify this routine to suit your needs.  To correct 
+stack overruns, additional stack space will be required.
+
+Task Type:
+A task can be a Global, Sibling or Child task.  The Main Task is usually a Global Task, but any task 
+can be a Global Task.  I usually use Sibling Tasks for additional top-level tasks (other then the 
+Main Task) and attach children to these.  If a task contains any children when it is killed, all of its 
+children will be killed.
+
+Task Priority:
+Task execution depends solely on their priority giving control to the order in which task execute.  A 
+task with a priority of 14 will execute before a task with a priority of 15.  Task Type is not a factor 
+in determining execution order.  A child task can have higher priority then it's parent.
+
+Task ID:
+Every task can be given a Task ID.  This ID along with a mask can be used to suspend, resume and 
+kill tasks.
+
+Task Destructor:
+When spawning a new task, a destructor function may be specified but is not required.  When a task 
+is killed, and a destructor function was provided, it will be called.  Otherwise the task will be killed 
+normally.  The destructor function allows any task specific clean up you may want to perform.  
+
+Killing Tasks:
+Tasks can be killed in a variety of ways.  To kill the active task simply call taskDie.  To kill tasks 
+other then the active task, killTask and killTaskWithID can be used.  All children attached to the 
+task will be killed as well.
+
+Initialization:
+To initialize the tasking system, call the initTaskingSystem with your main (top-level) task.  
+Initially, this function does not return, it jumps to your Main Task and begins to execute.  The only 
+time you will return from this function is after the entire tasking system is shut down.  The purpose 
+of the Main Task is to prepare each frame for drawing and then sleeps allowing any other tasks to 
+execute.  Once all other tasks have executed, it returns from the sleep and continues to execute.  At 
+this point additional processing can be performed by the Main Task.  It then waits for the next 
+frame to start the process over again.  Once the Main Task begins to execute, call spawnTask to 
+spawn additional tasks.  Currently the Main Task will always execute first, and additional tasks will 
+execute depending on their priority.
+
+The following sample creates a new task called sampleTask, with no destructor, normal stack size, 
+a priority of 0xe, and a task ID of 0x1000.  Note that this is a sibling task, creating a new parent 
+task from which other tasks can be spawned as children.  I'm also passing an argument to this task.  
+Currently up to four arguments can be passed to a newly spawned task.  This is accomplished by 
+the passTaskVar function.
+
+Sample Main Task:
+This Main Task spawns a new task and sleeps allowing the newly spawned task to execute once.  It 
+then prints a message, sleeps, and waits for the VBlank.  Note the code that is to be executed each 
+task cycle is surrounded by the while statement.
+
+void mainTask(void)
+{
+
+  long someVal;
+
+  //load font
+  FontPrintInit(0,15,30,20,OBJ_MODE0_VRAM,15);
+  FontPalletLoad(15);
+  FontColor(4);
+
+  someVal = something;
+
+  spawnTask((void *) sampleTask, NULL_TASK, NORMAL_STACK_SIZE, 0xe, 0x1000,   
+	SIBLING_TASK); 
+  
+  passTaskVar_1(global_spawnedTask, (long) &someVal);
+  
+  //let sample task execute once
+  sleepme(1);
+
+  while(1) {
+
+    FontPrintC(0, 0, 2, "Main Task");
+
+    //notify system task has completed
+    sleepme(1);
+
+    waitForVBlank();
+  }
+}
+
+Sample task:
+
+void sampleTask(long *arg)
+{
+  long var;
+
+  //perform any initializion code
+  initSomething(arg);
+
+  //sleep one cycle (you do not have to sleep here, just an example)
+  sleepme(1);
+
+  var = 1;
+
+  //loop until time to die
+  while (var) {
+
+    //preform code to be executed each task cycle
+    var = someFunction();
+
+    //notify system task has completed
+    sleepme(1);
+  }
+
+ //kill self
+ taskDie();
+
+}
+

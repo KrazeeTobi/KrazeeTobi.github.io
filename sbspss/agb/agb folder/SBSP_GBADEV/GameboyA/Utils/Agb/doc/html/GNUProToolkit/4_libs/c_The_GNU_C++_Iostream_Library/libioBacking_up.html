@@ -1,0 +1,93 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Backing up</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioReadingwriting_fromto_a_pipe.html">Previous</A>|<A HREF="libioForwarding_IO_activity.html">Next</A>
+<BR><A NAME="off_624171"></A><A NAME="b546a9cb"></A><A NAME="off_624171"></A><A NAME="b546a9cb"></A><A NAME="off_624171"></A><A NAME="b546a9cb"></A><A NAME="off_624171"></A><A NAME="b546a9cb"></A><A NAME="off_624171"></A><A NAME="b546a9cb"></A><A NAME="off_624171"></A><A NAME="b546a9cb"></A><A NAME="off_624171"></A><A NAME="b546a9cb"></A><A NAME="off_624171"></A><A NAME="b546a9cb"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Backing
+up</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+GNU </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>iostream</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+library allows you to ask a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>streambuf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to remember the current position back up. This allows you to go back to
+this position later, after reading further. You can back up arbitrary amounts,
+even on unbuffered files or multiple buffers’ worth, as long as you tell
+the library in advance. This unbounded backup is very useful for scanning
+and parsing applications. The following example shows a typical scenario.</FONT></FONT>
+<UL>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>// Read either "dog", "hound", or "hounddog".&nbsp;
+// If "dog" is found, return 1.&nbsp;
+// If "hound" is found, return 2.&nbsp;
+// If "hounddog" is found, return 3.&nbsp;
+// If none of these are found, return -1.&nbsp;
+int my_scan(streambuf* sb)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; streammarker fence(sb);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char buffer[20];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Try reading "hounddog":&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (sb->sgetn(buffer, 8) == 8&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp;&amp; strncmp(buffer, "hounddog", 8) == 0)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 3;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // No, no "hounddog": Back up to 'fence'&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sb->seekmark(fence); //&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ... and try reading "dog":&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (sb->sgetn(buffer, 3) == 3&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp;&amp; strncmp(buffer, "dog", 3) == 0)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 1;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // No, no "dog" either: Back up to 'fence'&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sb->seekmark(fence); //&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // ... and try reading "hound":&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (sb->sgetn(buffer, 5) == 5&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp;&amp; strncmp(buffer, "hound", 5) == 0)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 2;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // No, no "hound" either: Back up and signal failure.&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sb->seekmark(fence); // Backup to 'fence'&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return -1;&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+<FONT SIZE=+1><FONT FACE="Times New Roman"><B>streammarker::streammarker</B>
+</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(streambuf* <I>sbuf</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Constructor</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Create a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>streammarker</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+associated with </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>sbuf</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+that remembers the current position of the get pointer.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int</FONT></FONT><FONT FACE="Times New Roman">
+<B>streammarker::delta</B> </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(streammarker&amp;
+<I>mark2</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Return the difference between
+the get positions corresponding to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*this</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>mark2</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(which must point into the same </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>streambuffer</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>this</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int</FONT></FONT><FONT FACE="Times New Roman">
+<B>streammarker::delta</B> </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">()&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Return the position relative
+to the streambuffer’s current get position.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int </FONT></FONT><FONT FACE="Times New Roman"><B>streambuf::seekmark</B>
+</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">(streammarker&amp;
+<I>mark</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Move the get pointer to
+where it (logically) was when </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>mark</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+was constructed.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioReadingwriting_fromto_a_pipe.html">Previous</A>|<A HREF="libioForwarding_IO_activity.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

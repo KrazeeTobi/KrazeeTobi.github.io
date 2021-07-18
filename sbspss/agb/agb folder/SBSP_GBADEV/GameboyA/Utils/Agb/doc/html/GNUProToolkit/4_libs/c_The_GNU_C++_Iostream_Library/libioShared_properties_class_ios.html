@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Shared properties: class ios</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioStream_Classes.html">Previous</A>|<A HREF="libioChecking_the_state_of_a_stream.html">Next</A>
+<BR><A NAME="off_98706"></A><A NAME="e0225ccc"></A><A NAME="off_98706"></A><A NAME="e0225ccc"></A><A NAME="off_98706"></A><A NAME="e0225ccc"></A><A NAME="off_98706"></A><A NAME="e0225ccc"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Shared
+properties: class </FONT></FONT><FONT FACE="Courier New"><FONT POINT-SIZE="26">ios</FONT><FONT SIZE=+2></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+base class, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+provides methods to test and manage the state of input or output streams.</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>ios</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+delegates the job of actually reading and writing bytes to the abstract
+class, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>streambuf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+which is designed to provide buffered streams (compatible with C, in the
+GNU implementation). See <FONT COLOR="#008000"><A HREF="libioUsing_the_streambuf_Layer.html">Using
+the </A></FONT></FONT></FONT><FONT COLOR="#008000"><A HREF="libioUsing_the_streambuf_Layer.html"><B><FONT FACE="Courier New"><FONT SIZE=+0>streambuf</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+layer</FONT></FONT></A></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for information on the facilities available at the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>streambuf</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+level.</FONT></FONT>
+<UL><B><FONT FACE="Times New Roman"><FONT SIZE=+1>ios::ios </FONT></FONT></B><FONT FACE="Courier New"><FONT POINT-SIZE="12"><FONT COLOR="#000000">(streambuf*
+<I>sb </I></FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>[</FONT></FONT><FONT FACE="Courier New"><FONT POINT-SIZE="12"><FONT COLOR="#000000">,
+ostream* <I>tie</I></FONT></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>]</FONT></FONT><FONT FACE="Courier New"><FONT COLOR="#000000"><FONT POINT-SIZE="12">)</FONT><FONT SIZE=+1>&nbsp;<BR>
+</FONT></FONT></FONT><B><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Constructor</FONT></FONT></I></B>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">constructor by default initializes
+a new </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and if you supply a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>streambuf</FONT></FONT><FONT FACE="Courier"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>sb </FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>to
+associate with it, sets the state, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>good</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">,</FONT><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">in the new </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">object. It also sets the default properties
+of the new object. You can also supply an optional second argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>tie</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to the constructor; if present, it is an initial value for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::tie</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to associate the new </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">object with another stream.</FONT></FONT></UL>
+<FONT SIZE=+1><FONT FACE="Times New Roman"><B>ios::~ios</B> </FONT><FONT FACE="Courier New"><FONT COLOR="#000000">()&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Destructor</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">destructor is virtual, permitting application-specific
+behavior when a stream is closed—typically, the destructor frees any storage
+associated with the stream and releases any other associated objects.</FONT></FONT></UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>See the following documentation’s
+discussion for more information.</FONT></FONT>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><A HREF="libioChecking_the_state_of_a_stream.html"><FONT COLOR="#008000">Checking
+the state of a stream</FONT></A></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><A HREF="libioChecking_the_state_of_a_stream.html"><FONT COLOR="#008000">Choices
+in formatting</FONT></A></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><A HREF="libioChecking_the_state_of_a_stream.html"><FONT COLOR="#008000">Changing
+stream properties using manipulators</FONT></A></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><A HREF="libioChecking_the_state_of_a_stream.html"><FONT COLOR="#008000">Extended
+data fields</FONT></A></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><A HREF="libioChecking_the_state_of_a_stream.html"><FONT COLOR="#008000">Synchronizing
+related streams</FONT></A></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=+1><FONT COLOR="#008000"><FONT FACE="Times New Roman"><A HREF="libioChecking_the_state_of_a_stream.html">Reaching</A><A HREF="libioReaching_the_underlying_streambu.html">
+the underlying<I> </I></A></FONT><B><FONT FACE="Courier New"><A HREF="libioReaching_the_underlying_streambu.html">streambuf</A></FONT></B></FONT><I><FONT FACE="Times New Roman"></FONT></I></FONT></LI>
+</UL>
+</UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioStream_Classes.html">Previous</A>|<A HREF="libioChecking_the_state_of_a_stream.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

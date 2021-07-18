@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>sinh, sinhf[hyperbolic sine]</TITLE>
+</HEAD>
+<BODY>
+<A HREF="libm.html">Contents</A>|<A HREF="libmindex.html">Index</A>|<A HREF="libmsin_sinf_cos_cosfsine_or_cosine.html">Previous</A>|<A HREF="libmtan_tanftangent.html">Next</A>
+
+<P><A NAME="off_395430"></A><A NAME="8e7cb5f9"></A><A NAME="off_395430"></A><A NAME="8e7cb5f9"></A><A NAME="off_395430"></A><A NAME="8e7cb5f9"></A><A NAME="off_395430"></A><A NAME="8e7cb5f9"></A><A NAME="off_395430"></A><A NAME="8e7cb5f9"></A><A NAME="off_395430"></A><A NAME="8e7cb5f9"></A><FONT FACE="Courier New"><FONT SIZE=+3>sinh</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+2>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+3>sinhf</FONT></FONT>
+<BR><B><FONT FACE="Times New Roman"><FONT SIZE=+3>[hyperbolic sine]</FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>#include &lt;math.h></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>double sinh(double <I>x</I>);</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>float sinhf(float <I>x</I>);</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>sinh</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">computes the hyperbolic sine of the
+argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Angles are specified in radians. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sinh(
+<I>x</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> is defined
+as:</FONT></FONT>
+<UL>
+<PRE><IMG SRC="libm00000006.gif" ALT="libm00000006.gif" HEIGHT=63 WIDTH=79><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></PRE>
+</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>sinhf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is identical, save that it takes and
+returns </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>float</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">values.</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS</FONT></FONT></B>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The hyperbolic sine of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is returned. When the correct result
+is too large to be representable (an overflow), </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sinh</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">returns </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>HUGE_VAL</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">with the appropriate sign, and sets
+the global value, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ERANGE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can modify error handling
+for these functions with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>matherr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></B>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>sinh</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is ANSI C. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sinhf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is an extension.</FONT></FONT>
+</BODY>
+</HTML>

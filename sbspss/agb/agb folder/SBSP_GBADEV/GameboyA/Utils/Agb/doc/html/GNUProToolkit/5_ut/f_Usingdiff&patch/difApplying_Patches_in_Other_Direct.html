@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>Applying Patches in Other Directories</TITLE>
+</HEAD><BODY>
+<A HREF= "dif.html">Contents</A>|<A HREF= "difindex.html">Index</A>|<A HREF="difInvoking_patch.html">Previous</A>|<A HREF="difBackup_File_Names.html">Next</A>
+<P>
+<A NAME="off_1182606"></A><A NAME="8687c276"></A><FONT FACE="Times New Roman" SIZE="6"><B>Applying Patches in Other Directories
+<P>
+</B></FONT><FONT FACE="Times New Roman" SIZE="4">The '</FONT><FONT FACE="Courier New" SIZE="3">-d</FONT><FONT FACE="Times New Roman" SIZE="4"> </FONT><FONT FACE="Courier New" SIZE="3"><I>directory</I></FONT><FONT FACE="Times New Roman" SIZE="4">' or '</FONT><FONT FACE="Courier New" SIZE="3">--directory=<I>directory</I></FONT><FONT FACE="Times New Roman" SIZE="4">' option to </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> makes directory directory the current directory for interpreting both file
+names in the patch file, and file names given as arguments to other options (such
+as '</FONT><FONT FACE="Courier New" SIZE="3">-B</FONT><FONT FACE="Times New Roman" SIZE="4">' and '</FONT><FONT FACE="Courier New" SIZE="3">-o</FONT><FONT FACE="Times New Roman" SIZE="4">'). For example, while in a news reading program, you can patch a file in the '</FONT><FONT FACE="Courier New" SIZE="3">/usr/src/emacs</FONT><FONT FACE="Times New Roman" SIZE="4">' directory directly from the article containing the patch like the following
+example:
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3">| patch -d /usr/src/emacs
+<P>
+</FONT><FONT FACE="Times New Roman" SIZE="4">Sometimes the file names given in a patch contain leading directories, but you
+keep your files in a directory different from the one given in the patch. In
+those cases, you can use the '</FONT><FONT FACE="Courier New" SIZE="3">-p[<I>number</I>]</FONT><FONT FACE="Times New Roman" SIZE="4">' or '</FONT><FONT FACE="Courier New" SIZE="3">--strip[=<I>number</I>]</FONT><FONT FACE="Times New Roman" SIZE="4">' option to set the file name strip count to </FONT><FONT FACE="Courier New" SIZE="3"><I>number</I></FONT><FONT FACE="Times New Roman" SIZE="4">. The </FONT><FONT FACE="Courier New" SIZE="3">strip</FONT><FONT FACE="Times New Roman" SIZE="4"> count tells </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> how many slashes, along with the directory names between them, to strip from
+the front of file names. '</FONT><FONT FACE="Courier New" SIZE="3">-p</FONT><FONT FACE="Times New Roman" SIZE="4">' with no numbergiven is equivalent to '</FONT><FONT FACE="Courier New" SIZE="3">-p0</FONT><FONT FACE="Times New Roman" SIZE="4">'. By default, </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> strips off all leading directories, leaving just the base file names, except
+that when a file name given in the patch is a relative file name and all of its
+leading directories already exist, </FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> does not strip off the leading directory. (A relative file name is one that
+does not start with a slash.)
+<P>
+</FONT><FONT FACE="Courier New" SIZE="3">patch</FONT><FONT FACE="Times New Roman" SIZE="4"> looks for each file (after any slashes have been stripped) in the current
+directory, or if you used the '</FONT><FONT FACE="Courier New" SIZE="3">-d</FONT><FONT FACE="Times New Roman" SIZE="4"> directory' option, in that directory. For example, suppose the file name in
+the patch file is '</FONT><FONT FACE="Courier New" SIZE="3">/GNU/src/emacs/etc/NEWS</FONT><FONT FACE="Times New Roman" SIZE="4">'. Using '</FONT><FONT FACE="Courier New" SIZE="3">-p</FONT><FONT FACE="Times New Roman" SIZE="4">' or '</FONT><FONT FACE="Courier New" SIZE="3">-p0</FONT><FONT FACE="Times New Roman" SIZE="4">' gives the entire file name unmodified, '</FONT><FONT FACE="Courier New" SIZE="3">-p1</FONT><FONT FACE="Times New Roman" SIZE="4">' gives '</FONT><FONT FACE="Courier New" SIZE="3">GNU/src/emacs/etc/NEWS</FONT><FONT FACE="Times New Roman" SIZE="4">' (no leading slash), '</FONT><FONT FACE="Courier New" SIZE="3">-p4</FONT><FONT FACE="Times New Roman" SIZE="4">' gives '</FONT><FONT FACE="Courier New" SIZE="3">etc/NEWS</FONT><FONT FACE="Times New Roman" SIZE="4">', and not specifying '</FONT><FONT FACE="Courier New" SIZE="3">-p</FONT><FONT FACE="Times New Roman" SIZE="4">' at all gives '</FONT><FONT FACE="Courier New" SIZE="3">NEWS</FONT><FONT FACE="Times New Roman" SIZE="4">'.
+<P>
+</FONT></BODY>
+</HTML>

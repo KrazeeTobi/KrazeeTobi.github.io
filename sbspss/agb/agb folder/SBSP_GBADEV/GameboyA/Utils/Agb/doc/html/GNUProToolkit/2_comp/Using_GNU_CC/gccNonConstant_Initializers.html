@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Non-Constant Initializers</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccArithmetic_on_void_and_FunctionP.html">Previous</A>|<A HREF="gccConstructor_Expressions.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_3475861"></A><A NAME="7b706814"></A><B><FONT SIZE=+3>Non-constant
+initializers&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>As in standard C++, the
+elements of an aggregate initializer for an automatic variable are not
+required to be constant expressions in GNU C. The following is an example
+of an initializer with run-time varying elements.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>foo (float f, float g)&nbsp;
+{&nbsp;
+&nbsp;&nbsp; float beat_freqs[2] = { f-g, f+g };&nbsp;
+&nbsp;&nbsp; ...&nbsp;
+}</FONT></FONT></PRE>
+</UL>
+
+</BODY>
+</HTML>

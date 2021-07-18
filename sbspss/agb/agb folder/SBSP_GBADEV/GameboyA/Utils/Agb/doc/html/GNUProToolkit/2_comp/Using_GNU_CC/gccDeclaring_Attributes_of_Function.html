@@ -1,0 +1,493 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Declaring Attributes of Functions</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccCast_to_a_Union_Type.html">Previous</a>|<a href="gccPrototypes_and_OldStyle_Function.html">Next</a>
+<br><a NAME="off_3541267"></a><a NAME="956638b7"></a><font face="Futura Md BT"><font color="#000000"><b><font size=+3>Declaring
+attributes of functions&nbsp;</font></b>&nbsp;</font></font>
+<hr SIZE=6 WIDTH="100%">
+<br><font face="Times New Roman"><font size=+1>In GNU C, you declare certain
+things about functions called in your program which help the compiler optimize
+function calls and check your code more carefully.</font></font>
+<p><font face="Times New Roman"><font size=+1>The keyword, </font></font><font face="Courier New"><font size=+0>__attribute__</font></font><font face="Times New Roman"><font size=+1>,
+allows you to specify special attributes when making a declaration. This
+keyword is followed by an attribute specification inside double parentheses.
+Nine attributes (</font></font><font face="Courier New"><font size=+0>noreturn</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>const</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>format</font></font><font size=+1><font face="Times New Roman">,
+</font><tt>no_instrument_function</tt><font face="Times New Roman">,
+</font></font><font face="Courier New"><font size=+0>section</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>constructor</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>destructor</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>unused</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>weak</font></font><font face="Times New Roman"><font size=+1>)
+are currently defined for functions. Other attributes (including </font></font><font face="Courier New"><font size=+0>section</font></font><font face="Times New Roman"><font size=+1>)
+are supported for <i>variables declarations</i> (see <a href="gccSpecifying_Attributes_of_Variabl.html">Specifying
+attributes of variables</a>) and for <i>types</i> (see <a href="gccSpecifying_Attributes_of_Types.html">Specifying
+attributes of types</a>).</font></font>
+<p><font face="Times New Roman"><font size=+1>You may also specify attributes
+with ‘</font></font><b><font face="Courier New"><font size=+0>__</font></font></b><font face="Times New Roman"><font size=+1>’
+preceding and following each keyword. This allows you to use them in header
+files without being concerned about a possible macro of the same name.
+For example, you may use</font></font><font face="Courier New"><font size=+0>
+__noreturn__</font></font><font face="Times New Roman"><font size=+1> instead
+of </font></font><font face="Courier New"><font size=+0>noreturn</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0>noreturn</font></font>
+<ul><font face="Times New Roman"><font size=+1>A few standard library functions,
+such as </font></font><font face="Courier New"><font size=+0>abort</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>exit</font></font><font face="Times New Roman"><font size=+1>,
+cannot return. GNU CC knows this automatically. Some programs define their
+own functions that never return. You can declare them </font></font><font face="Courier New"><font size=+0>noreturn</font></font><font face="Times New Roman"><font size=+1>
+to tell the compiler this fact as the following example shows.</font></font>
+<ul>
+<pre><font size=+1><font face="Courier New">void fatal () __attribute__ ((noreturn));&nbsp;
+
+void&nbsp;
+fatal (...)&nbsp;
+{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... /* </font><i><font face="Times New Roman">Print error message.</font></i><font face="Courier New">*/ ...&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit (1);&nbsp;
+}</font></font></pre>
+</ul>
+<font face="Times New Roman"><font size=+1>The </font></font><font face="Courier New"><font size=+0>noreturn</font></font><font face="Times New Roman"><font size=+1>
+keyword tells the compiler to assume that </font></font><font face="Courier New"><font size=+0>fatal</font></font><font face="Times New Roman"><font size=+1>
+cannot return. It can then optimize without regard to what would happen
+if fatal ever did return. This makes slightly better code. More importantly,
+it helps avoid spurious warnings of uninitialized variables.</font></font>
+<p><font face="Times New Roman"><font size=+1>Do not assume that registers
+saved by the calling function are restored before calling the </font></font><font face="Courier New"><font size=+0>noreturn</font></font><font face="Times New Roman"><font size=+1>
+function. It does not make sense for a </font></font><font face="Courier New"><font size=+0>noreturn</font></font><font face="Times New Roman"><font size=+1>
+function to have a return type other than </font></font><font face="Courier New"><font size=+0>void</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<p><font face="Times New Roman"><font size=+1>The attribute </font></font><font face="Courier New"><font size=+0>noreturn</font></font><font face="Times New Roman"><font size=+1>
+is not implemented in GNU C versions earlier than 2.5.</font></font>
+<p><font face="Times New Roman"><font size=+1>An alternative way to declare
+that a function does not return, which works in the current version and
+in some older versions, is as follows:</font></font>
+<ul>
+<pre><font face="Courier New"><font size=+1>typedef void voidfn ();&nbsp;
+volatile voidfn fatal;</font></font></pre>
+</ul>
+</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>const</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Many functions do not examine
+any values except their arguments, and have no effects except the return
+value. Such a function can be subject to common subexpression elimination
+and loop optimization just as an arithmetic operator would be. These functions
+should be declared with the attribute, </font></font><font face="Courier New">const</font><font face="Times New Roman"><font size=+1>.
+For example, the following says that the hypothetical function, </font></font><font face="Courier New">square</font><font face="Times New Roman"><font size=+1>,
+is safe to call fewer times than the program says.</font></font>
+<ul>
+<pre><font face="Courier New"><font size=+1>int square (int) __attribute__ ((const));</font></font></pre>
+</ul>
+
+<dt>
+<font face="Times New Roman"><font size=+1>The attribute, </font></font><font face="Courier New"><font size=+0>const</font></font><font face="Times New Roman"><font size=+1>,
+is not implemented in GNU C versions earlier than 2.5. An alternative way
+to declare that a function has no side effects, which works in the current
+version and in some older versions, is as follows.</font></font></dt>
+
+<ul>
+<pre><font face="Courier New"><font size=+1>typedef int intfn ();&nbsp;
+
+extern const intfn square;</font></font></pre>
+</ul>
+
+<dt>
+<font face="Times New Roman"><font size=+1>This approach does not work
+in GNU C++ from 2.6.0 on, since the language specifies that </font></font><font face="Courier New"><font size=+0>const</font></font><font face="Times New Roman"><font size=+1>
+must be attached to the return value.</font></font></dt>
+
+<ul>
+<dt>
+<font face="Times New Roman"><font size=+1><i>Note</i>:</font></font></dt>
+
+<br><font face="Times New Roman"><font size=+1>A function that has pointer
+arguments and examines the data pointed to must not be declared </font></font><font face="Courier New"><font size=+0>const</font></font><font face="Times New Roman"><font size=+1>.
+Likewise, a function that calls a non-</font></font><font face="Courier New"><font size=+0>const</font></font><font face="Times New Roman"><font size=+1>
+function usually must not be </font></font><font face="Courier New"><font size=+0>const</font></font><font face="Times New Roman"><font size=+1>.
+It does not make sense for a </font></font><font face="Courier New"><font size=+0>const</font></font><font face="Times New Roman"><font size=+1>
+function to return </font></font><font face="Courier New"><font size=+0>void</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>format (<i>archetype</i>, <i>string</i>-<i>index</i>,
+<i>first</i>-<i>to</i>-<i>check</i>)</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>The </font></font><font face="Courier New"><font size=+0>format</font></font><font face="Times New Roman"><font size=+1>
+attribute specifies that a function takes </font></font><font face="Courier New"><font size=+0>printf</font></font><font face="Times New Roman"><font size=+1>
+or </font></font><font face="Courier New"><font size=+0>scanf</font></font><font face="Times New Roman"><font size=+1>
+style arguments which should be type-checked against a format string. For
+example, the following declaration causes the compiler to check the arguments
+in calls to </font></font><font face="Courier New"><font size=+0>my_ printf</font></font><font face="Times New Roman"><font size=+1>
+for consistency with the </font></font><font face="Courier New"><font size=+0>printf</font></font><font face="Times New Roman"><font size=+1>
+style format string argument, </font></font><font face="Courier New"><font size=+0>my_format</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<ul>
+<pre><font face="Courier New"><font size=+1>extern int&nbsp;
+my_printf (void *my_object, const char *my_format, ...)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __attribute__ ((format (printf, 2, 3)));</font></font></pre>
+</ul>
+
+<dt>
+<font face="Times New Roman"><font size=+1>The parameter, </font></font><i><font face="Courier New"><font size=+0>archetype</font></font></i><font face="Times New Roman"><font size=+1>,
+determines how the format string is interpreted, and should be either </font></font><font face="Courier New"><font size=+0>printf</font></font><font face="Times New Roman,Times"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>scanf</font></font><font face="Times New Roman"><font size=+1>
+or </font></font><font face="Courier New,Courier">strftime</font><font face="Times New Roman"><font size=+1>.</font></font></dt>
+
+<dt>
+<font face="Times New Roman"><font size=+1>The parameter, </font></font><i><font face="Courier New"><font size=+0>string-index</font></font></i><font face="Times New Roman"><font size=+1>,
+specifies which argument is the </font></font><font face="Courier New"><font size=+0>format</font></font><font face="Times New Roman"><font size=+1>
+string argument (starting from 1), while </font></font><i><font face="Courier New"><font size=+0>first-to-check</font></font></i><font face="Times New Roman"><font size=+1>
+is the number of the first argument to check against the </font></font><font face="Courier New"><font size=+0>format</font></font><font face="Times New Roman"><font size=+1>
+string. For functions where the arguments are not available to be checked
+(such as </font></font><font face="Courier New"><font size=+0>vprintf</font></font><font face="Times New Roman"><font size=+1>),
+specify the third parameter as zero. In this case the compiler only checks
+the format string for consistency.</font></font></dt>
+
+<dt>
+<font face="Times New Roman"><font size=+1>In the previous example, the
+</font></font><font face="Courier New"><font size=+0>format</font></font><font face="Times New Roman"><font size=+1>
+string (</font></font><font face="Courier New"><font size=+0>my_format</font></font><font face="Times New Roman"><font size=+1>)
+is the second argument of the function </font></font><font face="Courier New"><font size=+0>my_print</font></font><font face="Times New Roman"><font size=+1>,
+and the arguments to check start with the third argument, so the correct
+parameters for the </font></font><font face="Courier New"><font size=+0>format</font></font><font face="Times New Roman"><font size=+1>
+attribute are 2 and 3.</font></font></dt>
+
+<dt>
+<font face="Times New Roman"><font size=+1>The </font></font><font face="Courier New"><font size=+0>format</font></font><font face="Times New Roman"><font size=+1>
+attribute allows you to identify your own functions which take </font></font><font face="Courier New"><font size=+0>format</font></font><font face="Times New Roman"><font size=+1>
+strings as arguments, so that GNU CC can check the calls to these functions
+for errors. The compiler always checks formats for the ANSI library functions
+</font></font><font face="Courier New"><font size=+0>printf</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>fprintf</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>sprintf</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>scanf</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>fscanf</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>sscanf</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New,Courier">strftime</font><font face="Times New Roman,Times"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>vprintf</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>vfprintf</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>vsprintf</font></font><font face="Times New Roman"><font size=+1>
+whenever such warnings are requested (using ‘</font></font><font face="Courier New"><font size=+0>-Wformat</font></font><font face="Times New Roman"><font size=+1>’),
+so there is no need to modify the header file, ‘</font></font><font face="Courier New"><font size=+0>stdio.h</font></font><font face="Times New Roman"><font size=+1>’.</font></font></dt>
+</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>format_arg (<i>string-index</i>)</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>The </font></font><font face="Courier New"><font size=+0>format_arg</font></font><font face="Times New Roman"><font size=+1>
+attribute specifies that a function takes </font></font><font face="Courier New"><font size=+0>printf</font></font><font face="Times New Roman"><font size=+1>
+or </font></font><font face="Courier New"><font size=+0>scanf</font></font><font face="Times New Roman"><font size=+1>
+style arguments, modifies it (for example, to translate it into another
+language), and passes it to a </font></font><font face="Courier New"><font size=+0>printf</font></font><font face="Times New Roman"><font size=+1>
+or </font></font><font face="Courier New"><font size=+0>scanf</font></font><font face="Times New Roman"><font size=+1>
+style function. For example, the following declaration causes the compiler
+to check the arguments in calls to </font></font><font face="Courier New"><font size=+0>my_dgettext</font></font><font face="Times New Roman"><font size=+1>,
+whose result is passed to a </font></font><font face="Courier New"><font size=+0>printf</font></font><font face="Times New Roman"><font size=+1>,
+or </font></font><font face="Courier New"><font size=+0>scanf</font></font><font face="Times New Roman"><font size=+1>,
+or </font></font><font face="Courier New,Courier">strftime</font><font face="Times New Roman"><font size=+1>
+type function for consistency with the </font></font><font face="Courier New"><font size=+0>printf</font></font><font face="Times New Roman"><font size=+1>
+style format string argument, </font></font><font face="Courier New"><font size=+0>my_format</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<br>&nbsp;
+<ul>
+<pre><font face="Courier New"><font size=+1>extern char *&nbsp;
+my_dgettext (char *my_domain, const char *my_format)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __attribute__ ((format_arg (2)));</font></font></pre>
+</ul>
+
+<dt>
+<font face="Times New Roman"><font size=+1>The parameter, </font></font><i><font face="Courier New"><font size=+0>string-index</font></font></i><font face="Times New Roman"><font size=+1>,
+specifies which argument is the format string argument (starting from 1).</font></font></dt>
+
+<dt>
+<font face="Times New Roman"><font size=+1>The </font></font><font face="Courier New"><font size=+0>format-arg</font></font><font face="Times New Roman"><font size=+1>
+attribute allows you to identify your own functions which modify format
+strings, so that GNU CC can check the calls to </font></font><font face="Courier New"><font size=+0>printf</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>scanf</font></font><font face="Times New Roman"><font size=+1>,
+or </font></font><font face="Courier New,Courier">strftime</font><font face="Times New Roman"><font size=+1>
+functions whose operands are a call to one of your own function. The compiler
+always treats </font></font><font face="Courier New"><font size=+0>gettext</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>dgettext</font></font><font face="Times New Roman"><font size=+1>,
+and </font></font><font face="Courier New"><font size=+0>dcgettext</font></font><font face="Times New Roman"><font size=+1>
+in this manner.</font></font></dt>
+</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>no-instrument-function</font></font></dt>
+
+<ul>
+<dt>
+<font face="Times New Roman,Times"><font size=+1>If </font></font><font face="Courier New"><font size=+0>-finstrument-functions</font></font><font face="Times New Roman,Times"><font size=+1>
+is given, profiling function calls will be generated at entry and exit
+of most user-compiled functions. Functions with this attribute will not
+be so instrumented.</font></font></dt>
+</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>section ("section-name")</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Normally, the compiler places
+the code it generates in the </font></font><font face="Courier New"><font size=+0>text</font></font><font face="Times New Roman"><font size=+1>
+section. Sometimes, however, you need additional sections, or you need
+certain particular functions to appear in special sections. The </font></font><font face="Courier New"><font size=+0>section</font></font><font face="Times New Roman"><font size=+1>
+attribute specifies that a function lives in a particular section. For
+example, the following declaration puts the function, </font></font><font face="Courier New"><font size=+0>foobar</font></font><font face="Times New Roman"><font size=+1>,
+in the </font></font><font face="Courier New"><font size=+0>bar</font></font><font face="Times New Roman"><font size=+1>
+section.</font></font>
+<br>&nbsp;
+<ul><font face="Courier New"><font size=+0>extern void foobar (void) __attribute__
+\</font></font></ul>
+<font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+((section ("bar")));</font></font>
+<br>&nbsp;
+<dt>
+<font face="Times New Roman"><font size=+1>Some file formats do not support
+arbitrary sections so the </font></font><font face="Courier New"><font size=+0>section</font></font><font face="Times New Roman"><font size=+1>
+attribute is not available on all platforms. If you need to map the entire
+contents of a module to a particular section, consider using the facilities
+of the linker instead.</font></font></dt>
+</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>constructor</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>destructor</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>The </font></font><font face="Courier New,Courier">constructor</font><font face="Times New Roman"><font size=+1>
+attribute causes the function to be called automatically before execution
+enters </font></font><font face="Courier New"><font size=+0>main()</font></font><font face="Times New Roman"><font size=+1>.
+Similarly, the destructor attribute causes the function to be called automatically
+after </font></font><font face="Courier New"><font size=+0>main()</font></font><font face="Times New Roman"><font size=+1>
+has completed or </font></font><font face="Courier New"><font size=+0>exit()</font></font><font face="Times New Roman"><font size=+1>
+has been called. Functions with these attributes are useful for initializing
+data that will be used implicitly during the execution of the program.
+These attributes are not currently implemented for Objective C.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>unused</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>This attribute, attached
+to a function, means that the function is meant to be possibly unused.
+GNU CC will not produce a warning for this function. GNU C++ does not currently
+support this attribute as definitions without parameters are valid in C++.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>weak</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>The </font></font><font face="Courier New"><font size=+0>weak</font></font><font face="Times New Roman"><font size=+1>
+attribute causes the declaration to be emitted as a weak symbol rather
+than a global. This is primarily useful in defining library functions which
+can be overridden in user code, though it can also be used with non-function
+declarations. Weak symbols are supported for ELF targets, and also for
+a.out targets when using the GNU assembler and linker.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>alias ("target")</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>The alias attribute causes
+the declaration to be emitted as an alias for another symbol, which must
+be specified. For instance, the following declares ‘</font></font><font face="Courier New"><font size=+0>f</font></font><font face="Times New Roman"><font size=+1>’
+to be a weak alias for ‘</font></font><font face="Courier New"><font size=+0>__f</font></font><font face="Times New Roman"><font size=+1>’.
+In C++, the mangled name for the target must be used.</font></font>
+<ul>
+<ul>
+<pre><font face="Courier New"><font size=+1>void __f () { /* do something */; }&nbsp;
+void f () __attribute__ ((weak, alias ("__f")));</font></font></pre>
+</ul>
+</ul>
+
+<dt>
+<font face="Times New Roman"><font size=+1>Not all target machines support
+this attribute.</font></font></dt>
+</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>regparm (<i>number</i>)</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>On the Intel 386, the </font></font><font face="Courier New"><font size=+0>regparm</font></font><font face="Times New Roman"><font size=+1>
+attribute causes the compiler to pass up to </font></font><i><font face="Courier New"><font size=+0>number</font></font></i><font face="Times New Roman"><font size=+1>
+integer arguments in registers </font></font><i><font face="Courier New"><font size=+0>EAX</font></font></i><font face="Times New Roman"><font size=+1>,
+</font></font><i><font face="Courier New"><font size=+0>EDX</font></font></i><font face="Times New Roman"><font size=+1>,
+and </font></font><i><font face="Courier New"><font size=+0>ECX</font></font></i><font face="Times New Roman"><font size=+1>
+instead of on the stack. Functions that take a variable number of arguments
+will continue to be passed all of their arguments on the stack.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>stdcall</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>On the Intel 386, the </font></font><font face="Courier New"><font size=+0>stdcall</font></font><font face="Times New Roman"><font size=+1>
+attribute causes the compiler to assume that the called function will pop
+off the stack space used to pass arguments, unless it takes a variable
+number of arguments. The PowerPC compiler for Windows NT currently ignores
+the </font></font><font face="Courier New"><font size=+0>stdcall</font></font><font face="Times New Roman"><font size=+1>
+attribute.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>cdecl</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>On the Intel 386, the </font></font><font face="Courier New"><font size=+0>cdecl</font></font><font face="Times New Roman"><font size=+1>
+attribute causes the compiler to assume that the called function will pop
+off the stack space used to pass arguments. This is useful to override
+the effects of the switch,‘</font></font><font face="Courier New"><font size=+0>-mrtd</font></font><font face="Times New Roman"><font size=+1>’.
+The PowerPC compiler for Windows NT currently ignores the </font></font><font face="Courier New"><font size=+0>cdecl</font></font><font face="Times New Roman"><font size=+1>
+attribute.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>longcall</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>On the RS/6000 and PowerPC,
+the </font></font><font face="Courier New"><font size=+0>longcall</font></font><font face="Times New Roman"><font size=+1>
+attribute causes the compiler to always call the function via a pointer,
+so that functions which reside further than 64 megabytes (67,108,864 bytes)
+from the current location can be called.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>dllimport</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>On the PowerPC running Windows
+NT, the </font></font><font face="Courier New"><font size=+0>dllimport</font></font><font face="Times New Roman"><font size=+1>
+attribute causes the compiler to call the function via a global pointer
+to the function pointer that is set up by the Windows NT dll library. The
+pointer name is formed by combining </font></font><font face="Courier New"><font size=+0>__imp_</font></font><font face="Times New Roman"><font size=+1>
+and the function name.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>dllexport</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>On the PowerPC running Windows
+NT, the </font></font><font face="Courier New"><font size=+0>dllexport</font></font><font face="Times New Roman"><font size=+1>
+attribute causes the compiler to provide a global pointer to the function
+pointer, so that it can be called with the </font></font><font face="Courier New"><font size=+0>dllimport</font></font><font face="Times New Roman"><font size=+1>
+attribute. The pointer name is formed by combining </font></font><font face="Courier New"><font size=+0>__imp_</font></font><font face="Times New Roman"><font size=+1>
+and the function name.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>exception (<i>except-func</i>[,
+<i>except-arg</i>])</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>On the PowerPC running Windows
+NT, the </font></font><font face="Courier New"><font size=+0>exception</font></font><font face="Times New Roman"><font size=+1>
+attribute causes the compiler to modify the structured exception table
+entry it emits for the declared function. The string or identifier, </font></font><i><font face="Courier New"><font size=+0>except-func</font></font></i><font face="Times New Roman"><font size=+1>,
+is placed in the third entry of the structured exception table. It represents
+a function which is called by the exception handling mechanism if an exception
+occurs. If it was specified, the string or identifier, </font></font><i><font face="Courier New"><font size=+0>except-arg</font></font></i><font face="Times New Roman"><font size=+1>,
+is placed in the fourth entry of the structured exception table.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>function_vector</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Use this option on the H8/300
+and H8/300H to indicate that the specified function should be called through
+the function vector. Calling a function through the function vector will
+reduce code size, however; the function vector has a limited size (maximum
+128 entries on the H8/300 and 64 entries on the H8/300H) and shares space
+with the interrupt vector.</font></font>
+<dt>
+<font face="Times New Roman"><font size=+1>You must use GAS and LD from
+GNU binutils version 2.7 or later for this option to work correctly.</font></font></dt>
+</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>interrupt_handler</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Use this option on the H8/300
+and H8/300H to indicate that the specified function is an interrupt handler.
+The compiler will generate function entry and exit sequences suitable for
+use in an interrupt handler when this attribute is present.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>eightbit_data</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Use this option on the H8/300
+and H8/300H to indicate that the specified variable should be placed into
+the eight bit data section. The compiler will generate more efficient code
+for certain operations on data in the eight bit data area. Note the eight
+bit data area is limited to 256 bytes of data.</font></font>
+<dt>
+<font size=+1><font face="Times New Roman">You must use </font><font face="Courier New,Courier">as</font><font face="Times New Roman">
+and </font></font><font face="Courier New,Courier">ld</font><font face="Times New Roman"><font size=+1>
+from GNU binutils version 2.7 or later for this option to work correctly.</font></font></dt>
+</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>tiny_data</font></font></dt>
+
+<dl>
+<dl><font face="Times New Roman"><font size=+1>Use this option on the H8/300H
+to indicate that the specified variable should be placed into the tiny
+data section. The compiler will generate more efficient code for loads
+and stores on data in the tiny data section. Note the tiny data area is
+limited to slightly under 32kbytes of data.</font></font></dl>
+
+<dt>
+<font face="Courier New,Courier">interrupt</font></dt>
+
+<dl><font face="Times New Roman"><font size=+1>Use this option on the M32R/D
+to indicate that the speci ed function is an interrupt handler. The compiler
+will generate function entry and exit sequences suitable for use in an
+interrupt handler when this attribute is present.</font></font></dl>
+
+<dt>
+<font face="Courier New,Courier">model (<i>model-name</i>)</font></dt>
+
+<dl><font face="Times New Roman"><font size=+1>Use this attribute on the
+M32R/D to set the addressability of an object, and the code generated for
+a function. The identifier model-name is one of </font></font><font face="Courier New,Courier">small</font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New,Courier">medium</font><font face="Times New Roman"><font size=+1>,
+or </font></font><font face="Courier New,Courier">large</font><font face="Times New Roman"><font size=+1>,
+representing each of the code models.</font></font>
+<br><font face="Times New Roman"><font size=+1>Small model objects live
+in the lower 16MB of memory (so that their addresses can be loaded with
+the </font></font><font face="Courier New,Courier">ld24</font><font face="Times New Roman"><font size=+1>
+instruction), and are callable with the </font></font><font face="Courier New,Courier">bl</font><font face="Times New Roman"><font size=+1>
+instruction.</font></font>
+<br><font face="Times New Roman"><font size=+1>Medium model objects may
+live anywhere in the 32 bit address space (the compiler will generate </font></font><font face="Courier New,Courier">seth/add3</font><font face="Times New Roman"><font size=+1>
+instructions to load their addresses), and are callable with the </font></font><font face="Courier New,Courier">bl</font><font face="Times New Roman"><font size=+1>
+instruction.</font></font>
+<br><font face="Times New Roman"><font size=+1>Large model objects may
+live anywhere in the 32 bit address space (the compiler will generate </font></font><font face="Courier New,Courier">seth/add3</font><font face="Times New Roman"><font size=+1>
+instructions to load their addresses), and may not be reachable with the
+</font></font><font face="Courier New,Courier">bl</font><font face="Times New Roman"><font size=+1>
+instruction (the compiler will generate the much slower </font></font><font face="Courier New,Courier">seth/add3/jl</font><font face="Times New Roman"><font size=+1>
+instruction sequence).</font></font>
+<br><font size=+1><font face="Times New Roman">Some people object to the
+</font><tt>__attribute__</tt><font face="Times New Roman"> feature, suggesting
+the ANSI C's </font><tt>#pragma</tt><font face="Times New Roman"> should
+be used instead.</font></font>
+<br><font face="Times New Roman"><font size=+1>There are two reasons for
+not doing this:</font></font>
+<ul>
+<li>
+<font size=+1><font face="Times New Roman">It is impossible to generate
+</font><tt>#pragma</tt><font face="Times New Roman"> commands from a macro.</font></font></li>
+
+<li>
+<font size=+1><font face="Times New Roman">There is no telling what the
+same </font><tt>#pragma</tt><font face="Times New Roman"> might mean in
+another compiler.</font></font></li>
+</ul>
+<font size=+1><font face="Times New Roman">These two reasons apply to most
+any application that might be proposed for </font><tt>#pragma</tt><font face="Times New Roman">.
+It is basically a mistake to use </font><tt>#pragma</tt><font face="Times New Roman">
+for anything.</font></font></dl>
+
+<dl><font face="Times New Roman"><font size=+1></font></font>&nbsp;</dl>
+</dl>
+</ul>
+
+<center>
+<hr SIZE=3 WIDTH="100%">
+<br><a href="#Top">Top</a>|<a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccCast_to_a_Union_Type.html">Previous</a>|<a href="gccPrototypes_and_OldStyle_Function.html">Next</a></center>
+
+</body>
+</html>

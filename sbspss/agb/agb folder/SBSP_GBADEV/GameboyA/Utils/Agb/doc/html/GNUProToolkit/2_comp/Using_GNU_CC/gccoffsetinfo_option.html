@@ -1,0 +1,119 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>offset-info option</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccOptions_for_Code_Generation_Conv.html">Previous</A>|<A HREF="gccEnvironment_Variables_Affecting_.html">Next</A>
+<BR><FONT COLOR="#000000">&nbsp;<A NAME="off_2228224"></A><A NAME="41f798f0"></A><B><TT><FONT POINT-SIZE="24">offset-info
+</FONT></TT><FONT FACE="Futura Md BT"><FONT SIZE=+3>option&nbsp;</FONT></FONT></B><FONT FACE="Futura Md BT">&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>-offset-info <I>output-file</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This option simplifies access
+to C struct’s from assembler. For each member of each structure the compiler
+will output a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.equ</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive to associate with a symbol with the member’s offset in bytes
+into the structure. The symbol itself is the concatenation of the structure’s
+tag name and the member’s name, separated by an underscore.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This option will output,
+to the specified </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>output-file</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+an assembler directive, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.equ</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+for <I>each </I>member of <I>each </I>structure found in <I>each </I>manipulation.
+The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.equ</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directives for the structures in the header file can be obtained by using
+the following input: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gcc
+-fsyntax-only -offset-info m.s -x c m.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>m.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the header containing the structures, and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>m.s</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+holds the directives.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The following is a short
+example of output produced by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-offset-info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>&nbsp; input file (for example m.h):&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; struct W {&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double d;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int I;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; struct X {&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int a;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int b;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; struct Y {&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int a;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int b;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; struct Y y;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; struct Y yy[10];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; struct Y* p;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output file (for example m.s):&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .equ W_d,0&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .equ W_i,8&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .equ Y_a,0&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .equ Y_b,4&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .equ X_a,0&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .equ X_b,4&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .equ X_y,8&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .equ X_yy,16&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .equ X_p,96</FONT></FONT></PRE>
+</UL>
+</UL>
+&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>-offset-info</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has the following caveats.</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>No directives are output for
+bit-field members.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>No directives are output for
+members whose offsets (as measured in bits) is greater than the word size
+of the host.</FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>No directives are output for
+members whose offsets are not constants. This can happen only in structures
+that use some GCC specific extensions allowing for variable sized members.</FONT></FONT></LI>
+</UL>
+</UL>
+&nbsp;
+<UL>
+<DT>
+<FONT FACE="Courier New,Courier">-fargument-alias</FONT></DT>
+
+<DT>
+<FONT FACE="Courier New,Courier">-fargument-noalias</FONT></DT>
+
+<DT>
+<FONT FACE="Courier New,Courier">-fargument-noalias-global</FONT></DT>
+
+<UL TYPE=SQUARE><FONT FACE="Times New Roman"><FONT SIZE=+1>Specify the
+possible relationships among parameters and between parameters and global
+data.</FONT></FONT>
+<BR><FONT FACE="Courier New,Courier">-fargument-alias</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+specifies that arguments (parameters) may alias each other and may alias
+global storage. </FONT></FONT><FONT FACE="Courier New,Courier">-fargument-noalias</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+specifies that arguments do not alias each other, but may alias global
+storage. </FONT></FONT><FONT FACE="Courier New,Courier">-fargument-noalias-global</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+specifies that arguments do not alias each other and do not alias global
+storage.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Each language will automatically
+use whatever option is required by the language standard. You should not
+need to use these options yourself.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccOptions_for_Code_Generation_Conv.html">Previous</A>|<A HREF="gccEnvironment_Variables_Affecting_.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

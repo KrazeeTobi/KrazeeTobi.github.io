@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Frederick Geers">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Moving text within a window</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="onlonl.html">Contents</A>|<A HREF="onlindex.html">Index</A>|<A HREF="onlMoving_the_Cursor.html">Previous</A>|<A HREF="onlSelecting_a_New_Node.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT SIZE=+3>Moving text within a window</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT SIZE=+1>Sometimes you are looking at a full
+screen of text, and only part of the current paragraph you are reading
+is visible on the screen. The commands detailed in the following section
+are used to shift which part of the current node is visible on the screen.</FONT>
+<UL><FONT SIZE=+1><B><FONT FACE="Arial Narrow">SPC / Spacebar </FONT></B>(<TT>scroll-forward</TT>)</FONT>
+<BR><B><FONT FACE="Arial Narrow"><FONT SIZE=+1>C-v</FONT></FONT></B>
+<UL><FONT SIZE=+1>Shifts the text in this window up to show more of the
+node which is currently below the bottom of the window. A numeric argument
+shows that many more lines at the bottom of the window; a numeric argument
+of 4 shifts all text in the window up 4 lines (discarding the top 4 lines),
+and shows four new lines at the bottom of the window. Without a numeric
+argument, <FONT FACE="Arial Narrow">Spacebar</FONT> takes the bottom two
+lines of the window and places them at the top of the window, redisplaying
+almost a completely new screenful of lines.</FONT></UL>
+<FONT SIZE=+1></FONT>
+
+<P><FONT SIZE=+1><B><FONT FACE="Arial Narrow">Del /Delete </FONT></B>(<TT>scroll-backward</TT>)</FONT>
+<BR><B><FONT FACE="Arial Narrow"><FONT SIZE=+1>M-v</FONT></FONT></B>
+<UL><FONT SIZE=+1>Shifts the text in this window down, the inverse of <TT>scroll-forward</TT>.
+<TT>scroll-forward</TT> and <TT>scroll-backward</TT> moves forward and
+backward through the node structure of the file. If you press <FONT FACE="Arial Narrow">Spacebar</FONT>
+while viewing the end of a node, or <FONT FACE="Arial Narrow">Del </FONT>while
+viewing the beginning of a node, what happens is controlled by the variable
+scroll-behavior. See <A HREF="onlManipulating_Variables.html">Manipulating
+variables</A> for more information.</FONT></UL>
+<FONT SIZE=+1></FONT>
+
+<P><FONT SIZE=+1><B><FONT FACE="Arial Narrow">C-l </FONT></B>(redraw-display)</FONT>
+<UL><FONT SIZE=+1>Redraws the display from scratch, or shifts the line
+whit the cursor to a specified location. With no numeric argument, ‘<B><FONT FACE="Arial Narrow">C-l</FONT></B>’
+clears the screen, and then redraws its entire contents. With a numeric
+argument of n, the line with the cursor is shifts to the nth line of the
+window.</FONT></UL>
+<FONT SIZE=+1></FONT>
+
+<P><FONT SIZE=+1><B><FONT FACE="Arial Narrow">C-x w</FONT></B> (toggle-wrap)</FONT>
+<UL><FONT SIZE=+1>Toggles the state of line wrapping in the current window.
+Normally, when lines wrap when they are longer than the screen width,;
+i.e., they continue on the next line. Lines which wrap display a ‘<B><FONT FACE="Arial Narrow">\</FONT></B>’
+in the rightmost column of the screen. You can cause such lines to be terminated
+at the rightmost column by changing the state of line wrapping in the window
+with <B><FONT FACE="Arial Narrow">C-x, w</FONT></B>. When a line contains
+more than one screen width, ‘<B><FONT FACE="Arial Narrow">$</FONT></B>’
+appears in the rightmost column of the line, and the remainder is invisible.</FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="onlonl.html">Contents</A>|<A HREF="onlindex.html">Index</A>|<A HREF="onlMoving_the_Cursor.html">Previous</A>|<A HREF="onlSelecting_a_New_Node.html">Next</A></CENTER>
+&nbsp;
+<BR>&nbsp;
+</BODY>
+</HTML>

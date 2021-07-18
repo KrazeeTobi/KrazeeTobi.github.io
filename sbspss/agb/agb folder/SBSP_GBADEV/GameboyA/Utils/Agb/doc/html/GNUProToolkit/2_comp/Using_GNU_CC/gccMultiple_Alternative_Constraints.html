@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Multiple Alternative Constraints</TITLE>
+</HEAD>
+<BODY>
+<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccSimple_Constraints.html">Previous</A>|<A HREF="gccConstraint_Modifier_Characters.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_4065949"></A><A NAME="8b1c84f7"></A><B><FONT SIZE=+3>Multiple
+alternative constraints&nbsp;</FONT></B>&nbsp;</FONT></FONT>
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Sometimes a single instruction
+has multiple alternative sets of possible operands. For example, on the
+68000, a logical-or instruction can combine register or an immediate value
+into memory, or it can combine any kind of operand into a register; but
+it cannot combine one memory location into another.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>These constraints are represented
+as multiple alternatives. An alternative can be described by a series of
+letters for each operand. The overall constraint for an operand is made
+from the letters for this operand from the first alternative, a comma,
+the letters for this operand from the second alternative, a comma, and
+so on until the last alternative.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If all the operands fit any
+one alternative, the instruction is valid. Otherwise, for each alternative,
+the compiler counts how many instructions must be added to copy the operands
+so that that alternative applies. The alternative requiring the least copying
+is chosen. If two alternatives need the same amount of copying, the one
+that comes first is chosen. These choices can be altered with the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>?</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>!</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+characters.</FONT></FONT>
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>?</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Disparage slightly the alternative
+that the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>?</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+appears in, as a choice when no alternative applies exactly. The compiler
+regards this alternative as one unit more costly for each ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>?</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+that appears in it.</FONT></FONT></UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>!</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Disparage severely the alternative
+that the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>!</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+appears in. This alternative can still be used if it fits without reloading,
+but if reloading is needed, some other alternative will be used.</FONT></FONT></UL>
+</UL>
+
+</BODY>
+</HTML>

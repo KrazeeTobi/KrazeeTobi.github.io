@@ -1,0 +1,469 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>C and C++</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbSupported_languages.html">Previous</a>|<a href="gdbModula2.html">Next</a>
+<br><a NAME="off_1836155"></a><a NAME="6c6395fb"></a><b><font face="Futura Md BT"><font size=+3>C
+and C++</font></font></b>
+<br>
+<hr SIZE=3 WIDTH="100%"><font face="Times New Roman"><font size=+1>The
+following documentation discusses using C and C++ languages with GDB.</font></font>
+<ul>
+<ul>
+<ul>
+<li>
+<font face="Times New Roman"><font size=+1><a href="#Operators">C and C++
+operators</a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1><a href="#C_constants">C and
+C++ constants</a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1><a href="#C++_expressions">C++
+expressions</a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1><a href="#Cdefaults">C and C++
+defaults</a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1><a href="#Type_range_checks">C
+and C++ type and range checks</a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1><a href="#GDBC">GDB and C</a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1><a href="#GDB_C++">GDB features
+for C++</a></font></font></li>
+</ul>
+</ul>
+</ul>
+<font face="Times New Roman"><font size=+1>Since C and C++ are so closely
+related, many features of GDB apply to both languages. Whenever this is
+the case, we discuss those languages together.</font></font>
+<p><font face="Times New Roman"><font size=+1>The C++ debugging facilities
+are jointly implemented by the GNU C++ compiler and GDB. Therefore, to
+debug your C++ code effectively, you must compile your C++ programs with
+the GNU C++ compiler, </font></font><font face="Courier New"><font size=+0>g++</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<p><font face="Times New Roman"><font size=+1>For best results when debugging
+C++ programs, use the </font></font><font face="Courier New"><font size=+0>stabs</font></font><font face="Times New Roman"><font size=+1>
+debugging format. You can select that format explicitly with the </font></font><font face="Courier New"><font size=+0>g++</font></font><font face="Times New Roman"><font size=+1>&nbsp;
+‘</font></font><font face="Courier New"><font size=+0>-gstabs</font></font><font face="Times New Roman"><font size=+1>’
+or ‘</font></font><font face="Courier New"><font size=+0>-gstabs+</font></font><font face="Times New Roman"><font size=+1>’
+command-line options. See <a href="../../2_comp/Using_GNU_CC/gccOptions_for_Debugging_Your_Progr.html">Options
+for debugging your program or GNU CC</a> in <i>Using GNU CC</i> in <b><i>GNUPro
+Compiler Tools</i></b> for more information.</font></font>
+<p><a NAME="Operators"></a><i><font face="Times New Roman"><font size=+2>C
+and C++ operators</font></font></i>
+<p><font face="Times New Roman"><font size=+1>Operators must be defined
+on values of specific types. For instance, </font></font><font face="Courier New"><font size=+0>+</font></font><font face="Times New Roman"><font size=+1>
+is defined on numbers and not on structures. Operators are often defined
+on groups of types. For the purposes of C and C++, the following definitions
+hold.</font></font>
+<ul>
+<ul>
+<ul>
+<li>
+<font face="Times New Roman"><font size=+1><i>Integral types</i> include
+</font></font><font face="Courier New"><font size=+0>int</font></font><font face="Times New Roman"><font size=+1>
+with any of its storage-class specifiers; </font></font><font face="Courier New"><font size=+0>char</font></font><font face="Times New Roman"><font size=+1>;
+and </font></font><font face="Courier New"><font size=+0>enum</font></font><font face="Times New Roman"><font size=+1>.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1><i>Floating-point types</i>
+include </font></font><font face="Courier New"><font size=+0>float</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>double</font></font><font face="Times New Roman"><font size=+1>.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1><i>Pointer types</i> include
+all types defined as</font></font><font face="Courier New"><font size=+0>
+(<i>type</i>*)</font></font><font face="Times New Roman"><font size=+1>.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1><i>Scalar types</i> include
+all of the previous types.</font></font></li>
+</ul>
+</ul>
+</ul>
+<font face="Times New Roman"><font size=+1>The following operators are
+supported. They are listed in order of increasing precedence:</font></font>
+<br>&nbsp;
+<ul><b><font face="Courier New"><font size=+0>,</font></font></b></ul>
+
+<ul>
+<ul><font face="Times New Roman"><font size=+1>The comma or sequencing
+operator. Expressions in a comma-separated list are evaluated from left
+to right, with the result of the entire expression being the last expression
+evaluated.</font></font></ul>
+<b><font face="Courier New"><font size=+0>=</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Assignment. The value of
+an assignment expression is the value assigned. Defined on scalar types.</font></font></ul>
+<b><font face="Courier New"><font size=+0>op=</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Used in an expression of
+the form </font></font><i><font face="Courier New"><font size=+0>a op=b</font></font></i><font face="Times New Roman"><font size=+1>,
+and translated to </font></font><i><font face="Courier New"><font size=+0>a=
+a opb. op=</font></font></i><font face="Times New Roman"><font size=+1>
+and </font></font><i><font face="Courier New"><font size=+0>=</font></font></i><font face="Times New Roman"><font size=+1>
+have the same precendence. </font></font><i><font face="Courier New"><font size=+0>op</font></font></i><font face="Times New Roman"><font size=+1>
+is any one of the operators </font></font><b><font face="Courier New"><font size=+0>|</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>ˆ</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>&amp;</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>&lt;&lt;</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>>></font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>+</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>-</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>*</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>/</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>%</font></font></b><font face="Times New Roman"><font size=+1>.</font></font></ul>
+<b><font face="Courier New"><font size=+0>?:</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>The ternary operator. </font></font><font face="Courier New"><font size=+0><i>a</i><b>?</b><i>b</i>:
+<i>c </i></font></font><font face="Times New Roman"><font size=+1>can be
+thought of as: if </font></font><i><font face="Courier New"><font size=+0>a</font></font></i><font face="Times New Roman"><font size=+1>,
+then </font></font><i><font face="Courier New"><font size=+0>b</font></font></i><font face="Times New Roman"><font size=+1>,
+else, </font></font><i><font face="Courier New"><font size=+0>c</font></font></i><font face="Times New Roman"><font size=+1>.
+</font></font><i><font face="Courier New"><font size=+0>a
+</font></font></i><font face="Times New Roman"><font size=+1>should be
+of an integral type.</font></font></ul>
+<b><font face="Courier New"><font size=+0>||</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Logical OR. Defined on integral
+types.</font></font></ul>
+<b><font face="Courier New"><font size=+0>&amp;&amp;</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Logical AND. Defined on
+integral types.</font></font></ul>
+<b><font face="Courier New"><font size=+0>|</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Bitwise OR. Defined on integral
+types.</font></font></ul>
+<b><font face="Courier New"><font size=+0>ˆ</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Bitwise exclusive-OR. Defined
+on integral types.</font></font></ul>
+<b><font face="Courier New"><font size=+0>&amp;</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Bitwise AND . Defined on
+integral types.</font></font></ul>
+<b><font face="Courier New"><font size=+0>==</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>!=</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Equality and inequality.
+Defined on scalar types. The value of these expressions is 0 for false
+and non-zero for true.</font></font></ul>
+<b><font face="Courier New"><font size=+0>&lt;</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>></font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>&lt;=</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>>=</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Less than, greater than,
+less than or equal, greater than or equal. Defined on scalar types. The
+value of these expressions is 0 for false and non-zero for true.</font></font></ul>
+<b><font face="Courier New"><font size=+0>&lt;&lt;</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>>></font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Left shift, and right shift.
+Defined on integral types.</font></font></ul>
+<b><font face="Courier New"><font size=+0>@</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>The GDB “artificial array”
+operator (see <font color="#008000"><a href="gdbExpressions.html">Expressions</a></font>).</font></font></ul>
+<b><font face="Courier New"><font size=+0>+</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>-</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Addition and subtraction.
+Defined on integral types, floating-point types and pointer types.</font></font></ul>
+<b><font face="Courier New"><font size=+0>*</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>/</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>%</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Multiplication, division,
+and modulus. Multiplication and division are defined on integral and floating-point
+types. Modulus is defined on integral types.</font></font></ul>
+<b><font face="Courier New"><font size=+0>++</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>--</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Increment and decrement.
+When appearing before a variable, the operation is performed before the
+variable is used in an expression; when appearing after it, the variable’s
+value is used before the operation takes place.</font></font></ul>
+<b><font face="Courier New"><font size=+0>*</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Pointer dereferencing. Defined
+on pointer types. Same precedence as </font></font><b><font face="Courier New"><font size=+0>++</font></font></b><font face="Times New Roman"><font size=+1>.</font></font></ul>
+<b><font face="Courier New"><font size=+0>&amp;</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Address operator. Defined
+on variables. Same precedence as </font></font><b><font face="Courier New"><font size=+0>++</font></font></b><font face="Times New Roman"><font size=+1>.</font></font></ul>
+
+<ul><font face="Times New Roman"><font size=+1>For debugging C++, GDB implements
+a use of ‘</font></font><font face="Courier New"><font size=+0>&amp;</font></font><font face="Times New Roman"><font size=+1>’
+beyond what is allowed in the C++ language itself: you can use ‘</font></font><font face="Courier New"><font size=+0>&amp;(&amp;<i>ref</i>)</font></font><font face="Times New Roman"><font size=+1>’
+(or, if you prefer, ‘</font></font><font face="Courier New"><font size=+0>&amp;&amp;<i>ref</i></font></font><font face="Times New Roman"><font size=+1>’)
+to examine the address where a C++ reference variable (declared with ‘</font></font><font face="Courier New"><font size=+0>&amp;<i>ref</i></font></font><font face="Times New Roman"><font size=+1>’)
+is stored.</font></font></ul>
+<b><font face="Courier New"><font size=+0>-</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Negative. Defined on integral
+and floating-point types. Same precedence as </font></font><b><font face="Courier New"><font size=+0>++</font></font></b><font face="Times New Roman"><font size=+1>.</font></font></ul>
+<b><font face="Courier New"><font size=+0>!</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Logical negation. Defined
+on integral types. Same precedence as </font></font><b><font face="Courier New"><font size=+0>++</font></font></b><font face="Times New Roman"><font size=+1>.</font></font></ul>
+<b><font face="Courier New"><font size=+0>˜</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Bitwise complement operator.
+Defined on integral types. Same precedence as ++.</font></font></ul>
+<b><font face="Courier New"><font size=+0>.</font></font></b><font face="Times New Roman"><font size=+1>,
+</font></font><b><font face="Courier New"><font size=+0>-></font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Structure member, and pointer-to-structure
+member. For convenience, GDB regards the two as equivalent, choosing whether
+to dereference a pointer based on the stored type information. Defined
+on </font></font><font face="Courier New"><font size=+0>struct</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>union</font></font><font face="Times New Roman"><font size=+1>
+data.</font></font></ul>
+<b><font face="Courier New"><font size=+0>[]</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Array indexing. </font></font><font face="Courier New"><font size=+0><i>a</i><b>[</b><i>i</i><b>]</b></font></font><font face="Times New Roman"><font size=+1>
+is defined as </font></font><font face="Courier New"><font size=+0><b>*(</b><i>a</i><b>+</b><i>i</i><b>)</b></font></font><font face="Times New Roman"><font size=+1>.
+Same precedence as </font></font><b><font face="Courier New"><font size=+0>-></font></font></b><font face="Times New Roman"><font size=+1>.</font></font></ul>
+<b><font face="Courier New"><font size=+0>()</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Function parameter list.
+Same precedence as </font></font><b><font face="Courier New"><font size=+0>-></font></font></b><font face="Times New Roman"><font size=+1>.</font></font></ul>
+<b><font face="Courier New"><font size=+0>::</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>C++ scope resolution operator.
+Defined on struct, union, and class types.</font></font></ul>
+<b><font face="Courier New"><font size=+0>::</font></font></b>
+<ul><font face="Times New Roman"><font size=+1>Doubled colons also represent
+the GDB scope operator (see <font color="#008000"><a href="gdbExpressions.html">Expressions</a></font>).
+Same precedence as </font></font><b><font face="Courier New"><font size=+0>::</font></font></b><font face="Times New Roman"><font size=+1>.</font></font></ul>
+</ul>
+<a NAME="C_constants"></a><b><i><font face="Times New Roman"><font size=+2>C
+and C++ constants</font></font></i></b>
+<p><font face="Times New Roman"><font size=+1>GDB allows you to express
+the constants of C and C++ in the following ways:</font></font>
+<ul>
+<ul>
+<ul>
+<li>
+<font face="Times New Roman"><font size=+1>Integer constants are a sequence
+of digits. Octal constants are specified by a leading ‘</font></font><font face="Courier New"><font size=+0>0</font></font><font face="Times New Roman"><font size=+1>’
+(i.e., zero), and hexadecimal constants by a leading ‘</font></font><font face="Courier New"><font size=+0>0x</font></font><font face="Times New Roman"><font size=+1>’
+or ‘</font></font><font face="Courier New"><font size=+0>0X</font></font><font face="Times New Roman"><font size=+1>’.
+Constants may also end with a letter, ‘</font></font><font face="Courier New"><font size=+0>l</font></font><font face="Times New Roman"><font size=+1>’,
+specifying that the constant should be treated as a </font></font><font face="Courier New"><font size=+0>long</font></font><font face="Times New Roman"><font size=+1>
+value.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>Floating point constants are
+a sequence of digits, followed by a decimal point, followed by a sequence
+of digits, and optionally followed by an exponent. An exponent is of the
+form: ‘</font></font><font face="Courier New"><font size=+0>e<b>[[+]|-]</b><i>nnn</i></font></font><font face="Times New Roman"><font size=+1>’,
+where </font></font><i><font face="Courier New"><font size=+0>nnn</font></font></i><font face="Times New Roman"><font size=+1>
+is another sequence of digits. The ‘</font></font><b><font face="Courier New"><font size=+0>+</font></font></b><font face="Times New Roman"><font size=+1>’
+is optional for positive exponents.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>Enumerated constants consist
+of enumerated identifiers, or their integral equivalents.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>Character constants are a single
+character surrounded by single quotes (</font><b><font size=+0>’</font></b><font size=+1>),
+or a number—the ordinal value of the corresponding character (usually its
+ASCII value). Within quotes, the single character may be represented by
+a letter or by <b><i>escape sequences</i></b>, which are of the form ‘</font></font><font face="Courier New"><font size=+0><b>\</b><i>nnn</i></font></font><font face="Times New Roman"><font size=+1>’,
+where </font></font><i><font face="Courier New"><font size=+0>nnn</font></font></i><font face="Times New Roman"><font size=+1>
+is the octal representation of the character’s ordinal value; or of the
+form ‘</font></font><font face="Courier New"><font size=+0><b>\</b><i>x</i></font></font><font face="Times New Roman"><font size=+1>’,
+where ‘</font></font><i><font face="Courier New"><font size=+0>x</font></font></i><font face="Times New Roman"><font size=+1>’
+is a predefined special character—for example, ‘</font></font><font face="Courier New"><font size=+0><b>\</b><i>n</i></font></font><font face="Times New Roman"><font size=+1>’
+for newline.</font></font></li>
+
+<li>
+<font size=+1><font face="Times New Roman">String constants are a sequence
+of character constants surrounded by double quotes (</font><tt>""</tt><font face="Times New Roman">).</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>Pointer constants are an integral
+value. You can also write pointers to constants using the C operator, ‘</font></font><b><font face="Courier New"><font size=+0>&amp;</font></font></b><font face="Times New Roman"><font size=+1>’.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>Array constants are comma-separated
+lists surrounded by braces ‘</font></font><b><font face="Courier New"><font size=+0>{</font></font></b><font face="Times New Roman"><font size=+1>’
+and ‘</font></font><b><font face="Courier New"><font size=+0>}</font></font></b><font face="Times New Roman"><font size=+1>’;
+for example, ‘</font></font><b><font face="Courier New"><font size=+0>{</font></font></b><tt><font size=+1>"</font></tt><font face="Courier New"><font size=+0>1,2,3<b>}</b></font></font><font face="Times New Roman"><font size=+1>’
+is a three-element array of integers, ‘</font></font><font face="Courier New"><font size=+0><b>{{</b>1,2<b>}</b></font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0><b>{</b>3,4<b>}</b></font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0><b>{</b>5,6<b>}}</b></font></font><font face="Times New Roman"><font size=+1>’
+is a three-by-two array, and ‘</font></font><b><font face="Courier New"><font size=+0>{&amp;</font></font></b><tt><font size=+1>"</font></tt><font face="Courier New"><font size=+0>hi</font></font><tt><font size=+1>"</font></tt><font face="Courier New"><font size=+0>,<b>
+&amp;</b></font></font><tt><font size=+1>"</font></tt><font face="Courier New"><font size=+0>there</font></font><tt><font size=+1>"</font></tt><font face="Courier New"><font size=+0>,<b>
+&amp;</b></font></font><tt><font size=+1>"</font></tt><font face="Courier New"><font size=+0>fred</font></font><tt><font size=+1>"</font></tt><b><font face="Courier New"><font size=+0>}</font></font></b><font face="Times New Roman"><font size=+1>’
+is a three-element array of pointers.</font></font></li>
+</ul>
+</ul>
+</ul>
+<a NAME="C++_expressions"></a><b><i><font face="Times New Roman"><font size=+2>C++
+expressions</font></font></i></b>
+<p><font face="Times New Roman"><font size=+1>GDB expression handling can
+interpret most C++ expressions.</font></font>
+<ul><font face="Times New Roman"><font size=+1><b><i>Warning</i></b>:</font></font>
+<br><font face="Times New Roman"><font size=+1>GDB can only debug C++ code
+if you compile with the GNU C++ compiler, G++. Moreover, C++ debugging
+depends on the use of additional debugging information in the symbol table,
+and thus requires special support. GDB has this support only with the stabs
+debug format. In particular, if your compiler generates </font></font><font face="Courier New"><font size=+0>a.out</font></font><font face="Times New Roman"><font size=+1>,
+MIPS ECOFF, RS/6000 XCOFF, or ELF with </font></font><font face="Courier New"><font size=+0>stabs</font></font><font face="Times New Roman"><font size=+1>
+extensions to the symbol table, these facilities are all available. (With
+GNU CC, you can use the ‘</font></font><font face="Courier New"><font size=+0>-gstabs</font></font><font face="Times New Roman"><font size=+1>’
+option to request </font></font><font face="Courier New"><font size=+0>stabs</font></font><font face="Times New Roman"><font size=+1>
+debugging extensions explicitly.) Where the object code format is standard
+COFF or DWARF in ELF , on the other hand, most of the C++ support in GDB
+does not work.</font></font></ul>
+
+<ul>
+<ul>
+<ul>
+<li>
+<font face="Times New Roman"><font size=+1>Member function calls are allowed;
+you can use expressions like</font></font></li>
+
+<br><b><font face="Courier New"><font size=+0>count = aml->GetOriginal(x,
+y)</font></font></b>
+<li>
+<font face="Times New Roman"><font size=+1>While a member function is active
+(in the selected stack frame), your expressions have the same namespace
+available as the member function; that is, GDB allows implicit references
+to the class instance pointer, </font></font><font face="Courier New"><font size=+0>this</font></font><font face="Times New Roman"><font size=+1>,
+following the same rules as C++.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>You can call overloaded functions;
+GDB resolves the function call to the right definition, with one restriction—you
+must use arguments of the type required by the function that you want to
+call. GDB does not perform conversions requiring constructors or user-defined
+type operators.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>GDB understands variables declared
+as C++ references; you can use them in expressions just as you do in C++
+source—they are automatically dereferenced.</font></font></li>
+
+<br><font face="Times New Roman"><font size=+1>In the parameter list shown
+when GDB displays a frame, the values of reference variables are not displayed
+(unlike other variables); this avoids clutter, since references are often
+used for large structures. The address of a reference variable is always
+shown, unless you have specified ‘</font></font><font face="Courier New"><font size=+0>setprint
+addressoff</font></font><font face="Times New Roman"><font size=+1>’.</font></font>
+<li>
+<font face="Times New Roman"><font size=+1>GDB supports the C++ name resolution
+operator </font></font><font face="Courier New"><font size=+0>::</font></font><font face="Times New Roman"><font size=+1>—your
+expressions can use it just as expressions in your program do. Since one
+scope may be defined in another, you can use </font></font><font face="Courier New"><font size=+0>::
+</font></font><font face="Times New Roman"><font size=+1>repeatedly
+if necessary, for example in an expression like ‘</font></font><font face="Courier New"><font size=+0><i>scope1</i>::<i>scope2</i>::<i>name</i></font></font><font face="Times New Roman"><font size=+1>’.
+GDB also allows resolving name scope by reference to source files, in both
+C and C++ debugging (see <font color="#008000"><a href="gdbProgram_variables.html">Program
+variables</a></font>).</font></font></li>
+</ul>
+</ul>
+</ul>
+<a NAME="Cdefaults"></a><b><i><font face="Times New Roman"><font size=+2>C
+and C++ defaults</font></font></i></b>
+<p><font face="Times New Roman"><font size=+1>If you allow GDB to set type
+and range checking automatically, they both default to </font></font><font face="Courier New"><font size=+0>off</font></font><font face="Times New Roman"><font size=+1>
+whenever the working language changes to C or C++.</font></font>
+<p><font face="Times New Roman"><font size=+1>This happens regardless of
+whether you or GDB selects the working language.</font></font>
+<p><font face="Times New Roman"><font size=+1>If you allow GDB to set the
+language automatically, it recognizes source files whose names end with
+‘</font></font><font face="Courier New"><font size=+0>.c</font></font><font face="Times New Roman"><font size=+1>’,
+‘</font></font><font face="Courier New"><font size=+0>.C</font></font><font face="Times New Roman"><font size=+1>’,
+or ‘</font></font><font face="Courier New"><font size=+0>.cc</font></font><font face="Times New Roman"><font size=+1>’,
+and when GDB enters code compiled from one of these files, it sets the
+working language to C or C++. See <font color="#008000"><a href="gdbHaving_GDB_infer_the_source_lang.html">Having
+GDB infer the source language</a></font> for further details.</font></font>
+<p><a NAME="Type_range_checks"></a><b><i><font face="Times New Roman"><font size=+2>C
+and C++ type and range checks</font></font></i></b>
+<p><font face="Times New Roman"><font size=+1>By default, when GDB parses
+C or C++ expressions, type checking is not used. However, if you turn type
+checking on, GDB considers two variables type equivalent if:</font></font>
+<ul>
+<ul>
+<ul>
+<li>
+<font face="Times New Roman"><font size=+1>The two variables are structured
+and have the same structure, union, or enumerated tag.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>The two variables have the same
+type name, or types that have been declared equivalent through </font></font><font face="Courier New"><font size=+0>typedef</font></font><font face="Times New Roman"><font size=+1>.</font></font></li>
+</ul>
+</ul>
+</ul>
+<font face="Times New Roman"><font size=+1>Range checking, if turned on,
+is done on mathematical operations. Array indices are not checked, since
+they are often used to index a pointer that is not itself an array.</font></font>
+<p><a NAME="GDBC"></a><b><i><font face="Times New Roman"><font size=+2>GDB
+and C</font></font></i></b>
+<p><font face="Times New Roman"><font size=+1>The </font></font><font face="Courier New"><font size=+0>set
+print union</font></font><font face="Times New Roman"><font size=+1> and
+</font></font><font face="Courier New"><font size=+0>show
+print union</font></font><font face="Times New Roman"><font size=+1> commands
+apply to the </font></font><font face="Courier New"><font size=+0>union</font></font><font face="Times New Roman"><font size=+1>
+type. When set to ‘</font></font><font face="Courier New"><font size=+0>on</font></font><font face="Times New Roman"><font size=+1>’,
+any </font></font><font face="Courier New"><font size=+0>union</font></font><font face="Times New Roman"><font size=+1>
+that is inside a </font></font><font face="Courier New"><font size=+0>struct</font></font><font face="Times New Roman"><font size=+1>
+or </font></font><font face="Courier New"><font size=+0>class</font></font><font face="Times New Roman"><font size=+1>
+is also printed. Otherwise, it appears as ‘</font></font><font face="Courier New"><font size=+0>{...}</font></font><font face="Times New Roman"><font size=+1>’.</font></font>
+<p><font face="Times New Roman"><font size=+1>The </font></font><font face="Courier New"><font size=+0>@</font></font><font face="Times New Roman"><font size=+1>
+operator aids in the debugging of dynamic arrays, formed with pointers
+and a memory allocation function. See <font color="#008000"><a href="gdbExpressions.html">Expressions</a></font>.</font></font>
+<p><a NAME="GDB_C++"></a><b><i><font face="Times New Roman"><font size=+2>GDB
+features for C++</font></font></i></b>
+<p><font face="Times New Roman"><font size=+1>Some GDB commands are particularly
+useful with C++, and some are designed specifically for use with C++. The
+following is a summary:</font></font>
+<br>&nbsp;
+<ul><b><i><font face="Times New Roman"><font size=+1>breakpoint menus</font></font></i></b>
+<ul><font face="Times New Roman"><font size=+1>When you want a breakpoint
+in a function whose name is overloaded, GDB breakpoint menus help you specify
+which function definition you want. See <font color="#008000"><a href="gdbBreakpoint_menus.html">Breakpoint
+menus</a></font>.</font></font></ul>
+<font face="Courier New"><font size=+0>rbreak<i>regex</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Setting breakpoints using
+regular expressions is helpful for setting breakpoints on overloaded functions
+that are not members of any special classes. See <font color="#008000"><a href="gdbSetting_breakpoints.html">Setting
+breakpoints</a></font>.</font></font></ul>
+<font face="Courier New"><font size=+0>catch<i>exceptions</i></font></font>
+<br><font face="Courier New"><font size=+0>info catch</font></font>
+<ul><font face="Times New Roman"><font size=+1>Debug C++ exception handling
+using these commands. See <font color="#008000"><a href="gdbBreakpoints_and_exceptions.html">Setting
+catchpoints</a></font>.</font></font></ul>
+<font face="Courier New"><font size=+0>ptype<i>typename</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Print inheritance relationships
+as well as other information for type typename. See <font color="#008000"><a href="gdbExamining_the_Symbol_Table.html">Examining
+the symbol table</a></font>.</font></font></ul>
+<font face="Courier New"><font size=+0>set print demangle</font></font>
+<br><font face="Courier New"><font size=+0>show print demangle</font></font>
+<br><font face="Courier New"><font size=+0>set print asm-demangle</font></font>
+<br><font face="Courier New"><font size=+0>show print asm-demangle</font></font>
+<ul><font face="Times New Roman"><font size=+1>Control whether C++ symbols
+display in their source form, both when displaying code as C++ source and
+when displaying disassemblies. See <font color="#008000"><a href="gdbPrint_settings.html">Print
+settings</a></font>.</font></font></ul>
+<font face="Courier New"><font size=+0>set print object</font></font>
+<br><font face="Courier New"><font size=+0>show print object</font></font>
+<ul><font face="Times New Roman"><font size=+1>Choose whether to print
+derived (actual) or declared types of objects. See <font color="#008000"><a href="gdbPrint_settings.html">Print
+settings</a></font>.</font></font></ul>
+<font face="Courier New"><font size=+0>set print vtbl</font></font>
+<br><font face="Courier New"><font size=+0>show print vtbl</font></font>
+<ul><font face="Times New Roman"><font size=+1>Control the format for printing
+virtual function tables. See <font color="#008000"><a href="gdbPrint_settings.html">Print
+settings</a></font>.</font></font></ul>
+</ul>
+
+<ul><b><i><font face="Times New Roman"><font size=+1>Overloaded symbol
+names</font></font></i></b>
+<ul><font face="Times New Roman"><font size=+1>You can specify a particular
+definition of an overloaded symbol, using the same notation that is used
+to declare such symbols in C++: type </font></font><font face="Courier New"><font size=+0><i>symbol</i>(<i>types</i>)</font></font><font face="Times New Roman"><font size=+1>
+rather than just </font></font><i><font face="Courier New"><font size=+0>symbol</font></font></i><font face="Times New Roman"><font size=+1>.
+You can also use the GDB command-line word completion facilities to list
+the available choices, or to finish the type list for you. See <font color="#008000"><a href="gdbCommand_completion.html">Command
+completion</a></font> for details on how to use this functionality.</font></font></ul>
+</ul>
+
+<hr SIZE=3 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="gdb.html">Contents</a>|<a href="gdbindex.html">Index</a>|<a href="gdbSupported_languages.html">Previous</a>|<a href="gdbModula2.html">Next</a></center>
+
+</body>
+</html>

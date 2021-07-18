@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Word Designators</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbEvent_Designators.html">Previous</A>|<A HREF="gdbModifiers.html">Next</A>
+<BR><A NAME="off_3342838"></A><A NAME="21abbb5c"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Word
+designators</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>A colon
+(</FONT></FONT><B><FONT SIZE=+0><FONT FACE="Courier New">:</FONT>)</FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+separates the event designator from the <I>word designator</I>. It can
+be omitted if the word designator begins with a </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>ˆ</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>$</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>*</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Words are numbered from the beginning of the line, with the first word
+being denoted by a 0 (zero).</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>0 (zero)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The zero’th word. For many
+applications, this is the command word.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0><I>n</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>n</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>’th
+word.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>ˆ</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The first argument. that
+is, word 1.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>$</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The last argument.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The word matched by the
+most recent </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>?<I>string</I>?</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+search.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>x-y</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>A range of words; </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-y</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+abbreviates</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0> 0-y</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>*</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>All of the words, excepting
+the zero’th. This is a synonym for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>1-$</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+It is not an error to use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+if there is just one word in the event. The empty string is returned in
+that case.</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbEvent_Designators.html">Previous</A>|<A HREF="gdbModifiers.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

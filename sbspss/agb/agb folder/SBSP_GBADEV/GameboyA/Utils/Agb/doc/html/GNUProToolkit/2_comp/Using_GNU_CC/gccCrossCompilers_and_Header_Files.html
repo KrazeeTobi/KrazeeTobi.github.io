@@ -1,0 +1,61 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Cross-Compilers and Header Files</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gcclibgcca_and_CrossCompilers.html">Previous</a>|<a href="gccStandard_Header_File_Directories.html">Next</a>
+<br><a NAME="off_3015323"></a><a NAME="69cd7e29"></a><font face="Futura Md BT"><font color="#000000"><b><font size=+3>Cross-compilers
+and header files&nbsp;</font></b>&nbsp;</font></font>
+<hr SIZE=6 WIDTH="100%">
+<br><font face="Times New Roman"><font size=+1>If you are cross-compiling
+a stand-alone program or a program for an embedded system, then you may
+not need any header files except the few that are part of GNU CC (and those
+of your program). However, if you intend to link your program with a standard
+C library such as ‘</font></font><font face="Courier New"><font size=+0>libc.a</font></font><font face="Times New Roman"><font size=+1>’,
+then you probably need to compile with the header files that go with the
+library you use.</font></font>
+<p><font face="Times New Roman"><font size=+1>The GNU C compiler does not
+come with these files, because (1) they are system-specific, and (2) they
+belong in a C library, not in a compiler.</font></font>
+<p><font face="Times New Roman"><font size=+1>If the GNU C library supports
+your target machine, then you can get the header files from there (assuming
+you actually use the GNU library when you link your program).</font></font>
+<p><font face="Times New Roman"><font size=+1>If your target machine comes
+with a C compiler, it probably comes with suitable header files also. If
+you make these files accessible from the host machine, the cross-compiler
+can use them also. Otherwise, you’re on your own in finding header files
+to use when cross-compiling.</font></font>
+<p><font face="Times New Roman"><font size=+1>When you have found suitable
+header files, put them in ‘</font></font><font face="Courier New"><font size=+0>/usr/local/<i>target</i>/include</font></font><font face="Times New Roman"><font size=+1>’,
+before building the cross compiler. Then installation will run </font></font><font face="Courier New"><font size=+0>fixincludes</font></font><font face="Times New Roman"><font size=+1>
+properly and install the corrected versions of the header files where the
+compiler will use them. Provide the header files before you build the cross-compiler,
+because the build stage actually runs the cross-compiler to produce parts
+of ‘</font></font><font face="Courier New"><font size=+0>libgcc.a</font></font><font face="Times New Roman"><font size=+1>’.
+(These are the parts that can be compiled with GNU CC.) Some of them need
+suitable header files.</font></font>
+<p><font face="Times New Roman"><font size=+1>To copy header files from
+a target machine, use the following example’s input.</font></font>
+<ul>
+<pre><font face="Courier New"><font size=+1>(cd /usr/include; tar cf - .) > tarfile</font></font></pre>
+</ul>
+<font face="Times New Roman"><font size=+1>Then, on the host machine, use
+the following example’s input where </font></font><i><font face="Courier New"><font size=+0>target-machine</font></font></i><font face="Times New Roman"><font size=+1>
+represents your intended target machine.</font></font>
+<ul>
+<pre><font face="Courier New"><font size=+1>ftp <i>target</i>-<i>machine</i>&nbsp;
+lcd /usr/local/<i>target</i>/include&nbsp;
+get tarfile&nbsp;
+quit&nbsp;
+tar xf tarfile</font></font></pre>
+</ul>
+
+<center>
+<hr SIZE=3 WIDTH="100%">
+<br><a href="#Top">Top</a>|<a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gcclibgcca_and_CrossCompilers.html">Previous</a>|<a href="gccStandard_Header_File_Directories.html">Next</a></center>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>The Function, wildcard</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makePitfalls_of_Using_Wildcards.html">Previous</A>|<A HREF="makeSearching_Directories_for_Depend.html">Next</A>
+<BR><A NAME="off_461014"></A><A NAME="658e6713"></A><B><FONT SIZE=+3><FONT FACE="Futura Md BT">The
+function, </FONT><FONT FACE="Courier New">wildcard</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>Wildcard
+expansion happens automatically in rules. But wildcard expansion does not
+normally take place when a variable is set, or inside the arguments of
+a function. If you want to do wildcard expansion in such places, you need
+to use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>wildcard</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function, using: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(wildcard
+<I>pattern</I>...)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This string, used anywhere
+in a makefile, is replaced by a space-separated list of names of existing
+files that match one of the given file name patterns. If no existing file
+name matches a pattern, then that pattern is omitted from the output of
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>wildcard</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function. Note that this is different from how unmatched wildcards behave
+in rules, where they are used verbatim rather than ignored (see <FONT COLOR="#008000"><A HREF="makePitfalls_of_Using_Wildcards.html">Pitfalls
+of using wildcards</A></FONT>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>One use of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>wildcard</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function is to get a list of all the C source files in a directory, using:
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$(wildcard <B>*</B>.c)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>We can change the list of
+C source files into a list of object files by replacing the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+suffix with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in the result, using the following.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>$(patsubst <B>%</B>.c,<B>%</B>.o,$(wildcard
+<B>*</B>.c))</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Here we have used another
+function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>patsubst</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+See <FONT COLOR="#008000"><A HREF="makeFunctions_for_String_Substitutio.html">Functions
+for string substitution and analysis</A></FONT>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Thus, a makefile to compile
+all C source files in the directory and then link them together could be
+written as follows.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>objects := $(patsubst %.c,%.o,$(wildcard
+*.c))</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>foo : $(objects)</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+cc -o foo $(objects)</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This takes advantage of the
+implicit rule for compiling C programs, so there is no need to write explicit
+rules for compiling the files. See <FONT COLOR="#008000"><A HREF="makeThe_Two_Flavors_of_Variables.html">The
+two flavors of variables</A></FONT> for an explanation of ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>:=</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+which is a variant of ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>=</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’.)</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makePitfalls_of_Using_Wildcards.html">Previous</A>|<A HREF="makeSearching_Directories_for_Depend.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,92 @@
+<html>
+<body>
+<pre>
+<h1>Log Build</h1>
+<h3>
+--------------------Structure: libsrc - Win32 Release--------------------
+</h3>
+<h3>Command Line</h3>
+Create a temporary file "c:\windows\TEMP\RSP63A3.TMP" and save the following contents.
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"Release/libsrc.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\agb\src\bin\libsrc\angle.cpp"
+"C:\agb\src\bin\libsrc\buffer.cpp"
+"C:\agb\src\bin\libsrc\char16set.cpp"
+"C:\agb\src\bin\libsrc\char256set.cpp"
+"C:\agb\src\bin\libsrc\character.cpp"
+"C:\agb\src\bin\libsrc\character16.cpp"
+"C:\agb\src\bin\libsrc\charset.cpp"
+"C:\agb\src\bin\libsrc\color.cpp"
+"C:\agb\src\bin\libsrc\filename.cpp"
+"C:\agb\src\bin\libsrc\hpicture.cpp"
+"C:\agb\src\bin\libsrc\image.cpp"
+"C:\agb\src\bin\libsrc\map.cpp"
+"C:\agb\src\bin\libsrc\map16.cpp"
+"C:\agb\src\bin\libsrc\map256.cpp"
+"C:\agb\src\bin\libsrc\mapsrimage.cpp"
+"C:\agb\src\bin\libsrc\maptextimage.cpp"
+"C:\agb\src\bin\libsrc\maptextunit.cpp"
+"C:\agb\src\bin\libsrc\palette.cpp"
+"C:\agb\src\bin\libsrc\pathname.cpp"
+"C:\agb\src\bin\libsrc\picture.cpp"
+"C:\agb\src\bin\libsrc\util.cpp"
+]
+Creating command line "cl.exe @c:\windows\TEMP\RSP63A3.TMP" 
+Create a temporar file "c:\windows\TEMP\RSP63A4.TMP" and save the following contents.
+[
+/nologo /out:"..\lib\libmagbx.lib" 
+.\Release\angle.obj
+.\Release\buffer.obj
+.\Release\char16set.obj
+.\Release\char256set.obj
+.\Release\character.obj
+.\Release\character16.obj
+.\Release\charset.obj
+.\Release\color.obj
+.\Release\filename.obj
+.\Release\hpicture.obj
+.\Release\image.obj
+.\Release\map.obj
+.\Release\map16.obj
+.\Release\map256.obj
+.\Release\mapsrimage.obj
+.\Release\maptextimage.obj
+.\Release\maptextunit.obj
+.\Release\palette.obj
+.\Release\pathname.obj
+.\Release\picture.obj
+.\Release\util.obj
+]
+Creating command line "link.exe -lib @c:\windows\TEMP\RSP63A4.TMP".
+<h3>Output window</h3>
+Compiling...
+angle.cpp
+buffer.cpp
+char16set.cpp
+char256set.cpp
+character.cpp
+character16.cpp
+charset.cpp
+color.cpp
+filename.cpp
+hpicture.cpp
+image.cpp
+map.cpp
+map16.cpp
+map256.cpp
+mapsrimage.cpp
+maptextimage.cpp
+maptextunit.cpp
+palette.cpp
+pathname.cpp
+picture.cpp
+util.cpp
+Creating library...
+
+
+
+<h3>Result</h3>
+libmagbx.lib - Error 0, Warning 0
+</pre>
+</body>
+</html>

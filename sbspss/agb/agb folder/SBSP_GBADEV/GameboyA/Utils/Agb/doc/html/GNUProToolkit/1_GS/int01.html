@@ -1,0 +1,3047 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title> </title>
+</head>
+<body bgcolor="#FFFFFF">
+<a href="../index.html">GNUPro Toolkit Documentation</a>|<a href="gsTOC.html">Contents</a>|<a href="intfront.html">Previous</a>|<a href="int02.html">Next</a>
+<br><a NAME="pgfId=1001840"></a><a NAME="Overview_of_GNUPro_Toolkit"></a><font face="Futura Md BT"><font size=+3>Cygnus
+and <b><font color="#000000">GNUPro Toolkit fundamentals</font></b></font></font>
+<hr SIZE=6 WIDTH="100%">
+<div CLASS="BodyAfterHead"><a NAME="pgfId=1004990"></a><font size=+1>The
+following documentation introduces the fundamentals of the GNUPro tools,
+what GNUPro Toolkit contains and supports as well as how the tools work.
+To install for UNIX platforms, see <a href="ins01.html#Install_UNIX">Installing
+on UNIX systems from CD</a>, and, to install for the Windows platforms,
+see <a href="ins01.html#Installing_on_Win95/NT">Installing on Win 95/NT
+systems from CD</a>.</font></div>
+
+<div CLASS="Bullet">
+<ul>
+<ul>
+<ul>
+<li>
+<font size=+1><a href="int01.html#About_Cygnus" CLASS="XRef">About Cygnus
+and what Cygnus offers</a></font></li>
+
+<li>
+<font size=+1><a href="int01.html#About_the_tools" CLASS="XRef">About the
+tools</a></font></li>
+
+<li>
+<font size=+1><a href="int01.html#Whats_in_the_documentation" CLASS="XRef">What’s
+in the documentation</a></font></li>
+
+<li>
+<a NAME="pgfId=1001575"></a><a NAME="pgfId=1004840"></a><font size=+1><a href="#Native_configuration_support" CLASS="XRef">Native
+configurations support</a></font></li>
+
+<li>
+<a NAME="pgfId=1004841"></a><font size=+1><a href="#Embedded_cross-configuration_support" CLASS="XRef">Embedded
+cross-configuration support</a></font></li>
+
+<li>
+<a NAME="pgfId=1004842"></a><font size=+1><a href="#Version_numbers_for_programs" CLASS="XRef">Version
+numbers for programs</a></font></li>
+
+<li>
+<a NAME="pgfId=1004853"></a><font size=+1><a href="#Naming_hosts_&_targets" CLASS="XRef">Naming
+hosts and targets</a></font></li>
+
+<li>
+<font size=+1><a href="int04.html#Top">Using the tools on native and embedded
+systems</a></font></li>
+
+<li>
+<font size=+1><a href="int04.html#SN">Source-Navigator demonstration</a></font></li>
+
+<li>
+<font size=+1><a href="int05.html#Top">Cygnus glossary</a></font></li>
+
+<li>
+<font size=+1><a href="int06.html#Top">Working with Cygnus Insight, the
+visual debugger</a></font></li>
+
+<li>
+<font size=+1><a href="reb.html#Top">Rebuilding from source</a></font></li>
+</ul>
+</ul>
+</ul>
+</div>
+<a NAME="pgfId=1004843"></a><font size=+1>For quick resolution to technical
+questions, see <a href="int02.html" CLASS="XRef">Red flag alerts &amp;
+enhancements</a> and, to report problems, see <a href="ins03.html" CLASS="XRef">How
+to report problems</a>.</font>
+<p><font size=+1>For embedded targets, <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b>.</font>
+<h2>
+<a NAME="About_Cygnus"></a><a NAME="About_Cygnus"></a><b><i><font face="Times New Roman,Times">About
+Cygnus and what Cygnus offers</font></i></b></h2>
+
+<div CLASS="Body"><font size=+1>Cygnus provides GNUPro Toolkit as a set
+of powerful, multi-platform software development tools for advanced desktop
+and embedded systems for developing projects. Cygnus is the leading provider
+of single-source, UNIX, and Win32 desktop and cross-platform development
+tools for&nbsp;<a NAME="marker=1004991"></a>32- and 64-bit microcontrollers.</font>
+<br><font size=+1>Cygnus is the open-source software leader that provides
+complete end-to-end software solutions, including embedded and desktop
+development tools and real-time operating systems (RTOSs), as well as custom-engineering
+services and world-class support. Cygnus partners with the world’s leading
+processor companies to ensure open-source software technologies are available
+on the latest architectures. Cygnus also works with key embedded product
+manufacturers across all market segments to customize solutions and develop
+new technologies that meet their business objectives.</font></div>
+
+<div CLASS="Body"><font size=+1>Cygnus is redefining the way software is
+developed industry wide by making its infrastructure technologies freely
+available, using the powerful open-source model. Cygnus’ approach to software
+is to deliver our innovation back to the market. For distributing, enhancing,
+and fostering open-source technologies, see the following resources.</font>
+<br>&nbsp;
+<blockquote>
+<blockquote><b><tt><font size=+1><a href="http://sourceware.cygnus.com/">http://sourceware.cygnus.com/</a></font></tt></b></blockquote>
+</blockquote>
+
+<p><br><font size=+1>Cygnus customers include the world’s top microprocessor
+companies as well as leading consumer electronics, Internet, telecommunications,
+office automation, networking, aerospace, and automotive companies.</font>
+<br><font size=+1>Customers turn to Cygnus to have the following benefits.</font>
+<div CLASS="Bullet">
+<ul>
+<ul>
+<ul>
+<li>
+<b><i><font size=+1>Shortening time to market &amp; reducing costs</font></i></b></li>
+
+<br><font size=+1>Cygnus provides cost-effective developer support services,
+standards based products, and redistributable solutions.</font>
+<li>
+<b><i><font size=+1>Enabling code reuse</font></i></b></li>
+
+<br><font size=+1>Cygnus’ single-source development tools provide true
+multi-platform capabilities and easy re-targeting.</font>
+<li>
+<b><i><font size=+1>Fostering innovation</font></i></b></li>
+
+<br><font size=+1>Cygnus offers client services that solve the most challenging
+problems and develop new technologies.</font>
+<li>
+<b><i><font size=+1>Providing peace of mind</font></i></b></li>
+
+<br><font size=+1>Cygnus secures customer investments with support backed
+by a premier engineering organization.</font></ul>
+</ul>
+</ul>
+</div>
+<font size=+1>The following Cygnus development tools are available.</font>
+<div CLASS="Body">
+<blockquote>
+<blockquote>
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>GNUPro</font><b><sup><font size=-1>&reg;</font></sup></b><font size=+1>
+Toolkit is a set of powerful, multi-platform software development tools
+for advanced desktop and embedded systems that delivers productivity, flexibility,
+performance and portability for over 125 host/target combinations for embedded
+microprocessors. Cygnus provides engineering services and mission-critical
+support to microprocessor and product manufacturing partners, and even
+off-the-shelf product sales to ensure that Cygnus development tools provide
+functionality and flexibility unmatched by any proprietary tools vendor.</font></li>
+
+<br><font size=+1>Cygnus sells GNUPro Toolkit bundled with support for
+rapid response and resolution of technical questions or problems, and regular
+software upgrades. Cygnus also sells a standalone version of the GNUPro
+Toolkit for Linux. The toolkit includes ANSI-conforming C and C/C++ compilers,
+a macro-assembler, the Cygnus Insight visual debugger, and binary utilities.
+All the tools come on CD with online and printed documentation as well
+as a <b><i>Quick Reference</i></b> guide. See also <a href="#About_the_tools">About
+the tools</a>.</font>
+<br><a NAME="pgfId=1003352"></a><font size=+1>To locate specific documentation,
+see <a href="int01.html#Whats_in_the_documentation" CLASS="XRef">What’s
+in the documentation</a> and, also, see the following topics.</font></ul>
+</blockquote>
+</blockquote>
+</div>
+
+<div CLASS="Body">
+<ul>
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li>
+<font size=+1><a href="#Native_configuration_support" CLASS="XRef">Native
+configurations support</a></font></li>
+
+<li>
+<font size=+1><a href="#Embedded_cross-configuration_support" CLASS="XRef">Embedded
+cross-configuration support</a></font></li>
+
+<li>
+<font size=+1><a href="#Version_numbers_for_programs" CLASS="XRef">Version
+numbers for programs</a></font></li>
+
+<br><font size=+1><a href="#Naming_hosts_&_targets" CLASS="XRef">Naming
+hosts and targets</a></font></ul>
+</ul>
+</ul>
+</ul>
+</div>
+
+<blockquote>
+<blockquote>
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>Source-Navigator</font><sup><font size=-2>TM</font></sup><font size=+1>
+is a graphical, advanced source-code comprehension and analysis tool that
+enables developers to understand code structures and relationships. Available
+in <b><i>Developer</i></b> and <b><i>Enterprise</i></b> editions, Source-Navigator
+makes migrating, re-engineering, reusing code, or understanding Y2K (Year
+2000) problems much easier. The <b><i>Developer</i></b> edition targets
+single developers working on projects of up to 100,000 lines of code, and
+the <b><i>Enterprise</i></b> edition targets large-scale, complex projects
+managed by development teams.</font></li>
+
+<li>
+<font size=+1>Integrated with GNUPro development tools is Cygnus’ open-source
+RTOS, eCos</font><b><sup><font size=-2>TM</font></sup></b><font size=+1>,
+that provides a new industry standard for the rapidly evolving world of
+embedded systems. eCos (embedded Cygnus operating system) is a full-featured,
+run-time solution under open-source licensing terms. eCos is a royalty-free,
+highly configurable, application-specific operating system targeted at
+embedded systems development. eCos offers a solution to the highly fragmented
+RTOS marketplace by providing an open-source run-time infrastructure that
+enables embedded system developers to focus on differentiating their products
+rather than on the development, maintenance, or configuration of a real-time
+kernel. eCos empowers embedded developers with knowing that their software
+investments will be preserved on future hardware.</font></li>
+
+<li>
+<font size=+1>Cygwin</font><b><sup><font size=-2>TM</font></sup></b><font size=+1>,
+a full-featured Win32 porting layer for UNIX applications, is compatible
+with all Win32 hosts (currently, these are Microsoft’s Windows NT/95/98
+systems). Cygwin, invented in 1995 by Cygnus, is an answer to the question
+of how to port the GNU development tools to a Win32 host.</font></li>
+</ul>
+</blockquote>
+</blockquote>
+</div>
+
+<div CLASS="Body">
+<div CLASS="Bullet"><a NAME="pgfId=1001610"></a><a NAME="About_the_tools"></a><b><i><font face="Times New Roman,Times"><font size=+2>About
+the tools</font></font></i></b></div>
+</div>
+
+<div CLASS="Body"><a NAME="pgfId=1003437"></a><font size=+1>GNUPro software
+delivers productivity, flexibility, performance and portability with its
+ISO-conforming C and ISO-tracking C++ compiler, macro-assembler, GUI debugger,
+binary utilities and libraries.</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1003474"></a><font size=+1>See <a href="int01.html#_Ref385841378" CLASS="XRef">GNUPro
+Toolkit documentation</a> for more documentation on the following GNUPro
+Toolkit components.</font></div>
+
+<div CLASS="Body">&nbsp;
+<ul>
+<ul>
+<ul>
+<li>
+<a NAME="pgfId=1003479"></a><font size=+1><a href="int01.html#Compilers_and_Development_Tools" CLASS="XRef">Compilers
+and development tools</a></font></li>
+
+<li>
+<a NAME="pgfId=1003483"></a><font size=+1><a href="int01.html#Libraries" CLASS="XRef">Libraries</a></font></li>
+
+<li>
+<a NAME="pgfId=1003487"></a><font size=+1><a href="int01.html#General_utilities" CLASS="XRef">General
+utilities</a></font></li>
+
+<li>
+<a NAME="pgfId=1003729"></a><font size=+1><a href="int01.html#Binary_utilites" CLASS="XRef">Binary
+utilities</a></font></li>
+</ul>
+</ul>
+</ul>
+</div>
+<font size=+1>For working with the tools, see <a href="int04.html#Top">Using
+the tools on native and embedded systems</a>. To use them, enter their
+name as a command in your shell window (<tt>gcc</tt>, for instance, invokes
+the C compiler while <tt>gdb</tt> invokes Cygnus Insight and <tt>snavigator</tt>
+invokes Source-Navigator, the source code comprehension tool). For embedded
+targets, <b><i><a href="../6_embed/emb.html">GNUPro Tools for Embedded
+Systems</a></i></b>.</font>
+<h2>
+<a NAME="pgfId=1003735"></a><a NAME="Compilers_and_Development_Tools"></a><b><i><font face="Times New Roman,Times">Compilers
+and development tools</font></i></b></h2>
+
+<div CLASS="Body"><font size=+1>The following tools are the main tools
+for developing with GNUPro Toolkit.</font></div>
+
+<table BORDER >
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><a NAME="pgfId=1003878"></a><tt><font size=+1>gcc</font></tt><a NAME="marker=1003877"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003881"></a><a NAME="marker=1003880"></a><font size=+1>C
+compiler; see <i><a href="../2_comp/Using_GNU_CC/gcc.html">Using GNU CC</a></i>
+in <b><i>GNUPro Compiler Tools</i></b> for details.</font></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><a NAME="pgfId=1003884"></a><tt><font size=+1>g++</font></tt><a NAME="marker=1003883"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003887"></a><a NAME="marker=1003886"></a><font size=+1>C++
+compiler;&nbsp; see <i><a href="../2_comp/Using_GNU_CC/gcc.html">Using
+GNU CC</a></i> in <b><i>GNUPro Compiler Tools</i></b> for details.</font></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><a NAME="pgfId=1003890"></a><tt><font size=+1>gdb</font></tt><a NAME="marker=1003889"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003893"></a><a NAME="marker=1003892"></a><font size=+1>Debugger;&nbsp;
+see <i><a href="../3_dbug/b_Debugging_with_GDB/gdb.html">GNUPro Debugger
+Tools</a></i> for details. Invoke by using the command, <tt>gdb -nw</tt>,
+and see also <tt><a href="#gdbtk">gdbtk</a></tt>.</font></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><a NAME="pgfId=1003897"></a><tt><font size=+1>gas</font></tt><a NAME="marker=1003895"></a><a NAME="marker=1003896"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003900"></a><a NAME="marker=1003899"></a><font size=+1>Assembler;&nbsp;
+see <a href="../5_ut/a_Using_AS/as.html"><i>Using </i><tt>as</tt></a> in
+<b><i>GNUPro
+Utilities</i></b> for details.</font></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><a NAME="pgfId=1003903"></a><tt><font size=+1>cpp</font></tt><a NAME="marker=1003902"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003906"></a><a NAME="marker=1003905"></a><font size=+1>C
+Preprocessor;&nbsp; see <i><a href="../2_comp/Using_GNU_CC/gcc.html">Using
+GNU CC</a></i> in <b><i>GNUPro Compiler Tools</i></b> for details.</font></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><a NAME="pgfId=1003915"></a><tt><font size=+1>ld</font></tt><a NAME="marker=1003914"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003918"></a><a NAME="marker=1003917"></a><font size=+1>Linker;&nbsp;
+see <a href="../5_ut/b_Usingld/ld.html"><i>Using </i><tt>ld</tt></a> in
+GNUPro Utilities for details.</font></div>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=LEFT VALIGN=TOP>
+<div CLASS="CellBody"><a NAME="pgfId=1003920"></a><a NAME="gdbtk"></a><tt><font size=+1>gdbtk</font></tt><a NAME="marker=1003923"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="marker=1003924"></a><font size=+1>Debugger
+graphical user interface, a visual debugger known as Cygnus Insight</font><b><sup><font face="Times New Roman,Times"><font size=-2>TM</font></font></sup></b><font size=+1>
+(formerly known as GDBTk); see <a href="int06.html#Top">Working with Cygnus
+Insight, the visual debugger</a>.</font>
+<br><font size=+1>Invoke by using the command, <tt>gdb</tt>.</font></div>
+</td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>make</font></tt></td>
+
+<td><font size=+1>Compilation control program;&nbsp; see <a href="../5_ut/d_UsingMake/make.html"><i>Using
+</i><tt>make</tt></a>
+in <b><i>GNUPro Utilities</i></b> for details.</font></td>
+</tr>
+
+<tr VALIGN=TOP>
+<td><tt><font size=+1>cmp</font></tt></td>
+
+<td><font size=+1>Utility that compares files byte-by-byte;&nbsp; see <i><a href="../2_comp/Using_GNU_CC/gcc.html">Using
+GNU CC</a></i> in <b><i>GNUPro Compiler Tools</i></b> for details.</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>cygwin</font></tt></td>
+
+<td><font size=+1>Win32 porting layer for UNIX applications; see <a href="http://sourceware.cygnus.com/cygwin/usenix-98/cygwin.html">Cygwin:
+a free Win32 porting layer for UNIX</a>, <a href="http://sourceware.cygnus.com/cygwin/cygwin-ug-net/cygwin-ug-net.html">Cygwin
+User’s Guide</a> and <a href="http://sourceware.cygnus.com/cygwin/cygwin-api/cygwin-api.html">Cygwin
+API Reference</a>, and applications in <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b> for details about using the tools
+for developing programs in the Win32 environment.</font></td>
+</tr>
+
+<tr VALIGN=TOP>
+<td><tt><font size=+1>gcov</font></tt></td>
+
+<td><font size=+1>Coverage analyzer;&nbsp; see <i><a href="../2_comp/Using_GNU_CC/gcc.html">Using
+GNU CC</a></i> in <b><i>GNUPro Compiler Tools</i></b> for details.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><tt><font size=+1>snavigator</font></tt></td>
+
+<td><font size=+1>Source-Navigator, a source code comprehension tool;&nbsp;
+see the online “User’s Reference Guide” and “Programmer’s Reference Guide”
+documentation, by invoking Source-Navigator from the commandline, and,
+also, see <a href="int04.html#SN">Source-Navigator demonstration</a>.</font></td>
+</tr>
+</table>
+
+<h2 CLASS="Heading2">
+<a NAME="pgfId=1003680"></a><a NAME="Libraries"></a><b><i><font face="Times New Roman,Times">Libraries</font></i></b></h2>
+
+<div CLASS="Body"><font size=+1>See <b><i>GNUPro Libraries</i></b> for
+documentation regarding these libraries.</font></div>
+
+<table BORDER >
+<tr VALIGN=TOP>
+<td>
+<div CLASS="CellBody"><a NAME="marker=1003696"></a><tt><font size=+1>libc</font></tt><a NAME="pgfId=1003706"></a><a NAME="marker=1003705"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003700"></a><a NAME="marker=1003699"></a><font size=+1>ANSI
+C runtime library&nbsp;</font>
+<br><font size=+1>(<i>only available for cross-development</i>);&nbsp;</font>
+<br><font size=+1>see <i><a href="../4_libs/a_GNUPro_C_Library/libc.html">GNUPro
+C Library</a></i> in <b><i>GNUPro Libraries</i></b> for details.</font></div>
+</td>
+</tr>
+
+<tr VALIGN=TOP>
+<td><a NAME="pgfId=1003703"></a><a NAME="marker=1003702"></a><tt><font size=+1>libm</font></tt></td>
+
+<td><font size=+1>C math subroutine library&nbsp;</font>
+<br><font size=+1>(<i>only available for cross-development</i>);&nbsp;</font>
+<br><font size=+1>see <i><a href="../4_libs/b_GNUPro_Math_Library/libm.html">GNUPro
+Math Library</a></i> in <b><i>GNUPro Libraries</i></b> for details.</font></td>
+</tr>
+
+<tr VALIGN=TOP>
+<td><a NAME="pgfId=1003691"></a><a NAME="marker=1003690"></a><tt><font size=+1>libio</font></tt></td>
+
+<td><a NAME="pgfId=1003694"></a><a NAME="marker=1003693"></a><font size=+1>C++
+iostreams library;</font>
+<br><font size=+1>see <i><a href="../4_libs/c_The_GNU_C++_Iostream_Library/libio.html">The
+GNU C++ Iostream Library</a></i> in <b><i>GNUPro Libraries</i></b> for
+details.</font></td>
+</tr>
+
+<tr VALIGN=TOP>
+<td><a NAME="pgfId=1003685"></a><tt><font size=+1>libstdc++</font></tt><a NAME="marker=1003684"></a></td>
+
+<td><a NAME="pgfId=1003688"></a><a NAME="marker=1003687"></a><font size=+1>C++
+class library</font></td>
+</tr>
+</table>
+
+<h2 CLASS="Heading2">
+<a NAME="pgfId=1003568"></a><a NAME="Binary_utilites"></a><b><i><font face="Times New Roman,Times">Binary
+utilities</font></i></b></h2>
+
+<div CLASS="Body"><font size=+1>See <a href="../5_ut/c_Usingbinutils/bin.html"><i>Using
+</i><tt>binutils</tt></a>
+in <b><i>GNUPro Utilities</i></b> for documentation for the following utilities.</font></div>
+
+<table BORDER >
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003572"></a><tt><font size=+1>c++filt</font></tt><a NAME="marker=1003571"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003575"></a><a NAME="marker=1003574"></a><font size=+1>C++
+symbol name deciphering utility</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003578"></a><tt><font size=+1>nm</font></tt><a NAME="marker=1003577"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003581"></a><font size=+1>Lists&nbsp;<a NAME="marker=1003580"></a>object
+file symbol tables</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003584"></a><tt><font size=+1>objdump</font></tt><a NAME="marker=1003583"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003587"></a><font size=+1>Displays&nbsp;<a NAME="marker=1003586"></a>object
+file information</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003590"></a><tt><font size=+1>size</font></tt><a NAME="marker=1003589"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003594"></a><font size=+1>Lists&nbsp;<a NAME="marker=1003592"></a>section
+and<a NAME="marker=1003593"></a>total sizes</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003597"></a><tt><font size=+1>ar</font></tt><a NAME="marker=1003596"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003600"></a><font size=+1>Manages&nbsp;<a NAME="marker=1003599"></a>object
+code archives</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003603"></a><tt><font size=+1>ranlib</font></tt><a NAME="marker=1003602"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003606"></a><font size=+1>Generates&nbsp;<a NAME="marker=1003605"></a>archive
+index</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003609"></a><tt><font size=+1>strip</font></tt><a NAME="marker=1003608"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003612"></a><font size=+1>Discards&nbsp;<a NAME="marker=1003611"></a>symbols</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003615"></a><tt><font size=+1>objcopy</font></tt><a NAME="marker=1003614"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003618"></a><font size=+1>Copies
+and translates&nbsp;<a NAME="marker=1003617"></a>object files</font></div>
+</td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>addr2line</font></tt></td>
+
+<td><font size=+1>Translates program addresses into file names and line
+numbers</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>windres</font></tt></td>
+
+<td><font size=+1>Manipulates Windows resources</font></td>
+</tr>
+</table>
+
+<h2 CLASS="Heading2">
+<a NAME="pgfId=1001628"></a><a NAME="General_utilities"></a><b><i><font face="Times New Roman,Times">General
+utilities</font></i></b></h2>
+
+<div CLASS="Body"><font size=+1>See <b><i>GNUPro Utilities</i></b> and
+<b><i>GNUPro
+Utilities </i></b>for clarification regarding the following utilities.</font></div>
+
+<table BORDER >
+<tr VALIGN=TOP>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1002591"></a><tt><font size=+1>flex</font></tt><a NAME="marker=1003193"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1002593"></a><font size=+1>Fast lexical
+analyzer generator suitable for GCC and other compilers;&nbsp;</font>
+<br><font size=+1>see <a href="../5_ut/d_UsingMake/make.html"><i>Using</i><tt>make</tt></a>
+for details.</font></div>
+</td>
+</tr>
+
+<tr VALIGN=TOP>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1002599"></a><font size=+1><tt>diff</tt>,
+<tt>diff3</tt>,
+<tt>sdiff</tt></font><a NAME="marker=1003640"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1002601"></a><font size=+1>Compare
+text files;&nbsp;</font>
+<br><font size=+1>see <a href="../5_ut/f_Usingdiff&patch/dif.html"><i>Using
+</i><tt>diff</tt><i>&amp;</i><tt>patch</tt></a>
+for details.</font></div>
+</td>
+</tr>
+
+<tr VALIGN=TOP>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1002603"></a><tt><font size=+1>patch</font></tt><a NAME="marker=1003196"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1002605"></a><font size=+1>Installs
+source fixes;&nbsp;</font>
+<br><font size=+1>see <a href="../5_ut/f_Usingdiff&patch/dif.html"><i>Using
+</i><tt>diff</tt><i>&amp;</i><tt>patch</tt></a>
+for details.</font></div>
+</td>
+</tr>
+</table>
+
+<h1 CLASS="Heading1">
+<a NAME="pgfId=1001670"></a><a NAME="_Ref385841378"></a><a NAME="_Toc394225486"></a><a NAME="_Ref385998803"></a><a NAME="_Toc394225487"></a><a NAME="_Ref400778880"></a><a NAME="_Toc400780809"></a><a NAME="GNUPro_Toolkit_documentation"></a><b><i><font face="Times New Roman,Times"><font size=+2>GNUPro
+Toolkit documentation</font></font></i></b></h1>
+
+<div CLASS="Body"><font size=+1>GNUPro Toolkit includes documentation in
+HTML and printed forms. See&nbsp; <a href="int01.html#Whats_in_the_documentation" CLASS="XRef">What’s
+in the documentation</a> for a listing of the documentation’s contents
+and also see <a href="#Documentation_conventions">Documentation conventions</a>.</font></div>
+
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1001673"></a><i><font size=+1>HTML</font></i></li>
+
+<br><font size=+1>To locate the documentation on the web, see <tt><a href="http://www.cygnus.com/pubs/gnupro">http://www.cygnus.com/pubs/gnupro</a></tt></font>
+<br>&nbsp;
+<li>
+<a NAME="pgfId=1001672"></a><i><font size=+1>Printed</font></i></li>
+
+<br><font size=+1>Available by request.</font>
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>&nbsp;</ul>
+</ul>
+
+<li>
+<a NAME="pgfId=1002320"></a><i><font size=+1>Online</font></i></li>
+
+<br><font size=+1>Texinfo <tt>info</tt> files. See <a href="int01.html#_Toc394225490" CLASS="XRef">Using
+online documentation</a>, <i><a href="int01.html#_Ref368716244" CLASS="XRef">Reading
+online documentation</a> </i>and <a href="../5_ut/e_Usinginfo/onlonl.html"><i>Using</i><tt>info</tt></a>.</font></ul>
+</ul>
+
+<h2 CLASS="Heading2">
+<a NAME="pgfId=1003009"></a><a NAME="Documentation_conventions"></a><b><i><font face="Times New Roman,Times">Documentation
+conventions</font></i></b></h2>
+
+<div CLASS="Body"><a NAME="pgfId=1003010"></a><a NAME="marker=1003225"></a><font size=+1>The
+documentation uses the following conventions for commands, filenames, and
+other program-specific subjects.</font></div>
+
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1003011"></a><tt><font size=+1>Typewriter-text for input</font></tt></li>
+
+<br><font size=+1>Indicates onscreen text as an example of input for a
+program, such as <tt>PATH=/usr/cygnus</tt> . It will also indicate other
+literal bits of text from a program, such as filenames or source code.</font>
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>&nbsp;</ul>
+</ul>
+
+<li>
+<a NAME="pgfId=1003013"></a><b><tt><font size=+1>Typewriter-text in bold
+for output</font></tt></b></li>
+
+<br><font size=+1>Indicates text that is an example of a program’s onscreen
+output such as command prompts.</font></ul>
+<a NAME="pgfId=1003014"></a><font face="Arial,Helvetica"><font size=+1>IMPORTANT!</font></font>
+<ul TYPE=SQUARE><a NAME="pgfId=1003015"></a><font size=+1><b><tt>% </tt></b>indicates
+a command prompt in most documentation; a command prompt in some rare examples,
+depending on the system in use and the program’s tool, may actually be
+<b><tt>#</tt></b>
+or <b><tt>$</tt></b> and, as with the visual debugger,
+<a href="int06.html">Cygnus
+Insight</a>, the command prompt is <b><tt>(gdb)</tt></b>.</font>
+<br>&nbsp;
+<li>
+<font size=+1>&nbsp;<a NAME="pgfId=1003016"></a><i><tt>Typewriter-text
+in italics for variables</tt></i></font></li>
+
+<br><font size=+1>Indicates text that stands for variable input such as
+<i><tt>filename</tt></i>
+where the actual input might be a file with the name, <tt>foobar.c</tt>
+.</font>
+<br><font size=+1>For instance, the documentation may read “To delete the
+file named <i><tt>filename</tt></i>, type <tt>rm</tt> <i><tt>filename</tt></i>.”
+<i><tt>filename</tt></i>
+stands for the file name that you need substitute.</font></ul>
+</ul>
+
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1003017"></a><font face="Arial Narrow"><font size=+1>Keys
+or keystroke combinations to use</font></font></li>
+
+<br><font size=+1>This font indicates keys on your keyboard, such as <font face="Arial Narrow">Ctrl</font>,
+<font face="Arial Narrow">Delete</font>,
+or even the <i>spacebar</i> key.</font></ul>
+</ul>
+
+<div CLASS="BodyListFollow">
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE><a NAME="pgfId=1003045"></a><font size=+1>The <font face="Arial Narrow">Ctrl</font>
+key and the <font face="Arial Narrow">Meta</font> key are often indicated
+in the text by <font face="Arial Narrow">C-</font> and <font face="Arial Narrow">M-</font>,
+respectively. In addition,
+<font face="Arial Narrow">Meta</font> (or <font face="Arial Narrow">M-</font>)
+may indicate, for example, the <font face="Arial Narrow">Alt</font> key
+on a Windows keyboard, or a diamond<i>-</i>key on UNIX keyboards.</font></ul>
+</ul>
+</div>
+
+<div CLASS="BodyListFollow">
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE><a NAME="pgfId=1003046"></a><font size=+1>The <font face="Arial Narrow">Enter</font>
+(carriage return) key on your keyboard may appear as <font face="Arial Narrow">ENTER</font>
+or <font face="Arial Narrow">RET</font> (for <font face="Arial Narrow">Return</font>)
+in text.</font></ul>
+</ul>
+</div>
+
+<div CLASS="Heading1"><a NAME="pgfId=1002324"></a><a NAME="Whats_in_the_documentation"></a><b><i><font face="Times New Roman,Times"><font size=+2>What’s
+in the documentation</font></font></i></b></div>
+
+<div CLASS="Body"><a NAME="pgfId=1016506"></a><a NAME="marker=1016505"></a>
+<br><font size=+1>GNUPro Toolkit documentation includes the following documentation.</font>
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li>
+&nbsp;<a NAME="pgfId=1016507"></a><b><i><font size=+1><a href="gsfront.html">Getting
+Started with GNUPro Toolkit</a></font></i></b></li>
+
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1001682"></a><i><font size=+1><a href="insfront.html">Installation</a></font></i></li>
+
+<ul TYPE=SQUARE>
+<li CLASS="ChapterTitle">
+<i><font size=+1><a href="ins01.html#Top" CLASS="XRef">Installing</a></font></i></li>
+
+<ul TYPE=SQUARE>
+<li CLASS="ChapterTitle">
+<i><font size=+1><a href="ins01.html#Install_UNIX" CLASS="XRef">Installing
+on UNIX</a></font></i></li>
+
+<li>
+<i><font size=+1><a href="ins01.html#Installing_on_Win95/NT">Installing
+for Windows</a></font></i></li>
+</ul>
+
+<li>
+<a NAME="pgfId=1001703"></a><i><font size=+1><a href="GPL.html#Top">General
+licenses and terms for using GNUPro Toolkit</a></font></i></li>
+
+<li>
+<i><font size=+1><a href="ins03.html">Reporting problems</a></font></i></li>
+</ul>
+
+<li>
+<a NAME="pgfId=1001681"></a><i><font size=+1><a href="intfront.html">Introduction</a></font></i></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font size=+1><a href="int01.html#Overview_of_GNUPro_Toolkit">Cygnus
+and GNUPro Toolkit fundamentals</a> </font></i><font size=+1>(this documentation)</font></li>
+
+<li>
+<i><font size=+1><a href="int02.html">Red flag alerts and enhancements</a></font></i></li>
+
+<li>
+<i><font size=+1><a href="int03.html">Issues from previous releases</a></font></i></li>
+
+<li>
+<i><font size=+1><a href="int04.html">Using the tools on native and embedded
+systems</a></font></i></li>
+
+<li>
+<i><font size=+1><a href="int05.html">Cygnus glossary</a></font></i></li>
+
+<li>
+<i><font size=+1><a href="int06.html">Working with Cygnus Insight, the
+visual debugger</a></font></i></li>
+
+<li>
+<a NAME="pgfId=1001700"></a><i><font size=+1><a href="reb.html">Rebuilding
+from source</a></font></i></li>
+</ul>
+</ul>
+
+<li>
+<font size=+1>&nbsp;<a NAME="pgfId=1001683"></a><b><i>GNUPro Compiler Tools</i></b></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1001685"></a><i><font size=+1><a href="../2_comp/Using_GNU_CC/gcc.html">Using
+GNU CC</a></font></i></li>
+
+<li>
+<a NAME="pgfId=1009464"></a><i><font size=+1><a href="../2_comp/The_C_Preprocessor/cpp.html">The
+C Preprocessor</a></font></i></li>
+</ul>
+
+<li>
+<font size=+1>&nbsp;<a NAME="pgfId=1001686"></a><b><i>GNUPro Debugging
+Tools</i></b></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1001688"></a><i><font size=+1><a href="../3_dbug/b_Debugging_with_GDB/gdb.html">Debugging
+with GDB</a></font></i></li>
+</ul>
+
+<li>
+<a NAME="pgfId=1001689"></a><b><i><font size=+1>GNUPro Libraries</font></i></b></li>
+
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1001690"></a><i><font size=+1><a href="../4_libs/a_GNUPro_C_Library/libc.html">GNUPro
+C Library</a></font></i></li>
+
+<li>
+<a NAME="pgfId=1001691"></a><i><font size=+1><a href="../4_libs/b_GNUPro_Math_Library/libm.html">GNUPro
+Math Library</a></font></i></li>
+
+<li>
+<a NAME="pgfId=1001692"></a><i><font size=+1><a href="../4_libs/c_The_GNU_C++_Iostream_Library/libio.html">The
+GNU C++ Iostream Library</a></font></i></li>
+</ul>
+
+<li>
+<font size=+1>&nbsp;<a NAME="pgfId=1001693"></a><b><i>GNUPro Utilities</i></b></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1001694"></a><font size=+1><a href="../5_ut/a_Using_AS/as.html"><i>Using
+</i><tt>as</tt></a>
+(the GNU Assembler)</font></li>
+
+<li>
+<a NAME="pgfId=1001696"></a><font size=+1><a href="../5_ut/b_Usingld/ld.html"><i>Using
+</i><tt>ld</tt></a>(the
+GNU Linker)</font></li>
+
+<li>
+<a NAME="pgfId=1001697"></a><font size=+1><a href="../5_ut/c_Usingbinutils/bin.html"><i>Using
+</i><tt>binutils</tt></a>
+(the GNU binary utilities)</font></li>
+
+<li>
+<a NAME="pgfId=1001698"></a><font size=+1><a href="../5_ut/d_UsingMake/make.html"><i>Using
+</i><tt>make</tt></a>
+(the GNU reconfiguring tool)</font></li>
+
+<li>
+<font size=+1><a href="../5_ut/e_Usinginfo/onlonl.html"><i>Using</i> <tt>info</tt></a>
+(GNU online help; not to be confused with HTML)</font></li>
+
+<li>
+<font size=+1><a href="../5_ut/f_Usingdiff&patch/dif.html"><i>Using </i><tt>diff
+</tt><i>&amp;
+</i><tt>patch</tt></a>
+(GNU tools for comparing &amp; merging files)</font></li>
+</ul>
+
+<li>
+<font size=+1>&nbsp;<a NAME="pgfId=1001704"></a><b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b></font></li>
+
+<br><i><font size=+1>(detailing usage of the GNU tools and embedded target
+development)</font></i></ul>
+</ul>
+</div>
+
+<div CLASS="Body">
+<h2 CLASS="Heading2">
+<a NAME="Using_website_documentation"></a><a NAME="_Ref385906907"></a><a NAME="_Toc394225491"></a><a NAME="_Toc400780812"></a><b><i><font face="Times New Roman,Times">Using
+website documentation</font></i></b></h2>
+
+<div CLASS="Body"><a NAME="pgfId=1009680"></a><font size=+1>As with all
+<i>GNU</i>
+software, the HTML source for documentation is available (or you can convert
+it yourself using publicly available utilities) if you wish to put them
+into an internal Web server.</font></div>
+
+<div CLASS="Body">
+<blockquote><tt><font size=+1><a href="http://www.cygnus.com/pubs/gnupro">http://www.cygnus.com/pubs/gnupro</a></font></tt></blockquote>
+</div>
+</div>
+
+<h2 CLASS="Heading2">
+<a NAME="Using_online_documentation"></a><a NAME="_Toc394225490"></a><a NAME="_Toc400780811"></a><b><i><font face="Times New Roman,Times">Using
+online documentation</font></i></b></h2>
+
+<div CLASS="Body"><a NAME="pgfId=1001737"></a><font size=+1>For online
+use, the CD includes online versions of the following documentation in
+the Texinfo form, <tt><a href="../5_ut/e_Usinginfo/onlonl.html">info</a></tt>
+(requiring the T<sub>E</sub>X tools). The <tt>info</tt> files do not have
+support since modifying them changes the source files, and that action
+delays the shipment of the tools. Therefore, the HTML documentation is
+more accurate since Cygnus can modify them until just prior to shipment.
+See <a href="../5_ut/e_Usinginfo/onlonl.html"><i>Using</i> <tt>info</tt></a>
+in <b><i>GNUPro Utilities</i></b> for documentation regarding these tools.</font></div>
+
+<div CLASS="BodyHang1">
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1001738"></a><a NAME="man pages"></a><font size=+1><tt>man</tt><i>
+pages</i></font></li>
+
+<br><font size=+1>Includes all the tools and programs in this release.</font></ul>
+</ul>
+</div>
+
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li CLASS="BodyHang1">
+<a NAME="pgfId=1001739"></a><a NAME="FLEX"></a><i><font size=+1>FLEX: A
+Fast Lexical Analyzer Generator</font></i></li>
+
+<br><font size=+1>Generates lexical analyzers suitable for GCC and other
+compilers.</font></ul>
+</ul>
+
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li CLASS="BodyHang1">
+<a NAME="pgfId=1001740"></a><i><font size=+1>Using an Porting GNU CC</font></i></li>
+
+<br><font size=+1>Contains information about requirements for putting GCC
+on different platforms, or for modifying GCC; includes documentation from
+<i><a href="../2_comp/Using_GNU_CC/gcc.html">Using
+GNU CC</a></i>.</font></ul>
+</ul>
+
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li CLASS="BodyHang1">
+<a NAME="pgfId=1001741"></a><a NAME="BYacc"></a><i><font size=+1>BYacc</font></i></li>
+
+<br><font size=+1>Discusses the Berkeley Yacc parser generator.</font></ul>
+</ul>
+
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li CLASS="BodyHang1">
+<a NAME="pgfId=1001743"></a><i><font size=+1>Texinfo: The GNU Documentation
+Format</font></i></li>
+
+<br><font size=+1>Details T<sub>E</sub>X and the printing and generating
+of documentation, as well as how to write manuals in the T<sub>E</sub>X
+style.</font></ul>
+</ul>
+
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li CLASS="BodyHang1">
+<a NAME="pgfId=1001744"></a><i><font size=+1>Cygnus configuration program</font></i></li>
+
+<br><font size=+1>Describes the configuration program that GNUPro Toolkit
+uses.</font></ul>
+</ul>
+
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li CLASS="BodyHang1">
+<a NAME="pgfId=1001745"></a><a NAME="coding standards"></a><i><font size=+1>GNU
+Coding Standards</font></i></li>
+
+<br><font size=+1>Elaborates on the coding standards with which the GNU
+projects develop.</font></ul>
+</ul>
+
+<ul TYPE=SQUARE>
+<ul TYPE=SQUARE>
+<li CLASS="BodyHang1">
+<a NAME="pgfId=1001746"></a><a NAME="gprof"></a><i><font size=+1>GNU gprof</font></i></li>
+
+<br><font size=+1>Details the GNU performance analyzer (only for the SunOS
+4.1.4 or Solaris 2.5/2.6 systems).</font></ul>
+</ul>
+
+<div CLASS="Body"><a NAME="pgfId=1001747"></a><font size=+1>You have the
+freedom to copy the documentation using its accompanying copyright statements,
+which include the necessary permissions.&nbsp;<a NAME="pgfId=1003797"></a>See
+<a href="../5_ut/e_Usinginfo/onlonl.html"><i>Using</i>
+<tt>info</tt></a> in <b><i>GNUPro Utilities</i></b> for documentation regarding
+the following tools.&nbsp;<a NAME="pgfId=1003777"></a>See also <a href="int01.html#_Ref368716244" CLASS="XRef">Reading
+online documentation</a>.</font></div>
+
+<center><table BORDER >
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003789"></a><a NAME="marker=1003785"></a><font size=+1>Texinfo<a href="#Texinfo">*</a>,
+<tt>texindex</tt>,
+<tt>texi2dvi</tt></font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003791"></a><font size=+1>Documentation
+formatting tools</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003794"></a><font size=+1><tt>makeinfo</tt>,
+<tt>info</tt></font><a NAME="marker=1003793"></a></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1003796"></a><font size=+1>Online
+documentation tools</font></div>
+</td>
+</tr>
+</table></center>
+
+<hr SIZE=3 WIDTH="100%">&nbsp;*<a NAME="Texinfo"></a><font size=-1> Requires
+T<sub>E</sub>X, the technical documentation formatting tool</font>
+<div CLASS="Body">&nbsp;</div>
+
+<h2 CLASS="Heading2">
+<a NAME="Reading_online_documentation"></a><a NAME="_Ref368716244"></a><a NAME="pgfId=1001751"></a><b><i><font face="Times New Roman,Times">Reading
+online documentation</font></i></b></h2>
+
+<div CLASS="Body"><font size=+1>Browse through the online documentation
+using either Emacs or the info documentation browser program, included
+with GNUPro Toolkit. Online, the information is organized into <i>nodes</i>,
+corresponding to the sections of a printed book.</font></div>
+
+<div CLASS="Body"><font size=+1>Follow them in sequence, as in the printed
+books, or, using the hyperlinks, find the node that has the information
+you need. <tt>info</tt> has hot references (if one section refers to another
+section, you can have <tt>info</tt> take you immediately to that other
+section—and you can get back again easily to take up your reading where
+you had been). You can also search for particular words or phrases.</font></div>
+
+<div CLASS="Body"><font size=+1>The best way to start with the online documentation
+system is to run the browser, <tt>info</tt>. After installing GNUPro Toolkit,
+use <tt>info</tt> by typing its name at a shell prompt—no options or arguments
+are necessary.</font>
+<br><font size=+1>You may need to check that <tt>info</tt> is in your shell
+path after you install GNUPro Toolkit. If you have problems running <tt>info</tt>,
+contact your system administrator.</font>
+<br><font size=+1>To learn how to use <tt>info</tt>, type <font face="Arial Narrow">h</font>
+for a programmed instruction sequence, or <font face="Arial Narrow">Ctrl+h</font>
+for a short summary of commands. To stop using <tt>info</tt>, type <font face="Arial Narrow">q</font>.</font>
+<br><a NAME="pgfId=1001758"></a><font size=+1>See <a href="../5_ut/e_Usinginfo/onlGNU_Online_Documentation_Overvie.html">Overview
+of <tt>info</tt></a> in&nbsp; <a href="../5_ut/e_Usinginfo/onlonl.html"><i>Using</i>
+<tt>info</tt></a>&nbsp; in <b><i>GNUPro Utilities</i></b> for links to
+detailed discussion of the
+<tt>info</tt> program.</font></div>
+
+<h1 CLASS="Heading1">
+<a NAME="pgfId=1003940"></a><a NAME="_Toc393702147"></a><a NAME="_Ref404147186"></a><a NAME="_Ref404147211"></a><a NAME="Native_configuration_support"></a><b><i><font face="Times New Roman,Times"><font size=+2>Native
+configurations support</font></font></i></b></h1>
+
+<div CLASS="Body"><font size=+1>GNUPro Toolkit software supports the following
+native configurations.</font></div>
+
+<table COLS=1 WIDTH="100%" >
+<tr>
+<td>
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1003953"></a><font size=+1>DEC’s Alpha Digital UNIX 4.0</font></li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1003947"></a><font size=+1>Hewlett Packard’s 9000/700 HP-UX
+10.01</font></li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>Hewlett Packard’s 9000/700 HP-UX 10.20</font></li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>Hewlett Packard’s 9000/700 HP-UX 10.20/11.0</font><sup><font size=-1><a href="#1HP11>32bit">*</a></font></sup></li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1003961"></a><font size=+1>Microsoft’s Windows</font><sup><font size=-1><a href="#2RH>Versions">†</a></font></sup><font size=+1>
+NT4.0-sp3</font><sup><font size=-1><a href="#3Solaris7>32bit">‡</a></font></sup><font size=+1>/95-osr2/98&nbsp;</font></li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1003951"></a><font size=+1>IBM’s PowerPC 4.2</font></li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1003963"></a><font size=+1>Red Hat’s Linux 5.1/5.2/6.0 (<b><i><tt>x</tt></i></b>86</font><sup><font size=-1><a href="#4WIN>Rebuild">**</a></font></sup><font size=+1>)</font></li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1003955"></a><font size=+1>SGI’s Iris 6.2</font></li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1003943"></a><font size=+1>Sun’s SPARC Solaris 2.5.1</font></li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1003943"></a><font size=+1>Sun’s SPARC Solaris 2.6</font></li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1003943"></a><font size=+1>Sun’s SPARC Solaris 7.0</font><sup><font size=-1><a href="#5Cygwin">††</a></font></sup></li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>
+<ul TYPE=SQUARE>
+<li>
+<a NAME="pgfId=1003945"></a><font size=+1>Sun’s SPARC SunOS 4.1.4</font></li>
+</ul>
+</td>
+</tr>
+</table>
+
+<div CLASS="Heading1">
+<hr SIZE=3 WIDTH="100%"></div>
+
+<table WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="1HP11>32bit"></a><sup><font size=-1>*</font></sup></td>
+
+<td><font size=-1>The support for Hewlett Packard’s 9000/700 HP-UX 11.0
+version is only for 32-bit mode.</font></td>
+</tr>
+
+<tr>
+<td><a NAME="2RH>Versions"></a><sup><font size=-1>†</font></sup></td>
+
+<td><font size=-1><b>IMPORTANT</b>: There is no support for rebuilding
+cross-configurations for the Windows 95 and 98 versions; rebuilding is
+only available for the NT version.</font>
+<br><font size=-1>To name the Windows operating systems, Cygnus uses “NT4.0-sp3”
+for Windows NT 4.0/service pack 3, and “95-osr2” for Windows 95/operating
+system revision 2.</font></td>
+</tr>
+
+<tr>
+<td><a NAME="3Solaris7>32bit"></a><sup><font size=-1>‡</font></sup></td>
+
+<td><font size=-1>See also <a href="http://sourceware.cygnus.com/cygwin/usenix-98/cygwin.html">Cygwin:
+a free Win32 porting layer for UNIX</a>, <a href="http://sourceware.cygnus.com/cygwin/cygwin-ug-net/cygwin-ug-net.html">Cygwin
+User’s Guide</a> and <a href="http://sourceware.cygnus.com/cygwin/cygwin-api/cygwin-api.html">Cygwin
+API Reference</a>, and applications in <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b> for details about using the tools
+for developing programs in the Win32 environment.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="4WIN>Rebuild"></a><sup><font size=-1>**</font></sup></td>
+
+<td><font size=-1>The 486, 586 and 686 are the supported versions.</font></td>
+</tr>
+
+<tr>
+<td><a NAME="5Cygwin"></a><sup><font size=-1>††</font></sup></td>
+
+<td><sup><font size=-1>The support for&nbsp; Sun’s SPARC Solaris 7.0 version
+is only for 32-bit mode.</font></sup></td>
+</tr>
+</table>
+
+<hr SIZE=3 WIDTH="100%">
+<br><font size=+1>For working with the tools, see <a href="int04.html#Top">Using
+the tools on native and embedded systems</a>. For embedded targets, <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b>.</font>
+<h1 CLASS="Heading1">
+<a NAME="pgfId=1003968"></a><a NAME="_Ref393695427"></a><a NAME="_Toc393702148"></a><a NAME="Embedded_cross-configuration_support"></a><b><i><font face="Times New Roman,Times"><font size=+2>Embedded
+cross-configuration support</font></font></i></b></h1>
+
+<div CLASS="Body"><a NAME="pgfId=1003969"></a><font size=+1>GNUPro Toolkit
+software supports embedded cross-configuration targets for the following
+host operating systems.</font>
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>For Hewlett Packard operating systems and the targets, see
+<a href="#T1HPUX">Table
+1</a>.</font></li>
+
+<li>
+<font size=+1>For Microsoft operating systems and the targets, see <a href="#T2MS">Table
+2</a>.</font></li>
+
+<li>
+<font size=+1>For Red Hat Linux operating systems and the targets, see
+<a href="#T3RH">Table
+3</a>.</font></li>
+
+<li>
+<font size=+1>For Sun’s Solaris operating systems and the targets, see
+<a href="#T4Solaris">Table
+4</a>.</font></li>
+
+<li>
+<font size=+1>For Sun’s SunOS operating systems and the targets, see <a href="#T5SunOS">Table
+5</a>.</font></li>
+</ul>
+<font size=+1>For working with the tools, see <a href="int04.html#Top">Using
+the tools on native and embedded systems</a>. For embedded targets, <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b>.</font>
+<ul TYPE=SQUARE><a NAME="pgfId=1003979"></a><i><font face="Times New Roman,Times"><font size=+1>Note:</font></font></i>
+<br><a NAME="pgfId=1007559"></a><font size=+1>In the following tables,
+<b><i><tt>x</tt></i></b>
+denotes a version number range; see accompanying footnotes of host or target
+information for each table.</font></ul>
+</div>
+
+<div CLASS="Note"><a NAME="pgfId=1008967"></a><a NAME="Table1_Embedded"></a><a NAME="T1HPUX"></a><b><font size=+1>Table
+1: Embedded cross-configuration support for Hewlett Packard systems</font></b></div>
+
+<table BORDER CELLPADDING=3 >
+<tr BGCOLOR="#CCCCCC">
+<td>
+<div CLASS="CellHeading"><a NAME="pgfId=1009691"></a><b><i><font size=+2>Host</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><a NAME="pgfId=1009693"></a><b><i><font size=+2>Target</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><a NAME="pgfId=1009695"></a><b><i><font size=+2>Output
+Format</font></i></b></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><b><i><font size=+1>HP-UX 10.<tt>x</tt></font></i></b><sup><font size=-1><a href="#T1HPUXFN1">*</a></font></sup></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1>Motorola 68K</font><sup><font size=-1><a href="#T1HPUXFN2">†</a></font></sup></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1>a.out </font><sup><font size=-1>‡</font></sup></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>MIPS V</font><sub>R</sub><font size=+1>4300</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>MIPS 64 V</font><sub>R</sub><font size=+1>5<i><tt>xxx</tt></i></font><sup><font size=-1><a href="#T1HPUXFN4">**</a></font></sup></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>PowerPC</font></td>
+
+<td><font size=+1>EABI </font><sup><font size=-1><a href="#T1HPUXFN5">††</a></font></sup></td>
+</tr>
+</table>
+
+<div CLASS="Heading1">
+<hr SIZE=3 WIDTH="100%">
+<table WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T1HPUXFN1"></a><sup><font size=-1>*</font></sup></td>
+
+<td>
+<div CLASS="Heading1"><font size=-1>The HP-UX platform that has support
+for cross-configuration is the10.01 version; the 10.20 and 11.0 versions
+have no cross-configuration support, although they may work with embedded
+targets in this list.</font></div>
+</td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T1HPUXFN2"></a><sup><font size=-1>†</font></sup></td>
+
+<td><font size=-1>“68K” or “m68k” signifies the 68000 series processors
+from Motorola.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T1HPUXFN3"></a><sup><font size=-1>‡</font></sup></td>
+
+<td><font size=-1>To use the Motorola “Coldfire” version as the configuration
+to target, see <a href="../6_embed/embCompiler_options_for_m68k.html">Motorola
+</a></font><a href="../6_embed/embCompiler_options_for_m68k.html"><tt><font point-size="9">m68k
+</font></tt><font size=-1>development</font></a><font size=-1>
+in <b><i><a href="../6_embed/emb.html">GNUPro Tools for Embedded Systems</a></i></b>.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T1HPUXFN4"></a><sup><font size=-1>**</font></sup></td>
+
+<td><sup><font size=-1>The processors that have support are all the NEC
+5000 and 5400 CPU versions.</font></sup></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T1HPUXFN5"></a><sup><font size=-1>††</font></sup></td>
+
+<td><font size=-1>EABI signifies the embedded ABI ELF format.</font></td>
+</tr>
+</table>
+
+<hr SIZE=3 WIDTH="100%"></div>
+<a NAME="T2MS"></a><b><font size=+1>Table 2: Embedded cross-configuration
+support for Microsoft systems</font></b>
+<table BORDER CELLPADDING=3 >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#CCCCCC">
+<td>
+<div CLASS="CellHeading"><a NAME="pgfId=1009691"></a><a NAME="T2WIN"></a><b><i><font size=+2>Host</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><a NAME="pgfId=1009693"></a><b><i><font size=+2>Target</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><a NAME="pgfId=1009695"></a><b><i><font size=+2>Output
+Format</font></i></b></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><b><i><font size=+1>Microsoft Windows</font></i></b><sup><font size=-1><a href="#T2MSFN1">*</a></font></sup><b><i><font size=+1>
+NT4.0</font></i></b><sup><font size=-1><a href="#T2MSFN2">†</a></font></sup></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><sup><font size=+1>ARM 7</font></sup></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><sup><font size=+1>ARM 7T</font><font size=-1><a href="#T2MSFN3">‡</a></font></sup></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>Fujitsu SPARClite</font></td>
+
+<td><font size=+1>a.out, ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>Hitachi H8/300, H8/300H, H8S</font></td>
+
+<td><font size=+1>COFF</font><font size=-1><a href="#T2MSFN4">**</a></font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>Hitachi SH1/2/3/4</font></td>
+
+<td><font size=+1>COFF</font><font size=-1><a href="#T2MSFN5">††</a></font><font size=+1>,
+ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>Intel i960</font></td>
+
+<td><font size=+1>COFF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>MicroSPARC</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>Matsushita MN10200/MN10300</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>MIPS R4<i><tt>xx</tt></i>0</font><font size=-1><a href="#T2MSFN6">‡‡</a></font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>MIPS V</font><sub>R</sub><font size=+1>4100</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>MIPS V</font><sub>R</sub><font size=+1>4300</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>MIPS 64 V</font><sub>R</sub><font size=+1>5<i><tt>xxx</tt></i></font><font size=-1><a href="#T2MSFN7">***</a></font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>MIPS LSI TinyRISC</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>MIPS TX39</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>Mitsubishi D10V</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>Motorola 68K</font><font size=-1><a href="#T2MSFN8">†††</a></font></td>
+
+<td><font size=+1>COFF, ELF</font><font size=-1><a href="#T2MSFN9">‡‡‡</a></font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>NEC V85<i><tt>x</tt></i></font><font size=-1><a href="#T2MSFN10">****</a></font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>PowerPC</font></td>
+
+<td><font size=+1>EABI</font><font size=-1><a href="#T2MSFN11">††††</a></font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1><i><tt>x</tt></i>86</font><sup><font size=-1><a href="#T2MSFN12">‡‡‡‡</a></font></sup></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+</table>
+
+<div CLASS="Heading1">
+<hr SIZE=3 WIDTH="100%">
+<table WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T2MSFN1"></a><sup><font size=-1>*</font></sup></td>
+
+<td><font size=-1>See also <a href="http://sourceware.cygnus.com/cygwin/usenix-98/cygwin.html">Cygwin:
+a free Win32 porting layer for UNIX</a>, <a href="http://sourceware.cygnus.com/cygwin/cygwin-ug-net/cygwin-ug-net.html">Cygwin
+User’s Guide</a> and <a href="http://sourceware.cygnus.com/cygwin/cygwin-api/cygwin-api.html">Cygwin
+API Reference</a>, and applications in <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b> for details about using the tools
+for developing programs in the Win32 environment.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T2MSFN2"></a><sup><font size=-1>†</font></sup></td>
+
+<td><font size=-1><b>IMPORTANT:</b> There is no support for rebuilding
+cross-configurations for the Windows 95 and 98 versions; rebuilding is
+<b><i>only</i></b>
+available for the NT version.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T2MSFN3"></a><sup><font size=-1>‡</font></sup></td>
+
+<td><font size=-1>This is the THUMB version of the ARM processor</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T2MSFN4"></a><sup><font size=-1>**</font></sup></td>
+
+<td><font size=-1>The Cygnus naming convention for the Hitachi H8300, H8/300H,
+and H8S uses the “</font><tt><font point-size="9">hms</font></tt><font size=-1>”
+notation for COFF.</font></td>
+</tr>
+
+<tr>
+<td><a NAME="T2MSFN5"></a><sup><font size=-1>††</font></sup></td>
+
+<td><font size=-1>The Cygnus naming convention for the Hitachi SH series
+uses the “</font><tt><font point-size="9">hms</font></tt><font size=-1>”
+notation for COFF.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T2MSFN6"></a><sup><font size=-1>‡‡</font></sup></td>
+
+<td><font size=-1>The versions supported are the 4100 and 4300 series.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T2MSFN7"></a><sup><font size=-1>***</font></sup></td>
+
+<td><font size=-1>The MIPS processors that have support are the NEC 5000
+and 5400 CPU versions.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T2MSFN8"></a><sup><font size=-1>†††</font></sup></td>
+
+<td><font size=-1>“68K” or “</font><tt><font point-size="10">m68k</font></tt><font size=-1>”
+signifies the 68000 series processors from Motorola.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T2MSFN9"></a><sup><font size=-1>‡‡‡</font></sup></td>
+
+<td><font size=-1>To use the Motorola “Coldfire” version as the configuration
+to target, see “Motorola m68k development” in GNUPro Tools for Embedded
+Systems.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T2MSFN10"></a><sup><font size=-1>****</font></sup></td>
+
+<td><font size=-1>The V850 and the V851 are the supported versions.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T2MSFN11"></a><sup><font size=-1>††††</font></sup></td>
+
+<td><font size=-1>EABI signifies the embedded ABI ELF format.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T2MSFN12"></a><sup><font size=-1>‡‡‡‡</font></sup></td>
+
+<td><font size=-1>The 486, 586 and 686 are the supported versions.</font></td>
+</tr>
+</table>
+
+<hr SIZE=3 WIDTH="100%"><a NAME="T3RH"></a><b><font size=+1>Table 3: Embedded
+cross-configuration support for Red Hat Linux systems</font></b>
+<table BORDER CELLPADDING=3 >
+<tr BGCOLOR="#CCCCCC">
+<td>
+<div CLASS="CellHeading"><b><i><font size=+2>Host</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><b><i><font size=+2>Target</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><b><i><font size=+2>Output Format</font></i></b></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><b><i><font size=+1>Red Hat Linux 5.1/5.2</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><sup><font size=+1>ARM 7</font></sup></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><sup><font size=+1>ARM 7T</font><font size=-1><a href="#T3RHFN1">*</a></font></sup></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>Fujitsu SPARClite</font></td>
+
+<td><font size=+1>a.out, ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>Hitachi SH1/2/3/4</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>PowerPC</font></td>
+
+<td><font size=+1>EABI</font><sup><font size=-1><a href="#T3RHFN2">†</a></font></sup></td>
+</tr>
+</table>
+
+<hr SIZE=3 WIDTH="100%">
+<table WIDTH="100%" >
+<tr>
+<td><a NAME="T3RHFN1"></a><sup><font size=-1>*</font></sup></td>
+
+<td><font size=-1>This is the THUMB version of the ARM processor.</font></td>
+</tr>
+
+<tr>
+<td><a NAME="T3RHFN2"></a><sup><font size=-1>†</font></sup></td>
+
+<td><font size=-1>EABI signifies the embedded ABI ELF output format.</font></td>
+</tr>
+</table>
+
+<hr SIZE=3 WIDTH="100%">
+<br><a NAME="T4Solaris"></a><b><font size=+1>Table 4: Embedded cross-configuration
+support for Sun’s Solaris systems</font></b>
+<table BORDER CELLPADDING=3 >
+<tr BGCOLOR="#CCCCCC">
+<td>
+<div CLASS="CellHeading"><b><i><font size=+2>Host</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><b><i><font size=+2>Target</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><b><i><font size=+2>Output Format</font></i></b></div>
+</td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td>
+<div CLASS="CellBody"><b><i><font size=+1>Sun SPARC Solaris 2.5</font></i></b><sup><font size=-1><a href="#T4SolFN1">*</a></font></sup></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1>ARM 7</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1>ELF</font></div>
+</td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>ARM 7T</font><sup><font size=-1><a href="#T4SolFN2">†</a></font></sup></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>Hitachi H8/300, H8/300H, H8S</font></td>
+
+<td><font size=+1>COFF</font><sup><font size=-1><a href="#T4SolFN3">‡</a></font></sup></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>Hitachi SH1/2/3/4</font></td>
+
+<td><font size=+1>COFF</font><sup><font size=-1><a href="#T4SolFN4">**</a></font></sup></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>Intel i960</font></td>
+
+<td><font size=+1>COFF</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>Matsushita MN10200/MN10300</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>MicroSPARC</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>MIPS 64 R4<i><tt>xxx</tt></i></font><sup><font size=-1><a href="#T5SolFN5">††</a></font></sup></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>MIPS 64 V</font><sub>R</sub><font size=+1>4100</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>MIPS 64 V</font><sub>R</sub><font size=+1>4300</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>MIPS 64 V</font><sub>R</sub><font size=+1>5<i><tt>xxx</tt></i></font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>MIPS LSI TinyRISC</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>MIPS TX39</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>Mitsubishi D10V</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>Mitsubishi M32R</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>Motorola 68K</font><sup><font size=-1><a href="#T4SolFN6">‡‡</a></font></sup></td>
+
+<td><font size=+1>a.out, COFF, ELF</font><sup><font size=-1>***</font></sup></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>NEC v85<i><tt>x</tt></i></font><sup><font size=-1><a href="#T4SolFN8">†††</a></font></sup></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>PowerPC</font></td>
+
+<td><font size=+1>EABI</font><sup><font size=-1><a href="#T4SolFN9">‡‡‡</a></font></sup></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>Sun MicroSPARC</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>Sun SPARC</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1>Sun UltraSPARC</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>Temic SPARClet</font></td>
+
+<td><font size=+1>a.out</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td></td>
+
+<td><font size=+1><i><tt>x</tt></i>86</font><sup><font size=-1><a href="#T4SolFN10">****</a></font></sup></td>
+
+<td><font size=+1>COFF, ELF</font></td>
+</tr>
+</table>
+
+<hr SIZE=3 WIDTH="100%">
+<table WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T4SolFN1"></a><sup><font size=-1>*</font></sup></td>
+
+<td><font size=-1><b>IMPORTANT:</b> There is no support for rebuilding
+cross-configurations for Solaris 2.6 and 7.0 systems; rebuilding is only
+available for the 2.5 version.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T4SolFN2"></a><sup><font size=-1>†</font></sup></td>
+
+<td><font size=-1>This is the THUMB version of the ARM processor.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T4SolFN3"></a><sup><font size=-1>‡</font></sup></td>
+
+<td><font size=-1>The Cygnus naming convention for the Hitachi H8300, H8/300H,
+and H8S uses the “</font><tt><font point-size="9">hms</font></tt><font size=-1>”
+notation for COFF.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T4SolFN4"></a><sup><font size=-1>**</font></sup></td>
+
+<td><font size=-1>The Cygnus naming convention for the Hitachi H8300, H8/300H,
+and H8S uses the “</font><tt><font point-size="9">hms</font></tt><font size=-1>”
+notation for COFF.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T5SolFN5"></a><sup><font size=-1>††</font></sup></td>
+
+<td><font size=-1>The processors that have support are all the 4100 and
+the 4300 CPU versions.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T4SolFN6"></a><sup><font size=-1>‡‡</font></sup></td>
+
+<td><font size=-1>“68K” or “</font><tt><font point-size="9">m68k</font></tt><font size=-1>”
+signifies the 68000 series processors from Motorola.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T4SolFN7"></a><sup><font size=-1>***</font></sup></td>
+
+<td><font size=-1>To use the Motorola “Coldfire” version as the configuration
+to target, see “Motorola m68k development” in GNUPro Tools for Embedded
+Systems.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T4SolFN8"></a><sup><font size=-1>†††</font></sup></td>
+
+<td><font size=-1>The V850 and the V851 are the supported versions.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T4SolFN9"></a><sup><font size=-1>‡‡‡</font></sup></td>
+
+<td><font size=-1>EABI signifies the embedded ABI ELF output format.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T4SolFN10"></a><sup><font size=-1>****</font></sup></td>
+
+<td><font size=-1>The 486, 586 and 686 are the supported versions.</font></td>
+</tr>
+</table>
+
+<hr SIZE=3 WIDTH="100%">
+<br><a NAME="T5SunOS"></a><b><font size=+1>Table 5: Embedded cross-configuration
+support for Sun’s SunOS systems</font></b>
+<table BORDER CELLPADDING=3 >
+<tr BGCOLOR="#CCCCCC">
+<td>
+<div CLASS="CellHeading"><b><i><font size=+2>Host</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><b><i><font size=+2>Target</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellHeading"><b><i><font size=+2>Output Format</font></i></b></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><b><i><font size=+1>Sun SPARC SunOS 4.1.4</font></i></b></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1>Hitachi SH1/2/3/4</font></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><font size=+1>COFF&nbsp;</font></div>
+</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>Intel i960</font></td>
+
+<td><font size=+1>COFF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>MIPS 64 R4<i><tt>xxx</tt></i></font><sup><font size=-1><a href="#T5SunOSFN1">*</a></font></sup></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>MIPS 64 V</font><sub>R</sub><font size=+1>4<i><tt>xxx</tt></i></font><sup><font size=-1><a href="#T%SunOSFN2">†</a></font></sup></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>MIPS 64 V</font><sub>R</sub><font size=+1>5<i><tt>xxx</tt></i></font><sup><font size=-1><a href="#T5SunOSFN3">‡</a></font></sup></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>MIPS LSI TinyRISC</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>MIPS TX39</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>Mitsubishi D10V</font></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>Motorola 68K</font><sup><font size=-1><a href="#T5SunOSFN4">**</a></font></sup></td>
+
+<td><font size=+1>a.out, COFF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>NEC V85<i><tt>x</tt></i></font><sup><font size=-1><a href="#T5SunOSFN5">††</a></font></sup></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>PowerPC</font></td>
+
+<td><font size=+1>EABI</font><sup><font size=-1><a href="#T5SunOSFN6">‡‡</a></font></sup></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font size=+1>Temic SPARClet</font></td>
+
+<td><font size=+1>a.out</font></td>
+</tr>
+</table>
+
+<hr SIZE=3 WIDTH="100%">
+<table WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T5SunOSFN1"></a><sup><font size=-1>*</font></sup></td>
+
+<td><font size=-1>The processors that have support are all the 4100 and
+the 4300 CPU versions.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T%SunOSFN2"></a><sup><font size=-1>†</font></sup></td>
+
+<td><font size=-1>The MIPS processors that have support are all the NEC
+4000 CPU versions.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T5SunOSFN3"></a><sup><font size=-1>‡</font></sup></td>
+
+<td><font size=-1>The MIPS processors that have support are all the NEC
+5000 and 5400 CPU versions.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T5SunOSFN4"></a><sup><font size=-1>**</font></sup></td>
+
+<td><font size=-1>“68K” or “</font><tt><font point-size="9">m68k</font></tt><font size=-1>”
+signifies the 68000 series processors from Motorola.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T5SunOSFN5"></a><sup><font size=-1>††</font></sup></td>
+
+<td><font size=-1>The V850 and the V851 are the supported versions.</font></td>
+</tr>
+
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T5SunOSFN6"></a><sup><font size=-1>‡‡</font></sup></td>
+
+<td><font size=-1>EABI signifies the embedded ABI ELF output format.</font></td>
+</tr>
+</table>
+</div>
+
+<h1 CLASS="Heading1">
+<a NAME="pgfId=1007422"></a><a NAME="_Toc393702150"></a><a NAME="Version_numbers_for_programs"></a><b><i><font face="Times New Roman,Times"><font size=+2>Version
+numbers for programs</font></font></i></b></h1>
+
+<div CLASS="Body"><a NAME="pgfId=1004403"></a><font size=+1><a href="int01.html#Table6_Versions_of_the_tools" CLASS="XRef">Table
+6: Tools and their versions</a> shows the current version numbers for individual
+programs in GNUPro Toolkit.</font></div>
+
+<div CLASS="TableTitle"><a NAME="Table6_Versions_of_the_tools"></a><b><font face="Times New Roman,Times"><font size=+1>Table
+6: Tools and their versions</font></font></b></div>
+
+<table BORDER >
+<tr BGCOLOR="#CCCCCC">
+<th>
+<div CLASS="CellHeading"><a NAME="pgfId=1004406"></a><i><font size=+1>Program&nbsp;</font></i></div>
+</th>
+
+<th>
+<div CLASS="CellHeading"><a NAME="pgfId=1004408"></a><i><font size=+1>Version
+Numbers</font></i></div>
+</th>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004410"></a><tt><font size=+1>bfd</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004415"></a><tt><font size=+1>2.8-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004417"></a><tt><font size=+1>binutils</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004422"></a><tt><font size=+1>2.9-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004431"></a><tt><font size=+1>diff</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004436"></a><tt><font size=+1>2.7-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004438"></a><tt><font size=+1>expect</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004443"></a><tt><font size=+1>5.23-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004445"></a><tt><font size=+1>flex</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004450"></a><tt><font size=+1>2.5-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004452"></a><tt><font size=+1>gas</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004457"></a><tt><font size=+1>2.9-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004466"></a><tt><font size=+1>gcc</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004471"></a><tt><font size=+1>2.9-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004473"></a><tt><font size=+1>gcov</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004478"></a><tt><font size=+1>1.5-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004480"></a><tt><font size=+1>gdb</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004485"></a><tt><font size=+1>4.17-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004491"></a><tt><font size=+1>ld</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004496"></a><tt><font size=+1>2.8-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004498"></a><tt><font size=+1>libstdc++</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004503"></a><tt><font size=+1>2.8-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004505"></a><tt><font size=+1>libio</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004510"></a><tt><font size=+1>2.8-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004512"></a><tt><font size=+1>make</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004517"></a><tt><font size=+1>3.75-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004519"></a><tt><font size=+1>makeinfo</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004524"></a><tt><font size=+1>1.68-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004526"></a><tt><font size=+1>newlib/libc</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004531"></a><tt><font size=+1>1.8-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004533"></a><tt><font size=+1>newlib/libm</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004538"></a><tt><font size=+1>1.8-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004540"></a><tt><font size=+1>patch</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004545"></a><tt><font size=+1>2.5-gnupro-99r1</font></tt></div>
+</td>
+</tr>
+</table>
+
+<h1 CLASS="Heading1">
+<a NAME="pgfId=1004560"></a><a NAME="_Ref393711542"></a><a NAME="_Toc405092893"></a><a NAME="_Ref366990148"></a><a NAME="_Ref366995391"></a><a NAME="_Ref366997502"></a><a NAME="Naming_hosts_&_targets"></a><b><i><font face="Times New Roman,Times"><font size=+2>Naming
+hosts and targets</font></font></i></b></h1>
+
+<div CLASS="Body"><a NAME="pgfId=1004561"></a><font size=+1>Your CD is
+labeled to indicate the host (and target, if applicable) for which the
+binaries in GNUPro Toolkit are configured. The specifications used for
+hosts and targets in the configure script are based on a three-part naming
+scheme, though the scheme is slightly different between hosts and targets.
+For hosts, see <a href="#Host_names">Host names</a>, and for targets, see
+<a href="#Target_names">Target
+names</a>.</font></div>
+
+<div CLASS="Body">
+<ul><a NAME="pgfId=1004568"></a><b><font face="Arial,Helvetica"><font size=+1>WARNING!</font></font></b>
+<br><a NAME="pgfId=1004569"></a><font size=+1><tt>configure</tt> can represent
+a very large number of combinations of architecture, vendor, and operating
+systems. Support is not possible for all combinations.</font></ul>
+</div>
+
+<h2 CLASS="Heading2">
+<a NAME="pgfId=1004572"></a><a NAME="Host_names"></a><b><i><font face="Times New Roman,Times">Host
+names</font></i></b></h2>
+
+<div CLASS="Body"><a NAME="pgfId=1004576"></a><font size=+1><a href="#Table7_Naming_hosts" CLASS="XRef">Table
+7: Naming hosts</a><i> </i>shows the usage of canonical names for referring
+to the corresponding host platforms that Cygnus supports. For questions
+about compatibility, contact Cygnus (see <a href="gsfront.html#How_to_Contact_Cygnus" CLASS="XRef">How
+to contact Cygnus</a>).</font></div>
+
+<h6 CLASS="TableTitle">
+<a NAME="pgfId=1004630"></a><a NAME="Table7_Naming_hosts"></a><font face="Times New Roman,Times"><font size=+1>Table
+7: Naming hosts</font></font></h6>
+
+<table BORDER >
+<tr BGCOLOR="#CCCCCC">
+<th>
+<div CLASS="CellHeading"><a NAME="pgfId=1004583"></a><i><font size=+1>Canonical
+name</font></i></div>
+</th>
+
+<th>
+<div CLASS="CellHeading"><a NAME="pgfId=1004585"></a><i><font size=+1>Platform</font></i></div>
+</th>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004591"></a><tt><font size=+1>alpha-dec-osf4.0</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004593"></a><font size=+1>DEC Alpha
+Digital UNIX 4.0</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004595"></a><tt><font size=+1>hppa1.1-hp-hpux10</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004597"></a><font size=+1>Hewlett
+Packard 9000/700, HP-UX 10.01</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004599"></a><tt><font size=+1>hppa1.1-hp-hpux10.20</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004601"></a><font size=+1>Hewlett
+Packard 9000/700, HP-UX 10.20</font></div>
+</td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>hppa1.1-hp-hpux11</font></tt></td>
+
+<td><font size=+1>Hewlett Packard 9000/700, HP-UX 11.0</font></td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009450"></a><tt><font size=+1>i686-cygwin</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1009452"></a><font size=+1>Microsoft
+Windows NT-sp3/95-osr2/98</font><sup><font size=-1><a href="#T7HostsFN1">*</a></font></sup></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1005704"></a><tt><font size=+1>i686-pc-linux-gnu</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1005706"></a><font size=+1>Intel PC,
+Linux RedHat 5.1/5.2/6.0</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004607"></a><tt><font size=+1>mips-sgi-irix6</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004609"></a><font size=+1>SGI Irix
+6.2</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004615"></a><tt><font size=+1>powerpc-ibm-aix4.2</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1005707"></a><font size=+1>IBM PowerPC,
+AIX 4.2.1</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004619"></a><tt><font size=+1>sparc-sun-solaris2.5</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004621"></a><font size=+1>Sun SPARCstation,
+Solaris 2.5.1</font></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004623"></a><tt><font size=+1>sparc-sun-solaris2.6</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004625"></a><font size=+1>Sun SPARCstation,
+Solaris 2.6</font></div>
+</td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>sparc-sun-solaris2.7</font></tt></td>
+
+<td><font size=+1>Sun SPARCstation, Solaris 2.7</font></td>
+</tr>
+
+<tr>
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004627"></a><tt><font size=+1>sparc-sun-sunos4.1</font></tt></div>
+</td>
+
+<td>
+<div CLASS="CellBody"><a NAME="pgfId=1004629"></a><font size=+1>Sun SPARCstation,
+SunOS 4.1.4</font></div>
+</td>
+</tr>
+</table>
+
+<div CLASS="Heading2">
+<hr SIZE=3 WIDTH="100%"></div>
+
+<table WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T7HostsFN1"></a><sup><font size=-1>*</font></sup></td>
+
+<td><font size=-1><b>IMPORTANT:</b> There is no support for rebuilding
+cross-configurations for the Windows 95 and 98 versions; rebuilding is
+<b><i>only</i></b>
+available for the NT version.</font>
+<br><font size=-1>See also <a href="http://sourceware.cygnus.com/cygwin/usenix-98/cygwin.html">Cygwin:
+a free Win32 porting layer for UNIX</a>, <a href="http://sourceware.cygnus.com/cygwin/cygwin-ug-net/cygwin-ug-net.html">Cygwin
+User’s Guide</a> and <a href="http://sourceware.cygnus.com/cygwin/cygwin-api/cygwin-api.html">Cygwin
+API Reference</a>, and applications in <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b> for details about using the tools
+for developing programs in the Win32 environment.</font></td>
+</tr>
+</table>
+
+<h2 CLASS="Heading2">
+<a NAME="pgfId=1004632"></a><a NAME="Target_names"></a><b><i><font face="Times New Roman,Times">Target
+names</font></i></b></h2>
+
+<div CLASS="Body"><a NAME="pgfId=1004633"></a><font size=+1>The following
+tables (<a href="#T8ARM">Table 8</a>-<a href="#T20SPARC">Table 20</a>)
+show the targets that Cygnus supports and their output formats. The following
+four types of object code formats are usable for output, listed in order
+of popular implementation:</font>
+<blockquote>
+<ul TYPE=SQUARE>
+<li>
+<font size=+1>ELF (Embedded Linker Format)</font></li>
+
+<li>
+<font size=+1>COFF (Common Object File Format)</font></li>
+
+<li>
+<font size=+1>a.out (the original UNIX object file format)</font></li>
+
+<li>
+<font size=+1>EABI (Embedded Application Binary Interface format)</font></li>
+</ul>
+</blockquote>
+<font size=+1>See also <a href="int01.html#_Toc393702147" CLASS="XRef">Native
+configurations support</a> and <a href="int01.html#_Ref393695427" CLASS="XRef">Embedded
+cross-configuration support</a> for the matrices of the hosts and their
+target combinations that Cygnus supports. Not all targets have support
+on every host. Also, for more informaton on using particular tools and
+their targets, see <b><i><a href="../6_embed/emb.html">GNUPro Tools for
+Embedded Systems</a></i></b> and, to determine the proper configuration
+for a host, see <a href="#Using_config.guess">Using <tt>config.guess</tt>
+to configure</a>.</font></div>
+
+<div CLASS="TableTitle"><a NAME="T8ARM"></a><b><font size=+1>Table 8: ARM7/7T
+processor names and output formats</font></b>
+<table BORDER WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<td><b><i><font size=+1>System name</font></i></b></td>
+
+<td><b><i><font size=+1>Object file format</font></i></b></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>arm-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>thumb-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+</table>
+<b><font size=+1>Table 9: Fujitsu processor names and output formats</font></b>
+<table BORDER WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<td><b><i><font size=+1>System name</font></i></b><sup><a href="#T9FujitsuFN1">*</a></sup></td>
+
+<td><b><i><font size=+1>Object file format</font></i></b></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>sparc86x-aout</font></tt></td>
+
+<td><font size=+1>a.out</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>sparc86x-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>sparclite-aout</font></tt></td>
+
+<td><font size=+1>a.out</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>sparclite-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+</table>
+
+<hr SIZE=3 WIDTH="100%">
+<table WIDTH="100%" >
+<tr>
+<td><sup>*</sup><a NAME="T9FujitsuFN1"></a></td>
+
+<td><font size=-1>“</font><tt><font point-size="9">sparc86x</font></tt><font size=-1>”
+is the name for the Fujitsu Danlite board.</font>
+<br><font size=-1>“</font><tt><font point-size="9">sparclite</font></tt><font size=-1>”
+is the name for the Fujitsu SPARClite board.</font></td>
+</tr>
+</table>
+<a NAME="pgfId=1004650"></a><a NAME="T10Hitachi"></a><b><font size=+1>Table
+10: H8/300 processor name and output format</font></b>
+<table BORDER WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<td><b><i><font size=+1>System name</font></i></b></td>
+
+<td><b><i><font size=+1>Object file format</font></i></b></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>h8300-hms</font></tt><sup><a href="#T10HitachiFN1">*</a></sup></td>
+
+<td><font size=+1>COFF</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>sh-hms</font></tt></td>
+
+<td><font size=+1>COFF</font></td>
+</tr>
+</table>
+
+<hr SIZE=3 WIDTH="100%">
+<table WIDTH="100%" >
+<tr>
+<td><sup>*</sup><a NAME="T10HitachiFN1"></a></td>
+
+<td><font size=-1>“</font><tt><font point-size="9">hms</font></tt><font size=-1>”
+is the name for the Hitachi COFF object file format.</font></td>
+</tr>
+</table>
+</div>
+
+<div CLASS="TableTitle"><a NAME="T11Intel"></a><b><font size=+1>Table 11:
+Intel i960 processor names and output format</font></b>
+<table BORDER WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<td><b><i><font size=+1>System name</font></i></b></td>
+
+<td><b><i><font size=+1>Object file format</font></i></b></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>i960-coff</font></tt></td>
+
+<td><font size=+1>COFF</font><sup><font size=-1><a href="#T11IntelFN1">*</a></font></sup></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>sh-hms</font></tt></td>
+
+<td><font size=+1>COFF</font></td>
+</tr>
+</table>
+
+<table WIDTH="100%" >
+<tr>
+<td><sup><font size=-1>*</font></sup><a NAME="T11IntelFN1"></a></td>
+
+<td><font size=-1>For MON960 monitor.</font></td>
+</tr>
+</table>
+<a NAME="T12Linux"></a><b><font size=+1>Table 12: Linux processor names
+and output format</font></b>
+<table BORDER WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<td><b><i><font size=+1>System name</font></i></b></td>
+
+<td><b><i><font size=+1>Object file format</font></i></b></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>i686-pc-linux-gnu-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+</table>
+<a NAME="T13MN"></a><b><font size=+1>Table 13: Matsushita processor names
+and output format</font></b>
+<table BORDER WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<td><b><i><font size=+1>System name</font></i></b></td>
+
+<td><b><i><font size=+1>Object file format</font></i></b></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>mn10200-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>mn10300-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+</table>
+<a NAME="T14Mitsu"></a><b><font size=+1>Table 14: Mitsubishi D10V and M32R
+processor names and output format</font></b>
+<table BORDER WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<td><b><i><font size=+1>System name</font></i></b></td>
+
+<td><b><i><font size=+1>Object file format</font></i></b></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>d10v-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>m32r-elf&nbsp;</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+</table>
+<a NAME="T15M68K"></a><b><font size=+1>Table 15: Motorola 68K processor
+names and output format</font></b>
+<table BORDER WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<td><b><i><font size=+1>System name</font></i></b></td>
+
+<td><b><i><font size=+1>Object file format</font></i></b></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>m68k-aout</font></tt></td>
+
+<td><font size=+1>a.out&nbsp;</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>m68k-coff</font></tt></td>
+
+<td><font size=+1>COFF</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>m68k-elf</font></tt></td>
+
+<td><font size=+1>ELF</font><sup><a href="#Target_Coldfire">*</a></sup></td>
+</tr>
+</table>
+</div>
+
+<hr SIZE=3 WIDTH="100%">
+<table WIDTH="98%" >
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><sup><font size=-1>*</font></sup><a NAME="Target_Coldfire"></a></td>
+
+<td><font size=-1>“68K” or “</font><tt><font point-size="9">m68k</font></tt><font size=-1>”
+signifies all the 68000 series processors from Motorola.&nbsp;</font>
+<br><font size=-1>To use the Motorola “Coldfire” version as the configuration
+to target, see <a href="../6_embed/embCompiler_options_for_m68k.html">Motorola
+</a></font><a href="../6_embed/embCompiler_options_for_m68k.html"><tt><font point-size="9">m68k</font></tt><font size=-1>
+development</font></a><font size=-1> in <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b>.</font></td>
+</tr>
+</table>
+
+<div CLASS="TableTitle"><a NAME="T16MIPS"></a><b><font size=+1>Table 16:
+MIPS processor names and output formats</font></b></div>
+
+<div CLASS="TableTitle">&nbsp;
+<table BORDER WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<td><b><i><font size=+1>System name</font></i></b></td>
+
+<td><b><i><font size=+1>Object file format</font></i></b></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>mips64-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>mips64vr4100-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>mips64vr4300-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>mips64vr5xxx-elf</font></tt><sup><font size=-1><a href="#T16MIPSFN1">*</a></font></sup></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>mips-lsi-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>mips-tx39-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+</table>
+
+<hr SIZE=3 WIDTH="100%"></div>
+
+<table WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="T16MIPSFN1"></a><sup><font size=-1>*</font></sup></td>
+
+<td><font size=-1>The MIPS processors that have the “</font><tt>mips64vr5xxx-elf</tt><font size=-1>”
+name signify the NEC V</font><sub><font size=-2>R</font></sub><font size=-1>5000
+and V</font><sub><font size=-2>R</font></sub><font size=-1>5400 CPU versions.</font></td>
+</tr>
+</table>
+<a NAME="T17v850"></a><b><font size=+1>Table 17: NEC V850 processor names
+and output format</font></b>
+<table BORDER WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<td><b><i><font size=+1>System name</font></i></b></td>
+
+<td><b><i><font size=+1>Object file format</font></i></b></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>v850-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+</table>
+<a NAME="T18PC"></a><b><font size=+1>Table 18: PC processor names and output
+format</font></b><sup><font size=-1><a href="#Target_Cygwin">*</a></font></sup>
+<table BORDER WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<td><b><i><font size=+1>System name</font></i></b></td>
+
+<td><b><i><font size=+1>Object file format</font></i></b></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>i386-aout</font></tt></td>
+
+<td><font size=+1>a.out</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>i386-coff</font></tt></td>
+
+<td><font size=+1>COFF</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>i386-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+</table>
+
+<div CLASS="TableTitle">
+<hr SIZE=3 WIDTH="100%">
+<table WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><b><i><sup><font size=+0>*</font></sup></i></b><a NAME="Target_Cygwin"></a></td>
+
+<td><font size=-1>See also <a href="http://sourceware.cygnus.com/cygwin/usenix-98/cygwin.html">Cygwin:
+a free Win32 porting layer for UNIX</a>, <a href="http://sourceware.cygnus.com/cygwin/cygwin-ug-net/cygwin-ug-net.html">Cygwin
+User’s Guide</a> and <a href="http://sourceware.cygnus.com/cygwin/cygwin-api/cygwin-api.html">Cygwin
+API Reference</a>, and applications in <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b> for details about using the tools
+for developing programs in the Win32 environment.</font>
+<p><font size=-1>The 486, 586 and 686 are the supported versions.</font></td>
+</tr>
+</table>
+<a NAME="T19PPC"></a><b><font size=+1>Table 19: PowerPC processor names
+and output format</font></b>
+<table BORDER WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<td><b><i><font size=+1>System name</font></i></b></td>
+
+<td><b><i><font size=+1>Object file format</font></i></b></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>ppc-eabi</font></tt></td>
+
+<td><font size=+1>EABI (ELF)</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>i386-coff</font></tt></td>
+
+<td><font size=+1>COFF</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>i386-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+</table>
+</div>
+
+<div CLASS="TableTitle"><a NAME="T20SPARC"></a><b><font size=+1>Table 20:
+SPARC processor names and output formats</font></b>
+<table BORDER WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP BGCOLOR="#C0C0C0">
+<td><b><i><font size=+1>System name</font></i></b></td>
+
+<td><b><i><font size=+1>Object file format</font></i></b></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>sparc-elf</font></tt></td>
+
+<td><font size=+1>ELF</font></td>
+</tr>
+
+<tr>
+<td><tt><font size=+1>sparclet-aout</font></tt><b><i><sup><font size=-1><a href="#T20SPARCFN1">*</a></font></sup></i></b></td>
+
+<td><font size=+1>a.out</font></td>
+</tr>
+</table>
+
+<hr SIZE=3 WIDTH="100%">
+<table WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><b><i><sup><font size=+0>*</font></sup></i></b><a NAME="T20SPARCFN1"></a></td>
+
+<td><font size=-1>See also <a href="http://sourceware.cygnus.com/cygwin/usenix-98/cygwin.html">Cygwin:
+a free Win32 porting layer for UNIX</a>, <a href="http://sourceware.cygnus.com/cygwin/cygwin-ug-net/cygwin-ug-net.html">Cygwin
+User’s Guide</a> and <a href="http://sourceware.cygnus.com/cygwin/cygwin-api/cygwin-api.html">Cygwin
+API Reference</a>, and applications in <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b> for details about using the tools
+for developing programs in the Win32 environment.</font>
+<p><font size=-1>The 486, 586 and 686 are the supported versions.</font></td>
+</tr>
+</table>
+</div>
+
+<h2 CLASS="Heading2">
+<a NAME="pgfId=1004774"></a><a NAME="Using_config.guess"></a><b><i><font face="Times New Roman,Times">Using
+</font></i></b><tt><font size=+3>config.guess</font></tt></h2>
+
+<div CLASS="Body"><a NAME="pgfId=1004775"></a><font size=+1><tt>config.guess</tt>
+is a shell script that attempts to deduce the host type from which you
+are working.&nbsp;<a NAME="pgfId=1001361"></a><tt>config.guess</tt> invokes
+by the <tt>configure</tt> command. Use system commands like <tt>uname</tt>
+from the shell in which you are invoking the <tt>config.guess</tt> script,
+if your shell cannot find the <tt>configure</tt> command.</font></div>
+
+<div CLASS="Body">
+<blockquote><b><font face="Arial,Helvetica"><font size=+1>WARNING!</font></font></b>
+<br><font size=+1><tt>configure</tt> can represent a very large number
+of target name combinations of architecture, vendor, and object formats.
+Support is not possible for all combinations.</font></blockquote>
+<a NAME="pgfId=1004776"></a><font size=+1><tt>config.guess</tt> is remarkably
+adept at deciphering the proper configuration for your host; if you are
+building a tree to run on the same host on which you’re building, we recommend
+not specifying the <i><tt>hosttype</tt></i> argument (hosttype indicates
+a particular architecture, vendor and operating system; see <a href="int01.html#Table7_Naming_hosts">Naming
+hosts</a> for more specific input).</font></div>
+
+<div CLASS="Body"><a NAME="pgfId=1001361"></a><font size=+1>You need never
+run <tt>config.guess</tt>, unless you’re curious about the output.</font>
+<br>
+<hr SIZE=6 WIDTH="100%">
+<center><a href="#Overview_of_GNUPro_Toolkit">Top</a>|<a href="gsTOC.html">Contents</a>|<a href="int02.html">Next</a></center>
+</div>
+
+<div CLASS="footnotes">
+<div CLASS="footnote">
+<div CLASS="TableFootnote">&nbsp;</div>
+</div>
+</div>
+
+</body>
+</html>

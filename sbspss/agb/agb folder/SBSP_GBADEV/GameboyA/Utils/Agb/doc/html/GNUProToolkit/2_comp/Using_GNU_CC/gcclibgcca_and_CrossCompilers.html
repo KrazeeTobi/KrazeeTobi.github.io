@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>libgcc.a and Cross-Compilers</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccTools_and_Libraries_for_a_CrossC.html">Previous</A>|<A HREF="gccCrossCompilers_and_Header_Files.html">Next</A>
+<BR><FONT COLOR="#000000">&nbsp;<A NAME="off_2981888"></A><A NAME="e2786559"></A><B><TT><FONT POINT-SIZE="24">libgcc.a
+</FONT></TT><FONT FACE="Futura Md BT"><FONT SIZE=+3>and cross-compilers&nbsp;</FONT></FONT></B><FONT FACE="Futura Md BT">&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Code compiled by GNU CC
+uses certain runtime support functions implicitly. Some of these functions
+can be compiled successfully with GNU CC itself, but a few cannot be. These
+problem functions are in the source file, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc1.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’;
+the library made from them is called ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgccl.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When you build a native compiler,
+these functions are compiled with some other compiler–the one that you
+use for bootstrapping GNU CC. Presumably it knows how to open code these
+operations, or else knows how to call the run-time emulation facilities
+that the machine comes with. But this approach doesn’t work for building
+a cross-compiler. The compiler that you use for building knows about the
+host system, not the target system.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>So, when you build a cross-compiler
+you have to supply a suitable library ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc1.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+that does the job it is expected to do.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To compile ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc1.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+with the cross-compiler itself does not work. The functions in this file
+are supposed to implement arithmetic operations that GNU CC does not know
+how to open code for your target machine. If these functions are compiled
+with GNU CC itself, they will compile into infinite recursion.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>On any given target, most
+of these functions are not needed. If GNU CC can open code an arithmetic
+operation, it will not call these functions to perform the operation. It
+is possible that on your target machine, none of these functions is needed.
+If so, you can supply an empty library as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc1.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Many targets need library
+support only for multiplication and division. If you are linking with a
+library that contains functions for multiplication and division, you can
+tell GNU CC to call them directly by defining the macros </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>MULSI3_LIBCALL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and the like. These macros need to be defined in the target description
+macro file. For some targets, they are defined already. This may be sufficient
+to avoid the need for ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc1.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’;
+if so, you can supply an empty library.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Some targets do not have
+floating point instructions; they need other functions in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc1.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+which do floating arithmetic. Recent versions of GNU CC have a file which
+emulates floating point. With a certain amount of work, you should be able
+to construct a floating point emulator that can be used as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc1.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+Perhaps future versions will contain code to do this automatically and
+conveniently. That depends on whether someone wants to implement it.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Some embedded targets come
+with all the necessary ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc1.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+routines written in C or assembler. These targets build ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc1.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+automatically and you do not need to do anything special for them. Other
+embedded targets do not need any ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc1.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+routines since all the necessary operations are supported by the hardware.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If your target system has
+another C compiler, you can configure GNU CC as a native compiler on that
+machine.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Build just ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc1.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make libgcc1.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+on that machine, and use the resulting file with the cross-compiler. To
+do this, execute the following on the target machine.</FONT></FONT>
+<UL>
+<PRE><FONT SIZE=+1><FONT FACE="Courier New">cd <I>target</I>-<I>build</I>-<I>dir</I>&nbsp;
+./configure</FONT><FONT FACE="Times New Roman">—</FONT><FONT FACE="Courier New">host=sparc</FONT><FONT FACE="Times New Roman">—</FONT><FONT FACE="Courier New">target=sun3&nbsp;
+make libgcc1.a</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>And then, execute the following
+on the host machine:</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>ftp <I>target</I>-<I>machine</I>&nbsp;
+binary&nbsp;
+cd <I>target</I>-<I>build</I>-<I>dir</I>&nbsp;
+get libgcc1.a&nbsp;
+quit</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Another way to provide the functions
+you need in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc1.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+is to define the appropriate </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>perform_...</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+macros for those functions. If these definitions do not use the C arithmetic
+operators that they are meant to implement, you should be able to compile
+them with the cross-compiler you are building. (If these definitions already
+exist for your target file, then you are all set.) To build ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc1.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+using the perform macros, use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>LIBGCC1=libgcc1.a
+OLDCC=./xgcc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> when
+building the compiler. Otherwise, you should place your replacement library
+under the name ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libgcc1.a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in the directory in which you will build the cross-compiler, before you
+run </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>&nbsp;
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccTools_and_Libraries_for_a_CrossC.html">Previous</A>|<A HREF="gccCrossCompilers_and_Header_Files.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

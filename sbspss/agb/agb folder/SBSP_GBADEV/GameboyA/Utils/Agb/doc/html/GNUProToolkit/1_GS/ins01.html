@@ -1,0 +1,611 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title> Installing GNUPro Toolkit</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<div CLASS="ChapterTitle"><a NAME="Top"></a><a href="gsTOC.html">Contents</a>|<a href="insfront.html">Previous</a>|<a href="GPL.html">Next</a></div>
+
+<div CLASS="ChapterTitle"><a NAME="Top"></a><b><font face="Futura Md BT"><font color="#000000"><font size=+3>Installing
+GNUPro Toolkit&nbsp;
+<hr SIZE=4 WIDTH="100%"><a NAME="pgfId=1004038"></a></font></font></font></b><font size=+1>The
+following documentation describes how to&nbsp;<a NAME="marker=1010958"></a>install
+your GNUPro Toolkit software on UNIX and Win32 systems.</font></div>
+
+<ul TYPE=SQUARE>
+<li CLASS="ChapterTitle">
+<a NAME="pgfId=1004042"></a><font size=+1>To install for UNIX platforms,
+see <a href="#Install_UNIX" CLASS="XRef">Installing on UNIX Systems from
+CD</a>.</font></li>
+
+<li CLASS="ChapterTitle">
+<a NAME="pgfId=1004046"></a><font size=+1>To install for Windows platforms,
+see <a href="#Installing_on_Win95/NT" CLASS="XRef">Installing on Win 95/NT
+systems from CD</a>.</font></li>
+</ul>
+
+<div CLASS="Body"><font size=+1>Installation will provide all the tools
+that Cygnus supports as well as many tools that have no support (even though
+unsupported tools may work with high success).</font>
+<p><font size=+1>For help with using the tools, see <a href="int01.html">Cygnus
+and GNUPro Toolkit fundamentals</a> and <a href="int04.html">Using the
+tools on native and embedded systems</a>.</font>
+<p><font size=+1>For information about rebuilding the tools for other target
+environments, see <a href="reb.html#Top" CLASS="XRef">Rebuilding from source</a>.</font>
+<br>&nbsp;</div>
+
+<div CLASS="Heading1"><a NAME="Install_UNIX"></a><b><i><font face="Times New Roman,Times"><font size=+2>Installing
+on UNIX systems from CD</font></font></i></b></div>
+
+<div CLASS="Body"><a NAME="marker=1010959"></a><font size=+1>GNUPro Toolkit
+for UNIX systems uses the following CD installation procedure.</font>
+<p><font size=+1>For more details on naming conventions for the tools as
+they pertain to specific systems, see <a href="int01.html#Naming_hosts_&_targets">Naming
+hosts and targets</a> and, specifically, <a href="int01.html#Table7_Naming_hosts">Naming
+hosts</a>. See also <a href="#Links_for_easy_access_and_updating">Links
+for easy access and updating</a>, <a href="#install-cli_options"><tt>install-cli</tt>
+options</a>, <a href="#Setting_PATH">Setting the <tt>PATH</tt> environment
+variable</a>, and <a href="reb.html">Rebuilding from source</a>.</font></div>
+
+<ol>
+<div CLASS="Numbered">
+<div CLASS="Label"><i><font size=+1>Note:</font></i></div>
+
+<div CLASS="Note"><a NAME="pgfId=1005226"></a><font size=+1>In the following
+installation input examples, for <i><tt>/mnt</tt></i>, substitute your
+directory or <tt>/cdrom/gnupro_99r1
+</tt>(the default directory in which
+you will mount the tools). <i><tt>host</tt></i> designates what you need
+to specify as your host type in using the binaries for the particular architecture,
+vendor, and operating system (see <a href="int01.html#Table7_Naming_hosts">Table
+7: Naming hosts</a> for naming standards)</font>
+<ul>
+<ul>
+<ul>&nbsp;</ul>
+</ul>
+</ul>
+</div>
+<b><font size=+1>1. <i>Mount the CD.</i></font></b></div>
+
+<ol>
+<div CLASS="BodyListFollow"><font size=+1>Insert CD into CD-ROM drive.
+The procedures for mounting the CD depend on your system type. The following
+discussion details some examples of mount commands for each host (the examples
+use defaults for some configurations). Consult your system administrator
+if you need assistance.</font></div>
+</ol>
+</ol>
+
+<ul>
+<ul>
+<ul>
+<li CLASS="Note">
+<a NAME="pgfId=1004060"></a><i><font size=+1>SPARC Solaris</font></i></li>
+</ul>
+</ul>
+</ul>
+
+<ul>
+<ul>
+<ul>
+<div CLASS="BodyListFollow2"><a NAME="pgfId=1006541"></a><font size=+1>If
+you are running the volume manager, the CD will automatically mount as
+<tt>/cdrom/gnupro_99r1</tt>
+and you will not require root access.</font></div>
+</ul>
+</ul>
+</ul>
+
+<ul>
+<ul>
+<ul>
+<div CLASS="BodyListFollow2"><a NAME="pgfId=1009009"></a><font size=+1>If
+you are not running the volume manager, you will need to mount the CD manually
+with the following command.</font></div>
+
+<ul>
+<pre CLASS="CodeExample"><a NAME="pgfId=1006431"></a><font size=+1>mount -F hsfs -o ro /dev/dsk/c0t6d0s0 /<i>mnt</i></font></pre>
+</ul>
+
+<li CLASS="CodeExample">
+<a NAME="pgfId=1004061"></a><font size=+1><i>SPARC SunOS</i>&nbsp;</font><a NAME="marker=1010960"></a></li>
+
+<ul>
+<pre CLASS="CodeExample"><a NAME="pgfId=1006446"></a><font size=+1>mount -t hsfs -o ro /dev/sr0 /<i>mnt</i></font></pre>
+</ul>
+
+<li CLASS="CodeExample">
+<a NAME="pgfId=1004062"></a><font size=+1><i>HP-UX</i>&nbsp;</font><a NAME="marker=1010961"></a></li>
+
+<ul>
+<pre CLASS="CodeExample"><a NAME="pgfId=1006461"></a><font size=+1>mount -t cdfs -o ro /dev/dsk/c201d2s0 /<i>mnt</i></font></pre>
+</ul>
+
+<li CLASS="CodeExample">
+<a NAME="pgfId=1004063"></a><font size=+1><i>SGI IRIX</i>&nbsp;</font><a NAME="marker=1010962"></a></li>
+
+<ul>
+<pre CLASS="CodeExample"><a NAME="pgfId=1006476"></a><font size=+1>mount -t iso9660 -o ro /dev/scsi/sc0d7l0 /<i>mnt</i></font></pre>
+</ul>
+
+<li CLASS="CodeExample">
+<a NAME="pgfId=1004064"></a><font size=+1><i>AIX</i>&nbsp;</font><a NAME="marker=1010963"></a></li>
+
+<ul>
+<pre CLASS="CodeExample"><a NAME="pgfId=1006481"></a><font size=+1>mount -t cdrfs -o ro /dev/cd0 /<i>mnt</i></font></pre>
+</ul>
+
+<li CLASS="CodeExample">
+<a NAME="pgfId=1004065"></a><font size=+1><i>Digital Unix</i>&nbsp;</font><a NAME="marker=1010964"></a></li>
+
+<ul>
+<div CLASS="CodeExample">
+<pre><a NAME="pgfId=1006486"></a><font size=+1>mount -t cdfs -o ro /dev/rz4c /<i>mnt</i></font><a NAME="pgfId=1004065"></a></pre>
+</div>
+</ul>
+
+<li CLASS="CodeExample">
+<font size=+1><i>Linux</i>&nbsp;</font><a NAME="marker=1010964"></a></li>
+
+<ul>
+<pre CLASS="CodeExample"><a NAME="pgfId=1006486"></a><font size=+1>mount -t cdfs -o ro /dev/ /<i>mnt</i></font></pre>
+</ul>
+</ul>
+</ul>
+</ul>
+
+<ul>
+<div CLASS="NumberedNext"><b><font size=+1>2.&nbsp;<a NAME="pgfId=1004066"></a><i>Determine
+where to install the tools with permissions.</i></font></b></div>
+
+<dl>
+<dd CLASS="BodyListFollow">
+<a NAME="pgfId=1009071"></a><font size=+1>Install the tools in a directory
+that has writable access permissions. If you don't have permissions, you
+must get root access to put the tools in a non-standard directory by using
+the following example’s input.</font></dd>
+</dl>
+</ul>
+
+<ul>
+<ul>
+<ul>
+<ul>
+<pre CLASS="CodeExample"><a NAME="pgfId=1004067"></a><font size=+1>su root</font></pre>
+</ul>
+</ul>
+<font size=+1>After entering a root password, use the following example’s
+input.</font>
+<ul>
+<ul>
+<pre><font size=+1>mkdir /usr/cygnus</font></pre>
+</ul>
+</ul>
+<font size=+1>Ignore “<tt>File exists</tt>” error, if any message appears;
+continue to change the permissions for that new directory, using the following
+example’s input.</font>
+<ul>
+<ul>
+<pre><font size=+1>chmod 777 /usr/cygnus</font></pre>
+</ul>
+</ul>
+<font size=+1>Root access is unnecessary beyond this point. Enter “<tt>exit</tt>”
+at the prompt.</font></ul>
+</ul>
+
+<ul>
+<div CLASS="NumberedNext"><b><font size=+1>3.&nbsp;<a NAME="pgfId=1004069"></a><i>Run
+the installation.</i></font></b></div>
+
+<dl>
+<dd CLASS="BodyListFollow">
+<a NAME="pgfId=1009092"></a><font size=+1>To install, use either the graphical
+user interface (GUI) or the command line interface (CLI) installation script.</font></dd>
+
+<ul>
+<ul>
+<ul>
+<li CLASS="BodyListFollow">
+<font size=+1>To install using the GUI installation, use the following
+input.</font></li>
+
+<ul>
+<pre CLASS="CodeExample"><a NAME="pgfId=1004070"></a><font size=+1>/<i>mnt</i>/install-gui</font></pre>
+</ul>
+
+<div CLASS="BodyHang2"><a NAME="pgfId=1004071"></a><font size=+1>Before
+running the GUI installation script, set the <tt>DISPLAY</tt> environmental
+variable so that there are permissions to access programs without security
+restrictions for that system’s <tt>DISPLAY</tt>. If you don’t know how
+to set this variable, have your system administrator show you.</font></div>
+</ul>
+</ul>
+
+<ul>
+<ul>
+<li CLASS="BodyListFollow">
+<font size=+1>To install using the CLI installation, use the following
+input.</font></li>
+
+<ul>
+<pre CLASS="CodeExample"><a NAME="pgfId=1004070"></a><font size=+1>/<i>mnt</i>/install-gui</font></pre>
+</ul>
+
+<div CLASS="BodyHang2"><font size=+1>For details on other options to the
+CLI installation script, see <a href="#install-cli_options"><tt>install-cli</tt>
+options</a>.</font></div>
+</ul>
+</ul>
+
+<div CLASS="BodyHang2">&nbsp;
+<br><font size=+1>Follow the onscreen directions.&nbsp; Both installers
+will prompt you for installation information including specifying installation
+directory and the tools to install. Upon successful completion, the following
+message appears.</font></div>
+
+<ul>
+<pre CLASS="BodyHang2"><a NAME="pgfId=1004072"></a><b><tt><font size=+1>Finished.</font></tt></b></pre>
+</ul>
+</ul>
+</dl>
+
+<div CLASS="NumberedNext"><b><font size=+1>4.&nbsp;<a NAME="pgfId=1004073"></a><i>Build
+symbolic links to make executable paths easy to negotiate.</i></font></b>
+<blockquote><font size=+1>You may need root access to put the link in the
+‘<tt>/usr</tt>’ folder. ‘<i><tt>host</tt></i>’ in the following example’s
+fourth line’s instruction stands for the host machine that you’ll be using;
+see also <a href="#Links_for_easy_access_and_updating">Links for easy access
+and updating</a>.</font></blockquote>
+</div>
+
+<ul>
+<ul>
+<pre CLASS="CodeExample"><a NAME="pgfId=1004074"></a><font size=+1>cd /usr/cygnus
+ln -s gnupro-99r1 gnupro
+su root
+ln -s /usr/cygnus/gnupro-99r1/H-<i>host</i> /usr/gnupro</font></pre>
+</ul>
+</ul>
+</ul>
+
+<ul>
+<div CLASS="NumberedNext"><b><font size=+1>5.&nbsp;<a NAME="pgfId=1004075"></a><i>Change
+permissions from the ‘</i></font></b><font size=+1><tt>/usr/cygnus</tt><b><i>’
+location and you’re ready to use the tools.</i></b></font></div>
+</ul>
+
+<ul>
+<ul>
+<div CLASS="NumberedNext"><font size=+1>In Step 2, you set writable permissions.
+Now, you set them to what the system usually uses. See your system administrator
+if you don’t know what’s appropriate. Now, anyone with ‘<tt>/usr/gnupro/bin</tt>’
+in their <tt>PATH</tt> can use the tools.</font></div>
+</ul>
+</ul>
+
+<h2 CLASS="Heading1">
+<a NAME="pgfId=1005007"></a><a NAME="32757"></a><a NAME="Links_for_easy_access_and_updating"></a><b><i><font face="Times New Roman,Times">Links
+for easy access and updating</font></i></b></h2>
+
+<div CLASS="Body"><a NAME="pgfId=1005008"></a><font size=+1>Build symbolic
+links as the last step in the installation process.</font>
+<blockquote><b><font size=+1>IMPORTANT:</font></b>
+<br><b><i><font size=+1>This task simplifies administrative procedures
+for upgrades to future GNUPro releases, providing the software transparently
+to other users and permitting users to have multiple installations in the
+same location.</font></i></b></blockquote>
+</div>
+
+<ul>
+<ul>
+<pre CLASS="CodeExample"><a NAME="pgfId=1012855"></a><font size=+1>ln -s /usr/cygnus/gnupro-99r1 /usr/cygnus/gnupro</font></pre>
+</ul>
+</ul>
+
+<ul>
+<div CLASS="Body"><a NAME="pgfId=1012848"></a><font size=+1>GNUPro Toolkit
+installs into a ‘<tt><i>installdir</i>/gnupro-99r1</tt>’ directory, where
+‘<i><tt>installdir</tt></i>’ refers to the absolute pathname within which
+you locate the ‘<tt>gnupro-99r1</tt>’ tools. In the examples that follow,
+‘<tt>/usr/cygnus/gnupro-99r1</tt>’ is the default location.</font>
+<p><font size=+1><b>1.</b> Use the following input (having installed in
+the default location under <tt>/usr/cygnus</tt>).</font></div>
+</ul>
+
+<ul>
+<ul>
+<pre CLASS="CodeExample"><a NAME="pgfId=1005009"></a><font size=+1>cd /usr/cygnus</font></pre>
+
+<pre CLASS="CodeExample"><font size=+1>ln -s gnupro-99r1 gnupro</font></pre>
+
+<div CLASS="Label">
+<ul><a NAME="pgfId=1005012"></a><i><font face="Times New Roman,Times"><font size=+1>Note:</font></font></i></ul>
+</div>
+</ul>
+</ul>
+
+<div CLASS="Note">
+<ul>
+<ul>
+<ul><a NAME="pgfId=1012873"></a><font size=+1>The input for the last two
+examples of input match (<i><tt>installdir</tt></i> means the same location
+as the default that you assign for <tt>usr/cygnus</tt>.</font></ul>
+</ul>
+</ul>
+</div>
+
+<div CLASS="Body"><a NAME="pgfId=1012874"></a><font size=+1>Directories
+of machine-independent files (source code and documentation) install directly
+under the ‘<tt>gnupro-99r1</tt>’ level. To accommodate binaries for multiple
+hosts in a single directory structure, the binary files for your particular
+host type are in the ‘<tt>H-<i>hosttype</i></tt>’ subdirectory (<i><tt>hosttype</tt></i>
+indicates a particular architecture, vendor and operating system; see <a href="int01.html#Table7_Naming_hosts">Naming
+hosts</a> for more specific input.)</font>
+<br><font size=+1>The previous example shows input that provides one more
+level of symbolic links so that other users can define the same executable
+path even if they use binaries sometimes for one machine and sometimes
+for another machine. Establishing these links now can save developers the
+trouble later of changing all their paths. The idea is to build ‘<tt>/usr/gnupro/bin</tt>’
+so that it points to the appropriate binary subdirectory for your machine.
+For instance, use the path, <tt>/usr/cygnus/gnupro-99r1/H-<i>host</i></tt>,
+where host designates what you need to specify as your host type in using
+the binaries for the particular architecture, vendor, and operating system
+(see <a href="int01.html#Table7_Naming_hosts">Naming hosts</a> for naming
+standards).</font>
+<p><font size=+1>You may then need super-user access again, using the following
+example’s input to establish the link.</font>
+<ul>
+<div CLASS="Body"><a NAME="pgfId=1005016"></a><a NAME="pgfId=1012934"></a><tt><font size=+1>ln
+-s /usr/cygnus/gnupro-99r1/H-<i>host</i></font></tt><font size=+1> <tt>/usr/cygnus/gnupro</tt></font></div>
+</ul>
+</div>
+
+<h2 CLASS="Heading1">
+<a NAME="pgfId=1011307"></a><a NAME="Setting_PATH"></a><b><i><font face="Times New Roman,Times">Setting
+</font></i></b><tt><font size=+3>PATH</font></tt></h2>
+<a NAME="pgfId=1011310"></a><font size=+1>To run the tools in this distribution,
+make sure the <tt>PATH<a NAME="marker=1011308"></a><a NAME="marker=1011309"></a></tt>
+environment variable can find the tools. Whether you install in the default
+location, as in the following example for the input, or in an alternate
+location, you need to alter your <tt>PATH</tt> environment variable to
+point toward the tools.</font>
+<p><a NAME="pgfId=1005056"></a><font size=+1>If you create the&nbsp;<a NAME="marker=1011017"></a>symbolic
+links we recommend (see <a href="#Links_for_easy_access_and_updating">Links
+for easy access and updating</a>), users who want to run the tools—regardless
+of whether they need binaries for your particular host, or for some other
+platform—can use&nbsp;<a NAME="marker=1011058"></a>initialization files
+settings. The following examples show the appropriate input for creating
+the final linking to the&nbsp; <tt>/usr/gnupro/bin</tt> directory. If you
+installed into a different directory, substitute&nbsp; ‘<tt>/usr/gnupro/bin</tt>’
+for the actual directory. For the appropriate input for <tt>&lt;<i>host</i>></tt>,
+see <a href="int01.html#Table7_Naming_hosts">Naming hosts</a> for naming
+standards of your operating system or processor.</font>
+<div CLASS="CodeExample">
+<ul>
+<ul>
+<ul>
+<ul>
+<div CLASS="Body">
+<li>
+<a NAME="pgfId=1006045"></a><font size=+1>For&nbsp;<a NAME="marker=1011054"></a><a NAME="marker=1011065"></a><a NAME="marker=1011057"></a><a NAME="marker=1011055"></a>Bourne-compatible
+shells (<tt>bash</tt> or <tt>tcsh</tt> shell):</font></li>
+</div>
+
+<div CLASS="CodeExample">
+<blockquote>
+<pre><a NAME="pgfId=1006046"></a><tt><font size=+1>PATH=/usr/cygnus/gnupro-99r1/H-&lt;<i>host</i>>/bin:/usr/cygnus/snavigator-99r1/H-&lt;<i>host</i>>/bin:$PATH</font></tt></pre>
+</blockquote>
+</div>
+
+<ul>
+<pre><font size=+1>export PATH</font></pre>
+</ul>
+
+<li>
+<a NAME="pgfId=1005062"></a><font size=+1>For&nbsp;<a NAME="marker=1011056"></a>C
+shell:</font></li>
+
+<div CLASS="CodeExample">
+<blockquote>
+<pre><a NAME="pgfId=1011318"></a><tt><font size=+1>set path=/usr/cygnus/gnupro-99r1/H-&lt;<i>host</i>>/bin /usr/cygnus/snavigator-99r1/H-&lt;<i>host</i>>/bin $path)</font></tt></pre>
+</blockquote>
+</div>
+</ul>
+</ul>
+</ul>
+</ul>
+</div>
+
+<div CLASS="Note">
+<h2>
+<a NAME="install-cli_options"></a><tt>install-cli</tt> <i>options</i></h2>
+<font size=+1>By default, the install-cli script prompts you for installation
+information. There are also command line options to allow you to install
+by accepting the defaults provided or overriding the default installation
+directory.&nbsp; A summary follows of these options.</font>
+<blockquote><tt><font size=+1>--target=<i>target</i></font></tt>
+<blockquote><font size=+1>Installs for target type (see <a href="int01.html#Target_names">Target
+names</a> for the appropriate input for the target name to use for <i><tt>target</tt></i>).</font></blockquote>
+<tt><font size=+1>--installdir=<i>yourinstalldirectory</i></font></tt>
+<blockquote><font size=+1>Provides the location of <i><tt>yourinstalldirectory</tt></i>
+where you installed the tools. ‘<tt>/usr/gnupro/</tt>’ is the default directory.</font></blockquote>
+<tt><font size=+1>--defaults</font></tt>
+<blockquote><font size=+1>Installs default products and packages. Where
+applicable, the defaults are English, all binary packages, all documentation
+packages, no source tools, no demonstration packages.</font></blockquote>
+<tt><font size=+1>--help</font></tt>
+<blockquote><font size=+1>Lists all available options.</font>
+<blockquote><i><font size=+1>Note:</font></i>
+<br><font size=+1>Some of the options that will list for the <tt>--help</tt>
+command are what <tt>install-cli</tt> uses internally; these commands cannot
+work for use outside of the installation scripts.</font></blockquote>
+</blockquote>
+</blockquote>
+
+<hr SIZE=6 WIDTH="100%"></div>
+
+<h2 CLASS="Heading1">
+<a NAME="pgfId=1005094"></a><a NAME="Installing_on_Win95/NT"></a><b><i><font face="Times New Roman,Times">Installing
+on Win NT/95/98 systems from CD</font></i></b></h2>
+
+<div CLASS="Body"><a NAME="pgfId=1005095"></a><font size=+1>All releases
+of GNUPro Toolkit for&nbsp;<a NAME="marker=1011033"></a>WinNT/95/98 </font><sup><font size=-1><a href="#FNName_Win">*</a></font></sup><font size=+1>
+systems </font><sup><font size=-1><a href="#FNWin_versions">†</a></font></sup><font size=+1>
+use the following CD&nbsp;<a NAME="marker=1011032"></a>installation procedure.</font></div>
+
+<ol>
+<div CLASS="Numbered"><b><font size=+1>1.&nbsp;<a NAME="pgfId=1005096"></a><i>Mount
+the CD.</i></font></b></div>
+
+<ol>
+<div CLASS="Numbered"><a NAME="pgfId=1006172"></a><font size=+1>Insert
+CD into CD-ROM drive. The Cygnus installation will start; if it doesn't,
+open the CD in the <font face="Arial,Helvetica">Windows Explorer</font>
+and open <font face="Arial,Helvetica">setup.exe<a NAME="marker=1011068"></a></font>.</font></div>
+</ol>
+
+<div CLASS="NumberedNext"><b><font size=+1>2.&nbsp;<a NAME="pgfId=1005097"></a><i>Install
+the tools.</i></font></b></div>
+</ol>
+
+<div CLASS="BodyListFollow">
+<ul>
+<ul><a NAME="pgfId=1006173"></a><font size=+1>After accepting the terms
+of the license agreement, follow the on-screen instructions to select the
+location where the tools install. Also specify a program folder name and
+which products and packages to install.</font>
+<ul>&nbsp;
+<br><b><i><font size=+1>Important!</font></i></b>
+<br><font size=+1>Install the tools on any drive and in any directory which
+does not have a space in the pathname.</font></ul>
+</ul>
+</ul>
+</div>
+
+<ul>
+<div CLASS="NumberedNext">
+<blockquote><font size=+1>‘<font face="Arial,Helvetica">C:\cygnus</font>’
+is the default installation location.</font>
+<br><font size=+1>‘<font face="Arial,Helvetica">Cygnus GNUPro Toolkit</font>’
+is the default program folder name.</font></blockquote>
+<b><font size=+1>3.&nbsp;<a NAME="pgfId=1005098"></a><i>Run the programs
+to use the tools.</i></font></b><a NAME="marker=1011069"></a></div>
+</ul>
+
+<div CLASS="BodyListFollow">
+<ul>
+<ul><a NAME="Step_3"></a><font size=+1>Click on the <font face="Arial,Helvetica">Start</font>
+button on the lower left hand corner of your screen, and then <font face="Arial,Helvetica">Programs</font>,
+where you have shortcut access to all your programs. Choose <font face="Arial,Helvetica">Cygnus
+GNUPro Toolkit</font> and then <font face="Arial,Helvetica">Cygnus</font>,
+<font face="Arial,Helvetica">gnupro-99r1</font>
+and the <i><tt>target</tt></i> on which you select to run the tools (see
+<a href="int01.html#Target_names">Target
+names</a> for designations for
+<i><tt>target</tt></i>). If you set up a
+different path for the tools or a different folder name, substitute that
+designation as appropriate.</font>
+<p><font size=+1>A shell window will activate with the appropriate <tt>PATH</tt>
+settings for using the tools.</font>
+<p><font size=+1>If you have installed the unsupported tools, click on
+the Start button on the lower left hand corner of your screen, and then
+Programs, where you have shortcut access to all your programs. Choose Cygnus
+GNUPro Toolkit and then Cygnus, unsupported-99r1 and, last, bash. A bash
+window will activate with the appropriate PATH settings for using the unsupported
+tools; the unsupported tools are available only for the purposes of rebuilding</font><sup><font size=-1><a href="#FNWinReb">‡</a></font></sup><font size=+1>
+the sources.</font></ul>
+</ul>
+</div>
+
+<ul>
+<div CLASS="NumberedNext"><b><font size=+1>4.&nbsp;<a NAME="pgfId=1005103"></a><i>Set
+up the environment for which you’ll use the tools.</i></font></b></div>
+</ul>
+
+<div CLASS="BodyListFollow">
+<ul>
+<ul><a NAME="pgfId=1006178"></a><font size=+1>For the Win95 environment,
+add the contents of the <font face="Arial,Helvetica">C:\cygnus\gnupro-99r1\CYGNUS.BAT</font>
+initialization file to your <font face="Arial,Helvetica">autoexec.bat</font>
+file, or initialize it from the <font face="Arial,Helvetica">Start</font>
+button, using the <font face="Arial,Helvetica">Program</font> menu as in
+<a href="#Step_3">Step
+3</a>.</font></ul>
+</ul>
+</div>
+
+<div CLASS="BodyListFollow">
+<ul>
+<ul><a NAME="pgfId=1006171"></a><font size=+1>For the NT environment, as
+long as you use the <font face="Arial,Helvetica">Start</font> button in
+the lower left hand corner of your screen, you can always start the programs
+as in <a href="#Step_3">Step 3</a>. If not, choose <font face="Arial,Helvetica">Settings</font>,
+and click <font face="Arial,Helvetica">Control Panel</font>. Choose <font face="Arial,Helvetica">System</font>.
+Make the appropriate changes according to your requirements by adding the
+contents of the <font face="Arial,Helvetica">C:\cygnus\gnupro-99r1\CYGNUS.BAT</font>
+initialization file to your <font face="Arial,Helvetica">autoexec.bat</font>
+file.</font>
+<p><font size=+1>You can also add the environment settings for the Cygnus
+unsupported tools from the <font face="Arial,Helvetica">C:\cygnus\gnupro-99r1\CYGNUS.BAT</font>
+initialization file.</font>
+<p><i><font size=+1>Note:</font></i>
+<br><font size=+1>The unsupported tools are provided only for the purposes
+of rebuilding the sources. See <a href="#FNWinReb">Step 3 footnote</a>
+and <a href="reb.html">Rebuilding from source</a> for more information.</font></ul>
+
+<p><br><b><font size=+1>5.&nbsp;<a NAME="pgfId=1005103"></a><i>Use the
+tools.</i></font></b>
+<ul><font size=+1>See also <a href="http://sourceware.cygnus.com/cygwin/usenix-98/cygwin.html">Cygwin:
+a free Win32 porting layer for UNIX</a>, <a href="http://sourceware.cygnus.com/cygwin/cygwin-ug-net/cygwin-ug-net.html">Cygwin
+User’s Guide</a> and <a href="http://sourceware.cygnus.com/cygwin/cygwin-api/cygwin-api.html">Cygwin
+API Reference</a>, and applications in <b><i><a href="../6_embed/emb.html">GNUPro
+Tools for Embedded Systems</a></i></b> for details about using the tools
+for developing programs in the Win32 environment.</font></ul>
+</ul>
+
+<table WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="FNName_Win"></a><sup><font size=-1>*</font></sup></td>
+
+<td><font size=-1>To name the Windows operating systems, Cygnus uses the
+standards of “NT4.0-sp3” for Windows NT 4.0/service pack 3, and “95-osr2”
+for Windows 95/operating system revision 2.</font></td>
+</tr>
+</table>
+
+<table WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="FNWin_versions"></a><sup><font size=-1>†</font></sup></td>
+
+<td><font size=-1>The 486, 586 and 686 are the supported versions.</font></td>
+</tr>
+</table>
+
+<table WIDTH="100%" >
+<tr ALIGN=LEFT VALIGN=TOP>
+<td><a NAME="FNWinReb"></a><sup><font size=-1>‡</font></sup></td>
+
+<td><sup><font size=-1><b>IMPORTANT:</b> There is no support for rebuilding
+cross-configurations for the Windows 95 and 98 versions; rebuilding is
+only available for the NT version.&nbsp;</font></sup></td>
+</tr>
+</table>
+</div>
+
+<h2 CLASS="Heading1">
+<a NAME="pgfId=1012115"></a><a NAME="Rebuilding_GNUPro_Toolkit"></a><b><i><font face="Times New Roman,Times">Rebuilding
+GNUPro Toolkit</font></i></b></h2>
+
+<div CLASS="Body"><a NAME="pgfId=1012574"></a><font size=+1>To rebuild,
+see <a href="reb.html">Rebuilding from source</a>.</font></div>
+
+<div CLASS="BodyListFollow"><a NAME="pgfId=1012128"></a>
+<hr SIZE=6 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="gsTOC.html">Contents</a>|<a href="insfront.html">Previous</a>|<a href="GPL.html">Next</a></center>
+</div>
+
+</body>
+</html>

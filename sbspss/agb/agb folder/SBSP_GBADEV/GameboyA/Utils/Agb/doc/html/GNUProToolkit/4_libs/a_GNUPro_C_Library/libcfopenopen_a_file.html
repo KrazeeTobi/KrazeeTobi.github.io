@@ -1,0 +1,135 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>fopen[open a file]</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcfiprintfformat_output_to_file_in.html">Previous</A>|<A HREF="libcfdopenturn_open_file_into_a_stre.html">Next</A>
+
+<P><A NAME="off_754547"></A><A NAME="83aca50e"></A><A NAME="off_754547"></A><A NAME="83aca50e"></A><A NAME="off_754547"></A><A NAME="83aca50e"></A><A NAME="off_754547"></A><A NAME="83aca50e"></A><A NAME="off_754547"></A><A NAME="83aca50e"></A><A NAME="off_754547"></A><A NAME="83aca50e"></A><A NAME="off_754547"></A><A NAME="83aca50e"></A><A NAME="off_754547"></A><A NAME="83aca50e"></A><A NAME="off_754547"></A><A NAME="83aca50e"></A><FONT FACE="Courier New"><FONT SIZE=+3>fopen</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+3>[open a file]</FONT></FONT>
+<PRE><B><FONT FACE="Times New Roman"><FONT SIZE=+2>SYNOPSIS&nbsp;
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+1>#include &lt;stdio.h>&nbsp;
+FILE *fopen(const char *<I>file</I>, const char *<I>mode</I>);&nbsp;
+
+FILE *_fopen_r(void *<I>reent</I>,&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; const char *<I>file</I>, const char *<I>mode</I>);</FONT></FONT></PRE>
+<B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>fopen</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">initializes the data structures needed
+to read or write a file. Specify the file’s name as the string at </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and the kind of access you need to the file with the string at </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>mode</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The alternate function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>_fopen_r</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">,</FONT><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is a reentrant version. The extra argument,
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>reent</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Times New Roman">,</FONT><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is a pointer to a reentrancy structure.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Three fundamental kinds of
+access are available: read, write, and append. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>*<I>mode</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+must begin with one of the three characters, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>w</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to select one of the following modes.</FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>r</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Open the file for reading;
+the operation will fail if the file does not exist, or if the host system
+does not permit you to read it.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>w</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Open the file for writing
+<I>from the beginning</I> of the file: effectively, this always creates
+a new file. If the file whose name you specified already existed, its old
+contents are discarded.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Open the file for appending
+data, that is writing from the end of file. When you open a file this way,
+all data always goes to the current end of file; you cannot change this
+using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fseek</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+</UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Some host systems distinguish
+between <I>binary</I> and <I>text</I> files. Such systems may perform data
+transformations on data written to, or read from, files opened as <I>text</I>.
+If your system is one of these, then you can append a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to any of the three modes, to specify that you are opening the file as
+a binary file (the default is to open the file as a text file).</FONT></FONT>
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>rb</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+then, means <I>read binary</I>; </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>wb</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+means <I>write binary</I>; </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ab</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+means <I>append binary</I>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To make C programs more portable,
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is accepted on all systems, whether or not it makes a difference.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Finally, you might need to
+both read and write from the same file. You can also append a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to any of the three modes, to permit this. (If you want to append both
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+you can do it in either order: for example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>rb+</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">means the same thing as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r+b</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">when used as a mode string.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r+</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">(or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>rb+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+to permit reading and writing anywhere in an existing file, without discarding
+any data; </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>w+</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">(or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>wb+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+to create a new file (or begin by discarding all data from an old one)
+that permits reading and writing anywhere in it; and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a+</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">(or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ab+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>)
+to permit reading anywhere in an existing file, but writing only at the
+end.</FONT></FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>fopen</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">returns a file pointer which you can
+use for other file operations, unless the file you requested could not
+be opened; in that situation, the result is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NULL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If the reason for failure was an invalid string at </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>mode</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is set to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>EINVAL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>fopen</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is required by ANSI C.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Supporting OS subroutines
+required: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>close</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fstat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>isatty</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>lseek</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>open</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>read</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sbrk</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>write</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcfiprintfformat_output_to_file_in.html">Previous</A>|<A HREF="libcfdopenturn_open_file_into_a_stre.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../ProMan/style.css">
+                <!-- Edited by Matt P., 01/04/01 -->
+                
+<title>Explanation of Work Area Structure "SoundArea"</title>
+</head>
+
+<body>
+
+<h2 ALIGN="CENTER">Explanation of Work Area Structure "SoundArea"</h2>
+<hr WIDTH="600" ALIGN="CENTER">
+<table WIDTH="600" ALIGN="CENTER" SUMMARY="sound_area">
+  <tr>
+    <td>With the structure, SoundArea, the following elements can be referenced. 
+      (<b>Write is prohibited)</b><br> 
+      <br> 
+      <font COLOR="#008080"><b>&nbsp;&nbsp;&nbsp;&nbsp;u8 reverb<span STYLE="font-family:Terminal">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Reverb Value</b></font><br> 
+      <br> 
+      <font COLOR="#008080"><b>&nbsp;&nbsp;&nbsp;&nbsp;u8 maxchn<span STYLE="font-family:Terminal">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+      Simultaneously-produced Sounds</b></font><br> 
+      <br> 
+      <font COLOR="#008080"><b>&nbsp;&nbsp;&nbsp;&nbsp;u8 masvol<span STYLE="font-family:Terminal">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Master Volume</b></font><br> 
+      <br> 
+      <font COLOR="#008080"><b>&nbsp;&nbsp;&nbsp;&nbsp;u8 freq<span STYLE="font-family:Terminal">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 
+      Playback Frequency Number</b></font>
+      <p> 
+      <font COLOR="#008080"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 1=5734Hz<span STYLE="font-family:Terminal">,</span>   
+      2=7884Hz<span STYLE="font-family:Terminal">,</span>...<span STYLE="font-family:Terminal">,</span>   
+      12=42048Hz<br>  
+      </b></font><br>  
+      <br>  
+      The setting of these values is carried out with the previously 
+      described, <font face="courier new">SoundDriverMode()</font>. When you want to reference the number of D/A conversion bits, directly read the AGB hardware register(REG_SOUNDBIAS bits 15-14).</td>
+  </tr>
+</table>
+<br>
+<hr WIDTH="600" ALIGN="CENTER">
+<CENTER><p>
+  [ | <a HREF="func.html">Back</a>  
+  | <a HREF="../p_index.html">Programmer's  
+  Manual Table of Contents</a> | <a HREF="u_index.html">Using AGB Direct Sound Driver Table of Contents</a>  
+  | <a HREF="snd_chn.html">Next</a>  
+  | ]
+</center> 
+ 
+</body> 
+ 
+</html> 

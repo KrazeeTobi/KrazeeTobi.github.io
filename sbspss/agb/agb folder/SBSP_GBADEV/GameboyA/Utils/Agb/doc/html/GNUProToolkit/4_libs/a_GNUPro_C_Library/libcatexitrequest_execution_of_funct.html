@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>atexit[request execution of functions at program exit]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcassertmacro_for_debugging_diagno.html">Previous</A>|<A HREF="libcatof_atoffstring_to_double_or_fl.html">Next</A>
+</P>
+
+<P><A NAME="off_132064"></A><A NAME="768e15b8"></A><A NAME="off_132064"></A><A NAME="768e15b8"></A><FONT SIZE=+3><FONT FACE="Courier New">atexit
+<BR>
+</FONT><FONT FACE="Times New Roman">[request execution of functions at
+program exit] </FONT></FONT></P>
+
+<P><FONT SIZE=+1><B><FONT FACE="Times New Roman">SYNOPSIS</FONT></B><FONT FACE="Arial">
+<BR>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>&lt;stdlib.h&gt;</FONT><FONT SIZE=-1> <BR>
+</FONT><FONT SIZE=+0>int</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>atexit(void</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>(*</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0><I>function</I>)(void);
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>DESCRIPTION</B> <BR>
+You can use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>atexit</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">to enroll functions in a list of functions
+that will be called when your program terminates normally. The argument
+is a pointer to a user-defined function (which must not require arguments
+and must not return a result). </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The functions are kept in
+a LIFO stack; that is, the last function enrolled by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>atexit</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">will be the first to execute when your
+program exits. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>There is no built-in limit
+to the number of functions you can enroll in this list; however, after
+every group of 32 functions is enrolled, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>atexit</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">will call </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>malloc</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">to get space for the next part of the
+list. The initial list of 32 functions is statically allocated, so you
+can always count on at least that many slots available. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>RETURNS</B> <BR>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>atexit</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">returns </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">if it succeeds in enrolling your function,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-1</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">if it fails (possible only if no space
+was available for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>malloc</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">to extend the list of functions). </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>atexit</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is required by the ANSI standard, which
+also specifies that implementations must support enrolling at least 32
+functions. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Supporting OS subroutines
+required: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>close</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fstat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>isatty</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>lseek</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>read</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sbrk</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>write</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+</BODY>
+</HTML>

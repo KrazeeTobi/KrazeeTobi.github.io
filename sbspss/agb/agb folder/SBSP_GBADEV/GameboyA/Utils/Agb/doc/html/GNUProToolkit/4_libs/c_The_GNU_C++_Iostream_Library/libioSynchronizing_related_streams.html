@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Synchronizing related streams</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioExtended_data_fields.html">Previous</A>|<A HREF="libioReaching_the_underlying_streambu.html">Next</A>
+<BR><A NAME="off_262426"></A><A NAME="329454cf"></A><A NAME="off_262426"></A><A NAME="329454cf"></A><A NAME="off_262426"></A><A NAME="329454cf"></A><A NAME="off_262426"></A><A NAME="329454cf"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Synchronizing
+related streams</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>You
+can use these methods to synchronize related streams with one another:</FONT></FONT>
+<UL><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">ostream*</FONT></FONT><FONT FACE="Times New Roman">
+<B>ios::tie </B></FONT><FONT FACE="Courier New"><FONT COLOR="#000000">()
+const&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT></UL>
+
+<UL>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Report on what output stream,
+if any, is to be flushed before accessing this one. A pointer value of
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+means no stream is tied.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">ostream*
+</FONT></FONT><B><FONT FACE="Times New Roman">ios::tie </FONT></B><FONT FACE="Courier New"><FONT COLOR="#000000">(ostream*
+<I>assoc</I>)&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Declare that output stream,
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>assoc</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+must be flushed before accessing this stream.</FONT></FONT></UL>
+<FONT FACE="Courier New"><FONT COLOR="#000000"><FONT SIZE=+1></FONT></FONT></FONT>
+
+<P><FONT SIZE=+1><FONT FACE="Courier New"><FONT COLOR="#000000">int </FONT></FONT><FONT FACE="Times New Roman"><B>ios::sync_with_stdio</B>
+</FONT><FONT FACE="Courier New"><FONT COLOR="#000000">([int <I>switch</I>])&nbsp;<BR>
+</FONT></FONT><B><I><FONT FACE="Times New Roman">Method</FONT></I></B></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Unless iostreams and C </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdio</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are designed to work together, you may have to choose between efficient
+C++ streams output and output which is compatible with C </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdio</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+Use ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ios::sync_with_stdio()</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to select C compatibility. The argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>switch</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is a GNU extension; since the default value for </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>switch</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is usually </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0 </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>as
+the argument to choose output that is not necessarily compatible with C
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdio</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you install the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdio</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+implementation that comes with GNU </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>libio</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+there are compatible input/output facilities for both C and C++. In that
+situation, this method is unnecessary—but you may still want to write programs
+that call it, for portability.</FONT></FONT></UL>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="libio.html">Contents</A>|<A HREF="libioindex.html">Index</A>|<A HREF="libioExtended_data_fields.html">Previous</A>|<A HREF="libioReaching_the_underlying_streambu.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,596 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Options That Control Optimization</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccOptions_for_Debugging_Your_Progr.html">Previous</A>|<A HREF="gccOptions_Controlling_the_Preproce.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_1083773"></A><A NAME="daa732e6"></A><B><FONT SIZE=+3>Options
+that control optimization&nbsp;</FONT></B>&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR>&nbsp; <FONT FACE="Times New Roman"><FONT SIZE=+1>The following options
+control various sorts of optimizations.</FONT></FONT>
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-O1</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Optimize. Optimizing compilation
+takes somewhat more time, and a lot more memory for a large function.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Without ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+the compiler’s goal is to reduce the cost of compilation and to make debugging
+produce the expected results. Statements are independent: if you stop the
+program with a breakpoint between statements, you can then assign a new
+value to any variable or change the program counter to any other statement
+in the function and get exactly the results you would expect from the source
+code.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Without ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+the compiler only allocates variables declared </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>register</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in registers. The resulting compiled code is a little worse than produced
+by PCC without ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>With ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+the compiler tries to reduce code size and execution time.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>When you specify ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+the compiler turns on </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fthread-jumps</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fdefer-pop</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+on all machines.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The compiler turns on </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fdelayed-branch</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+on machines that have delay slots, and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fomit-frame-pointer</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+on machines that can support debugging even without a frame pointer. On
+some machines the compiler also turns on other flags.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-O2</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Optimize even more. GNU
+CC performs nearly all supported optimizations that do not involve a space-speed
+tradeoff. The compiler does not perform loop unrolling or function inlining
+when you specify ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+As compared to ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+this option increases both compilation time and the performance of the
+generated code.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+turns on all optional optimizations except for loop unrolling function
+inlining, life shortening, and static variable optimizations. It also turns
+on frame pointer elimination on machines where doing so does not interfere
+with debugging.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-O3</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Optimize yet more. ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O3</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+turns on all optimizations specified by ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and also turns on the option,</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+inline-functions</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+</UL>
+
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-O0</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Do not optimize. If you
+use multiple ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options, with or without level numbers, the last such option is the one
+that is effective.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Options of the form, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-f<I>flag</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+specify machine-independent flags. Most flags have both positive and negative
+forms; the negative form of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-ffoo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+would be </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fno-foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+In the following options, only one of the forms is listed—the one which
+is not the default.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>You can figure out the other
+form by either removing ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>no-</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or adding it.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-Os</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Optimize for size. </FONT></FONT><FONT FACE="Courier New,Courier">-Os</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+enables all </FONT></FONT><FONT FACE="Courier New,Courier">-O2</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+optimizations that do not typically increase code size. It also performs
+further optimizations designed to reduce code size.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If you use multiple </FONT></FONT><FONT FACE="Courier New,Courier">-O</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options, with or without level numbers, the last such option is the one
+that is effective.</FONT></FONT></UL>
+&nbsp;</UL>
+<FONT FACE="Times New Roman,Times"><FONT SIZE=+1>Options of the form, </FONT></FONT><FONT FACE="Courier New,Courier">-f
+<I>flag</I></FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>, specify
+machine-independent flags. Most flags have both positive and negative forms;
+the negative form of </FONT></FONT><FONT FACE="Courier New,Courier">-ffoo</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>
+would be </FONT></FONT><FONT FACE="Courier New,Courier">-fno-foo</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>.
+In the following discussions, only one of the forms is listed, the one
+which is not the default. You can figure out the other form by either removing
+</FONT></FONT><FONT FACE="Courier New,Courier">no-</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>
+or adding it.</FONT></FONT>
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-ffloat-store</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Do not store floating point
+variables in registers, and inhibit other options that might change whether
+a floating point value is taken from a register or memory.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This option prevents undesirable
+excess precision on machines such as the 68000 where the floating registers
+(of the 68881) keep more precision than a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>double</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is supposed to have. For most programs, the excess precision does only
+good, but a few programs rely on the precise definition of IEEE floating
+point. Use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-ffloat-store</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for such programs.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fno-default-inline</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Do not make member functions
+inline by default merely because they are defined inside the class scope
+(C++ only). Otherwise, when you specify ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+member functions defined inside class scope are compiled inline by default;
+i.e., you don’t need to add </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>inline</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in front of the member function name.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fno-defer-pop</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Always pop the arguments
+to each function call as soon as that function returns. For machines which
+must pop arguments after a function call, the compiler normally lets arguments
+accumulate on the stack for several function calls and pops them all at
+once.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fforce-mem</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Force memory operands to
+be copied into registers before doing arithmetic on them. This produces
+better code by making all memory references potential common subexpressions.
+When they are not common subexpressions, instruction combination should
+eliminate the separate register-load. The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option turns on this option.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fforce-addr</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Force memory address constants
+to be copied into registers before doing arithmetic on them.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>This may produce better
+code just as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fforce-mem</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+may.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fomit-frame-pointer</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Don’t keep the frame pointer
+in a register for functions that don’t need one. This avoids the instructions
+to save, set up and restore frame pointers; it also makes an extra register
+available in many functions.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL>
+<DT>
+<I><FONT FACE="Times New Roman"><FONT SIZE=+1><B>Warning</B>:</FONT></FONT></I></DT>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>It also makes debugging
+impossible on some machines.</FONT></FONT>
+<BR>&nbsp;</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On some machines, such as the
+VAX, this flag has no effect because the standard calling sequence automatically
+handles the frame pointer and nothing is saved by pretending it doesn’t
+exist. The machine-description macro, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>FRAME_POINTER_REQUIRED</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+controls whether a target machine supports this flag. See <A HREF="gccConstraints_for_Particular_Machi.html">Constraints
+for particular machines</A> to determine <I>register usage</I> with your
+target machine.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fno-inline</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Don’t pay attention to the
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>inline</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+keyword. Normally this option is used to keep the compiler from expanding
+any functions inline.</FONT></FONT>
+<BR>&nbsp;
+<UL>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT></DT>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If you are not optimizing,
+no functions can be expanded inline.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-finline-functions</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Integrate all simple functions
+into their callers. The compiler heuristically decides which functions
+are simple enough to be worth integrating in this way.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If all calls to a given
+function are integrated, and the function is declared </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>static</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+then the function is normally not output as assembler code in its own right.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fkeep-inline-functions</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Even if all calls to a given
+function are integrated, and the function is declared </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>static</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+nevertheless output a separate run-time callable version of the function.
+This switch does not affect </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>extern
+inline</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> functions.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fkeep-static-consts</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Emit variables declared
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>static const</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+when optimization isn’t turned on, even if the variables weren’t referenced.
+This option is enabled by default. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fno-keep-static-consts</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+will force the compiler to check if the variable was referenced, regardless
+of whether or not optimization is turned on.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fno-function-cse</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Do not put function addresses
+in registers; make each instruction that calls a constant function contain
+the function’s address explicitly.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fno-function-cse</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+option results in less efficient code, but some strange hacks that alter
+the assembler output may be confused by the optimizations performed when
+this option is not used.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-ffast-math</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This option allows GCC to
+violate some ANSI or IEEE rules and/or specifications in the interest of
+optimizing code for speed. For example, it allows the compiler to assume
+arguments to the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sqrt</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+function are non-negative numbers and that no floating-point values are
+NaNs.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>This option should never
+be turned on by any ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option since it can result in incorrect output for programs which depend
+on an exact implementation of IEEE or ANSI rules/specifications for math
+functions.</FONT></FONT></UL>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The following options control
+specific optimizations.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option turns on all of these optimizations except </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-funroll-loops</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-funroll-all-loops</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+On most machines, the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-O</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+option turns on the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fthread-jumps</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fdelayed-branch</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+options, but specific machines may handle it differently.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Use the following flags
+in the rare cases when you want to <I>fine-tune</I> optimizations.</FONT></FONT>
+<DL>
+<UL>
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fstrength-reduce</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Perform the optimizations
+of loop strength reduction and elimination of iteration variables.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fthread-jumps</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Perform optimizations where
+we check to see if a jump branches to a location where another comparison
+subsumed by the first is found. If so, the first branch is redirected to
+either the destination of the second branch or a point immediately following
+it, depending on whether the condition is known to be true or false.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fcse-follow-jumps</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>In common subexpression
+elimination, scan through jump instructions when the target of the jump
+is not reached by any other path. For example, when CSE encounters an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>if</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+statement with an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>else</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+clause, CSE will follow the jump when the condition tested is false.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fcse-skip-blocks</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>This is similar to ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fcse-follow-jumps</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+but causes CSE to follow jumps which conditionally skip over blocks. When
+CSE encounters a simple </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>if</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+statement with no </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>else</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+clause, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fcse-skip-blocks</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+causes CSE to follow the jump around the body of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>if</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-frerun-cse-after-loop</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Re-run common subexpression
+elimination after loop optimizations has been performed.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-frerun-loop-opt</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Run the loop optimizations
+twice.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-frerun-cse-after-loop</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Performa global common subexpression
+elimination pass. This pass alos performs global constant and copy propogation.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fexpensive-optimizations</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Perform a number of minor
+optimizations that are relatively expensive.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-foptimize-register-moves</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fregmove</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Attempt to reassign register
+numbers in move instructions and as operands of other simple instructions
+in order to maximize the amount of register tying.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>This is especially helpful
+on machines with two-operand instructions. GNU CC enables this optimization
+by default with </FONT></FONT><FONT FACE="Courier New,Courier">-O2</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or higher.</FONT></FONT>
+<BR>&nbsp;
+<UL><I><FONT FACE="Times New Roman"><FONT SIZE=+1>Note:</FONT></FONT></I>
+<BR><FONT FACE="Courier New,Courier">-fregmove</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New,Courier">-foptimize-register-moves</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+are the same optimization.</FONT></FONT>
+<BR>&nbsp;</UL>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fdelayed-branch</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>If supported for the target
+machine, attempt to reorder instructions to exploit instruction slots available
+after delayed branch instructions.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fschedule-insns</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>If supported for the target
+machine, attempt to reorder instructions to eliminate execution stalls
+due to required data being unavailable. This helps machines that have slow
+floating point or memory load instructions by allowing other instructions
+to be issued until the result of the load or floating point instruction
+is required.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fschedule-insns2</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Similar to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fschedule-insns</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+but requests an additional pass of instruction scheduling after register
+allocation has been done. This is especially useful on machines with a
+relatively small number of registers and where memory load instructions
+take more than one cycle.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fshorten-lifetimes</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Shorten lifetimes of pseudo
+registers which must be allocated into specific hard registers. On some
+machines this avoids spilling those specific hard registers and improves
+code.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fcombine-statics</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Combine static variables
+into a single block to allow the compiler to eliminate redundant address
+loads.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-ffunction-sections</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Place each function into
+its own section in the output file if the target supports arbitrary sections.
+The function’s name determines the section’s name in the output file.</FONT></FONT>
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Use this option on systems where
+the linker can perform optimizations to improve locality of reference in
+the instruction space. HPPA processors running HP-UX and SPARC processors
+running Solaris 2 have linkers with such optimizations. Other systems using
+the ELF object format as well as AIX may have these optimizations in the
+future.</FONT></FONT></DT>
+
+<DT>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Only use this option when there
+are significant benefits from doing so. When you specify this option, the
+assembler and linker will create larger object and executable files and
+will also be slower. You will not be able to use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>gprof</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+on all systems if you specify this option and you may have problems with
+debugging if you specify both this option and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-g</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.</FONT></FONT></DT>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fcaller-saves</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Enable values to be allocated
+in registers that will be clobbered by function calls, by emitting extra
+instructions to save and restore the registers around such calls. Such
+allocation is done only when it seems to result in better code than would
+otherwise be produced. This option is enabled by default on certain machines,
+usually those which have no call-preserved registers to use instead.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-funroll-loops</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Perform the optimization
+of loop unrolling. This is only done for loops whose number of iterations
+can be determined at compile time or run time. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-funroll-loop</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+implies both </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fstrength-reduce</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-frerun-cse-after-loop</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-funroll-all-loops</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Perform the optimization
+of loop unrolling. This is done for all loops and usually makes programs
+run more slowly. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-funroll-all-loops</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+implies </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fstrength-reduce</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as well as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-frerun-cse-after-loop</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fmove-all-movables</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>Forces all invariant
+computations in loops to be moved outside the loop.</FONT></FONT>
+<BR>&nbsp;</UL>
+<FONT FACE="Courier New"><FONT SIZE=+0>-freduce-all-givs</FONT></FONT>
+<UL><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>Forces all general-induction
+variables in loops to be strength-reduced.</FONT></FONT>
+<UL><I><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>Note:</FONT></FONT></I>
+<BR><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>When compiling programs
+written in Fortran, </FONT></FONT><FONT FACE="Courier New,Courier">-fmove-all-moveables</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New,Courier">-freduce-all-givs</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>
+are enabled by default when you use the optimizer.</FONT></FONT>
+<BR><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>These options may
+generate better or worse code; results are highly dependent</FONT></FONT>
+<BR><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>on the structure of
+loops within the source code.</FONT></FONT>
+<BR><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>These two options
+are intended to be removed someday, once they have helped determine the
+efficacy of various approaches to improving loop optimizations.</FONT></FONT>
+<BR><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>Please let us (</FONT></FONT><FONT FACE="Courier New,Courier"><A HREF="mailto:egcs@cygnus.com">egcs@cygnus.com</A></FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New,Courier"><A HREF="mailto:fortran@gnu.org">fortran@gnu.org</A></FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>)
+know how use of these options affects the performance of your production
+code. We're very interested in code that runs slower when these options
+are enabled.</FONT></FONT>
+<BR>&nbsp;</UL>
+</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fno-peephole</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Disable any machine-specific
+peephole optimizations.</FONT></FONT>
+<BR>&nbsp;</UL>
+
+<DT>
+<FONT FACE="Courier New"><FONT SIZE=+0>-fbranch-probabilities</FONT></FONT></DT>
+
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>After running a program
+compiled with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fprofile-arcs</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(see <A HREF="gccOptions_for_Debugging_Your_Progr.html">Options for debugging
+your program on GNU CC</A>), you can compile it a second time using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fbranch-probabilities</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to improve optimizations based on guessing the path a branch might take.</FONT></FONT>
+<BR>&nbsp;<FONT FACE="Times New Roman"><FONT SIZE=+1>With </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>-fbranch-probabilities</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+GCC puts a </FONT></FONT><FONT FACE="Courier New,Courier">REG_EXEC_COUNT</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+note on the first instruction of each basic block, and a </FONT></FONT><FONT FACE="Courier New,Courier">REG_BR_PROB</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+note on each </FONT></FONT><FONT FACE="Courier New,Courier">JUMP_INSN</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New,Courier">CALL_INSN</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+These can be used to improve optimization.</FONT></FONT></UL>
+</UL>
+
+<UL>
+<DL>
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>Currently, they are only
+used in one place: in </FONT></FONT><FONT FACE="Courier New,Courier">reorg.c</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+instead of guessing which path a branch is mostly to take, the </FONT></FONT><FONT FACE="Courier New,Courier">REG_BR_PROB</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+values are used to exactly determine which path is taken more often.</FONT></FONT></DL>
+&nbsp;
+<DT>
+<FONT FACE="Courier New,Courier">-fstrict-aliasing</FONT></DT>
+
+<DL><FONT FACE="Times New Roman"><FONT SIZE=+1>Allows the compiler to assume
+the strictest aliasing rules applicable to the language being compiled.
+For C (and C++), this activates optimizations based on the type of expressions.
+In particular, an object of one type is assumed never to reside at the
+same address as an object of a different type, unless the types</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>are almost the same. For
+example, an </FONT></FONT><FONT FACE="Courier New,Courier">unsigned int</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can alias an </FONT></FONT><FONT FACE="Courier New,Courier">int</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+but not a </FONT></FONT><FONT FACE="Courier New,Courier">void*</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or a </FONT></FONT><FONT FACE="Courier New,Courier">double</FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+A character type may alias any other type. Pay special attention to code
+like the following example.</FONT></FONT></DL>
+
+<DL>
+<DL>
+<PRE><FONT FACE="Courier New,Courier"><FONT SIZE=+1>union a_union {
+&nbsp; int i;
+&nbsp; double d;
+};
+
+int f() {
+&nbsp; a_union t;
+&nbsp; t.d = 3.0;
+&nbsp; return t.i;
+}</FONT></FONT></PRE>
+</DL>
+<FONT SIZE=+1><FONT FACE="Times New Roman,Times">The practice of reading
+from a different union member than the one most recently written to (called
+</FONT><FONT FACE="Times New Roman">“</FONT><FONT FACE="Times New Roman,Times">type-punning</FONT><FONT FACE="Times New Roman">”</FONT><FONT FACE="Times New Roman,Times">)
+is common. Even with </FONT></FONT><FONT FACE="Courier New,Courier">-fstrict-aliasing</FONT><FONT SIZE=+1><FONT FACE="Times New Roman,Times">,
+type-punning is allowed, provided the memory is accessed through the union
+type. So, the previous example</FONT><FONT FACE="Times New Roman">’</FONT><FONT FACE="Times New Roman,Times">s
+code will work as expected. However, the following example</FONT><FONT FACE="Times New Roman">’</FONT><FONT FACE="Times New Roman,Times">s
+code might not.</FONT></FONT>
+<DL>
+<PRE><FONT FACE="Courier New,Courier"><FONT SIZE=+1>int f() {
+&nbsp; a_union t;
+&nbsp; int* ip;
+&nbsp; t.d = 3.0;
+&nbsp; ip = &amp;t.i;
+&nbsp; return *ip;
+}</FONT></FONT></PRE>
+</DL>
+<FONT FACE="Times New Roman,Times"><FONT SIZE=+1>This option is not enabled
+by default at any optimization level because it is new and has yet to be
+subjected to thorough testing. You may of course enable it manually with
+</FONT></FONT><FONT FACE="Courier New,Courier">-fstrict-aliasing</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>.</FONT></FONT>
+<BR><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>Every language that
+wishes to perform language-specific alias analysis should define a function
+that computes, given an tree node, an alias set for the node.</FONT></FONT>
+<BR><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>Nodes in different
+alias sets are not allowed to alias. For an example, see the C front-end
+function, </FONT></FONT><FONT FACE="Courier New,Courier">c_get_alias_set</FONT><FONT FACE="Times New Roman,Times"><FONT SIZE=+1>.</FONT></FONT></DL>
+</DL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccOptions_for_Debugging_Your_Progr.html">Previous</A>|<A HREF="gccOptions_Controlling_the_Preproce.html">Next</A></CENTER>
+</DL>
+
+</BODY>
+</HTML>

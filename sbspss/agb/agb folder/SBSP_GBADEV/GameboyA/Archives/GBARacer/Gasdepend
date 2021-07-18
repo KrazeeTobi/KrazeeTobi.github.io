@@ -1,0 +1,2 @@
+crt0.o: crt0.s rom_header.s  C:\Utils\GameboyA\Utils\Agb\include\AgbDefine.s \
+ C:\Utils\GameboyA\Utils\Agb\include\AgbMacro.s C:\Utils\GameboyA\Utils\Agb\include\AgbMemoryMap.s

@@ -1,0 +1,228 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+</head>
+<body>
+<a NAME="Top"></a><a href="../../index.html">GNUPro Toolkit Documentation</a>|<a href="cppindex.html">Index</a>|<a href="cppOverview_of_the_C_Preprocessor.html">Next</a>
+<br><b><font face="Futura Md BT"><font color="#000000"><font size=+3>The
+C Preprocessor</font></font></font></b>
+<hr SIZE=3 WIDTH="100%">
+<br><font face="Times New Roman"><font size=-1>Copyright &copy; 1988-1997&nbsp;
+Free Software Foundation, Inc.</font></font>
+<br><font face="Times New Roman"><font size=-1>Permission is granted to
+make and distribute verbatim copies of this documentation, provided the
+copyright notice and this permission notice are preserved on all copies.</font></font>
+<br><font face="Times New Roman"><font size=-1>Permission is granted to
+copy and distribute modified versions of this documentation under the conditions
+for verbatim copying, provided also that the entire resulting derived work
+is distributed under the terms of a permission notice identical to this
+one.</font></font>
+<br><font face="Times New Roman"><font size=-1>Permission is granted to
+copy and distribute translations of this documentation into another language,
+under the above conditions for modified versions.</font></font>
+<br><font size=-1><font face="Times New Roman">This documentation has been
+prepared by Cygnus Technical Publications; contact the Cygnus Solutions
+Technical Publications staff: </font><b><font face="Courier New">doc@cygnus.com.</font></b></font>
+<br><font size=-1><font face="Times New Roman">Copyright </font><font face="Times Roman">&copy;</font><font face="Times New Roman">
+1991, 1992, 1993, 1994, 1995, 1996, 1997&nbsp; Cygnus Solutions.</font></font>
+<br><font face="Times New Roman"><font size=-1>All rights reserved.</font></font>
+<br><font size=-1><font face="Times New Roman">GNUPro</font><font face="Times Roman">™</font><font face="Times New Roman">,
+the GNUPro</font><font face="Times Roman">™</font><font face="Times New Roman">
+logo and the Cygnus Solutions logo are all trademarks of Cygnus Solutions.
+All other brand and product names are trademarks of their respective owners.</font></font>
+<p>
+<hr><font face="Times New Roman"><font color="#000000"><font size=+1>See
+the following documentation for detailed discussion of the C preprocessor.</font></font></font>
+<ul TYPE=SQUARE>
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppOverview_of_the_C_Preprocessor.html">Overview
+of the C preprocessor</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppTransformations_Made_Globally.html">Transformations
+made globally</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppPreprocessing_Directives.html">Preprocessing
+directives</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppHeader_Files.html">Header
+files</a></font></font></font></b></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppUses_of_Header_Files.html">Uses
+of header files</a></font></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="cppThe_include_Directive.html"><font face="Times New Roman">The
+</font><b><font face="Courier New">#include</font></b><font face="Times New Roman">
+directive</font></a></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="cppHow_include_Works.html"><font face="Times New Roman">How
+</font><b><font face="Courier New">#include</font></b><font face="Times New Roman">
+works</font></a></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppOnceOnly_Include_Files.html">Once-only
+include files</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppInheritance_and_Header_Files.html">Inheritance
+and header files</a></font></font></font></li>
+</ul>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppMacros.html">Macros</a></font></font></font></b></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppSimple_Macros.html">Simple
+macros</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppMacros_with_Arguments.html">Macros
+with arguments</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppPredefined_Macros.html">Predefined
+macros</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppStandard_Predefined_Macros.html">Standard
+predefined macros</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppNonstandard_Predefined_Macros.html">Nonstandard
+predefined macros</a></font></font></font></i></li>
+</ul>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppStringification.html">Stringification</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppConcatenation.html">Concatenation</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppUndefining_Macros.html">Undefining
+macros</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppRedefining_Macros.html">Redefining
+macros</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppPitfalls_and_Subtleties_of_Macro.html">Pitfalls
+and subtleties of macros</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppImproperly_Nested_Constructs.html">Improperly
+nested constructs</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppUnintended_Grouping_of_Arithmeti.html">Unintended
+grouping of arithmetic</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppSwallowing_the_Semicolon.html">Swallowing
+the semicolon</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppDuplication_of_Side_Effects.html">Duplication
+of side effects</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppSelfReferential_Macros.html">Self-referential
+macros</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppSeparate_Expansion_of_Macro_Argu.html">Separate
+expansion of macro arguments</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppCascaded_Use_of_Macros.html">Cascaded
+use of macros</a></font></font></font></i></li>
+
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppNewlines_in_Macro_Arguments.html">Newlines
+in macro arguments</a></font></font></font></i></li>
+</ul>
+</ul>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppConditionals.html">Conditionals</a></font></font></font></b></li>
+
+<ul TYPE=SQUARE>
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppWhy_Conditionals_are_Used.html">Why
+conditionals are used</a></font></font></font></li>
+
+<ul TYPE=SQUARE>
+<li>
+<i><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppSyntax_of_Conditionals.html">Syntax
+of conditionals</a></font></font></font></i></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="cppThe__if__Directive.html"><i><font face="Times New Roman">The
+</font></i><b><font face="Courier New">#if</font></b><i><font face="Times New Roman">
+directive</font></i></a></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="cppThe_else_Directive.html"><i><font face="Times New Roman">The
+</font></i><b><font face="Courier New">#else</font></b><i><font face="Times New Roman">
+directive</font></i></a></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="cppThe_elif_Directive.html"><i><font face="Times New Roman">The
+</font></i><b><font face="Courier New">#elif</font></b><i><font face="Times New Roman">
+directive</font></i></a></font></font></li>
+</ul>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppKeeping_Deleted_Code_for_Future_.html">Keeping
+deleted code for future reference</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppConditionals_and_Macros.html#e798dc5d">Conditionals
+and macros</a></font></font></font></li>
+
+<li>
+<font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppAssertions.html">Assertions</a></font></font></font></li>
+
+<li>
+<font color="#008000"><font size=+1><a href="cppThe_error_and_warning_Directives.html"><font face="Times New Roman">The</font><b><font face="Courier New">
+#error</font></b><font face="Times New Roman"> and </font><b><font face="Courier New">#warning</font></b><font face="Times New Roman">
+directives</font></a></font></font></li>
+</ul>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppCombining_Source_Files.html">Combining
+source files</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppMiscellaneous_Preprocessing_Dire.html">Miscellaneous
+preprocessing directives</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppC_Preprocessor_Output.html">C
+preprocessor output</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font color="#008000"><font size=+1><a href="cppInvoking_the_C_Preprocessor.html">Invoking
+the C preprocessor</a></font></font></font></b></li>
+
+<li>
+<b><font face="Times New Roman"><font size=+1><a href="cppindex.html">Index</a></font></font></b></li>
+</ul>
+
+<hr SIZE=3 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="cppOverview_of_the_C_Preprocessor.html">Next</a></center>
+
+</body>
+</html>

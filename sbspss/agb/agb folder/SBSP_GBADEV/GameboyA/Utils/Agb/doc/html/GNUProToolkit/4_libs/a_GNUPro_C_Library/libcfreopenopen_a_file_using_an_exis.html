@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>freopen[open a file using an existing file descriptor]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcfreadread_array_elements_from_a_.html">Previous</A>|<A HREF="libcfseekset_file_position.html">Next</A>
+</P>
+
+<P><A NAME="off_820556"></A><A NAME="dced4321"></A><A NAME="off_820556"></A><A NAME="dced4321"></A><FONT SIZE=+3><FONT FACE="Courier New">freopen
+<BR>
+</FONT><FONT FACE="Times New Roman">[open a file using an existing file
+descriptor] </FONT></FONT></P>
+
+<PRE><B><FONT FACE="Times New Roman"><FONT SIZE=+2>SYNOPSIS 
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+1>#include &lt;stdio.h&gt; 
+FILE *freopen(const char * <I>file</I>, const char * <I>mode</I>, FILE * <I>fp</I>); </FONT></FONT></PRE>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>DESCRIPTION <BR>
+</B>Use</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=-1> </FONT><FONT SIZE=+0>freopen</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+a variant of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fopen</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+if you wish to specify a particular file descriptor, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>fp</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">(notably </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdin</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdout</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stderr</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+for the file. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>fp</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">was associated with another file or
+stream, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>freopen</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">closes that other file or stream (but
+ignores any errors while closing it). </FONT></FONT></P>
+
+<P><I><FONT FACE="Courier New"><FONT SIZE=+0>file</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>mode</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">are used just as in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fopen</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>RETURNS <BR>
+</B>If successful, the result is the same as the argument, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>fp</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If the file cannot be opened as specified, the result is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>NULL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>COMPLIANCE <BR>
+</B>ANSI C requires</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>freopen</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Supporting OS subroutines
+required: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>close</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fstat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>isatty</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>lseek</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>open</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>read</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sbrk</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>write</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+</BODY>
+</HTML>

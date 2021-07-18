@@ -1,0 +1,453 @@
+Archive member included       because of file (symbol)
+
+C:/agb/lib/libagbsyscall.a(AgbSyscall.o)
+                              demo_main.o (RegisterRamReset)
+C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_call_via_rX.o)
+                              MultiSio.o (_call_via_r0)
+
+Allocating common symbols
+Common symbol       size              file
+
+UsrSendBuf          0x20              demo_main.o
+demo_bin_start      0x4               main.o
+frame_retval        0x4               main.o
+IntrTableBuf        0x38              demo_main.o
+Cont                0x4               demo_main.o
+demo_bin_length     0x4               main.o
+IntrFuncBuf         0x110             MultiSio.o
+multiboot_status    0x4c              main.o
+Trg                 0x4               demo_main.o
+SioFlags            0x4               demo_main.o
+IntrMainBuf         0x400             demo_main.o
+UsrRecvBuf          0x80              demo_main.o
+Ms                  0x290             MultiSio.o
+OamBak              0x400             demo_main.o
+RecvFuncBuf         0x50              MultiSio.o
+BgBak               0x800             demo_main.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD crt0.o
+LOAD MultiSioAsm.o
+LOAD main.o
+LOAD demo_main.o
+LOAD data.o
+LOAD MultiBoot.o
+LOAD MultiSio.o
+LOAD client.o
+LOAD C:/agb/lib/libagbsyscall.a
+LOAD C:/agb/lib/libisagbprn.a
+LOAD C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a
+LOAD C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/lib/libg.a
+LOAD C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/../../../../thumb-elf/lib/libc.a
+LOAD C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a
+Address of section .text set to 0x8000000
+Address of section .bss set to 0x3000000
+                0x00008000                .=0x8000
+
+.interp
+ *(.interp)
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x08000000     0x117c
+ *(.text)
+ .text          0x08000000      0x1b0 crt0.o
+                0x08000000                _start
+                0x080000c0                start_vector
+                0x080000fc                intr_main
+ .text          0x080001b0      0x144 MultiSioAsm.o
+                0x080001f4                MultiSioIntr
+                0x080001b0                MultiSioRecvBufChange
+ .text          0x080002f4      0x2b0 main.o
+                0x0800057c                BgScSet
+                0x080002f4                AgbMain
+ .text          0x080005a4      0x24c demo_main.o
+                0x080007c0                IntrDummy
+                0x080007bc                VBlankIntr
+                0x080005a4                DemoMain
+                0x080007c4                KeyRead
+ .text          0x080007f0      0x564 MultiBoot.o
+                0x08000d44                MultiBootCheckComplete
+                0x08000c80                MultiBootStartMaster
+                0x08000c60                MultiBootStartProbe
+                0x080007f0                MultiBootInit
+                0x0800084c                MultiBootMain
+ .text          0x08000d54      0x314 MultiSio.o
+                0x08000d54                MultiSioInit
+                0x08000e58                MultiSioMain
+                0x08000f94                MultiSioRecvDataCheck
+                0x08000f48                MultiSioSendDataSet
+ .text          0x08001068       0xd8 C:/agb/lib/libagbsyscall.a(AgbSyscall.o)
+                0x080010b8                BitUnPack
+                0x080010ec                SoundBiasChange
+                0x080010a4                ArcTan2
+                0x080010e0                Diff8bitUnFilterWram
+                0x0800111c                MusicPlayerOpen
+                0x080010e8                Diff16bitUnFilter
+                0x08001110                SoundDriverVSyncOff
+                0x08001100                SoundDriverMode
+                0x08001124                MusicPlayerStop
+                0x08001068                SoftReset
+                0x080010e4                Diff8bitUnFilterVram
+                0x080010fc                SoundDriverInit
+                0x08001082                VBlankIntrWait
+                0x080010dc                RLUnCompVram
+                0x080010f6                SoundBiasReset
+                0x080010b4                ObjAffineSet
+                0x080010ac                CpuFastSet
+                0x08001118                MidiKey2Freq
+                0x08001120                MusicPlayerStart
+                0x0800107c                IntrWait
+                0x08001096                DivRemArm
+                0x080010d8                RLUnCompWram
+                0x08001090                DivRem
+                0x080010a0                ArcTan
+                0x08001078                RegisterRamReset
+                0x08001128                MusicPlayerContinue
+                0x080010b0                BgAffineSet
+                0x0800110c                SoundChannelClear
+                0x080010f0                SoundBiasSet
+                0x08001114                SoundDriverVSyncOn
+                0x08001088                Div
+                0x08001108                SoundDriverVSync
+                0x0800112c                MusicPlayerFadeOut
+                0x080010bc                LZ77UnCompWram
+                0x08001104                SoundDriverMain
+                0x08001130                MultiBoot
+                0x080010a8                CpuSet
+                0x0800108c                DivArm
+                0x080010d4                HuffUnComp
+                0x0800109c                Sqrt
+                0x080010c0                LZ77UnCompVram
+ .text          0x08001140       0x3c C:\PROGRA~1\CYGNUS\THUMBELF-000512\H-I686-CYGWIN32\BIN/../lib/gcc-lib/thumb-elf/2.9-arm-000512/libgcc.a(_call_via_rX.o)
+                0x08001148                _call_via_r2
+                0x08001158                _call_via_r6
+                0x08001154                _call_via_r5
+                0x0800114c                _call_via_r3
+                0x0800116c                _call_via_fp
+                0x08001160                _call_via_r8
+                0x0800115c                _call_via_r7
+                0x08001140                _call_via_r0
+                0x08001168                _call_via_sl
+                0x08001174                _call_via_sp
+                0x08001164                _call_via_r9
+                0x08001150                _call_via_r4
+                0x08001144                _call_via_r1
+                0x08001170                _call_via_ip
+                0x08001178                _call_via_lr
+ *(.text.*)
+ *(.stub)
+ *(.gnu.warning)
+ *(.gnu.linkonce.t*)
+ *(.glue_7t)
+ *(.glue_7)
+                0x0800117c                _etext=.
+                0x0800117c                PROVIDE (etext, .)
+
+.fini
+ *(.fini)
+
+.rodata         0x0800117c     0x23d8
+ *(.rodata)
+ .rodata        0x0800117c       0x80 main.o
+                0x0800117c                BgScDatap_ID
+ .rodata        0x080011fc       0x38 demo_main.o
+                0x080011fc                IntrTable
+ .rodata        0x08001234     0x2320 data.o
+                0x08001734                OamData_Sample
+                0x08001754                PlttData_Sample
+                0x08001954                CharData_Sample
+                0x08001234                BgScData_Sample
+ *(.rodata.*)
+ *(.gnu.linkonce.r*)
+
+.rodata1
+ *(.rodata1)
+                0x08003654                .=(ALIGN(0x100)+(.&0xff))
+
+.data           0x08003654     0x10c4
+ *(.data)
+ .data          0x08003654     0x10c4 client.o
+                0x08004718                _binary_client_bin_end
+                0x08003654                _binary_client_bin_start
+ *(.data.*)
+ *(.gnu.linkonce.d*)
+
+.data1
+ *(.data1)
+
+.ctors
+ EXCLUDE_FILE ( *crtend.o )*(.ctors)
+ *(SORT(.ctors.*))
+ *crtend(.ctors)
+
+.dtors
+ EXCLUDE_FILE ( *crtend.o )*(.dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+
+.got
+ *(.got.plt)
+ *(.got)
+
+.dynamic
+ *(.dynamic)
+
+.sdata
+ *(.sdata)
+ *(.sdata.*)
+                0x08004718                _edata=.
+                0x08004718                PROVIDE (edata, .)
+                0x08004718                __bss_start=.
+                0x08004718                __bss_start__=.
+
+.sbss
+ *(.sbss)
+ *(.scommon)
+
+.bss            0x03000000     0x1790
+ *(.dynbss)
+ *(.bss)
+ .bss           0x03000000      0x248 MultiBoot.o
+ *(.bss.*)
+ *(COMMON)
+ *fill*         0x03000248        0x8
+ COMMON         0x03000250       0x5c main.o
+                                  0x0 (size before relaxing)
+                0x03000250                demo_bin_start
+                0x03000254                frame_retval
+                0x03000258                demo_bin_length
+                0x03000260                multiboot_status
+ *fill*         0x030002ac        0x4
+ COMMON         0x030002b0     0x10f0 demo_main.o
+                                  0x0 (size before relaxing)
+                0x030002b0                UsrSendBuf
+                0x030002d0                IntrTableBuf
+                0x03000308                Cont
+                0x0300030c                Trg
+                0x03000310                SioFlags
+                0x03000320                IntrMainBuf
+                0x03000720                UsrRecvBuf
+                0x030007a0                OamBak
+                0x03000ba0                BgBak
+ COMMON         0x030013a0      0x3f0 MultiSio.o
+                                  0x0 (size before relaxing)
+                0x030013a0                IntrFuncBuf
+                0x030014b0                Ms
+                0x03001740                RecvFuncBuf
+                0x03001790                .=ALIGN(0x4)
+                0x03001790                .=ALIGN(0x4)
+                0x03001790                _end=.
+                0x03001790                _bss_end__=.
+                0x03001790                __bss_end__=.
+                0x03001790                PROVIDE (end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x80
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 main.o
+ .debug_aranges
+                0x00000020       0x20 demo_main.o
+ .debug_aranges
+                0x00000040       0x20 MultiBoot.o
+ .debug_aranges
+                0x00000060       0x20 MultiSio.o
+
+.debug_pubnames
+                0x00000000      0x2c0
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x88 main.o
+ .debug_pubnames
+                0x00000088       0xc8 demo_main.o
+ .debug_pubnames
+                0x00000150       0x61 data.o
+ .debug_pubnames
+                0x000001b1       0x82 MultiBoot.o
+ .debug_pubnames
+                0x00000233       0x8d MultiSio.o
+
+.debug_info     0x00000000     0xf8ca
+ *(.debug_info)
+ .debug_info    0x00000000     0x3421 main.o
+ .debug_info    0x00003421     0x3427 demo_main.o
+ .debug_info    0x00006848     0x2e14 data.o
+ .debug_info    0x0000965c     0x301b MultiBoot.o
+ .debug_info    0x0000c677     0x3253 MultiSio.o
+
+.debug_abbrev   0x00000000      0x722
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x16c main.o
+ .debug_abbrev  0x0000016c      0x172 demo_main.o
+ .debug_abbrev  0x000002de      0x101 data.o
+ .debug_abbrev  0x000003df      0x1d4 MultiBoot.o
+ .debug_abbrev  0x000005b3      0x16f MultiSio.o
+
+.debug_line     0x00000000      0xdd5
+ *(.debug_line)
+ .debug_line    0x00000000      0x27b main.o
+ .debug_line    0x0000027b      0x238 demo_main.o
+ .debug_line    0x000004b3      0x60e MultiBoot.o
+ .debug_line    0x00000ac1      0x314 MultiSio.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.stack          0x00080000        0x0
+                0x00080000                _stack=.
+ *(.stack)
+OUTPUT(multi_boot.elf elf32-littlearm)

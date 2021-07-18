@@ -1,0 +1,47 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../html/agb.css">
+		<!-- Edited by Ron D. 6/23/2000 -->
+		<title>AgbComp[Tool Command]</title>
+	</head>
+
+	<body>
+		<h2>agbcomp<font size="3"> [Tool Command]</font></h2>
+		<p><font color="red">Compresses binary data for output. </font></p>
+		<h3>Syntax</h3>
+		<pre><code>agbcomp [-b/-h/-d 8|16/-r/-l search/-h 4|8] input-file.bin</code></pre>
+		<h3>Description</h3>
+		<p>Compresses binary data for output.</p>
+		<p>Command arguments are shown below:</p>
+		<dl>
+			<dt><b>input-file</b>
+			<dd>Input file.<br>
+			<br>
+			<dt><b>-b</b>
+			<dd>Outputs as binary file.<br>
+			<br>
+			<dt><b>-h</b>
+			<dd>Adds 4-byte header to be able to identify non-conversion data.<br>
+			<br>
+			<dt><b>-d bitSize (8|16)</b>
+			<dd>Outputs differential conversion data.<br>
+			Use <tt>Diff8BitUnFilterWram()</tt>, <tt>Diff8BitUnFilterVram()</tt> or <tt>Diff16BitUnFilter()</tt> to decompress.<br>
+			<br>
+			<dt><b>-r</b>
+			<dd>Outputs using run length compression. Use <tt>RLUnCompVram()</tt> or <tt>RLUnCompWram()</tt> to decompress.<br>
+			<br>
+			<dt><b>-l search (&gt;0)</b>
+			<dd>Outputs using LZ77 compression. Use <tt>LZ77UnCompVram()</tt> or <tt>LZ77UnCompWram()</tt> to decompress.<br>
+			<br>
+			<dd>Specify 2 or more for search for data decompressed using <tt>LZ77UnCompVram()</tt>.<br>
+			<br>
+			<dt><b>-h bitSize (4|8) </b>
+			<dd>Outputs using Huffman compression. Use <tt>HuffUnComp()</tt> to decompress.
+		</dl>
+		<h3>Example</h3>
+		<p>To output data which was converted in the order of, Add header to original data --&gt; LZ77 compression --&gt; Huffman compression.</p>
+		<pre><code>agbcomp -h -l 2 -h 4 input-file.bin</code></pre>
+	</body>
+
+</html>

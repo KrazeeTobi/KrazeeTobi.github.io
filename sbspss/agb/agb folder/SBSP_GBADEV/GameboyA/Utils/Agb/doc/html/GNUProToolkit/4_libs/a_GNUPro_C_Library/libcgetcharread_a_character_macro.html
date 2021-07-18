@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>getchar[read a character (macro)]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcgetcread_a_character_macro.html">Previous</A>|<A HREF="libcgetsget_character_string.html">Next</A>
+</P>
+
+<P><A NAME="off_918048"></A><A NAME="b067226e"></A><A NAME="off_918048"></A><A NAME="b067226e"></A><A NAME="off_918048"></A><A NAME="b067226e"></A><FONT SIZE=+3><FONT FACE="Courier New">getchar
+<BR>
+</FONT><FONT FACE="Times New Roman">[read a character (macro)] </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>#include</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>&lt;stdio.h&gt;</FONT><FONT SIZE=-1> <BR>
+</FONT><FONT SIZE=+0>int</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>getchar(void);</FONT><FONT SIZE=-1>
+<BR>
+<BR>
+</FONT><FONT SIZE=+0>int</FONT><FONT SIZE=-1> </FONT><FONT SIZE=+0>_getchar_r(void</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>*<I>reent</I>); </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>getchar</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is a macro, defined in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>stdio.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+You can use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>getchar</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">to get the next single character from
+the standard input stream. As a side effect, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>getchar</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">advances the standard input’s current
+position indicator. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The alternate function </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>_getchar_r</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is a reentrant version. The extra argument
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>reent</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is a pointer to a reentrancy structure.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>RETURNS <BR>
+</B>The next character (read as an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>unsigned</FONT><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>char</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and cast to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>),
+unless there is no more data, or the host system reports a read error;
+in either of these situations, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>getchar</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">returns </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>EOF</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can distinguish the two
+situations that cause an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>EOF</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">result by using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ferror(stdin)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>feof(stdin)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>COMPLIANCE <BR>
+</B>ANSI C requires</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=-1>
+</FONT><FONT SIZE=+0>getchar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+it suggests, but does not require, that </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>getchar</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">be implemented as a macro. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Supporting OS subroutines
+required: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>close</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fstat</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>isatty</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>lseek</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>read</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>sbrk</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>write</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+
+</BODY>
+</HTML>

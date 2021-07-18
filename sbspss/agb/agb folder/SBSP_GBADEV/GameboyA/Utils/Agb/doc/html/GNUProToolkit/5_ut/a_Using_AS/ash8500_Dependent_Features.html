@@ -1,0 +1,218 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>h8/500 Dependent Features</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="ash8300_Dependent_Features.html">Previous</A>|<A HREF="asHPPA_Dependent_Features.html">Next</A>
+<BR><A NAME="off_1214778"></A><A NAME="7ee60d04"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>H8/500
+dependent features</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>See
+the following documentation for the Hitachi H8/500 architecture’s features
+and options for the assembler.</FONT></FONT></FONT>
+<UL>
+<UL>
+<UL>
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="ash8500_Dependent_Features.html#6220d827">Options
+for H8/500</A></FONT><FONT COLOR="#000000"></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="ash8500_Dependent_Features.html#45aa781a">Syntax
+for H8/500</A></FONT><FONT COLOR="#000000"></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="ash8500_Dependent_Features.html#3ba95edc">Special
+characters for H8/500</A></FONT><FONT COLOR="#000000"></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="ash8500_Dependent_Features.html#cc3f8ace">Register
+names for H8/500</A></FONT><FONT COLOR="#000000"></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="ash8500_Dependent_Features.html#71619e67">Addressing
+modes for H8/500</A></FONT><FONT COLOR="#000000"></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="ash8500_Dependent_Features.html#4f5ccfd3">Floating
+point for H8/500</A></FONT><FONT COLOR="#000000"></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="ash8500_Dependent_Features.html#dd8c8204">Machine
+directives for H8/500</A></FONT><FONT COLOR="#000000"></FONT></FONT></FONT></LI>
+
+<LI>
+<FONT FACE="Times New Roman"><FONT SIZE=+1><FONT COLOR="#008000"><A HREF="ash8500_Dependent_Features.html#edcee7e8">Opcodes
+for H8/500</A></FONT><FONT COLOR="#000000"></FONT></FONT></FONT></LI>
+</UL>
+</UL>
+</UL>
+<A NAME="6220d827"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Options
+for H8/500</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has no additional command-line options for the Hitachi H8/500 family.</FONT></FONT></FONT>
+
+<P><A NAME="45aa781a"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Syntax
+for H8/500</FONT></FONT></I></B>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>The
+following documentation refers to the syntax for the Hitachi H8/500.</FONT></FONT></FONT>
+
+<P><A NAME="3ba95edc"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Special
+characters for H8/500</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>!</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the line comment character.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+can be used instead of a newline to separate statements.</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>Since
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has no special meaning, you may use it in symbol names.</FONT></FONT></FONT>
+
+<P><A NAME="cc3f8ace"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Register
+names for H8/500</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>You
+can use the predefined symbols </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r1</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r3</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r4</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r5</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r6</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r7</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to refer to the H8/500 registers.</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>The
+H8/500 also has the following control registers.</FONT></FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>cp</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>code pointer</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>dp</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>data pointer</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>bp</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>base pointer</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>tp</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>stack top pointer</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>ep</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>extra pointer</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>sr</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>status register</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>ccr</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>condition code register</FONT></FONT></UL>
+</UL>
+
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>All
+registers are 16 bits long. To represent 32 bit numbers, use two adjacent
+registers; for distant memory addresses, use one of the segment pointers
+(</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for the program counter; </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>dp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for </FONT></FONT><FONT SIZE=+0><FONT FACE="Courier New">r0</FONT><FONT FACE="Times New Roman">–</FONT><FONT FACE="Courier New">r3</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ep</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r4</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r5</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>tp</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r6</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>r7</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></FONT>
+
+<P><A NAME="71619e67"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Addressing
+modes for H8/500</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+understands the following addressing modes for the H8/500.</FONT></FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>R<I>n</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Register direct</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>@R<I>n</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Register indirect</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>@(d:8, R<I>n</I>)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Register indirect with 8
+bit signed displacement</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>@(d:16, R<I>n</I>)</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Register indirect with 16
+bit signed displacement</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>@-R<I>n</I></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Register indirect with pre-decrement</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>@R<I>n</I>+</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Register indirect with post-increment</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>@<I>aa</I>:8</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>8 bit absolute address</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>@<I>aa</I>:16</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>16 bit absolute address</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>#<I>xx</I>:8</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>8 bit immediate</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>#<I>xx</I>:16</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>16 bit immediate</FONT></FONT></UL>
+</UL>
+
+
+<P><A NAME="4f5ccfd3"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Floating
+point for H8/500</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman"><FONT SIZE=+1>The
+H8/500 family has no hardware floating point, but the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.float</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directive generates IEEE floating-point numbers for compatibility with
+other development tools.</FONT></FONT></FONT>
+
+<P><A NAME="dd8c8204"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Machine
+directives for H8/500</FONT></FONT></I></B>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has no machine-dependent directives for the H8/500. However, on this platform
+the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.int</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.word</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+directives generate 16-bit numbers.</FONT></FONT></FONT>
+
+<P><A NAME="edcee7e8"></A><B><I><FONT FACE="Times New Roman"><FONT SIZE=+2>Opcodes
+for H8/500</FONT></FONT></I></B>
+
+<P><FONT FACE="Times New Roman"><FONT COLOR="#000000"><FONT SIZE=+1>For
+detailed information on the H8/500 machine instruction set, see <B><I>H8/500
+Series Programming Manual</I></B> (Hitachi M21T001).</FONT></FONT></FONT>
+
+<P><FONT COLOR="#000000"><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+implements all the standard H8/500 opcodes. No additional pseudo-instructions
+are needed on this family.</FONT></FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="as.html">Contents</A>|<A HREF="asindex.html">Index</A>|<A HREF="ash8300_Dependent_Features.html">Previous</A>|<A HREF="asHPPA_Dependent_Features.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

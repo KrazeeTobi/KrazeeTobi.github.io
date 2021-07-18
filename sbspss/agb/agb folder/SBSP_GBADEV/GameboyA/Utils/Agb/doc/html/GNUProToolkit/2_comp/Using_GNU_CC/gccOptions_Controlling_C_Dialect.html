@@ -1,0 +1,392 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Options Controlling C Dialect</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccCompiling_C_Programs.html">Previous</a>|<a href="gccOptions_that_Control_C_Dialect.html">Next</a>
+<br><a NAME="off_590305"></a><a NAME="e6c32665"></a><font face="Futura Md BT"><font color="#000000"><b><font size=+3>Options
+controlling C dialect&nbsp;</font></b>&nbsp;</font></font>
+<hr SIZE=6 WIDTH="100%">
+<br><font face="Times New Roman"><font size=+1>The following options control
+the dialect of C (or languages derived from C, such as C++ and Objective
+C) that the compiler accepts.</font></font>
+<ul>
+<dt>
+<font face="Courier New"><font size=+0>-ansi</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Support all ANSI standard
+C programs.</font></font>
+<dt>
+<font face="Times New Roman"><font size=+1>This turns off certain features
+of GNU C that are incompatible with ANSI C, such as the </font></font><font face="Courier New"><font size=+0>asm</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>inline</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>typeof</font></font><font face="Times New Roman"><font size=+1>
+keywords, and predefined macros such as </font></font><font face="Courier New"><font size=+0>unix</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>vax</font></font><font face="Times New Roman"><font size=+1>
+that identify the type of system you are using. It also enables the undesirable
+and rarely used ANSI </font></font><font face="Courier New"><font size=+0>trigraph</font></font><font face="Times New Roman"><font size=+1>
+feature, disallows the dollar sign symbol (</font></font><font face="Courier New"><font size=+0>$</font></font><font face="Times New Roman"><font size=+1>)
+as part of identifiers, and disables recognition of C++ style comments
+with double forward-slash (</font></font><font face="Courier New"><font size=+0>//</font></font><font face="Times New Roman"><font size=+1>).</font></font></dt>
+
+<dt>
+<font face="Times New Roman"><font size=+1>The alternate keywords, </font></font><font face="Courier New"><font size=+0>__asm__</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>__extension__</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>__inline__</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>__typeof__</font></font><font face="Times New Roman"><font size=+1>,
+continue to work despite </font></font><font face="Courier New"><font size=+0>-ansi</font></font><font face="Times New Roman"><font size=+1>.
+You would not want to use them in an ANSI C program, of course, but it
+is useful to put them in header files that might be included in compilations
+done with </font></font><font face="Courier New"><font size=+0>-ansi</font></font><font face="Times New Roman"><font size=+1>.
+Alternate predefined macros, such as </font></font><font face="Courier New"><font size=+0>__unix__</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>__vax__</font></font><font face="Times New Roman"><font size=+1>,
+are also available, with or without </font></font><font face="Courier New"><font size=+0>-ansi</font></font><font face="Times New Roman"><font size=+1>.</font></font></dt>
+
+<dt>
+<font face="Times New Roman"><font size=+1>The </font></font><font face="Courier New"><font size=+0>-ansi</font></font><font face="Times New Roman"><font size=+1>
+option does not cause non-ANSI programs to be rejected gratuitously. For
+that, </font></font><font face="Courier New"><font size=+0>-pedantic</font></font><font face="Times New Roman"><font size=+1>
+is required in addition to </font></font><font face="Courier New"><font size=+0>-ansi</font></font><font face="Times New Roman"><font size=+1>.
+See also <a href="gccOptions_to_Request_or_Suppress_W.html">Options to
+request or suppress warnings</a>. The macro, </font></font><font face="Courier New"><font size=+0>__STRICT_ANSI__</font></font><font face="Times New Roman"><font size=+1>,
+is predefined when the </font></font><font face="Courier New"><font size=+0>-ansi</font></font><font face="Times New Roman"><font size=+1>
+option is used. Some header files may notice this macro and refrain from
+declaring certain functions or defining certain macros that the ANSI standard
+doesn’t call for; this is to avoid interfering with any programs that might
+use these names for other things. The functions, </font></font><font face="Courier New"><font size=+0>alloca</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>abort</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>exit</font></font><font face="Times New Roman"><font size=+1>,
+and</font></font><font face="Courier New"><font size=+0> _exit</font></font><font face="Times New Roman"><font size=+1>,
+are not built-in functions when </font></font><font face="Courier New"><font size=+0>-ansi</font></font><font face="Times New Roman"><font size=+1>
+is used.</font></font></dt>
+
+<br>&nbsp;</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-fno-asm</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Do not recognize </font></font><font face="Courier New"><font size=+0>asm</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>inline</font></font><font face="Times New Roman"><font size=+1>
+or </font></font><font face="Courier New"><font size=+0>typeof</font></font><font face="Times New Roman"><font size=+1>
+as a keyword, so that code can use these words as identifiers. You can
+use the keywords </font></font><font face="Courier New"><font size=+0>__asm__</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>__inline__</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>__typeof__</font></font><font face="Times New Roman"><font size=+1>
+instead. </font></font><font face="Courier New"><font size=+0>-ansi</font></font><font face="Times New Roman"><font size=+1>
+implies </font></font><font face="Courier New"><font size=+0>-fno-asm</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<dt>
+<font face="Times New Roman"><font size=+1>In C++, this switch only affects
+the </font></font><font face="Courier New"><font size=+0>typeof</font></font><font face="Times New Roman"><font size=+1>
+keyword, since </font></font><font face="Courier New"><font size=+0>asm</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>inline</font></font><font face="Times New Roman"><font size=+1>
+are standard keywords. You may want to use the </font></font><font face="Courier New"><font size=+0>-fno-gnu-keywords</font></font><font face="Times New Roman"><font size=+1>
+flag instead, as it also disables the other, C++-specific, extension keywords
+such as </font></font><font face="Courier New"><font size=+0>headof</font></font><font face="Times New Roman"><font size=+1>.</font></font></dt>
+
+<br>&nbsp;</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-fno-builtin</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Don’t recognize built-in
+functions that do not begin with two leading underscores. Currently, the
+functions affected include </font></font><font face="Courier New"><font size=+0>abort</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>abs</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>alloca</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>cos</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>exit</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>fabs</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>ffs</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>labs</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>memcmp</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>memcpy</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>sin</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>sqrt</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>strcmp</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>strcpy</font></font><font face="Times New Roman"><font size=+1>,
+and </font></font><font face="Courier New"><font size=+0>strlen</font></font><font face="Times New Roman"><font size=+1>.
+GCC normally generates special code to handle certain built-in functions
+more efficiently; for instance, calls to </font></font><font face="Courier New"><font size=+0>alloca</font></font><font face="Times New Roman"><font size=+1>
+may become single instructions that adjust the stack directly, and calls
+to </font></font><font face="Courier New"><font size=+0>memcpy</font></font><font face="Times New Roman"><font size=+1>
+may become inline copy loops.</font></font>
+<br><font face="Times New Roman"><font size=+1>The resulting code is often
+both smaller and faster, but since the function calls no longer appear
+as such, you cannot set a breakpoint on those calls, nor can you change
+the behavior of the functions by linking with a different library.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-fhosted</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Assert that compilation
+takes place in a hosted environment. This implies ‘</font></font><font face="Courier New"><font size=+0>-fbuiltin</font></font><font face="Times New Roman"><font size=+1>’.
+A hosted environment is one in which the entire standard library is available,
+and in which main has a return type of </font></font><font face="Courier New"><font size=+0>int</font></font><font face="Times New Roman"><font size=+1>.
+Examples are nearly everything except a kernel.</font></font>
+<br><font face="Times New Roman"><font size=+1>This is equivalent to ‘</font></font><font face="Courier New"><font size=+0>-fno-freestanding</font></font><font face="Times New Roman"><font size=+1>’.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-ffreestanding</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Assert that compilation
+takes place in a freestanding environment. This implies ‘</font></font><font face="Courier New"><font size=+0>-fno-builtin</font></font><font face="Times New Roman"><font size=+1>’.
+A freestanding environment is one in which the standard library may not
+exist, and program startup may not necessarily be at </font></font><font face="Courier New"><font size=+0>main</font></font><font face="Times New Roman"><font size=+1>.
+The most obvious example is an OS kernel. This is equivalent to ‘</font></font><font face="Courier New"><font size=+0>-fno-hosted</font></font><font face="Times New Roman"><font size=+1>’.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-trigraphs</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Support ANSI C trigraphs.
+You don’t want to know about this brain-damage.</font></font>
+<br><font face="Times New Roman"><font size=+1>The </font></font><font face="Courier New"><font size=+0>-ansi</font></font><font face="Times New Roman"><font size=+1>
+option implies </font></font><font face="Courier New"><font size=+0>-trigraphs</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-traditional</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Attempt to support some
+aspects of traditional C compilers. Specifically:</font></font>
+<br>&nbsp;
+<ul>
+<li>
+<font face="Times New Roman"><font size=+1>All </font></font><font face="Courier New"><font size=+0>extern</font></font><font face="Times New Roman"><font size=+1>
+declarations take effect globally even if they are written inside of a
+function definition. This includes implicit declarations of functions.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>The newer keywords, </font></font><font face="Courier New"><font size=+0>typeof</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>inline</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>signed</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>const</font></font><font face="Times New Roman"><font size=+1>
+and </font></font><font face="Courier New"><font size=+0>volatile</font></font><font face="Times New Roman"><font size=+1>,
+are not recognized. (You can still use the alternative keywords such as
+</font></font><font face="Courier New"><font size=+0>__typeof__</font></font><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>__inline__</font></font><font face="Times New Roman"><font size=+1>,
+and so on.)</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>Comparisons between pointers
+and integers are always allowed.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>Integer types, </font></font><font face="Courier New"><font size=+0>unsigned
+short</font></font><font face="Times New Roman"><font size=+1> and </font></font><font face="Courier New"><font size=+0>unsigned
+char</font></font><font face="Times New Roman"><font size=+1>, promote
+to </font></font><font face="Courier New"><font size=+0>unsigned int</font></font><font face="Times New Roman"><font size=+1>.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>Out-of-range floating point
+literals are not an error.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>Certain constructs which ANSI
+regards as a single invalid preprocessing number, such as </font></font><font face="Courier New"><font size=+0>0xe-0xd</font></font><font face="Times New Roman"><font size=+1>,
+are treated as expressions instead.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>String “constants are not necessarily
+constant; they are stored in writable space, and identical looking constants
+are allocated separately. (This is the same as the effect of&nbsp; </font></font><font face="Courier New"><font size=+0>-fwritable-strings</font></font><font face="Times New Roman"><font size=+1>.)</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>All automatic variables not
+declared register are preserved by </font></font><font face="Courier New"><font size=+0>longjmp</font></font><font face="Times New Roman"><font size=+1>.
+Ordinarily, GNU C follows ANSI C: automatic variables not declared </font></font><font face="Courier New"><font size=+0>volatile</font></font><font face="Times New Roman"><font size=+1>
+may be clobbered.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>The character escape sequences
+‘</font></font><font face="Courier New"><font size=+0>\x</font></font><font face="Times New Roman"><font size=+1>’
+and ‘</font></font><font face="Courier New"><font size=+0>\a</font></font><font face="Times New Roman"><font size=+1>’
+evaluate as the literal characters ‘</font></font><font face="Courier New"><font size=+0>x</font></font><font face="Times New Roman"><font size=+1>’
+and ‘</font></font><font face="Courier New"><font size=+0>a</font></font><font face="Times New Roman"><font size=+1>’
+respectively. Without ‘</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>’,
+‘</font></font><font face="Courier New"><font size=+0>\x</font></font><font face="Times New Roman"><font size=+1>’
+is a prefix for the hexadecimal representation of a character, and ‘</font></font><font face="Courier New"><font size=+0>\a</font></font><font face="Times New Roman"><font size=+1>’
+produces a bell.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>In C++ programs, assignment
+to </font></font><font face="Courier New"><font size=+0>this</font></font><font face="Times New Roman"><font size=+1>
+is permitted with</font></font></li>
+
+<br><font face="Times New Roman"><font size=+1>‘</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>’.
+(The ‘</font></font><font face="Courier New"><font size=+0>-fthis-is-variable</font></font><font face="Times New Roman"><font size=+1>’
+option also has this effect.)</font></font></ul>
+<font face="Times New Roman"><font size=+1>You may wish to use ‘</font></font><font face="Courier New"><font size=+0>-fno-builtin</font></font><font face="Times New Roman"><font size=+1>’
+as well as ‘</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>’
+if your program uses names that are normally GNU C builtin functions for
+other purposes of its own.</font></font>
+<br><font face="Times New Roman"><font size=+1>You cannot use ‘</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>’
+if you include any header files that rely on ANSI C features. Some vendors
+are starting to ship systems with ANSI C header files and you cannot use
+‘</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>’
+on such systems to compile files that include any system headers.</font></font>
+<br><font face="Times New Roman"><font size=+1>The ‘</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>’
+option also enables the ‘</font></font><font face="Courier New"><font size=+0>-traditional-cpp</font></font><font face="Times New Roman"><font size=+1>’
+option which is described in the following discussion.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-traditional-cpp</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Attempt to support some
+aspects of traditional C preprocessors. Specifically:</font></font>
+<br>&nbsp;
+<ul>
+<li>
+<font face="Times New Roman"><font size=+1>Comments convert to nothing
+at all rather than to a space. This allows traditional token concatenation.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>In a preprocessing directive,
+the pound/number symbol (</font></font><font face="Courier New"><font size=+0>#</font></font><font face="Times New Roman"><font size=+1>)
+must appear as the first character of a line.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>Macro arguments are recognized
+within string constants in a macro definition (and their values are stringified,
+though without additional quote marks, when they appear in such a context).
+The preprocessor always considers a string constant to end at a newline.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>The predefined macro, </font></font><font face="Courier New"><font size=+0>__STDC__</font></font><font face="Times New Roman"><font size=+1>,
+is not defined when you use ‘</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>’,
+but</font></font><font face="Courier New"><font size=+0> __GNUC__</font></font><font face="Times New Roman"><font size=+1>
+is (since the GNU extensions which </font></font><font face="Courier New"><font size=+0>__GNUC__</font></font><font size=+1><font face="Times New Roman">
+indicates are not affected by ‘</font><font face="Courier New">-</font></font><font face="Courier New"><font size=+0>traditional</font></font><font face="Times New Roman"><font size=+1>’).
+If you need to write header files that work differently depending on whether
+</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>
+is in use, by testing both of these predefined macros you can distinguish
+four situations: GNU C, traditional GNU C, other ANSI C compilers, and
+other old C compilers. The predefined macro, </font></font><font face="Courier New"><font size=+0>__STDC_VERSION__</font></font><font face="Times New Roman"><font size=+1>,
+is also not defined when you use ‘</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>’.
+For more discussion of these and other predefined macros, see the <a href="../The_C_Preprocessor/cppStandard_Predefined_Macros.html">Standard
+predefined macros</a> in <i><a href="../The_C_Preprocessor/cpp.html">The
+C Preprocessor</a></i> in <b><i>GNUPro Compiler Tools</i></b>.</font></font></li>
+
+<li>
+<font face="Times New Roman"><font size=+1>The preprocessor considers a
+string constant to end at a newline (unless the newline is escaped with
+a backslash). (Without ‘</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>’,
+string constants can contain the newline backslash character.)</font></font></li>
+</ul>
+</ul>
+
+<ul>&nbsp;</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-fcond-mismatch</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Allow conditional expressions
+with mismatched types in the second and third arguments.</font></font>
+<dt>
+<font face="Times New Roman"><font size=+1>The value of such an expression
+is void.</font></font></dt>
+
+<br>&nbsp;</ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-funsigned-char</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Let the type </font></font><font face="Courier New"><font size=+0>char</font></font><font face="Times New Roman"><font size=+1>
+be unsigned, like </font></font><font face="Courier New"><font size=+0>unsigned
+char</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<br><font face="Times New Roman"><font size=+1>Each kind of machine has
+a default for what </font></font><font face="Courier New"><font size=+0>char</font></font><font face="Times New Roman"><font size=+1>
+should be. It is either like </font></font><font face="Courier New"><font size=+0>unsigned
+char</font></font><font face="Times New Roman"><font size=+1> by default
+or like </font></font><font face="Courier New"><font size=+0>signed char</font></font><font face="Times New Roman"><font size=+1>
+by default.</font></font>
+<br><font face="Times New Roman"><font size=+1>Ideally, a portable program
+should always use </font></font><font face="Courier New"><font size=+0>signed
+char</font></font><font face="Times New Roman"><font size=+1> or </font></font><font face="Courier New"><font size=+0>unsigned
+char</font></font><font face="Times New Roman"><font size=+1> when it depends
+on the signedness of an object. But many programs have been written to
+use plain </font></font><font face="Courier New"><font size=+0>char</font></font><font face="Times New Roman"><font size=+1>
+and expect it to be signed, or expect it to be unsigned, depending on the
+machines for which they were written. This option, and its inverse, let
+you make such a program work with the opposite default.</font></font>
+<br><font face="Times New Roman"><font size=+1>The type </font></font><font face="Courier New"><font size=+0>char</font></font><font face="Times New Roman"><font size=+1>
+is always a distinct type from each of </font></font><font face="Courier New"><font size=+0>signed
+char</font></font><font face="Times New Roman"><font size=+1> or </font></font><font face="Courier New"><font size=+0>unsigned
+char</font></font><font face="Times New Roman"><font size=+1>, even though
+its behavior is always just like one of those two dialect options.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-fsigned-char</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Let the type </font></font><font face="Courier New"><font size=+0>char</font></font><font face="Times New Roman"><font size=+1>
+be </font></font><font face="Courier New"><font size=+0>signed</font></font><font face="Times New Roman"><font size=+1>,
+like </font></font><font face="Courier New"><font size=+0>signedchar</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<ul><b><font face="Times New Roman"><font size=+1><i>Note</i>:</font></font></b>
+<br><font face="Times New Roman"><font size=+1>This is equivalent to </font></font><font face="Courier New"><font size=+0>-fno-unsigned-char</font></font><font face="Times New Roman"><font size=+1>,
+which is the negative form of </font></font><font face="Courier New"><font size=+0>-funsigned-char</font></font><font face="Times New Roman"><font size=+1>.</font></font>
+<br><font face="Times New Roman"><font size=+1>Likewise, the option, </font></font><font face="Courier New"><font size=+0>-fno-signed-char</font></font><font face="Times New Roman"><font size=+1>,
+is equivalent to </font></font><font face="Courier New"><font size=+0>-funsigned-char</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+<font face="Times New Roman"><font size=+1>You may wish to use ‘</font></font><font face="Courier New"><font size=+0>-fno-builtin</font></font><font face="Times New Roman"><font size=+1>’
+as well as ‘</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>’
+if your program uses names that are normally GNU C builtin functions for
+other purposes of its own.</font></font>
+<br><font face="Times New Roman"><font size=+1>You cannot use ‘</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>’
+if you include any header files that rely on ANSI C features. Some vendors
+are starting to ship systems with ANSI C header files and you cannot use
+‘</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>’
+on such systems to compile files that include any system headers.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-fsigned-bitfields</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-funsigned-bitfields</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-fno-signed-bitfields</font></font></dt>
+
+<dt>
+<font face="Courier New"><font size=+0>-fno-unsigned-bitfields</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>These options control whether
+a bitfield is signed or unsigned, when the declaration does not use either
+</font></font><font face="Courier New"><font size=+0>signed</font></font><font face="Times New Roman"><font size=+1>
+or </font></font><font face="Courier New"><font size=+0>unsigned</font></font><font face="Times New Roman"><font size=+1>.
+By default, such a bitfield is signed, because this is consistent: the
+basic integer types such as </font></font><font face="Courier New"><font size=+0>int</font></font><font face="Times New Roman"><font size=+1>
+are signed types. However, when ‘</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>’
+is used, bitfields are all unsigned no matter what.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-fwritable-strings</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Store string constants in
+the writable data segment and don’t uniquize them. This is for compatibility
+with old programs which assume they can write into string constants. The
+‘</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>’
+option also has this effect.</font></font>
+<br><font face="Times New Roman"><font size=+1>Writing into string constants
+is a very bad idea; <i>constants</i> should be constant.</font></font></ul>
+
+<dt>
+<font face="Courier New"><font size=+0>-fallow-single-precision</font></font></dt>
+
+<ul><font face="Times New Roman"><font size=+1>Do not promote single precision
+math operations to double precision, even when compiling with ‘</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>’.</font></font>
+<dt>
+<font face="Times New Roman"><font size=+1>Traditional K&amp;R C promotes
+all floating point operations to double precision, regardless of the sizes
+of the operands. On the architecture for which you are compiling, single
+precision may be faster than double precision. If you must use ‘</font></font><font face="Courier New"><font size=+0>-traditional</font></font><font face="Times New Roman"><font size=+1>’,
+but want to use single precision operations when the operands are single
+precision, use this option. This option has no effect when compiling with
+ANSI or GNU C conventions (the default).</font></font></dt>
+</ul>
+</ul>
+
+<hr SIZE=3 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccCompiling_C_Programs.html">Previous</a>|<a href="gccOptions_that_Control_C_Dialect.html">Next</a></center>
+
+</body>
+</html>

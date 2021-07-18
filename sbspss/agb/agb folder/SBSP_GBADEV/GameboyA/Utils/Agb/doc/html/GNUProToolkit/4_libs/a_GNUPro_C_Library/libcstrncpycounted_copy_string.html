@@ -1,0 +1,34 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>strncpy[counted copy string]</title>
+</head>
+<body>
+<a href="libc.html">Contents</a>|<a href="libcindex.html">Index</a>|<a href="libcstrncmpcharacter_string_compare.html">Previous</a>|<a href="libcstrpbrkfind_chars_in_string.html">Next</a>
+<p><a NAME="off_1606387"></a><a NAME="24525670"></a><a NAME="off_1606387"></a><a NAME="24525670"></a><font face="Courier New"><font size=+3>strncpy</font></font>
+<br><font face="Times New Roman"><font size=+3>[counted copy string]</font></font>
+<pre><b><font face="Times New Roman"><font size=+2>SYNOPSIS&nbsp;
+</font></font></b><font face="Courier New"><font size=+1>#include &lt;string.h>&nbsp;
+char *strncpy(char *<i>dst</i>, const char *<i>src</i>, size_t <i>length</i>);</font></font></pre>
+<b><font face="Times New Roman"><font size=+1>DESCRIPTION</font></font></b>
+<br><font face="Courier New"><font size=+0>strncpy</font></font><font face="Times New Roman"><font size=+1>
+copies not more than </font></font><i><font face="Courier New"><font size=+0>length</font></font></i><font face="Times New Roman"><font size=+1>
+characters from the string pointed to by </font></font><i><font face="Courier New"><font size=+0>src</font></font></i><font face="Times New Roman"><font size=+1>
+(including the terminating null character) to the array pointed to by </font></font><i><font face="Courier New"><font size=+0>dst</font></font></i><font face="Times New Roman"><font size=+1>.
+If the string pointed to by </font></font><i><font face="Courier New"><font size=+0>src</font></font></i><font face="Times New Roman"><font size=+1>
+is shorter than </font></font><i><font face="Courier New"><font size=+0>length</font></font></i><font face="Times New Roman"><font size=+1>
+characters, null characters are appended to the destination array until
+a total of </font></font><i><font face="Courier New"><font size=+0>length</font></font></i><font face="Times New Roman"><font size=+1>
+characters have been written.</font></font>
+<p><b><font face="Times New Roman"><font size=+1>RETURNS</font></font></b>
+<br><font face="Times New Roman"><font size=+1>This function returns the
+initial value of </font></font><i><font face="Courier New"><font size=+0>dst</font></font></i><font face="Times New Roman"><font size=+1>.</font></font>
+<p><b><font face="Times New Roman"><font size=+1>COMPLIANCE</font></font></b>
+<br><font face="Courier New"><font size=+0>strncpy</font></font><font face="Times New Roman"><font size=+1>
+is ANSI C.</font></font>
+<p><font face="Courier New"><font size=+0>strncpy</font></font><font face="Times New Roman"><font size=+1>
+requires no supporting OS subroutines.</font></font>
+</body>
+</html>

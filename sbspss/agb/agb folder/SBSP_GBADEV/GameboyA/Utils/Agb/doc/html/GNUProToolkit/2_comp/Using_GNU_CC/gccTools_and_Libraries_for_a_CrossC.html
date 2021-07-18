@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Tools and Libraries for a Cross-Compiler</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccConfiguring_a_CrossCompiler.html">Previous</A>|<A HREF="gcclibgcca_and_CrossCompilers.html">Next</A>
+<BR><FONT FACE="Futura Md BT"><FONT COLOR="#000000">&nbsp;<A NAME="off_2949893"></A><A NAME="2030fdce"></A><B><FONT SIZE=+3>Tools
+and libraries for a cross-compiler&nbsp;</FONT></B>&nbsp;</FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If you have a cross-assembler
+and cross-linker available, you should install them now. Put them in the
+directory, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/usr/local/<I>target</I>/bin</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+What follows are the tools you should put in this directory.</FONT></FONT>
+<UL TYPE=SQUARE>
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>as</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>This should be the cross-assembler.</FONT></FONT>
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>ld</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>This should be the cross-linker.</FONT></FONT>
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>ar</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>This should be the cross-archiver:
+a program which can manipulate archive files (linker libraries) in the
+target machine’s format.</FONT></FONT>
+<LI>
+<B><FONT FACE="Courier New"><FONT SIZE=+0>ranlib</FONT></FONT></B></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>This should be a program
+to construct a symbol table in an archive file.</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The installation of GNU CC will
+find these programs in that directory, and copy or link them to the proper
+place to for the cross-compiler to find them when run later.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The easiest way to provide
+these files is to build the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>Binutils</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+package and GAS. Configure them with the same ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--host</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>--target</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+options that you use for configuring GNU CC, then build and install them.
+They install their executables automatically into the proper directory.
+Alas, they do not support all the targets that GNU CC supports.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you want to install libraries
+to use with the cross-compiler, such as a standard C library, put them
+in the directory ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/usr/local/<I>target</I>/lib</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’;
+installation of GNU CC copies all the files in that subdirectory into the
+proper place for GNU CC to find them and link with them.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The following example shows
+how to copy some libraries from a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>target</I>-<I>machine</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>ftp <I>target</I>-<I>machine</I>&nbsp;
+lcd /usr/local/<I>target</I>/lib&nbsp;
+cd /lib&nbsp;
+get libc.a&nbsp;
+cd /usr/lib&nbsp;
+get libg.a&nbsp;
+get libm.a&nbsp;
+quit</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The precise set of libraries
+you’ll need, and their locations on the target machine, vary depending
+on its operating system.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Many targets require “start
+files” such as ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>crt0.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>crtn.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+which are linked into each executable. These too should be placed in ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>/usr/local/<I>target</I>/lib</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+There may be several alternatives for ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>crt0.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+for use with profiling or other compilation options. Check your target’s
+definition of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>STARTFILE_SPEC</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to find out what start files it uses.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The following is an example
+of copying these files from a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>target</I>-<I>machine</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>ftp <I>target</I>-<I>machine&nbsp;
+</I>lcd /usr/local/<I>target</I>/lib&nbsp;
+prompt&nbsp;
+cd /lib&nbsp;
+mget *crt*.o&nbsp;
+cd /usr/lib&nbsp;
+mget *crt*.o&nbsp;
+quit</FONT></FONT></PRE>
+</UL>
+
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccConfiguring_a_CrossCompiler.html">Previous</A>|<A HREF="gcclibgcca_and_CrossCompilers.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

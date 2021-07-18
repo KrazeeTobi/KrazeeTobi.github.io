@@ -1,0 +1,110 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>User-defined commands</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbCanned_Sequences_of_Commands.html">Previous</A>|<A HREF="gdbUserdefined_command_hooks.html">Next</A>
+<BR><A NAME="off_2917615"></A><A NAME="4b7d401e"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>User-defined
+commands</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>A <I>user-defined
+command</I> is a sequence of GDB commands to which you assign a new name
+as a command. This is done with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>define</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command. User commands may accept up to 10 arguments separated by whitespace.
+Arguments are accessed within the user command via </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>$arg0
+...$arg9</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+A trivial example is the following declaration.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>define adder</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp; print $arg0
++ $arg1 + $arg2</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>To execute the command use the
+following declaration.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>adder 1 2 3</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>This defines the command </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>adder</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+which prints the sum of its three arguments.</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The following documentation
+discusses <I>user-defined commands</I>.</FONT></FONT>
+<UL>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The arguments are text substitutions,
+so they may reference variables, use complex expressions, or even perform
+inferior functions calls.</FONT></FONT></UL>
+</UL>
+
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>define</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>commandname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Define a command named </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>commandname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If there is already a command by that name, you are asked to confirm that
+you want to redefine it.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>The definition of the command
+is made up of other GDB command lines, which are given following the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>define</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command. The end of these commands is marked by a line containing </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>end</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>if</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Takes a single argument,
+which is an expression to evaluate. It is followed by a series of commands
+that are executed only if the expression is true (nonzero). There can then
+optionally be a line </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>else</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+followed by a series of commands that are only executed if the expression
+was false. The end of the list is marked by a line containing </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>end</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>while</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>The syntax is similar to
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>if</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>:
+the command takes a single argument, which is an expression to evaluate,
+and must be followed by the commands to execute, one per line, terminated
+by an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>end</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The commands are executed repeatedly as long as the expression evaluates
+to true.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>document</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>commandname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Document the user-defined
+command, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>commandname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+so that it can be accessed by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>help</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The command, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>commandname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+must already be defined. This command reads lines of documentation just
+as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>define</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+reads the lines of the command definition, ending with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>end</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+After the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>document</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command is finished, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>help</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+on command, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>commandname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+displays the documentation you have written. You may use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>document</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command again to change the documentation of a command. Redefining the
+command with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>define</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not change the documentation.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>help user-defined</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>List all user-defined commands,
+with the first line of the documentation (if any) for each.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>show user</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>show user</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>commandname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Display the GDB commands
+used to define </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>commandname
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>(but not its
+documentation). If no </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>commandname</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is given, display the definitions for all user-defined commands.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>When user-defined commands
+are executed, the commands of the definition are not printed. An error
+in any command stops execution of the user-defined command. If used interactively,
+commands that would ask for confirmation proceed without asking when used
+inside a user-defined command. Many GDB commands that normally print messages
+to say what they are doing omit the messages when used in a user-defined
+command.</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbCanned_Sequences_of_Commands.html">Previous</A>|<A HREF="gdbUserdefined_command_hooks.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

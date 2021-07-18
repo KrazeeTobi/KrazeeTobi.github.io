@@ -1,0 +1,133 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Signals</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbContinuing_and_stepping.html">Previous</A>|<A HREF="gdbStopping_and_starting_multithrea.html">Next</A>
+<BR><A NAME="off_1051445"></A><A NAME="6348165f"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Signals</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>A <I>signal</I>
+is an asynchronous event that can happen in a program.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The operating system defines
+the possible kinds of signals, and gives each kind a name and a number.
+For example, in Unix </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SIGINT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the signal a program gets when you use an interrupt (often </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Ctrl-c</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>);
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SIGSEGV</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the signal a program gets from referencing a place in memory far away
+from all the areas in use; </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SIGALRM</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+occurs when the alarm clock timer goes off (which happens only if your
+program has requested an alarm).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Some signals, including </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SIGALRM</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+are a normal part of the functioning of your program. Others, such as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SIGSEGV</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+indicate errors; these signals are <I>fatal</I> (kill your program immediately)
+if the program has not specified in advance some other way to handle the
+signal. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SIGINT</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not indicate an error in your program, but it is normally fatal so
+it can carry out the purpose of the interrupt: to kill the program.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB has the ability to detect
+any occurrence of a signal in your program. You can tell GDB in advance
+what to do for each kind of signal.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Normally, GDB is set up to
+ignore non-erroneous signals like </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SIGALRM</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(so as not to interfere with their role in the functioning of your program)
+but to stop your program immediately whenever an error signal happens.
+You can change these settings with the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>handle</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>info signals</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print a table of all the
+kinds of signals and how GDB has been told to handle each one. You can
+use this to see the signal numbers of all the defined types of signals.</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>info handle</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the new alias for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>info
+signals</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>handle</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0><I>signal keywords</I>...</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Change the way GDB handles
+signal, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>signal</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>signal </FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>can
+be the number of a signal or its name (with or without the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>SIG</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+at the beginning). The </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>keywords</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+say what change to make. The keywords allowed by the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>handle</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command can be abbreviated. Their full names are:</FONT></FONT></UL>
+&nbsp;
+<UL>
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>nostop</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB should not stop your
+program when this signal happens. It may still print a message telling
+you that the signal has come in.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>stop</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB should stop your program
+when this signal happens. This implies the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+keyword as well.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB should print a message
+when this signal happens.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>noprint</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB should not mention the
+occurrence of the signal at all. This implies the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>nostop</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+keyword as well.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>pass</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB should allow your program
+to see this signal; your program can handle the signal, or else it may
+terminate if the signal is fatal and not handled.</FONT></FONT></UL>
+&nbsp;
+<UL>
+<LI>
+<FONT FACE="Courier New"><FONT SIZE=+0>nopass</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT></LI>
+
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>GDB should not allow your
+program to see this signal.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>When a signal stops your
+program, the signal is not visible until you continue. Your program sees
+the signal then, if </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>pass</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is in effect for the signal in question <I>at that time</I>. In other words,
+after GDB reports a signal, you can use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>handle</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>pass</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>nopass</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to control whether your program sees that signal when you continue.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>You can also use the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>signal</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+command to prevent your program from seeing a signal, or cause it to see
+a signal it normally would not see, or to give it any signal at any time.
+For example, if your program stopped due to some sort of memory reference
+error, you might store correct values into the erroneous variables and
+continue, hoping to see more execution; but your program would probably
+terminate immediately as a result of the fatal signal once it saw the signal.
+To prevent this, you can continue with ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>signal
+0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’. See <FONT COLOR="#008000"><A HREF="gdbGiving_your_program_a_signal.html">Giving
+your program a signal</A></FONT>.</FONT></FONT></UL>
+</UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbContinuing_and_stepping.html">Previous</A>|<A HREF="gdbStopping_and_starting_multithrea.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

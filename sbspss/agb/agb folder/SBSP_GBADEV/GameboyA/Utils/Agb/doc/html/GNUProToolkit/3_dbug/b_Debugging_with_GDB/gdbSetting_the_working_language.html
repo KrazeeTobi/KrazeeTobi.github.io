@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Setting the working language</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbList_of_filename_extensions_and_.html">Previous</A>|<A HREF="gdbHaving_GDB_infer_the_source_lang.html">Next</A>
+<BR><A NAME="off_1738396"></A><A NAME="90fff629"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>Setting
+the working language</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>If you
+allow GDB to set the language automatically, expressions are interpreted
+the same way in your debugging session and your program. If you wish, you
+may set the language manually. To do this, issue the&nbsp; ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+language <I>lang</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+command, where </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>lang</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the name of a language, such as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>modula-2</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+For a list of the supported languages, use the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>set
+language</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ declaration.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Setting the language manually
+prevents GDB from updating the working language automatically. This can
+lead to confusion if you try to debug a program when the working language
+is not the same as the source language, when an expression is acceptable
+to both languages—but means different things. For instance, if the current
+source file were written in C, and GDB was parsing Modula-2, a command
+such as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print a =b
++c </FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>might not have
+the effect you intended. In C, this means to add </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and place the result in </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The result printed would be the value of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+In Modula-2, this means to compare </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>a</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to the result of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>b+c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+yielding a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>BOOLEAN</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+value.</FONT></FONT>
+<BR>
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbList_of_filename_extensions_and_.html">Previous</A>|<A HREF="gdbHaving_GDB_infer_the_source_lang.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

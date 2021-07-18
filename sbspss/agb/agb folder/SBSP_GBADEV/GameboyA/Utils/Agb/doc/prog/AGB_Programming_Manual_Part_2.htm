@@ -1,0 +1,3400 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!--
+Editors' comments:
+07/07/00  Created by Pam Curtis using w2w 2.0
+mm/dd/yy Edited by * -->
+		<title>Rendering Functions</title>
+	</head>
+
+	<body text="black" bgcolor="white">
+		<a name="topofpage"></a>
+		<h1><a name="T1"></a>6 Rendering Functions</h1>
+		<p>The AGB CPU has 96 Kbytes of built-in VRAM.</p>
+		<p>Its rendering functions include BG and OBJ display capability. The method used for BG rendering varies with the BG mode, as described below.</p>
+		<h2><a name="T2"></a>6.1 Character Mode BG (BG Modes 0-2)</h2>
+		<p>In character mode, the components of the BG screen are basic characters of 8 x 8 dots.</p>
+		<h3><a name="T3"></a>6.1.1 BG Control</h3>
+		<p>There are 4 BG control registers, corresponding to the maximum number of BG screens (registers BG0CNT, BG1CNT, BG2CNT, and BG3CNT).</p>
+		<p>Registers BG0CNT and BG1CNT are exclusively for text BG control, while BG2CNT and BG3CNT also support BG rotation and scaling control.</p>
+		<p>The registers used by the BG modes are as follows.</p>
+		<center>
+			<p>
+			<table width="546" border="1" cellspacing="0" cellpadding="3">
+				<tr>
+					<td width="20%" valign="top" rowspan="2" bgcolor="white">
+						<center>
+							BG Mode&nbsp;</center>
+					</td>
+					<td valign="top" colspan="4" bgcolor="white">
+						<center>
+							BG Control Register&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%" valign="top" bgcolor="white">
+						<center>
+							BG0CNT&nbsp;</center>
+					</td>
+					<td width="20%" valign="top" bgcolor="white">
+						<center>
+							BG1CNT&nbsp;</center>
+					</td>
+					<td width="20%" valign="top" bgcolor="white">
+						<center>
+							BG2CNT&nbsp;</center>
+					</td>
+					<td width="20%" valign="top" bgcolor="white">
+						<center>
+							BG3CNT&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%" valign="top">
+						<center>
+							0&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							BG0<br>
+							(text)&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							BG1<br>
+							(text)&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							BG2<br>
+							(text)&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							BG3<br>
+							(text)&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%" valign="top">
+						<center>
+							<font face="Arial">1</font><font face="Arial" size="2">&nbsp;</font></center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							BG0<br>
+							(text)&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							BG1<br>
+							(text)&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							BG2<br>
+							(rotation/scaling)&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							---</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%" valign="top">
+						<center>
+							<font face="Arial">2</font><font face="Arial" size="2">&nbsp;</font></center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							---</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							---</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							BG2<br>
+							(rotation/scaling)&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							BG3<br>
+							(rotation/scaling)&nbsp;</center>
+					</td>
+				</tr>
+			</table>
+			</p>
+		</center>
+		<p>The contents of the BG control registers are shown below.</p>
+		<h4><a name="T4"></a>1) Text BG Screen Control (BG0, BG1)</h4>
+		<p><img src="Image46.gif" width="572" height="286"></p>
+		<h4><a name="T5"></a>2) Text BG and Rotation/Scaling BG Screen Control (BG2 and BG3)</h4>
+		<p>Whether the screen is a text screen or a scaling/rotation screen varies with the BG mode.</p>
+		<p><img src="Image47.gif" width="570" height="335"></p>
+		<p>BG*CNT [d15-14] Screen Size</p>
+		<p>Allows the screen size for the BG as a whole to be specified.</p>
+		<p>When a value other than the maximum is specified, the remaining VRAM area can be used as a character data area.</p>
+		<p>Refer to the table below and the <a href="AGB_Programming_Manual_Part_1d1.htm#T8">VRAM Memory Map</a> figure above.<br>
+		</p>
+		<div align="left">
+			<p>
+			<table width="576" border="1" cellspacing="0" cellpadding="3">
+				<tr>
+					<td width="21%" valign="top" bgcolor="white" rowspan="2">
+						<center>
+							Screen Size Setting&nbsp;</center>
+					</td>
+					<td valign="top" colspan="2" bgcolor="white">
+						<center>
+							Text Screen&nbsp;</center>
+					</td>
+					<td valign="top" colspan="2" bgcolor="white">
+						<center>
+							Rotation/Scaling Screen&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="21%" valign="top" bgcolor="white">
+						<center>
+							Screen Size&nbsp;</center>
+					</td>
+					<td width="19%" valign="top" bgcolor="white">
+						<center>
+							Screen Data&nbsp;</center>
+					</td>
+					<td width="21%" valign="top" bgcolor="white">
+						<center>
+							Screen Size&nbsp;</center>
+					</td>
+					<td width="19%" valign="top" bgcolor="white">
+						<center>
+							Screen Data&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="21%" valign="top">
+						<center>
+							00&nbsp;</center>
+					</td>
+					<td width="21%" valign="top">
+						<center>
+							256&times;256&nbsp;</center>
+					</td>
+					<td width="19%" valign="top">
+						<center>
+							2 Kbytes&nbsp;</center>
+					</td>
+					<td width="21%" valign="top">
+						<center>
+							128&times;128&nbsp;</center>
+					</td>
+					<td width="19%" valign="top">
+						<center>
+							256 Bytes&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="21%" valign="top">
+						<center>
+							01&nbsp;</center>
+					</td>
+					<td width="21%" valign="top">
+						<center>
+							512&times;256&nbsp;</center>
+					</td>
+					<td width="19%" valign="top">
+						<center>
+							4 Kbytes&nbsp;</center>
+					</td>
+					<td width="21%" valign="top">
+						<center>
+							256&times;256&nbsp;</center>
+					</td>
+					<td width="19%" valign="top">
+						<center>
+							1 Kbyte&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="21%" valign="top">
+						<center>
+							10&nbsp;</center>
+					</td>
+					<td width="21%" valign="top">
+						<center>
+							256&times;512&nbsp;</center>
+					</td>
+					<td width="19%" valign="top">
+						<center>
+							4 Kbytes&nbsp;</center>
+					</td>
+					<td width="21%" valign="top">
+						<center>
+							512&times;512&nbsp;</center>
+					</td>
+					<td width="19%" valign="top">
+						<center>
+							4 Kbytes&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="21%" valign="top">
+						<center>
+							11&nbsp;</center>
+					</td>
+					<td width="21%" valign="top">
+						<center>
+							512&times;512&nbsp;</center>
+					</td>
+					<td width="19%" valign="top">
+						<center>
+							8 Kbytes&nbsp;</center>
+					</td>
+					<td width="21%" valign="top">
+						<center>
+							1024&times;1024&nbsp;</center>
+					</td>
+					<td width="19%" valign="top">
+						<center>
+							16 Kbytes&nbsp;</center>
+					</td>
+				</tr>
+			</table>
+			</p>
+			<p><br>
+			</p>
+			<p>1) Overview of Screen Sizes for Text BG Screens <img src="Image48.gif" width="589" height="464"><br>
+			<br>
+			</p>
+			<p>2) Illustration of Screen Sizes for Rotation/Scaling BG Screens <img src="Image49.gif" width="594" height="497"><br>
+			<br>
+			</p>
+			<p>BG2CNT,BG3CNT [d13] Area Overflow Processing</p>
+			<p>When the display screen overflows the boundaries of the virtual screen due to a rotation/scaling operation, this bit can be used to choose whether the area of the screen into which the overflow occurs is displayed as transparent or wraps around the display screen.</p>
+			<p>For information on scaling, see <a href="#T20">6.1.7 BG Rotation and Scaling Features</a>.</p>
+			<p>BG*CNT [d12-08] Screen Base Block Specification</p>
+			<p>Specifies the starting block in VRAM where screen data are stored. (32 steps: 0-31; 2-Kbyte increments).</p>
+			<p>See section <a href="#T7">6.1.3, VRAM Address Mapping of BG Data</a>.</p>
+			<p>BG*CNT [d07] Color Mode</p>
+			<p>Specifies whether to reference BG character data in 16 color x 16 palette format or 256 color x 1 palette format.</p>
+			<p>BG*CNT [d06] Mosaic</p>
+			<p>Turns mosaic processing for BG on and off.</p>
+			<p>BG*CNT [d03-02] Character Base Block Specification</p>
+			<p>Specifies the starting block in VRAM where the character data to be displayed in the BG is stored.</p>
+			<p>(4 steps: 0-3; 16-Kbyte increments)</p>
+			<p>See section <a href="#T7">6.1.3, VRAM Address Mapping of BG Data</a>.</p>
+			<p>BG*CNT [d01-00] Priority Among BGs</p>
+			<p>With the default value (same priority value specified for all), the order of priority is BG0, BG1, BG2, and BG3. However, this order can be changed to any desired.</p>
+			<p>Values of 0 (highest priority) to 3 can be specified.</p>
+			<p>When the BG priority has been changed, care should be taken in specifying the pixels used for color special effects.</p>
+		</div>
+		<h3>
+		<h3><a name="T6"></a>6.1.2 Mosaic Size</h3>
+		</h3>
+		<p>Mosaic size is set in the MOSAIC register. Turning mosaic on/off for each BG is accomplished by the mosaic flag of the BG control register. For information on the mosaic flag, see the previous chapter, BG Control.</p>
+		<p><img src="Image50.gif" width="570" height="151"></p>
+		<p>The mosaic value specifies how many dots of a normal display should comprise each large dot displayed.</p>
+		<p>Counting from the upper left-most dot on the screen, the number of dots equal to the mosaic size are used in the mosaic display. The other dots are overwritten by the mosaic. Please refer to the figure below.</p>
+		<p>If the mosaic size value is 0, a normal display is seen even if mosaic is turned on.</p>
+		<p>Mosaic Schematic <img src="Image51.gif" width="589" height="177"></p>
+		<h3>
+		<h3>
+		<h3>
+		<h3>
+		<h3>
+		<h3>
+		<h3>
+		<h3><a name="T7"></a>6.1.3 VRAM Address Mapping of BG Data</h3>
+		</h3>
+		</h3>
+		</h3>
+		</h3>
+		</h3>
+		</h3>
+		</h3>
+		<p>BG data (BG character and screen data) are stored in the 64-Kbyte BG area of VRAM.</p>
+		<h4>
+		<h4>
+		<h4>
+		<h4><a name="T8"></a>1) BG Character Data</h4>
+		</h4>
+		</h4>
+		</h4>
+		<p>The starting address for referencing BG character data can be specified using the character base block specification of the BG control register.</p>
+		<p>The amount of data depends on the number of character data items stored and the data format (color formats: 256 colors x 1 palette or 16 colors x 16 palettes).</p>
+		<h4>
+		<h4>
+		<h4>
+		<h4><a name="T9"></a>2) BG Screening Data</h4>
+		</h4>
+		</h4>
+		</h4>
+		<p>The starting address for referencing BG screen data can be set using the screen base block specification of the BG control register.</p>
+		<p>The amount of data depends on the type of BG screen (text or rotation/scaling) and the screen size. These can be set by the BG control register.</p>
+		<h4>
+		<h4><a name="T10"></a>Illustration of VRAM Base Blocks for BG Data</h4>
+		</h4>
+		<p><img src="Image52.gif" width="513" height="698"></p>
+		<h3><a name="T11"></a>6.1.4 Character Data Format</h3>
+		<p>There are two formats for character dot data, 16 color x 16 palettes and 256 colors x 1 palette. The same format is used for OBJ and BG.</p>
+		<p>The data are held in VRAM in the form indicated below.</p>
+		<h4>
+		<h4>
+		<h4>
+		<h4><a name="T12"></a>1) 16 Colors x 16 Palettes</h4>
+		</h4>
+		</h4>
+		</h4>
+		<p>There are 2 dots per address. Thus, the amount of data for each basic character is 20H x 8 bits.</p>
+		<p><img src="Image53.gif" width="568" height="269"></p>
+		<h4>
+		<h4>
+		<h4>
+		<h4><a name="T13"></a>2) 256 Colors x 1 Palette</h4>
+		</h4>
+		</h4>
+		</h4>
+		<p>There is 1 dot specified per address. Thus, the amount of data for each basic character is 40H x 8 bits.</p>
+		<h3><a name="T14"></a><img src="Image54.gif" width="568" height="326"></h3>
+		<h3>
+		<h3>6.1.5 BG Screen Data Format</h3>
+		</h3>
+		<p>A BG screen is considered to be the 8 x 8 dot unit that represents the size of the basic character, and the BG screen data specifies the characters that are arranged.</p>
+		<p>BG screen data should be stored, beginning from the starting address of the BG screen base block specified in the BG control register. The number of screen data items specified per BG depends on the screen size setting in the BG control register.</p>
+		<p>BG screen data for text and rotation/scaling screens are specified in the following formats.</p>
+		<h4>
+		<h4><a name="T15"></a>1) Text BG Screen</h4>
+		</h4>
+		<p>A text BG screen consists of 2 bytes of screen data per basic character; 1,024 character types can be specified.</p>
+		<p><img src="Image55.gif" width="366" height="184"></p>
+		<p>[d15-12] Color Palette</p>
+		<p>If the color mode specification in the BG control register is 16 colors x 16 palettes, these bits specify palette 0-15 as the palette to be applied to the character.</p>
+		<p>This is disabled when the color mode specification is 256 x 1 palette.</p>
+		<p>[d11] Vertical Flip Flag</p>
+		<p>Enables the BG character to be flipped vertically.</p>
+		<p>A setting of 1 produces the vertical-flip display.</p>
+		<p>[d10] Horizontal Flip Flag</p>
+		<p>Enables the BG character to be flipped horizontally.</p>
+		<p>A setting of 1 produces the horizontal-flip display.</p>
+		<p>[d09-00] Character Name</p>
+		<p>Specify the number of the character that has character base block starting address specified in the BG control register as its starting point.</p>
+		<h4>
+		<h4><a name="T16"></a>2) Rotation/Scaling BG Screen</h4>
+		</h4>
+		<p>The rotation/scaling BG screen consists of 1 byte of screen data per basic character; 256 character types can be specified. The character data must be classified as 256 colors x 1 palette. The color mode specification in the BG control register is disabled for a rotation/scaling screen.</p>
+		<p><img src="Image56.gif" width="388" height="90"></p>
+		<p><b>[Note]</b></p>
+		<p>AGB provides a high degree of freedom in using the BG area of VRAM.</p>
+		<p>Consequently, in managing VRAM, the following points deserve particular attention.</p>
+		<ol>
+			<li>There are 2 formats for BG character data (defined by 16 and 256 colors), and these can be used together.
+			<li>The BG character data base block can be selected from among 4 blocks (BG control register).
+			<li>The BG screen data base block can be selected from among 32 blocks (BG control register).
+			<li>The screen size (amount of VRAM used) can be set for each BG (BG control register).
+			<li>Text and rotation/scaling BGs can be present and used together in a BG screen.
+		</ol>
+		<p>In managing VRAM, particular care is required in BG mode 1, because text BG screens (which can handle BG character data in both 256 colors x 1 palette and 16 colors x 16 palettes) and rotation/scaling BG screens (which can handle only 256 colors x 1 palette) may be used together.</p>
+		<p>Therefore, the VRAM mapping status should be sufficiently understood when programming.</p>
+		<h3>
+		<h3>
+		<h3>
+		<h3><a name="T17"></a>6.1.6 BG Screen Data Address Mapping for the LCD Screen</h3>
+		</h3>
+		</h3>
+		</h3>
+		<h4>
+		<h4><a name="T18"></a>1) Text BG</h4>
+		</h4>
+		<ul>
+			<li>1-1) Virtual Screen Size of 256 x 256 Dots
+		</ul>
+		<p><img src="Image57.gif" width="555" height="322"></p>
+		<ul>
+			<li>1-2) Virtual Screen Size of 512 x 256 Dots
+		</ul>
+		<p><img src="Image58.gif" width="600" height="345"></p>
+		<ul>
+			<li>1-3) Virtual Screen Size of 256 x 512 Dots
+		</ul>
+		<p><img src="Image59.gif" width="517" height="345"></p>
+		<ul>
+			<li>1-4) Virtual Screen Size of 512 x 512 Dots
+		</ul>
+		<p><img src="Image60.gif" width="517" height="344"></p>
+		<h4><a name="T19"></a>2) Rotation/scaling BG</h4>
+		<ul>
+			<li>2-1) Virtual Screen Size of 128 x 128 Dots
+		</ul>
+		<p><img src="Image61.gif" width="521" height="284"></p>
+		<ul>
+			<li>2-2) Virtual Screen Size of 256 x 256 Dots
+		</ul>
+		<p><img src="Image62.gif" width="517" height="345"></p>
+		<ul>
+			<li>2-3) Virtual Screen Size of 512 x 512 Dots
+		</ul>
+		<p><img src="Image63.gif" width="517" height="344"></p>
+		<ul>
+			<li>2-4) Virtual Screen Size of 1024 x 1024 Dots
+		</ul>
+		<p><img src="Image64.gif" width="525" height="381"></p>
+		<h3>
+		<h3>
+		<h3>
+		<h3><a name="T20"></a>6.1.7 BG Rotation and Scaling Features</h3>
+		</h3>
+		</h3>
+		</h3>
+		<p>Rotation and scaling of the BG as a whole can be performed in a rotation/scaling BG screen.</p>
+		<p>With rotation, BG data is referenced as shown in the following figure.</p>
+		<p><img src="Image65.gif" width="564" height="477"></p>
+		<p>BG rotation and scaling are implemented in AGB using the following arithmetic expressions.</p>
+		<p><img src="Image66.gif" width="352" height="182"></p>
+		<p>Parameters used in rotation and scaling operations are specified for BG2 and BG3 in the following registers. Registers for Starting Point of BG Data Reference are also used when Scaling/Rotation BG and Bitmap Mode BG are offset displayed (scrolled). (There is also an offset register for Text BG.)</p>
+		<h4>
+		<h4>
+		<h4>
+		<h4><a name="T21"></a>Registers for Setting the Starting Point of BG Data</h4>
+		</h4>
+		</h4>
+		</h4>
+		<p><img src="Image67.gif"></p>
+		<h4>
+		<h4><a name="T22"></a>Registers for Setting the Direction Parameters of BG Data</h4>
+		</h4>
+		<p><img src="Image68.gif"></p>
+		<h4>
+		<h4><a name="T23"></a>Operations Used in BG Rotation/Scaling Processing<br>
+		</h4>
+		</h4>
+		<ol>
+			<li>Using software, the user determines the results of the rotation/scaling operation for the left-upper coordinate of the display screen and sets this as the starting point of the BG data reference in registers BG2X_L, BG2X_H, BG2Y_L, BG2Y_H, BG3X_L, BG3X_H, BG3Y_L, and BG3Y_H. The set value is a signed fixed-point number (8 bits for fractional portion, 19 bits for integer portion, and 1 bit for sign, for a total of 28 bits).
+			<p>The BG data reference direction is set in BG2PA, BG2PB, BG2PC, BG2PD, BG3PA, BG3PB, BG3PC, and BG3PD. The set value is a signed fixed-point number (8 bits for fractional portion, 7 bits for integer portion, and 1 bit for sign, for a total of 16 bits).</p>
+			<li>The image processing circuit sums the increases in the x direction (dx, dy) in relation to the BG data reference starting point set in the above registers, and calculates the x-coordinate.<br>
+			<br>
+			<li>When the line is advanced, the increases in the y direction (dmx, dmy) are summed in relation to the reference starting point, and the coordinate of the rendering starting point for the next line is calculated. The processing in step 2) is then performed.<br>
+			<br>
+			<li>However, if a register for the BG data reference starting point is rewritten during an H-blanking interval, the y-direction summation for that register is not calculated. The CPU uses this mode to change the center coordinate and rotation/scaling parameters for each line.
+		</ol>
+		<h4>
+		<h4><a name="T24"></a>Area Overflow Processing</h4>
+		</h4>
+		<p>When the display screen overflows the boundaries of the virtual screen due to a rotation/scaling operation, this BG control register can be used to select whether the area of the screen into which the overflow occurs is transparent or wraps around the display screen.</p>
+		<p>For information on BG control, see <a href="#T3">&quot;6.1.1 BG Control&quot;</a>.</p>
+		<h3>
+		<h3><a name="T25"></a>6.1.8 BG Scrolling</h3>
+		</h3>
+		<p>For each text BG screen, the offset on the display screen can be specified in 1-dot increments. Offset register is only valid for Text BG. In order to offset display Scaling/Rotation BG and Bitmap Mode BG set the BG Reference Starting Point. See <a href="#T20">&quot;6.1.7, BG Rotation and Scaling Features&quot;</a>.</p>
+		<h4>
+		<h4><a name="T26"></a>Offset Settings Registers</h4>
+		</h4>
+		<p><img src="Image69.gif" width="570" height="227"></p>
+		<h4>
+		<h4><a name="T27"></a>Offset Illustration</h4>
+		</h4>
+		<p><img src="Image70.gif" width="287" height="193"></p>
+		<h2>
+		<h2><a name="T28"></a>6.2 Bitmap Mode BGs (BG Modes 3-5)</h2>
+		</h2>
+		<p>In the bitmap modes, the components of the BG screen are handled in pixel units, and the contents of VRAM (frame buffer) are displayed as color data for each dot on the screen.</p>
+		<h3>
+		<h3><a name="T29"></a>6.2.1 BG Control</h3>
+		</h3>
+		<p>The bitmap BG will be treated as BG2. Therefore, in order to display the content of the frame buffer on the LCD screen, you need to set the BG2 display flag to ON in the DISPCNT Register. For BG Control the BG2CNT Register is used. <img src="Image71.gif" width="576" height="286"> BG2CNT [d06] Mosaic</p>
+		<p>This controls the ON/OFF of mosaic processing for BG2. When ON, the settings for the Mosaic Size Register, MOSAIC, are referenced. For information on Mosaic, see <a href="#T6">&quot;6.1.2 Mosaic Size&quot;</a>.</p>
+		<p>BG2CNT [d01-00] Priority Among BGs</p>
+		<p>Due to the fact that in Bitmap Mode there is only one BG plane(other than the backdrop plane), there is no priority relationship among BGs, but you can set up priorities with OBJ. For information on this, see <a href="#T47">&quot;6.4 Display Priority of OBJ and BG&quot;</a>.</p>
+		<h3>
+		<h3><a name="T30"></a>6.2.2 BG Rotation/Scaling</h3>
+		</h3>
+		<p>The parameters for Bitmap BG Rotation/Scaling use BG2 related registers(BG2X_L, BG2X_H, BG2Y_L, BG2Y_H, BG2PA, BG2PB, BG2PC, and BG2PD).</p>
+		<p>For information on rotation/scaling parameters, see <a href="#T20">&quot;6.1.7 BG Rotation/Scaling Features&quot;</a>.</p>
+		<p>With Bitmap BG, if the displayed portion exceeds the edges of the screen due to the rotation/scaling operation, that area becomes transparent.</p>
+		<h3>
+		<h3><a name="T31"></a>6.2.3 Pixel Data</h3>
+		</h3>
+		<p>In the bitmap modes, only the amount of pixel data corresponding to the size of the display screen can be stored in VRAM. Available bitmap modes allow the simultaneous display of 32,768 colors (BG modes 3 and 5) and the display of 256 of the 32,768 colors (BG mode 4). The format of the data in the frame buffer differs between the modes as described below.</p>
+		<p>1. 32,768-Color Simultaneous Display Format (BG Modes 3 and 5)</p>
+		<p>Palette RAM is not referenced.</p>
+		<p>Each pixel uses a half-word.</p>
+		<p><img src="Image72.gif" width="388" height="128"></p>
+		<p>2. 256-Color (of 32,768) Display Format (BG Mode 4)</p>
+		<p>Palette RAM color data (256 of the 32,768 colors storable) are referenced.</p>
+		<p>Each pixel uses 1 byte.</p>
+		<p><img src="Image73.gif" width="366" height="91"></p>
+		<h3>
+		<h3><a name="T32"></a>6.2.4 Pixel Data Address Mapping for the LCD Screen</h3>
+		</h3>
+		<p>The different address mappings for the different BG modes are shown below.</p>
+		<p>The frame buffer (VRAM) starts at address 06000000h. Thus, to see the addresses used by the CPU, add 06000000h to the addresses shown below.</p>
+		<h4>
+		<h4><a name="T33"></a>6.2.4.1 BG Mode 3 (32,768 colors, 240X160 dots, 1 frame buffer)</h4>
+		</h4>
+		<p>Because there is a single frame buffer, this mode is used mainly for still images. However, it enables 32,768 colors to be displayed simultaneously over the full screen.</p>
+		<center>
+			<p>
+			<table width="582" border="1" cellspacing="0" cellpadding="3">
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">&nbsp;</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							0&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							1&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							2&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							3&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							4&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle" bgcolor="white">
+						<center>
+							<font size="5">&nbsp;...</font></center>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							236&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							237&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							238&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							239&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							0&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							0h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							2h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							4h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							6h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							8h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">&nbsp;...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1D8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1Dah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1DCh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1DEh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							1&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1E0h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1E2h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1E4h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1E6h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1E8h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">&nbsp;...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3B8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3Bah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3BCh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3BEh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							2&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3C0h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3C2h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3C4h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3C6h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3C8h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">&nbsp;...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							598h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							59Ah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							59Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							59Eh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							3&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							5A0h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							5A2h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							5A4h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							5A6h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							5A8h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">&nbsp;...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							778h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							77Ah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							77Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							77Eh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							4&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							780h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							782h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							784h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							786h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							788h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">&nbsp;...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							958h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							95Ah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							95Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							95Eh&nbsp;</div>
+					</td>
+				</tr>
+				<tr height="64">
+					<td width="6%" valign="middle" bgcolor="white" height="64">
+						<center>
+							<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							<font size="5">&nbsp;|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							<font size="5">&nbsp;|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							<font size="5">&nbsp;|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							<font size="5">&nbsp;|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							<font size="5">&nbsp;|</font></center>
+					</td>
+					<td width="17%" valign="middle" height="64">
+						<center>
+							<font size="5">&nbsp;|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							<font size="5">&nbsp;|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							<font size="5">&nbsp;|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							<font size="5">&nbsp;|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							<font size="5">&nbsp;|</font></center>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							156&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12480h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">12482h&nbsp;</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12484h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12486h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12488h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12658h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1265Ah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1265Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1265Eh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							157&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12660h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12662h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12664h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12666h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12668h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12838h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1283Ah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1283Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1283Eh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							158&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12840h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12842h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12844h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12846h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12848h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12A18h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12A1Ah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12A1Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12A1Eh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							159&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12A20h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12A22h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12A24h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12A26h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12A28h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12BF8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12BFAh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12BFCh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							12BFEh&nbsp;</div>
+					</td>
+				</tr>
+			</table>
+			</p>
+		</center>
+		<div align="right">
+			<p>VRAM address (+06000000h)</p>
+		</div>
+		<h4><a name="T34"></a>6.2.4.2 BG Mode 4 (256 colors, 240X160 dots, 2 frame buffers)</h4>
+		<p>Two frame buffers are allocated in VRAM, making this mode suitable for full-motion video. Of the total of 32,768 colors, 256 can be displayed simultaneously over the full screen.</p>
+		<ol>
+			<li>Frame 0
+			<center>
+				<p>
+				<table width="580" border="1" cellspacing="0" cellpadding="3">
+					<tr>
+						<td width="6%" valign="middle" bgcolor="white">&nbsp;</td>
+						<td width="9%" valign="middle" bgcolor="white">
+							<div align="right">
+								0&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle" bgcolor="white">
+							<div align="right">
+								1&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle" bgcolor="white">
+							<div align="right">
+								2&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle" bgcolor="white">
+							<div align="right">
+								3&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle" bgcolor="white">
+							<div align="right">
+								4&nbsp;</div>
+						</td>
+						<td width="17%" valign="middle" bgcolor="white">
+							<center>
+								&nbsp;<font size="5">...</font></center>
+						</td>
+						<td width="9%" valign="middle" bgcolor="white">
+							<div align="right">
+								236&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle" bgcolor="white">
+							<div align="right">
+								237&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle" bgcolor="white">
+							<div align="right">
+								238&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle" bgcolor="white">
+							<div align="right">
+								239&nbsp;</div>
+						</td>
+					</tr>
+					<tr>
+						<td width="6%" valign="middle" bgcolor="white">
+							<div align="right">
+								0&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								0h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								1h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								2h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								3h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								4h&nbsp;</div>
+						</td>
+						<td width="17%" valign="middle">
+							<center>
+								&nbsp;<font size="5">...</font></center>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								ECh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								EDh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								EEh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								EFh&nbsp;</div>
+						</td>
+					</tr>
+					<tr>
+						<td width="6%" valign="middle" bgcolor="white">
+							<div align="right">
+								1&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								F0h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								F1h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								F2h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								F3h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								F4h&nbsp;</div>
+						</td>
+						<td width="17%" valign="middle">
+							<center>
+								&nbsp;<font size="5">...</font></center>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								1DCh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								1DDh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								1DEh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								1DFh&nbsp;</div>
+						</td>
+					</tr>
+					<tr>
+						<td width="6%" valign="middle" bgcolor="white">
+							<div align="right">
+								2&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								1E0h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								1E1h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								1E2h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								1E3h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								1E4h&nbsp;</div>
+						</td>
+						<td width="17%" valign="middle">
+							<center>
+								&nbsp;<font size="5">...</font></center>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								2CCh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								2CDh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								2CEh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								2CFh&nbsp;</div>
+						</td>
+					</tr>
+					<tr>
+						<td width="6%" valign="middle" bgcolor="white">
+							<div align="right">
+								3&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								2D0h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								2D1h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								2D2h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								2D3h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								2D4h&nbsp;</div>
+						</td>
+						<td width="17%" valign="middle">
+							<center>
+								&nbsp;<font size="5">...</font></center>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								3BCh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								3BDh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								3BEh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								3BFh&nbsp;</div>
+						</td>
+					</tr>
+					<tr>
+						<td width="6%" valign="middle" bgcolor="white">
+							<div align="right">
+								4&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								3C0h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								3C1h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								3C2h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								3C3h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								3C4h&nbsp;</div>
+						</td>
+						<td width="17%" valign="middle">
+							<center>
+								&nbsp;<font size="5">...</font></center>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								4ACh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								4ADh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								4AEh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								4AFh&nbsp;</div>
+						</td>
+					</tr>
+					<tr height="64">
+						<td width="6%" valign="middle" bgcolor="white" height="64">
+							<center>
+								&nbsp;<font size="5">|</font></center>
+						</td>
+						<td width="9%" valign="middle" height="64">
+							<center>
+								&nbsp;<font size="5">|</font></center>
+						</td>
+						<td width="9%" valign="middle" height="64">
+							<center>
+								&nbsp;<font size="5">|</font></center>
+						</td>
+						<td width="9%" valign="middle" height="64">
+							<center>
+								&nbsp;<font size="5">|</font></center>
+						</td>
+						<td width="9%" valign="middle" height="64">
+							<center>
+								&nbsp;<font size="5">|</font></center>
+						</td>
+						<td width="9%" valign="middle" height="64">
+							<center>
+								&nbsp;<font size="5">|</font></center>
+						</td>
+						<td width="17%" valign="middle" height="64">
+							<center>
+								&nbsp;<font size="5">|</font></center>
+						</td>
+						<td width="9%" valign="middle" height="64">
+							<center>
+								&nbsp;<font size="5">|</font></center>
+						</td>
+						<td width="9%" valign="middle" height="64">
+							<center>
+								&nbsp;<font size="5">|</font></center>
+						</td>
+						<td width="9%" valign="middle" height="64">
+							<center>
+								&nbsp;<font size="5">|</font></center>
+						</td>
+						<td width="9%" valign="middle" height="64">
+							<center>
+								&nbsp;<font size="5">|</font></center>
+						</td>
+					</tr>
+					<tr>
+						<td width="6%" valign="middle" bgcolor="white">
+							<div align="right">
+								156&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9240h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9241h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9242h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9243h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9244h&nbsp;</div>
+						</td>
+						<td width="17%" valign="middle">
+							<center>
+								&nbsp;<font size="5">...</font></center>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								932Ch&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								932Dh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								932Eh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								932Fh&nbsp;</div>
+						</td>
+					</tr>
+					<tr>
+						<td width="6%" valign="middle" bgcolor="white">
+							<div align="right">
+								157&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9330h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9331h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9332h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9333h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9334h&nbsp;</div>
+						</td>
+						<td width="17%" valign="middle">
+							<center>
+								&nbsp;<font size="5">...</font></center>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								941Ch&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								941Dh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								941Eh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								941Fh&nbsp;</div>
+						</td>
+					</tr>
+					<tr>
+						<td width="6%" valign="middle" bgcolor="white">
+							<div align="right">
+								158&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9420h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9421h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9422h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9423h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9424h&nbsp;</div>
+						</td>
+						<td width="17%" valign="middle">
+							<center>
+								&nbsp;<font size="5">...</font></center>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								950Ch&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								950Dh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								950Eh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								950Fh&nbsp;</div>
+						</td>
+					</tr>
+					<tr>
+						<td width="6%" valign="middle" bgcolor="white">
+							<div align="right">
+								159&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9510h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9511h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9512h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9513h&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								9514h&nbsp;</div>
+						</td>
+						<td width="17%" valign="middle">
+							<center>
+								&nbsp;<font size="5">...</font></center>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								95FCh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								95FDh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								95FEh&nbsp;</div>
+						</td>
+						<td width="9%" valign="middle">
+							<div align="right">
+								95FFh&nbsp;</div>
+						</td>
+					</tr>
+				</table>
+				</p>
+			</center>
+			<div align="right">
+				<p>VRAM address (+06000000h)</p>
+			</div>
+			<li>Frame 1
+		</ol>
+		<center>
+			<p>
+			<table width="580" border="1" cellspacing="0" cellpadding="3">
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">&nbsp;</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							0&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							1&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							2&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							3&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							4&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle" bgcolor="white">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							236&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							237&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							238&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							239&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							0&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A000h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A001h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A002h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A003h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A004h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A0ECh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A0EDh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A0EEh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A0EFh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							1&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A0F0h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A0F1h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A0F2h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A0F3h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A0F4h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A1DCh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A1DDh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A1DEh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A1DFh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							2&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A1E0h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A1E1h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A1E2h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A1E3h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A1E4h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A2CCh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A2CDh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A2CEh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A2CFh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							3&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A2D0h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A2D1h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A2D2h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A2D3h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A2D4h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3BCh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3BDh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3BEh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3BFh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							4&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3C0h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3C1h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3C2h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3C3h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3C4h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A4ACh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A4ADh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A4AEh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A4AFh&nbsp;</div>
+					</td>
+				</tr>
+				<tr height="64">
+					<td width="6%" valign="middle" bgcolor="white" height="64">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="17%" valign="middle" height="64">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="64">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							156&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13240h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13241h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13242h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13243h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13244h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1332Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1332Dh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1332Eh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1332Fh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							157&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13330h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13331h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13332h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">13333h&nbsp;</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13334h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1341Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1341Dh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1341Eh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1341Fh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							158&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13420h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13421h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13422h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13423h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13424h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1350Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1350Dh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1350Eh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							1350Fh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							159&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13510h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13511h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13512h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13513h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13514h&nbsp;</div>
+					</td>
+					<td width="17%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							135FCh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							135FDh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							135FEh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							135FFh&nbsp;</div>
+					</td>
+				</tr>
+			</table>
+			</p>
+		</center>
+		<div align="right">
+			<p>VRAM address (+06000000h)</p>
+		</div>
+		<h4><a name="T35"></a>6.2.4.3 BG Mode 5 (32,768 colors, 160X128 dots, 2 frame buffers)</h4>
+		<p>Although there are 2 frame buffers, the display area is limited in this mode to enable simultaneous display of 32,768 colors.</p>
+		<p>1. Frame 0</p>
+		<center>
+			<p>
+			<table width="530" border="1" cellspacing="0" cellpadding="3">
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">&nbsp;</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							0&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							1&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							2&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							3&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							4&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							156&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							157&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							158&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							159&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							0&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							0h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							2h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							4h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							6h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							138h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13Ah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13Eh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							1&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							140h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							142h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							144h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							146h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							148h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							298h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							29Ah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							29Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							29Eh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							2&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							2A0h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							2A2h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							2A4h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							2A6h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							2A8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3B8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3BAh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3BCh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3BEh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							3&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3C0h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3C2h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3C4h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3C6h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							3C8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							4F8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							4FAh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							4FCh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							4FEh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							4&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							500h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							502h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							504h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							506h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							508h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							638h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							63Ah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							63Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							63Eh&nbsp;</div>
+					</td>
+				</tr>
+				<tr height="43">
+					<td width="6%" valign="middle" bgcolor="white" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							124</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9B00h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9B02h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9B04h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9B06h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9B08h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9C38h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9C3Ah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9C3Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9C3Eh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							125</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9C40h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9C42h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9C44h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9C46h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9C48h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9D78h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9D7Ah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9D7Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9D7Eh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							126</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9D80h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9D82h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9D84h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9D86h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9D88h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9EB8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9EBAh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9EBCh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9EBEh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							127</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9EC0h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9EC2h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9EC4h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9EC6h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9EC8h</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9FF8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9FFAh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9FFCh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							9FFEh&nbsp;</div>
+					</td>
+				</tr>
+			</table>
+			</p>
+		</center>
+		<div align="right">
+			<p>VRAM Address (+06000000h)</p>
+		</div>
+		<p>2. Frame 1</p>
+		<center>
+			<p>
+			<table width="530" border="1" cellspacing="0" cellpadding="3">
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">&nbsp;</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							0&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							1&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							2&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							3&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							4&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							156&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							157&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							158&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle" bgcolor="white">
+						<div align="right">
+							159&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							0&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A000h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A002h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A004h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A006h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A008h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A138h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A13Ah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A13Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A13Eh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							1&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A140h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A142h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A144h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A146h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A148h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A298h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A29Ah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A29Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A29Eh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							2&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A2A0h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A2A2h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A2A4h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A2A6h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A2A8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3B8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3BAh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3BCh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3BEh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							3&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3C0h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3C2h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3C4h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3C6h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A3C8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A4F8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A4FAh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A4FCh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A4FEh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							4&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A500h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A502h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A504h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A506h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A508h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A638h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A63Ah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A63Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							A63Eh&nbsp;</div>
+					</td>
+				</tr>
+				<tr height="43">
+					<td width="6%" valign="middle" bgcolor="white" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+					<td width="9%" valign="middle" height="43">
+						<center>
+							&nbsp;<font size="5">|</font></center>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							124&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13B00h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13B02h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13B04h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13B06h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13B08h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13C38h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13C3Ah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13C3Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13C3Eh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							125&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13C40h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13C42h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13C44h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13C46h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13C48h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13D78h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13D7Ah&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13D7Ch&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13D7Eh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							126&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13D80h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">13D82h&nbsp;</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13D84h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13D86h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13D88h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13EB8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13EBAh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13EBCh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13EBEh&nbsp;</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="6%" valign="middle" bgcolor="white">
+						<div align="right">
+							127&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13EC0h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13EC2h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13EC4h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13EC6h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13EC8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<center>
+							&nbsp;<font size="5">...</font></center>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13FF8h&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13FFAh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13FFCh&nbsp;</div>
+					</td>
+					<td width="9%" valign="middle">
+						<div align="right">
+							13FFEh&nbsp;</div>
+					</td>
+				</tr>
+			</table>
+			</p>
+		</center>
+		<div align="right">
+			<p>VRAM address (+06000000h)</p>
+		</div>
+		<h2>
+		<h2><a name="T36"></a>6.3 OBJ (Object)</h2>
+		</h2>
+		<h3>
+		<h3><a name="T37"></a>6.3.1 OBJ Function Overview</h3>
+		</h3>
+		<p>Objects are in character format regardless of the BG mode. However, the number of basic characters that can be defined varies depending on the BG mode.</p>
+		<p>
+		<table width="561" border="1" cellspacing="0" cellpadding="3">
+			<tr>
+				<td width="24%" valign="top" bgcolor="white">
+					<center>
+						Item&nbsp;</center>
+				</td>
+				<td width="76%" valign="top" bgcolor="white">
+					<center>
+						Function&nbsp;</center>
+				</td>
+			</tr>
+			<tr height="26">
+				<td width="24%" valign="top" height="26">Number of display colors&nbsp;</td>
+				<td width="76%" valign="top" height="26">16 colors/16 palettes or 256 colors/1 palette (mixed display possible)&nbsp;</td>
+			</tr>
+			<tr height="26">
+				<td width="24%" valign="top" height="26">Number of characters (8x8 dots)&nbsp;</td>
+				<td width="76%" valign="top" height="26">1,024 (16 colors x 16 palettes) : in BG modes 0-2<br>
+					512 (256 colors x 1 palette) : &quot;<br>
+					512 (16 colors x 16 palettes) : in BG modes 3-5<br>
+					256 (256 colors x 1 palette) : &quot;&nbsp;</td>
+			</tr>
+			<tr height="26">
+				<td width="24%" valign="top" height="26">Character size&nbsp;</td>
+				<td width="76%" valign="top" height="26">8x8 - 64x64 dots (12 types)&nbsp;</td>
+			</tr>
+			<tr height="26">
+				<td width="24%" valign="top" height="26">Max. number per screen&nbsp;</td>
+				<td width="76%" valign="top" height="26">128 (64x64 dot conversion)&nbsp;</td>
+			</tr>
+			<tr height="26">
+				<td width="24%" valign="top" height="26">Max. number per line&nbsp;</td>
+				<td width="76%" valign="top" height="26">128 (8x8 dot conversion)&nbsp;</td>
+			</tr>
+			<tr height="26">
+				<td width="24%" valign="top" height="26">Color special effects&nbsp;</td>
+				<td width="76%" valign="top" height="26">HV flip, semi-transparency, mosaic, priority specification, OBJ windows&nbsp;</td>
+			</tr>
+		</table>
+		</p>
+		<h4><a name="T38"></a>OBJ Display Capability on a Single Line</h4>
+		<p>The single-line OBJ display capability shown in the table above, is the capability at maximum efficiency.</p>
+		<p>When the displayed OBJ are arranged continuously from the start of OAM, you can calculate the OBJ display capability on a single line using the following formula:</p>
+		<p>(Number of H Dots &times; 4 - 6) / Number of Rendering Cycles =<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OBJ Displayable on a single line (Max. of 128)</p>
+		<p>The &quot;Number of H Dots&quot; is usually 308 dots, but when the H-Blank Interval OBJ Processing Flag for Register DISPCNT is set to 1, there are 240 dots (Refer to <a href="AGB_Programming_Manual_Part_1d.htm#T1">&quot;4 LCD&quot;</a>).</p>
+		<p>&quot;&times;4&quot; expresses the number of cycles that the OBJ Rendering Circuit can use per one dot. &quot;-6&quot; represents the number of cycles needed for processing before OBJ rendering at the start of the H Line.</p>
+		<p>The &quot;Number of Rendering Cycles&quot; and the corresponding number of OBJ displayable for a single line is expressed in the table below.</p>
+		<center>
+			<p>
+			<table width="521" border="1" cellspacing="0" cellpadding="3">
+				<tr>
+					<td width="20%" valign="top" rowspan="2" bgcolor="white">
+						<center>
+							OBJ H Size&nbsp;</center>
+					</td>
+					<td valign="top" colspan="2" bgcolor="white">Number of Rendering Cycles&nbsp;</td>
+					<td valign="top" colspan="2" bgcolor="white">Number of OBJ displayable on single line&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="20%" valign="top" bgcolor="white">
+						<center>
+							Normal OBJ&nbsp;</center>
+					</td>
+					<td width="20%" valign="top" bgcolor="white">Rotation/Scaling OBJ&nbsp;</td>
+					<td width="20%" valign="top" bgcolor="white">
+						<center>
+							Normal OBJ&nbsp;</center>
+					</td>
+					<td width="20%" valign="top" bgcolor="white">Rotation/Scaling OBJ&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="20%" valign="top">
+						<center>
+							8&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							8&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							26&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							128&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							47&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%" valign="top">
+						<center>
+							16&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							16&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							42&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							76&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							29&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%" valign="top">
+						<center>
+							32&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							32&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							74&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							38&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							16&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%" valign="top">
+						<center>
+							64&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							64&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							138&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							19&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							8&nbsp;</center>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%" valign="top">128 (double the size of 64)&nbsp;</td>
+					<td width="20%" valign="top">
+						<center>
+							X&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							266&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							X&nbsp;</center>
+					</td>
+					<td width="20%" valign="top">
+						<center>
+							4&nbsp;</center>
+					</td>
+				</tr>
+			</table>
+			</p>
+		</center>
+
+			<p>If the number for non-displayed (outside of the screen) OBJ's in the OAM is lower than that for displayed OBJ's, the larger the non-displayed OBJ's size is, the less effecient the rendering will be. Please be aware of this problem.</p>
+
+		<h3><a name="T39"></a>6.3.2 Character Data Mapping</h3>
+		<p>With OBJ character data, the basic character is 8 x 8 dots, and characters between 8 x 8 and 64 x 64 dots can be handled (total of 12 types). The base address of OBJ character data is a fixed VRAM base address. The OBJ character data capacity allocated is either 32 Kbytes or 16 Kbytes, depending on the BG mode (see <a href="AGB_Programming_Manual_Part_1d1.htm#T8">5.1.2 &quot;VRAM Memory Map&quot;</a>).</p>
+		<p>There are 2 types of mapping to the character area, and they can be specified in bit [d06] of the DISPCNT register .</p>
+		<h4><a name="T40"></a>1) VRAM 2-Dimensional Mapping for OBJ Characters</h4>
+		<p>Setting the DISPCNT register bit [d06] to 0 results in the 2-dimensional mapping mode shown in the following figure.</p>
+		<p><img src="Image74.gif" width="597" height="380"></p>
+		<h4><a name="T41"></a>2) VRAM 1-Dimensional Mapping for OBJ Characters</h4>
+		<p>Setting DISPCNT register bit [d06] to 1 results in the 1-dimensional mapping mode shown in the following figure.</p>
+		<p>The data that comprise a character are stored in contiguous addresses.</p>
+		<p><img src="Image75.gif" width="623" height="492"></p>
+		<h3><a name="T42"></a>6.3.3 OAM</h3>
+		<p>OBJs are displayed by placing data in OAM.</p>
+		<p>OBJ data for 128 OBJs can be written to internal CPU OAM (addresses 07000000h-070003FFh), and 128 OBJ characters of an arbitrary size can be displayed on the LCD.</p>
+		<h4><a name="T43"></a>OAM Mapping</h4>
+		<p>OBJ attributes occupying 48 bits x 128 OBJs can be written to OAM.</p>
+		<p>In addition, when rotation/scaling are performed for an OBJ, a total of 32 instances of rotation/scaling parameter combinations (PA, PB, PC, and PD) can be written to OAM, as shown in the following figure.</p>
+		<p><img src="Image76.gif" width="385" height="521"></p>
+		<p><br>
+		</p>
+		<p>OBJ Attribute 0</p>
+		<p><img src="Image77.gif" width="390" height="444"></p>
+		<p><br>
+		[d15-14] OBJ Shape</p>
+		<p>Selects the OBJ Character Shape: Square, Horizontal Rectangle, or Vertical Rectangle.</p>
+		<p>11 is a prohibited code.</p>
+		<p>Please also refer to OBJ size specification for OBJ Attribute 1.</p>
+		<p>[d13] Color Mode Flag</p>
+		<p>Specifies whether the OBJ data format is 16 colors x 16 palette mode or 256 colors x 1 palette mode.</p>
+		<p>[d12] OBJ Mosaic Flag</p>
+		<p>Turns mosaic for OBJs on and off.</p>
+		<p>[d11-10] OBJ Mode</p>
+		<p>Specifies whether an OBJ is a normal OBJ or a semitransparent OBJ.</p>
+		<p>A normal OBJ is specified by 00, a semi-transparent OBJ by 01, and an OBJ window by 10.</p>
+		<p>A value of 11 is a prohibited code, so care should be taken to prevent this setting.</p>
+		<p>When a semi-transparent OBJ is specified, color special effects processing can be performed. For information on color special effects, see <a href="AGB_Programming_Manual_Part_3.htm#T1">&quot;9 Color Special Effects&quot;</a>.</p>
+		<p>OBJs for which an OBJ window specification is used are not displayed as normal OBJs; dots with non-zero character data are used as the OBJ window.</p>
+		<p>[d09] Rotation/Scaling Double-Size Flag</p>
+		<p>OBJs are limited in size by the OBJ field (8x8 - 64x64 dots), and the character data may surpass the boundaries of this field when rotated.</p>
+		<p>This problem can be avoided by implementing a pseudo double-size for the OBJ field, by setting the double-size flag to 1.</p>
+		<p>With this setting, the OBJ does not surpass the boundaries of the OBJ field even if the OBJ display is magnified by up to two-fold.</p>
+		<p>Example: 64x64 dot OBJ field <img src="rightarrow.gif"> 128x128 dot field displayed with rotation processing. Note, however, that the OBJ display position is shifted.</p>
+		<p>With the double-size flag set to 0, display of the portion protruding from the edges is cut off.</p>
+		<p>Please refer to the following figure.</p>
+		<p><img src="Image78.gif" width="589" height="506"></p>
+		<p>[d08] Rotation/Scaling Flag</p>
+		<p>Allows rotation processing for the OBJ to be enabled and disabled.</p>
+		<p>With the OBJ rotation/scaling feature enabled by setting this bit to 1, the maximum number of OBJs displayed per line is decreased. Please refer to the description in Section 6.3.1 on <a href="#T38">&quot;OBJ Display Capability on a Single Line&quot;</a>.</p>
+		<p>[d07-00] Y-Coordinate</p>
+		<p>Allows the y-coordinate of the OBJ in the display screen to be specified.</p>
+		<p>OBJ Attribute 1</p>
+		<p><img src="Image79.gif" width="366" height="257"></p>
+		<p>[d15-14] OBJ Size</p>
+		<p>Linked to the specification of the OBJ size for Attribute 0, the size for the OBJ Character is also specified. For each of the three OBJ shapes, you can set four sizes.</p>
+		<p><img src="Image80.gif" width="543" height="441"></p>
+		<p>[d13] [d12] Vertical and Horizontal Flip Flags</p>
+		<p>Allows the OBJ to be flipped horizontally and vertically.</p>
+		<p>A normal display is produced by a setting of 0 and a flip display by a setting of 1.</p>
+		<p>When the rotation/scaling flag ([d08] of OBJ Attribute 0) is enabled, these bits also can be used as the high-order bits of the rotation/scaling parameter selection.</p>
+		<p>[d13-09] Rotation/Scaling Parameter Selection</p>
+		<p>The parameters used in OBJ rotation/scaling processing are selected from the 32 parameters registered in OAM.</p>
+		<p>[d08-00] X-Coordinate Specifies the x-coordinate of the OBJ on the display screen.</p>
+		<p>OBJ Attribute 2</p>
+		<p><img src="Image81.gif" width="366" height="208"></p>
+		<p>[d15-12] Color Palette No.</p>
+		<p>When 16 colors x 16 palette format is specified in the color mode bit, these bits specify 1 of the 16 palettes to apply to the character data.</p>
+		<p>When 256 colors x 1 palette format is specified in the color mode bit, these bits are disabled.</p>
+		<p>[d11-10] Priority Relative to BG</p>
+		<p>Specifies the display priority of the OBJ relative to BG. For information on priority, see section 6.4, <a href="#T47">Display Priority of OBJ and BG</a>.</p>
+		<p>[d09-00] Character Name</p>
+		<p>Writes the number of the basic character located at the start of the OBJ character data mapped in VRAM. (See section 6.3.2, <a href="#T39">Character Data Mapping</a>).</p>
+		<p><u>16 colors x 16 palettes (color mode=1)</u></p>
+		<p>Allows selection of 1,024 characters.</p>
+		<p><u>256 colors x 1 palette (color mode=0)</u></p>
+		<p>Allows selection of 512 characters.</p>
+		<p>Bit 0 fixed at 0 in 2-dimensional mapping mode.</p>
+		<p><u>BG Mode is 3~5 (Bitmap Mode)</u></p>
+		<p>OBJ character data RAM is halved to 16 KB, so character name numbers 0-511 are disabled and numbers 512 and greater are used.</p>
+		<h3><a name="T44"></a>6.3.4 OBJ Rotation/Scaling Feature</h3>
+		<p>The rotation and scaling feature for OBJ is essentially the same as that for BG.</p>
+		<p>OBJ Character Data Referenced with Rotation</p>
+		<p><img src="Image82.gif" width="561" height="496"></p>
+		<p>When an OBJ is displayed, the OBJ character data are referenced horizontally, beginning from the left-uppermost position. Rotation display can be achieved by adding an angle to the reference direction. The center of rotation is fixed at the center of the OBJ field. If a reference point surpasses the specified OBJ size, it becomes transparent.</p>
+		<h4><a name="T45"></a>Operations Used in OBJ Rotation/Scaling Processing</h4>
+		<ol>
+			<li>Specify the rotation/scaling parameter number to be applied in OBJ Attribute 1 of the OAM.<br>
+			<br>
+			<li>The image-processing circuit sums the increases in the x direction (dx, dy) in relation to the center of rotation (OBJ field center), which serves as reference point, to calculate the x-direction coordinates.<br>
+			<br>
+			<li>When the line is advanced, the increases in the y-direction (dmx, dmy) in relation to the reference point, are summed to calculate the coordinate of the starting point for rendering the next line. The processing in step 2) above, is then performed.
+		</ol>
+		<h4><a name="T46"></a>Rotation/Scaling Parameters</h4>
+		<p>Specifies the direction of character data reference in OBJ rotation/scaling processing. (See the following chapter for more information.)</p>
+		<p>The values set for PA, PB, PC, and PD are signed, fixed-point numbers (8-bit fractional portion, 7-bit integer portion, 1-bit sign, for a total of 16 bits).</p>
+		<p>These 4 parameters are used together as a single group, which can be placed in any of 32 areas in OAM.</p>
+		<p><img src="Image83.gif"></p>
+		<h2>
+		<h2><a name="T47"></a>6.4 Display Priority of OBJ and BG</h2>
+		</h2>
+		<h3><a name="T48"></a>1) Priority Among BGs</h3>
+		<p>Priority among BGs can be set to any of 4 levels.</p>
+		<p>When BGs have the same priority setting, the BG with the lowest BG number is given priority.</p>
+		<h3><a name="T49"></a>2) Priority Among OBJs</h3>
+		<p>Priority among OBJs can be set to any of 4 levels.</p>
+		<p>When OBJs have the same priority setting, the OBJ with the lowest OBJ number is given priority.</p>
+		<h3><a name="T50"></a>3) Priority Among BGs and OBJs</h3>
+		<p>The priority of each OBJ in relation to the BG can be set to 4 levels. Please refer to the following figure.</p>
+		<p><img src="Image147.gif">
+	</body>
+
+</html>

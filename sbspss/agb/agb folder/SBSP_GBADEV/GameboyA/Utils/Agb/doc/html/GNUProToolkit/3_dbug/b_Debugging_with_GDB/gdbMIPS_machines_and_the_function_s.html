@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>MIPS machines and the function stack</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbInformation_about_a_frame.html">Previous</A>|<A HREF="gdbExamining_Source_Files.html">Next</A>
+<BR><A NAME="off_1214709"></A><A NAME="4d6de44c"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>MIPS
+machines and the function stack</FONT></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>MIPS
+based computers use an unusual stack frame, which sometimes requires GDB
+to search backward in the object code to find the beginning of a function.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To improve response time
+(especially for embedded applications, where GDB may be restricted to a
+slow serial line for this search) you may want to limit the size of this
+search, using one of the following commands.</FONT></FONT>
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>set heuristic-fence-post <I>limit</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Restrict GDB to examining
+at most </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>limit </FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>bytes
+in its search for the beginning of a function.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>A value of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+(the default) means there is no limit. However, except for </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+the larger the limit the more bytes </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>heuristic-fence-post</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+must search and therefore the longer it takes to run.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>show heuristic-fence-post</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Display the current limit.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>These commands are available
+<I>only</I> when GDB is configured for debugging programs on MIPS processors.</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbInformation_about_a_frame.html">Previous</A>|<A HREF="gdbExamining_Source_Files.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

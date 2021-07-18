@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>bsearch[binary search]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libc.html">Contents</A>|<A HREF="libcindex.html">Index</A>|<A HREF="libcatoi_atolstring_to_integer.html">Previous</A>|<A HREF="libccallocallocate_space_for_arrays.html">Next</A>
+</P>
+
+<P><A NAME="off_165884"></A><A NAME="2a516601"></A><A NAME="off_165884"></A><A NAME="2a516601"></A><FONT SIZE=+3><FONT FACE="Courier New">bsearch
+<BR>
+</FONT><FONT FACE="Times New Roman">[binary search] </FONT></FONT></P>
+
+<PRE><B><FONT FACE="Times New Roman"><FONT SIZE=+2>SYNOPSIS 
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+1>#include &lt;stdlib.h&gt; 
+void *bsearch(const void *<I>key</I>, const void *<I>base</I>, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;size_t <I>nmemb</I>, size_t <I>size</I>, 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int (*<I>compar</I>)(const void *, const void *)); </FONT></FONT></PRE>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>bsearch</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">searches an array beginning at </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>base</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">for any element that matches </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>key</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+using binary search. </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>nmemb</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is the element count of the array;
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>size</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is the size of each element. The array
+must be sorted in ascending order with respect to the comparison function,
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>compar</FONT></FONT></I><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">(which you supply as the last argument
+of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bsearch</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>).
+</FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You must define the comparison
+function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>(*<I>compar</I>)</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to have two arguments; its result must be negative if the first argument
+is less than the second, zero if the two arguments match, and positive
+if the first argument is greater than the second (where “less than” and
+“greater than” refer to whatever arbitrary ordering is appropriate). </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1><B>RETURNS <BR>
+</B>Returns a pointer to an element of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>array
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>that matches
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>key</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+If more than one matching element is available, the result may point to
+any of them. </FONT></FONT></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE <BR>
+</FONT></FONT></B><FONT FACE="Courier New"><FONT SIZE=+0>bsearch</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is ANSI. </FONT></FONT></P>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>No supporting OS subroutines
+are required. </FONT></FONT></P>
+
+</BODY>
+</HTML>

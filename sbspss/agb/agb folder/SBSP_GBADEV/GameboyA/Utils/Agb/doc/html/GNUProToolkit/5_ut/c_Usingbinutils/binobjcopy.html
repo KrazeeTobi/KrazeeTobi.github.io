@@ -1,0 +1,266 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>objcopy</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="bin.html">Contents</a>|<a href="binindex.html">Index</a>|<a href="binnm.html">Previous</a>|<a href="binobjdump.html">Next</a>
+<br><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><a NAME="off_229435"></a><a NAME="43601030"></a><b><font face="Courier New"><font size=+3>objcopy</font></font></b>
+<br>
+<hr SIZE=3 WIDTH="100%">
+<br><font face="Courier New"><font size=+0>objcopy [ -F <i>bfdname</i>
+| --target=<i>bfdname</i> ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ -I <i>bfdname</i> | --input-target=bfdname ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ -O <i>bfdname</i> | --output-target=<i>bfdname</i> ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ -S | --strip-all ] [ -g | --strip-debug ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ -K <i>symbolname</i> | --keep-symbol=<i>symbolname</i> ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ -N <i>symbolname</i> | --strip-symbol=<i>symbolname</i> ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ -x | --discard-all ] [ -X | --discard-locals ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ -b <i>byte</i> | --byte=<i>byte</i> ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ -i <i>interleave</i> | --interleave=<i>interleave</i> ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ -R <i>sectionname</i> | --remove-section=<i>sectionname</i> ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ --debugging ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ --gap-fill=<i>val</i> ] [ --pad-to=<i>address</i> ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ --set-start=<i>val</i> ] [ --adjust-start=<i>incr</i> ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ --adjust-vma=<i>incr</i> ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ --adjust-section-vma=<i>section</i>{=,+,-}<i>val</i> ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ --adjust-warnings ] [ --no-adjust-warnings ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ --set-section-flags=<i>section</i>=<i>flags</i> ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ --add-section=<i>sectionname</i>=<i>filename</i> ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ --remove-leading-char ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[ -v | --verbose ] [ -V | --version ] [ --help ]</font></font>
+<br><font face="Courier New"><font size=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<i>infile</i> [<i>outfile</i>]</font></font>
+<p><font face="Times New Roman"><font size=+1>The GNU </font></font><font face="Courier New"><font size=+0>objcopy</font></font><font face="Times New Roman"><font size=+1>
+utility copies the contents of an object file to another. </font></font><font face="Courier New"><font size=+0>objcopy</font></font><font face="Times New Roman"><font size=+1>
+uses the GNU BFD Library to read and write the object files. It can write
+the destination object file in a format different from that of the source
+object file. The exact behavior of </font></font><font face="Courier New"><font size=+0>objcopy</font></font><font face="Times New Roman"><font size=+1>
+is controlled by command-line options.</font></font>
+<p><font face="Courier New"><font size=+0>objcopy</font></font><font face="Times New Roman"><font size=+1>
+creates temporary files to do its translations and deletes them afterward.
+</font></font><font face="Courier New"><font size=+0>objcopy</font></font><font size=+1><font face="Times New Roman">
+uses BFD to do all its translation work; it has access to all the formats
+described in BFD and thus is able to recognize most formats without being
+told explicitly. See <a href="../b_Usingld/ldBFD.html#Top">BFD</a> in <i>Using
+</i></font><tt>ld</tt><font face="Times New Roman">.</font></font>
+<p><font face="Courier New"><font size=+0>objcopy</font></font><font size=+1><font face="Times New Roman">
+can be used to generate </font><font face="Times New Roman,Times">S-re</font><font face="Times New Roman">cords
+by using an output target of ‘</font></font><font face="Courier New"><font size=+0>srec</font></font><font face="Times New Roman"><font size=+1>’
+(e.g., use ‘</font></font><font face="Courier New"><font size=+0>-Osrec</font></font><font face="Times New Roman"><font size=+1>’).</font></font>
+<p><font face="Courier New"><font size=+0>objcopy</font></font><font face="Times New Roman"><font size=+1>
+can be used to generate a raw binary file by using an output target of
+‘</font></font><font face="Courier New"><font size=+0>binary</font></font><font face="Times New Roman"><font size=+1>’
+(e.g., use ‘</font></font><font face="Courier New"><font size=+0>-Obinary</font></font><font face="Times New Roman"><font size=+1>’).
+When </font></font><font face="Courier New"><font size=+0>objcopy</font></font><font face="Times New Roman"><font size=+1>
+generates a raw binary file, it will essentially produce a memory dump
+of the contents of the input object file. All symbols and relocation information
+will be discarded. The memory dump will start at the virtual address of
+the lowest section copied into the output file.</font></font>
+<p><font size=+1><font face="Times New Roman">When generating an</font><font face="Times New Roman,Times">
+S-recor</font><font face="Times New Roman">d or a raw binary file, it may
+be helpful to use </font></font><font face="Courier New"><font size=+0>-S</font></font><font face="Times New Roman"><font size=+1>
+to remove sections containing debugging information. In some cases ‘</font></font><font face="Courier New"><font size=+0>-R</font></font><font face="Times New Roman"><font size=+1>’
+will be useful to remove sections which contain information which is not
+needed by the binary file.</font></font>
+<br>&nbsp;
+<ul><i><font face="Courier New"><font size=+0>infile</font></font></i>
+<br><i><font face="Courier New"><font size=+0>outfile</font></font></i>
+<ul><font face="Times New Roman"><font size=+1>The source and output files,
+respectively. If you do not specify </font></font><i><font face="Courier New"><font size=+0>outfile</font></font></i><font face="Times New Roman"><font size=+1>,
+</font></font><font face="Courier New"><font size=+0>objcopy</font></font><font face="Times New Roman"><font size=+1>
+creates a temporary file and destructively renames the result with the
+name of </font></font><i><font face="Courier New"><font size=+0>infile</font></font></i><font face="Times New Roman"><font size=+1>.</font></font></ul>
+<font face="Courier New"><font size=+0>-I<i>bfdname</i></font></font>
+<br><font face="Courier New"><font size=+0>--input-target=<i>bfdname</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Consider the source file’s
+object format to be </font></font><i><font face="Courier New"><font size=+0>bfdname</font></font></i><font face="Times New Roman"><font size=+1>,
+rather than attempting to deduce it. See <font color="#008000"><a href="binTarget_Selection.html">Target
+selection</a></font> for more information.</font></font></ul>
+<font face="Courier New"><font size=+0>-O<i>bfdname</i></font></font>
+<br><font face="Courier New"><font size=+0>--output-target=<i>bfdname</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Write the output file using
+the object format </font></font><i><font face="Courier New"><font size=+0>bfdname</font></font></i><font face="Times New Roman"><font size=+1>.
+See <font color="#008000"><a href="binTarget_Selection.html">Target selection</a></font>
+for more information.</font></font></ul>
+<font face="Courier New"><font size=+0>-F<i> bfdname</i></font></font>
+<br><font face="Courier New"><font size=+0>--target=<i>bfdname</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Use </font></font><i><font face="Courier New"><font size=+0>bfdname</font></font></i><font face="Times New Roman"><font size=+1>
+as the object format for both the input and the output file; i.e., simply
+transfer data from source to destination with no translation. See <font color="#008000"><a href="binTarget_Selection.html">Target
+selection</a></font> for more information.</font></font></ul>
+<font face="Courier New"><font size=+0>-R<i> sectionname</i></font></font>
+<br><font face="Courier New"><font size=+0>--remove-section=<i>sectionname</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Remove any section named
+</font></font><i><font face="Courier New"><font size=+0>sectionname</font></font></i><font face="Times New Roman"><font size=+1>
+from the output file. This option may be given more than once.</font></font>
+<ul><font face="Times New Roman"><font size=+1><i>Note</i>:</font></font>
+<br><font face="Times New Roman"><font size=+1>Using this option inappropriately
+may make the output file unusable.</font></font></ul>
+</ul>
+<font face="Courier New"><font size=+0>-S</font></font>
+<br><font face="Courier New"><font size=+0>--strip-all</font></font>
+<ul><font face="Times New Roman"><font size=+1>Do not copy relocation and
+symbol information from the source file.</font></font></ul>
+<font face="Courier New"><font size=+0>-g</font></font>
+<br><font face="Courier New"><font size=+0>--strip-debug</font></font>
+<ul><font face="Times New Roman"><font size=+1>Do not copy debugging symbols
+from the source file.</font></font></ul>
+<font face="Courier New"><font size=+0>--strip-unneeded</font></font>
+<ul><font face="Times New Roman"><font size=+1>Strip all symbols that are
+not needed for relocation processing.</font></font></ul>
+<font face="Courier New"><font size=+0>-K<i> symbolname</i></font></font>
+<br><font face="Courier New"><font size=+0>--keep-symbol=<i>symbolname</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Copy only symbol </font></font><i><font face="Courier New"><font size=+0>symbolname</font></font></i><font face="Times New Roman"><font size=+1>
+from the source file. This option may be given more than once.</font></font></ul>
+<font face="Courier New"><font size=+0>-N<i> symbolname</i></font></font>
+<br><font face="Courier New"><font size=+0>--strip-symbol=<i>symbolname</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Do not copy symbol </font></font><i><font face="Courier New"><font size=+0>symbolname</font></font></i><font face="Times New Roman"><font size=+1>
+from the source file. This option may be given more than once, and may
+be combined with strip options other than </font></font><font face="Courier New"><font size=+0>-K</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+<font face="Courier New"><font size=+0>-x</font></font>
+<br><font face="Courier New"><font size=+0>--discard-all</font></font>
+<ul><font face="Times New Roman"><font size=+1>Do not copy non-global symbols
+from the source file.</font></font></ul>
+<font face="Courier New"><font size=+0>-X</font></font>
+<br><font face="Courier New"><font size=+0>--discard-locals</font></font>
+<ul><font face="Times New Roman"><font size=+1>Do not copy compiler-generated
+local symbols. (These usually start with ‘</font></font><font face="Courier New"><font size=+0>L</font></font><font face="Times New Roman"><font size=+1>’
+or ‘</font></font><font face="Courier New"><font size=+0>.</font></font><font face="Times New Roman"><font size=+1>’.)</font></font></ul>
+<font face="Courier New"><font size=+0>-b<i> byte</i></font></font>
+<br><font face="Courier New"><font size=+0>--byte=<i>byte</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Keep only every </font></font><i><font face="Courier New"><font size=+0>byte</font></font></i><font face="Times New Roman"><font size=+1>th
+byte of the input file (header data is not affected). </font></font><i><font face="Courier New"><font size=+0>byte</font></font></i><font face="Times New Roman"><font size=+1>
+can be in the range from 0 to </font></font><i><font face="Courier New"><font size=+0>interleave</font></font></i><font face="Times New Roman"><font size=+1>-1,
+where interleave is given by the ‘</font></font><font face="Courier New"><font size=+0>-i</font></font><font face="Times New Roman"><font size=+1>’
+or ‘</font></font><font face="Courier New"><font size=+0>--interleave</font></font><font face="Times New Roman"><font size=+1>’
+option, or the default of 4. This option is useful for creating files to
+program ROM . It is typically used with an </font></font><font face="Courier New"><font size=+0>srec</font></font><font face="Times New Roman"><font size=+1>
+output target.</font></font></ul>
+<font face="Courier New"><font size=+0>-i<i> interleave</i></font></font>
+<br><font face="Courier New"><font size=+0>--interleave=<i>interleave</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Only copy one out of every
+</font></font><i><font face="Courier New"><font size=+0>interleave</font></font></i><font face="Times New Roman"><font size=+1>
+bytes. Select which byte to copy with the ‘</font></font><i><font face="Courier New"><font size=+0>-b</font></font></i><font face="Times New Roman"><font size=+1>’
+or ‘</font></font><font face="Courier New"><font size=+0>--byte</font></font><font face="Times New Roman"><font size=+1>’
+option. The default is 4. </font></font><font face="Courier New"><font size=+0>objcopy</font></font><font face="Times New Roman"><font size=+1>
+ignores this option if you do not specify either ‘</font></font><i><font face="Courier New"><font size=+0>-b</font></font></i><font face="Times New Roman"><font size=+1>’
+or ‘</font></font><font face="Courier New"><font size=+0>--byte</font></font><font face="Times New Roman"><font size=+1>’.</font></font></ul>
+<font face="Courier New"><font size=+0>--debugging</font></font>
+<ul><font face="Times New Roman"><font size=+1>Convert debugging information,
+if possible. This is not the default because only certain debugging formats
+are supported, and the conversion process can be time consuming.</font></font></ul>
+<font face="Courier New"><font size=+0>--gap-fill<i> val</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Fill gaps between sections
+with </font></font><i><font face="Courier New"><font size=+0>val</font></font></i><font face="Times New Roman"><font size=+1>.
+This is done by increasing the size of the section with the lower address,
+and filling in the extra space created with </font></font><i><font face="Courier New"><font size=+0>val</font></font></i><font face="Times New Roman"><font size=+1>.</font></font></ul>
+<font face="Courier New"><font size=+0>--pad-to<i> address</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Pad the output file up to
+the virtual address, </font></font><i><font face="Courier New"><font size=+0>address</font></font></i><font face="Times New Roman"><font size=+1>.
+This is done by increasing the size of the last section. The extra space
+is filled in with the value specified by ‘</font></font><font face="Courier New"><font size=+0>--gap-fill</font></font><font face="Times New Roman"><font size=+1>’
+(default zero).</font></font></ul>
+<font face="Courier New"><font size=+0>--set-start<i> val</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Set the address of the new
+file to </font></font><i><font face="Courier New"><font size=+0>val</font></font></i><font face="Times New Roman"><font size=+1>.
+Not all object file formats support setting the start address.</font></font></ul>
+<font face="Courier New"><font size=+0>--adjust-start<i> incr</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Adjust the start address
+by adding </font></font><i><font face="Courier New"><font size=+0>incr</font></font></i><font face="Times New Roman"><font size=+1>.
+Not all object file formats support setting the start address.</font></font></ul>
+<font face="Courier New"><font size=+0>--adjust-vma <i>incr</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Adjust the address of all
+sections, as well as the start address, by adding </font></font><i><font face="Courier New"><font size=+0>incr</font></font></i><font face="Times New Roman"><font size=+1>.
+Some object file formats do not permit section addresses to be changed
+arbitrarily. Note that this does not relocate the sections; if the program
+expects sections to be loaded at a certain address, and this option is
+used to change the sections such that they are loaded at a different address,
+the program may fail.</font></font></ul>
+<font face="Courier New"><font size=+0>--adjust-section-vma <i>section</i>{=,+,-}<i>val</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Set or adjust the address
+of the named </font></font><i><font face="Courier New"><font size=+0>section</font></font></i><font face="Times New Roman"><font size=+1>.
+If ‘</font></font><font face="Courier New"><font size=+0>=</font></font><font face="Times New Roman"><font size=+1>’
+is used, the section address is set to </font></font><i><font face="Courier New"><font size=+0>val</font></font></i><font face="Times New Roman"><font size=+1>.
+Otherwise, </font></font><i><font face="Courier New"><font size=+0>val</font></font></i><font face="Times New Roman"><font size=+1>
+is added to or subtracted from the section address. See the comments under
+‘</font></font><font face="Courier New"><font size=+0>--adjust-vma</font></font><font face="Times New Roman"><font size=+1>’.
+If </font></font><i><font face="Courier New"><font size=+0>section</font></font></i><font face="Times New Roman"><font size=+1>
+does not exist in the input file, a warning will be issued, unless ‘</font></font><font face="Courier New"><font size=+0>--no-adjust-warnings</font></font><font face="Times New Roman"><font size=+1>’
+is used.</font></font></ul>
+<font face="Courier New"><font size=+0>--adjust-warnings</font></font>
+<ul><font face="Times New Roman"><font size=+1>If ‘</font></font><font face="Courier New"><font size=+0>--adjust-section-vma</font></font><font face="Times New Roman"><font size=+1>’
+is used, and the named section does not exist, issue a warning. This is
+the default.</font></font></ul>
+<font face="Courier New"><font size=+0>--no-adjust-warnings</font></font>
+<ul><font face="Times New Roman"><font size=+1>Do not issue a warning if
+‘</font></font><font face="Courier New"><font size=+0>--adjust-section-vma</font></font><font face="Times New Roman"><font size=+1>’
+is used, even if the named section does not exist.</font></font></ul>
+<font face="Courier New"><font size=+0>--set-section-flags <i>section</i>=<i>flags</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Set the flags for the named
+section. The </font></font><i><font face="Courier New"><font size=+0>flags</font></font></i><font face="Times New Roman"><font size=+1>
+argument is a comma separated string of flag names. The recognized names
+are ‘</font></font><font face="Courier New"><font size=+0>alloc</font></font><font face="Times New Roman"><font size=+1>’,
+‘</font></font><font face="Courier New"><font size=+0>load</font></font><font face="Times New Roman"><font size=+1>’,
+‘</font></font><font face="Courier New"><font size=+0>readonly</font></font><font face="Times New Roman"><font size=+1>’,
+‘</font></font><font face="Courier New"><font size=+0>code</font></font><font face="Times New Roman"><font size=+1>’,
+‘</font></font><font face="Courier New"><font size=+0>data</font></font><font face="Times New Roman"><font size=+1>’,
+and ‘</font></font><font face="Courier New"><font size=+0>rom</font></font><font face="Times New Roman"><font size=+1>’.
+Not all flags are meaningful for all object file formats.</font></font></ul>
+<font face="Courier New"><font size=+0>--add-section <i>sectionname</i>=<i>filename</i></font></font>
+<ul><font face="Times New Roman"><font size=+1>Add a new section named
+</font></font><i><font face="Courier New"><font size=+0>sectionname</font></font></i><font face="Times New Roman"><font size=+1>
+while copying the file. The contents of the new section are taken from
+the file </font></font><i><font face="Courier New"><font size=+0>filename</font></font></i><font face="Times New Roman"><font size=+1>.
+The size of the section will be the size of the file. This option only
+works on file formats which can support sections with arbitrary names.</font></font></ul>
+<font face="Courier New"><font size=+0>--remove-leading-char</font></font>
+<ul><font face="Times New Roman"><font size=+1>If the first character of
+a global symbol is a special symbol leading character used by the object
+file format, remove the character. The most common symbol leading character
+is underscore. This option will remove a leading underscore from all global
+symbols. This can be useful if you want to link together objects of different
+file formats with different conventions for symbol names.</font></font></ul>
+<font face="Courier New"><font size=+0>-V</font></font>
+<br><font face="Courier New"><font size=+0>--version</font></font>
+<ul><font face="Times New Roman"><font size=+1>Show the version number
+of </font></font><font face="Courier New"><font size=+0>objcopy</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+<font face="Courier New"><font size=+0>-v</font></font>
+<br><font face="Courier New"><font size=+0>--verbose</font></font>
+<ul><font face="Times New Roman"><font size=+1>Verbose output: list all
+object files modified. In the case of archives, ‘</font></font><font face="Courier New"><font size=+0>objcopy
+-V</font></font><font face="Times New Roman"><font size=+1>’ lists all
+members of the archive.</font></font></ul>
+<font face="Courier New"><font size=+0>--help</font></font>
+<ul><font face="Times New Roman"><font size=+1>Show a summary of the options
+to </font></font><font face="Courier New"><font size=+0>objcopy</font></font><font face="Times New Roman"><font size=+1>.</font></font></ul>
+</ul>
+
+<center>
+<hr SIZE=3 WIDTH="100%">
+<br><a href="#Top">Top</a>|<a href="bin.html">Contents</a>|<a href="binindex.html">Index</a>|<a href="binnm.html">Previous</a>|<a href="binobjdump.html">Next</a></center>
+
+</body>
+</html>

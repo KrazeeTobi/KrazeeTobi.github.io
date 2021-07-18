@@ -1,0 +1,257 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Assembler Instructions with C Expression Operands</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccAn_inline_Function_is_As_Fast_As.html">Previous</A>|<A HREF="gccConstraints_for_asm_Operands.html">Next</A>
+<BR><A NAME="off_3932160"></A><A NAME="8bed4137"></A><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3><B>Assembler
+instructions with C expression operands&nbsp;</B>&nbsp;</FONT></FONT></FONT>&nbsp;
+<HR SIZE=6 WIDTH="100%">
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>In an assembler instruction,
+using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+you can now specify the operands of the instruction using C expressions.
+This means no more guessing which registers or memory locations will contain
+the data you want to use.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You must specify an assembler
+instruction template much like what appears in a machine description, plus
+an operand constraint string for each operand.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, the following
+example shows how to use the 68881’s </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>fsinx</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instruction.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>asm ("fsinx %1,%0" : "=f" (result) : "f" (angle));</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In such a case, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>angle</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the C expression for the input operand while </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>result</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is that of the output operand. Each has ‘"</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>"’
+as its operand constraint, saying that a floating point register is required.
+The ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in ‘"</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>=f</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>"’
+indicates that the operand is an output; all output operands’ constraints
+must use ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>=</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+The constraints use the same language used in the machine description (see
+<A HREF="gccConstraints_for_asm_Operands.html">Constraints for </A></FONT></FONT><A HREF="gccConstraints_for_asm_Operands.html"><FONT FACE="Courier New"><FONT SIZE=+0>asm
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>operands</FONT></FONT></A><FONT FACE="Times New Roman"><FONT SIZE=+1>).</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Each operand is described
+by an operand-constraint string followed by the C expression in parentheses.
+A colon separates the assembler template from the first output operand,
+and another separates the last output operand from the first input, if
+any. Commas separate output operands and separate inputs. The total number
+of operands is limited to ten or to the maximum number of operands in any
+instruction pattern in the machine description, whichever is greater.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If there are no output operands,
+and there are input operands, then there must be two consecutive colons
+surrounding the place where the output operands would go.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Output operand expressions
+must be lvalues; the compiler can check this. The input operands need not
+be lvalues. The compiler cannot check whether the operands have data types
+that are reasonable for the instruction being executed. It does not parse
+the assembler instruction template and does not know what it means, or
+whether it is valid assembler input. The extended </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+feature is most often used for machine instructions that the compiler itself
+does not know exist. If the output expression cannot be directly addressed
+(for example, it is a bit field), your constraint must allow a register.
+In that case, GNU CC will use the register as the output of the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and then store that register into the output.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The output operands must
+be write-only; GNU CC will assume that the values in these operands before
+the instruction are dead and need not be generated. Extended </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+supports input-output or read-write operands.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Use the constraint character,
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+to indicate such an operand, and list it with the output operands.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When the constraints for
+the read-write operand (or an operand in which only some of the bits are
+to be changed) allows a register, you may, as an alternative logically
+split its function into two separate operands, one input operand and one
+write-only output operand. The connection between them is expressed by
+constraints which say they need to be in the same location when the instruction
+executes. You can use the same C expression for both operands, or different
+expressions. For example, here we write the (fictitious) ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>combine</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+instruction with </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>bar</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as its read-only source operand and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+as its read-write destination:</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>asm ("combine %2,%0" : "=r" (foo) : "0" (foo), "g" (bar));</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>The constraint ‘</FONT><FONT SIZE=+0>“</FONT></FONT><FONT SIZE=+0><FONT FACE="Courier New">0</FONT><FONT FACE="Times New Roman">”</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+for operand 1 says that it must occupy the same location as operand ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>0</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.
+A digit in constraint is allowed only in an input operand, and it must
+refer to an output operand. Only a digit in the constraint can guarantee
+that one operand will be in the same place as another. The mere fact that
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is the value of both operands is not enough to guarantee that they will
+be in the same place in the generated assembler code. The following would
+not work:</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>asm ("combine %2,%0" : "=r" (foo) : "r" (foo), "g" (bar));</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Various optimizations or reloading
+could cause operands 0 and 1 to be in different registers; GNU CC knows
+no reason not to do so. For example, the compiler might find a copy of
+the value of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+in one register and use it for operand 1, but generate the output operand
+0 in a different register (copying it afterward to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’s
+own address). Of course, since the register for operand 1 is not even mentioned
+in the assembler code, the result will not work, but GNU CC can’t tell
+that. Some instructions clobber specific hard registers. To describe this,
+write a third colon after the input operands, followed by the names of
+the clobbered hard registers (given as strings). Here is a realistic example
+for the Vax:</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>asm volatile ("movc3 %0,%1,%2"&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : /* no outputs */&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : "g" (from), "g" (to), "g" (count)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : "r0", "r1", "r2", "r3", "r4", "r5");</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>If you refer to a particular
+hardware register from the assembler code, then you will probably have
+to list the register after the third colon to tell the compiler that the
+register’s value is modified.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In many assemblers, the register
+names begin with ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’;
+to produce one ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in the assembler code, you must write ‘</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>%%</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+in the input. If your assembler instruction can alter the condition code
+register, add ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+to the list of clobbered registers.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>GNU CC on some machines represents
+the condition codes as a specific hardware register; ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+serves to name this register. On other machines, the condition code is
+handled differently, and specifying ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+has no effect. But it is valid no matter what the machine. If your assembler
+instruction modifies memory in an unpredictable fashion, add </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>memory</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to the list of clobbered registers. This will cause GNU CC to not keep
+memory values cached in registers across the assembler instruction. You
+can put multiple assembler instructions together in a single </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+template, separated either with newlines (written as:&nbsp; ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>\n</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>
+</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>) or with semi-colons
+if the assembler allows such semicolons. The GNU assembler allows semicolons
+and all Unix assemblers seem to do so. The input operands are guaranteed
+not to use any of the clobbered registers, and neither will the output
+operands’ addresses, so you can read and write the clobbered registers
+as many times as you like. The following is an example of multiple instructions
+in a template, assuming that the subroutine, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>_foo</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+accepts arguments in registers 9 and 10.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>asm ("movl %0,r9;movl %1,r10;call _foo"&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : /* no outputs */&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : "g" (from), "g" (to)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : "r9", "r10");</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Unless an output operand has
+the ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>&amp;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+constraint modifier, GNU CC may allocate it in the same register as an
+unrelated input operand, on the assumption that the inputs are consumed
+before the outputs are produced. This assumption may be false if the assembler
+code actually consists of more than one instruction. In such a case, use
+‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>&amp;</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+for each output operand that may not overlap an input. See <A HREF="gccConstraint_Modifier_Characters.html">Constraint
+modifier characters</A>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you want to test the condition
+code produced by an assembler instruction, you must include a branch and
+a label in the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+construct, as follows.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This assumes your assembler
+supports local labels, as the GNU assembler and most Unix assemblers do.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>asm ("clr %0;frob %1;beq 0f;mov #1,%0;0:"&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : "g" (result)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : "g" (input));</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>Speaking of labels, jumps from
+one </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to another are not supported. The compiler’s optimizers do not know about
+these jumps, and therefore they cannot take account of them when deciding
+how to optimize.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Usually the most convenient
+way to use these </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instructions is to encapsulate them in macros that look like functions,
+as in the following example.</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define sin(x)&nbsp;&nbsp;&nbsp; \&nbsp;
+({ double __value, __arg = (x); \&nbsp;
+&nbsp;&nbsp; asm ("fsinx %1,%0": "=f" (__value): "f" (__arg)); \&nbsp;
+&nbsp;&nbsp; __value; })</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>In such a case, the variable,
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__arg</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+is used to make sure that the instruction operates on a proper </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>double</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+value, and to accept only those arguments ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+which can convert automatically into a </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>double</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>Another way to make sure
+the instruction operates on the correct data type is to use a cast in the
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+This is different from using a variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__arg</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+in that it converts more different types. For example, if the desired type
+were int, casting the argument to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+would accept a pointer with no complaint, while assigning the argument
+to an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>int</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+variable named </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__arg</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+would warn about using a pointer unless the caller explicitly casts it.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+has output operands, GNU CC assumes for optimization purposes that the
+instruction has no side effects except to change the output operands. This
+does not mean that instructions with a side effect cannot be used, but
+you must be careful, because the compiler may eliminate them if the output
+operands aren’t used, or move them out of loops, or replace two with one
+if they constitute a common subexpression. Also, if your instruction does
+have a side effect on a variable that otherwise appears not to change,
+the old value of the variable may be reused later if it happens to be found
+in a register.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can prevent an </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instruction from being deleted, moved significantly, or combined, by writing
+the keyword volatile after the </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+For example:</FONT></FONT>
+<UL>
+<PRE><FONT FACE="Courier New"><FONT SIZE=+1>#define set_priority(x) \&nbsp;
+asm volatile ("set_priority %0": /* no outputs */ : "g" (x))</FONT></FONT></PRE>
+</UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>An instruction without output
+operands will not be deleted or moved significantly, regardless, unless
+it is unreachable.</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>Even a volatile </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instruction can be moved in ways that appear insignificant to the compiler,
+such as across jump instructions. You can’t expect a sequence of volatile
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instructions to remain perfectly consecutive. If you want consecutive output,
+use a single </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT></UL>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>It is a natural idea to look
+for a way to give access to the condition code left by the assembler instruction.
+However, when we attempted to implement this, we found no way to make it
+work reliably. The problem is that output operands might need reloading,
+which would result in additional following “store” instructions. On most
+machines, these instructions would alter the condition code before there
+was time to test it. This problem doesn’t arise for ordinary “test” and
+“compare” instructions because they don’t have any output operands.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>If you are writing a header
+file that should be included in ANSI C programs, write </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>__asm__</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+instead of </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>asm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+See <A HREF="gccAlternate_Keywords.html">Alternate keywords</A>.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gcc.html">Contents</A>|<A HREF="gccindex.html">Index</A>|<A HREF="gccAn_inline_Function_is_As_Fast_As.html">Previous</A>|<A HREF="gccConstraints_for_asm_Operands.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>exp, expf[exponential]</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><A HREF="libm.html">Contents</A>|<A HREF="libmindex.html">Index</A>|<A HREF="libmerf_erff_erfc_erfcferror_functio.html">Previous</A>|<A HREF="libmexpm1_expm1fexponential_minus_1.html">Next</A>
+</P>
+
+<P><A NAME="off_165167"></A><A NAME="c77bae71"></A><A NAME="off_165167"></A><A NAME="c77bae71"></A><A NAME="off_165167"></A><A NAME="c77bae71"></A><A NAME="off_165167"></A><A NAME="c77bae71"></A><A NAME="off_165167"></A><A NAME="c77bae71"></A><FONT SIZE=+3><FONT FACE="Courier New">exp</FONT><FONT FACE="Times New Roman">,
+</FONT><FONT FACE="Courier New">expf</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+4>
+<BR>
+</FONT></FONT><B><FONT FACE="Times New Roman"><FONT SIZE=+3>[exponential]
+</FONT></FONT></B></P>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>SYNOPSIS </FONT></FONT></B></P>
+
+<UL>
+<PRE>
+<FONT FACE="Courier New"><FONT SIZE=+1>#include &lt;math.h&gt; 
+double exp(double <I>x</I>); 
+float expf(float <I>x</I>); </FONT></FONT></PRE>
+</UL>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>DESCRIPTION </FONT></FONT></B></P>
+
+<UL>
+<P><BR>
+<FONT FACE="Courier New"><FONT SIZE=+0>exp</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>expf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">calculate the exponential of </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+that is, <I>ex</I> (where <I>e</I> is the base of the natural system of
+logarithms, approximately 2.71828). </FONT></FONT></P>
+</UL>
+
+<UL>
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>You can use the (non-ANSI)
+function, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>matherr</FONT></FONT><FONT SIZE=+1><FONT FACE="Times New Roman">,</FONT><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">to specify error handling for these
+functions. </FONT></FONT></P>
+</UL>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>RETURNS </FONT></FONT></B></P>
+
+<UL>
+<P><BR>
+<FONT FACE="Times New Roman"><FONT SIZE=+1>On success, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>exp</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>expf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">return the calculated value. If the
+result underflows, the returned value is </FONT><FONT FACE="Courier">0</FONT><FONT FACE="Times New Roman">.
+If the result overflows, the returned value is </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>HUGE_VAL</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+In either case, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>errno</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is set to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>ERANGE</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+</FONT></FONT></P>
+</UL>
+
+<P><B><FONT FACE="Times New Roman"><FONT SIZE=+1>COMPLIANCE </FONT></FONT></B></P>
+
+<UL>
+<P><BR>
+<FONT FACE="Courier New"><FONT SIZE=+0>exp</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is ANSI C. </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>expf</FONT></FONT><FONT SIZE=+1><FONT FACE="Courier">
+</FONT><FONT FACE="Times New Roman">is an extension. </FONT></FONT></P>
+</UL>
+
+</BODY>
+</HTML>

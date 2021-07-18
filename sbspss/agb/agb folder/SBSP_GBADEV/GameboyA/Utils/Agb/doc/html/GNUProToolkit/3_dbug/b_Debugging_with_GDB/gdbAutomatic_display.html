@@ -1,0 +1,134 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Automatic display</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbExamining_memory.html">Previous</A>|<A HREF="gdbPrint_settings.html">Next</A>
+<BR><A NAME="off_1476682"></A><A NAME="dc480d34"></A><B><FONT FACE="Futura Md BT"><FONT COLOR="#000000"><FONT SIZE=+3>Automatic
+display</FONT></FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>If you
+find that you want to print the value of an expression frequently (to see
+how it changes), you might want to add it to the <I>automatic display</I>
+<I>list</I> so that GDB prints its value each time your program stops.
+Each expression added to the list is given a number to identify it; to
+remove an expression from the list, you specify that number. The automatic
+display looks like the following example declaration.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>2: foo = 38</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>3: bar[5] = (struct hack *)
+0x3804</FONT></FONT></UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>This display shows item numbers,
+expressions and their current values. As with displays you request manually,
+using </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+you can specify the output format you prefer; in fact, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>display</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+decides whether to use </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+depending on how elaborate your format specification is—it uses </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+if you specify a unit size, or one of the two formats (‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>i</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+and ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>s</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’)
+that are only supported by </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>;
+otherwise it uses </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>print</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;
+<UL><FONT FACE="Courier New"><FONT SIZE=+0>display</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>exp</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Add the expression, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>exp</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+to the list of expressions to display each time your program stops. See
+<FONT COLOR="#008000"><A HREF="gdbExpressions.html">Expressions</A></FONT>.</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>display</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not repeat if you press </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Return</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+again after using it.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>display/<I>fmt exp</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>For </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>fmt</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+specifying only a display format and not a size or count, add the expression
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>exp</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to the auto-display list but arrange to display it each time in the specified
+format, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>fmt</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+See <FONT COLOR="#008000"><A HREF="gdbOutput_formats.html">Output formats</A></FONT>.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>display/<I>fmt addr</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>For </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>fmt
+</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>i</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+or ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>s</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+or including a unit-size or a number of units, add the expression, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>addr</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+as a memory address to be examined each time your program stops. Examining
+means in effect doing ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>x/<I>fmt
+addr</I></FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’. See
+<FONT COLOR="#008000"><A HREF="gdbExamining_memory.html">Examining memory</A></FONT>.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>For example, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>display/i
+$pc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’ can be helpful,
+to see the machine instruction about to be executed each time execution
+stops (‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>$pc</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’
+isa common name for the program counter; see <FONT COLOR="#008000"><A HREF="gdbRegisters.html">Registers</A></FONT>).</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>undisplay</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>dnums</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>...</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>delete display</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>dnums</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>...</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Remove item numbers dnums
+from the list of expressions to </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>display</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>undisplay</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not repeat if you use </FONT></FONT><B><FONT FACE="Arial"><FONT SIZE=+0>Return</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+after using it. (Otherwise you would just get the error, ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>No
+display number...</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’.)</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>disable display</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>dnums</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+...</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Disable the display of item
+numbers, </FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>dnums</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+A disabled display item is not printed automatically, but is not forgotten.
+It may be enabled again later.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>enable display</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>dnums</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>...</FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Enable display of item numbers,
+</FONT></FONT><I><FONT FACE="Courier New"><FONT SIZE=+0>dnums</FONT></FONT></I><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+It becomes effective once again in auto display of its expression, until
+you specify otherwise.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>display</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Display the current values
+of the expressions on the list, just as is done when your program stops.</FONT></FONT></UL>
+
+
+<P><FONT FACE="Courier New"><FONT SIZE=+0>info display</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1></FONT></FONT>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1>Print the list of expressions
+previously set up to display automatically, each one with its item number,
+but without showing the values. This includes disabled expressions, which
+are marked as such. It also includes expressions which would not be displayed
+right now because they refer to automatic variables not currently available.</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>If a display expression
+refers to local variables, then it does not make sense outside the lexical
+context for which it was set up. Such an expression is disabled when execution
+enters a context where one of its variables is not defined. For example,
+if you give the command, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>display
+last_char</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>, while
+inside a function with an argument, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>last_char</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+GDB displays this argument while your program continues to stop inside
+that function. When it stops elsewhere—where there is no variable, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>last_
+char</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>, the display
+is disabled automatically. The next time your program stops where </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>last_char</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is meaningful, you can enable the display expression once again.</FONT></FONT></UL>
+</UL>
+
+<HR SIZE=3 WIDTH="100%">
+<CENTER><A HREF="#Top">Top</A>|<A HREF="gdb.html">Contents</A>|<A HREF="gdbindex.html">Index</A>|<A HREF="gdbExamining_memory.html">Previous</A>|<A HREF="gdbPrint_settings.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

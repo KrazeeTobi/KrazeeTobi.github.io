@@ -1,0 +1,131 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>A Simple Makefile</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Top"></A><A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeWhat_a_Rule_Looks_Like.html">Previous</A>|<A HREF="makeHow_make_Processes_a_Makefile.html">Next</A>
+<BR><A NAME="off_133094"></A><A NAME="e106425d"></A><B><FONT FACE="Futura Md BT"><FONT SIZE=+3>A
+simple makefile</FONT></FONT></B>
+<BR>
+<HR SIZE=3 WIDTH="100%"><FONT FACE="Times New Roman"><FONT SIZE=+1>What
+follows is a straightforward makefile that describes the way an executable
+file called </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>edit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+depends on eight object files which, in turn, depend on eight C source
+and three header files. In the following example, all the C files include
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>defs.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+but only those defining editing commands include </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>command.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and only low level files that change the editor buffer include </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>buffer.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+<BR>&nbsp;
+<UL>
+<UL><B><FONT FACE="Courier New"><FONT SIZE=+0>edit : main.o kbd.o command.o
+display.o \</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>insert.o search.o files.o utils.o</B></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>cc -o edit main.o kbd.o command.o display.o \</B></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>insert.o search.o files.o utils.o</B></FONT></FONT>
+
+<P><B><FONT FACE="Courier New"><FONT SIZE=+0>main.o : main.c defs.h</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>cc -c main.c</B></FONT></FONT>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>kbd.o : kbd.c defs.h command.h</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>cc -c kbd.c</B></FONT></FONT>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>command.o : command.c defs.h
+command.h</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>cc -c command.c</B></FONT></FONT>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>display.o : display.c defs.h
+buffer.h</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>cc -c display.c</B></FONT></FONT>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>insert.o : insert.c defs.h
+buffer.h</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>cc -c insert.c</B></FONT></FONT>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>search.o : search.c defs.h
+buffer.h</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>cc -c search.c</B></FONT></FONT>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>files.o : files.c defs.h
+buffer.h command.h</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>cc -c files.c</B></FONT></FONT>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>utils.o : utils.c defs.h</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>cc -c utils.c</B></FONT></FONT>
+<BR><B><FONT FACE="Courier New"><FONT SIZE=+0>clean :</FONT></FONT></B>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>rm edit main.o kbd.o command.o display.o \</B></FONT></FONT>
+<BR><FONT FACE="Courier New"><FONT SIZE=+0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>insert.o search.o files.o utils.o</B></FONT></FONT></UL>
+</UL>
+&nbsp;
+<UL>
+<UL><FONT FACE="Times New Roman"><FONT SIZE=+1><I>Note</I>:</FONT></FONT>
+<BR><FONT FACE="Times New Roman"><FONT SIZE=+1>We split each long line
+into two lines using backslash-newline (</FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>\</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>);
+this is like using one long line, but is easier to read.</FONT></FONT></UL>
+</UL>
+
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To use the previous sample
+makefile to create the executable file called ‘</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>edit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>’,
+type: </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>To use this makefile to delete
+the executable file and all the object files from the directory, type:
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>make clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>In the sample makefile, the
+targets include the executable file, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>edit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and the object files, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>main.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>kbd.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+The dependencies are files such as </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>main.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+and </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>defs.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.
+In fact, each </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+file is both a target and a dependency. Commands include </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cc
+-c main.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1> and
+</FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>cc -c kbd.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>When a target is a file,
+it needs to be recompiled or relinked if any of its dependencies change.
+In addition, any dependencies that are themselves automatically generated
+should first be updated. In the previous example, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>edit</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+depends on each of the eight object files; the object file, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>main.o</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+depends on the source file, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>main.c</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>,
+and on the header file, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>defs.h</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>A shell command follows each
+line that contains a target and dependencies. These shell commands say
+how to update the target file. A tab character must come at the beginning
+of every command line to distinguish commands lines from other lines in
+the makefile. (Bear in mind that </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does not know anything about how the commands work. It is up to you to
+supply commands that will update the target file properly. All </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+does is execute the commands in the rule you have specified when the target
+file needs to be updated.)</FONT></FONT>
+
+<P><FONT FACE="Times New Roman"><FONT SIZE=+1>The target </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is not a file, but merely the name of an action. Since you normally do
+not want to carry out the actions in this rule, </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>clean</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+is not a dependency of any other rule. Consequently, </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+never does anything with it unless you tell it specifically. <B><I>This
+rule not only is not a dependency, it also does not have any dependencies,
+so the only purpose of the rule is to run the specified commands</I></B>.
+Targets that do not refer to files but are just actions are called <I>phony
+targets</I>. See <FONT COLOR="#008000"><A HREF="makePhony_Targets.html">Phony
+targets</A></FONT> for information about this kind of target. See <FONT COLOR="#008000"><A HREF="makeErrors_in_Commands.html">Errors
+in commands</A></FONT> to see how to cause </FONT></FONT><B><FONT FACE="Courier New"><FONT SIZE=+0>make</FONT></FONT></B><FONT FACE="Times New Roman"><FONT SIZE=+1>
+to ignore errors from </FONT></FONT><FONT FACE="Courier New"><FONT SIZE=+0>rm</FONT></FONT><FONT FACE="Times New Roman"><FONT SIZE=+1>
+or any other command.</FONT></FONT>
+<CENTER>
+<HR SIZE=3 WIDTH="100%"></CENTER>
+
+<CENTER><A HREF="#Top">Top</A>|<A HREF="make.html">Contents</A>|<A HREF="makeindex.html">Index</A>|<A HREF="makeWhat_a_Rule_Looks_Like.html">Previous</A>|<A HREF="makeHow_make_Processes_a_Makefile.html">Next</A></CENTER>
+
+</BODY>
+</HTML>

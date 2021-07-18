@@ -1,0 +1,94 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Frederick Geers">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Thumb_options</title>
+</head>
+<body>
+<a NAME="Top"></a><a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccARM_Options.html#Top">Previous</a>|<a href="gccClipper_Options.html">Next</a>
+<br><b><font face="Futura Md BT"><font color="#000000"><font size=+3>ARM
+THUMB options</font></font></font></b><font face="Futura Md BT"><font color="#000000"><font size=+3>&nbsp;&nbsp;</font></font></font>
+<hr SIZE=6 WIDTH="100%">
+<br><font size=+1>The following‘<tt>-m</tt>’ options are available on THUMB
+architectures.</font>
+<dl>
+<dl>
+<dt>
+<tt><font size=+1>-mthumb-interwork</font></tt></dt>
+
+<ul><font size=+1>Generate code which supports calling between the THUMB
+and ARM instruction sets. Without this option, the two instruction sets
+cannot be reliably used inside one program. The default is ‘<tt>-mno-thumb-interwork</tt>’,
+since slightly smaller code is generated with this option.</font></ul>
+
+<dt>
+<tt><font size=+1>-mtpcs-frame</font></tt></dt>
+
+<ul><font size=+1>Generate a stack frame that is compliant with the THUMB
+Procedure Call Standard (TPCS; hence, <tt>tpcs</tt>) for all non-<i>leaf</i>
+functions. (A leaf function is one that does not call any other functions).
+The default is ‘<tt>-mno-apcs-frame</tt>’.</font></ul>
+
+<dt>
+<tt><font size=+1>-mtpcs-leaf-frame</font></tt></dt>
+
+<ul><font size=+1>Generate a stack frame that is compliant with the THUMB
+Procedure Call Standard (TPCS; hence, <tt>tpcs</tt>) for all <i>leaf</i>
+functions. (A leaf function is one that does not call any other functions).
+The default is ‘<tt>-mno-apcs-leaf-frame</tt>’.</font></ul>
+
+<dt>
+<tt><font size=+1>-mlittle-endian</font></tt></dt>
+
+<ul><font size=+1>Generate code for a processor running in little-endian
+mode. This is the default for all standard configurations.</font></ul>
+
+<dt>
+<tt><font size=+1>-mbig-endian</font></tt></dt>
+
+<ul><font size=+1>Generate code for a processor running in big-endian mode.</font></ul>
+
+<dt>
+<tt><font size=+1>-mstructure-size-boundary=&lt;<i>n</i>></font></tt></dt>
+
+<ul><font size=+1>The size of all structures and unions will be rounded
+up to a multiple of the number of bits (<i><tt>n</tt></i>) set by this
+option. Permissable values are 8 and 32. The default value varies for different
+toolchains. For the COFF targeted toolchain, the default value is 8. Specifying
+the larger number can produced faster, more effcient code, but can also
+increase the size of the program. The two values are potentially incompatible.
+Code compiled with one value cannot necessarily expect to work with code
+or libraries compiled with the other value, if they exchange information
+using structures or unions. Programmers are encouraged to use the 32 value
+as future versions of the toolchain may default to this value.</font></ul>
+
+<dt>
+<tt><font size=+1>-mnop-fun-dllimport</font></tt></dt>
+
+<ul><font size=+1>Disable the support for the dllimport attribute.</font></ul>
+
+<dt>
+<tt><font size=+1>-mcallee-super-interworking</font></tt></dt>
+
+<ul><font size=+1>Gives all externally visible functions in the file being
+compiled an ARM instruction set header which switches to Thumb mode before
+executing the rest of the function. This allows these functions to be called
+from non-interworking code.</font></ul>
+
+<dt>
+<tt><font size=+1>-mcaller-super-interworking</font></tt></dt>
+
+<ul><font size=+1>Allows calls via function pointers (including virtual
+functions) to execute correctly regardless of whether the target code has
+been compiled for interworking or not. There is a small overhead in the
+cost of executing a function pointer if this option is enabled.</font></ul>
+</dl>
+
+<hr SIZE=3 WIDTH="100%">
+<center><a href="#Top">Top</a>|<a href="gcc.html">Contents</a>|<a href="gccindex.html">Index</a>|<a href="gccARM_Options.html#Top">Previous</a>|<a href="gccClipper_Options.html">Next</a></center>
+</dl>
+
+</body>
+</html>
