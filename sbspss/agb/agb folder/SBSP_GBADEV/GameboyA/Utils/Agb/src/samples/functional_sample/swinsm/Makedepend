@@ -1,9 +1,0 @@
-window.o : window.c C:/agb/include/agb.h C:/agb/include/AgbTypes.h \
- C:/agb/include/AgbDefine.h C:/agb/include/AgbMemoryMap.h \
- C:/agb/include/AgbMacro.h C:/agb/include/AgbSystemCall.h \
- C:/agb/include/AgbSound.h C:/agb/include/IsAgbPrint.h ../share.h \
- sw_dat.h
-swexpl.o : swexpl.c C:/agb/include/agb.h C:/agb/include/AgbTypes.h \
- C:/agb/include/AgbDefine.h C:/agb/include/AgbMemoryMap.h \
- C:/agb/include/AgbMacro.h C:/agb/include/AgbSystemCall.h \
- C:/agb/include/AgbSound.h C:/agb/include/IsAgbPrint.h ../share.h

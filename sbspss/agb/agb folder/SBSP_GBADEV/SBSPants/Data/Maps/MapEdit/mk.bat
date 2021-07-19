@@ -1,1 +1,0 @@
-@mklevel -agb -o:C:\Temp\ -c:CHAPTER%1 -l:LEVEL%2 C:\Temp\Levels\Chapter%1\Level%2\Level*.MEX

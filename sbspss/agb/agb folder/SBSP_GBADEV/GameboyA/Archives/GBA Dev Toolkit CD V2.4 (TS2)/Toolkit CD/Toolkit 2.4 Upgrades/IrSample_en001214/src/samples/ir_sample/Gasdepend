@@ -1,3 +1,0 @@
-crt0.o:	crt0.s rom_header.s  \
-	$(AGBINC)/AgbDefine.s $(AGBINC)/AgbSyscallDefine.s \
-	$(AGBINC)/AgbMacro.s  $(AGBINC)/AgbMemoryMap.s

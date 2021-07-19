@@ -1,3 +1,0 @@
-crt0_multi_boot.o:	crt0_multi_boot.s rom_header.s \
- ..\..\..\include\AgbDefine.s ..\..\..\include\AgbSyscallDefine.s \
- ..\..\..\include\AgbMacro.s  ..\..\..\include\AgbMemoryMap.s
