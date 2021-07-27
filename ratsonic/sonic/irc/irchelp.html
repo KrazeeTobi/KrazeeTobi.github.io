@@ -1,0 +1,85 @@
+<html>
+
+<!-- Mirrored from kilorat.com/sonic/irc/irchelp.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 31 Aug 2020 23:19:03 GMT -->
+<body link="#FF0080">
+<body vlink=#00FF00">
+<body background="a006.jpg">
+<font color="#FFFF00">
+
+<title>mIRC Client Help and Information</title>
+<head><h2>mIRC client Help and Information</h2></head>
+
+<P>One you have mIRC installed and running, begin reading the instructions on this page. </P>
+
+
+<P>Now that you've gotten mIRC running, you need to set it up. There's some information that you need to supply that many IRC servers require in order to them. </P>
+
+<P><B>TO GET STARTED:</B>  On the mIRC toolbar, the third button from the left is the one labeled "Setup information." Click this and a small window should come up that lists some IRC server names in the white area, as well as buttons on the right to add, remove, and edit the specifications of a connection. mIRC comes with many IRC servers already input in the list. You're going to want to connect to a server that is listed as "EFNET" Don't try to connect just yet, because none of the other information that you need has been specified.  
+
+
+
+<P><B>SPECIFY A NICKNAME, E-MAIL, REAL NAME, IDENTD:</B> Enter a nickname and a second choice in the Setup Information window. Your nickname is how you will be recognized on IRC, because no one will know who you really are. You can change your nick whenever you want, as long as no one else is currently using the new name that you want. Enter an alternate nickname, in case someone is using your first choice. You also need to enter an e-mail address, as well as a real name. Obviously, these don't have to be accurate.  Your real name can be anything at all. Click on the tab at the top of the setup window labeled identd. Make sure that 'Enable identd server' is checked, and enter anything you want in the first line. This is what your username will be on the network. Identd is required by almost all EFNet servers nowadays, so make sure you put something in there. Leave the other options on that screen as they are. </P>
+
+
+<P><B>TO CONNECT TO AN IRC SERVER:</B> Once you've gotten all of that information entered, click on the tab labelled 'IRC Servers.' Pick an EFNet server to connect to by clicking on it once, then press the "Connect!" button. mIRC will now try to establish a connection to the server, which will log you onto the IRC network. If you were successful, a page or two of information about the server that you're on will scroll by in the window. This is called the Message of the Day. It basically tells you the server's policies, and how you should behave while chatting. Once this scrolls by, you will see the line, "End of MOTD command," and a small window will pop up asking for the name of a channel to join.</P>
+
+<p><b>IF YOU GET AN ERROR MESSAGE AND CAN'T CONNECT:</b> It's possible that you won't get onto the server  on your first try because you'll get some kind of error message. If you didn't get any kind of error message, skip down two paragraphs to "ONCE YOU CONNECT." However, it's possible that you'll get an error message which says "No more connections." This simply means that the server is full right now and you can't log on. If you get this message, try re-connecting immediately. The Connect button is also located on the toolbar, the first one on the left. Just click on it. If you get this message three or more times in a row, try a different server. If you see a message in the window that says, "Nickname already in use," and it appears twice in a row, you will not be able to connect to the IRC server because someone is using both your first and second choices for nicknames already. mIRC will automatically prompt you to enter a new nickname by entering The /NICK command in the command line at the bottom of the window. The /NICK command is used to change nicknames on IRC. Enter a new nickname you'd like to use after this command and your nick will be changed. (There is more information on IRC commands further down this page.) </P> 
+
+<P><B>HOW TO CONNECT TO DIFFERENT SERVERS:</B> If you can't connect to any of the EFNet servers that are included with mIRC, you need to enter the names of some new servers and try those. You can get a list of some of the EFNet servers by clicking <A HREF="servlist.txt">here.</a> In order to enter server names, you need to click the Add button in the Setup information window. Then enter, in the description field, the network name (EFNet in this case.) followed by the server name. It's easy to keep servers for different networks organized this way, without being confused by an endless list of server names. Example: EFNET: irc.cdc.net   In the server name field, enter the name of the server. Example: irc.cdc.net  Enter 6667 in the 'Port(s)' field. Try connecting to EFNet via your newly entered server, and hope for the best. If you still don't have any luck, then try entering another server. Always use servers that are geographically closest to you. Most foreign servers will refuse any connections that are attempted from distant places.</P>
+
+<P><B>ONCE YOU CONNECT: </b> By this time, you should be connected to EFNet, and mIRC is waiting for you to tell it to do something. If you're having problems, make sure everything is entered correctly and try again. If you still can't connect, send me <A HREF="mailinfo.html">e-mail</a> and I'll help you. Please tell me specifically what the problem is that you're having, so I can help you faster. </P>
+
+
+<B><P>JOINING CHANNELS: </B> When you log onto a network, nothing will happen because you won't be on any channels. You need to join channels in order to talk to people. When mIRC first connects to a server, a small window will pop up, asking for a name of the channel that you want to join. Enter #sonic in this field and you'll join the Sonic the Hedgehog Chat channel.</P>
+
+<P><B>WHAT YOU CAN DO ONCE YOU'RE ON A CHANNEL:</B> To talk to everyone in a channel at once, type whatever you want to say in the input line at the bottom of the window and press enter. More IRC commands are listed a few paragraphs down on this page. </P>
+
+
+
+<P><B>WHO IS IN CHARGE OF CHANNELS?:</b> Channel operators. My nick is preceded by an @ symbol, which denotes op status. So, my name would appear as @Milesprow. There's more info. about the #sonic ops in Section 2 of these pages. </P>
+
+
+<p><B> SOME FREQUENTLY USED IRC COMMANDS:</B> Here are some important IRC commands. These are the ones that you will use most often.</P>
+<text size=4>
+
+<P><b>/nick [Nickname]</b> : Changes your nickname to whatever you specify. <b>Ex: /nick Sonicfan</b></P>
+
+<P><b>/list [search string]</b> : Lists all channels on a network that match some kind of string that you specify. (A search string is optional) If you don't specify anything, it will list all channels. If you do this, it will take a minute or two. On EFNet, there are many channels.
+
+<P><b>/join [channel name]</b> : Causes you to join the specified channel. <b>Ex: /join #sonic</b></P>
+
+<P><b>/topic [channel name] [Topic] </b>: Changes the topic in the specified channel to whatever you specify. Sometimes only ops can use this command. <b>Ex: /topic #sonic Sonic Chat!</b></P>
+
+<P><b>/names [channel name]</B> Will list the people on a channel, unless the channel is set as secret. </P>
+
+<P><b>/mode </b>(This command has MANY uses. Check the help file. Modes can apply to users, channels, etc.)</P>
+
+<P>Some examples: </P>
+
+<P><b>/mode #sonic +t </b>: Restricts topic changes to channel operators only.</P>
+
+<P><b>/mode [Your nick] +i </b>: Sets you invisible. People will not see you when doing a <b>/names [channel name] </b> If you're set +i, people can't tell if you're on a channel or not, unless they know your nickname.</P>
+
+<P><b> /msg [nickname] [message] </b>: Sends a message to a person privately. Ex: /msg _MiGHTY_ Will you be here tomorrow?</P>
+
+<P><b> /quit [optional quit message] </b>: Doesn't close mIRC, but disconnects you from the server. <b>Ex: /quit Be back tomorrow! </b>Everyone on the channels that you are on will see your message.</P>
+
+<P>There are many more commands, but I won't introduce you to a mess of information you don't need right now. Check the help file for a very detailed listing of commands. Another aspect of IRC that I suggest you learn about is DCC. It lets you have private conversations with people, or to send and receive files.  </P>
+
+<P><B>HOW TO QUIT IRC:</B> If you decide that you've had enough fun for one night and want to quit IRC, just click on the second button from the left on the toolbar and you'll be disconnected from the server. Or, you can just type <b>/quit</b> and include a quit message if you want. [See above.]</P>
+
+<P>That's all you need to know to use IRC. I hope you have many fun hours chatting with people all over the world.</P>
+
+
+<p><font size=4>Now that you know enough to use IRC, please proceed to Section 2 on the main page. You can go there now by clicking <A HREF="index-2.html#se2">here.</a></p></font>
+
+</body>
+
+<!-- Mirrored from kilorat.com/sonic/irc/irchelp.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 31 Aug 2020 23:19:03 GMT -->
+</html>
+
+
+
+
+
+

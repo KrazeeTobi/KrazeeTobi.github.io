@@ -1,0 +1,123 @@
+Return-Path: owner-sonic@sard.mv.net
+Received: from sard.mv.net (majordomo@sard.mv.net [192.80.84.2]) by use.usit.net (8.6.10/8.6.9) with ESMTP id MAA03586 for <acme@use.usit.net>; Fri, 21 Apr 1995 12:11:09 -0400
+Received: by sard.mv.net (8.6.9/mv(b)/mem-941101)
+	id MAA16426 for sonic-ll; Fri, 21 Apr 1995 12:13:17 -0400
+Received: from sonic.segaoa.com by sard.mv.net (8.6.9/mv(b)/mem-941101)
+	id MAA16421 for <sonic@sard.mv.net>; Fri, 21 Apr 1995 12:12:58 -0400
+Received: from blackhole.segaoa.com by sonic.segaoa.com (5.0/SMI-SVR4)
+	id AA29916; Fri, 21 Apr 1995 09:16:40 +0800
+Received: by blackhole.segaoa.com with Microsoft Mail
+	id <2F97DA21@blackhole.segaoa.com>; Fri, 21 Apr 95 09:15:29 PDT
+From: "Wallis, Mike" <Wallis@segaoa.com>
+To: Sonic mailing list <sonic@sard.mv.net>
+Subject: Sonic character info
+Date: Fri, 21 Apr 95 09:14:00 PDT
+Message-Id: <2F97DA21@blackhole.segaoa.com>
+Encoding: 97 TEXT
+X-Mailer: Microsoft Mail V3.0
+Sender: owner-sonic@sard.mv.net
+Precedence: bulk
+Reply-To: sonic@sard.mv.net
+Content-Type: text
+Content-Length: 4571
+Status: RO
+X-Status: 
+
+
+Hi everyone... I had posted this info around 3 weeks ago on 
+alt.fan.sonic-hedgehog, and was asked if I could send this to the List, so 
+here it is.  :)
+
+ -=-=-=-=-
+
+Okay folks.  Now for a little lesson on Sonic.  :)
+
+But first, a bit of legal stuff.  This information comes from either one of 
+two sources:
+1) "Sonic the Hedgehog Official Stylebook and Character Manual" (c) 1994 
+SEGA
+or
+2) "Sonic the Hedgehog Bible, August 1991" (c) 1991 SEGA
+Both used without permission (oops!).  Footnotes indicate which book the
+information came from.  Any spelling errors are my own, unless so denoted
+by "sic".  :)
+
+Now on with the session. Here's some information about Sonic's biography,
+abilities, attitude, etc.
+
+BIOGRAPHY (book 1)
+        Sonic The Hedgehog --- the fastest, coolest hedgehog anywhere.  It's
+more than just speed - it's his wit, that won't quit.  He's all heart,
+and super smart!  Sonic's always racing from one place to the next ---
+barely stopping to catch his breath.
+        As Sonic developed his incredible speed, his attitude became
+legendary.  This Dude with a 'Tude is irreverent, confident, impatient
+and constantly bursting at the quills with energy.  Above all, he's the
+bravest big-hearted hedgehog anywhere.
+        Sonic's way cool, power red sneakers blast him around at supersonic
+speeds without burning through their soles.  Our hero's favorite color
+is --- you guessed it:  blue!  He loves gumballs and chili dogs, too, but
+he hates water 'cause he can't swim.
+        Sonic is always there for his friends --- they know they can count
+on him, especially in times of trouble.  It all comes down to loyalty,
+and important quality that this hedgehog is full of --- among other
+things.
+        All Sonic really wants is for life to return to the way it was ---
+before Dr. Robotnik took over, polluted the planet and roboticized
+everyone.  To free his friends from the Dr.'s grasp, Sonic must trash
+Robotnik and his vile eggomatic machine.
+        Maybe Sonic will go into a Supersonic Spin Attack --- whatever
+happens, watch out.  'Cause the super blue hedgehog is... UP... OVER ---
+AND GONE!
+
+MENTAL ABILITIES (book 2)
+        Sonic thinks he's perfect, but he's not!  Forest-smart, Sonic is of
+average intelligence.  He has to struggle to figure out the solution to a
+problem or puzzle.  usually, he relies on his great charm and physical
+capabilities to get out of tight spots.  Sonic never analyzes a
+situation, he just plunges in.  He's a Hedgehog of Action.
+
+ATTITUDE, PERSONALITY (book 2)
+        Carefree and radically cool --- that's what Sonic is all about.
+Nothing deep.  That's not to say Sonic is an airhead!  When he's not
+teasing you or playing a joke on you, he's probably the best friend you
+could ever hope for.  He cares about his forest pals and delights in
+coming to their rescue.
+        Sonic does not swear, take drugs, harm the environment, or eat
+anything that one might consider healthy.  he does make mistakes ---
+quite a few of them --- but not without regret.
+        Then there's Sonic's Attitude.  When he wants something, he goes for
+it --- 150%.  Sonic does not respond well to authority --- he's juat(sic)
+too impulsive.  He's cocky, independent, self-assured, but never
+obnoxious or cruel.
+
+LIKES, DISLIKES (book 2)
+        Sonic loves any thing or any way to move through life at top speed.
+His favorite diet?  Fast food and candy bars --- what else!  Sonic loves
+burgers, tacos, nachos, fries, anything chocolate, and cola.  Sonic
+doesn't eat or drink diet anything --- he needs the calories!  (A note
+from me:  it appears Sonic's chili dog fetish developed AFTER the bible
+had been printed.)
+        One more clue about Sonic's personality --- he's more than a bit
+vain about his blue spikes.  His spikes are always perfect.  In Sonic's
+world, slobs finish last.
+        But when he does slow down, there's nothing Sonic likes more than
+exploring new places, playing practical jokes, or playing video games.
+        Patience is not one of Sonic's strong points.  When he feels the
+pace is too slow, he'll cop his trademark "What's the matter with you,
+dude!" attitude and tap his foot with impatience.
+
+OBJECTIVES IN LIFE (book 2)
+        Sonic's objectives in life are to have fun and enjoy the ride!  Life
+is a blast, if you don't stop to think about it --- that sums up Sonic's
+philosophy.  As long as he had his supersonic speed, his sneakers, and
+his good buddies, Sonic is one cool and happy dude.
+
+
+ -=-=-=-=-
+
+Hope you enjoyed it!  I'll post info on Robotnik and Tails in a few days.
+
+
+ -Mike
+
