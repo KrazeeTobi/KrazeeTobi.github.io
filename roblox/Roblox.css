@@ -7,10 +7,40 @@
 {
 	font-size: 18px;
 }
+a.Title:link, a.Title:visited, a.Title:active
+{
+	text-decoration: none;
+}      
+a.Title:hover
+{
+	text-decoration: underline;
+}
 .Header
 {
 	font-size: 14px;
 }
+
+.Banner
+{
+	PADDING: 8px;
+}
+.BannerText
+{
+	font-weight: bold;
+	color: white;
+}
+a.BannerText:link, a.BannerText:visited, a.BannerText:active
+{
+	text-decoration: none;
+	COLOR: white; 
+}      
+a.BannerText:hover
+{
+	text-decoration: underline;
+	COLOR: white; 
+}
+
+
 .OKCancelButton
 {
 	width:80px
@@ -27,20 +57,17 @@
 
 .MenuItem
 {
+	color:White;
 	font-size: 18px;
 	line-height: 2em;
 }
-a.MenuItem:link, a.MenuItem:visited
-{
-	text-decoration: none;
-}      
-a.MenuItem:active
+a.MenuItem:link, a.MenuItem:visited, a.MenuItem:active
 {
 	text-decoration: none;
 }      
 a.MenuItem:hover
 {
-	color:Maroon
+	text-decoration: underline;
 }
 
 
@@ -51,47 +78,51 @@ a.MenuItem:hover
 }
 .Toolbox
 {
-	background-color:"#ece9d8";
+	background-color:"buttonface";
+	padding:2px;
 }
 .ToolboxItem
 {
-	border-color:"#ece9d8";
+	border-color:"Window";
 	border-style:solid;
 	border-width:2px;	
+	width:54px;
+	height:54px;
 }
-.Grid 
+.Grid
 {
 	background-color:"White";
 	border-color:"#CCCCCC";
 	border-width:1px;
-	border-style:none;
+	border-style:solid;
 }
 .GridHeader
 {
 	color: White;  
-	background-color:SteelBlue
+	background-color:LightSteelBlue
+}
+.GridItem
+{
+	color: #000066;
 }
 .GridFooter
 {
 	color:"#000066";
 	 background-color:White
 }
-.GridItem
+.GridPager
 {
 	color:"#000066";
-	font-size:10px
+	 background-color:White;
+	 text-align:center;
 }
-a.GridLink:link, a.GridLink:visited
-{
-	text-decoration: none;
-}      
-a.GridLink:active
+a.GridLink:link, a.GridLink:visited, a.GridLink:active
 {
 	text-decoration: none;
 }      
 a.GridLink:hover
 {
-	color:Maroon
+	text-decoration: underline;
 }
 
 .GridSelectedItem
@@ -106,28 +137,30 @@ H1
 	font-size: larger;
 }
 
-/* Used by help page */
-p.MsoNormal, li.MsoNormal, div.MsoNormal 
+.LogInButton
 {
-margin:0in; margin-bottom:.0001pt; font-size:10.0pt; font-family:Verdana;
+	background-color:"White";
+	color:"#0000C0";
 }
-p.MsoToc1, li.MsoToc1, div.MsoToc1 
+.SignUpButton
 {
-	margin:0in; margin-bottom:.0001pt; font-size:10.0pt; font-family:Verdana;
+	background-color:"#FF8000";
+	color:"#0000C0";
 }
-p.MsoToc2, li.MsoToc2, div.MsoToc2
+
+
+Help.TABLE
 {
-	margin-top:0in; margin-right:0in; margin-bottom:0in; margin-left:10.0pt; margin-bottom:.0001pt; font-size:10.0pt; font-family:Verdana;
+	border-right: black thin solid;
+	border-top: black thin solid;
+	border-left: black thin solid;
+	border-bottom: black thin solid;
 }
-p.MsoCommentText, li.MsoCommentText, div.MsoCommentText 
+HELP.TR
 {
-	margin:0in; margin-bottom:.0001pt; font-size:10.0pt; font-family:Verdana;
+	border-top: gray thin solid;
+	border-bottom: gray thin solid;
 }
-p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap 
+HELP.TD
 {
-	margin:0in; margin-bottom:.0001pt; background:navy; font-size:10.0pt; font-family:Tahoma;
-}
-p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
-{
-	margin:0in; margin-bottom:.0001pt; font-size:10.0pt; font-family:Verdana; font-weight:bold;
 }
