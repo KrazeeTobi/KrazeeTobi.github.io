@@ -1,0 +1,150 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<title>ROBLOX User</title>
+		<LINK href="Roblox.css" type="text/css" rel="stylesheet">
+		<meta content="False" name="vs_snapToGrid">
+		<meta content="False" name="vs_showGrid">
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="C#" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+	</HEAD>
+	<body>
+		<form name="Form1" method="post" action="User.aspx?id=207" id="Form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="CGYO47SPQOfkcQLfvZMi0IKWkycPkYNxLaxSNL9RbOY9JUVJO82/SUda87UZwa/BEovlE74jrtOpjWRABPcwybUpLobie3EedYellfYkUnHDWu1FPmV6Rdq6z+aJSOMCmvzo/dW9ILXMhOGfhcWHjPh4XkJfhzGfsJklQmYp7gqQvoAG5Tc1sNAEiwybu30+1gf2mLo8MJ92XAU3Ea4y0eKv+8U9pY6bOBMcFvo7XX6yPaSA4uUcypx4BNPYhOpasMfFvLFe5hTglM0LTh/kLZPtiGPvugSojYFcBKxP58ZIecyA1bxfnXxapaqNZ7Q7HcsR5jCxZsbRDClBtIZ5/gY9A6PyxqH6f1QxgAT2LRYp6puY2lQWyAw2L5Q6WKInBO3aTlTZioxCQK7nQDJSvWE7lS2lbZyeli/m4uWTjss5BvZn5J5uomff51XWtDOdt7b7j2iap7yMl3m6r5HyO3cXeTivTIcplaavygAcCoSDRo8CcuOpSZ7Rm7U1+JX+FeIc321RjNVWN6NRF4Lagpa5mcxQYMAuzC4R5AWRqUm0HQaXEbpCM7SFEjYms7Xq+0eai08STecsnBz0/YlV8jxTx00LGivIF6ERUAbzOGY0OKSFCvHCS44GUbHvaGMdVb57hPQQEWOf9fRtTbsszB50eomQcfHwPT+98syJo8DtUHOA+mCIa6nKbITBWUDMXZHnvNjlNgY5drCRn3BmtPf90Ov6qfwNdUCE66VCcW4Kj/DS15VCDSOUaBTMEVlIWXTQoVAXqj7D0kcuShAhCNvI/wc3qPDfw6o5kAV/lk9w0luX0/E9xBQel1SJfMqeJbo4VdQxTD5udVbm3Nzqq2DALAofT2xHVP7qZ9AjLZEL4AynG/TcUY2tr8vvEM2qdhihHyoavcu+AmeLtfq+2oKzrNHG3VD93uMbhcPNlYa79aJ1pM47vfTY4K/v5g1uRvpTJiGvKy3scSbHqulUmrDZLxuZck8TrlPh8adDZ0CZ4dzE4eikhXsgky4CTHyvkjBRrL9WQ+V4+08c+AS3S3C3cNKfz/hXCt2BoGCHidx/NfgHxpkwwN48uQ20S1pAw+YmWkNosxGrpn820MSV2DxIskbVfQWQKug4brWQRn4LGpHTmINEU8GKhGUwOvBr/TgsPvYsGblcn3VK7j9OhjvO8wq7MgK2WM1lUF5H2OMtq2QbwwRPmf85TcaV74iTrkqAhHkYfy+gQsL2/HX4o5HAYh58cIsQsvoA9RASf3CyI38HTnrdNEajcjwb/7QD" />
+
+<script language="jscript" src="/Install/updater.js">
+
+</script>
+<script>
+	function checkRobloxInstall() {
+		window.location = "/Install/Browser.aspx";
+	}
+
+</script>
+<script src="/Game/rbx.js">
+
+</script>
+
+<div align="center">
+	<table cellSpacing="0" cellPadding="0" width="800">
+		<tr>
+			<td style="CLEAR: none; BORDER-RIGHT: black 1px solid; BORDER-LEFT: black 1px solid"
+				class="Header" align="center">
+				<div id="_ctl0_Panel2" class="Banner">
+	
+					<TABLE cellSpacing="0" cellPadding="0" width="100%">
+						<TR>
+							<TD vAlign="bottom" align="left" width="250">
+								<a id="_ctl0_HyperLink2" class="BannerText" href="Default.aspx">ROBLOX.com</a></TD>
+							<TD align="center" width="300">
+								<a id="_ctl0_Image2" TITLE="ROBLOX Logo" href="/Default.aspx" blankUrl="/Thumbs/Blank.ashx?x=311&amp;y=45" imageUrl="/images/logo_pure_alpha.png" style="display:inline-block;BEHAVIOR:url(/UI/Image.htc);cursor:hand;"></a></TD>
+							<TD align="right" width="250"><SPAN id="_ctl0_SpanSignUp" class="BannerText">
+									<a id="_ctl0_HyperlinkSignIn" class="BannerText" href="Login/New.aspx">Sign Up</a></SPAN></TD>
+						</TR>
+					</TABLE>
+				
+</div>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" style="BORDER-RIGHT: black 1px solid; PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 0px; BORDER-LEFT: black 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: black 1px solid; BACKGROUND-COLOR: lightsteelblue">
+				<span class="MenuItem">
+					<a id="_ctl0_HyperlinkHome" class="MenuItem" href="User.aspx">Home</a>&nbsp;|&nbsp;<a id="_ctl0_HyperLink10" class="MenuItem" href="Browse/Places.aspx">Browse</a>&nbsp;|&nbsp;<a id="_ctl0_HyperLink11" class="MenuItem" href="Forum/">Forum</a>&nbsp;|&nbsp;<a id="_ctl0_Hyperlink1" class="MenuItem" href="http://www.robloxwiki.com">Info</a>
+					
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td style="PADDING-TOP: 16px">
+				<div style="TEXT-ALIGN: center">
+					<p>
+						
+			<table width="100%" cellspacing="16">
+				<tr valign="top">
+					<td style="width: 40%">
+						
+<table width="100%" bgcolor="lightsteelblue" cellpadding="6" cellspacing="0" style="BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid">
+	<tr>
+		<td><span id="_ctl0_User1_LabelUserName" class="Title">Llandros</span></td>
+	</tr>
+	<tr>
+		<td>
+			<div style="LEFT: 0px; FLOAT: left; POSITION: relative; TOP: 0px">
+				<a id="_ctl0_User1_ContentImage1" TITLE="Figure3" onclick="javascript:__doPostBack('_ctl0$User1$ContentImage1','')" blankUrl="/Thumbs/Blank.ashx?x=180&amp;y=220" imageUrl="/Thumbs/Model.ashx?x=180&amp;y=220&amp;id=1666&amp;format=Png" style="display:inline-block;BEHAVIOR:url(/UI/Image.htc);cursor:hand;"></a></div>
+            
+            <span id="_ctl0_User1_Public1_LabelAboutMe"></span>
+
+		</td>
+	</tr>
+</table>
+<br>
+						
+					</td>
+					<td width="60%">
+						
+<table width="100%" bgcolor="lightsteelblue" cellpadding="6" cellspacing="0" style="BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid">
+	<tr>
+		<td>
+			<span id="_ctl0_Platform1_Label1" class="Title">Llandros's Place</span>
+			<span id="_ctl0_Platform1_VisitButton">&nbsp;&nbsp;&nbsp;<a id="_ctl0_Platform1_HyperLink1" href="/Login?ReturnUrl=http%3a%2f%2fwww.roblox.com%2fUser.aspx%3fid%3d207">Visit</a></span>
+			
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<P>
+				<a id="_ctl0_Platform1_ContentImage1" TITLE="Llandros's Place" href="/Login?ReturnUrl=http%3a%2f%2fwww.roblox.com%2fUser.aspx%3fid%3d207" style="display:inline-block;cursor:hand;"><img src="/Thumbs/Level.ashx?x=440&y=350&id=1665&format=Jpeg" border="0" /></a></P>
+			<div id="_ctl0_Platform1_PanelDescription">
+	
+				<span id="_ctl0_Platform1_LabelDescription"></span>
+			
+</div>
+		</td>
+	</tr>
+</table>
+<script>
+	if (!isIDE())
+		document.getElementById("_ctl0_Platform1_EditButton").style.display = 'none';
+</script>
+
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						
+					</td>
+				</tr>
+			</table>
+		</p>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="PADDING-LEFT: 8px; PADDING-TOP: 12px">
+<hr>
+<div class="Legal" style="TEXT-ALIGN: center">ROBLOX, "Online Building Toy", 
+	characters, logos, names and all related indicia are trademarks of
+	<a id="_ctl0_MasterFooter_HyperLink2" class="Legal" href="info/About.aspx">ROBLOX Corporation</a>, 
+	©
+	2006
+	. Patents pending.
+	<br>
+	<a id="_ctl0_MasterFooter_HyperLink3" class="Legal" href="info/Privacy.aspx">Privacy Policy</a>&nbsp;|
+	<A href="mailto:info@roblox.com" class="Legal">Contact Us</A>&nbsp;|
+	<a id="_ctl0_MasterFooter_HyperLink5" class="Legal" href="info/About.aspx">About Us</a><br>
+	Use of this site signifies your acceptance of the
+	<a id="_ctl0_MasterFooter_HyperLink1" class="Legal" href="info/TermsOfService.aspx">Terms and Conditions</a></div>
+
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+<script language="javascript" type="text/javascript">window.document.body.topMargin = 0;</script></form>
+	</body>
+</HTML>
