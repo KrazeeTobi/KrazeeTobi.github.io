@@ -1,0 +1,123 @@
+*
+{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.Title
+{
+	font-size: 18px;
+}
+.Header
+{
+	font-size: 14px;
+}
+.OKCancelButton
+{
+	width:80px
+}
+.SmallerFont
+{
+	font-size:10px
+}
+.RP
+{
+	font-size: 10px;
+	color: #cc3366;
+}
+.MenuItem
+{
+	font-size: 18px;
+	line-height: 2em;
+}
+.GridItem
+{
+	font-size:10px
+}
+.Legal
+{
+	font-size:9px
+}
+.Toolbox
+{
+	background-color:"#ece9d8";
+}
+.ToolboxItem
+{
+	border-color:"#ece9d8";
+	border-style:solid;
+	border-width:2px;	
+}
+.Grid 
+{
+	background-color:"White";
+	border-color:"#CCCCCC";
+	border-width:1px;
+	border-style:none;
+}
+.GridHeader
+{
+	color: White;  
+	background-color:SteelBlue
+}
+.GridFooter
+{
+	color:"#000066";
+	 background-color:White
+}
+.GridItem
+{
+	color:"#000066";
+}
+.GridSelectedItem
+{
+	color:"White";
+	background-color:"#669999"
+}
+
+H1
+{
+	font-weight: bold;
+	font-size: larger;
+}
+A:link	 /* unvisited link */
+{
+	text-decoration: none;
+}      
+A:visited    /* visited links */
+{
+	text-decoration: none;
+}      
+A:active    /* active links */
+{
+	text-decoration: none;
+}      
+A:hover
+{
+	color:Maroon
+}
+
+/* Used by help page */
+p.MsoNormal, li.MsoNormal, div.MsoNormal 
+{
+margin:0in; margin-bottom:.0001pt; font-size:10.0pt; font-family:Verdana;
+}
+p.MsoToc1, li.MsoToc1, div.MsoToc1 
+{
+	margin:0in; margin-bottom:.0001pt; font-size:10.0pt; font-family:Verdana;
+}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+{
+	margin-top:0in; margin-right:0in; margin-bottom:0in; margin-left:10.0pt; margin-bottom:.0001pt; font-size:10.0pt; font-family:Verdana;
+}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText 
+{
+	margin:0in; margin-bottom:.0001pt; font-size:10.0pt; font-family:Verdana;
+}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap 
+{
+	margin:0in; margin-bottom:.0001pt; background:navy; font-size:10.0pt; font-family:Tahoma;
+}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+{
+	margin:0in; margin-bottom:.0001pt; font-size:10.0pt; font-family:Verdana; font-weight:bold;
+}
