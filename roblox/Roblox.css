@@ -24,15 +24,27 @@
 	font-size: 10px;
 	color: #cc3366;
 }
+
 .MenuItem
 {
 	font-size: 18px;
 	line-height: 2em;
 }
-.GridItem
+a.MenuItem:link, a.MenuItem:visited
 {
-	font-size:10px
+	text-decoration: none;
+}      
+a.MenuItem:active
+{
+	text-decoration: none;
+}      
+a.MenuItem:hover
+{
+	color:Maroon
 }
+
+
+
 .Legal
 {
 	font-size:9px
@@ -67,7 +79,21 @@
 .GridItem
 {
 	color:"#000066";
+	font-size:10px
 }
+a.GridLink:link, a.GridLink:visited
+{
+	text-decoration: none;
+}      
+a.GridLink:active
+{
+	text-decoration: none;
+}      
+a.GridLink:hover
+{
+	color:Maroon
+}
+
 .GridSelectedItem
 {
 	color:"White";
@@ -78,22 +104,6 @@ H1
 {
 	font-weight: bold;
 	font-size: larger;
-}
-A:link	 /* unvisited link */
-{
-	text-decoration: none;
-}      
-A:visited    /* visited links */
-{
-	text-decoration: none;
-}      
-A:active    /* active links */
-{
-	text-decoration: none;
-}      
-A:hover
-{
-	color:Maroon
 }
 
 /* Used by help page */
