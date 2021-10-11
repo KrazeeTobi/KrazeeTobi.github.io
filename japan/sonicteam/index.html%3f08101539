@@ -140,17 +140,17 @@ interOM = setInterval('openMassage()',1)
   </TR>
   <TR> 
     <TD ROWSPAN=13> <IMG SRC="n_images/m_left.gif" WIDTH=17 HEIGHT=291></TD>
-    <TD COLSPAN=3> <A HREF="http://www.sonicteam.com/home.html"
+    <TD COLSPAN=3> <A HREF="home.html"
 			   ONMOUSEOVER="changeImages('m_home', 'n_images/m_home-over.gif', 'm_setumei', 'n_images/m_setumei-m_home_over.gif'); return true;"
 			   ONMOUSEOUT="changeImages('m_home', 'n_images/m_home.gif', 'm_setumei', 'n_images/m_setumei.gif'); return true;"> 
       <IMG NAME="m_home" SRC="n_images/m_home.gif" WIDTH=162 HEIGHT=23 BORDER=0 ALT="ホーム"></A></TD>
     <TD ROWSPAN=13> <IMG SRC="n_images/m_middle.gif" WIDTH=8 HEIGHT=291></TD>
-    <TD WIDTH=332 HEIGHT=76 COLSPAN=2 ROWSPAN=4 BGCOLOR=#000000><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="329" height="75" border="0" hspace="0" vspace="0" name="top_flash" align="middle">
+    <TD WIDTH=332 HEIGHT=76 COLSPAN=2 ROWSPAN=4 BGCOLOR=#000000><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="https://web.archive.org/20011101000000/http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="329" height="75" border="0" hspace="0" vspace="0" name="top_flash" align="middle">
         <PARAM name=movie value="images/top_f.swf">
         <PARAM name=quality value=low>
         <PARAM name="SCALE" value="noborder">
         <PARAM name="BGCOLOR" value="#000000">
-        <EMBED src="images/top_f.swf" quality=low pluginspage="http://www.macromedia.com/jp/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="329" height="75" border="0" hspace="0" vspace="0" scale="noborder" bgcolor="#000000" name="top_flash" align="middle">
+        <EMBED src="images/top_f.swf" quality=low pluginspage="https://web.archive.org/20011101000000/http://www.macromedia.com/jp/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="329" height="75" border="0" hspace="0" vspace="0" scale="noborder" bgcolor="#000000" name="top_flash" align="middle">
         </EMBED> 
       </OBJECT></TD>
     <TD ROWSPAN=4> <IMG SRC="n_images/m_right1.gif" WIDTH=21 HEIGHT=76></TD>
@@ -246,12 +246,12 @@ interOM = setInterval('openMassage()',1)
     <TD BGCOLOR=#003399 valign="top" align="center">
       <CENTER>
         <P>　</P>
-        <P><FONT size="2"><A href="http://www.sonicteam.com/sonicadv2/index.html"><IMG src="images/s_sonic2_banner.gif" width="150" height="45" border="0"></A><FONT color="#FFFFFF"><BR>
+        <P><FONT size="2"><A href="sonicadv2/index.html"><IMG src="images/s_sonic2_banner.gif" width="150" height="45" border="0"></A><FONT color="#FFFFFF"><BR>
           <B><FONT face="MS UI Gothic">ソニックアドベンチャー２</FONT></B><BR>
           6月23日全世界同時発売！<BR>
           </FONT></FONT> </P>
       </CENTER>
-      <P align="center"><FONT size="2"><A href="http://www.sonicteam.com/pso/home.html"><IMG src="images/s_pso_banner.gif" width="150" height="45" border="0"></A><BR>
+      <P align="center"><FONT size="2"><A href="pso/home.html"><IMG src="images/s_pso_banner.gif" width="150" height="45" border="0"></A><BR>
         </FONT><FONT color="#FFFFFF" size="2"><B><FONT face="MS UI Gothic" size="1">ファンタシースターオンライン 
         Ver.2</FONT></B><BR>
         6月7日発売！</FONT> <FONT size="2"><FONT color="#FFFFFF"> </FONT></FONT></P>
@@ -304,7 +304,7 @@ interOM = setInterval('openMassage()',1)
                   <TABLE width="310" border="0" cellspacing="4" cellpadding="0" align="center">
                     <TR> 
                       <TD> 
-                        <P><A href="http://www.wave-master.com/sa2music/"><FONT size="2"> 
+                        <P><A href="https://web.archive.org/20011101000000/http://www.wave-master.com/sa2music/"><FONT size="2"> 
                           『ソニックアドベンチャー２』の音楽CD、いよいよ発売！<br>
                           【8/22　『CUTS UNLEASHED』　ヴォーカルコレクション　ミニアルバム】<br>
                           【9/5　『multi-dimensional』　オリジナルサウンドトラック　2枚組】<br>
