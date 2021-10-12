@@ -1,0 +1,454 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Sonic HQ Music</title>
+<style>
+<!-- a:hover {  text-decoration: underline} -->
+<!-- A{text-decoration:none} -->
+</style>
+</head>
+
+<body text=000000 link=FFFFFF vlink=FF0000 background=/sonichq/images/backgrounds/bluecurve.gif>
+&nbsp
+
+<!-- HQ TITLE BAR -->
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=640>
+<tr>
+<td VALIGN=TOP COLSPAN=3 WIDTH=640><img SRC=/sonichq/images/HQ-bar.gif BORDER=0 height=30 width=640></td>
+</tr>
+</table>
+<!-- END HQ TITLE BAR -->
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=640>
+<tr>
+
+<!-- LEFT LINK BAR -->
+<td VALIGN=TOP WIDTH=130>
+<font face="Arial Black" color=FF0000 size=-1>Other
+Sections</font>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0>
+<tr><td><font face=Verdana size=-1>
+
+<a href=display.cgi?category=nes><font color=FFFFFF>NES<!-- Sonic PC --></font></a><br>
+<a href=display.cgi?category=original><font color=FFFFFF>Sonic Fan Made</font></a><br>
+<a href=display.cgi?category=cartoon><font color=FFFFFF>Cartoon Music</font></a><br>
+<a href=display.cgi?category=dreamcast><font color=FFFFFF>Dreamcast</font></a><br>
+<a href=display.cgi?category=gamegear><font color=FFFFFF>Game Gear</font></a><br>
+<a href=display.cgi?category=arcade><font color=FFFFFF>Arcade Music</font></a><br>
+<a href=display.cgi?category=genesis><font color=FFFFFF>Genesis Music</font></a><br>
+<a href=display.cgi?category=musiccd><font color=FFFFFF>Sonic Music CDs</font></a><br>
+<a href=display.cgi?category=segacd><font color=FFFFFF>Sega CD</font></a><br>
+<a href=display.cgi?category=saturn><font color=FFFFFF>Saturn Music</font></a><br>
+<a href=display.cgi?category=32x><font color=FFFFFF>32X Music</font></a><br>
+<a href=display.cgi?series=series><font color=FFFFFF>Others</font></a>
+
+</font></td></tr></table>
+
+<br>&nbsp;
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 COLS=1 WIDTH=100%><td>
+<center><img SRC="/sonichq/images/sprites/3d-runright.gif" height=50 width=51>
+<br><font face=Verdana color=FFFFFF size=-2>Please email
+<a href="mailto:freddyg@sprynet.com">Vector</a> any MIDIs we don't already have. Thanx!</font></center>
+</td></table>
+
+</td>
+<!-- END LEFT LINK BAR -->
+
+<td VALIGN=TOP WIDTH=30></td>
+
+<!-- MAIN AREA -->
+<td VALIGN=TOP WIDTH=468>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=468>
+<tr><td VALIGN=TOP WIDTH=360>
+
+<font face="Arial,Helvetica" color=3333FF size=+3>Mega Man</font>
+<br><font face=Arial,Helvetica font size=-1>The Mega Man series has long been known for its excellent music and gameplay.</font></td>
+</tr>
+
+<tr><td COLSPAN=2 WIDTH=468>
+
+<br><b><font face=Arial,Helvetica size=-1>MM3 MIDI list below:</font></b>
+<br><font face=Impact color=3333FF>2 Total</font>
+
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/3/gemini.mid>Gemini Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by ???</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2:58min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>19.9K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/3/proto.mid>Proto Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:dave.choe@utoronto.ca>Dave Choe</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2:16min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>6.73K</font></td>
+</tr>
+</table>
+
+<br><b><font face=Arial,Helvetica size=-1>MM4 MIDI list below:</font></b>
+<br><font face=Impact color=3333FF>1 Total</font>
+
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/4/dust.mid>Dust Man</a> *</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by ???</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:22min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>31.2K</font></td>
+</tr>
+</table>
+
+<br><b><font face=Arial,Helvetica size=-1>MM5 MIDI list below:</font></b>
+<br><font face=Impact color=3333FF>10 Total</font>
+
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/5/crystal.mid>Crystal Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jorge Fuentes</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2:15min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>39.3K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/5/crystal-remix.mid>Crystal Man Remix</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:27min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>22.3K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=http://www.geocities.com/EnchantedForest/Glade/8862/Gravityman.mid>Gravity Man Echo Remix</a> *</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2:47min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>37.6K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/5/gravity.mid>Gravity Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:jbickley@ridgecrest.ca.us>Joe Bickley</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2:57min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>32.6K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/5/gyro-remix.mid>Gyro Man Remix</a> *</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by ???</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2:37min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>49.8K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/5/napalm-remix.mid>Napalm Man Remix</a> *</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:38min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>28.8K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/5/star.mid>Star Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:33min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>22.3K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/5/stone.mid>Stone Man</a> *</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by ???</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:56min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>42.7K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/5/wave.mid>Wave Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:55min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>28.3K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/5/wave2.mid>Wave Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:jbickley@ridgecrest.ca.us>Joe Bickley</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2:03min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>20.5K</font></td>
+</tr>
+</table>
+
+<br><b><font face=Arial,Helvetica size=-1>MM6 MIDI list below:</font></b>
+<br><font face=Impact color=3333FF>2 Total</font>
+
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/6/blizzard.mid>Blizzard Man</a> *</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:dave.choe@utoronto.ca>???</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:55min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>11K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/6/blizzard-brr.mid>Blizzard Man Icy Remix</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:dave.choe@utoronto.ca>???</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:55min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>11.1K</font></td>
+</tr>
+</table>
+
+<br><b><font face=Arial,Helvetica size=-1>MM7 MIDI list below:</font></b>
+<br><font face=Impact color=3333FF>16 Total</font>
+
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/7/burst.mid>Burst Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:dave.choe@utoronto.ca>Dave Choe</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:48min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>10K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/7/cloud.mid>Cloud Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:dave.choe@utoronto.ca>Dave Choe</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:44min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>9.99K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/7/freeze.mid>Freeze Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Justin Horn</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2:20min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>27.9K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/7/freeze2.mid>Freeze Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by ???</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2:21min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>30.7K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/7/shade.mid>Shade Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:dave.choe@utoronto.ca>Dave Choe</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:27min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>9.49K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/7/slash.mid>Slash Man</a> *</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:dave.choe@utoronto.ca>Dave Choe</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:45min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>9.52K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/7/spring.mid>Spring Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by ???</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:34min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>22.9K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/7/spring2.mid>Spring Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:34min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>23.8K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/7/mm7prologue.mid>Prologue</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:17min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>7.18K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/7/mm7intro.mid>Road Intro Stage</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:dave.choe@utoronto.ca>Dave Choe</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0:58min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>4.97K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/7/bass.mid>Bass' Theme</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:22min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>16.2K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/7/bass2.mid>Bass' Theme</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by ???</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0:42min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>6.5K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/7/museum.mid>Robot Museum</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2:45min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>35.3K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/7/wily1.mid>Dr. Wily Stage 1</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2:43min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>36.1K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/7/wilyfinal.mid>Dr. Wily - Final Boss</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:00min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>24.6K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/7/mm7end.mid>Ending</a> *</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:53min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>27.1K</font></td>
+</tr>
+</table>
+
+<br><b><font face=Arial,Helvetica size=-1>MM8 MIDI list below:</font></b>
+<br><font face=Impact color=3333FF>5 Total</font>
+
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/8/frost.mid>Frost Man (PSX)</a> *</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:30min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>24K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/8/sword.mid>Sword Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:28min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>12.4K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=http://www.geocities.com/EnchantedForest/Tower/4309/mm8Tengu.mid>Tengu Man (Saturn)</a> *</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:28min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>34.3K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/8/mm8light.mid>Dr. Light</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by ???</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:04min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>16.9K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/8/mm8end.mid>Ending<!-- (Strong Bass) --></a> *</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by ???</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>5:25min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>36.8K</font></td>
+</tr>
+<!--
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=http://www.geocities.com/EnchantedForest/Tower/4309/mm8end2.mid>End (Medium Bass)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:28min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>34.3K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=http://www.geocities.com/EnchantedForest/Tower/4309/mm8end-remix.mid>End Remix</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by X4Akiko</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>5:22min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>61.9K</font></td>
+</tr>
+-->
+</table>
+
+<br><b><font face=Arial,Helvetica size=-1>Rockman & Forte MIDI list below:</font></b>
+<br><font face=Impact color=3333FF>12 Total</font>
+
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=http://www.geocities.com/EnchantedForest/Tower/4309/rmfburner.mid>Burner Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:55min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>29.1K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/rf/cold.mid>Cold Man</a> *</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2:07min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>28.5K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/rf/cold2.mid>Cold Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by X4Akiko</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2:34min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>36.3K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/rf/dynamo.mid>Dynamo Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Heat Man</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>5:22min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>39.1K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=,,/midis/mm/rf/ground.mid>Ground Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:Sivak7000@aol.com>Sivak Drac</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:40min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>12.9K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/rf/magic.mid>Magic Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Justin Horn</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>3:54min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>26.2K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/rf/pirate.mid>Pirate Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:Sivak7000@aol.com>Sivak Drac</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2:04min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>17K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/rf/char-select.mid>Character Select</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:Sivak7000@aol.com>Sivak Drac</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0:13min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2.2K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/rf/intro.mid>Museum Intro Stage</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Justin Horn</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>4:15min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>32.6K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/rf/auto.mid>Auto</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:maelgrim@kktv.net>Maelgrim</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:22min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>12.6K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/rf/robot-master.mid>Robot Master</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:Sivak7000@aol.com>Sivak Drac</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0:53min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>7.3K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/rf/clear.mid>Clear Stage</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by <a href=mailto:Sivak7000@aol.com>Sivak Drac</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0:50min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>6.96K</font></td>
+</tr>
+</table>
+
+<br><b><font face=Arial,Helvetica size=-1>X Series MIDI list below:</font></b>
+<br><font face=Impact color=3333FF>2 Total</font>
+
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/x/blizzard-buffalo.mid>Blizzard Buffalo</a> *</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Justin Horn</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:18min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>13.2K</font></td>
+</tr>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href=../midis/mm/x/chill-penguin.mid>Chill Penguin</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by ???</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1:39min</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>10.7K</font></td>
+</tr>
+</table>
+
+<br><br>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=403 valign=bottom>
+<tr>
+<td COLSPAN="8"><font face="arial,helvetica"><font size=-1>All material
+above are properties of their rightful owners, be it Sega Enterprise Ltd.
+or other fans. All graphic on the page are copyright to Sonic HQ staff,
+you may not take without permission.</font></font></td>
+</tr>
+</table>
+
+</td></tr></table>
+
+</td>
+<!-- END MAIN AREA -->
+
+</tr></table>
+
+</html>
