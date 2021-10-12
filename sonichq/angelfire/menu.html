@@ -1,0 +1,109 @@
+<html>
+<BODY>
+<head>
+<title>Menu</title>
+<script language="JavaScript">
+
+<!-- Hiding this
+
+// Function to make the text in the status bar bounce up and down
+// (c) Martien Verbruggen, February 1996
+// Feel free to use this, please leave copyright notice intact.
+
+// It would be even simpler to just make it bounce, and not 'disappear'
+// I just did that as an exercise. One does foolish things, at times.
+
+// offset is the place where it starts initially
+// step is the number of characters it scrolls
+
+function bounce ( message, offset, step ) {
+  var output="";
+  var end=100;
+
+  for ( var i = 0; i < offset; i++ ) { output += " "; }
+  
+  if ( (offset >= end+message.length && step > 0) || 
+       (offset <= -message.length    && step < 0)    ) {
+    step = -step;
+  }
+
+  if ( offset > end ) {
+    output += message.substring(0, message.length-(offset-end));
+  } 
+  else if ( offset > 0 && offset <= end ) { 
+    output += message;
+  } 
+  else {
+    output += message.substring(-offset, message.length);
+  }
+
+  if ( step != 0) {
+    offset += step;
+    command="bounce(\"" + message + "\"," + offset + "," + step + ")";
+    // If you want to make it scroll faster, DECREASE the 200
+    timer=setTimeout(command, 200);
+  }
+  status = output;
+  return true;
+}
+
+// End of hiding -->
+
+</script>
+
+</head>
+<head>
+<SCRIPT LANGUAGE = "JavaScript">
+<!--
+  conBrowser=0;
+  function display(stuff) { window.status = stuff; }
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE = "JavaScript1.1">
+<!--
+  conBrowser=1;
+  switch1on  = new Image(36,36);  switch1on.src  = '/ok/warpsonic/images/desktop2.gif';
+  switch1off = new Image(36,36);  switch1off.src = '/ok/warpsonic/images/desktop.gif';
+  switch2on  = new Image(36,36);  switch2on.src  = '/ok/warpsonic/images/animgif2.gif';
+  switch2off = new Image(36,36);  switch2off.src = '/ok/warpsonic/images/animgif.gif';
+  switch3on  = new Image(36,36);  switch3on.src  = '/ok/warpsonic/images/games2.gif';
+  switch3off = new Image(36,36);  switch3off.src = '/ok/warpsonic/images/games.gif';
+  switch4on  = new Image(36,36);  switch4on.src  = '/ok/warpsonic/images/pictures2.gif';
+  switch4off = new Image(36,36);  switch4off.src = '/ok/warpsonic/images/pictures.gif';
+
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE = "JavaScript">
+<!--
+  function HighLight(musswitch) {
+	if (conBrowser) {
+		switchnavn = eval(musswitch + "on");
+      		document [musswitch].src = switchnavn.src;
+    		}
+  	}
+
+function UndoHighLight(musswitch) {
+	if (conBrowser) {
+		switchnavn = eval(musswitch + "off");
+		document [musswitch].src = switchnavn.src;
+		}
+	}
+//-->
+</SCRIPT>
+</head>
+<body backgr<body bgcolor="000000" background=""
+ text="02FD0F" link="#000000" vlink="#000000" onLoad="bounce('Download all the stuff! For free!',0,1); return 1;">
+<p>
+<p>
+
+
+
+<p><center><A HREF="desktop.html" onMouseover="HighLight('switch1'); display('Desktop Stuff'); return true;" onMouseout ="UndoHighLight('switch1'); display('');" target="frame2"><IMG SRC="images/desktop.gif" NAME=switch1 alt="Desktop Stuff"></A>
+<p><center><A HREF="animated.html" onMouseover="HighLight('switch2'); display('Animated GIFs'); return true;" onMouseout ="UndoHighLight('switch2'); display('');" target="frame2"><IMG SRC="images/animgif.gif" NAME=switch2 alt="Animated GIFs"></A>
+<p><center><A HREF="games.html" onMouseover="HighLight('switch3'); display('Game Demos'); return true;" onMouseout ="UndoHighLight('switch3');  display('');" target="frame2"><IMG SRC="images/games.gif" NAME=switch3 alt="Game Demos"></A>
+<p><center><A HREF="pictures.html" onMouseover="HighLight('switch4'); display('Pictures!'); return true;" onMouseout ="UndoHighLight('switch4'); display('');" target="frame2"><IMG SRC="images/pictures.gif" NAME=switch4 alt="Pictures"></A>
+
+<embed src="sonichq/geocities/EnchantedForest/Dell/7835/CCCDPRESENT.MID" autostart=true hidden=true loop=true>
+</font>
+</BODY>
+</html>
