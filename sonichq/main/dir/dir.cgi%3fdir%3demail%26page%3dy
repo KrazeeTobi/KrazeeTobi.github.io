@@ -1,0 +1,75 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <title>Sonic HQ: E-Mail Directory: Y</title>
+<style type="text/css">
+<!-- a:hover {text-decoration: underline}
+A{text-decoration:none} -->
+</style>
+<script src=/scripts/sonic-init.js></script>
+<link rel=stylesheet href=http://www.sonichq.org/css/main.css type="text/css">
+</head>
+<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<p><span class=pathlinks><table class=glow><a href=/ target=_top>Sonic HQ</a> | <a href=/dir>Directory</a> | E-Mail Directory</table></span>
+<center>
+<!main table top>
+<p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" class=maintable>
+<tr><td width=19><img src=/topleft.gif width=19></td>
+<td bgcolor=black width=100% height=50>
+<script language=JavaScript>
+<!--
+document.write(titlepic)
+//-->
+</script>
+<img src=/dir/topbar-dir.gif align=right valign=middle>
+</td>
+<td width=19><img src=/topright.gif width=19></td></tr>
+</table>
+<!end main table top>
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
+<script src=/scripts/menu.js></script>
+<noscript>&nbsp;</noscript>
+</font></td></table>
+
+<!main table middle>
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><tr>
+
+<td VALIGN=TOP WIDTH="70%" bgcolor=ffffff class=itemtable>
+<font face=Arial size=-1 color=black>
+<div class=titlebar><table class=glow>E-Mail Directory Navigation</table></div>
+<div class=itemtext><center><a href=/dir/dir.cgi?dir=email&page=num>#</a> <a href=/dir/dir.cgi?dir=email&page=a>A</a> <a href=/dir/dir.cgi?dir=email&page=b>B</a> <a href=/dir/dir.cgi?dir=email&page=c>C</a> <a href=/dir/dir.cgi?dir=email&page=d>D</a> <a href=/dir/dir.cgi?dir=email&page=e>E</a> <a href=/dir/dir.cgi?dir=email&page=f>F</a> <a href=/dir/dir.cgi?dir=email&page=g>G</a> <a href=/dir/dir.cgi?dir=email&page=h>H</a> <a href=/dir/dir.cgi?dir=email&page=i>I</a> <a href=/dir/dir.cgi?dir=email&page=j>J</a> <a href=/dir/dir.cgi?dir=email&page=k>K</a> <a href=/dir/dir.cgi?dir=email&page=l>L</a> <a href=/dir/dir.cgi?dir=email&page=m>M</a> <a href=/dir/dir.cgi?dir=email&page=n>N</a> <a href=/dir/dir.cgi?dir=email&page=o>O</a> <a href=/dir/dir.cgi?dir=email&page=p>P</a> <a href=/dir/dir.cgi?dir=email&page=q>Q</a> <a href=/dir/dir.cgi?dir=email&page=r>R</a> <a href=/dir/dir.cgi?dir=email&page=s>S</a> <a href=/dir/dir.cgi?dir=email&page=t>T</a> <a href=/dir/dir.cgi?dir=email&page=u>U</a> <a href=/dir/dir.cgi?dir=email&page=v>V</a> <a href=/dir/dir.cgi?dir=email&page=w>W</a> <a href=/dir/dir.cgi?dir=email&page=x>X</a> <a href=/dir/dir.cgi?dir=email&page=y>Y</a> <a href=/dir/dir.cgi?dir=email&page=z>Z</a></center></div>
+<div class=titlebar><table class=glow>Listing: Y </table></div>
+<div class=itemtext><table border=0 cellpadding=1 cellspacing=2 width="100%">
+<tr>
+<td bgcolor=#808080><font color=#ffffff size=2><b>Name</b></font></td><td bgcolor=#808080><font color=#ffffff size=2><b>E-mail</b></font></td></tr>
+<tr><td valign=top bgcolor=#cccccc><font size=2 color=#000000>(No items to display)</font></td><td valign=top bgcolor=#cccccc><font size=2 color=#000000>-</font></td></tr>
+</table>
+</div>
+<!end of sections>
+</td>
+
+<!black side bar>
+<td width=4>&nbsp;</td>
+<td valign=top bgcolor=000000 class=sidebar><font face=Arial size=-1 color=white><br>
+
+<script language=JavaScript>
+<!--
+document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer();return false;">Start Midi</a></center><br>')
+//-->
+</script>
+
+<br><center><u>Directory Listing</u><br>E-Mail - Y<br><a href=/dir/dir.cgi?dir=aim&page=y>AIM</a> | <a href=/dir/dir.cgi?dir=icq&page=y>ICQ</a> | <a href=/dir/dir.cgi?dir=email&page=y>Email</a> | <a href=/dir/dir.cgi?dir=jrn&page=y>Journals</a> | <a href=/dir/dir.cgi?dir=other&page=y>Other Msgrs.</a><br><br><a href=/dir/dir.cgi?dir=email&page=submit>Submit Your Own Info!</a><br><br><a href=/dir/>Sonic HQ Directory</a></center>
+</font></td></tr>
+</table>
+<!end main table middle>
+<!main table bottom>
+<table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
+<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td width=99% bgcolor=000000><font color="white" size=-3 face="arial, helvetica"><center><b>DirectoryDB</b> powered by Sonic HQ. © 2001. Sonic and Co. are © Sega.</center></font></td>
+<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+</tr></table>
+<!end main table bottom>
+
+</center>
+</body></html>

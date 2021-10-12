@@ -1,0 +1,690 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta name="description" content="CGI Scripts - Chat">
+	<meta name="keywords" content="Sonic, Tails, Chaotix, Knuckles, Espio, Vector, Charmy, Mighty, Ray, Big, E-102, Amy, Bean, Bark, Freedom Fighters, Sally, Bunnie, Rotor, Antoine, Robotnik, Eggman, Metal Sonic, Nack">
+	<title>Sonic HQ - The Ultimate Sonic Source!</title>
+<style type="text/css">
+	<!-- a:hover {  text-decoration: underline} -->
+	<!-- A{text-decoration:none} -->
+</style>
+
+</head>
+
+<body background=../images/techno.gif bgcolor=black vlink=6699ff text=black link=000066>
+<center>
+
+
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="90%">
+<tr><td width=19><img src="../../../topleft.gif" width=19></td>
+<td bgcolor=black width=100%><font color=6699ff font face=arial font size=3>
+<b>
+Sonic 1 Game Gear
+</b></font></td>
+<td width=19><img src="../../../topright.gif" width=19></td></tr>
+</table>
+
+<table width="90%" border=0 cellspacing=0 bgcolor=white>
+<tr><td bgcolor=black width=1>&nbsp;</td><td width=100%><center>
+<br>
+
+<b><font face="Arial" size=-1><a href=http://sonichq.org/main.htm>Sonic HQ</a> / <a href=../../>Gaming Info</a> / <a href=../>The Games List</a> / 
+Sonic The Hedgehog - Game Gear, Master System
+</font></H2>
+
+<img src=../images/topbar.gif>
+
+<p><blockquote>
+
+<img src=http://www.sonichq.org/images/screenshots/sonic1gg/sonic1gg.gif align=right>
+
+
+<p><table border=0><tr><td><font face="Arial" size=-1>
+<LI><b><u>Title:</b></u> Sonic The Hedgehog
+<LI><b><u>US Release Date:</b></u> December 28, 1991
+<LI><b><u>Japan Release Date:</b></u> December 1991
+<LI><b><u>European Release Date:</b></u> December 1991
+<LI><b><u>System Console:</b></u> Sega Genesis/Megadrive
+<LI><b><u>Genre:</b></u> 2D Platformer
+<LI><b><u>Cart Size:</b></u> 8 bits
+<LI><b><u>First Appearances:</b></u> The Sky Base (Robotnik's Second Base)
+</font></td></tr>
+</table>
+
+</blockquote>
+<br clear=right>
+
+<hr width=100% color=black>
+<table border=0>
+<tr>
+<td>
+<IMG SRC=../images/main.jpg align=center>
+</td>
+<td><p>
+<table width=333 border=0 cellspacing=0 cellpadding=0><tr>
+<td width=10 height=20><img src="/images/borders/topleft.gif" width=10 height=20></td>
+<td width=100% bgcolor=000000><font face=Arial size=-2 color=cyan>
+Anchor Links
+</font></td>
+<td width=10 height=20><img src="/images/borders/topright.gif" width=10 height=20></td>
+</tr>
+<tr><td colspan=3>
+<table border=0 cellspacing=0 cellpadding=0><tr>
+<td width=2 bgcolor=000000>&nbsp;</td>
+<td width=100% bgcolor=ffffff><font size=2>
+<center><a href=#story>Story</a> | <a href=#codes>The Code Bank </a> | <a href=#zones>Zone Menu And Walkthrough</a> 
+<br><a href=#box>Box Art</a></center>
+</font></td>
+<td width=2 bgcolor=000000>&nbsp;</td>
+</tr></table>
+</td></tr>
+<tr>
+<td width=10 height=20><img src="/images/borders/bottomleft.gif" width=10 height=20></td>
+<td width=100% bgcolor=000000><font face=Arial size=-2>&nbsp;</font></td>
+<td width=10 height=20><img src="/images/borders/bottomright.gif" width=10 height=20></td>
+</tr></table>
+<p>
+<table width=333 border=0 cellspacing=0 cellpadding=0><tr>
+<td width=10 height=20><img src="/images/borders/topleft.gif" width=10 height=20></td>
+<td width=100% bgcolor=000000><font face=Arial size=-2 color=cyan>
+Other Sonic 1 GG Sections
+</font></td>
+<td width=10 height=20><img src="/images/borders/topright.gif" width=10 height=20></td>
+</tr>
+<tr><td colspan=3>
+<table border=0 cellspacing=0 cellpadding=0><tr>
+<td width=2 bgcolor=000000>&nbsp;</td>
+<td width=100% bgcolor=ffffff><font size=2>
+<center><a href=../../../music/display.cgi?category=gamegear&title=sonic1>Sonic HQ Music - Sonic 1 GG</a> | <a href=../../../images/boxes/>Sonic HQ Downloads: Boxes</a></center>
+</font></td>
+<td width=2 bgcolor=000000>&nbsp;</td>
+</tr></table>
+</td></tr>
+<tr>
+<td width=10 height=20><img src="/images/borders/bottomleft.gif" width=10 height=20></td>
+<td width=100% bgcolor=000000><font face=Arial size=-2>&nbsp;</font></td>
+<td width=10 height=20><img src="/images/borders/bottomright.gif" width=10 height=20></td>
+</tr></table>
+</td>
+<td>
+<IMG SRC=../images/main.jpg align=center>
+</td>
+</tr>
+</table>
+<hr width=100% color=black>
+
+</font></b>
+
+
+<!-- STORY -->
+<p>
+<b><p>
+<CENTER><TABLE BORDER=1 COLS=2 WIDTH="100%" HEIGHT="100%" bordercolor=black>
+<b><p>
+
+<TR>
+<TD bgcolor=black colspan=2>
+<CENTER><FONT FACE="Arial" size=-1 color=white bgcolor=black>
+<LI><u><b>
+<img src=../images/story.jpg align=right>Story And Intro</b></u>
+
+<p>Welcome to the first Sonic the Hedgehog video game for the Game Gear, Sega's 8-bit color hand held. Much like its Genesis 
+counterpart, you play as Sonic as you try to go up against the evil tyrant dictator Robotnik. While it is the most graphically 
+blunt of most of the GG Sonic games - it is a rather fun gem in its own right, well made out in the earlier limitations of the Game Gear.  
+The emeralds in this game are hidden throughout the acts (1 emerald per zone).  A few months after it was released on Game 
+Gear, this game was ported to the Sega Master System. This game consists of The Green Hill Zone, Bridge Zone, Jungle Zone, 
+Labyrinth Zone, Scrap Brain Zone, and Sky Base Zone - 
+the final battle against Robotnik...
+</u></b></FONT></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1><b>
+
+<br>
+
+<img src=http://www.sonichq.org/images/screenshots/sonic1gg/sthggmap.gif align=left>
+
+
+<p><p><embed autostart="true" loop="true" width=200 height=60 src=http://www.geocities.com/EnchantedForest/Dell/6657/bridge.mid><br>Bridge Zone
+
+<p>Doctor Robotnik has returned and this time he's up to his old tricks, adding a little bit more!  South Island is under attack, and one by one
+more and more animals are dissapearing. High in the mountain areas, Doctor Robotnik has set up a sky base, and equipped with a 
+giant cannon, he's poised to take it over once and for all! Looks like its up to Sonic The Hedgehog to stop him!
+<br>
+
+</TD>
+</TR>
+</TABLE>
+
+
+
+<!-- ZONE MENU --><a name="zones"></a>
+
+<!-- CODES --><a name="codes"></a>
+
+<p>
+<b><p>
+<CENTER><TABLE BORDER=1 COLS=2 WIDTH="100%" HEIGHT="100%" bordercolor=black>
+<b><p>
+
+<TR>
+<TD bgcolor=black colspan=2>
+<CENTER><FONT FACE="Arial" size=-1 color=white bgcolor=black>
+<LI><u><b>
+<img src=../images/code.jpg align=right>The Code Bank</u></b></FONT></CENTER>
+<br><font color=white size=-1 FACE="Arial"><center>Various codes, cheats, tricks and loopholes to get the most out of your game!
+But remeber - cheating spoils half the fun! ^_^</center>
+</u></b></FONT></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1><b>
+
+
+<TR>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white>
+<LI> 
+Level Select / Sound Test:
+</FONT></FONT></B></CENTER>
+</TD>
+<TD><CENTER><FONT FACE="Arial" size=-1>
+<b>
+At the START GAME screen, hold Button 1 until you hear a coin sound, then press START to select your level.
+ </CENTER></b>
+</TD>
+</TR>
+
+
+
+<TR>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white>
+<LI> 
+The Extra Life Trick:
+</FONT></FONT></B></CENTER>
+</TD>
+<TD><CENTER><FONT FACE="Arial" size=-1>
+<b>
+At the end of any level, if you have less than 50 rings and therefore cannot get to the bonus level, run through the turnstile and then stop and jump straight into the air. If the turnstile is off the screen, when is stops spinning, you come down and it should show a picture of Sonic and therefore give you an extra life. THIS IS NOT EASY TO DO.
+ </CENTER></b>
+</TD>
+</TR>
+
+</TD>
+</TR>
+</TABLE>
+
+
+
+
+<p>
+<b><p>
+<CENTER><TABLE BORDER=1 COLS=2 WIDTH="100%" HEIGHT="100%" bordercolor=black>
+<b><p>
+
+<TR>
+<TD bgcolor=black colspan=2>
+<CENTER><FONT FACE="Arial" size=-1 color=white bgcolor=black>
+<LI><u><b>
+<img src=../images/walkthrough.jpg align=right>Zone Menu And Walkthrough</b></u>
+
+<p>Listed below is the zone menu for Sonic The Hedgehog 1 Game Gear. Click on the name of the corresponding zone to be taken to the 
+respective section of our thorough walkthroughs area for any information that we have on it, from stats, to bosses, to descriptions.
+
+</u></b></FONT></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1><b>
+
+<p><table width=550 border=0 cellspacing=0 cellpadding=0 align=right align=right><tr><a name="box">
+<td width=10 height=20><img src="/images/borders/topleft.gif" width=10 height=35></td>
+<td width=100% bgcolor=000000><font face=Arial size=-1 color=red><img src=../images/boxart.jpg align=right></font></td>
+<td width=10 height=20><img src="/images/borders/topright.gif" width=10 height=35></td>
+</tr>
+<tr><td colspan=3>
+<table border=0 cellspacing=0 cellpadding=0><tr>
+<td width=2 bgcolor=000000>&nbsp;</td>
+<td width=100% bgcolor=ffffff><font size=2>
+
+<center><IMG SRC=/images/boxes/gamegear/s1.gif alt="Sonic The Hedgehog 1 - Game Gear" align=left height=230></center>
+<center><IMG SRC=/images/boxes/ggeurope/s1.gif alt="Sonic The Hedgehog 1 - Game Gear (Europe)" align=right></center>
+<center><IMG SRC=/images/boxes/ggjapan/s1.gif alt="Sonic The Hedgehog 1 - Game Gear (Japan)"></center>
+
+</td>
+<td width=2 bgcolor=000000>&nbsp;</td>
+</tr></table>
+</td></tr>
+<tr>
+<td width=10 height=20><img src="/images/borders/bottomleft.gif" width=10 height=20></td>
+<td width=100% bgcolor=000000><font face=Arial size=-2>&nbsp;</font></td>
+<td width=10 height=20><img src="/images/borders/bottomright.gif" width=10 height=20></td>
+</tr></table>
+
+<br>
+<li><a href=#z1>Green Hill Zone</a><br>
+<li><a href=#z2>Bridge Zone</a><br>
+<li><a href=#z3>Jungle Zone</a><br>
+<li><a href=#z4>Labyrinth Zone</a><br>
+<li><a href=#z5>Scrap Brain Zone</a><br>
+<li><a href=#z6>Sky Base Zone</a><br>
+<li><a href=#special>Special Zone</a>
+<br>
+
+</TD>
+</TR>
+</TABLE>
+
+
+
+<p>
+<b><p>
+<CENTER><TABLE BORDER=1 COLS=2 WIDTH="100%" HEIGHT="100%" bordercolor=black>
+<b><p>
+
+<TR>
+<TD bgcolor=black colspan=2>
+<CENTER><FONT FACE="Arial" size=-1 color=white bgcolor=black>
+<LI><u><b>
+Green Hill Zone
+</u></b></FONT></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1><b>
+
+<br>
+
+<img src=http://www.sonichq.org/images/screenshots/sonic1gg/ggsthgreehhill.gif align=left>
+
+<p>This zone is naturally the easiest in the game. You'll notice that it features the same music from the Genesis except 
+revised a little bit. There are only 3 different knds of badniks here, Crabmeats, Crawlers, and Buzzbombers, so other than 
+spikes that you must be on the lookout for, this zone is pretty easy. Robotnik is just as easy when he attacks in Act 3. 
+Even though you won't have any rings to bring into battle with you. If you wait a while, he'll start flying along the ground 
+fast and you must jump each time. But if you start hitting him when he first appears and don't stop, you'll defeat him 
+before he even gets a chance to do anything! Eight hits will blow the Egg-O-Matic up. Then you must free the animals from 
+their egg prison just like in the Genesis Sonic games by smacking the plunger on the top. Then, a whole crowd of rabbits and 
+squirrels will jump out. Mission accomplished!
+
+<p><hr width=100% color=black>
+<p>Chaos Emerald #1: While in Act 2, check in the area where the caves are. Look for the area underwater and towards the 
+left. Also, keep an eye out for false walls!<p>
+<a name=z2>
+
+
+</TD>
+</TR>
+</TABLE>
+
+
+
+<p>
+<b><p>
+<CENTER><TABLE BORDER=1 COLS=2 WIDTH="100%" HEIGHT="100%" bordercolor=black>
+<b><p>
+
+<TR>
+<TD bgcolor=black colspan=2>
+<CENTER><FONT FACE="Arial" size=-1 color=white bgcolor=black>
+<LI><u><b>
+The Bridge Zone
+</u></b></FONT></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1><b>
+
+<br>
+
+<img src=http://www.sonichq.org/images/screenshots/sonic1gg/ggsthbridgegif.gif align=right>
+
+<p>This zone has one of the catchiest beats in many Sonic games - in fact, this is the music playing currently! ^_^ 
+This zone consists of multiple bridges letting you pass the gap between the last zone and the next zone over the river. Some 
+bridges (the flat ones that don't dip) will fall out behind you, so be quick about crossing them. You'll also meet up with 
+Spike Tops whch you cannot defeat from a hit from above. You must roll into these bots to take them out. Watch out for the 
+Pirahnabots that jump out of the water in the gaps between land. Act 2 isn't so easy. The board moves along at a steady 
+pace, so be sure not to get into a position where the moving screen will crush you. And now for Act 3. You won't have any 
+rings as usual, but if you go left at the beginning you can get an extra life. Robotnik is a little bit harder here, but 
+he's not extremely difficult. You'll be on two dip bridges when you meet him. He'll come up in the middle of either dip 
+bridge, but he'll usually rotate bewteen the two. Be right where he's gonna come up and jump on him. Then run to the other 
+side. He'll shoot 3 energy balls at you. If you time the jump right, you'll jump between the bottom two. Robotnik will then 
+go back down and repeat the pattern. Eight hits beats him. Now go free those animals! Chickens and pigs will jump out this 
+time.
+<p>
+
+<p><hr width=100% color=black>
+<p>Chaos Emerald #2: Keep an eye out and look for one of the falling bridges in Act 1 to take you to a 
+Chaos Emerald. Stand on the first wooden piece and as it falls, then jump to the left onto a platform with the Emerald.<a name=z3>
+<p>
+</TD>
+</TR>
+</TABLE>
+
+
+
+<p>
+<b><p>
+<CENTER><TABLE BORDER=1 COLS=2 WIDTH="100%" HEIGHT="100%" bordercolor=black>
+<b><p>
+
+<TR>
+<TD bgcolor=black colspan=2>
+<CENTER><FONT FACE="Arial" size=-1 color=white bgcolor=black>
+<LI><u><b>
+The Jungle Zone
+</u></b></FONT></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1><b>
+
+<br>
+
+<img src=http://www.sonichq.org/images/screenshots/sonic1gg/ggsthjungle.gif align=left>
+
+<p>If you've been resourceful, your lives counter should be maxed out at 9 at this point. Told you this game was easy. ^_^ 
+You'll see a lot of Crabmeats and Pirhanabots in this jungle. Not to mention vines strung across branches that act as 
+bridges over large gaps. You'll also see those annoying Chameleons that disappear, so watch out for them. At some 
+waterfalls, logs fall down. You must jump from log to log to get up the waterfall. Sometimes you must jump on floating logs 
+and run on them to roll them across the river. Watch out for Pirhanabots! Try to roll underneath them as they are up in the 
+air. Act 3 is a pretty easy stage as well. From the beginning, go up and up and up until you stop on one vine where Robotnik 
+will attack you. He will fly to one side of the vine and drop a cannonball which will roll along the vine. It will roll all 
+the way across twice and then it will stop in the middle and explode. Jump over it as it rolls the first time and hit 
+Robotnik twice. Then jump over it again and smack him two more times. As it rolls to a halt in the middle, smack him two 
+more times. Jump over the next cannonball he drops and hit him the last two times for a total of eight. His shiip will 
+explode, but the cannonball will keep rolling, so you'll have to keep jumping until this second one explodes. Then he'll 
+fly away and you can free the animals - Chickens and squirrels.
+
+<p><hr width=100% color=black>
+<p>Chaos Emerald #3: Watch those waterfalls! A zone in Act two with a waterfall holds the secret to the next emerald! Look for 
+an area where logs are falling this time. Follow it to the river below, and jump to a floating log, being careful not to fall off.
+Move to the left and in a cubbyhole shaded by another waterfall - you will find the next Chaos Emerald!
+<a name=z4>
+<p>
+
+</TD>
+</TR>
+</TABLE>
+
+
+
+<p>
+<b><p>
+<CENTER><TABLE BORDER=1 COLS=2 WIDTH="100%" HEIGHT="100%" bordercolor=black>
+<b><p>
+
+<TR>
+<TD bgcolor=black colspan=2>
+<CENTER><FONT FACE="Arial" size=-1 color=white bgcolor=black>
+<LI><u><b>
+The Labyrinth Zone
+</u></b></FONT></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1><b>
+
+<br>
+
+<img src=http://www.sonichq.org/images/screenshots/sonic1gg/ggsthlabyrinth.gif align=right>
+
+<p>Now, the view will switch to another map where you can see Robotnik's large factory. Apparently, Sonic is trying to sneak 
+in through the underground sewers, for you visit this underwater stage similar to the Genesis' version. Like the Genesis, 
+Sonic 1, you must keep getting air bubbles to stay alive underwater or else you'll drown. You can also jump out of the water 
+to relieve the drown countdown. Enemies to look out for here are Grounders, Orbinauts, and Jaws. There are many spikes too, 
+multiple ones lining the floor or the ceiling, and lone ones that pop out of the ground. Also, certain light colored 
+platforms you step on send you floating upwards. Most send you into spikes if you don't get off them at the crucial point. 
+Act 3 isn't really tough, but it is kind of hard. The room will have two holes in the left and right of the ceiling and one 
+hole in the middle of the floor. Robotnik will come up from the bottom hole first. Jump on him and lean to the left after 
+he fires his two energy balls. If you leaned far enough, you'll land on the left platform. He'll come down from the left 
+side hole next. Hit him three times then move all the way to the left. He'll shoot a missle. Once it gets in front of you, 
+it will fly straight forward. Wait for it to reach your level, then jump. Then, jump to the right platform so you'll be 
+ready when Robotnik comes in from the hole on the right side. Hit his ship four times now and you should defeat him before 
+he shoots the missle. Now, go free those animals from their prison! This time, it will be seals and penguins that will be 
+freed.
+
+<p><hr width=100% color=black>
+<p>Chaos Emerald #4: Memory has eluded me on this one. If I am correct you will find the emerald in either act three by heading 
+upwards, or in act two across a sea of spikes. Someone may have to <a href=mailto:sonichq@kontek.net>jog our memories</a> on this one if you can. :P
+<a name=z5>
+<p>
+
+</TD>
+</TR>
+</TABLE>
+
+
+
+<p>
+<b><p>
+<CENTER><TABLE BORDER=1 COLS=2 WIDTH="100%" HEIGHT="100%" bordercolor=black>
+<b><p>
+
+<TR>
+<TD bgcolor=black colspan=2>
+<CENTER><FONT FACE="Arial" size=-1 color=white bgcolor=black>
+<LI><u><b>
+Scrap Brain Zone
+</u></b></FONT></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1><b>
+
+<br>
+
+<img src=http://www.sonichq.org/images/screenshots/sonic1gg/ggsthscrap.gif align=left>
+
+<p><center><b>NOTE:</b>From this point on, the special stage will be inaccesible.</center>
+
+<p>This zone follows closely from its Genesis brother complete with raising doors, flame throwers mounted downwards on the 
+ceiling, Catekillers slithering along the ground, and Ballhogs jumping up and down and throwing energy balls at you. Be 
+careful when on moving conveyor belts. Two conveyor belts could lie right next to each other and go in different directions 
+so that you struggle on one and realize you're flying off the edge of the next. Watch out for electric fountains that fire 
+blasts in a circle around them. At one point in Act 2, you'll come to a place where you can take two seperate paths, up or 
+down. Both lead to their own fates, neither of which are extremely difficult. But the two are interconnected; you need to 
+open a path in one before you can complete the other. First, take the top path. Travel through the flame throwers and up the 
+many platforms with 2 Ballhogs until you reach a lone button. To the left are two doors. One is opened and one is closed. 
+When you hit the button, the open one will close and the closed one will open. It will alternate like this every time you 
+pound the button, but no matter how hard you try, you won't be able to get through those doors. Position the doors so that 
+the one closest to the button is closed. Now, backtrack to those two path changes again. This time go down. When you 
+continue past the initial door, go right and you'll fall on a platform with a Ballhog. Destory him if you want, but it's 
+quicker to move on. Head to the left and go down. You'l see another Ballhog. Bust him open or forget about him, but you 
+need to head right. You'll reach a repeating pattern where you must head left, then right again, then you must do it again. 
+After this third time, you'll come to a gap. Jump it and continue on. You'll go through a door. Behind it is a teleporter. 
+Step inside to teleport to a part of the upper section of the pathway split. Walk to the left and you'll fall down in 
+between those two alternate doors. But thanks to us pressing the button earlier, the pathway is now open! Continue on 
+and you'll reach the end of the second Act. The third Act is a maze in itself and even worse. Certain doors will open for 
+you, certain ones won't. However, there are rings in this third act unlike any time before, so try to gather them all for extra men - 
+you may need them later. Go through the first door and bounce on the spring to get all the rings. Then, go back down and 
+continue right from that spring. Then, fall into the hole you come to. There's a spring and a door down there. Go through 
+door. Head right to anoher door. Go up and left, then go up and right. You should be at a conveyor belt. Go past it and go 
+through the door. Go up with the spring. Go up and head right. You should have 50 rings at least. Fall down the LONG hole 
+for a 1-up. Now, follow these directions:
+<p>Up, Left, Up, Left, Up, Right, Up, Right, Up Left.<br>
+<p>Jump down the small hole grabbing the rings and bounce back up. Head left and hit the button to open the door. Continue left, 
+bounce up and grab the rings, and go through the door on the right to get outside the factory and onto what seems like the 
+roof with 81 rings. Hmm, I wonder who you'll meet out here? Robotnik runs away from you and jumps on a platform which 
+carries him up to who knows where. Why don't we find out? Jump on the platform when it comes back down. It carries you up 
+to... the end of the act?!!?
+
+<p><hr width=100% color=black>
+<p>Chaos Emerald #5: Get to the part where you can either go up a long ramp or down a long ramp. Take the up ramp until 
+you get to three holes in the ground with a fire shooter above each. Hop into the third one and you'll fall and land in a 
+hallway. Run to the right and you'll come across a teleporter. Take it.  When you get out, run to the right and you'll find 
+the emerald. Run back left and you'll be back in the level.
+<a name=z6>
+<p>
+
+</TD>
+</TR>
+</TABLE>
+
+
+
+<p>
+<b><p>
+<CENTER><TABLE BORDER=1 COLS=2 WIDTH="100%" HEIGHT="100%" bordercolor=black>
+<b><p>
+
+<TR>
+<TD bgcolor=black colspan=2>
+<CENTER><FONT FACE="Arial" size=-1 color=white bgcolor=black>
+<LI><u><b>
+Sky Base Zone
+</u></b></FONT></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1><b>
+
+<br>
+
+<img src=http://www.sonichq.org/images/screenshots/sonic1gg/ggsthskybase1.gif align=left>
+
+<p>Welcome to the Sky Base! This zone is notoriously more difficult than any of the others because of the immense amounts of 
+lightning and electricity arcing through the area. Luckily for you, you can see the electric paths flicker a few times 
+before they activate full power; just enough time to get out of the way and into a safe spot (you hope). Orbinauts, Cannons, 
+and Bombbots (especially Bombots) are here, so you have even more to worry about. When you get on a floating platform, wait 
+for the electricity to dissipate before you fly ahead. Eventually, if you're lucky, you'll reach Robotnik's actual Sky Base Blimp
+at the end of the act. Climb up the base in the beginning of Act 2. There are cannons everywhere, so be careful. Hopefully 
+you brought a shield along with you from a previous zone, cuz you ain't gonna find one here! At one point, you'll be chased 
+by a spike covered wall. Not to mention you'll encounter a slew of Bombbots as you run away from it - with no way to jump over! 
+Come close to the Bombbot, then back off and wait for them to explode before you continue to run away from the spike wall ala 
+Indiana Jones. At the end of the tunnel, you'll come to a long chain. Go downwards to the left. You'll have to dodge plenty 
+of cannons down here that shoot <u>big bullets</u>, no energy pellets today! The bullets travel slower so you can't dodge 
+them easier. After these cannons you'll come to a door which will take you inside the flying fortress. Arrows will point you 
+along to something... the end of the act. Now you're ready for Act 3, the final act of the game....<p>
+
+
+<img src=http://www.sonichq.org/images/screenshots/sonic1gg/ggsthfinal.gif align=right>
+
+
+<p>As you travel downright, you'll encounter Robotnik who's got himself protected in a tube with a plunger on the bottom. 
+Whenever he hits that plunger, a ball of energy will form on the orb on the top of the screen. When it comes down, it will 
+home in towards you, so jump to the other side of the screen right before it fires to confuse it. It will get its bearings 
+though right before it goes through the ground. So jump back to the other side just as quick. Fire will come out of 3 tubes 
+on the ground - IN THIS ORDER: Left, right, middle. Be ready to jump over them ASAP - theres no room to go anywhere else - 
+and pray that an orb doesnt materialise prematurely or youre dead unless you got some fancy footwork. Keep hitting Robotnik's
+ tube whenever you get the chance. Twelve hits will break his tube. Then he will run away from you and jump in a teleporter. 
+Follow him into.....<a name=special>
+<p>
+
+<p><hr width=100% color=black>
+<p>Final Chaos Emerald: Get to act 2 (where you're actually on the blimp), stay on the first platform. Wait until it floats 
+all the way up, then take a running jump to the right off the first platform. You should land on a moving platform like 
+the ones in act 1. It leads to another, and another, and so on. The trail eventually takes you to the chaos emerald, and 
+back to the level where you can continue.
+
+
+</TD>
+</TR>
+</TABLE>
+
+
+
+<p>
+<b><p>
+<CENTER><TABLE BORDER=1 COLS=2 WIDTH="100%" HEIGHT="100%" bordercolor=black>
+<b><p>
+
+<TR>
+<TD bgcolor=black colspan=2>
+<CENTER><FONT FACE="Arial" size=-1 color=white bgcolor=black>
+<LI><u><b>
+The Ending
+</u></b></FONT></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1><b>
+
+<br>
+
+<img src=http://www.sonichq.org/images/screenshots/sonic1gg/ggsthend.gif align=left>
+
+
+<p>The teleporter takes Robotnik to his personal hovercraft as you see him flying through Green Hill Zone to escape. But 
+guess where the teleporter puts you! Right on top of him! You literally drop in on him and make his ship start to blow up. 
+If you have all the Chaos Emeralds, Sonic will hold them up and they'll start to rise and spin in a circle.
+
+<p>Next, you'll see a shot of the South Island map.  If you got all the emeralds, they'll appear on the screen and continue 
+to spin until the screen flashes and all the smog in the Scrap Brain Zone is cleared!  The game then counts up your Chaos 
+Emerald score (each emerald you got gives you 20,000 points), the number of lives you had in stock at the end (each extra 
+life is worth 5,000 points), and the number of times you entered the Special Zone (10,000 points each).
+
+<p>Then, Sonic stands in front of a microphone and lists the people involved in this game while playing a "premix" of the 
+Sonic and Knuckles title screen music and this game's Green Hill songs mixed in together. 
+<p>
+
+</TD>
+</TR>
+</TABLE>
+
+
+
+<p>
+<b><p>
+<CENTER><TABLE BORDER=1 COLS=2 WIDTH="100%" HEIGHT="100%" bordercolor=black>
+<b><p>
+
+<TR>
+<TD bgcolor=black colspan=2>
+<CENTER><FONT FACE="Arial" size=-1 color=white bgcolor=black>
+<LI><u><b>
+The Special Stage And The Chaos Emeralds - The Pinball Bounce Room
+</u></b></FONT></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1><b>
+
+<br>
+
+<img src=http://www.sonichq.org/images/screenshots/sonic1gg/ggsthspecial.gif align=right>
+
+<p>This operates a tad bit different from other special stages...To reach the special stage, get to the end of the board 
+with at least 50 rings in tow and you'll be sent there automatically. The object in the special stage is to get as many 
+rings as possible. There are more than enough rings to get at least one extra life and sometimes you'll find a Continue if 
+you know where to look. As for the Chaos Emeralds, for some strange reason you can find them lying around the stages. You 
+don't get them from the special stage this time. Don't ask me what the deal is with that.
+
+<p>Thanks to <a href=mailto:sbunker@concentric.net>Mr. Beef</a> for the info about the good ending and this guide to getting 2 of the Chaos Emeralds:
+<p>
+
+</TD>
+</TR>
+</TABLE>
+
+
+
+
+
+<br clear=right>
+<br></font></center>
+<p></center></td><td bgcolor=black width=2>&nbsp;</td></tr>
+</tr></td></table>
+
+<!main table bottom>
+<table border=0 cellspacing=0 cellpadding=0 width=90%>
+<tr>
+<td><img SRC="../../../bottomleft.gif" BORDER=0 height=20></td>
+<td width=99% bgcolor=000000>&nbsp;</td>
+<td><img SRC="../../../bottomright.gif" BORDER=0 height=20></td>
+</tr>
+</table>
+<!end main table bottom>
+
+

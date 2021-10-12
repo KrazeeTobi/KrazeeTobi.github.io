@@ -1,0 +1,81 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <title>Sonic HQ: AIM Directory: SUBMIT</title>
+<style type="text/css">
+<!-- a:hover {text-decoration: underline}
+A{text-decoration:none} -->
+</style>
+<script src=/scripts/sonic-init.js></script>
+<link rel=stylesheet href=http://www.sonichq.org/css/main.css type="text/css">
+</head>
+<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<p><span class=pathlinks><table class=glow><a href=/ target=_top>Sonic HQ</a> | <a href=/dir>Directory</a> | AIM Directory</table></span>
+<center>
+<!main table top>
+<p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" class=maintable>
+<tr><td width=19><img src=/topleft.gif width=19></td>
+<td bgcolor=black width=100% height=50>
+<script language=JavaScript>
+<!--
+document.write(titlepic)
+//-->
+</script>
+<img src=/dir/topbar-dir.gif align=right valign=middle>
+</td>
+<td width=19><img src=/topright.gif width=19></td></tr>
+</table>
+<!end main table top>
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
+<script src=/scripts/menu.js></script>
+<noscript>&nbsp;</noscript>
+</font></td></table>
+
+<!main table middle>
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><tr>
+
+<td VALIGN=TOP WIDTH="70%" bgcolor=ffffff class=itemtable>
+<font face=Arial size=-1 color=black>
+<div class=titlebar><table class=glow>AIM Directory Navigation</table></div>
+<div class=itemtext><center><a href=/dir/dir.cgi?dir=aim&page=num>#</a> <a href=/dir/dir.cgi?dir=aim&page=a>A</a> <a href=/dir/dir.cgi?dir=aim&page=b>B</a> <a href=/dir/dir.cgi?dir=aim&page=c>C</a> <a href=/dir/dir.cgi?dir=aim&page=d>D</a> <a href=/dir/dir.cgi?dir=aim&page=e>E</a> <a href=/dir/dir.cgi?dir=aim&page=f>F</a> <a href=/dir/dir.cgi?dir=aim&page=g>G</a> <a href=/dir/dir.cgi?dir=aim&page=h>H</a> <a href=/dir/dir.cgi?dir=aim&page=i>I</a> <a href=/dir/dir.cgi?dir=aim&page=j>J</a> <a href=/dir/dir.cgi?dir=aim&page=k>K</a> <a href=/dir/dir.cgi?dir=aim&page=l>L</a> <a href=/dir/dir.cgi?dir=aim&page=m>M</a> <a href=/dir/dir.cgi?dir=aim&page=n>N</a> <a href=/dir/dir.cgi?dir=aim&page=o>O</a> <a href=/dir/dir.cgi?dir=aim&page=p>P</a> <a href=/dir/dir.cgi?dir=aim&page=q>Q</a> <a href=/dir/dir.cgi?dir=aim&page=r>R</a> <a href=/dir/dir.cgi?dir=aim&page=s>S</a> <a href=/dir/dir.cgi?dir=aim&page=t>T</a> <a href=/dir/dir.cgi?dir=aim&page=u>U</a> <a href=/dir/dir.cgi?dir=aim&page=v>V</a> <a href=/dir/dir.cgi?dir=aim&page=w>W</a> <a href=/dir/dir.cgi?dir=aim&page=x>X</a> <a href=/dir/dir.cgi?dir=aim&page=y>Y</a> <a href=/dir/dir.cgi?dir=aim&page=z>Z</a></center></div>
+<div class=titlebar><table class=glow>Submit Your AIM Info!</table></div>
+<div class=itemtext>
+<form action=http://www.echidnoyle.org/cgi/form/hq/dir_proc.pl method=post>
+<input type=hidden name="recipient" value="hq_directory@echidnoyle.org">
+<input type=hidden name="subtype" value="AIM">
+<div align=center><table border=0 cellpadding=0 cellspacing=5><tr><td colspan=2><font face="Verdana, Arial" size=2 color="#ff0000" style="background-color: #ffffff;">An asterisk * indicates required fields. Submissions not including all required fields <u>will be thrown out</u>.<br></font></td></tr>
+<tr><td><font face="Verdana, Arial" size=2><b>Name:</b></font></td><td><input type=text name="name"> <font color="#ff0000">*</font></td></tr>
+<tr><td><font face="Verdana, Arial" size=2><b>E-Mail:</b></font></td><td><input type=text name="email"> <font color="#ff0000">*</font></td></tr>
+<tr><td><font face="Verdana, Arial" size=2><b>Screen Name:</b></font></td><td><input type=text name="Screen Name"> <font color="#ff0000">*</font></td></tr>
+<tr><td valign=top><font face="Verdana, Arial" size=2><b>Description</b><br><small>Say a little something 'bout yourself: interests, etc.</small></font></td><td><textarea rows=3 cols=25 name="Description"></textarea></td></tr>
+<tr><td valign=top><font face="Verdana, Arial" size=2><b>New/Modify?</b></font> <font color="#ff0000">*</font></td><td><font face="Verdana, Arial" size=2><input type=radio name="Modify" value="no"> This is a new submission to the AIM Directory.<br><input type=radio name="Modify" value="yes"> I wish to modify an existing submission with the same name. (new screenname, description, etc.)</font></td></tr></table></div>
+<br><center><input type=submit value="Submit Info!"> <input type=reset value="Reset Form"></center></form>
+</div>
+<!end of sections>
+</td>
+
+<!black side bar>
+<td width=4>&nbsp;</td>
+<td valign=top bgcolor=000000 class=sidebar><font face=Arial size=-1 color=white><br>
+
+<script language=JavaScript>
+<!--
+document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer();return false;">Start Midi</a></center><br>')
+//-->
+</script>
+
+<br><center><u>Directory Submission Form</u><br>AIM<br><a href=/dir/dir.cgi?dir=aim&page=submit>AIM</a> | <a href=/dir/dir.cgi?dir=icq&page=submit>ICQ</a> | <a href=/dir/dir.cgi?dir=email&page=submit>Email</a> | <a href=/dir/dir.cgi?dir=jrn&page=submit>Journals</a> | <a href=/dir/dir.cgi?dir=other&page=submit>Other Msgrs.</a><br><br><a href=/dir/>Sonic HQ Directory</a></center>
+</font></td></tr>
+</table>
+<!end main table middle>
+<!main table bottom>
+<table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
+<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td width=99% bgcolor=000000><font color="white" size=-3 face="arial, helvetica"><center><b>DirectoryDB</b> powered by Sonic HQ. © 2001. Sonic and Co. are © Sega.</center></font></td>
+<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+</tr></table>
+<!end main table bottom>
+
+</center>
+</body></html>

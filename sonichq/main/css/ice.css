@@ -1,0 +1,35 @@
+a {color:cyan;}
+body {
+background-color:#303f99;
+background-image:url(http://www.sonichq.org/images/backgrounds/BlueCubism.jpg);
+font-family:Verdana,Arial; font-size:10pt; color:white;
+}
+
+.maintable {width:95%}
+
+.itemtable{
+background-color:#303f66; background-image:url(http://www.sonichq.org/images/backgrounds/bluecubism-dark.jpg); background-attachment: fixed;
+}
+
+.titlebar a {color:ffffff;}
+.titlebar {
+background-color:#404FE0; layer-background-color:#404FE0;
+padding-left:4; width:100%;
+font-family:Verdana,Arial; font-size:10pt; color:white; font-weight:bold
+}
+
+.itemtext {
+border-left:4 solid B3B3B3; border-right:4 solid B3B3B3;
+padding-left:4; padding-right:4;
+font-family:Verdana,Arial; font-size:10pt; color:white; font-weight:bold
+}
+
+.sidebar {
+background-color:black; layer-background-color:black;
+margin-left:4; padding-left:4; padding-right:4;
+font-family:Verdana,Arial; font-size:10pt; color:white;
+}
+
+.menu {background-color:black;layer-background-color:black;font-size:12;font-family:arial;color:ffffff}
+.menu a {color:ffffff}
+.menu a:hover {color:6699ff}

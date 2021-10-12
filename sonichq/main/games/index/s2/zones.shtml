@@ -1,0 +1,513 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta name="description" content="CGI Scripts - Chat">
+	<meta name="keywords" content="Sonic, Tails, Chaotix, Knuckles, Espio, Vector, Charmy, Mighty, Ray, Big, E-102, Amy, Bean, Bark, Freedom Fighters, Sally, Bunnie, Rotor, Antoine, Robotnik, Eggman, Metal Sonic, Nack">
+	<title>Sonic HQ - The Ultimate Sonic Source!</title>
+<style type="text/css">
+	<!-- a:hover {  text-decoration: underline} -->
+	<!-- A{text-decoration:none} -->
+</style>
+
+</head>
+
+<body background=../images/techno.gif bgcolor=black vlink=6699ff text=black link=000066>
+<center>
+
+
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="90%">
+<tr><td width=19><img src="../../../topleft.gif" width=19></td>
+<td bgcolor=black width=100%><font color=6699ff font face=arial font size=3>
+<b>
+Sonic The Hedgehog 2 (Walkthrough)
+</b></font></td>
+<td width=19><img src="../../../topright.gif" width=19></td></tr>
+</table>
+
+<table width="90%" border=0 cellspacing=0 bgcolor=white>
+<tr><td bgcolor=black width=1>&nbsp;</td><td width=100%><center>
+<br>
+
+<b><font face="Arial" size=-1><a href=http://sonichq.org/main.htm>Sonic HQ</a> / <a href=../../>Gaming Info</a> / <a href=../>The Games List</a> / 
+<a href=index.shtml>Index Page</a> / Guide And Walkthrough
+</font></H2>
+
+<img src=../images/topbar.gif>
+</blockquote>
+<br clear=right>
+
+</font></b>
+<p><hr width=100% color=black>
+
+<table border=0>
+<tr>
+<td>
+<IMG SRC=../images/main.jpg align=center>
+</td>
+<td>
+<p>
+
+<p>
+<table width=333 border=0 cellspacing=0 cellpadding=0><tr>
+<td width=10 height=20><img src="/images/borders/topleft.gif" width=10 height=20></td>
+<td width=100% bgcolor=000000><font face=Arial size=-2 color=cyan>
+Sonic 2 Sections
+</font></td>
+<td width=10 height=20><img src="/images/borders/topright.gif" width=10 height=20></td>
+</tr>
+<tr><td colspan=3>
+<table border=0 cellspacing=0 cellpadding=0><tr>
+<td width=2 bgcolor=000000>&nbsp;</td>
+<td width=100% bgcolor=ffffff><font size=2>
+<center><a href=../s2/#story>Story And Intro</a> | <a href=../s2/#zones>Zone Menu</a> | <a href=../s2/#codes>The Code Bank</a> | <a href=../s2/#gamegenie>Game Genie Codes</a> | <a href=../s2/zones.shtml#faq>The FAQ File</a> | <a href=../s2/zones.shtml#special>Special Features And Innovations</a> | <a href=../s2/zones.shtml#walkthrough>Guide And Walkthrough</a> | <a href=../../whoswho/badniks_a.html#2>Badnik Profiles</a><br> | <a href=../../../music/display.cgi?category=genesis&title=sonic2>Music</a> | <a href=../../../images/boxes/>Boxes</a> | <a href=../../../images/screenshots/s2beta/>Screen Shots</a> | <a href=../../replay/s2score.html>Top Scores For Each Act</a></center>
+</font></td>
+<td width=2 bgcolor=000000>&nbsp;</td>
+</tr></table>
+</td></tr>
+<tr>
+<td width=10 height=20><img src="/images/borders/bottomleft.gif" width=10 height=20></td>
+<td width=100% bgcolor=000000><font face=Arial size=-2>&nbsp;</font></td>
+<td width=10 height=20><img src="/images/borders/bottomright.gif" width=10 height=20></td>
+</tr></table>
+
+<p>
+<table width=333 border=0 cellspacing=0 cellpadding=0><tr>
+<td width=10 height=20><img src="/images/borders/topleft.gif" width=10 height=20></td>
+<td width=100% bgcolor=000000><font face=Arial size=-2 color=cyan>
+Sonic 2 Beta And Others
+</font></td>
+<td width=10 height=20><img src="/images/borders/topright.gif" width=10 height=20></td>
+</tr>
+<tr><td colspan=3>
+<table border=0 cellspacing=0 cellpadding=0><tr>
+<td width=2 bgcolor=000000>&nbsp;</td>
+<td width=100% bgcolor=ffffff><font size=2>
+<center><a href=../s2beta/#neverwas>The Hedgehog That Never Was (Sonic 2 Beta)</a> | <a href=../s2beta/#codes>The Code Bank </a> | <a href=../s2beta/#zones>Zone Menu And Walkthrough</a> | Knuckles The Echidna In Sonic 2</a></center>
+</font></td>
+<td width=2 bgcolor=000000>&nbsp;</td>
+</tr></table>
+</td></tr>
+<tr>
+<td width=10 height=20><img src="/images/borders/bottomleft.gif" width=10 height=20></td>
+<td width=100% bgcolor=000000><font face=Arial size=-2>&nbsp;</font></td>
+<td width=10 height=20><img src="/images/borders/bottomright.gif" width=10 height=20></td>
+</tr></table>
+
+</td>
+<td>
+<IMG SRC=../images/main.jpg align=center>
+</td>
+</tr>
+</table>
+
+
+<!-- SPECIAL --><a name="special"></a>
+<p>
+<b><p>
+<CENTER><TABLE BORDER=1 COLS=2 WIDTH="100%" HEIGHT="100%" bordercolor=black>
+<b><p>
+
+<TR>
+<TD bgcolor=black colspan=2>
+<CENTER><FONT FACE="Arial" size=-1 color=white bgcolor=black>
+<LI><u><b>
+<img src=../images/special.jpg align=right>Special Features And Innovations</b></u>
+<p>This area contains special features and innovations associated with Sonic The Hedgehog 2. Anything of noteable mention associated 
+with the game, like insights on its creation, special things and whatnots - you can find it here.
+</u></b></FONT></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1><b>
+<br>
+
+<p><table width=420 border=0 cellspacing=0 cellpadding=0 align=right><tr><a name="special">
+<td width=10 height=20><img src="/images/borders/topleft.gif" width=10 height=35></td>
+<td width=100% bgcolor=000000><font face=Arial size=-1 color=red><img src=../images/boxart.jpg align=right></font></td>
+<td width=10 height=20><img src="/images/borders/topright.gif" width=10 height=35></td>
+</tr>
+<tr><td colspan=3>
+<table border=0 cellspacing=0 cellpadding=0><tr>
+<td width=2 bgcolor=000000>&nbsp;</td>
+<td width=100% bgcolor=ffffff><font size=2>
+
+<center><IMG SRC=/images/boxes/genesis/s2.gif alt="Sonic The Hedgehog 2 - Genesis" align=left height=230></center>
+<center><IMG SRC=/images/boxes/mdeurope/s2.gif alt="Sonic The Hedgehog 2 - Megadrive (Europe)" align=right></center>
+<center><IMG SRC=/images/boxes/md/s2.gif alt="Sonic The Hedgehog 2 - Megadrive (Japan)"></center>
+
+</td>
+<td width=2 bgcolor=000000>&nbsp;</td>
+</tr></table>
+</td></tr>
+<tr>
+<td width=10 height=20><img src="/images/borders/bottomleft.gif" width=10 height=20></td>
+<td width=100% bgcolor=000000><font face=Arial size=-2>&nbsp;</font></td>
+<td width=10 height=20><img src="/images/borders/bottomright.gif" width=10 height=20></td>
+</tr></table>
+
+<p><p><embed autostart="true" loop="true" width=200 height=60 src=http://www.emulationzone.org/sonichq/music/midis/sonic/2/s2endingdb.mid><br> Sonic 2 Ending - Dave Bulmer
+
+<p>Only the big gamers can remember Sonic Twosday - The day when the sequel to Sonic 2 finally came out! The second major installment in the Sonic Genesis series, S2 introduced TONS of new concepts. Most noteably though - it established a link between itself and several VERY POPULAR pop cultural referecnces of its time - namely an American hit named Star Wars and a Japanese Anime in its prime called Dragon Ball Z. 
+
+<p>Finally making the Choas Emeralds worth collecting, Sonic was like Goku in a sense - Introducing the concept of Super Sonic (TWICE as fast as the blue version, hair turns yellow). And if you cant figure out the Death Egg/Death Star thing then theres just no hope for you at all. :O) There are tons of other parallels from both series as well. This game also introduces the first "Sonic Explosion" marketing wise. Namely when Sonic was at his peak popularity all the way up until when Sonic And Knuckles pretty much died out. It was after the release of this game that came the SatAM and AoSTH cartoons, the Archie comics, and when Sonic was almost as widely recognised in the US as Mickey Mouse. To list all of the things Sonic 2 did gameplay wise for both the series, Sega, and gaming in general is sorta too big, but at any rate. Its definetely one of the best in the series by far.
+
+<p>At the time it was released - Sonic 2 had a number of innovations to go along with its 16-bit graphics:
+
+<p><table border=0><tr><td>
+<blockquote><font face="Arial" size=-1>
+<LI><b><u>Speedy Frames Rates</b></u> As if the speed of the first wasn't enough, when you turn Super Sonic - he goes even faster.
+<LI><b><u>Music</b></u> The only videogame at the time that had music of equal or better value is that of the Megaman series. 
+Featuring catchy tunes composed by Koji Kondo, there are tunes from this game that are instantly recogniseable to some gamers.
+<LI><b><u>Level Design & Special Stage</b></u> Pretty much set the standards for any and all Sonic games to come afterward. Longer zones, a bit harder in challenge, finally gave a "use" to collecting Chaos Emeralds. Not to metion a new Sonic staple came in with the loop the loop - namely the "Corkscrew twist".
+<LI><b><u>New Characters</b></u> If you look at it - in almost every major game past this one, Sonic gets one new character for each game that makes major impact For Sonic 3 it was Knux - for Sonic 2 it was Tails.
+</td></tr>
+</table>
+
+</TD>
+</TR>
+</TABLE>
+
+
+
+
+<!-- FAQ --><a name="faq"></a>
+
+<p>
+<b><p>
+<CENTER><TABLE BORDER=1 COLS=2 WIDTH="100%" HEIGHT="100%" bordercolor=black>
+<b><p>
+
+<TR>
+<TD bgcolor=black colspan=2>
+<CENTER><FONT FACE="Arial" size=-1 color=white bgcolor=black>
+<LI><u><b>
+<img src=../images/faq.jpg align=right>Frequently Asked Questions</b></u>
+<p>This area contains frequently asked questions concerning the gaming aspects of Sonic The Hedgehog 2 usually concerning trouble spots or basic info.
+</u></b></FONT></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1><b>
+
+
+<TR>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white>
+<LI> 
+How long can Sonic stay underwater?
+</FONT></FONT></B></CENTER>
+</TD>
+<TD><CENTER><FONT FACE="Arial" size=-1>
+<b>
+30 seconds. It takes 5 seconds for the first "ding" warning, and the warning repeats at 10 seconds and 15 seconds. After 18 seconds (or 3 seconds after the 3rd warning), the "danger" music and countdown start. The countdown lasts 12 seconds.
+ </CENTER></b>
+</TD>
+</TR>
+
+
+
+<TR>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white>
+<LI> 
+How do you beat Silver Sonic in the Death Egg Zone?
+</FONT></FONT></B></CENTER>
+</TD>
+<TD><CENTER><FONT FACE="Arial" size=-1>
+<b>
+Here's the order of his moves, starting from the right side of the screen:
+<table width=100%><tr><td>
+1. Spin across floor. <-<br>
+2. Standing dash to the right, then back to the left.<br>
+3. Jump -><br>
+4. Spin <-<br>
+5. Spin -><br>
+6. Jump <- with spikes shooting<br>
+7. Dash<br>
+8. Jump ->
+<td>
+9. Spin <-<br>
+10. Spin -><br>
+11. Jump <-<br>
+12. Spin -><br>
+13, Dash<br>
+14, Spin <-<br>
+15. Jump -><br>
+16. Jump <- with spikes shooting
+</table>
+Repeat from 1, but with the directions switched, since you're starting on the left.
+
+(The Standing Dash is a great time to attack. If you do a spin dash, Silver Sonic will go right though you, and take damage, while you will be unharmed.)
+
+ </CENTER></b>
+</TD>
+</TR>
+
+
+
+<TR>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white>
+<LI> 
+How do I get out of that pit in the Mystic Caves?
+</FONT></FONT></B></CENTER>
+</TD>
+<TD><CENTER><FONT FACE="Arial" size=-1>
+<b>
+You can't - Point blank: You fall in, you die. :O) Even with Super Sonic you have to wait for your rings to dwindle away and then you STILL die. So make sure you find the lever right before it lest you fall in.
+ </CENTER></b>
+</TD>
+</TR>
+
+
+
+<TR>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white>
+<LI> 
+How do I access the Hidden Palace Zone and whats that tune in the Sound Test? Its obviously a zone, but I don't hear the music anywhere in the game...
+</FONT></FONT></B></CENTER>
+</TD>
+<TD><CENTER><FONT FACE="Arial" size=-1>
+<b>
+The music you hear in the sound test is the lost Hidden Palace Zone. You can't get into the HP from the Sonic 2 cartridge because it was taken out in the final version. The only way you can play it is in the Beta of Sonic 2, available from different sources on the net. Check our S2 Beta page to learn more of it. And you can hear the "tune" in question on that page as well.
+ </CENTER></b>
+</TD>
+</TR>
+
+
+
+<TR>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white>
+<LI> 
+How do I beat The Eggsterminator (Final Boss) with Knuckles?
+</FONT></FONT></B></CENTER>
+</TD>
+<TD><CENTER><FONT FACE="Arial" size=-1>
+<b>
+This is a toughie fight! Remember though - You can only get here if you attach Sonic and Knuckles to Sonic 2. First of all, when you get to Silver Sonic in the Death Egg Zone - beat him fast! The quicker you beat him, the more time you conserve. This is a long one...First of all don't attack while the Eggsterminator is walking or anything else. Because Knuckles' jump range lower than Sonic you'll only hit his legs and die. This is the SAFEST way to beat Robotnik in his super suit using Knuckles - His jumping ability is not good so this is MUCH harder. Go to the 4th or 5th window from the left when the cross-hairs are on you. When he's ready to slam down, spindash to the right. He will land and try to shoot his arms at you, but they won't reach. He will fly back up, and do it again. Go back to the same place. When the cross-hairs are locked on, walk away to the right side. He will land and the top of the suit will come down. Hit him in the chest when it dips all the way down. Remember only attack Robotnik every <b>other</b> time he lands. The dip is the ONLY time you can hit and it'll take at least 10-12 hits. So by the time you finish, time will pretty much almost be up.
+ </CENTER></b>
+</TD>
+</TR>
+
+
+
+</TD>
+</TR>
+</TABLE>
+
+
+<!-- ZONE MENU --><a name="zones"></a>
+
+<p>
+<b><p>
+<CENTER><TABLE BORDER=1 COLS=2 WIDTH="100%" HEIGHT="100%" bordercolor=black>
+<b><p>
+
+<TR>
+<TD bgcolor=black colspan=2>
+<CENTER><FONT FACE="Arial" size=-1 color=white bgcolor=black>
+<LI><u><b>
+<img src=../images/walkthrough.jpg align=right>The Gamers Guide Walkthrough</b></u>
+
+<p>Listed below is the zone menu for Sonic The Hedgehog 1. Click on the name of the corresponding zone to be taken to the 
+respective section of our thorough walkthroughs area for any information that we have on it, from stats, to bosses, to descriptions.
+If a zone has a link, then most likely we have info on its past information. If so, click on the name to learn more about it, in our 
+"Hedgehog That Never Was" area! ^_^</u></b></FONT></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1><b>
+
+<tr>
+<td colspan=2>
+
+<p>
+<center><table border=0><tr><td><font face="Arial" size=-1>
+<br><li><a href=#z1><b>Emerald Hill Zone</b> (Original Name - Green Hill Zone)</a><b>
+<br><li><a href=#z2>Chemical Plant Zone</a>
+<br><li><a href=#z3>Aquatic Ruin Zone</b> (Original Name - Neo Green Hill Zone)</a><b>
+<br><li><a href=#z4>Casino Night Zone</a>
+<br><li><a href=#z5>Hill Top Zone</a>
+<br><li><a href=#z6>Mystic Cave Zone</b> (Original Name - Dust Hill Zone)</a><b>
+<br><li><a href=#z7>Oil Ocean Zone</a>
+<br><li><a href=#z8>Metropolis Zone</a>
+<br><li><a href=#z9>Sky Chase Zone</a>
+<br><li><a href=#z10>Wing Fortress Zone</b> (Original Name - Sky Fortress Zone)</a><b>
+<br><li><a href=#z11>Death Egg Zone</a>
+<br><li><a href=#special>Special Zone</a></b> (3D Halfpipe Race)
+
+<p><center><u><b>Zones Taken Out In Final Version</u><br></center>
+<a href=../s2beta/#z7>Hidden Palace Zone</b> - Accesible Only By Code Or In Beta</a><br>
+<a href=../s2beta/#z5><b>Wood Zone</b> - Accesible Only In Sonic 2 Beta</a><br>
+<a href=../s2beta#z8><b>Genocide City Zone</b> - Accesible Only In Sonic 2 Beta</a>
+</font></td>
+<td>
+<p><img src=http://www.sonichq.org/images/screenshots/sonic2/sth2robo.gif>
+<p><a href=zones.shtml#knuckles><img src=http://www.sonichq.org/images/screenshots/sonic2/sonic2andk.gif alt="Click here to see the section on the Sonic 2 and Sonic & Knuckles Lock On">
+</td>
+</tr>
+</table>
+</TD>
+</TR>
+<!-- ZONES --><a name="zones"></a>
+
+<TR>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
+<LI> <a href=../s2beta/#z1><u>Emerald Hill Zone<u></a><a name=z1>
+<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2corkscrew.gif">
+</FONT></FONT></B></CENTER>
+</TD>
+<TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
+<b><p>This is the first zone in this game and the easiest as well. Not many dangers here, but the most annoying badnik to watch out for is Coconuts. Watch for the direction he throws them in and just move around them. Thats about it. Unlike Sonic 1, this game has 2 acts for every zone, except Metropolis zone which has 3. At the end of Act 2, you must fight Robotnik in a landrover with a drill attached to the front. Jump the drill and land on the top of the vehicle to score a hit. After 7 hits, Robotnik will come by again, but he will shoot the drill off. Jump the drill and land on him to get rid of him. 
+</center></TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
+<b><p>Big City, Bright lights, smelly stinky factories! Who could ask for anything more? The badniks are easy to avoid, but the Mega Mack is a bit harder...Mega Mack is a purple liquid that Sonic will fall in and drown within seconds. The entire plant floods with the stuff in the second act, and because there are no air bubbles in the metal floors Stay away from it at all costs and keep to the top. If you fall down deep enough, try to reach the top aghain, but remember your speed is slowed down a bit when in any kind of liquid. Also make sure to avoil the oil bursts - going too fast can make you prone to run into them. The boss of this zone is pretty easy. Robotnik will suck up the Mega Mack below and try to drop it on Sonic as an oil ball. Avoid him and hit him while he's sucking it up. Eight hits will do the job. 
+
+</center></TD>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
+<LI> <a href=../s2beta/#z2><u>Chemical Plant Zone<u></a><a name=z2>
+<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2chemplant.gif">
+</FONT></FONT></B></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
+<LI> <a href=../s2beta/#z3><u>Aquatic Ruin Zone<u></a><a name=z3>
+<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2aquaruin.gif">
+</FONT></FONT></B></CENTER>
+</TD>
+<TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
+<b><p>Return of the classic water stage! But unlike its Labyrinth predecessor, you have the option of above or below sea level. ^_^ Try to stay above the water as its easier. If you stay on the platforms above, you may never have to go above the water in either act. I've done it. Watch out for the pillars that shoot arrows out of them but most of all, look for suspicious cracks in the walls for Grounders and above all stay away from Wisps (those big blue metallic mosquitoes). The Act 2 boss here is 2 pillars. Robotnik will float overhead and pound the two pillars. When he pounds a pillar an arrow will fly out and hit the opposite pillar. Dodge the arrow and jump on it, then jump at Robotnik. He will move to the other pillar and repeat the pattern. Hit him 8 times and he's done for. 
+
+</center></TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
+<b><p>This stage is kind of similar to Spring Yard Zone in Sonic 1. One of the most popular zones in the Sonic series, Casino Night City (as its referred to in other Sonic mediums) sort of redefines the whole "Pinball Zone" aspect. There are bumpers and springs everywhere. To play the slots, jump in the silver circles with 3 pictures above them. If you land on 3 Jackpots, you get 200 rings. Three Robotniks take away 200 rings. Press the jump button to bounce off the flippers. The only badniks here is Crawl, a small robot with a shield. To get rid of him, you must attack him from behind - but don't bother, he's not worth it. In Act 2, Robotnik floats in the air in his Egg-O-Matic dropping spiked mines on you. Dodge them and the red pellets they send flying when they explode. He will also drop down and try to pick you up. Jump on the flippers and bounce up at him. Eight hits gets rid of him. 
+</center></TD>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
+<LI> <u><a href=../s2beta/#z4>Casino Night Zone<u></a><a name=z4>
+<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2casino.gif">
+</FONT></FONT></B></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
+<LI> <u>Hill Top Zone<u><a name=z5>
+<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2hilltop.gif">
+</FONT></FONT></B></CENTER>
+</TD>
+<TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
+<b><p>A sky high mountainous area that plays Hillbilly music and is prone to lavaspurts and earthquakes, this is a pretty tame zone, the aboveground part that is. The Sols, Orbinauts with fireballs revolving around them, are easy to dodge. When you see a teeter totter with a badnik resting on one side, jump on it to send the badnik flying in the air. Run to the other side. The badnik will fall back down where you were, bouncing you up in the air. Underground, the shell badniks aren't to hard to cope with, but you have to avoid the lava that rises up from the ground when the eathquakes hit. In Act 2, there are some hills above the lava. There is a pool of lava resting in between. Robotnik will come up and try to torch you with fire. Jump to the other platform and hit him when he comes back up. Eight hits gets rid of him. 
+</center></TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
+<b><p>This zone is an underground area where Robotnik is searching for the legendary Chaos Emeralds! Of course, they're not here, But many of his badniks are. Spikes and fast moving pillars that will crush can get rid of you real fast unless you're quick to avoid them. Flasher is a firebug badnik that you can't hit unless he's not flashing. Crawlton is a caterpillar badnik that will pop out of the rocks. He can be easily defeated, but ONLY when you touch his head. If you see a vine, pull on it. It usually opens up a bridge or a wall leading to another area. Some vines act like elevators, and pull you up or lower you down. In Act 2, Robotnik uses a drill machine to attack you. Watch out when he goes in the ceiling or comes out of it, for staclatites are falling out of the ceiling. When Robotnik is on the ground, watch out when his drills are in front of the machine. Hit him on top now. Stay away when the drills are on top, because he's about to go into the ceiling. Eight hits defeats him. 
+</center></TD>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
+<LI> <a href=../s2beta/#z6><u>Mystic Cave Zone<u></a><a name=z6>
+<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2mysticcave.gif">
+</FONT></FONT></B></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
+<LI> <u>Oil Ocean Zone<u><a name=z7>
+<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2oilocean.gif">
+</FONT></FONT></B></CENTER>
+</TD>
+<TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
+<b><p>Here's another one of Robotnik's factories, except this time, it's oil-ridden. If you stay in the oil too long, you'll drown. Watch out for Aquis, a badnik shaped like a sea-horse. Octus, an octopus badnik, doesn't cause much trouble. You can't do anything when you're being propelled by the steam vents, so just hang on and enjoy the ride. At the end of Act 2, Robotnik will attack much like Hill Top zone. He will come out of the oil and try to shoot you with 3 lasers. Dodge the lasers and hit him before he goes back in. A scorpion tail will then come out. Dodge it and Robotnik will come back up and repeat the pattern. Eight hits defeats him. 
+</center></TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
+<b><p>Enter Robotnik's ground base !!! The only zone in the game with 3 acts, Metropolis is fair, but parts of it can get pretty frustrating. There are 3 badniks to deal with in here, but only one of them causes a major problem - Asteron, a star badnik, shoots his appendages off at you in 5 different directions. It's very a difficult attack to dodge, specifically when youre on a revolving nut and cannot move while going up or down. Also they tend to blend into the mechanical scenery since they sit perfectly still and only attack when you get close. Also avoid Slicer - the preying mantis bot and Shellshocker, an annoying lobster badnik that doesnt move much but has a very annoying claw attack. At the end of Act 3, you must fight Robotnik again. He will have several egg spheres revolving around him. Hit him to make a sphere bounce off and turn into a Robotnik balloon. Spin attack it to burst it. After 7 hits he will have no spheres left. He will try to shoot large lasers at you from the ruby on his Egg O Matic. Dodge them and hit him once more to kill him off.
+</center></TD>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
+<LI> <u>Metropolis Zone<u></a><a name=z8>
+<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2metropolis.gif">
+</FONT></FONT></B></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
+<LI> <u>Sky Chase Zone<u><a name=z9>
+<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2skychase.gif">
+</FONT></FONT></B></CENTER>
+</TD>
+<TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
+<b><p>Robotnik's evacuated his Metropolis base and taken off in his Wing Fortress! This zone is short and sweet as Tails will fly you through the air on his biplane, The Tornado! You can't fall off the plane unless you spin dash, so don't even try it! This zone is pretty easy nonetheless, all you have to do is take out the badniks - Turtleoids, Balkirys, and Nebulas. Only one act too. After Wing Fortress zone passes by you (isn't there a sky speed limit?), you must destroy a few more badniks before you cruise on to Wing Fortress Zone. 
+</center></TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
+<b><p>Like Sky Chase, this zone only has one act. Unlike Sky Chase, this zone has a boss at the end of the act. This zone is pretty easy too. The only badnik is Clucker, a robot chicken in a turret. Watch out for the propellers and hang on to the boxes when the wind is pushing you through the air. Look for those with an "X" brand on it to know what to grab. At the end of the act, Robotnik traps you in between two laser beams. A larger laser beam fires at you from the top. Dodge it's blasts and jump on the small rotating platforms. Hit the laser beam 8 times and Robotnik will run away and hop in his ship. Jump to the right of the hole for a 1-up and fall in the hole to see him take off. You will jump on Tails plane (now equipped with handy rocket booster) and grab the ship for a free flight to The Death Egg as the Wing Fortress takes a trip to in outer space. Next stop....
+</center></TD>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
+<LI> <u>Wing Fortress Zone<u></a><a name=z6>
+<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2wingfort.gif">
+</FONT></FONT></B></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
+<LI> <a href=../s2beta/#z8><u>Death Egg Zone<u></a><a name=z11>
+<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2deathegg.gif">
+</FONT></FONT></B></CENTER>
+</TD>
+<TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
+<b><p>The Death Egg! And believe it or not - this is just the prototype! ^___^ In this one act zone, you must fight 2 bosses before finally defeating Robotnik. The first is "The Silver Sonic" - a prototype to Metal Sonic. Jump over his spin attacks when he rolls on the ground and run under them when he jumps in the air. When he stands in one corner and rolls his spines, hit him on the head. Spin dash him when he dashes at you. Eight hits will bring the Siver Sonic to a stop! Now you must fight Robotnik in his giant robot War Machine - The Eggsterminator! This mech is a giant Robot-Robotnik that pretty much takes up a chunk of the screen O_O! Back away when he walks forward and hit his belly when he's standing still. When he flies up in the air, get out of the way quick or you'll be crushed. If he lands in front of you, he'll shoot his hands out, so jump over them. If he lands in front of you, he'll launch 2 bombs. Get out of the way before they explode. If you're playing this game with Knuckles on the S&K lock on check the FAQ file on this page for more info on how to beat him with an all new pattern. Twelve hits and you've defeated Robotnik. Sit back and watch the ending! 
+</center></TD>
+</TR>
+
+<TR>
+<TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
+<b>Possibly one of the BEST Sonic Special Stages created - This is a great Mode 7 special stage in which you run in a 3D halfpipe collecting rings. You must collect a certain number of rings (designated before each lap) before you reach a certain point in the stage to advance. If you have enough rings each of the three times, you are awarded with a Chaos Emerald at the end. The stages get progressively harder often making you loop the loop in a ring pattern and later on adding mines in the middle of the track. Once you have all 7 Chaos Emeralds, get 50 rings in the middle of the regular game and jump up in the air to become Super Sonic! In this state you are invincible, move twice as fast and can knock enemies out just by touching them. Your rings run out though, so keep getting them to stay super. :O) 
+
+</center></TD>
+<TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
+<LI> <u>The Special Zone</u></b><a name=special>
+<br>The 3D Halfpipe Race - Mode 7 Madness!
+<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2special.gif">
+</FONT></FONT></B></CENTER>
+</center></TD>
+
+
+</FONT></FONT></B></CENTER>
+</TD>
+</TR>
+</TABLE>
+
+<b><p>
+
+
+<br clear=right>
+<br></font></center>
+<p></center></td><td bgcolor=black width=2>&nbsp;</td></tr>
+</tr></td></table>
+
+<!main table bottom>
+<table border=0 cellspacing=0 cellpadding=0 width=90%>
+<tr>
+<td><img SRC="../../../bottomleft.gif" BORDER=0 height=20></td>
+<td width=99% bgcolor=000000>&nbsp;</td>
+<td><img SRC="../../../bottomright.gif" BORDER=0 height=20></td>
+</tr>
+</table>
+<!end main table bottom>
+

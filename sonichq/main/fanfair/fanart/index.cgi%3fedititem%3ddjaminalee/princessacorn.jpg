@@ -1,0 +1,16 @@
+<form action=send.cgi method=post>
+<table border=0 cellspacing=0 cellpadding=0>
+<input type=hidden name=edititem value="djaminalee/princessacorn.jpg">
+<tr><td>Directory:</td><td><input type=text name=directory value="djaminalee/" size=30></td></tr>
+<tr><td>Filename:</td><td><input type=text name=filename value="princessacorn.jpg" size=30></td></tr>
+<tr><td>Preview URL:</td><td><input type=text name=preview value="djaminalee/thumbnails/" size=30></td></tr>
+<tr><td>Author:</td><td><input type=text name=author value="Swiftrunner" size=30></td></tr>
+<tr><td>Size:</td><td><input type=text name=size value="69325" size=30> (blank to get size of <b>local</b> files automatically)</td></tr>
+</table>
+<p><textarea name=keywords rows=15 cols=75>,sally,</textarea>
+
+<p><textarea name=comments rows=15 cols=75>Would you believe me if I said this is Sally? It's true! It ain't no fan version of her either! If ya don't believe me look at the "Before satAM" page at SonicHQ! </textarea>
+
+<p><input type=password name=password>
+<p><input type=submit value=Send>
+</form>
