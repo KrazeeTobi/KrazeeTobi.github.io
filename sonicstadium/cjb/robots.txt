@@ -1,0 +1,30 @@
+
+
+<html>
+<head>
+<title>The Sonic Stadium - Welcome</title>
+<meta name="keywords" content="Sonic Stadium">
+<meta name="description" content="The Best Place for all your Sonic needs! News, Downloads, Games, Cheats, Art, you name it, the Stadium has it!">
+</head>
+
+<frameset rows="*,73" frameborder="0" border="0" framespacing="0" marginwidth="0"
+marginheight="0">
+<noframes>
+<body><center>
+<h1>{The Sonic Stadium - Welcome}</h1>
+{The Best Place for all your Sonic needs! News, Downloads, Games, Cheats, Art, you name it, the Stadium has it!}<p>
+We're sorry but you've reached a Microsoft IIS hosted web site that uses frames.  You will need a
+frames-enabled browser in order to view the site. NBC.
+</center></body>
+</noframes>
+<frame name="thepage" src="http://dreadknux.topcities.com/sonicstadium/index.html/robots.txt" marginwidth="0" marginheight="0"
+frameborder="no" framespacing="0" border="0">
+
+<frame name="pb" src="http://rstrip.namezero.com/navbar/strip.jsp?name=sonic-stadium.com&viewsize=full_ad&product=5"
+marginwidth="0" marginheight="0" scrollbars="no" scrolling="no" framespacing="0" frameborder="yes" border="1" NORESIZE>
+
+</frameset>
+
+</html>
+
+
