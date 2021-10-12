@@ -1,0 +1,21 @@
+<form action=send.cgi method=post>
+<table border=0 cellspacing=0 cellpadding=0>
+<tr><td>Title:</td><td><input type=text name=title value="Sonic CD Metal Sonic Generators" size=30></td></tr>
+<tr><td>Reporter:</td><td><input type=text name=reporter value="Vector" size=30></td></tr>
+<tr><td>4-digit year:</td><td><input type=text name=yyyy value="2000" size=4 maxlength=4></td></tr>
+<tr><td>2-digit month:</td><td><input type=text name=mm value="01" size=2 maxlength=2></td></tr>
+<tr><td>2-digit day:</td><td><input type=text name=dd value="21" size=2 maxlength=2></td></tr>
+<tr><td>2-digit hour (24-hour time):</td><td><input type=text name=hour value="15" size=2 maxlength=2></td></tr>
+<tr><td>2-digit minute:</td><td><input type=text name=min value="58" size=2 maxlength=2></td></tr>
+</table>
+
+<p>Question:<br><textarea name=question rows=15 cols=75>I have a question about the Sonic CD game: I know that destroying the Robot generators will create a good future in each zone, but what effect does destroying the Metal Sonic generators have?</textarea>
+
+<p>Response:<br><textarea name=answer rows=15 cols=75>As far as anyone knows, they cause the level in which you find a generator to be filled with animals.  I called Sega about this a few years ago, and one guy over there said something about fighting Metal Sonic in the Metallic Madness Zone (?!), but when I called another time, nobody knew what he was talking about.  I've gottn every Metal Sonic Generator in the game before, but nothing seemed to change in the game except that all the levels had animals in them.
+</textarea>
+
+<p><input type=password name=password>
+<p><input type=submit value=Preview>
+<input type=hidden name=id value=2>
+<input type=hidden name=preview value=1>
+</form>

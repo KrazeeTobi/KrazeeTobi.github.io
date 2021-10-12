@@ -1,0 +1,21 @@
+<form action=send.cgi method=post>
+<table border=0 cellspacing=0 cellpadding=0>
+<tr><td>Title:</td><td><input type=text name=title value="Songs With Attitude" size=30></td></tr>
+<tr><td>Reporter:</td><td><input type=text name=reporter value="Vector" size=30></td></tr>
+<tr><td>4-digit year:</td><td><input type=text name=yyyy value="2000" size=4 maxlength=4></td></tr>
+<tr><td>2-digit month:</td><td><input type=text name=mm value="01" size=2 maxlength=2></td></tr>
+<tr><td>2-digit day:</td><td><input type=text name=dd value="21" size=2 maxlength=2></td></tr>
+<tr><td>2-digit hour (24-hour time):</td><td><input type=text name=hour value="15" size=2 maxlength=2></td></tr>
+<tr><td>2-digit minute:</td><td><input type=text name=min value="32" size=2 maxlength=2></td></tr>
+</table>
+
+<p>Question:<br><textarea name=question rows=15 cols=75>Where can I get the Sonic Adventure vocal Soundtrack ;quotation;Songs With Attitude;quotation;<br>CD for the cheapest price? And what is the cost?</textarea>
+
+<p>Response:<br><textarea name=answer rows=15 cols=75>The CD is about $30, and can be found on a number of sites.  Check the FAQ for links.
+</textarea>
+
+<p><input type=password name=password>
+<p><input type=submit value=Preview>
+<input type=hidden name=id value=0>
+<input type=hidden name=preview value=1>
+</form>

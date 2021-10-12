@@ -1,0 +1,21 @@
+<form action=send.cgi method=post>
+<table border=0 cellspacing=0 cellpadding=0>
+<tr><td>Title:</td><td><input type=text name=title value="Sonic Adventure Lyrics" size=30></td></tr>
+<tr><td>Reporter:</td><td><input type=text name=reporter value="Vector" size=30></td></tr>
+<tr><td>4-digit year:</td><td><input type=text name=yyyy value="2000" size=4 maxlength=4></td></tr>
+<tr><td>2-digit month:</td><td><input type=text name=mm value="01" size=2 maxlength=2></td></tr>
+<tr><td>2-digit day:</td><td><input type=text name=dd value="21" size=2 maxlength=2></td></tr>
+<tr><td>2-digit hour (24-hour time):</td><td><input type=text name=hour value="15" size=2 maxlength=2></td></tr>
+<tr><td>2-digit minute:</td><td><input type=text name=min value="58" size=2 maxlength=2></td></tr>
+</table>
+
+<p>Question:<br><textarea name=question rows=15 cols=75>Hi!  Recently I listened to the character songs for Sonic Adventure.  I really like the music, but due to bad sound quality on my own computer I can't always understand what is  being said.  I was wondering if you could tell me where I can find the lyrics to the songs.  I would really apprectiate it!  Also, while I'm writing this, I feel inclined to tell you how much I love your site!  You probably recieve hundreds of these usless compliments... but oh well.  ^_^  One more thing:  Does this ever get annoying?  I mean you poor people, sitting there answering tons of pointless questions.  ^_^  Well, have fun!  And thanks!<p>-Dark</textarea>
+
+<p>Response:<br><textarea name=answer rows=15 cols=75>The lyrics are available on the music page.  <p>Thanks for saying you like the site. :)  It is nice to hear.  And yes, it can get a little annoying sometimes.  Thanks for understanding ^_^. 
+</textarea>
+
+<p><input type=password name=password>
+<p><input type=submit value=Preview>
+<input type=hidden name=id value=1>
+<input type=hidden name=preview value=1>
+</form>

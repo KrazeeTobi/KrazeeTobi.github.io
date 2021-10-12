@@ -1,0 +1,31 @@
+Instructions:
+<li>Enter the information into the form.
+<li>The form is HTML-enabled.  This isn't a forum - lines and paragraphs won't be added to your article unless you use &lt;br&gt; and &lt;p&gt;, respectively.  If you don't the entire article will appear as one paragraph.
+<li>The extended form will put an extended part of the article on an additional page, for long articles or articles with multiple pics.
+<li>Use &lt;a href=*url* target="_whole"&gt;*Link Title*&lt;/a&gt; for links and put &lt;p&gt;&lt;b&gt;Source:&lt;/b&gt; &lt;a href=*url* target="_whole"&gt;*Link Title*&gt; after your post to link to your source if you got the information off the net - it will look and act like this when done correctly: <b>Source:</b> <a href=www.sonichq.org target="whole">Sonic HQ</a>.
+<form action=display.cgi method=post>
+<table border=0 cellspacing=0 cellpadding=0>
+<tr><td>Title:</td><td><input type=text name=title value="" size=30></td></tr>
+<tr><td>Reporter:</td><td><input type=text name=reporter value="" size=30></td></tr>
+<input type=hidden name=yyyy value="2001" size=4 maxlength=4>
+<input type=hidden name=mm value="8" size=2 maxlength=2>
+<input type=hidden name=dd value="8" size=2 maxlength=2>
+<input type=hidden name=hour value="9" size=2 maxlength=2>
+<input type=hidden name=min value="41" size=2 maxlength=2>
+<input type=hidden name=time value="200108080941" size=12 maxlength=12>
+</table>
+
+<p>Categories:
+Not Yet Implemented
+
+<p>Intro:<p><textarea name=contents rows=15 cols=75></textarea>
+
+<p>Extended:<p><textarea name=extended rows=15 cols=75></textarea>
+
+<p><input type=hidden name=password value=guest>
+<p><input type=submit value=Preview>
+<input type=hidden name=id value="new">
+<input type=hidden name=categories value="sonic">
+<input type=hidden name=series value="sonic">
+<input type=hidden name=preview value=1>
+</form>

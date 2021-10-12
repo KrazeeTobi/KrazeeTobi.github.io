@@ -1,0 +1,965 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Sonic HQ & Mega Man HQ Music</title>
+<style>
+<!-- a:hover {  text-decoration: underline} -->
+<!-- A{text-decoration:none} -->
+</style>
+</head>
+
+<body text=000000 link=FFFFFF vlink=FF0000 background=/images/backgrounds/bluecurve.gif>
+&nbsp
+
+<!-- HQ TITLE BAR -->
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=640>
+<tr>
+<td VALIGN=TOP COLSPAN=3 WIDTH=640><img SRC=/images/HQ-bar.gif BORDER=0 height=30 width=640></td>
+</tr>
+</table>
+<!-- END HQ TITLE BAR -->
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=640>
+<tr>
+
+<!-- LEFT LINK BAR -->
+<td VALIGN=TOP WIDTH=130>
+<font face="Arial Black" color=FF0000 size=-1>Other
+Sections</font>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0>
+<tr><td><font face=Verdana size=-1>
+
+<a href=display.cgi?category=nes><font color=FFFFFF>NES<!-- Sonic PC --></font></a><br>
+<a href=display.cgi?category=original><font color=FFFFFF>Sonic Fan Made</font></a><br>
+<a href=display.cgi?category=cartoon><font color=FFFFFF>Cartoon Music</font></a><br>
+<a href=display.cgi?category=dreamcast><font color=FFFFFF>Dreamcast</font></a><br>
+<a href=display.cgi?category=gamegear><font color=FFFFFF>Game Gear</font></a><br>
+<a href=display.cgi?category=arcade><font color=FFFFFF>Arcade Music</font></a><br>
+<a href=display.cgi?category=genesis><font color=FFFFFF>Genesis Music</font></a><br>
+<a href=display.cgi?category=musiccd><font color=FFFFFF>Sonic Music CDs</font></a><br>
+<a href=display.cgi?category=segacd><font color=FFFFFF>Sega CD</font></a><br>
+<a href=display.cgi?category=saturn><font color=FFFFFF>Saturn Music</font></a><br>
+<a href=display.cgi?category=32x><font color=FFFFFF>32X Music</font></a><br>
+<a href=display.cgi?series=series><font color=FFFFFF>Others</font></a>
+
+</font></td></tr></table>
+
+<br>&nbsp;
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 COLS=1 WIDTH=100%><td>
+<center><img SRC="/images/sprites/3d-runright.gif" height=50 width=51>
+<br><font face=Verdana color=FFFFFF size=-2>Please 
+<a href="mailto:shq_music@echidnoyle.org">submit</a> any MIDIs we don't already have. Thanx!</font></center>
+</td></table>
+
+</td>
+<!-- END LEFT LINK BAR -->
+
+<td VALIGN=TOP WIDTH=30></td>
+
+<!-- MAIN AREA -->
+<td VALIGN=TOP WIDTH=468>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=468>
+<tr><td VALIGN=TOP WIDTH=360>
+<font face=Arial,Helvetica><font color=3333FF size=+3>Updates</font>
+<br><font size=-1>108 total files.</font></font></td></tr>
+
+<tr><td COLSPAN=2 WIDTH=468>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>03-31-2000:</font></b><br>
+
+<br><b><font face=Arial,Helvetica size=-1>SonicThe Hedgehog 2 Midi files added:</font></b>
+<br><font face=Impact color=3333FF>1 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/2/casino-night-extended-am.mid">Casino Night Extended Remix</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Al Miskell</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0412</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>45.9</font></td>
+</tr>
+</table>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>03-31-2000:</font></b><br>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic the Hedgehog (1) Midi files added:</font></b>
+<br><font face=Impact color=3333FF>1 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/1/springyard-am.mid">Spring Yard</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Al Miskell</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0044</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>11.8</font></td>
+</tr>
+</table>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>03-31-2000:</font></b><br>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic the Hedgehog 3 Midi files added:</font></b>
+<br><font face=Impact color=3333FF>1 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3k/special-am.mid">Special Zone</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Al Miskell</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0241</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>58.5</font></td>
+</tr>
+</table>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>03-28-2000:</font></b><br>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic 3D Blast (CD Version) Midi files added:</font></b>
+<br><font face=Impact color=3333FF>10 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dcd/1upjw.mid">1-up</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0004</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1.66</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dcd/diamonddustjj.mid">Diamond Dust Zone</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0304</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>49.8</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dcd/finalbossjr.mid">Final Boss</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jeff Read</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0208</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>14.1</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dcd/genegadgetjj.mid">Gene Gadget</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0213</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>25</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="gotsoniciconjw.mid">Got Sonic Icon</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0001</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dcd/greengrovejj.mid">Green Grove</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0304</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>54</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dcd/pannicpuppetjj.mid">Panic Puppet Zone</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0218</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>26</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dcd/panicpuppetjr.mid">Panic Puppet Zone</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jeff Read</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0240</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>28</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dcd/volcanovalleyjw.mid">Volcano Valley</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0257</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>46</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dcd/volcanovalley2jw.mid">Volcano Valley 2</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0232</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>43</font></td>
+</tr>
+</table>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>03-24-2000:</font></b><br>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic CD (Sega CD, PC) Midi files added:</font></b>
+<br><font face=Impact color=3333FF>31 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/sonicboom-fast1-bb.mid">Sonic Boom - Fast Version (1)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Ben Bagley</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0126</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>13.7</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/sonicboom-fast2-bb.mid">Sonic Boom - Fast Version (2)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Ben Bagley</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0131</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>13.8</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/sonicboom-fastremix-s.mid">Sonic Boom - Fast Version (Remix)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Solly</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0121</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>26.2</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/sonicboom-slow-bb.mid">Sonic Boom - Slow Version</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Ben Bagley</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0328</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>31.1</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/sonicboom-slow-ek.mid">Sonic Boom - Slow Version</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Edan Koch</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0318</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>19.7</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/sonicboom-slow-ira.mid">Sonic Boom - Slow Version</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Ira</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0422</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>63.1</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/palmtreepanic-present-jw.mid">Palmtree Panic - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0152</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>23.5</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/palmtreepanic-present1-jj.mid">Palmtree Panic - Present (1)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0153</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>15.7</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/palmtreepanic-present2-jj.mid">Palmtree Panic - Present (2)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0153</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>22.9</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/collisionchaos-present-jj.mid">Collision Chaos - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0115</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>15.1</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/tidaltempest-bad-jj.mid">Tidal Tempest - Bad Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0124</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>24.4</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/tidaltempest-good-jw.mid">Tidal Tempest - Good Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0118</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>13.8</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/quartzquadrant-present1-jj.mid">Quartz Quadrant - Present (1)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0143</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>10.2</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/quartzquadrant-present2-jj.mid">Quartz Quadrant - Present (2)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0143</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>14.3</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/quartzquadrant-good-jw.mid">Quartz Quadrant - Good Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0116</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>21.6</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/wackyworkbench-present-bb.mid">Wacky Workbench - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Ben Bagley</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0136</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>24.2</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/wackyworkbench-present-jj.mid">Wacky Workbench - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0128</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>34.8</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/wackyworkbench-present-jw.mid">Wacky Workbench - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0135</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>10.2</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/wackyworkbench-bad-jj.mid">Wacky Workbench - Bad Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0119</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>18.3</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/wackyworkbench-good-jw.mid">Wacky Workbench - Good Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0059</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>10.9</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-present-ek.mid">Stardust Speedway - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Edan Koch</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0155</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>36.2</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-present-jj.mid">Stardust Speedway - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0157</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>51.9</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-present-jw.mid">Stardust Speedway - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0155</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>15.5</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-bad-jj.mid">Stardust Speedway - Bad Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0104</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>19.2</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="http://www.sonicteam.com/sz/midi/sz/other/scd/star_sbad(sz).mid">Stardust Speedway - Bad Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Sz</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0109</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>23.5</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-bad1-bb.mid">Stardust Speedway - Bad Future (1)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Ben Bagley</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0108</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>17.1</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-bad1-jw.mid">Stardust Speedway - Bad Future (1)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0105</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>11.2</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-bad2-bb.mid">Stardust Speedway - Bad Future (2)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Ben Bagley</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0116</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>21.5</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-bad2-jw.mid">Stardust Speedway - Bad Future (2)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0109</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>23.4</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-badremix-s.mid">Stardust Speedway - Bad Future (Remix)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Solly</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0109</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>46.1</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-good-jw.mid">Stardust Speedway - Good Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0110</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>20</font></td>
+</tr>
+</table>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>03-20-2000:</font></b><br>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic CD (Mega CD) Midi files added:</font></b>
+<br><font face=Impact color=3333FF>2 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/stardustspeedway-good1-ek.mid">Stardust Speedway - Good Future (1)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Edan Koch</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0113</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>10.9</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/stardustspeedway-good2-ek.mid">Stardust Speedway - Good Future (2)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Edan Koch</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0115</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>21</font></td>
+</tr>
+</table>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>03-11-2000:</font></b><br>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic Adventure Midi files added:</font></b>
+<br><font face=Impact color=3333FF>1 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/adventure/redmountain-part1-mn.mid">Red Mountain: Mt. Red - A Symbol of Thrill</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Matt Newman</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0230</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>15.1</font></td>
+</tr>
+</table>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>03-07-2000:</font></b><br>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic 3D Blast Midi files added:</font></b>
+<br><font face=Impact color=3333FF>2 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dblast/greengrove-act1-ajf.mid">Green Grove Act 1</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by A.J. Freda</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0127</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>23.6</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dblast/rustyruin-act2remix-bh.mid">Rusty Ruin Act 2 (Remix)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Blaze Hedgehog</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0733</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>100</font></td>
+</tr>
+</table>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>03-06-2000:</font></b><br>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>02-29-2000:</font></b><br>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic 3D Blast Midi files added:</font></b>
+<br><font face=Impact color=3333FF>2 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dblast/panicpuppet-act2-sb.mid">Panic Puppet Act 2</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Steven Blom</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0132</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>58.8</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dblast/panicpuppet-act2remix-jdh.mid">Panic Puppet Act 2 (Remix)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by J.D. Harding</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0135</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>14.1</font></td>
+</tr>
+</table>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>02-28-2000:</font></b><br>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic 3D Blast Midi files added:</font></b>
+<br><font face=Impact color=3333FF>1 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dblast/panicpuppet-act1-jw.mid">Panic Puppet Act 1</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0434</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>82.5</font></td>
+</tr>
+</table>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>02-25-2000:</font></b><br>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic Adventure Midi files added:</font></b>
+<br><font face=Impact color=3333FF>2 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/adventure/roundclear-jw.mid">Round Clear</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0005</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2.49</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/adventure/extend-jw.mid">Extend (Not used in game)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0003</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>2.02</font></td>
+</tr>
+</table>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>02-25-2000:</font></b><br>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic CD (Mega CD) Midi files added:</font></b>
+<br><font face=Impact color=3333FF>23 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/sonicwarrior-jr.mid">Toot Toot Sonic Warrior</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jeff Read</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0132</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>9.73</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/sonicwarrior-remix-s.mid">Toot Toot Sonic Warrior (Remix)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Solly</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0128</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>32.3</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/palmtreepanic-present-ek.mid">Palmtree Panic - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Edan Koch</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0146</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>19.1</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/collisionchaos-present-jj.mid">Collision Chaos - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0255</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>40</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/collisionchaos-bad-jr.mid">Collision Chaos - Bad Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jeff Read</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0113</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>8.27</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/collisionchaos-good1-jj.mid">Collision Chaos - Good Future (1)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0119</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>17.8</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/collisionchaos-good2-jj.mid">Collision Chaos - Good Future (2)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0119</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>17.8</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/tidaltempest-present-jw.mid">Tidal Tempest - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0144</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>22.6</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/tidaltempest-present-jf.mid">Tidal Tempest - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jose E. Felix</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0229</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>34.2</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/tidaltempest-bad-jj.mid">Tidal Tempest - Bad Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0115</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>12.7</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/tidaltempest-good-jw.mid">Tidal Tempest - Good Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0121</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>6.06</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/quartzquadrant-present1-jj.mid">Quartz Quadrant - Present (1)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0135</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>18.4</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/quartzquadrant-present2-jj.mid">Quartz Quadrant - Present (2)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0135</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>17.4</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/quartzquadrant-present3-jj.mid">Quartz Quadrant - Present (3)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0135</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>17.5</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/quartzquadrant-present4-jj.mid">Quartz Quadrant - Present (4)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0136</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>29.8</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/quartzquadrant-good-jf.mid">Quartz Quadrant - Good Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jose E. Felix</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0156</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>28.6</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/quartzquadrant-good1-jj.mid">Quartz Quadrant - Good Future (1)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0111</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>9.41</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/quartzquadrant-good2-jj.mid">Quartz Quadrant - Good Future (2)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0111</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>9.69</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/wackyworkbench-present-jw.mid">Wacky Workbench - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0127</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>25.7</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/wackyworkbench-good-jj.mid">Wacky Workbench - Good Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0059</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>17.7</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/wackyworkbench-good-jw.mid">Wacky Workbench - Good Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0100</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>21.4</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/stardustspeedway-good3-ek.mid">Stardust Speedway - Good Future (3)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Edan Koch</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0114</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>21.3</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/megacd/speedup-jw.mid">Speed Up</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0021</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>8.19</font></td>
+</tr>
+</table>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>02-24-2000:</font></b><br>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic Adventure Midi files added:</font></b>
+<br><font face=Impact color=3333FF>6 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/adventure/stationsquare-ts.mid">Station Square</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by T. Sugimura</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0315</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>35.4</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/adventure/skydeck-part1-ts.mid">Sky Deck: Sky Deck A Go! Go!</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by T. Sugimura</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0141</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>32.2</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/adventure/skydeck-part1remix-ts.mid">Sky Deck: Sky Deck A Go! Go! (Double Module Version)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by T. Sugimura</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0141</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>39.5</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/adventure/finalegg-part2-ts.mid">Final Egg: Crank Up The Heat!</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by T. Sugimura</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0301</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>70.4</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/adventure/speedup-short-jw.mid">Speed Up</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0014</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>5.01</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/adventure/speedup-long-jw.mid">Speed Up (long version)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0026</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>8.03</font></td>
+</tr>
+</table>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>02-23-2000:</font></b><br>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic CD "Past" Mix Midi files added:</font></b>
+<br><font face=Impact color=3333FF>6 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/cdpast/palmtreepanic-past-k.mid">Palmtree Panic - Past</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Koryan</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0305</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>56.5</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/cdpast/tidaltempest-past-jw.mid">Tidal Tempest - Past</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0223</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>24.2</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/cdpast/quartzquadrant-past-jf.mid">Quartz Quadrant - Past</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jose E. Felix</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0234</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>37.8</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/cdpast/wackyworkbench-past-jj.mid">Wacky Workbench - Past</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0145</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>43.2</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/cdpast/wackyworkbench-past-jw.mid">Wacky Workbench - Past</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0327</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>64.8</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/cdpast/stardustspeedway-past-jf.mid">Stardust Speedway - Past</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jose E. Felix</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0225</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>50</font></td>
+</tr>
+</table>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic 3D Blast Midi files added:</font></b>
+<br><font face=Impact color=3333FF>6 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dblast/rustyruin-act1-jw.mid">Rusty Ruin Act 1</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0500</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>87.3</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dblast/rustyruin-act2-jw.mid">Rusty Ruin Act 2</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0534</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>97.8</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dblast/diamonddust-act2-jw.mid">Diamond Dust Act 2</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0231</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>43.3</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dblast/volcanovalley-act1-jw.mid">Volcano Valley Act 1</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0215</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>36.7</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dblast/volcanovalley-act2-jw.mid">Volcano Valley Act 2</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0235</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>34.7</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3dblast/options-jw.mid">Options</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0118</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>24</font></td>
+</tr>
+</table>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>02-14-2000:</font></b><br>
+
+<br><b><font face=Arial,Helvetica size=-1>Knuckles' Chaotix Midi files added:</font></b>
+<br><font face=Impact color=3333FF>3 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/chaotix/tube-panic-jw.mid">Tube Panic (Special Zone)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0200</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>62.3</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/chaotix/childsong-jw.mid">Child Song (Speed Slider Boss)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0202</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>35.0</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/chaotix/high-five-jw.mid">High Five (Character Team Up)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0003</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>1.4</font></td>
+</tr>
+</table>
+
+<br><hr><b><font face=Arial,Helvetica size=-1>02-09-2000:</font></b><br>
+
+<br><b><font face=Arial,Helvetica size=-1>SonicThe Hedgehog 2 Midi files added:</font></b>
+<br><font face=Impact color=3333FF>2 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/2/EmeraldHillJJ.mid">Emerald Hill Zone</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0125</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>20.1</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/2/SkyChaseJJ.mid">Sky Chase Zone</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0115</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>14.7</font></td>
+</tr>
+</table>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic Jam Midi files added:</font></b>
+<br><font face=Impact color=3333FF>1 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/jam/SonicWorldJJ.mid">Sonic World</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0138</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>29.0</font></td>
+</tr>
+</table>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic Drift 2 Midi files added:</font></b>
+<br><font face=Impact color=3333FF>1 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/drift2/OptionsJJ.mid">Options Menu</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0048</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>10.3</font></td>
+</tr>
+</table>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic the Hedgehog 3 Midi files added:</font></b>
+<br><font face=Impact color=3333FF>2 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3k/IceCap1JJ.mid">Ice Cap Act 1</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0250</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>43.0</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/3k/IceCap2JJ.mid">Ice Cap Act 2</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0319</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>36.1</font></td>
+</tr>
+</table>
+
+<br><b><font face=Arial,Helvetica size=-1>Sonic Arrangements / Remixes Midi files added:</font></b>
+<br><font face=Impact color=3333FF>4 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/remix/GreenHillGFJJ.mid">Sonic 1 - Green Hill Zone: Good Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0219</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>53.5</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/remix/CompeteJJ.mid">Sonic 3 - Competition Menu Remix: GM Version</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0240</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>54.4</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/remix/CompeteXGJJ.mid">Sonic 3 - Competition Menu Remix: XG Version</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0240</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>54.4</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/remix/HiddenPalaceJJ.mid">Sonic and Knuckles: Hidden Palace Remix</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0248</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>52.2</font></td>
+</tr>
+</table>
+
+
+<br><br>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=403 valign=bottom>
+<tr>
+<td COLSPAN="8"><font face="arial,helvetica"><font size=-1>All material
+above are properties of their rightful owners, be it Sega Enterprise Ltd.
+or other fans. All graphic on the page are copyright to Sonic HQ staff,
+you may not take without permission.</font></font></td>
+</tr>
+</table>
+
+</td></tr></table>
+
+</td>
+<!-- END MAIN AREA -->
+
+</tr></table>
+
+</html>

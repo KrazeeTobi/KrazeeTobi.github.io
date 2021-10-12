@@ -1,0 +1,348 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]">
+   <title>Sonic HQ Music</title>
+<style>
+<!-- a:hover {  text-decoration: underline} -->
+<!-- A{text-decoration:none} -->
+</style>
+</head>
+
+<body text=000000 link=FFFFFF vlink=FF0000 background=/images/backgrounds/bluecurve.gif>
+&nbsp
+
+<!-- HQ TITLE BAR -->
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=640>
+<tr>
+<td VALIGN=TOP COLSPAN=3 WIDTH=640><img SRC=/images/HQ-bar.gif BORDER=0 height=30 width=640></td>
+</tr>
+</table>
+<!-- END HQ TITLE BAR -->
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=640>
+<tr>
+
+<!-- LEFT LINK BAR -->
+<td VALIGN=TOP WIDTH=130>
+<font face="Arial Black" color=FF0000 size=-1>Other
+Sections</font>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0>
+<tr><td><font face=Verdana size=-1>
+
+<a href=display.cgi?category=sonic.dat><font color=FFFFFF>Sonic</font></a><br>
+<a href=display.cgi?category=megaman.dat><font color=FFFFFF>Mega Man</font></a><br>
+<a href=display.cgi?category=others.dat><font color=FFFFFF>Others</font></a><br>
+<a href=display.cgi?category=nes><font color=FFFFFF>NES<!-- Sonic PC --></font></a><br>
+<a href=display.cgi?category=snes><font color=FFFFFF>SNES</font></a><br>
+<a href=display.cgi?category=genesis><font color=FFFFFF>Genesis</font></a><br>
+<a href=display.cgi?category=dreamcast><font color=FFFFFF>Dreamcast</font></a><br>
+<a href=display.cgi?category=32x><font color=FFFFFF>32X</font></a><br>
+<a href=display.cgi?category=segacd><font color=FFFFFF>Sega CD</font></a><br>
+<a href=display.cgi?category=saturn><font color=FFFFFF>Saturn</font></a><br>
+<a href=display.cgi?category=gamegear><font color=FFFFFF>Game Gear</font></a><br>
+<a href=display.cgi?category=pc><font color=FFFFFF>PC</font></a><br>
+<a href=display.cgi?category=arcade><font color=FFFFFF>Arcade</font></a><br>
+<a href=display.cgi?category=original><font color=FFFFFF>Fan Made</font></a><br>
+<a href=display.cgi?category=cartoon><font color=FFFFFF>Cartoons</font></a><br>
+<a href=display.cgi?category=musiccd><font color=FFFFFF>Music CDs</font></a>
+
+</font></td></tr></table>
+
+<br>&nbsp;
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 COLS=1 WIDTH=100%><td>
+<center><img SRC="/images/sprites/3d-runright.gif" height=50 width=51>
+<br><font face=Verdana color=FFFFFF size=-2>Please 
+<a href="mailto:shq_music@echidnoyle.org">submit</a> any MIDIs we don't already have. Thanx!</font></center>
+</td></table>
+
+</td>
+<!-- END LEFT LINK BAR -->
+
+<td VALIGN=TOP WIDTH=30></td>
+
+<!-- MAIN AREA -->
+<td VALIGN=TOP WIDTH=468>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=468>
+<tr><td VALIGN=TOP WIDTH=360>
+<font face=Arial,Helvetica><font color=3333FF size=+3>Sonic CD (Sega CD, PC)</font>
+<br><font size=-1>The English Sonic CD's present and future soundtracks, also used in the Japanese PC version.
+</font></font></td></tr>
+
+<tr><td COLSPAN=2 WIDTH=468>
+
+<br><b><font face=Arial,Helvetica size=-1>31
+ list below:</font></b>
+<br><font face=Impact color=3333FF>31 Total</font>
+<table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/sonicboom-fast1-bb.mid">Sonic Boom - Fast Version (1)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Ben Bagley</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0126</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>13.7</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/sonicboom-fast2-bb.mid">Sonic Boom - Fast Version (2)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Ben Bagley</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0131</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>13.8</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/sonicboom-fastremix-s.mid">Sonic Boom - Fast Version (Remix)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Solly</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0121</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>26.2</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/sonicboom-slow-bb.mid">Sonic Boom - Slow Version</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Ben Bagley</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0328</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>31.1</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/sonicboom-slow-ek.mid">Sonic Boom - Slow Version</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Edan Koch</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0318</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>19.7</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/sonicboom-slow-ira.mid">Sonic Boom - Slow Version</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Ira</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0422</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>63.1</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/palmtreepanic-present-jw.mid">Palmtree Panic - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0152</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>23.5</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/palmtreepanic-present1-jj.mid">Palmtree Panic - Present (1)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0153</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>15.7</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/palmtreepanic-present2-jj.mid">Palmtree Panic - Present (2)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0153</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>22.9</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/collisionchaos-present-jj.mid">Collision Chaos - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0115</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>15.1</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/tidaltempest-bad-jj.mid">Tidal Tempest - Bad Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0124</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>24.4</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/tidaltempest-good-jw.mid">Tidal Tempest - Good Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0118</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>13.8</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/quartzquadrant-present1-jj.mid">Quartz Quadrant - Present (1)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0143</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>10.2</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/quartzquadrant-present2-jj.mid">Quartz Quadrant - Present (2)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0143</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>14.3</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/quartzquadrant-good-jw.mid">Quartz Quadrant - Good Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0116</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>21.6</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/wackyworkbench-present-bb.mid">Wacky Workbench - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Ben Bagley</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0136</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>24.2</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/wackyworkbench-present-jj.mid">Wacky Workbench - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0128</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>34.8</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/wackyworkbench-present-jw.mid">Wacky Workbench - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0135</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>10.2</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/wackyworkbench-bad-jj.mid">Wacky Workbench - Bad Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0119</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>18.3</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/wackyworkbench-good-jw.mid">Wacky Workbench - Good Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0059</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>10.9</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-present-ek.mid">Stardust Speedway - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Edan Koch</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0155</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>36.2</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-present-jj.mid">Stardust Speedway - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0157</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>51.9</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-present-jw.mid">Stardust Speedway - Present</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0155</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>15.5</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-bad-jj.mid">Stardust Speedway - Bad Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0104</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>19.2</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="http://www.sonicteam.com/sz/midi/sz/other/scd/star_sbad(sz).mid">Stardust Speedway - Bad Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Sz</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0109</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>23.5</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-bad1-bb.mid">Stardust Speedway - Bad Future (1)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Ben Bagley</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0108</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>17.1</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-bad1-jw.mid">Stardust Speedway - Bad Future (1)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0105</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>11.2</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-bad2-bb.mid">Stardust Speedway - Bad Future (2)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Ben Bagley</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0116</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>21.5</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-bad2-jw.mid">Stardust Speedway - Bad Future (2)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0109</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>23.4</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-badremix-s.mid">Stardust Speedway - Bad Future (Remix)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by Solly</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0109</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>46.1</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+
+<tr>
+<td><font face=Verdana color=FFFFFF size=-1><a href="midis/sonic/segacd/stardustspeedway-good-jw.mid">Stardust Speedway - Good Future</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>0110</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>20</font></td>
+<td><font face=Verdana color=FFFFFF size=-1>03-24-00</font></td>
+</tr>
+</table>
+
+<p><br></table>
+
+
+<br><br>
+
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=403 valign=bottom>
+<tr>
+<td COLSPAN="8"><font face="arial,helvetica"><font size=-1>All materials above are properties of their rightful owners, be it Sega Enterprise Ltd., Capcom Ltd., other companies, or other fans.</font></font></td>
+</tr>
+</table>
+
+</td></tr></table>
+
+</td>
+<!-- END MAIN AREA -->
+
+</tr></table>
+
+</html>
