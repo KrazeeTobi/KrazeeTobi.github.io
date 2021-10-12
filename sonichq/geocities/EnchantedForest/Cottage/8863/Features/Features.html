@@ -1,0 +1,120 @@
+<html>
+<body>
+<head>
+<title>Features Page</title>
+<script language="JavaScript">
+
+<!-- Hiding this
+
+// Function to make the text in the status bar bounce up and down
+// (c) Martien Verbruggen, February 1996
+// Feel free to use this, please leave copyright notice intact.
+
+// It would be even simpler to just make it bounce, and not 'disappear'
+// I just did that as an exercise. One does foolish things, at times.
+
+// offset is the place where it starts initially
+// step is the number of characters it scrolls
+
+function bounce ( message, offset, step ) {
+  var output="";
+  var end=100;
+
+  for ( var i = 0; i < offset; i++ ) { output += " "; }
+  
+  if ( (offset >= end+message.length && step > 0) || 
+       (offset <= -message.length    && step < 0)    ) {
+    step = -step;
+  }
+
+  if ( offset > end ) {
+    output += message.substring(0, message.length-(offset-end));
+  } 
+  else if ( offset > 0 && offset <= end ) { 
+    output += message;
+  } 
+  else {
+    output += message.substring(-offset, message.length);
+  }
+
+  if ( step != 0) {
+    offset += step;
+    command="bounce(\"" + message + "\"," + offset + "," + step + ")";
+    // If you want to make it scroll faster, DECREASE the 200
+    timer=setTimeout(command, 200);
+  }
+  status = output;
+  return true;
+}
+
+// End of hiding -->
+
+</script>
+
+</head>
+<head>
+<SCRIPT LANGUAGE = "JavaScript">
+<!--
+  conBrowser=0;
+  function display(stuff) { window.status = stuff; }
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE = "JavaScript1.1">
+<!--
+  conBrowser=1;
+  switch1on  = new Image(36,36);  switch1on.src  = 'http://www.geocities.com/EnchantedForest/Cottage/8863/Features/DS2.gif';
+  switch1off = new Image(36,36);  switch1off.src = 'http://www.geocities.com/EnchantedForest/Cottage/8863/Features/DS.gif';
+  switch2on  = new Image(36,36);  switch2on.src  = 'http://www.geocities.com/EnchantedForest/Cottage/8863/Features/SS2.gif';
+  switch2off = new Image(36,36);  switch2off.src = 'http://www.geocities.com/EnchantedForest/Cottage/8863/Features/SS.gif';
+  switch3on  = new Image(36,36);  switch3on.src  = 'http://www.geocities.com/EnchantedForest/Cottage/8863/Features/SC2.gif';
+  switch3off = new Image(36,36);  switch3off.src = 'http://www.geocities.com/EnchantedForest/Cottage/8863/Features/SC.gif';
+  switch4on  = new Image(36,36);  switch4on.src  = 'http://www.geocities.com/EnchantedForest/Cottage/8863/Features/TopTenb.gif';
+  switch4off = new Image(36,36);  switch4off.src = 'http://www.geocities.com/EnchantedForest/Cottage/8863/Features/TopTen.gif';
+
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE = "JavaScript">
+<!--
+  function HighLight(musswitch) {
+	if (conBrowser) {
+		switchnavn = eval(musswitch + "on");
+      		document [musswitch].src = switchnavn.src;
+    		}
+  	}
+
+function UndoHighLight(musswitch) {
+	if (conBrowser) {
+		switchnavn = eval(musswitch + "off");
+		document [musswitch].src = switchnavn.src;
+		}
+	}
+//-->
+</SCRIPT>
+</head>
+<body bgcolor="000000" background="http://www.geocities.com/EnchantedForest/Cottage/8863/Features/BG.gif"
+ text="#d27364" link="#000000" vlink="#000000" onLoad="bounce('Welcome to the Features page!',0,1); return 1;">
+<p><center><img src="http://www.geocities.com/EnchantedForest/Cottage/8863/Features/Logo.gif">
+<p><img src="http://www.geocities.com/EnchantedForest/Dell/7834/bluebar.jpg"><b><font face="arial">
+<p>Hello, and welcome to Sonic HQ's features page. To tell you a bit about this page: in an effort to upgrade Sonic HQ, we have decided to pull together the smaller subpages and put them together in the features page. In here, you'll find Sonic Survey, Dukem Sonic, Sonic Comedy, and a bunch of other cool pages our new member Questa and veteran Catface will think up. Until then, please visit the pages below!
+<center><font color="#0000ff">
+<p><img src="http://www.geocities.com/EnchantedForest/Dell/7834/bluebar.jpg"><font size=-1>
+<p><center><A HREF="http://www.geocities.com/TimesSquare/Battlefield/1821/" onMouseover="HighLight('switch1'); display('Dukem Nukem 3D Sonic Style!'); return true;" onMouseout ="UndoHighLight('switch1'); display('');"><IMG SRC="http://www.geocities.com/EnchantedForest/Cottage/8863/Features/DS.gif" NAME=switch1 alt="Dukem 3D Sonic"></A><br>Ergon's fan made game! Have to have Dukem Nukem 3D to play.
+<p><center><A HREF="http://www.geocities.com/EnchantedForest/Dell/7834/SonicSurvey.html" onMouseover="HighLight('switch2'); display('Sonic Survey'); return true;" onMouseout ="UndoHighLight('switch2'); display('');"><IMG SRC="http://www.geocities.com/EnchantedForest/Cottage/8863/Features/SS.gif" NAME=switch2 alt="Sonic Survey"></A><br>
+<img src="http://www.geocities.com/EnchantedForest/Dell/7834/UP.gif">
+<br>Come in and take the Sonic Survey!
+<p><center><A HREF="http://www.geocities.com" onMouseover="HighLight('switch3'); display('Sonic Comedy'); return true;" onMouseout ="UndoHighLight('switch3');  display('');"><IMG SRC="http://www.geocities.com/EnchantedForest/Cottage/8863/Features/SC.gif" NAME=switch3 alt="Sonic Comedy"></A><br>This page is still under major construction!
+<p><center><A HREF="http://www.geocities.com/EnchantedForest/Cottage/8863/Features/TopTen/TopTen.html" onMouseover="HighLight('switch4'); display('Sonic Comedy'); return true;" onMouseout ="UndoHighLight('switch4');  display('');"><IMG SRC="http://www.geocities.com/EnchantedForest/Cottage/8863/Features/TopTen.gif" NAME=switch4 alt="Sonic Top Ten"></A><br>
+<br>
+All the Top Ten lists in here, some funny, some not.
+
+
+</font>
+
+<p><img src="http://www.geocities.com/EnchantedForest/Dell/7834/bluebar.jpg">
+</font color>
+<p>Email <a href="mailto:sonichq@yahoo.com">Sonic HQ</a>
+<embed src="http://www.geocities.com/EnchantedForest/Dell/7835/CCCDPRESENT.MID" autostart=true hidden=true loop=true>
+</body> 
+</html>
+<!-- text below generated by server. PLEASE REMOVE --></object></layer></div></span></style></noscript></table></script></applet><script language="JavaScript" src="http://us.geocities.com/js_source/geov2.js"></script><script language="javascript">geovisit();</script><noscript><img src="http://visit.geocities.com/visit.gif?1002491523" border=0 width=1 height=1></noscript>
+<IMG SRC="http://geo.yahoo.com/serv?s=76001068&t=1002491523" ALT=1 WIDTH=1 HEIGHT=1>
