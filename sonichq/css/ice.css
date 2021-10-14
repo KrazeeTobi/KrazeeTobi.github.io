@@ -1,14 +1,14 @@
 a {color:cyan;}
 body {
 background-color:#303f99;
-background-image:url(http://www.sonichq.org/images/backgrounds/BlueCubism.jpg);
+background-image:url(/sonichq/images/backgrounds/BlueCubism.jpg);
 font-family:Verdana,Arial; font-size:10pt; color:white;
 }
 
 .maintable {width:95%}
 
 .itemtable{
-background-color:#303f66; background-image:url(http://www.sonichq.org/images/backgrounds/bluecubism-dark.jpg); background-attachment: fixed;
+background-color:#303f66; background-image:url(/sonichq/images/backgrounds/bluecubism-dark.jpg); background-attachment: fixed;
 }
 
 .titlebar a {color:ffffff;}
