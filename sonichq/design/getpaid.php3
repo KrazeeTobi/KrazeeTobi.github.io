@@ -7,28 +7,28 @@
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
-<script src=/scripts/sonic-init.js></script>
+<script src=/sonichq/scripts/sonic-init.js></script>
 <script language=JavaScript>
 <!--
-document.write('<link rel=stylesheet href=http://www.sonichq.org/css/' + theme + '.css type="text/css">')
+document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="text/css">')
 //-->
 </script>
 <noscript>
-<link rel=stylesheet href=http://www.sonichq.org/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/css/main.css type="text/css">
 </noscript>
 </head>
 
-<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
 
 <br>
 
 <center>
-<IFRAME SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
+<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
 MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
+<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
 </SCRIPT>
 <NOSCRIPT>
-<A HREF="http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank" HEIGHT="60" WIDTH="468"><IMG SRC="http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y"></A>
+<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank" HEIGHT="60" WIDTH="468"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y"></A>
 </NOSCRIPT>
 </IFRAME>
 </center>
@@ -40,7 +40,7 @@ MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
 
 <!main table top>
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" class=maintable>
-<tr><td width=19><img src=/topleft.gif width=19></td>
+<tr><td width=19><img src=/sonichq/topleft.gif width=19></td>
 
 <td bgcolor=black width=100% height=50>
 <script language=JavaScript>
@@ -50,12 +50,12 @@ document.write(titlepic + titlelogo)
 </script>
 &nbsp;</td>
 
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
-<script src=/scripts/menu.js></script>
+<script src=/sonichq/scripts/menu.js></script>
 <noscript>&nbsp;</noscript>
 </font></td></table>
 
@@ -67,19 +67,19 @@ document.write(titlepic + titlelogo)
 
 <!sections>
 <div class=titlebar><table class=glow>
-<a href=http://www.DesktopDollars.com/default.asp?id=gamemusic target=_blank>Desktop Dollars</a>
+<a href=https://web.archive.org/20011101000000/http://www.DesktopDollars.com/default.asp?id=gamemusic target=_blank>Desktop Dollars</a>
 </table></div>
 
 <div class=itemtext>
 I just found this one, and it appears to be the best of the bunch.  It's an AllAdvantage-style bar, but instead of making a set rate and restrictions on its use, they just give you 50% of whatever they make from your ads.  I've just used it for 1 day, but I haven't found a drawback to this one.<p>
 </div><div class=titlebar><table class=glow>
-<a href=http://www.bepaid.com/user.rhtml?REFID=10946831 target=_blank>BePaid</a>
+<a href=https://web.archive.org/20011101000000/http://www.bepaid.com/user.rhtml?REFID=10946831 target=_blank>BePaid</a>
 </table></div>
 
 <div class=itemtext>
 $20 - $150 per hour for surfing?  Well, sorta.  This service is extremely well-designed and non-obtrusiive.  You only see ads when you want - it runs in ythe system tray and tells you when one is available.  Just look at the interactive ad for 30 seconds and you'll be credited with about as much money as you'd get for 1-3 hours on AllAdvantage.  You get 13% for direct referrals and 7% for indirect referrals.  Apparently, the referrals only go 2 levels deep, but with the large amount of money they're offering, that isn't surprising.  The drawback of this service is that it doesn't seem to give me ads very often.  :P  If they attract more advertisers, this one could be very useful.  It seems to be a pretty stable program though, so I just keep it running anyway.<p>
 </div><div class=titlebar><table class=glow>
-<a href=http://www.alladvantage.com/go.asp?refid=GKX618 target=_blank>AllAdvantage</a>
+<a href=https://web.archive.org/20011101000000/http://www.alladvantage.com/go.asp?refid=GKX618 target=_blank>AllAdvantage</a>
 </table></div>
 
 <div class=itemtext>
@@ -105,9 +105,9 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
-<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
-<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 

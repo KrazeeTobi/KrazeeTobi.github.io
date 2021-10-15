@@ -6,8 +6,8 @@
 # Enter custom URLs here.  Be sure to set a default.
 
 $default = "http://www.yourserver.com";
-$URLS{'/hq'} = "http://www.sonichq.org/";
-$URLS{'/hq/designhq'} = "http://www.sonichq.org/design/";
+$URLS{'/hq'} = "https://krazeetobi.github.io/sonichq/";
+$URLS{'/hq/designhq'} = "https://krazeetobi.github.io/sonichq/design/";
 
 $url = $URLS{$ENV{'PATH_INFO'}};
 $url = ($url) ? $url : $default;
