@@ -7,28 +7,28 @@
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
-<script src=/scripts/sonic-init.js></script>
-<link rel=stylesheet href=http://www.sonichq.org/css/main.css type="text/css">
+<script src=/sonichq/scripts/sonic-init.js></script>
+<link rel=stylesheet href=/sonichq/css/main.css type="text/css">
 </head>
-<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
-<p><span class=pathlinks><table class=glow><a href=/ target=_top>Sonic HQ</a> | <a href=/dir>Directory</a> | AIM Directory</table></span>
+<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<p><span class=pathlinks><table class=glow><a href=/ target=_top>Sonic HQ</a> | <a href=/sonichq/dir>Directory</a> | AIM Directory</table></span>
 <center>
 <!main table top>
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" class=maintable>
-<tr><td width=19><img src=/topleft.gif width=19></td>
+<tr><td width=19><img src=/sonichq/topleft.gif width=19></td>
 <td bgcolor=black width=100% height=50>
 <script language=JavaScript>
 <!--
 document.write(titlepic)
 //-->
 </script>
-<img src=/dir/topbar-dir.gif align=right valign=middle>
+<img src=/sonichq/dir/topbar-dir.gif align=right valign=middle>
 </td>
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
-<script src=/scripts/menu.js></script>
+<script src=/sonichq/scripts/menu.js></script>
 <noscript>&nbsp;</noscript>
 </font></td></table>
 
@@ -38,18 +38,18 @@ document.write(titlepic)
 <td VALIGN=TOP WIDTH="70%" bgcolor=ffffff class=itemtable>
 <font face=Arial size=-1 color=black>
 <div class=titlebar><table class=glow>AIM Directory Navigation</table></div>
-<div class=itemtext><center><a href=/dir/dir.cgi?dir=aim&page=num>#</a> <a href=/dir/dir.cgi?dir=aim&page=a>A</a> <a href=/dir/dir.cgi?dir=aim&page=b>B</a> <a href=/dir/dir.cgi?dir=aim&page=c>C</a> <a href=/dir/dir.cgi?dir=aim&page=d>D</a> <a href=/dir/dir.cgi?dir=aim&page=e>E</a> <a href=/dir/dir.cgi?dir=aim&page=f>F</a> <a href=/dir/dir.cgi?dir=aim&page=g>G</a> <a href=/dir/dir.cgi?dir=aim&page=h>H</a> <a href=/dir/dir.cgi?dir=aim&page=i>I</a> <a href=/dir/dir.cgi?dir=aim&page=j>J</a> <a href=/dir/dir.cgi?dir=aim&page=k>K</a> <a href=/dir/dir.cgi?dir=aim&page=l>L</a> <a href=/dir/dir.cgi?dir=aim&page=m>M</a> <a href=/dir/dir.cgi?dir=aim&page=n>N</a> <a href=/dir/dir.cgi?dir=aim&page=o>O</a> <a href=/dir/dir.cgi?dir=aim&page=p>P</a> <a href=/dir/dir.cgi?dir=aim&page=q>Q</a> <a href=/dir/dir.cgi?dir=aim&page=r>R</a> <a href=/dir/dir.cgi?dir=aim&page=s>S</a> <a href=/dir/dir.cgi?dir=aim&page=t>T</a> <a href=/dir/dir.cgi?dir=aim&page=u>U</a> <a href=/dir/dir.cgi?dir=aim&page=v>V</a> <a href=/dir/dir.cgi?dir=aim&page=w>W</a> <a href=/dir/dir.cgi?dir=aim&page=x>X</a> <a href=/dir/dir.cgi?dir=aim&page=y>Y</a> <a href=/dir/dir.cgi?dir=aim&page=z>Z</a></center></div>
+<div class=itemtext><center><a href=/sonichq/dir/dir.cgi?dir=aim&page=num>#</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=a>A</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=b>B</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=c>C</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=d>D</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=e>E</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=f>F</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=g>G</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=h>H</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=i>I</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=j>J</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=k>K</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=l>L</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=m>M</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=n>N</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=o>O</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=p>P</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=q>Q</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=r>R</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=s>S</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=t>T</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=u>U</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=v>V</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=w>W</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=x>X</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=y>Y</a> <a href=/sonichq/dir/dir.cgi?dir=aim&page=z>Z</a></center></div>
 <div class=titlebar><table class=glow>Listing: B </table></div>
 <div class=itemtext><table border=0 cellpadding=1 cellspacing=2 width="100%">
 <tr>
 <td bgcolor=#808080><font color=#ffffff size=2><b>Name</b></font></td><td bgcolor=#808080><font color=#ffffff size=2><b>Screen Name</b></font></td><td bgcolor=#808080><font color=#ffffff size=2><b>Description</b></font></td></tr>
-<tr><td valign=top bgcolor=#cccccc><font size=2 color=#000000>Becky</font></td><td valign=top bgcolor=#cccccc><font size=2 color=#000000>Morain</font></td><td valign=top bgcolor=#cccccc><font size=2 color=#000000>Hey all! I'm an 18-year-old Sonic fanfrom Liverpool, England. My fave aspect is SatAM, but i even like the Arcie comics! I'm into most everything, and I have a website: http://www.angelfire.com/ri/asimpletwistoffate/theworldofstories.html with some of my fanfics on and stuff.</font></td></tr>
+<tr><td valign=top bgcolor=#cccccc><font size=2 color=#000000>Becky</font></td><td valign=top bgcolor=#cccccc><font size=2 color=#000000>Morain</font></td><td valign=top bgcolor=#cccccc><font size=2 color=#000000>Hey all! I'm an 18-year-old Sonic fanfrom Liverpool, England. My fave aspect is SatAM, but i even like the Arcie comics! I'm into most everything, and I have a website: https://web.archive.org/20011101000000/http://www.angelfire.com/ri/asimpletwistoffate/theworldofstories.html with some of my fanfics on and stuff.</font></td></tr>
 <tr><td valign=top bgcolor=#ffffff><font size=2 color=#000000>Boomer</font></td><td valign=top bgcolor=#ffffff><font size=2 color=#000000>Boomer10x10</font></td><td valign=top bgcolor=#ffffff><font size=2 color=#000000>I like Sonic games, I use to collect the comic. I also like skateboarding.</font></td></tr>
 <tr><td valign=top bgcolor=#cccccc><font size=2 color=#000000>BreeAnn Barlow (Cassie)</font></td><td valign=top bgcolor=#cccccc><font size=2 color=#000000>RedwalJedi</font></td><td valign=top bgcolor=#cccccc><font size=2 color=#000000>Um, I'm addicted to Star Wars, Sonic, anime, rock candy, music, and art, an that's all yer gettin outta me.</font></td></tr>
 <tr><td valign=top bgcolor=#ffffff><font size=2 color=#000000>Brian Medina</font></td><td valign=top bgcolor=#ffffff><font size=2 color=#000000>Knux2000</font></td><td valign=top bgcolor=#ffffff><font size=2 color=#000000>I'm Brian Medina; Bune on Ken Penders's Message board. I like Sonic, Knux, some other stuff, and thats about it.</font></td></tr>
 <tr><td valign=top bgcolor=#cccccc><font size=2 color=#000000>Brian Morrison</font></td><td valign=top bgcolor=#cccccc><font size=2 color=#000000>Iczer5</font></td><td valign=top bgcolor=#cccccc><font size=2 color=#000000>No description</font></td></tr>
 <tr><td valign=top bgcolor=#ffffff><font size=2 color=#000000>Brian Sapinski</font></td><td valign=top bgcolor=#ffffff><font size=2 color=#000000>Sonic Whammy</font></td><td valign=top bgcolor=#ffffff><font size=2 color=#000000>No description</font></td></tr>
-<tr><td valign=top bgcolor=#cccccc><font size=2 color=#000000>Bug</font></td><td valign=top bgcolor=#cccccc><font size=2 color=#000000>Bugposs</font></td><td valign=top bgcolor=#cccccc><font size=2 color=#000000>Hey, Bug here, just wanted to join the AIM list! If you wanna chat, you know my AIM SN! :) Check out my Sonic site, The Page Of STUFF.COM: http://welcome.to/pageofstuff/</font></td></tr>
+<tr><td valign=top bgcolor=#cccccc><font size=2 color=#000000>Bug</font></td><td valign=top bgcolor=#cccccc><font size=2 color=#000000>Bugposs</font></td><td valign=top bgcolor=#cccccc><font size=2 color=#000000>Hey, Bug here, just wanted to join the AIM list! If you wanna chat, you know my AIM SN! :) Check out my Sonic site, The Page Of STUFF.COM: https://web.archive.org/20011101000000/http://welcome.to/pageofstuff/</font></td></tr>
 </table>
 </div>
 <!end of sections>
@@ -65,15 +65,15 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 //-->
 </script>
 
-<br><center><u>Directory Listing</u><br>AIM - B<br><a href=/dir/dir.cgi?dir=aim&page=b>AIM</a> | <a href=/dir/dir.cgi?dir=icq&page=b>ICQ</a> | <a href=/dir/dir.cgi?dir=email&page=b>Email</a> | <a href=/dir/dir.cgi?dir=jrn&page=b>Journals</a> | <a href=/dir/dir.cgi?dir=other&page=b>Other Msgrs.</a><br><br><a href=/dir/dir.cgi?dir=aim&page=submit>Submit Your Own Info!</a><br><br><a href=/dir/>Sonic HQ Directory</a></center>
+<br><center><u>Directory Listing</u><br>AIM - B<br><a href=/sonichq/dir/dir.cgi?dir=aim&page=b>AIM</a> | <a href=/sonichq/dir/dir.cgi?dir=icq&page=b>ICQ</a> | <a href=/sonichq/dir/dir.cgi?dir=email&page=b>Email</a> | <a href=/sonichq/dir/dir.cgi?dir=jrn&page=b>Journals</a> | <a href=/sonichq/dir/dir.cgi?dir=other&page=b>Other Msgrs.</a><br><br><a href=/sonichq/dir/dir.cgi?dir=aim&page=submit>Submit Your Own Info!</a><br><br><a href=/sonichq/dir/>Sonic HQ Directory</a></center>
 </font></td></tr>
 </table>
 <!end main table middle>
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
-<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial, helvetica"><center><b>DirectoryDB</b> powered by Sonic HQ. © 2001. Sonic and Co. are © Sega.</center></font></td>
-<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 

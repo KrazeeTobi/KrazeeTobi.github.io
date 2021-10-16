@@ -7,40 +7,40 @@
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
-<script src=/scripts/sonic-init.js></script>
+<script src=/sonichq/scripts/sonic-init.js></script>
 <script language=JavaScript>
 <!--
-document.write('<link rel=stylesheet href=http://www.sonichq.org/css/' + theme + '.css type="text/css">')
+document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="text/css">')
 //-->
 </script>
 <noscript>
-<link rel=stylesheet href=http://www.sonichq.org/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/css/main.css type="text/css">
 </noscript>
 </head>
 
-<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
 
 <br>
 
 <center>
-<IFRAME SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
+<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
 MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
+<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
 </SCRIPT>
 <NOSCRIPT>
-<A HREF="http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
+<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
 </NOSCRIPT>
 </IFRAME>
 </center>
 
 <p><span class=pathlinks><table class=glow>
-<a href=/ target=_top>Sonic HQ</a> | <a href=/dir target=_top>Directory</a> | <a href=/dir/links.php target=_top>Links</a> | Submit a Link</table></span>
+<a href=/ target=_top>Sonic HQ</a> | <a href=/sonichq/dir target=_top>Directory</a> | <a href=/sonichq/dir/links.php target=_top>Links</a> | Submit a Link</table></span>
 
 <center>
 
 <!main table top>
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" class=maintable>
-<tr><td width=19><img src=/topleft.gif width=19></td>
+<tr><td width=19><img src=/sonichq/topleft.gif width=19></td>
 
 <td bgcolor=black width=100% height=50>
 <script language=JavaScript>
@@ -50,12 +50,12 @@ document.write(titlepic)
 </script>
 <img src=topbar-dir.gif align=right></td>
 
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
-<script src=/scripts/menu.js></script>
+<script src=/sonichq/scripts/menu.js></script>
 <noscript>&nbsp;</noscript>
 </font></td></table>
 
@@ -72,7 +72,7 @@ Submit a Link
 
 <div class=itemtext>
 
-<FORM ACTION="http://www.echidnoyle.org/cgi/form/hq/dir_proc.pl" METHOD=POST>
+<FORM ACTION="https://web.archive.org/20011101000000/http://www.echidnoyle.org/cgi/form/hq/dir_proc.pl" METHOD=POST>
 <input type=hidden name="recipient" value="hq_directory@echidnoyle.org">
 <input type=hidden name="subtype" value="LINK">
 <input type=hidden name="name" value="Link">
@@ -82,7 +82,7 @@ Submit a Link
 <TD><INPUT TYPE="radio" NAME="Modify" VALUE="no" checked><FONT FACE="verdana" SIZE=2>Creating a new link?<BR>
 or <INPUT TYPE="radio" NAME="Modify" VALUE="yes">Updating a current link?</TD></TR>
 <TR><TD><B><FONT FACE="verdana" SIZE=2>Site URL:</TD>
-<TD><INPUT TYPE=TEXT NAME="SiteUrl" VALUE="http://"></TD></TR>
+<TD><INPUT TYPE=TEXT NAME="SiteUrl" VALUE="https://web.archive.org/20011101000000/http://"></TD></TR>
 <TR><TD><B><FONT FACE="verdana" SIZE=2>Site Title:</TD>
 <TD><INPUT TYPE=TEXT NAME="SiteTitle"></TD></TR>
 <TR><TD><B><FONT FACE="verdana" SIZE=2>Category:</TD>
@@ -107,14 +107,14 @@ Link to HQ
 If you wish to have your site in our links, we ask that you to link to us in return. Thanks. ^_^<br><br>
 Here's some HTML code you can insert in your page to produce the corresponding buttons:
 <center><font face="Verdana, Arial" size=1>
-<br><br><IMG SRC="http://www.atlantiscity.net/tl/hq/shqbtn1.gif"><BR>
-&lt;A HREF="http://www.sonichq.org/" TARGET="_blank"&gt;&lt;IMG SRC="http://www.atlantiscity.net/tl/hq/shqbtn1.gif" BORDER=0 ALT="Sonic HQ"&gt;&lt;/A&gt;
-<br><br><IMG SRC="http://www.atlantiscity.net/tl/hq/shqbtn2.gif"><BR>
-&lt;A HREF="http://www.sonichq.org/" TARGET="_blank"&gt;&lt;IMG SRC="http://www.atlantiscity.net/tl/hq/shqbtn2.gif" BORDER=0 ALT="Sonic HQ"&gt;&lt;/A&gt;
-<br><br><img src="http://www.atlantiscity.net/tl/hq/shq_banner.jpg"><br>
-&lt;A HREF="http://www.sonichq.org/" TARGET="_blank"&gt;&lt;IMG SRC="http://www.atlantiscity.net/tl/hq/shq_banner.jpg" BORDER=0 ALT="Sonic HQ"&gt;&lt;/A&gt;
-<br><br><img src="http://www.atlantiscity.net/tl/hq/shq_bannerbig.jpg"><br>
-&lt;A HREF="http://www.sonichq.org/" TARGET="_blank"&gt;&lt;IMG SRC="http://www.atlantiscity.net/tl/hq/shq_bannerbig.jpg" BORDER=0 ALT="Sonic HQ"&gt;&lt;/A&gt;
+<br><br><IMG SRC="https://web.archive.org/20011101000000/http://www.atlantiscity.net/tl/hq/shqbtn1.gif"><BR>
+&lt;A HREF="/sonichq/" TARGET="_blank"&gt;&lt;IMG SRC="https://web.archive.org/20011101000000/http://www.atlantiscity.net/tl/hq/shqbtn1.gif" BORDER=0 ALT="Sonic HQ"&gt;&lt;/A&gt;
+<br><br><IMG SRC="https://web.archive.org/20011101000000/http://www.atlantiscity.net/tl/hq/shqbtn2.gif"><BR>
+&lt;A HREF="/sonichq/" TARGET="_blank"&gt;&lt;IMG SRC="https://web.archive.org/20011101000000/http://www.atlantiscity.net/tl/hq/shqbtn2.gif" BORDER=0 ALT="Sonic HQ"&gt;&lt;/A&gt;
+<br><br><img src="https://web.archive.org/20011101000000/http://www.atlantiscity.net/tl/hq/shq_banner.jpg"><br>
+&lt;A HREF="/sonichq/" TARGET="_blank"&gt;&lt;IMG SRC="https://web.archive.org/20011101000000/http://www.atlantiscity.net/tl/hq/shq_banner.jpg" BORDER=0 ALT="Sonic HQ"&gt;&lt;/A&gt;
+<br><br><img src="https://web.archive.org/20011101000000/http://www.atlantiscity.net/tl/hq/shq_bannerbig.jpg"><br>
+&lt;A HREF="/sonichq/" TARGET="_blank"&gt;&lt;IMG SRC="https://web.archive.org/20011101000000/http://www.atlantiscity.net/tl/hq/shq_bannerbig.jpg" BORDER=0 ALT="Sonic HQ"&gt;&lt;/A&gt;
 </font></center>
 <p>
 </div><!end of sections>
@@ -138,9 +138,9 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
-<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
-<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 
