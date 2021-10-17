@@ -1,0 +1,164 @@
+@charset "UTF-8";
+/* overwrite   ===================================================== */
+
+body{
+	margin:0;
+	background:#fff url(own-contents/body.gif) no-repeat center 60px scroll;
+}
+
+#common-header{
+	position:relative;
+}
+
+
+#contents-flash	{
+	display:block;
+	width:100%;
+	height:500px;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;
+}
+
+#contents-iphone,
+noscript{
+	display:block;
+	background:url(own-contents/no-flash.png) top center no-repeat;
+	height:500px;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;
+}
+
+/* top-common   ===================================================== */
+#top-common{
+	width:900px;
+	margin:0 auto;
+}
+
+/* clear fix */
+#top-common{/*for IE 5.5-7*/
+	zoom:1;
+}
+
+#top-common:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+#top-common div{
+	float:right;
+	width:580px;
+	padding:0 10px;
+	margin:0;
+}
+
+/* common-navigation   ===================================================== */
+#top-common div #common-navigation{
+	background:url(own-contents/nav.png) no-repeat bottom;
+	margin:0 0 5px;
+	padding:0 0 10px;
+	width:580px;
+	height:150px;
+}
+
+#top-common div #common-navigation ul{
+	margin:0 0 0 30px;
+	padding:0;
+}
+
+#top-common div #common-navigation ul li,
+#top-common div #common-navigation ul li a{
+	height:149px;
+}
+
+
+/* clear fix */
+#top-common div #common-navigation{/*for IE 5.5-7*/
+	zoom:1;
+}
+
+#top-common div #common-navigation:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+/* infomation   ===================================================== */
+#top-common div h2{
+	clear:both;
+	margin:0;
+	padding:0;
+	width:84px;
+	height:33px;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;	
+	background:url(own-contents/h2_infomation.png) no-repeat;
+}
+
+#top-common div div #common-infomation{
+	overflow:scroll;
+	overflow-x : hidden;
+	width:562px;
+	height:125px;
+	margin:0;
+	padding:5px;
+	border:2px #ec1600 solid;
+}
+
+#top-common div .divWrap{
+	margin:0;
+	padding:0;
+	border:2px #fd7728 solid;
+	width:576px;
+	height:139px;
+	background:url(../common/css/common-contents/contensSubstance.png);
+}
+
+
+#top-common div div #common-infomation article{
+	padding:5px 5px 10px;
+	border-bottom:1px dashed #0f38b2;
+}
+
+#top-common div div #common-infomation article:last-child{
+	border-bottom:none;
+}
+
+#top-common div div #common-infomation article ul li{
+	padding:0.2em 0 0.2em 0.5em; 
+	list-style:inside disc;
+}
+
+#top-common div div #common-infomation article ul li,
+#top-common div div #common-infomation article ul li a{
+	font-size:small;
+}
+
+/* #common-banner  ===================================================== */
+#top-common #common-banner{
+	float:left;
+	padding:25px 0 0;
+}
+
+#top-common #common-banner li{
+	padding:0 0 10px;
+}
+
+
+/* #common-banner  ===================================================== */
+#top-common #common-mainbanner{
+	padding:8px 0 10px 10px;
+}
+

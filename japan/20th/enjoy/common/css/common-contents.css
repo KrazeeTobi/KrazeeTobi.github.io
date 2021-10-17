@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*-----------------------------------------------------
+#common-contents h2
+-----------------------------------------------------*/
+#common-contents h2{
+	background:url(common-contents/h2.png) no-repeat;
+}
+/*-----------------------------------------------------
+#common-contents h4
+-----------------------------------------------------*/
+#common-contents h4{
+	border-radius:5px;         /* CSS3 */
+	-webkit-border-radius: 5px; /* Webkit */
+	-moz-border-radius:5px;    /* Mozilla */
+
+	background:#103ab9;
+	color:#fff;
+	padding:0.5em;
+	margin:0 0 5px;
+}
+/*-----------------------------------------------------
+#common-contents h5
+-----------------------------------------------------*/
+#common-contents h5{
+	padding:15px 0 0 0;
+	font-weight:bold;
+	font-size:110%;
+}
+#common-contents h5:before{
+	content:"●";
+}
+/*-----------------------------------------------------
+#common-contents .contensSubstance
+-----------------------------------------------------*/
+/* clear fix */
+#common-contents .contensSubstance .downloadList ul{
+	zoom:1;/*for IE 5.5-7*/
+}
+#common-contents .contensSubstance .downloadList ul:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+#common-contents .contensSubstance .downloadList  li{
+	font-size:120%;
+	font-weight:normal;
+	float:left;
+	margin-right:30px;
+}
+
+#common-contents .contensSubstance .downloadList  li:before{
+	content:"●";
+}
+#common-contents .contensSubstance .twitter_icon li{
+	float:left;
+	text-align:center;
+	width:128px;
+	margin:5px;
+}
+
+#common-contents #contents-flash li{
+	font-weight:normal;
+	color:#0F38B2;
+}
+#common-contents #contents-flash li img{
+	border:1px solid #000;
+}
+#common-contents #contents-flash li.selected{
+	font-weight:bold;
+	color:#0F38B2;
+}
+#common-contents #contents-flash li.selected img{
+	border:1px solid #ff0000;
+}
+#common-contents #contents-flash li.over{
+	font-weight:bold;
+	color:#33FF00;
+}

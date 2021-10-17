@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* common tag   ===================================================== */
+div,span,
+ol,ul,li,dl,dt,dd,
+h1,h2,h3,h4,h5,h6,
+p,a,img,
+table,td,th,
+blockquote{
+	line-height:1.6em;
+	font-weight:normal;
+	font-style:normal;
+	font-size:95%;
+	font-family:'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+	color:#0f38b2;
+}
+
+body{
+	margin:0;
+	background:#fff url(common-tag/body.gif) no-repeat center 60px fixed;
+}
+
+p{
+	text-indent:1em;
+	padding:0 0 1em;
+}
+
+ul,li{
+	list-style:none;
+}
+
+a{
+	color: #ff3300;
+	font-weight:bold;
+	text-decoration:underline;
+}
+a:visited {
+	color: #ff3300;
+}
+a:hover,
+a:active{
+	color: #33ff00;
+}
+
+time{
+	font-family:'Georgia';
+	font-size:x-large;
+}
