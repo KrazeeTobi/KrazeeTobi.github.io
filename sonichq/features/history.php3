@@ -7,14 +7,14 @@
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
-<script src=/scripts/sonic-init.js></script>
+<script src=/sonichq/scripts/sonic-init.js></script>
 <script language=JavaScript>
 <!--
-document.write('<link rel=stylesheet href=http://www.sonichq.org/css/' + theme + '.css type="text/css">')
+document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="text/css">')
 //-->
 </script>
 <noscript>
-<link rel=stylesheet href=http://www.sonichq.org/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/css/main.css type="text/css">
 </noscript>
 </head>
 
@@ -23,12 +23,12 @@ document.write('<link rel=stylesheet href=http://www.sonichq.org/css/' + theme +
 <br>
 
 <center>
-<IFRAME SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
+<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
 MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
+<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
 </SCRIPT>
 <NOSCRIPT>
-<A HREF="http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank" HEIGHT="60" WIDTH="468"><IMG SRC="http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y"></A>
+<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank" HEIGHT="60" WIDTH="468"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y"></A>
 </NOSCRIPT>
 </IFRAME>
 </center>
@@ -40,7 +40,7 @@ MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
 
 <!main table top>
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" class=maintable>
-<tr><td width=19><img src=/topleft.gif width=19></td>
+<tr><td width=19><img src=/sonichq/topleft.gif width=19></td>
 
 <td bgcolor=black width=100% height=50>
 <script language=JavaScript>
@@ -50,12 +50,12 @@ document.write(titlepic)
 </script>
 <img src=topbar-title.gif align=right></td>
 
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
-<script src=/scripts/menu.js></script>
+<script src=/sonichq/scripts/menu.js></script>
 <noscript>&nbsp;</noscript>
 </font></td></table>
 
@@ -72,29 +72,29 @@ Records - updated 7-10-99
 
 <div class=itemtext>
 Below is the hit count records set by Sonic page, the first 3 are not sure bets, but I'm sure it's one of them:
-<p>First Sonic page to hit 1,000 - <a href="http://rat.org/sonic/">RAT.ORG</a><br>
-First Sonic page to hit 10,000 - <a href="http://rat.org/sonic/">RAT.ORG</a><br> 
-First Sonic page to hit 20,000 - <a href="http://rat.org/sonic/">RAT.ORG</a><br> 
-First Sonic page to hit 30,000 - <a href="http://www.teamartail.com">Artail Productions/Team Artail</a><br> 
-First Sonic page to hit 40,000 - <a href="http://www.teamartail.com">Artail Productions/Team Artail</a><br>
-First Sonic page to hit 50,000 - <a href="http://www.teamartail.com">Artail Productions/Team Artail</a><br>
-First Sonic page to hit 60,000 - <a href="http://www.sonichq.org/main.htm">Sonic HQ</a><br>
-First Sonic page to hit 70,000 - <a href="http://www.sonichq.org/main.htm">Sonic HQ</a><br>
-First Sonic page to hit 80,000 - <a href="http://www.sonichq.org/main.htm">Sonic HQ</a><br>
-First Sonic page to hit 90,000 - <a href="http://www.sonichq.org/main.htm">Sonic HQ</a><br>
-First Sonic page to hit 100,000 - <a href="http://www.sonichq.org/main.htm">Sonic HQ</a><br>
-First Sonic page to hit 110,000 - <a href="http://www.sonichq.org/main.htm">Sonic HQ</a><br>
-First Sonic page to hit 120,000 - <a href="http://www.sonichq.org/main.htm">Sonic HQ</a><br>
-First Sonic page to hit 130,000 - <a href="http://www.sonichq.org/main.htm">Sonic HQ</a><br>
-First Sonic page to hit 140,000 - <a href="http://www.sonichq.org/main.htm">Sonic HQ</a><br>
-First Sonic page to hit 150,000 - <a href="http://www.sonichq.org/main.htm">Sonic HQ</a><br>
-First Sonic page to hit 160,000 - <a href="http://www.sonichq.org/main.htm">Sonic HQ</a><br>
-First Sonic page to hit 170,000 - <a href="http://www.sonichq.org/main.htm">Sonic HQ</a><br>
-First Sonic page to hit 180,000 - <a href="http://www.sonichq.org/main.htm">Sonic HQ</a><br>
-First Sonic page to hit 190,000 - <a href="http://www.sonichq.org/main.htm">Sonic HQ</a><br>
-First Sonic page to hit 200,000 - <a href="http://www.sonichq.org/main.htm">Sonic HQ</a><br>
+<p>First Sonic page to hit 1,000 - <a href="/ratsonic/sonic/">RAT.ORG</a><br>
+First Sonic page to hit 10,000 - <a href="/ratsonic/sonic/">RAT.ORG</a><br> 
+First Sonic page to hit 20,000 - <a href="/ratsonic/sonic/">RAT.ORG</a><br> 
+First Sonic page to hit 30,000 - <a href="https://web.archive.org/20011101000000/http://www.teamartail.com">Artail Productions/Team Artail</a><br> 
+First Sonic page to hit 40,000 - <a href="https://web.archive.org/20011101000000/http://www.teamartail.com">Artail Productions/Team Artail</a><br>
+First Sonic page to hit 50,000 - <a href="https://web.archive.org/20011101000000/http://www.teamartail.com">Artail Productions/Team Artail</a><br>
+First Sonic page to hit 60,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
+First Sonic page to hit 70,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
+First Sonic page to hit 80,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
+First Sonic page to hit 90,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
+First Sonic page to hit 100,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
+First Sonic page to hit 110,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
+First Sonic page to hit 120,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
+First Sonic page to hit 130,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
+First Sonic page to hit 140,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
+First Sonic page to hit 150,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
+First Sonic page to hit 160,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
+First Sonic page to hit 170,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
+First Sonic page to hit 180,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
+First Sonic page to hit 190,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
+First Sonic page to hit 200,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
 
-<p>Honorable mention - <a href="http://kedziek.simplenet.com/">The Sonic Foundation</a>, this page has tens of hits, just didn't break any records.<p>
+<p>Honorable mention - <a href="https://web.archive.org/20011101000000/http://kedziek.simplenet.com/">The Sonic Foundation</a>, this page has tens of hits, just didn't break any records.<p>
 </div><div class=titlebar><table class=glow>
 Timeline - updated 7-10-99
 </table></div>
@@ -161,9 +161,9 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
-<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
-<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 

@@ -7,26 +7,26 @@
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
-<script src=/scripts/sonic-init.js></script>
+<script src=/sonichq/scripts/sonic-init.js></script>
 <script language=JavaScript>
 <!--
-document.write('<link rel=stylesheet href=http://www.sonichq.org/css/' + theme + '.css type="text/css">')
+document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="text/css">')
 //-->
 </script>
 <noscript>
-<link rel=stylesheet href=http://www.sonichq.org/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/css/main.css type="text/css">
 </noscript>
 </head>
 
-<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
 
 <br>
 
-<center><IFRAME SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
+<center><IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
+<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
 </SCRIPT>
 <NOSCRIPT>
-<A HREF="http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank" HEIGHT="60" WIDTH="468"><IMG SRC="http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y"></A>
+<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank" HEIGHT="60" WIDTH="468"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y"></A>
 </NOSCRIPT>
 </IFRAME></center>
 
@@ -37,7 +37,7 @@ document.write('<link rel=stylesheet href=http://www.sonichq.org/css/' + theme +
 
 <!main table top>
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" class=maintable>
-<tr><td width=19><img src=/topleft.gif width=19></td>
+<tr><td width=19><img src=/sonichq/topleft.gif width=19></td>
 
 <td bgcolor=black width=100% height=50>
 <script language=JavaScript>
@@ -47,7 +47,7 @@ document.write(titlepic)
 </script>
 <img src=topbar-title.gif align=right></td>
 
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 
@@ -94,37 +94,37 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 
 <p><center><table width="70%" border="1" cellpadding="2" cellspacing="2" bordercolorlight="002B2B" bordercolordark="#002B0F">
 <tr bgcolor="black" background="back1.gif"> 
-<td colspan="2" background="starsgreen.gif"><center><img src="http://www.sonichq.org/news/poll.jpg" border=2 bordercolor=white></center></td>
+<td colspan="2" background="starsgreen.gif"><center><img src="/sonichq/news/poll.jpg" border=2 bordercolor=white></center></td>
 </tr>
 <tr> 
-<td bgcolor="#111111" align="center"><a href="http://apps3.vantagenet.com/zrate/rate.asp?id=19902737&rlt=1" border=0>
-<img src=http://www.sonichq.org/comics/images/covers/sonic/thumbnails/sonic91.jpg align=center alt="Click Here to Review Sonic #90 Now!" border=0></a></td>
-<td bgcolor="#191919" align="center"><a href="http://apps3.vantagenet.com/zrate/rate.asp?id=141111523&rlt=1" border=0>
-<img src=http://www.sonichq.org/comics/images/covers/specials/thumbnails/sss15.jpg align=center alt="Click Here to Review Sonic Super Special #15!" border=0></a></td>
+<td bgcolor="#111111" align="center"><a href="https://web.archive.org/20011101000000/http://apps3.vantagenet.com/zrate/rate.asp?id=19902737&rlt=1" border=0>
+<img src=/sonichq/comics/images/covers/sonic/thumbnails/sonic91.jpg align=center alt="Click Here to Review Sonic #90 Now!" border=0></a></td>
+<td bgcolor="#191919" align="center"><a href="https://web.archive.org/20011101000000/http://apps3.vantagenet.com/zrate/rate.asp?id=141111523&rlt=1" border=0>
+<img src=/sonichq/comics/images/covers/specials/thumbnails/sss15.jpg align=center alt="Click Here to Review Sonic Super Special #15!" border=0></a></td>
 </tr>
 <tr> 
 <td bgcolor="#111111" align="center" colspan=2>
-<a href="http://polls.vantagenet.com/2/8/998184328/polls/1121116147/index.htm"><img src="vote.jpg" border=0 height=86 width=86 align=left alt="Vote On Poll #1!"></a>
+<a href="https://web.archive.org/20011101000000/http://polls.vantagenet.com/2/8/998184328/polls/1121116147/index.htm"><img src="vote.jpg" border=0 height=86 width=86 align=left alt="Vote On Poll #1!"></a>
 <font face="Arial" color=FFFFFF size=-1><center><b><u>Kill The Wabbit!</u></b></center>
 <br><font size=-2>Let's get morbid. ^_^ What Two Freedom Fighters would you like to see die or roboticized? List why on the Station Square Message Board.</td>
 </tr>
 <tr> 
 <td bgcolor="#111111" colspan=2>
-<a href="http://polls.vantagenet.com/2/8/998184328/polls/11211161416/index.htm"><img src="vote.jpg" border=0 height=86 width=86 align=right alt="Vote On Poll #2!"></a>
+<a href="https://web.archive.org/20011101000000/http://polls.vantagenet.com/2/8/998184328/polls/11211161416/index.htm"><img src="vote.jpg" border=0 height=86 width=86 align=right alt="Vote On Poll #2!"></a>
 <font face="Arial" color=FFFFFF size=-1><center><b><u>BOO! Bad Character!</u></b></center>
 <br><font size=-2></center>Above all, Hero or Villian: Who is the worst character creation by Archie writers? Monkey Khan? Nate Morgan? List your reasons why you dislike them so on the SS Message Board and if you disagree with the leads, rebut against it. 
 </td>
 </tr>
 <tr> 
 <td bgcolor="#111111" colspan=2>
-<a href="http://polls.vantagenet.com/2/8/998184328/polls/11211162438/index.htm"><img src="vote.jpg" border=0 height=86 width=86 align=left alt="Vote On Poll #3!"></a>
+<a href="https://web.archive.org/20011101000000/http://polls.vantagenet.com/2/8/998184328/polls/11211162438/index.htm"><img src="vote.jpg" border=0 height=86 width=86 align=left alt="Vote On Poll #3!"></a>
 <font face="Arial" color=FFFFFF size=-1><center><b><u>When Mina Met Sally!</u></b></center>
 <br><font size=-2></center>How do you feel about the upcoming Sonic/Mina relationship, the Sonic/Sally breakup and the Geoffrey/Sally duo being reignited again? Would you be willing to be open minded about new relationships in the book?
 </td>
 </tr>
 <tr> 
 <td bgcolor="#111111" colspan=2>
-<a href="http://apps3.vantagenet.com/zrate/rate.asp?id=11211175556&rlt=1"><img src="shuffle2.jpg" border=0 align=right alt="Rate Sonic Shuffle!"></a>
+<a href="https://web.archive.org/20011101000000/http://apps3.vantagenet.com/zrate/rate.asp?id=11211175556&rlt=1"><img src="shuffle2.jpg" border=0 align=right alt="Rate Sonic Shuffle!"></a>
 <font face="Arial" color=FFFFFF size=-1><center><b><u>Segasonic - Rate Sonic Shuffle!</u></b></center>
 <br><font size=-2></center>The newest Sonic game for Dreamcast! Sonic Shuffle is a party game along the veins of Mario Party. If you've already played it or own a copy, How would you rate it? Rate it using the criteria on our poll!
 </td>
@@ -139,9 +139,9 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
-<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
-<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 
