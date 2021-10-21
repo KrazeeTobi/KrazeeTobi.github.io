@@ -3,35 +3,35 @@
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
    <title>Sonic HQ Gaming Info - Sonic CD</title>
-<script src=/scripts/sonic-init.js></script>
+<script src=/sonichq/scripts/sonic-init.js></script>
 <style type="text/css">
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
-<link rel=stylesheet href=/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/css/main.css type="text/css">
 </head>
 
-<body text="#000000" bgcolor="white" link=blue vlink=blue background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<body text="#000000" bgcolor="white" link=blue vlink=blue background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
 
 <br>
 
 <center>
-<IFRAME SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
+<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
 MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
+<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
 </SCRIPT>
 <NOSCRIPT>
-<A HREF="http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
+<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
 </NOSCRIPT>
 </IFRAME>
 <!-- GOCLICK.COM POP-UNDER CODE V1 -->
 <script language="Javascript"> <!--
-var dd=document; dd.cookie='ct=1; path=/';
+var dd=document; dd.cookie='ct=1; path=/sonichq/';
 if ((dd.cookie.length > 0 && (dd.cookie.indexOf('ush=1') <= 0))) {
 dd.write('<scri'+'pt language="javascript" '+
-'src="http://earth.goclick.com/pad2.mod?V=1&AID=6857&'+
+'src="https://web.archive.org/20011101000000/http://earth.goclick.com/pad2.mod?V=1&AID=6857&'+
 'SEARCH=web%20hosting"></scri'+'pt>');
-dd.cookie='push=1; path=/'; }
+dd.cookie='push=1; path=/sonichq/'; }
 // --></script>
 <!-- END OF POP-UNDER CODE --></center>
 
@@ -70,9 +70,9 @@ else if(bVer >= 4) css=1;
 </script>
 
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=50% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=right bgcolor=black width=100%><font color=white>Anchor Links</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr>
 
 <tr><td colspan=3 VALIGN=TOP bgcolor=ffffff>
@@ -80,13 +80,13 @@ else if(bVer >= 4) css=1;
 <a href=#anchor0 onclick="show('table0')">Palmtree Panic Zone</a> | <a href=#anchor1 onclick="show('table1')">Collision Chaos Zone</a> | <a href=#anchor2 onclick="show('table2')">Tidal Tempest Zone</a> | <a href=#anchor3 onclick="show('table3')">Quartz Quadrant Zone</a> | <a href=#anchor4 onclick="show('table4')">Wacky Workbench Zone</a> | <a href=#anchor5 onclick="show('table5')">Stardust Speedway Zone</a> | <a href=#anchor6 onclick="show('table6')">Metallic Madness Zone</a> | <a href=#anchor7 onclick="show('table7')">The Special Zone - The UFO Fields</a></div></font></td></tr>
 
 <tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 <!main table top>
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
-<tr><td width=19><img src=/topleft.gif width=19></td>
+<tr><td width=19><img src=/sonichq/topleft.gif width=19></td>
 
 <td bgcolor=black width=100% height=50>
 <script language=JavaScript>
@@ -96,12 +96,12 @@ document.write(titlepic + titlelogo)
 </script>
 &nbsp;</td>
 
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
-<script src=/scripts/menu.js></script>
+<script src=/sonichq/scripts/menu.js></script>
 <noscript>&nbsp;</noscript>
 </font></td></table>
 
@@ -131,8 +131,8 @@ Other Pages
 </table></div>
 
 <div class=itemtext>
-<table align=right border=0><td><embed src="http://www.geocities.com//EnchantedForest/Dell/7835/scdstardustspeedwaybjj.mid" height=25 width=50 autostart="true" loop="true" controls=smallconsole></td><td width=5>&nbsp;</td></table>
-<center>[<a href=/music/display.cgi?category=segacd&title=soniccd_past>Music (Past Versions)</a> | <a href=/music/display.cgi?category=segacd&title=soniccd_megacd>Music (Mega CD Versions)</a> | <a href=/music/display.cgi?category=segacd&title=soniccd_segacd>Music (Sega CD Versions)</a> | <a href=info.shtml>Original Emuzone Page</a> | <a href=http://www.geocities.com/EnchantedForest/Dell/6657/SonicCD.html>Geocities Page</a>]</center>
+<table align=right border=0><td><embed src="/sonichq/geocities/EnchantedForest/Dell/7835/scdstardustspeedwaybjj.mid" height=25 width=50 autostart="true" loop="true" controls=smallconsole></td><td width=5>&nbsp;</td></table>
+<center>[<a href=/sonichq/music/display.cgi?category=segacd&title=soniccd_past>Music (Past Versions)</a> | <a href=/sonichq/music/display.cgi?category=segacd&title=soniccd_megacd>Music (Mega CD Versions)</a> | <a href=/sonichq/music/display.cgi?category=segacd&title=soniccd_segacd>Music (Sega CD Versions)</a> | <a href=info.shtml>Original Emuzone Page</a> | <a href=/sonichq/geocities/EnchantedForest/Dell/6657/SonicCD.html>Geocities Page</a>]</center>
 <br><br></div><!end of sections>
 
 </td>
@@ -141,29 +141,29 @@ Other Pages
 <td width=4>&nbsp;</td>
 <td valign=top bgcolor=000000 class=sidebar><font face=Arial size=-1 color=white><br>
 
-<center><img src=/images/screenshots/soniccd/soniccd.gif></center>
+<center><img src=/sonichq/images/screenshots/soniccd/soniccd.gif></center>
 </font></td></tr>
 </table>
 <!end main table middle>
 
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100%><tr>
-<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
-<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 
 <div id=table0 align=center>
 
-<a name=anchor0><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor0><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table0')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table0')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Palmtree Panic Zone</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -174,14 +174,14 @@ Other Pages
 <TR><TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Past ***</FONT></CENTER></b></TD>
 <TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Present ***</FONT></b></CENTER></TD></TR>
 
-<TR><TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdpalmtreepast.gif"></CENTER></TD>
-<TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdpalmtreepanicpresent.gif"></CENTER></TD></TR>
+<TR><TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdpalmtreepast.gif"></CENTER></TD>
+<TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdpalmtreepanicpresent.gif"></CENTER></TD></TR>
 
 <TR><TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Good Future ***</FONT></CENTER></b></TD>
 <TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Bad Future ***</FONT></b></CENTER></TD></TR>
 
-<TR><TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdpalmtreegood.gif"></CENTER></TD>
-<TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdpalmtreebad.gif"></CENTER>
+<TR><TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdpalmtreegood.gif"></CENTER></TD>
+<TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdpalmtreebad.gif"></CENTER>
 </TD></TABLE></CENTER>
 
 <P>This is a pretty straightforward zone.  After the first <B>BIG</B> loop, head 
@@ -194,21 +194,21 @@ of him falls off.  After everything falls off, he'll fly away.  Go to the
 right and break open the Prison Egg to release the flower seeds.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table1 align=center>
 
-<a name=anchor1><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor1><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table1')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table1')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Collision Chaos Zone</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -218,14 +218,14 @@ right and break open the Prison Egg to release the flower seeds.<br><br></div></
 <div class=itemtext><CENTER><br><TABLE BORDER>
 <TR><TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Past ***</FONT></CENTER></b></TD>
 <TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Present ***</FONT></b></CENTER></TD></TR>
-<TR><TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdcollisionpast.gif"></CENTER></TD>
-<TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdcollisionpresent.gif"></CENTER></TD></TR>
+<TR><TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdcollisionpast.gif"></CENTER></TD>
+<TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdcollisionpresent.gif"></CENTER></TD></TR>
 
 <TR><TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Good Future ***</FONT></CENTER></b></TD>
 <TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Bad Future ***</FONT></b></CENTER></TD></TR>
 
-<TR><TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdcollisiongood.gif"></CENTER></TD>
-<TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdcollisionbad.gif"></CENTER>
+<TR><TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdcollisiongood.gif"></CENTER></TD>
+<TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdcollisionbad.gif"></CENTER>
 </TD></TABLE></CENTER>
 
 <P>Another Casino Night / Spring Yard type zone here.  Flippers and bumpers bounce you around 
@@ -237,21 +237,21 @@ again.  After you hit him a couple of times he'll fly off leaving you to
 free the flowers.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table2 align=center>
 
-<a name=anchor2><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor2><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table2')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table2')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Tidal Tempest Zone</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -261,14 +261,14 @@ free the flowers.<br><br></div></font></td></tr></table>
 <div class=itemtext><CENTER><br><TABLE BORDER>
 <TR><TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Past ***</FONT></CENTER></b></TD>
 <TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Present ***</FONT></b></CENTER></TD></TR>
-<TR><TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdtidaltempestpast.gif"></CENTER></TD>
-<TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdtidaltempestpresent.gif"></CENTER></TD></TR>
+<TR><TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdtidaltempestpast.gif"></CENTER></TD>
+<TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdtidaltempestpresent.gif"></CENTER></TD></TR>
 
 <TR><TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Good Future ***</FONT></CENTER></b></TD>
 <TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Bad Future ***</FONT></b></CENTER></TD></TR>
 
-<TR><TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdtidaltempestgood.gif"></CENTER></TD>
-<TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdtidaltempestbad.gif"></CENTER>
+<TR><TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdtidaltempestgood.gif"></CENTER></TD>
+<TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdtidaltempestbad.gif"></CENTER>
 </TD></TABLE></CENTER>
 
 <P>How come hedgehogs hate water, yet Sega won't stop putting in flodded zones?  
@@ -281,21 +281,21 @@ the bubbles out of his shield to stay alive.  Once all the bubbles are gone,
 plug him once to get rid of him.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table3 align=center>
 
-<a name=anchor3><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor3><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table3')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table3')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Quartz Quadrant Zone</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -305,14 +305,14 @@ plug him once to get rid of him.<br><br></div></font></td></tr></table>
 <div class=itemtext><CENTER><br><TABLE BORDER>
 <TR><TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Past ***</FONT></CENTER></b></TD>
 <TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Present ***</FONT></b></CENTER></TD></TR>
-<TR><TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdquartzpast.gif"></CENTER></TD>
-<TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdquartz.gif"></CENTER></TD></TR>
+<TR><TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdquartzpast.gif"></CENTER></TD>
+<TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdquartz.gif"></CENTER></TD></TR>
 
 <TR><TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Good Future ***</FONT></CENTER></b></TD>
 <TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Bad Future ***</FONT></b></CENTER></TD></TR>
 
-<TR><TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdquartzgood.gif"></CENTER></TD>
-<TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdquartzbad.gif"></CENTER>
+<TR><TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdquartzgood.gif"></CENTER></TD>
+<TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdquartzbad.gif"></CENTER>
 </TD></TABLE></CENTER>
 
 <P>A zone of shining crystals, Robotnik is searching for the Time Stones here.  
@@ -326,21 +326,21 @@ the conveyer belt will rub away the bottom of the capsule Robotnik is in.
 When it's all gone, Robotnik will run away leaving you to free the flowers.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table4 align=center>
 
-<a name=anchor4><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor4><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table4')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table4')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Wacky Workbench Zone</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -350,14 +350,14 @@ When it's all gone, Robotnik will run away leaving you to free the flowers.<br><
 <div class=itemtext><CENTER><br><TABLE BORDER>
 <TR><TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Past ***</FONT></CENTER></b></TD>
 <TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Present ***</FONT></b></CENTER></TD></TR>
-<TR><TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdwackyworkpast.gif"></CENTER></TD>
-<TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdwackyworkpresent.gif"></CENTER></TD></TR>
+<TR><TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdwackyworkpast.gif"></CENTER></TD>
+<TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdwackyworkpresent.gif"></CENTER></TD></TR>
 
 <TR><TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Good Future ***</FONT></CENTER></b></TD>
 <TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Bad Future ***</FONT></b></CENTER></TD></TR>
 
-<TR><TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdwackyworkgood.gif"></CENTER></TD>
-<TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdwackyworkbad.gif"></CENTER>
+<TR><TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdwackyworkgood.gif"></CENTER></TD>
+<TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdwackyworkbad.gif"></CENTER>
 </TD></TABLE></CENTER>
 
 <P>Be careful in this zone, the ground is not always grounded.  If you're 
@@ -374,21 +374,21 @@ repeating this pattern. This time watching for falling spikes as well. When you 
 of him once and for all.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table5 align=center>
 
-<a name=anchor5><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor5><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table5')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table5')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Stardust Speedway Zone</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -398,14 +398,14 @@ of him once and for all.<br><br></div></font></td></tr></table>
 <div class=itemtext><CENTER><br><TABLE BORDER>
 <TR><TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Past ***</FONT></CENTER></b></TD>
 <TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Present ***</FONT></b></CENTER></TD></TR>
-<TR><TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdstardustpast.gif"></CENTER></TD>
-<TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdstardustpresent.gif"></CENTER></TD></TR>
+<TR><TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdstardustpast.gif"></CENTER></TD>
+<TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdstardustpresent.gif"></CENTER></TD></TR>
 
 <TR><TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Good Future ***</FONT></CENTER></b></TD>
 <TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Bad Future ***</FONT></b></CENTER></TD></TR>
 
-<TR><TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdstardustspeedwaygood.gif"></CENTER></TD>
-<TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdstardustspeedwaybad.gif"></CENTER>
+<TR><TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdstardustspeedwaygood.gif"></CENTER></TD>
+<TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdstardustspeedwaybad.gif"></CENTER>
 </TD></TABLE></CENTER>
 
 <P>This zone is pretty easy, at least the first two acts are. The hardest thing on the first two zones in avoiding The Double Flasher Badniks that follow your moves and connects with a ray beam. Hit a sign to 
@@ -418,21 +418,21 @@ does, a wall will close in front of him and Robotnik will wipe him out by
 mistake.  If he reaches the finish line before you do, you'll get fried. Cross the finish line at the same time - you'll get fried. Its NOT as easy as it sounds...<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table6 align=center>
 
-<a name=anchor6><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor6><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table6')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table6')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Metallic Madness Zone</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -442,14 +442,14 @@ mistake.  If he reaches the finish line before you do, you'll get fried. Cross t
 <div class=itemtext><CENTER><br><TABLE BORDER>
 <TR><TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Past ***</FONT></CENTER></b></TD>
 <TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Present ***</FONT></b></CENTER></TD></TR>
-<TR><TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdmetalmadnesspast.gif"></CENTER></TD>
-<TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdmetalmadnesspresent.gif"></CENTER></TD></TR>
+<TR><TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdmetalmadnesspast.gif"></CENTER></TD>
+<TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdmetalmadnesspresent.gif"></CENTER></TD></TR>
 
 <TR><TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Good Future ***</FONT></CENTER></b></TD>
 <TD><CENTER><b><FONT FACE="Comic Sans MS" SIZE=-1>*** Bad Future ***</FONT></b></CENTER></TD></TR>
 
-<TR><TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdmetalmadnessgood.gif"></CENTER></TD>
-<TD><CENTER><IMG SRC="/images/screenshots/soniccd/scdfinboss.gif"></CENTER>
+<TR><TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdmetalmadnessgood.gif"></CENTER></TD>
+<TD><CENTER><IMG SRC="/sonichq/images/screenshots/soniccd/scdfinboss.gif"></CENTER>
 </TD></TABLE></CENTER>
 
 <P>This is the final zone in this game. Filled to the brim with spikes and badniks it can become QUITE annoying! When you come up to a tube that lets 
@@ -464,28 +464,28 @@ use the pillar as a pogo stick and crush you.  One more hit defeats him.  Sit
 back and watch the ending.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table7 align=center>
 
-<a name=anchor7><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor7><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table7')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table7')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>The Special Zone - The UFO Fields</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
 <td VALIGN=TOP bgcolor=ffffff class=itemtable>
 <font face=Arial size=-1 color=black><div class=titlebar>The Special Zone - The UFO Fields</div>
 
-<div class=itemtext><center><br><img src=/images/screenshots/soniccd/scdspecial.gif></center>
+<div class=itemtext><center><br><img src=/sonichq/images/screenshots/soniccd/scdspecial.gif></center>
 
 <P>Like in Sonic 1, Sonic must have 50 rings when he clears an act for a giant 
 ring to appear.  Jump in the ring to go to a Mode 7 special stage.  You run 
@@ -493,9 +493,9 @@ around trying to destroy the UFOs.  If you destroy all of them, you get one
 of the Time Stones, this game's Chaos Emeralds.  Now there is NO SUPER SONIC in this game !!!! BUT there are two animated endings !!! And if you finish with all the emeralds - You get to see what REALLY happens....<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div>

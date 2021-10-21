@@ -29,7 +29,7 @@ Sonic The Hedgehog 2 (Walkthrough)
 <tr><td bgcolor=black width=1>&nbsp;</td><td width=100%><center>
 <br>
 
-<b><font face="Arial" size=-1><a href=http://sonichq.org/main.htm>Sonic HQ</a> / <a href=../../>Gaming Info</a> / <a href=../>The Games List</a> / 
+<b><font face="Arial" size=-1><a href=/sonichq/main.htm>Sonic HQ</a> / <a href=../../>Gaming Info</a> / <a href=../>The Games List</a> / 
 <a href=index.shtml>Index Page</a> / Guide And Walkthrough
 </font></H2>
 
@@ -50,11 +50,11 @@ Sonic The Hedgehog 2 (Walkthrough)
 
 <p>
 <table width=333 border=0 cellspacing=0 cellpadding=0><tr>
-<td width=10 height=20><img src="/images/borders/topleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/topleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2 color=cyan>
 Sonic 2 Sections
 </font></td>
-<td width=10 height=20><img src="/images/borders/topright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/topright.gif" width=10 height=20></td>
 </tr>
 <tr><td colspan=3>
 <table border=0 cellspacing=0 cellpadding=0><tr>
@@ -66,18 +66,18 @@ Sonic 2 Sections
 </tr></table>
 </td></tr>
 <tr>
-<td width=10 height=20><img src="/images/borders/bottomleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/bottomleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2>&nbsp;</font></td>
-<td width=10 height=20><img src="/images/borders/bottomright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/bottomright.gif" width=10 height=20></td>
 </tr></table>
 
 <p>
 <table width=333 border=0 cellspacing=0 cellpadding=0><tr>
-<td width=10 height=20><img src="/images/borders/topleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/topleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2 color=cyan>
 Sonic 2 Beta And Others
 </font></td>
-<td width=10 height=20><img src="/images/borders/topright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/topright.gif" width=10 height=20></td>
 </tr>
 <tr><td colspan=3>
 <table border=0 cellspacing=0 cellpadding=0><tr>
@@ -89,9 +89,9 @@ Sonic 2 Beta And Others
 </tr></table>
 </td></tr>
 <tr>
-<td width=10 height=20><img src="/images/borders/bottomleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/bottomleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2>&nbsp;</font></td>
-<td width=10 height=20><img src="/images/borders/bottomright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/bottomright.gif" width=10 height=20></td>
 </tr></table>
 
 </td>
@@ -124,30 +124,30 @@ with the game, like insights on its creation, special things and whatnots - you 
 <br>
 
 <p><table width=420 border=0 cellspacing=0 cellpadding=0 align=right><tr><a name="special">
-<td width=10 height=20><img src="/images/borders/topleft.gif" width=10 height=35></td>
+<td width=10 height=20><img src="/sonichq/images/borders/topleft.gif" width=10 height=35></td>
 <td width=100% bgcolor=000000><font face=Arial size=-1 color=red><img src=../images/boxart.jpg align=right></font></td>
-<td width=10 height=20><img src="/images/borders/topright.gif" width=10 height=35></td>
+<td width=10 height=20><img src="/sonichq/images/borders/topright.gif" width=10 height=35></td>
 </tr>
 <tr><td colspan=3>
 <table border=0 cellspacing=0 cellpadding=0><tr>
 <td width=2 bgcolor=000000>&nbsp;</td>
 <td width=100% bgcolor=ffffff><font size=2>
 
-<center><IMG SRC=/images/boxes/genesis/s2.gif alt="Sonic The Hedgehog 2 - Genesis" align=left height=230></center>
-<center><IMG SRC=/images/boxes/mdeurope/s2.gif alt="Sonic The Hedgehog 2 - Megadrive (Europe)" align=right></center>
-<center><IMG SRC=/images/boxes/md/s2.gif alt="Sonic The Hedgehog 2 - Megadrive (Japan)"></center>
+<center><IMG SRC=/sonichq/images/boxes/genesis/s2.gif alt="Sonic The Hedgehog 2 - Genesis" align=left height=230></center>
+<center><IMG SRC=/sonichq/images/boxes/mdeurope/s2.gif alt="Sonic The Hedgehog 2 - Megadrive (Europe)" align=right></center>
+<center><IMG SRC=/sonichq/images/boxes/md/s2.gif alt="Sonic The Hedgehog 2 - Megadrive (Japan)"></center>
 
 </td>
 <td width=2 bgcolor=000000>&nbsp;</td>
 </tr></table>
 </td></tr>
 <tr>
-<td width=10 height=20><img src="/images/borders/bottomleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/bottomleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2>&nbsp;</font></td>
-<td width=10 height=20><img src="/images/borders/bottomright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/bottomright.gif" width=10 height=20></td>
 </tr></table>
 
-<p><p><embed autostart="true" loop="true" width=200 height=60 src=http://www.emulationzone.org/sonichq/music/midis/sonic/2/s2endingdb.mid><br> Sonic 2 Ending - Dave Bulmer
+<p><p><embed autostart="true" loop="true" width=200 height=60 src=/sonichq/emuzone/music/midis/sonic/2/s2endingdb.mid><br> Sonic 2 Ending - Dave Bulmer
 
 <p>Only the big gamers can remember Sonic Twosday - The day when the sequel to Sonic 2 finally came out! The second major installment in the Sonic Genesis series, S2 introduced TONS of new concepts. Most noteably though - it established a link between itself and several VERY POPULAR pop cultural referecnces of its time - namely an American hit named Star Wars and a Japanese Anime in its prime called Dragon Ball Z. 
 
@@ -343,8 +343,8 @@ If a zone has a link, then most likely we have info on its past information. If 
 <a href=../s2beta#z8><b>Genocide City Zone</b> - Accesible Only In Sonic 2 Beta</a>
 </font></td>
 <td>
-<p><img src=http://www.sonichq.org/images/screenshots/sonic2/sth2robo.gif>
-<p><a href=zones.shtml#knuckles><img src=http://www.sonichq.org/images/screenshots/sonic2/sonic2andk.gif alt="Click here to see the section on the Sonic 2 and Sonic & Knuckles Lock On">
+<p><img src=/sonichq/images/screenshots/sonic2/sth2robo.gif>
+<p><a href=zones.shtml#knuckles><img src=/sonichq/images/screenshots/sonic2/sonic2andk.gif alt="Click here to see the section on the Sonic 2 and Sonic & Knuckles Lock On">
 </td>
 </tr>
 </table>
@@ -355,7 +355,7 @@ If a zone has a link, then most likely we have info on its past information. If 
 <TR>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=../s2beta/#z1><u>Emerald Hill Zone<u></a><a name=z1>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2corkscrew.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic2/sth2corkscrew.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 <TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
@@ -370,7 +370,7 @@ If a zone has a link, then most likely we have info on its past information. If 
 </center></TD>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=../s2beta/#z2><u>Chemical Plant Zone<u></a><a name=z2>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2chemplant.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic2/sth2chemplant.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 </TR>
@@ -378,7 +378,7 @@ If a zone has a link, then most likely we have info on its past information. If 
 <TR>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=../s2beta/#z3><u>Aquatic Ruin Zone<u></a><a name=z3>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2aquaruin.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic2/sth2aquaruin.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 <TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
@@ -393,7 +393,7 @@ If a zone has a link, then most likely we have info on its past information. If 
 </center></TD>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <u><a href=../s2beta/#z4>Casino Night Zone<u></a><a name=z4>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2casino.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic2/sth2casino.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 </TR>
@@ -401,7 +401,7 @@ If a zone has a link, then most likely we have info on its past information. If 
 <TR>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <u>Hill Top Zone<u><a name=z5>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2hilltop.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic2/sth2hilltop.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 <TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
@@ -415,7 +415,7 @@ If a zone has a link, then most likely we have info on its past information. If 
 </center></TD>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=../s2beta/#z6><u>Mystic Cave Zone<u></a><a name=z6>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2mysticcave.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic2/sth2mysticcave.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 </TR>
@@ -423,7 +423,7 @@ If a zone has a link, then most likely we have info on its past information. If 
 <TR>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <u>Oil Ocean Zone<u><a name=z7>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2oilocean.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic2/sth2oilocean.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 <TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
@@ -437,7 +437,7 @@ If a zone has a link, then most likely we have info on its past information. If 
 </center></TD>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <u>Metropolis Zone<u></a><a name=z8>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2metropolis.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic2/sth2metropolis.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 </TR>
@@ -445,7 +445,7 @@ If a zone has a link, then most likely we have info on its past information. If 
 <TR>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <u>Sky Chase Zone<u><a name=z9>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2skychase.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic2/sth2skychase.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 <TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
@@ -459,7 +459,7 @@ If a zone has a link, then most likely we have info on its past information. If 
 </center></TD>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <u>Wing Fortress Zone<u></a><a name=z6>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2wingfort.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic2/sth2wingfort.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 </TR>
@@ -467,7 +467,7 @@ If a zone has a link, then most likely we have info on its past information. If 
 <TR>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=../s2beta/#z8><u>Death Egg Zone<u></a><a name=z11>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2deathegg.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic2/sth2deathegg.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 <TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
@@ -483,7 +483,7 @@ If a zone has a link, then most likely we have info on its past information. If 
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <u>The Special Zone</u></b><a name=special>
 <br>The 3D Halfpipe Race - Mode 7 Madness!
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic2/sth2special.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic2/sth2special.gif">
 </FONT></FONT></B></CENTER>
 </center></TD>
 

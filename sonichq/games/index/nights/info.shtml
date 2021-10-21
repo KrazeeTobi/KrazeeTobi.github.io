@@ -3,9 +3,9 @@
 <title>Sonic HQ - The Games Page</title>
 </header>
 
-<body bgcolor="orange" background="/images/backgrounds/swirly.gif"
+<body bgcolor="orange" background="/sonichq/images/backgrounds/swirly.gif"
  text="000066" link="#405961" vlink="#ff0000">
-<embed src="http://www.geocities.com/EnchantedForest/Dell/6657/Take_the_Snow_Train.mid" autostart="true" hidden="true" loop="true">
+<embed src="/sonichq/geocities/EnchantedForest/Dell/6657/Take_the_Snow_Train.mid" autostart="true" hidden="true" loop="true">
 
 <p><center> 
 <H2 ALIGN=CENTER><FONT COLOR="#000066">Christmas Nights</FONT></H2>
@@ -14,7 +14,7 @@
 <TR ALIGN=CENTER><TD>
 <TABLE ALIGN=CENTER BORDER=5 CELLSPACING=2 CELLPADDING=2>
 <TR ALIGN=CENTER><TD>
-<IMG SRC="http://www.geocities.com/EnchantedForest/Dell/6657/christmasnights.jpg">
+<IMG SRC="/sonichq/geocities/EnchantedForest/Dell/6657/christmasnights.jpg">
 </TD></TR></TABLE>
 </TD></TR></TABLE>
 </P></center></font>

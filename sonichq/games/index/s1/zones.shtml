@@ -29,7 +29,7 @@ Sonic The Hedgehog 1 (Walkthrough)
 <tr><td bgcolor=black width=1>&nbsp;</td><td width=100%><center>
 <br>
 
-<b><font face="Arial" size=-1><a href=http://sonichq.org/main.htm>Sonic HQ</a> / <a href=../../>Gaming Info</a> / <a href=../>The Games List</a> / 
+<b><font face="Arial" size=-1><a href=/sonichq/main.htm>Sonic HQ</a> / <a href=../../>Gaming Info</a> / <a href=../>The Games List</a> / 
 Index Page / <a href=index.shtml>Guide And Walkthrough</a>
 </font></H2>
 
@@ -48,11 +48,11 @@ Index Page / <a href=index.shtml>Guide And Walkthrough</a>
 <td>
 <p>
 <table width=333 border=0 cellspacing=0 cellpadding=0><tr>
-<td width=10 height=20><img src="/images/borders/topleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/topleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2 color=cyan>
 Other Sonic 1 Sections
 </font></td>
-<td width=10 height=20><img src="/images/borders/topright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/topright.gif" width=10 height=20></td>
 </tr>
 <tr><td colspan=3>
 <table border=0 cellspacing=0 cellpadding=0><tr>
@@ -60,16 +60,16 @@ Other Sonic 1 Sections
 <td width=100% bgcolor=ffffff><font size=2>
 <p><font size=-1.5></font><center><a href=index.shtml#codes>The Code Bank</a> / <a href=index.shtml#gamegenie>Game Genie Codes</a> / <a href=index.shtml#comic>Comic Adaptions</a> 
 <br><a href=zones.shtml#zones>Guide And Walkthrough</a> / <a href=zones.shtml#special>Special Features And Innovations</a> / <a href=zones.shtml#neverwas>The Hedgehog That Never Was</a>
-<br><a href=../../gameplay/index.html>Basic Gameplay - Moves And Items</a> / <a href=http://www.emulationzone.org/sonichq/games/whoswho/badniks_a.html#1> Badnik Profiles</a> 
-<br><a href=http://www.emulationzone.org/sonichq/music/display.cgi?category=genesis&title=sonic1>Sonic HQ: Music - Sonic 1</a>
+<br><a href=../../gameplay/index.html>Basic Gameplay - Moves And Items</a> / <a href=/sonichq/emuzone/games/whoswho/badniks_a.html#1> Badnik Profiles</a> 
+<br><a href=/sonichq/emuzone/music/display.cgi?category=genesis&title=sonic1>Sonic HQ: Music - Sonic 1</a>
 </center></font></td>
 <td width=2 bgcolor=000000>&nbsp;</td>
 </tr></table>
 </td></tr>
 <tr>
-<td width=10 height=20><img src="/images/borders/bottomleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/bottomleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2>&nbsp;</font></td>
-<td width=10 height=20><img src="/images/borders/bottomright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/bottomright.gif" width=10 height=20></td>
 </tr></table>
 </td>
 <td>
@@ -103,30 +103,30 @@ with the game, like insights on its creation, special things and whatnots - you 
 <br>
 
 <p><table width=420 border=0 cellspacing=0 cellpadding=0 align=right><tr><a name="special">
-<td width=10 height=20><img src="/images/borders/topleft.gif" width=10 height=35></td>
+<td width=10 height=20><img src="/sonichq/images/borders/topleft.gif" width=10 height=35></td>
 <td width=100% bgcolor=000000><font face=Arial size=-1 color=red><img src=../images/boxart.jpg align=right></font></td>
-<td width=10 height=20><img src="/images/borders/topright.gif" width=10 height=35></td>
+<td width=10 height=20><img src="/sonichq/images/borders/topright.gif" width=10 height=35></td>
 </tr>
 <tr><td colspan=3>
 <table border=0 cellspacing=0 cellpadding=0><tr>
 <td width=2 bgcolor=000000>&nbsp;</td>
 <td width=100% bgcolor=ffffff><font size=2>
 
-<center><IMG SRC=/images/boxes/genesis/s1.gif alt="Sonic The Hedgehog 1 - Genesis" align=left height=230></center>
-<center><IMG SRC=/images/boxes/mdeurope/s1.gif alt="Sonic The Hedgehog 1 - Megadrive (Europe)" align=right></center>
-<center><IMG SRC=/images/boxes/md/s1.gif alt="Sonic The Hedgehog 1 - Megadrive (Japan)"></center>
+<center><IMG SRC=/sonichq/images/boxes/genesis/s1.gif alt="Sonic The Hedgehog 1 - Genesis" align=left height=230></center>
+<center><IMG SRC=/sonichq/images/boxes/mdeurope/s1.gif alt="Sonic The Hedgehog 1 - Megadrive (Europe)" align=right></center>
+<center><IMG SRC=/sonichq/images/boxes/md/s1.gif alt="Sonic The Hedgehog 1 - Megadrive (Japan)"></center>
 
 </td>
 <td width=2 bgcolor=000000>&nbsp;</td>
 </tr></table>
 </td></tr>
 <tr>
-<td width=10 height=20><img src="/images/borders/bottomleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/bottomleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2>&nbsp;</font></td>
-<td width=10 height=20><img src="/images/borders/bottomright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/bottomright.gif" width=10 height=20></td>
 </tr></table>
 
-<p><p><embed autostart="true" loop="true" width=200 height=60 src=http://www.sonichq.org/music/midis/s1/Labyrinthyamaha.mid><br>Labyrinth Zone
+<p><p><embed autostart="true" loop="true" width=200 height=60 src=/sonichq/music/midis/s1/Labyrinthyamaha.mid><br>Labyrinth Zone
 
 <p>At a time when the videogame industry was pretty much all Super Mario, the struggling Genesis needed a name for itself.
 Headed by Yuji Naka and The Sonic Team, Sonic The Hedgehog was created and soon took the top spot as both mascot and headliner
@@ -178,7 +178,7 @@ If a zone has a link, then most likely we have info on its past information. If 
 <tr>
 <td colspan=2>
 
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic/greenhillboss.gif" align=right>
+<p><IMG SRC="/sonichq/images/screenshots/sonic/greenhillboss.gif" align=right>
 <center><table border=0><tr><td><font face="Arial" size=-1>
 <li><a href=zones.shtml#z1><b>Green Hill Zone</a><br>
 <li><a href=zones.shtml#z2>Marble Zone</a><br>
@@ -197,7 +197,7 @@ If a zone has a link, then most likely we have info on its past information. If 
 <TR>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=zones.shtml#z8><u>Green Hill Zone<u></a><a name=z1>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic/greenhill.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic/greenhill.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 <TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
@@ -211,7 +211,7 @@ If a zone has a link, then most likely we have info on its past information. If 
 </center></TD>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=zones.shtml#z9><u>Marble Zone<u></a><a name=z2>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic/marble.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic/marble.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 </TR>
@@ -219,7 +219,7 @@ If a zone has a link, then most likely we have info on its past information. If 
 <TR>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=zones.shtml#z10><u>Spring Yard Zone<u></a><a name=z3>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic/springyard.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic/springyard.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 <TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
@@ -239,7 +239,7 @@ you have to do is get to the top of all his traps.  When you do, he'll run
 away, leaving you to finish the zone.</center></TD>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <u>The Labyrinth Zone<u><a name=z4>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic/labyrinth.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic/labyrinth.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 </TR>
@@ -247,7 +247,7 @@ away, leaving you to finish the zone.</center></TD>
 <TR>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <u>Star Light Zone<u><a name=z5>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic/starlight.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic/starlight.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 <TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
@@ -261,7 +261,7 @@ away, leaving you to finish the zone.</center></TD>
 </center></TD>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=zones.shtml#z10><u>Scrap Brain Zone<u></a><a name=z6>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic/scrapbrain.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic/scrapbrain.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 </TR>
@@ -269,7 +269,7 @@ away, leaving you to finish the zone.</center></TD>
 <TR>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <u>The Final Zone<u><a name=z7>
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic/final.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic/final.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 <TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
@@ -297,7 +297,7 @@ You just get to see the good version of the ending.
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <u>The Special Zone</u></b><a name=special>
 <br>The 360 Degree Rotating Maze
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic/special.gif">
+<p><IMG SRC="/sonichq/images/screenshots/sonic/special.gif">
 </FONT></FONT></B></CENTER>
 </center></TD>
 
@@ -327,7 +327,7 @@ view in one spot. ^_^</center>
 <TR>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=zones.shtml#z1><u>Green Hill Zone<u></a><a name=z8>
-<p><IMG SRC="/images/screenshots/sonic1beta/s1beta1.jpg">
+<p><IMG SRC="/sonichq/images/screenshots/sonic1beta/s1beta1.jpg">
 </FONT></FONT></B></CENTER>
 </TD>
 <TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
@@ -343,7 +343,7 @@ and top that with a badnik that can only be found in the Spring Yard Zone.
 </center></TD>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=zones.shtml#z2><u>Marble Zone<u></a><a name=z9>
-<p><IMG SRC="/images/screenshots/sonic1beta/s1beta2.jpg">
+<p><IMG SRC="/sonichq/images/screenshots/sonic1beta/s1beta2.jpg">
 </FONT></FONT></B></CENTER>
 </TD>
 </TR>
@@ -352,7 +352,7 @@ and top that with a badnik that can only be found in the Spring Yard Zone.
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=zones.shtml#z3><u>Sparkling Zone</u></a></b><a name=z10>
 <br> AKA - Spring Yard Zone
-<p><IMG SRC="/images/screenshots/sonic1beta/s1beta3.jpg">
+<p><IMG SRC="/sonichq/images/screenshots/sonic1beta/s1beta3.jpg">
 </FONT></FONT></B></CENTER>
 </TD>
 <TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
@@ -369,7 +369,7 @@ It makes sense considering the bright lights of the regular Spring yard, but the
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=zones.shtml#z6><u>Clock Work Zone</u></a></b><a name=z10>
 <br> AKA - Scrap Brain Zone
-<p><IMG SRC="/images/screenshots/sonic1beta/s1beta4.jpg">
+<p><IMG SRC="/sonichq/images/screenshots/sonic1beta/s1beta4.jpg">
 </FONT></FONT></B></CENTER>
 </TD>
 </TR>

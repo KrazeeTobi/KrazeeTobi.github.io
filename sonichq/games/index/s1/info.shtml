@@ -29,7 +29,7 @@ Sonic The Hedgehog 1
 <tr><td bgcolor=black width=1>&nbsp;</td><td width=100%><center>
 <br>
 
-<b><font face="Arial" size=-1><a href=http://sonichq.org/main.htm>Sonic HQ</a> / <a href=../../>Gaming Info</a> / <a href=../>The Games List</a> / 
+<b><font face="Arial" size=-1><a href=/sonichq/main.htm>Sonic HQ</a> / <a href=../../>Gaming Info</a> / <a href=../>The Games List</a> / 
 Sonic the Hedgehog - Sega Genesis / Mega Drive
 </font></H2>
 
@@ -37,7 +37,7 @@ Sonic the Hedgehog - Sega Genesis / Mega Drive
 
 <p><blockquote>
 
-<img src=http://www.sonichq.org/images/screenshots/sonic/sonic1.gif 
+<img src=/sonichq/images/screenshots/sonic/sonic1.gif 
 alt="Sonic 1" align=right>
 
 
@@ -66,11 +66,11 @@ alt="Sonic 1" align=right>
 <td>
 <p>
 <table width=333 border=0 cellspacing=0 cellpadding=0><tr>
-<td width=10 height=20><img src="/images/borders/topleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/topleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2 color=cyan>
 Other Sonic 1 Sections
 </font></td>
-<td width=10 height=20><img src="/images/borders/topright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/topright.gif" width=10 height=20></td>
 </tr>
 <tr><td colspan=3>
 <table border=0 cellspacing=0 cellpadding=0><tr>
@@ -78,16 +78,16 @@ Other Sonic 1 Sections
 <td width=100% bgcolor=ffffff><font size=2>
 <p><font size=-1.5></font><center><a href=index.shtml#codes>The Code Bank</a> / <a href=index.shtml#gamegenie>Game Genie Codes</a> / <a href=index.shtml#comic>Comic Adaptions</a> 
 <br><a href=zones.shtml#zones>Guide And Walkthrough</a> / <a href=zones.shtml#special>Special Features And Innovations</a> / <a href=zones.shtml#neverwas>The Hedgehog That Never Was</a>
-<br><a href=../../gameplay/index.html>Basic Gameplay - Moves And Items</a> / <a href=http://www.emulationzone.org/sonichq/games/whoswho/badniks_a.html#1> Badnik Profiles</a> 
-<br><a href=http://www.emulationzone.org/sonichq/music/display.cgi?category=genesis&title=sonic1>Sonic HQ: Music - Sonic 1</a>
+<br><a href=../../gameplay/index.html>Basic Gameplay - Moves And Items</a> / <a href=/sonichq/emuzone/games/whoswho/badniks_a.html#1> Badnik Profiles</a> 
+<br><a href=/sonichq/emuzone/music/display.cgi?category=genesis&title=sonic1>Sonic HQ: Music - Sonic 1</a>
 </center></font></td>
 <td width=2 bgcolor=000000>&nbsp;</td>
 </tr></table>
 </td></tr>
 <tr>
-<td width=10 height=20><img src="/images/borders/bottomleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/bottomleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2>&nbsp;</font></td>
-<td width=10 height=20><img src="/images/borders/bottomright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/bottomright.gif" width=10 height=20></td>
 </tr></table>
 </td>
 <td>
@@ -127,10 +127,10 @@ Sonic 1 had 7 levels consisting of the Green Hill, Marble, Sring Yard, Labyrinth
 
 <br>
 
-<img src=http://www.sonichq.org/images/screenshots/sonic/sthgreenhillboss.gif align=left>
+<img src=/sonichq/images/screenshots/sonic/sthgreenhillboss.gif align=left>
 
 
-<p><p><embed autostart="true" loop="true" width=200 height=60 src=http://www.geocities.com/EnchantedForest/Dell/6657/son1gren.mid><br>Green Hill Zone
+<p><p><embed autostart="true" loop="true" width=200 height=60 src=/sonichq/geocities/EnchantedForest/Dell/6657/son1gren.mid><br>Green Hill Zone
 
 <p>Meet Sonic The Hedgehog as he strives to free the planet of Mobius from the tyranical reign of Doctor Ivo Robotnik! As Dr. Robotnik makes his first move against planet Mobius, unleashing his technology on innocent animals and turning them into evil robots a new hero steps up into the spotlight - a blue super quick hedgehog named Sonic - And a legend is born! Only this super-cool hedgehog can save his friends and Mobius, then show Robotnik who's boss. Spin through space, loop 'til you're dizzy, and save the animals to become the super hero.
 
@@ -162,7 +162,7 @@ respective area of our thorough walkthroughs page for any information that we ha
 <TR>
 <TD><CENTER><FONT FACE="Arial" size=-1><b>
 
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/sonic/starlight.gif" align=right>
+<p><IMG SRC="/sonichq/images/screenshots/sonic/starlight.gif" align=right>
 <table border=0><tr><td><font face="Arial" size=-1>
 <li><a href=zones.shtml#z1><b>Green Hill Zone</a><br>
 <li><a href=zones.shtml#z2>Marble Zone</a><br>
@@ -396,7 +396,7 @@ produced by either Archie or Fleetway comics in conjuction with its correspondin
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white>
 <LI> 
 <u>Sega And Egmont Fleetway</u>
-<p><a href=http://www.sonichq.org/comics/archive/firstsonic.html><img src=http://members.spree.com/funNgames/asudem/comix/da-sonic/small/cover.jpg></a>
+<p><a href=/sonichq/comics/archive/firstsonic.html><img src=https://web.archive.org/20011101000000/http://members.spree.com/funNgames/asudem/comix/da-sonic/small/cover.jpg></a>
 </FONT></FONT></B></CENTER>
 </FONT></FONT></B></CENTER>
 </TD>

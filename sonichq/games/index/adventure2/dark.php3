@@ -3,25 +3,25 @@
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
    <title>Sonic HQ Gaming Info - Sonic Adventure 2</title>
-<script src=/scripts/sonic-init.js></script>
+<script src=/sonichq/scripts/sonic-init.js></script>
 <style type="text/css">
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
-<link rel=stylesheet href=/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/css/main.css type="text/css">
 </head>
 
-<body text="#000000" bgcolor="white" link=blue vlink=blue background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<body text="#000000" bgcolor="white" link=blue vlink=blue background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
 
 <br>
 
 <center>
-<IFRAME SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
+<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
 MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
+<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
 </SCRIPT>
 <NOSCRIPT>
-<A HREF="http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
+<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
 </NOSCRIPT>
 </IFRAME>
 <!-- ---------- Advertising.com Banner Code -------------- --> 
@@ -33,14 +33,14 @@ var ExpireDate = new Date ();
 ExpireDate.setTime(ExpireDate.getTime() + (expirehours * 3600 * 1000)); 
 document.cookie = NameOfCookie + "=" + escape(value) + 
 ((expirehours == null) ? "" : "; expires=" + ExpireDate.toGMTString()) + 
-"; path=/;" ; 
+"; path=/sonichq/;" ; 
 } 
 if (document.cookie.indexOf('AdComPop60917')==-1) 
 { 
 setCookie('AdComPop60917','yes',1);
 var bnum=new Number(Math.floor(99999999 * Math.random())+1);
 document.write('<SCR'+'IPT LANGUAGE="JavaScript" '); 
-document.write(' SRC="http://servedby.advertising.com/pops=1/site=60917/bnum='+bnum+'">'); 
+document.write(' SRC="https://web.archive.org/20011101000000/http://servedby.advertising.com/pops=1/site=60917/bnum='+bnum+'">'); 
 document.write('</SCR'); 
 document.write('IPT>'); 
 } 
@@ -49,7 +49,7 @@ document.write('IPT>');
 <!-- ---------- Copyright 2000, Advertising.com ---------- --></center>
 
 <p><span class=pathlinks><table class=glow>
-<a href=/>Sonic HQ</a> | <a href=/games/>Gaming Info</a> | <a href=/games/index/>Game List</a> | Sonic Adventure 2 - Sega Dreamcast</table></span>
+<a href=/sonichq/>Sonic HQ</a> | <a href=/sonichq/games/>Gaming Info</a> | <a href=/sonichq/games/index/>Game List</a> | Sonic Adventure 2 - Sega Dreamcast</table></span>
 
 <center>
 
@@ -83,9 +83,9 @@ else if(bVer >= 4) css=1;
 </script>
 
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=50% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=right bgcolor=black width=100%><font color=white>Anchor Links</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr>
 
 <tr><td colspan=3 VALIGN=TOP bgcolor=ffffff>
@@ -93,13 +93,13 @@ else if(bVer >= 4) css=1;
 <a href=#anchor0 onclick="show('table0')">Iron Gate</a> | <a href=#anchor1 onclick="show('table1')">Dry Lagoon</a> | <a href=#anchor2 onclick="show('table2')">Sand Ocean</a> | <a href=#anchor3 onclick="show('table3')">Radical Highway</a> | <a href=#anchor4 onclick="show('table4')">Egg Quarters</a> | <a href=#anchor5 onclick="show('table5')">Lost Colony</a> | <a href=#anchor6 onclick="show('table6')">Weapons Bed</a> | <a href=#anchor7 onclick="show('table7')">Security Hall</a> | <a href=#anchor8 onclick="show('table8')">White Jungle</a> | <a href=#anchor9 onclick="show('table9')">Route 280</a> | <a href=#anchor10 onclick="show('table10')">Sky Rail</a> | <a href=#anchor11 onclick="show('table11')">Mad Space</a> | <a href=#anchor12 onclick="show('table12')">Cosmic Wall</a> | <a href=#anchor13 onclick="show('table13')">Final Chase</a></div></font></td></tr>
 
 <tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 <!main table top>
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
-<tr><td width=19><img src=/topleft.gif width=19></td>
+<tr><td width=19><img src=/sonichq/topleft.gif width=19></td>
 
 <td bgcolor=black width=100% height=50>
 <script language=JavaScript>
@@ -109,12 +109,12 @@ document.write(titlepic + titlelogo)
 </script>
 &nbsp;</td>
 
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
-<script src=/scripts/menu.js></script>
+<script src=/sonichq/scripts/menu.js></script>
 <noscript>&nbsp;</noscript>
 </font></td></table>
 
@@ -144,7 +144,7 @@ Other Pages
 </table></div>
 
 <div class=itemtext>
-<center>[<a href=/music/display.cgi?category=dreamcast&title=adventure2>Music</a> | <a href=/images/display.cgi?directory=screenshots/sonicadventure2&title=Sonic Adventure 2>Screenshots</a>]</center>
+<center>[<a href=/sonichq/music/display.cgi?category=dreamcast&title=adventure2>Music</a> | <a href=/sonichq/images/display.cgi?directory=screenshots/sonicadventure2&title=Sonic Adventure 2>Screenshots</a>]</center>
 <br><br></div><!end of sections>
 
 </td>
@@ -153,7 +153,7 @@ Other Pages
 <td width=4>&nbsp;</td>
 <td valign=top bgcolor=000000 class=sidebar><font face=Arial size=-1 color=white><br>
 
-<center><img src=/images/boxes/dreamcast/sonicadventure2.jpg 
+<center><img src=/sonichq/images/boxes/dreamcast/sonicadventure2.jpg 
 alt="Sonic Adventure 2"></center>
 </font></td></tr>
 </table>
@@ -161,22 +161,22 @@ alt="Sonic Adventure 2"></center>
 
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100%><tr>
-<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
-<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 
 <div id=table0 align=center>
 
-<a name=anchor0><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor0><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table0')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table0')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Iron Gate</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -198,21 +198,21 @@ NOTE: In all stages, you can find a rare animal hidden somewhere.  You can also 
 For the hidden rare animal in this stage, after you go through the door marked "3," instead of turning right, go straight and land on the pipe, or the spring that's on it.  This will lead you to a path built of similar pipes that requires the Jet Engine.  The dragon is on one of these pipes.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table1 align=center>
 
-<a name=anchor1><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor1><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table1')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table1')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Dry Lagoon</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -233,21 +233,21 @@ For the hidden rare animal in this stage, after you go through the door marked "
 Whistle in the ring of posts on the island in the large oasis.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table2 align=center>
 
-<a name=anchor2><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor2><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table2')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table2')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Sand Ocean</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -268,21 +268,21 @@ Whistle in the ring of posts on the island in the large oasis.<br><br></div></fo
 Requires the Jet Engine and Heavy Cannon.  The third rotating platform has a choice of paths - you can follow the main path with a lamp gate on it, or jet boost to a platform in the distance.  Go to the platform and follow that path, breaking steel containers, until you come to a spring.  Use the spring to jump to an island with more steel containers on it.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table3 align=center>
 
-<a name=anchor3><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor3><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table3')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table3')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Radical Highway</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -303,21 +303,21 @@ Requires the Jet Engine and Heavy Cannon.  The third rotating platform has a cho
 Hidden location unknown, but you can get it by collecting 3 Chao crates.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table4 align=center>
 
-<a name=anchor4><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor4><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table4')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table4')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Egg Quarters</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -338,21 +338,21 @@ Hidden location unknown, but you can get it by collecting 3 Chao crates.<br><br>
 The Swamp Monster is in a cage in the room with the mystic melody pedestal and I haven't seen how you open it, but even getting this one from chao containers takes some explanation.  Here's a hint - use Mystic Melody.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table5 align=center>
 
-<a name=anchor5><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor5><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table5')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table5')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Lost Colony</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -373,21 +373,21 @@ The Swamp Monster is in a cage in the room with the mystic melody pedestal and I
 Hidden location unknown, but you can get it by collecting 3 Chao crates.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table6 align=center>
 
-<a name=anchor6><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor6><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table6')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table6')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Weapons Bed</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -403,21 +403,21 @@ Hidden location unknown, but you can get it by collecting 3 Chao crates.<br><br>
 <p>Required for the level.  It's behind a locked door that you open with a switch around the middle of the level.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table7 align=center>
 
-<a name=anchor7><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor7><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table7')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table7')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Security Hall</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -438,21 +438,21 @@ Hidden location unknown, but you can get it by collecting 3 Chao crates.<br><br>
 Hidden location unknown, but you can get it by collecting 3 Chao crates.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table8 align=center>
 
-<a name=anchor8><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor8><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table8')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table8')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>White Jungle</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -473,21 +473,21 @@ Hidden location unknown, but you can get it by collecting 3 Chao crates.<br><br>
 Its location is unknown, but you can still get one from the chao containers.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table9 align=center>
 
-<a name=anchor9><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor9><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table9')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table9')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Route 280</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -497,21 +497,21 @@ Its location is unknown, but you can still get one from the chao containers.<br>
 <div class=itemtext>Okay, it's not the batmobile, but it has a logo that looks suspiciously familiar.  Rouge drives her custom car after Tails' Tornado on a track that is basically a more complex version of Tails' kart racing stage.  You get a boost move for every 20 rings you collect and increase the timer by collecting checkpoints.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table10 align=center>
 
-<a name=anchor10><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor10><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table10')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table10')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Sky Rail</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -531,21 +531,21 @@ Its location is unknown, but you can still get one from the chao containers.<br>
 <b>Rare Animal - Unknown</b><br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table11 align=center>
 
-<a name=anchor11><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor11><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table11')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table11')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Mad Space</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -561,21 +561,21 @@ Its location is unknown, but you can still get one from the chao containers.<br>
 <p>In a small room on the Sperical Planet.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table12 align=center>
 
-<a name=anchor12><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor12><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table12')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table12')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Cosmic Wall</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -596,21 +596,21 @@ Its location is unknown, but you can still get one from the chao containers.<br>
 Hidden location unknown, but you can get it by collecting 3 Chao crates.  Oddly enough, Eggman's biggest stage has arguably the cutest overall selection of animals in the whole game. :P<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table13 align=center>
 
-<a name=anchor13><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor13><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table13')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table13')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Final Chase</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -631,9 +631,9 @@ Hidden location unknown, but you can get it by collecting 3 Chao crates.  Oddly 
 In the area where you're running between 2 inverted colony structures and specifically when you jump across horizontal and diagonal cylinders, land on the diagonal platforms on the right wall.  It's on one of those.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div>

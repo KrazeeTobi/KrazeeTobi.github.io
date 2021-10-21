@@ -3,18 +3,18 @@
 <title>Sonic HQ - The Games Page</title>
 </header>
 
-<body bgcolor="#00005a" background="http://www.sonichq.org/images/backgrounds/envelope2.gif"
+<body bgcolor="#00005a" background="/sonichq/images/backgrounds/envelope2.gif"
  text="000066" link="#405961" vlink="#ff0000">
-<embed src="http://www.geocities.com/EnchantedForest/Dell/6657/badnik.mid" autostart="true" hidden="true" loop="true">
+<embed src="/sonichq/geocities/EnchantedForest/Dell/6657/badnik.mid" autostart="true" hidden="true" loop="true">
 
 <p><center> 
 <H2 ALIGN=CENTER><FONT COLOR="#000066">Doctor Robotnik's Mean Bean Machine</FONT></H2>
 
-<p><img src="http://www.sonichq.org/images/bluebar.jpg"></p>
+<p><img src="/sonichq/images/bluebar.jpg"></p>
 
 <TABLE ALIGN=CENTER BORDER=5 CELLSPACING=2 CELLPADDING=2>
 <TR ALIGN=CENTER><TD>
-<IMG SRC="http://www.sonichq.org/images/boxes/gamegear/meanbean.gif">
+<IMG SRC="/sonichq/images/boxes/gamegear/meanbean.gif">
 </TD></TR></TABLE>
 
 <p><basefont size=2><font face="Comic Sans MS"><b>
@@ -22,10 +22,10 @@ On Planet Mobius, the famous home of Sonic The Hedgehog, Dr. Robotnik has return
 
 <TABLE ALIGN=CENTER BORDER=5 CELLSPACING=2 CELLPADDING=2>
 <TR ALIGN=CENTER><TD>
-<IMG SRC="http://www.sonichq.org/images/screenshots/meanbean/mbm5.jpg">
+<IMG SRC="/sonichq/images/screenshots/meanbean/mbm5.jpg">
 </TD></TR></TABLE>
 
-<p><basefont size=2><font face="Comic Sans MS"> Basically, this is just <a href="http://www.compile.co.jp">Compile's</a> <i>Puyo Puyo</i> puzzle game revised for the American audience.  Multi-colored "beans" fall from the top of the screen, <i>Tetris</i>-style.  The object is to align four beans of the same color and make them disappear. If you've ever played <i>Kirby's Avalanche</i> for the SNES, this is the <b>EXACT</b> same game. Here's where you come in: You can group the bean folk together and allow them to escape! However, there is only a short amount of time before the holding area overfills and bursts open. And the henchbots have noticed you, and are trying to find a way to short-circuit your plans for good! You must move more beans through your dungeon than the henchbot jailer next to you, and at the same time bust your enemy's dungeon wide open. If you succeed, you'll be sent up the line to deal with the wilier henchbots, and eventually with Robotnik himself! Based off of "The Adventures Of Sonic The Hedgehog" animated world, and Robotnik appears the part. Scratch, Grounder, and Coconuts are also on your opponent list, which is as follows (in order): Arms, Frankly, Humpty, Coconuts, Davy Sprocket, Skweel, Dynamight, Grounder, Spike, Sir Fuzzy-Logic, Dragon Breath, Scratch, and then Dr. Robotnik. (All of the above Badniks were actually from bit-parts used in the AoStH.) On a final note, the Game Gear version included a realy spiffy "Puzzle" mode, where beans were already set up in a particular manner, and forced you to use brainpower to hack 'em down. This one feature makes the Game Gear version superior to its Genesis counterpart.</p>
+<p><basefont size=2><font face="Comic Sans MS"> Basically, this is just <a href="https://web.archive.org/20011101000000/http://www.compile.co.jp">Compile's</a> <i>Puyo Puyo</i> puzzle game revised for the American audience.  Multi-colored "beans" fall from the top of the screen, <i>Tetris</i>-style.  The object is to align four beans of the same color and make them disappear. If you've ever played <i>Kirby's Avalanche</i> for the SNES, this is the <b>EXACT</b> same game. Here's where you come in: You can group the bean folk together and allow them to escape! However, there is only a short amount of time before the holding area overfills and bursts open. And the henchbots have noticed you, and are trying to find a way to short-circuit your plans for good! You must move more beans through your dungeon than the henchbot jailer next to you, and at the same time bust your enemy's dungeon wide open. If you succeed, you'll be sent up the line to deal with the wilier henchbots, and eventually with Robotnik himself! Based off of "The Adventures Of Sonic The Hedgehog" animated world, and Robotnik appears the part. Scratch, Grounder, and Coconuts are also on your opponent list, which is as follows (in order): Arms, Frankly, Humpty, Coconuts, Davy Sprocket, Skweel, Dynamight, Grounder, Spike, Sir Fuzzy-Logic, Dragon Breath, Scratch, and then Dr. Robotnik. (All of the above Badniks were actually from bit-parts used in the AoStH.) On a final note, the Game Gear version included a realy spiffy "Puzzle" mode, where beans were already set up in a particular manner, and forced you to use brainpower to hack 'em down. This one feature makes the Game Gear version superior to its Genesis counterpart.</p>
 
 <p><center>
 Grounders Area<BR>
@@ -35,7 +35,7 @@ Robotnik's Area<BR>
 </P></center></font>
 
 
-<p><img src="http://www.sonichq.org/images/bluebar.jpg"></p>
+<p><img src="/sonichq/images/bluebar.jpg"></p>
 
 
 <CENTER><TABLE BORDER=3 COLS="2" WIDTH="100%" BGCOLOR="ccccff" TEXT="ccccff" >
@@ -44,15 +44,15 @@ Robotnik's Area<BR>
 <TABLE ALIGN=CENTER BORDER=5 CELLSPACING=2 CELLPADDING=2><TR ALIGN=CENTER><TD>
 <TABLE ALIGN=CENTER BORDER=5 CELLSPACING=2 CELLPADDING=2>
 <TR ALIGN=CENTER><TD>
-<IMG SRC="http://www.sonichq.org/images/screenshots/meanbean/meanbean.gif">
+<IMG SRC="/sonichq/images/screenshots/meanbean/meanbean.gif">
 </TD></TR></TABLE>
 </TD></TR></TABLE>
 
-<p><b><FONT SIZE=2 FACE="COMIC SANS MS"><center>Game Codes And Strategy Guides Courtesy Of Jared Matte A.K.A. <A HREF="http://www.videogamers.com/ggibbon/index.htm">
+<p><b><FONT SIZE=2 FACE="COMIC SANS MS"><center>Game Codes And Strategy Guides Courtesy Of Jared Matte A.K.A. <A HREF="https://web.archive.org/20011101000000/http://www.videogamers.com/ggibbon/index.htm">
 The Green Gibbon
-</A>, <A HREF="http://sages.ign.com/">
+</A>, <A HREF="https://web.archive.org/20011101000000/http://sages.ign.com/">
 Secrets Of The Game Sages
-</A>, and <A HREF="http://www.fortunecity.com/underworld/lylat/295/sonic1.html">Radical City</A></b>
+</A>, and <A HREF="https://web.archive.org/20011101000000/http://www.fortunecity.com/underworld/lylat/295/sonic1.html">Radical City</A></b>
 
 </TD></TR>
 <TR><TD><FONT SIZE=2 FACE="COMIC SANS MS">
@@ -60,7 +60,7 @@ Secrets Of The Game Sages
 
 <TABLE ALIGN=CENTER BORDER=5 CELLSPACING=2 CELLPADDING=2>
 <TR ALIGN=CENTER><TD>
-<IMG SRC="http://www.sonichq.org/images/screenshots/meanbean/mbm1.jpg">
+<IMG SRC="/sonichq/images/screenshots/meanbean/mbm1.jpg">
 </TD></TR></TABLE>
 
 <p><b>Jumping Beans:</b> At the title screen, press A, B or C to make the beans on the title jump up and down. 
@@ -205,12 +205,12 @@ Secrets Of The Game Sages
 
 </TD></TR>
 <TR><TD COLSPAN="2" WIDTH="50%"><FONT SIZE=2 FACE="COMIC SANS MS"><CENTER>
-<p><img src="http://www.sonichq.org/images/bluebar.jpg"></p>
+<p><img src="/sonichq/images/bluebar.jpg"></p>
 <B><p>Various Screenshots</p>
 
 <TABLE ALIGN=CENTER BORDER=5 CELLSPACING=2 CELLPADDING=2>
 <TR ALIGN=CENTER><TD>
-<IMG SRC="http://www.sonichq.org/images/screenshots/meanbean/meanbean1.jpg">
+<IMG SRC="/sonichq/images/screenshots/meanbean/meanbean1.jpg">
 </TD></TR></TABLE>
 
 <P ALIGN=CENTER>
@@ -218,15 +218,15 @@ Each stage is usually broken down into "Tetris" like stages. And because there a
 
 <TABLE ALIGN=CENTER BORDER=5 CELLSPACING=2 CELLPADDING=2>
 <TR ALIGN=CENTER><TD>
-<IMG SRC="http://www.sonichq.org/images/screenshots/meanbean/mbm2.jpg">
+<IMG SRC="/sonichq/images/screenshots/meanbean/mbm2.jpg">
 </TD></TR></TABLE>
 
 <TABLE ALIGN=CENTER BORDER=5 CELLSPACING=2 CELLPADDING=2><TR ALIGN=CENTER><TD>
-<IMG SRC="http://www.sonichq.org/images/screenshots/meanbean/mbm3.jpg">
+<IMG SRC="/sonichq/images/screenshots/meanbean/mbm3.jpg">
 </TD></TR></TABLE>
 
 </P>
-<p><img src="http://www.sonichq.org/images/bluebar.jpg"></p>
+<p><img src="/sonichq/images/bluebar.jpg"></p>
 
 </P></B></CENTER></TD></TR></TABLE></CENTER>
 

@@ -3,25 +3,25 @@
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
    <title>Sonic HQ Gaming Info - Sonic Adventure 2</title>
-<script src=/scripts/sonic-init.js></script>
+<script src=/sonichq/scripts/sonic-init.js></script>
 <style type="text/css">
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
-<link rel=stylesheet href=/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/css/main.css type="text/css">
 </head>
 
-<body text="#000000" bgcolor="white" link=blue vlink=blue background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<body text="#000000" bgcolor="white" link=blue vlink=blue background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
 
 <br>
 
 <center>
-<IFRAME SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
+<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
 MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
+<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
 </SCRIPT>
 <NOSCRIPT>
-<A HREF="http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
+<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
 </NOSCRIPT>
 </IFRAME>
 <!-- ---------- Advertising.com Banner Code -------------- --> 
@@ -33,14 +33,14 @@ var ExpireDate = new Date ();
 ExpireDate.setTime(ExpireDate.getTime() + (expirehours * 3600 * 1000)); 
 document.cookie = NameOfCookie + "=" + escape(value) + 
 ((expirehours == null) ? "" : "; expires=" + ExpireDate.toGMTString()) + 
-"; path=/;" ; 
+"; path=/sonichq/;" ; 
 } 
 if (document.cookie.indexOf('AdComPop60917')==-1) 
 { 
 setCookie('AdComPop60917','yes',1);
 var bnum=new Number(Math.floor(99999999 * Math.random())+1);
 document.write('<SCR'+'IPT LANGUAGE="JavaScript" '); 
-document.write(' SRC="http://servedby.advertising.com/pops=1/site=60917/bnum='+bnum+'">'); 
+document.write(' SRC="https://web.archive.org/20011101000000/http://servedby.advertising.com/pops=1/site=60917/bnum='+bnum+'">'); 
 document.write('</SCR'); 
 document.write('IPT>'); 
 } 
@@ -49,7 +49,7 @@ document.write('IPT>');
 <!-- ---------- Copyright 2000, Advertising.com ---------- --></center>
 
 <p><span class=pathlinks><table class=glow>
-<a href=/>Sonic HQ</a> | <a href=/games/>Gaming Info</a> | <a href=/games/index/>Game List</a> | Sonic Adventure 2 - Sega Dreamcast</table></span>
+<a href=/sonichq/>Sonic HQ</a> | <a href=/sonichq/games/>Gaming Info</a> | <a href=/sonichq/games/index/>Game List</a> | Sonic Adventure 2 - Sega Dreamcast</table></span>
 
 <center>
 
@@ -83,9 +83,9 @@ else if(bVer >= 4) css=1;
 </script>
 
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=50% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=right bgcolor=black width=100%><font color=white>Anchor Links</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr>
 
 <tr><td colspan=3 VALIGN=TOP bgcolor=ffffff>
@@ -93,13 +93,13 @@ else if(bVer >= 4) css=1;
 <a href=#anchor0 onclick="show('table0')">City Escape</a> | <a href=#anchor1 onclick="show('table1')">Wild Canyon</a> | <a href=#anchor2 onclick="show('table2')">Prison Lane</a> | <a href=#anchor3 onclick="show('table3')">Metal Harbor</a> | <a href=#anchor4 onclick="show('table4')">Green Forest</a> | <a href=#anchor5 onclick="show('table5')">Pumpkin Hill</a> | <a href=#anchor6 onclick="show('table6')">Mission Street</a> | <a href=#anchor7 onclick="show('table7')">Aquatic Mines</a> | <a href=#anchor8 onclick="show('table8')">Route 101</a> | <a href=#anchor9 onclick="show('table9')">Hidden Base</a> | <a href=#anchor10 onclick="show('table10')">Pyramid Cave</a> | <a href=#anchor11 onclick="show('table11')">Death Chamber</a> | <a href=#anchor12 onclick="show('table12')">Eternal Engine</a> | <a href=#anchor13 onclick="show('table13')">Meteor Herd</a> | <a href=#anchor14 onclick="show('table14')">Crazy Gadget</a> | <a href=#anchor15 onclick="show('table15')">Final Rush</a></div></font></td></tr>
 
 <tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 <!main table top>
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
-<tr><td width=19><img src=/topleft.gif width=19></td>
+<tr><td width=19><img src=/sonichq/topleft.gif width=19></td>
 
 <td bgcolor=black width=100% height=50>
 <script language=JavaScript>
@@ -109,12 +109,12 @@ document.write(titlepic + titlelogo)
 </script>
 &nbsp;</td>
 
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
-<script src=/scripts/menu.js></script>
+<script src=/sonichq/scripts/menu.js></script>
 <noscript>&nbsp;</noscript>
 </font></td></table>
 
@@ -144,7 +144,7 @@ Other Pages
 </table></div>
 
 <div class=itemtext>
-<center>[<a href=/music/display.cgi?category=dreamcast&title=adventure2>Music</a> | <a href=/images/display.cgi?directory=screenshots/sonicadventure2&title=Sonic Adventure 2>Screenshots</a>]</center>
+<center>[<a href=/sonichq/music/display.cgi?category=dreamcast&title=adventure2>Music</a> | <a href=/sonichq/images/display.cgi?directory=screenshots/sonicadventure2&title=Sonic Adventure 2>Screenshots</a>]</center>
 <br><br></div><!end of sections>
 
 </td>
@@ -153,7 +153,7 @@ Other Pages
 <td width=4>&nbsp;</td>
 <td valign=top bgcolor=000000 class=sidebar><font face=Arial size=-1 color=white><br>
 
-<center><img src=/images/boxes/dreamcast/sonicadventure2.jpg 
+<center><img src=/sonichq/images/boxes/dreamcast/sonicadventure2.jpg 
 alt="Sonic Adventure 2"></center>
 </font></td></tr>
 </table>
@@ -161,22 +161,22 @@ alt="Sonic Adventure 2"></center>
 
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100%><tr>
-<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
-<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 
 <div id=table0 align=center>
 
-<a name=anchor0><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor0><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table0')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table0')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>City Escape</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -200,21 +200,21 @@ NOTE: In all stages, you can find a rare animal hidden somewhere.  You can also 
 The hidden unicorn's location in City Escape is unknown, but you can still get one from the chao containers.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table1 align=center>
 
-<a name=anchor1><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor1><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table1')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table1')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Wild Canyon</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -237,21 +237,21 @@ The hidden unicorn's location in City Escape is unknown, but you can still get o
 I've only seen it so far in hard mode.  Go into the dig-through wall where you get the Mystic Melody<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table2 align=center>
 
-<a name=anchor2><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor2><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table2')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table2')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Prison Lane</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -272,21 +272,21 @@ I've only seen it so far in hard mode.  Go into the dig-through wall where you g
 It's in a cage along a path of platforms in a large open area.  Rotate the camera wjhen you see the cage and you should see a rocket pointed at it on top of the tunnel you came from.  Fire at the robot guarding the rocket.  Backtrack and land on the rising platform in front of the cage, and jump towards the camera, hovering with the Jet Booster.  You have to time it just right.  You should land next to the rocket.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table3 align=center>
 
-<a name=anchor3><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor3><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table3')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table3')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Metal Harbor</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -307,21 +307,21 @@ It's in a cage along a path of platforms in a large open area.  Rotate the camer
 There are actually 2.  1 is in a helmet next to the building on the aircraft carrier.  1 is at the top of the rocket catwalk.  You have to be REALLY fast.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table4 align=center>
 
-<a name=anchor4><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor4><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table4')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table4')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Green Forest</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -342,21 +342,21 @@ There are actually 2.  1 is in a helmet next to the building on the aircraft car
 It's on an island with wooden crates on it, behind the crates.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table5 align=center>
 
-<a name=anchor5><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor5><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table5')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table5')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Pumpkin Hill</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -377,21 +377,21 @@ It's on an island with wooden crates on it, behind the crates.<br><br></div></fo
 Location unknown, but you can get it by getting 3 Chao crates.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table6 align=center>
 
-<a name=anchor6><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor6><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table6')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table6')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Mission Street</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -412,21 +412,21 @@ Location unknown, but you can get it by getting 3 Chao crates.<br><br></div></fo
 Requires the Bazooka.  It's in a cage, and the rocket is behind a wall of steel containers blocking entry into a room.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table7 align=center>
 
-<a name=anchor7><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor7><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table7')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table7')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Aquatic Mines</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -447,21 +447,21 @@ Requires the Bazooka.  It's in a cage, and the rocket is behind a wall of steel 
 It's in the room where you get the Air Necklace.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table8 align=center>
 
-<a name=anchor8><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor8><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table8')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table8')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Route 101</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -471,21 +471,21 @@ It's in the room where you get the Air Necklace.<br><br></div></font></td></tr><
 <div class=itemtext>Tails' Tornado transforms for car mode and he races down the highway to catch the president's limo.  You get a boost move for every 20 rings you collect and increase the timer by collecting checkpoints.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table9 align=center>
 
-<a name=anchor9><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor9><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table9')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table9')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Hidden Base</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -506,21 +506,21 @@ It's in the room where you get the Air Necklace.<br><br></div></font></td></tr><
 In the maze of doors and blocks, there is a door blocking a path to the right.  Blast through and look around for it.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table10 align=center>
 
-<a name=anchor10><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor10><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table10')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table10')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Pyramid Cave</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -541,21 +541,21 @@ In the maze of doors and blocks, there is a door blocking a path to the right.  
 Requires Flame Ring.  Right around where you get the Bounce Bracelet, in a cage.  Bounce on the wood crate and spin the steel crate to get it out.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table11 align=center>
 
-<a name=anchor11><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor11><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table11')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table11')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Death Chamber</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -576,21 +576,21 @@ Requires Flame Ring.  Right around where you get the Bounce Bracelet, in a cage.
 Unknown, but you can get it with 3 Chao containers.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table12 align=center>
 
-<a name=anchor12><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor12><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table12')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table12')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Eternal Engine</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -611,21 +611,21 @@ Unknown, but you can get it with 3 Chao containers.<br><br></div></font></td></t
 Hidden location unknown, but you can get it by collecting 3 Chao crates.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table13 align=center>
 
-<a name=anchor13><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor13><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table13')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table13')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Meteor Herd</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -646,21 +646,21 @@ Hidden location unknown, but you can get it by collecting 3 Chao crates.<br><br>
 Use the rocket in the structure in the middle of the stage and land on a platform conected to a bridge.  Follow the bridge and a Phoenix is flying in circles under a platform overhead.  To get it, climb onto the containers and glide into it.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table14 align=center>
 
-<a name=anchor14><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor14><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table14')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table14')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Crazy Gadget</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -678,21 +678,21 @@ Use the rocket in the structure in the middle of the stage and land on a platfor
 <p>Required for the level and fairly easy to find.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table15 align=center>
 
-<a name=anchor15><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor15><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table15')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table15')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Final Rush</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -708,9 +708,9 @@ Use the rocket in the structure in the middle of the stage and land on a platfor
 <p>Near the end of the level, Sonic grinds past 2 platforms, 1 of them with a rocket on it.  Jump on that platform and use the rocket.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div>

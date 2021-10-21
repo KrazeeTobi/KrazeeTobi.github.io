@@ -6,16 +6,16 @@ $title = 'Sonic HQ Gaming Info -
 Sonic Spinball
 ';
 
-$pathlinks[] = '<a href=/>Sonic HQ</a>';
-$pathlinks[] = '<a href=/games/>Gaming Info</a>';
-$pathlinks[] = '<a href=/games/index/>Game List</a>';
+$pathlinks[] = '<a href=/sonichq/>Sonic HQ</a>';
+$pathlinks[] = '<a href=/sonichq/games/>Gaming Info</a>';
+$pathlinks[] = '<a href=/sonichq/games/index/>Game List</a>';
 $pathlinks[] = '
 Sonic Spinball - Genesis/Megadrive/Game Gear
 ';
 
 <p><blockquote>
 [an error occurred while processing this directive]
-<img src=http://www.sonichq.org/images/screenshots/spinball/spinball.gif 
+<img src=/sonichq/images/screenshots/spinball/spinball.gif 
 alt="Sonic Spinball" align=right>
 [an error occurred while processing this directive]
 
@@ -65,10 +65,10 @@ $tablecontents[$tablecount][0] = '
 
 <br>
 [an error occurred while processing this directive]
-<img src=http://www.sonichq.org/images/screenshots/spinball/ssrexxon.gif align=left>
+<img src=/sonichq/images/screenshots/spinball/ssrexxon.gif align=left>
 [an error occurred while processing this directive]
 
-<p>[an error occurred while processing this directive]http://www.geocities.com/EnchantedForest/Dell/7835/VSReturntothetoxiccaves.mid><br>Toxic Caves Remix
+<p>[an error occurred while processing this directive]/sonichq/geocities/EnchantedForest/Dell/7835/VSReturntothetoxiccaves.mid><br>Toxic Caves Remix
 
 <p>Robotnik's latest scheme is to turn all the innocent citizens of Mobius into evil robots...at lightning speed. Using a 
 high-tech, super-efficient robot factory hidden in the active volcano, Mount Mobius; utilizing the energy produced by the 
@@ -233,8 +233,8 @@ produced by either Archie or Fleetway comics in conjuction with its correspondin
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white>
 <LI> Archie Comics</b></u>
 <br>Sonic The Hedgehog #6
-<p><A HREF="http://members.spree.com/funNgames/asudem/comix/sonic/big/sonic6.jpg">
-<IMG SRC="http://members.spree.com/funNgames/asudem/comix/sonic/small/sonic6.jpg" 
+<p><A HREF="https://web.archive.org/20011101000000/http://members.spree.com/funNgames/asudem/comix/sonic/big/sonic6.jpg">
+<IMG SRC="https://web.archive.org/20011101000000/http://members.spree.com/funNgames/asudem/comix/sonic/small/sonic6.jpg" 
 alt="Sonic The Hedgehog #6"></A>
 </FONT></FONT></B></CENTER>
 </TD>
@@ -271,8 +271,8 @@ $tablecontents[$tablecount][0] = '
 <td colspan=2>
 <!-- ZONES --><a name="zones"></a>
 
-<img src=http://www.sonichq.org/images/screenshots/spinball/ssfortress.gif align=left>
-<img src=http://www.sonichq.org/images/screenshots/spinball/sstoxic1.gif align=right>
+<img src=/sonichq/images/screenshots/spinball/ssfortress.gif align=left>
+<img src=/sonichq/images/screenshots/spinball/sstoxic1.gif align=right>
 <center><table border=0 bgcolor=white align=center><tr><td><font face="Arial" size=-1>
 <li><a href=zones.shtml#z1><b>Toxic Pools Zone</a><br>
 <li><a href=zones.shtml#z2>Lava Powerhouse Zone</a><br>
@@ -294,8 +294,8 @@ $tablecontents[$tablecount][0] = '
 </tr>
 <TR><TD colspan=2>
 <CENTER><FONT FACE="Arial" size=-1 width=60%>
-<IMG SRC="http://www.sonichq.org/images/screenshots/spinball/sstoxic2.gif">
-<IMG SRC="http://www.sonichq.org/images/screenshots/spinball/ssscorpius.gif">
+<IMG SRC="/sonichq/images/screenshots/spinball/sstoxic2.gif">
+<IMG SRC="/sonichq/images/screenshots/spinball/ssscorpius.gif">
 <b><p><p>This is the easiest stage - And thats saying something in itself. After the intro Sonic jumps from the water shakes 
 himself off and gets to going! The main bot here is the cluck. Don't stand on the platform at the bottom for too long, or 
 the Rexxon will come up and chomp you. The first Emerald is in a large vat. You must knock out the levers on both sides of 
@@ -317,8 +317,8 @@ so you wont leave the room. Once the tail comes off, keep hitting his back to fi
 </tr>
 <TR><TD colspan=2>
 <CENTER><FONT FACE="Arial" size=-1 width=60%>
-<IMG SRC="http://www.sonichq.org/images/screenshots/spinball/sslavapowerhouse.gif">
-<IMG SRC="http://www.sonichq.org/images/screenshots/spinball/sslava2.gif">
+<IMG SRC="/sonichq/images/screenshots/spinball/sslavapowerhouse.gif">
+<IMG SRC="/sonichq/images/screenshots/spinball/sslava2.gif">
 <b><p><p>This zone isnt too hard but it takes some patience to get through it without frustration. The main enemy here is a
 bird like bot called a Ferron and a few Clucks. Watch out for the lava here, and be careful not to slip into the vat of boiling lava at the 
 bottom of the pinball areas. From here on, there are no second escape chances like the Rexxon pit. The first emerald here is 
@@ -339,8 +339,8 @@ knock them out. Then get into the vat and decimate it. Easy as that.
 </tr>
 <TR><TD colspan=2>
 <CENTER><FONT FACE="Arial" size=-1 width=60%>
-<IMG SRC="http://www.sonichq.org/images/screenshots/spinball/ssmachine1.gif">
-<IMG SRC="http://www.sonichq.org/images/screenshots/spinball/ssmachine2.gif">
+<IMG SRC="/sonichq/images/screenshots/spinball/ssmachine1.gif">
+<IMG SRC="/sonichq/images/screenshots/spinball/ssmachine2.gif">
 <b><p><p>Before I saw the Showdown I thought this was gastronomically hard. But its more tedious - especially for first time players. 
 So prepare yourself for a few hours in front of the tube....Welcome to the Machine - the CPU for the entire fortress! Two of 
 the emeralds in here are in the main room, with some searching, you should find them. Just time your jumps right when you 
@@ -364,8 +364,8 @@ destroy it from the inside. Now on to the final stage....
 </tr>
 <TR><TD colspan=2>
 <CENTER><FONT FACE="Arial" size=-1 width=60%>
-<IMG SRC="http://www.sonichq.org/images/screenshots/spinball/ssshowdown.gif">
-<IMG SRC="http://www.sonichq.org/images/screenshots/spinball/ssfinal.gif">
+<IMG SRC="/sonichq/images/screenshots/spinball/ssshowdown.gif">
+<IMG SRC="/sonichq/images/screenshots/spinball/ssfinal.gif">
 <b><p><p>This is by far one of the hardest stages in any Sonic game. With the fortress crumbling into the active Mount Mobius volcano, Robotnik is preparing to launch himself out of here! 
 Taking place at a GIGANTIC construction area you must work your way upwards into Robotnik's War Room in his giant ship....
 trial and error exists a lot here. Hope that you get more trial than error or you'll find yourself losing all your lives. 
@@ -401,7 +401,7 @@ boss. There are three total rooms each of which providing you a break before get
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <u>Room One - Toxic Pools</u></b>
 <br>Trapped Alive
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/spinball/ssrobo.gif">
+<p><IMG SRC="/sonichq/images/screenshots/spinball/ssrobo.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 <TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
@@ -418,7 +418,7 @@ Ivo Robotnik! Knock out the teeth with pinpoint accuracy and you may get a prize
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <u>Room Two - Lava Powerhouse</u></b>
 <br>Bust The Teeth
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/spinball/ssteeth.gif">
+<p><IMG SRC="/sonichq/images/screenshots/spinball/ssteeth.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 </TR>
@@ -427,7 +427,7 @@ Ivo Robotnik! Knock out the teeth with pinpoint accuracy and you may get a prize
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <u>Room Three - The Machine</u></b>
 <br>Destroy The Pod
-<p><IMG SRC="http://www.sonichq.org/images/screenshots/spinball/ssscratch.gif">
+<p><IMG SRC="/sonichq/images/screenshots/spinball/ssscratch.gif">
 </FONT></FONT></B></CENTER>
 </TD>
 <TD><CENTER><FONT FACE="Arial" size=-1 width=60%>

@@ -29,7 +29,7 @@ Sonic 2
 <tr><td bgcolor=black width=1>&nbsp;</td><td width=100%><center>
 <br>
 
-<b><font face="Arial" size=-1><a href=http://sonichq.org/main.htm>Sonic HQ</a> / <a href=../../>Gaming Info</a> / <a href=../>The Games List</a> / 
+<b><font face="Arial" size=-1><a href=/sonichq/main.htm>Sonic HQ</a> / <a href=../../>Gaming Info</a> / <a href=../>The Games List</a> / 
 Sonic the Hedgehog 2 - Sega Genesis / Mega Drive
 </font></H2>
 
@@ -37,7 +37,7 @@ Sonic the Hedgehog 2 - Sega Genesis / Mega Drive
 
 <p><blockquote>
 
-<img src=http://www.sonichq.org/images/screenshots/sonic2/sonic2.gif align=right>
+<img src=/sonichq/images/screenshots/sonic2/sonic2.gif align=right>
 
 
 <p><table border=0><tr><td><font face="Arial" size=-1>
@@ -69,11 +69,11 @@ Sonic the Hedgehog 2 - Sega Genesis / Mega Drive
 
 <p>
 <table width=333 border=0 cellspacing=0 cellpadding=0><tr>
-<td width=10 height=20><img src="/images/borders/topleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/topleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2 color=cyan>
 Sonic 2 Sections
 </font></td>
-<td width=10 height=20><img src="/images/borders/topright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/topright.gif" width=10 height=20></td>
 </tr>
 <tr><td colspan=3>
 <table border=0 cellspacing=0 cellpadding=0><tr>
@@ -85,18 +85,18 @@ Sonic 2 Sections
 </tr></table>
 </td></tr>
 <tr>
-<td width=10 height=20><img src="/images/borders/bottomleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/bottomleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2>&nbsp;</font></td>
-<td width=10 height=20><img src="/images/borders/bottomright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/bottomright.gif" width=10 height=20></td>
 </tr></table>
 
 <p>
 <table width=333 border=0 cellspacing=0 cellpadding=0><tr>
-<td width=10 height=20><img src="/images/borders/topleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/topleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2 color=cyan>
 Sonic 2 Beta And Others
 </font></td>
-<td width=10 height=20><img src="/images/borders/topright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/topright.gif" width=10 height=20></td>
 </tr>
 <tr><td colspan=3>
 <table border=0 cellspacing=0 cellpadding=0><tr>
@@ -108,9 +108,9 @@ Sonic 2 Beta And Others
 </tr></table>
 </td></tr>
 <tr>
-<td width=10 height=20><img src="/images/borders/bottomleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/bottomleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2>&nbsp;</font></td>
-<td width=10 height=20><img src="/images/borders/bottomright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/sonichq/images/borders/bottomright.gif" width=10 height=20></td>
 </tr></table>
 
 </td>
@@ -147,10 +147,10 @@ Sonic 2 Beta And Others
 
 <br>
 
-<img src=http://www.sonichq.org/images/screenshots/sonic2/supersonic1.gif align=left>
+<img src=/sonichq/images/screenshots/sonic2/supersonic1.gif align=left>
 
 
-<p><p><embed autostart="true" loop="true" width=200 height=60 src=http://www.geocities.com/EnchantedForest/Dell/7835/s2specialk.mid><br>Special Zone by Koryan
+<p><p><embed autostart="true" loop="true" width=200 height=60 src=/sonichq/geocities/EnchantedForest/Dell/7835/s2specialk.mid><br>Special Zone by Koryan
 
 <p>Miles Prower - better known to his friends as "Tails" just can't sit still when his hero Sonic The Hedgehog is around! Ever since Miles was a baby fox, he's dreamed of being like Sonic, waving his 2 tails behind him, trying to keep up with his hero! Mostly Sonic lets him trail along. But sometimes, just sometimes, just to show off Sonic explodes in a burst of super speed and leaves him behind. But miles doesn't give up. he whirls his tails like a helicopter and takes off flying until he catches up! In fact, all the other animals call him "Tails" because of the twin tails. But one day, they saw an astonishing feat...While all together in the forest, watching Sonic perform the newest version of his Triple S Spin, and Tails blasting off like a Turbo Engine with his Super Dash Attack, the other animals were amazed! Suddenly, Tails couldn't help himself. He took a running start, curled up his tails, and before anyone knew it, he was almost as fast as Sonic! But as of late, strange things are happening. Sonic's other friends are dissapearing, and in their place are nasty metal robots that weren't there before...
 
@@ -203,8 +203,8 @@ respective area of our thorough walkthroughs page for any information that we ha
 <a href=../s2beta#z8><b>Genocide City Zone</b> - Accesible Only In Sonic 2 Beta</a>
 </font></td>
 <td>
-<p><img src=http://www.sonichq.org/images/screenshots/sonic2/sth2robo.gif>
-<p><a href=zones.shtml#knuckles><img src=http://www.sonichq.org/images/screenshots/sonic2/sonic2andk.gif alt="Click here to see the section on the Sonic 2 and Sonic & Knuckles Lock On"
+<p><img src=/sonichq/images/screenshots/sonic2/sth2robo.gif>
+<p><a href=zones.shtml#knuckles><img src=/sonichq/images/screenshots/sonic2/sonic2andk.gif alt="Click here to see the section on the Sonic 2 and Sonic & Knuckles Lock On"
 </td>
 </tr>
 </table>
