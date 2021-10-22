@@ -3,7 +3,7 @@
 		<time>2011.11.24</time>
 	</h3>
 	<ul>
-		<li><a href="topics/index.html#product-generations_trial">TOPICS「関連商品情報」の「ソニック ジェネレーションズ 体験版」を更新！</a></li>
+		<li><a href="topics/index.html#product-generations_trial">Updated "Sonic Generations Trial Version" in TOPICS "Related Product Information"!</a></li>
 		<li><a href="topics/index.html#product-iphone_application">TOPICS「関連商品情報」の「iPhone / iPod touch・iPad向けアプリ」を更新！</a></li>
 		<li><a href="topics/index.html#collaborate-bearbrick">TOPICS「コラボレーション情報」の「BE@RBRICK」を追加！</a></li>
 	</ul>
