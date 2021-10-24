@@ -7,14 +7,14 @@
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
-<script src=http://www.sonichq.org/scripts/megaman-init.js></script>
+<script src=/sonichq/scripts/megaman-init.js></script>
 <script language=JavaScript>
 <!--
-document.write('<link rel=stylesheet href=http://www.sonichq.org/megaman/css/' + theme + '.css type="text/css">')
+document.write('<link rel=stylesheet href=/sonichq/megaman/css/' + theme + '.css type="text/css">')
 //-->
 </script>
 <noscript>
-<link rel=stylesheet href=http://www.sonichq.org/megaman/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/megaman/css/main.css type="text/css">
 </noscript>
 </head>
 
