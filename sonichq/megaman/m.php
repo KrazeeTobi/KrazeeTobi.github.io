@@ -7,14 +7,14 @@
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
-<script src=http://www.sonichq.org/scripts/megaman-init.js></script>
+<script src=/sonichq/scripts/megaman-init.js></script>
 <script language=JavaScript>
 <!--
-document.write('<link rel=stylesheet href=http://www.sonichq.org/megaman/css/' + theme + '.css type="text/css">')
+document.write('<link rel=stylesheet href=/sonichq/megaman/css/' + theme + '.css type="text/css">')
 //-->
 </script>
 <noscript>
-<link rel=stylesheet href=http://www.sonichq.org/megaman/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/megaman/css/main.css type="text/css">
 </noscript>
 </head>
 
@@ -373,7 +373,7 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
 <td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
-<td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Mega Man & Co. are © Capcom.</center></font></td>
+<td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is Â©1996-2000 Sonic HQ.  Mega Man & Co. are Â© Capcom.</center></font></td>
 <td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
