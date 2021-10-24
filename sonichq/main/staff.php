@@ -7,28 +7,28 @@
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
-<script src=/scripts/sonic-init.js></script>
+<script src=/sonichq/scripts/sonic-init.js></script>
 <script language=JavaScript>
 <!--
-document.write('<link rel=stylesheet href=http://www.sonichq.org/css/' + theme + '.css type="text/css">')
+document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="text/css">')
 //-->
 </script>
 <noscript>
-<link rel=stylesheet href=http://www.sonichq.org/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/css/main.css type="text/css">
 </noscript>
 </head>
 
-<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
 
 <br>
 
 <center>
-<IFRAME SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
+<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
 MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
+<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
 </SCRIPT>
 <NOSCRIPT>
-<A HREF="http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
+<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
 </NOSCRIPT>
 </IFRAME>
 </center>
@@ -40,7 +40,7 @@ MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
 
 <!main table top>
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" class=maintable>
-<tr><td width=19><img src=/topleft.gif width=19></td>
+<tr><td width=19><img src=/sonichq/topleft.gif width=19></td>
 
 <td bgcolor=black width=100% height=50>
 <script language=JavaScript>
@@ -50,12 +50,12 @@ document.write(titlepic + titlelogo)
 </script>
 &nbsp;</td>
 
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
-<script src=/scripts/menu.js></script>
+<script src=/sonichq/scripts/menu.js></script>
 <noscript>&nbsp;</noscript>
 </font></td></table>
 
@@ -176,7 +176,7 @@ News Staff
 <p>Way down under in Australia sits slaphappy Rlan. A cordial chap by nature (except when it comes to Sega Ozisoft) Rlan is a really mellow dude with a really mellow demeanor!
 Friendly, always willing to put in advice and two cents, he also sits on staff as one of the 4 news directors with WB, MTB, and Tristan!
 
-<p>Rlan also runs <a href=http://ssrg.emulationzone.org/fanmade/ target="_whole">Sonic Fan Games HQ</a>.
+<p>Rlan also runs <a href=https://web.archive.org/20011101000000/http://ssrg.emulationzone.org/fanmade/ target="_whole">Sonic Fan Games HQ</a>.
 </TABLE>
 
 <TABLE BORDER=0 cellspacing=4 cellpadding=4><TR><TD><CENTER>
@@ -190,7 +190,7 @@ Friendly, always willing to put in advice and two cents, he also sits on staff a
 <p>Tristan is ready and willing to go search the deepest, darkest reaches of the Internet to bring you news from all aspects 
 on the Sonic community.  He is also ready to test every code and analyze every piece of information he gets.  Then, he'll 
 put them in the Game Info section.  In his spare time, if he ever has any due to working on his site, 
-<a href="http://tssz.emulationzone.org" target="_whole">TSSZ</a>, he listens to the 1,000+ news themes he has, watch the news from 
+<a href="https://web.archive.org/20011101000000/http://tssz.emulationzone.org" target="_whole">TSSZ</a>, he listens to the 1,000+ news themes he has, watch the news from 
 different cities every chance he has, and tell the public that he is not insane because he's into TV News... Tristan also 
 wants to anchor the local news from a top TV market, such as Philly, New York, or, his favorite for the obvious reasons, Los Angeles.  Maybe you'll see him someday on your local affiliate.  Who knows?</TABLE>
 <p>
@@ -264,9 +264,9 @@ sense into those mad ravenous newbies! And whats this about MTB I hear? ^_^
 </TABLE>
 
 <TABLE BORDER=0 cellspacing=4 cellpadding=4><TR><TD><CENTER>
-<table border=0><tr><td><IMG SRC=http://members.aol.com/TemplarNY/torch.gif></td>
+<table border=0><tr><td><IMG SRC=https://web.archive.org/20011101000000/http://members.aol.com/TemplarNY/torch.gif></td>
 <td><IMG SRC=staffimages/tether.gif></td>
-<td><IMG SRC=http://members.aol.com/TemplarNY/torch.gif></td></table>
+<td><IMG SRC=https://web.archive.org/20011101000000/http://members.aol.com/TemplarNY/torch.gif></td></table>
 <IMG SRC=staffimages/tether.jpg>
 <FONT SIZE=-1><A HREF="mailto:mobius_tblood@hotmail.com">mobius_tblood@hotmail.com</A></TD><br>
 <TD><FONT SIZE=-1><b><FONT SIZE=-1><font color="blue">Vassilis Detsikas</b> - "Mobius Tetherblood"
@@ -302,7 +302,7 @@ Special Contibutors
 
 <TABLE BORDER=0><TR><TD><CENTER>
 <IMG SRC=staffimages/andy.jpg ALIGN=top >
-<FONT SIZE=-1><A HREF=http://www.emulationzone.org target="_blank">http://www.emulationzone.org/</A></TD><br>
+<FONT SIZE=-1><A HREF=https://web.archive.org/20011101000000/http://www.emulationzone.org target="_blank">https://web.archive.org/20011101000000/http://www.emulationzone.org/</A></TD><br>
 <TD><FONT SIZE=-1><b><font color="orange">Andy Wolan And The Emulation Zone </font></b> -
 Special thanks goes to the Emulation Zone for letting us use their space ! They saved us from the evil demonspawn of webservice that is..."Geocities!!!!" - and for that fate worse than death we are ever grateful! Seriously though, we'd like to thank Andy and 
 the staff at the Emulation Zone for hosting us! It really was nice of them! Pop over to thier page and give it a peek when you finish here!</TABLE>
@@ -320,7 +320,7 @@ and is also well versed on the doings of Dudley Do-Right, Snidely Whiplash, Nell
 
 <TABLE BORDER=0><TR><TD><CENTER>
 <IMG SRC=staffimages/jared.jpg ALIGN=top >
-<FONT SIZE=-1><A HREF=http://www.theghz.com/ target="_blank">Neo Green Hill Zone And Forum</A></TD><br>
+<FONT SIZE=-1><A HREF=https://web.archive.org/20011101000000/http://www.theghz.com/ target="_blank">Neo Green Hill Zone And Forum</A></TD><br>
 <TD><FONT SIZE=-1><b><font color="orange">Jared Matte aka. Green Gibbon </font></b> -
 Never think in the presence of the Green Gibbon! Thinking is illegal - and so is Pikachu! Green Gibbon is the owner of the coveted Neo Green Hill Zone! See the Gameplay Page on our Games section? We would <u>NEVER</u> have been able to pull that off without the help of the NGHZ owner and several members of the forum there including Martin Braid, Possesed Spam, Bo Bayles, 
 DH Master, Micheal "G. Silver" Stearns, Dave Bulmer, James "Popcorn" Duffy, and a certain friend of mine named Roland "Jim Doe" Lowery! Pop over to the NGHZ and give the guys a holler! And if you're good little boys and girls, you might even get a Drano Cookie! *smile*</TABLE>
@@ -340,7 +340,7 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 </script>
 
 <center><u>Contact</u></center>
-<p><b>NOTE To Anyone Who Wants To Contact The Staff:</b><br>To contact the HQ staff, you should usually post on the <a href=http://pub12.ezboard.com/fsonichqcommunityfrm11>Customer Service Forum</a>.  There are threads set up for common topics, such as reporting 404s, and you should post in these categories if your comment fits into them.  Start a new topic if your comment is unique.  I can't speak for everyone else, but my e-mail is SWAMPED and I have stuff to reply to from last year!  If you want a response, I'd strongly recommend posting on the forum. If you want to e-mail it, you should probably contact Real Tails / Ron Prower. - Vec
+<p><b>NOTE To Anyone Who Wants To Contact The Staff:</b><br>To contact the HQ staff, you should usually post on the <a href=https://web.archive.org/20011101000000/http://pub12.ezboard.com/fsonichqcommunityfrm11>Customer Service Forum</a>.  There are threads set up for common topics, such as reporting 404s, and you should post in these categories if your comment fits into them.  Start a new topic if your comment is unique.  I can't speak for everyone else, but my e-mail is SWAMPED and I have stuff to reply to from last year!  If you want a response, I'd strongly recommend posting on the forum. If you want to e-mail it, you should probably contact Real Tails / Ron Prower. - Vec
 <p><center><u>Staff</u></center>
 <p>On this page, you'll find contact points and short descriptions for all of the hard-working staffers here at HQ. ^_^
 <p><center><u>More Staff Pages</u></center>
@@ -352,9 +352,9 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
-<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
-<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 

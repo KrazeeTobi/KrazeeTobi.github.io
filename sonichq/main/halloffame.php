@@ -7,28 +7,28 @@
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
-<script src=/scripts/sonic-init.js></script>
+<script src=/sonichq/scripts/sonic-init.js></script>
 <script language=JavaScript>
 <!--
-document.write('<link rel=stylesheet href=http://www.sonichq.org/css/' + theme + '.css type="text/css">')
+document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="text/css">')
 //-->
 </script>
 <noscript>
-<link rel=stylesheet href=http://www.sonichq.org/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/css/main.css type="text/css">
 </noscript>
 </head>
 
-<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
 
 <br>
 
 <center>
-<IFRAME SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
+<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
 MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
+<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
 </SCRIPT>
 <NOSCRIPT>
-<A HREF="http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
+<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
 </NOSCRIPT>
 </IFRAME>
 </center>
@@ -40,7 +40,7 @@ MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
 
 <!main table top>
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" class=maintable>
-<tr><td width=19><img src=/topleft.gif width=19></td>
+<tr><td width=19><img src=/sonichq/topleft.gif width=19></td>
 
 <td bgcolor=black width=100% height=50>
 <script language=JavaScript>
@@ -50,12 +50,12 @@ document.write(titlepic + titlelogo)
 </script>
 &nbsp;</td>
 
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
-<script src=/scripts/menu.js></script>
+<script src=/sonichq/scripts/menu.js></script>
 <noscript>&nbsp;</noscript>
 </font></td></table>
 
@@ -106,7 +106,7 @@ Vector and WB.<p>
 
 <p>*Sigh* Times are tough. ^_^  Ian is a comics artist extraordinaire, and he also runs our fan art page.  He's also a major Sega fan.
 
-<p>Vec: Oh, BTW, Ian is best known on the net as the artist/writer of <a href=http://rpgworld.keenspace.com target=_blank>RPG World</a>, an incredibly good net comic.  Go ahead and check it out.
+<p>Vec: Oh, BTW, Ian is best known on the net as the artist/writer of <a href=https://web.archive.org/20011101000000/http://rpgworld.keenspace.com target=_blank>RPG World</a>, an incredibly good net comic.  Go ahead and check it out.
 </TABLE>
 
 <TABLE BORDER=0><TR><TD><CENTER>
@@ -140,7 +140,7 @@ Knux hosts the fanmade Sonic RPG page in his spare time and also serves as a con
 <p>Everybody loves Raymond...erm....Roger !!! Yes, everyone needs a Fishboy on thier staff! Fishboy's are housebroken, they're nice and kind, and they don't wet the floor - well...not much....for a fish...
 All you need give them is water and a Directory Page and you can be forever happy! Take Roger for instance - our local Fishboy - he's a really nice guy! He got us on various webrings, sorted our what was once our messed up Links Page, and is even making a 404 page for us.
 All in all Fishboy is a great guy, and he'd make a nice entree at Captain D's too! ^_______^<p>
-Fish also runs his own personal (and very good) Sonic webpage <a href=http://sonicsages.cjb.net target="_whole">Sonic Sages</a>.</TABLE>
+Fish also runs his own personal (and very good) Sonic webpage <a href=https://web.archive.org/20011101000000/http://sonicsages.cjb.net target="_whole">Sonic Sages</a>.</TABLE>
 
 <TABLE BORDER=0 cellpadding=4 cellspacing=4><TR><TD><CENTER>
 <IMG SRC=staffimages/joey.jpg ALIGN=top>
@@ -169,7 +169,7 @@ He also likes to listen to/ read almost anything, and play videogames and the co
 
 <TABLE BORDER=0 cellpadding=4 cellspacing=4><TR><TD><CENTER>[Picture Unavailable]<br><FONT SIZE=-1><A HREF="mailto:videogamer12@juno.com">videogamer12@juno.com</A></TD><br><TD><FONT SIZE=-1><b><FONT SIZE=-1><font color="blue">Henry</b> - "Henry Prower"<br><b>Position</b>: Features, Directory, Fan Games, and general site stuff maintainer<br><b>AIM</b>: HEH111<br><b>ICQ</b>: NA</font><p>Henry is, as he calls it, "EXTREMELY insane." ^_^  Actually, he's pretty cool, and a major video game fan.  He collects systems, his favorite game of all is Sonic 1 for Sega Genesis, and his favorite gaming magazine was Game Players.  He's looking for copies of the old Diceist Sega magazine.  Henry is also a game tester for Sonikku Team.  At 12, he's one of the youngest of the staff.  Henry does various things for the site, including Features, the Directory, and, once it's open, Fan Games.
 
-<p>Henry is also the owner of <a href=http://playstationtwo.cjb.net target="_blank">playstationtwo.cjb.net</a></TABLE>
+<p>Henry is also the owner of <a href=https://web.archive.org/20011101000000/http://playstationtwo.cjb.net target="_blank">playstationtwo.cjb.net</a></TABLE>
 <p>
 </div><!end of sections>
 
@@ -193,9 +193,9 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
-<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
-<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 
