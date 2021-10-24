@@ -1,10 +1,10 @@
 $(function(){
-	//メニュージャンプ
+	//menu jump
 	var menu = $('.bodyEnjoy #contents-navigation').smoothMove();
-	//上へ戻る
+	//Back to top
 	var backTop = $('.contensSubstance article').backTop();
 	
-	//動画選択リストの表示
+	//Display the video selection list
 	$("#common-contents #contents-flash li").css('cursor','pointer').each(function(){
 			mouseOut(this,0);
 		
@@ -52,7 +52,7 @@ $(function(){
 		$('img',_this).fadeTo(_time,1);
 	}
 		
-	//初期
+	//initial
 	$("#movieChange01 li:first").each(function(){
 		mouseSelect(this);
 		$("#movieChange01_txt").html('<h5>'+$(this).attr('title')+'</h5>');
