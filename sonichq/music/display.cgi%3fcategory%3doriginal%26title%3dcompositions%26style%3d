@@ -10,13 +10,13 @@
 </style>
 </head>
 
-<body text=000000 link=FFFFFF vlink=FF0000 background=/images/backgrounds/bluecurve.gif>
+<body text=000000 link=FFFFFF vlink=FF0000 background=/sonichq/images/backgrounds/bluecurve.gif>
 &nbsp
 
 <!-- HQ TITLE BAR -->
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=640>
 <tr>
-<td VALIGN=TOP COLSPAN=3 WIDTH=640><img SRC=/images/HQ-bar.gif BORDER=0 height=30 width=640></td>
+<td VALIGN=TOP COLSPAN=3 WIDTH=640><img SRC=/sonichq/images/HQ-bar.gif BORDER=0 height=30 width=640></td>
 </tr>
 </table>
 <!-- END HQ TITLE BAR -->
@@ -53,7 +53,7 @@ Sections</font>
 
 <br>&nbsp;
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 COLS=1 WIDTH=100%><td>
-<center><img SRC="/images/sprites/3d-runright.gif" height=50 width=51>
+<center><img SRC="/sonichq/images/sprites/3d-runright.gif" height=50 width=51>
 <br><font face=Verdana color=FFFFFF size=-2>Please 
 <a href="mailto:shq_music@echidnoyle.org">submit</a> any MIDIs we don't already have. Thanx!</font></center>
 </td></table>
@@ -79,7 +79,7 @@ Sections</font>
 <br><font face=Impact color=3333FF>7 Total</font>
 <table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
 <tr>
-<td><font face=Verdana color=FFFFFF size=-1><a href="http://www.geocities.com/EnchantedForest/Dell/7835/csallyal.mid" target="_blank">Sally</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1><a href="/sonichq/geocities/EnchantedForest/Dell/7835/csallyal.mid" target="_blank">Sally</a></font></td>
 <td><font face=Verdana color=FFFFFF size=-1>by Aaron Lye</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>0205</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>8.54</font></td>
@@ -87,7 +87,7 @@ Sections</font>
 </tr>
 
 <tr>
-<td><font face=Verdana color=FFFFFF size=-1><a href="http://www.geocities.com/EnchantedForest/Dell/7835/cmobianrenaissancejw.mid" target="_blank">Mobian Renaissance</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1><a href="/sonichq/geocities/EnchantedForest/Dell/7835/cmobianrenaissancejw.mid" target="_blank">Mobian Renaissance</a></font></td>
 <td><font face=Verdana color=FFFFFF size=-1>by John Wainscott</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>0200</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>22.5</font></td>
@@ -95,7 +95,7 @@ Sections</font>
 </tr>
 
 <tr>
-<td><font face=Verdana color=FFFFFF size=-1><a href="http://www.geocities.com/EnchantedForest/Dell/7835/KCChaotix.mid" target="_blank">Chaotix</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1><a href="/sonichq/geocities/EnchantedForest/Dell/7835/KCChaotix.mid" target="_blank">Chaotix</a></font></td>
 <td><font face=Verdana color=FFFFFF size=-1>by Unknown Composer</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>0051</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>5.17</font></td>
@@ -103,7 +103,7 @@ Sections</font>
 </tr>
 
 <tr>
-<td><font face=Verdana color=FFFFFF size=-1><a href="http://www.geocities.com/EnchantedForest/Dell/7835/cbambooboimejw.mid" target="_blank">Bamboo Boime Zone</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1><a href="/sonichq/geocities/EnchantedForest/Dell/7835/cbambooboimejw.mid" target="_blank">Bamboo Boime Zone</a></font></td>
 <td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>0136</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>10.7</font></td>
@@ -111,7 +111,7 @@ Sections</font>
 </tr>
 
 <tr>
-<td><font face=Verdana color=FFFFFF size=-1><a href="http://www.geocities.com/EnchantedForest/Dell/7835/cgleamingglacierjw.mid" target="_blank">Gleaming Glacier Zone</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1><a href="/sonichq/geocities/EnchantedForest/Dell/7835/cgleamingglacierjw.mid" target="_blank">Gleaming Glacier Zone</a></font></td>
 <td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>0122</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>20.2</font></td>
@@ -119,7 +119,7 @@ Sections</font>
 </tr>
 
 <tr>
-<td><font face=Verdana color=FFFFFF size=-1><a href="http://www.geocities.com/EnchantedForest/Dell/7835/cchaosemeraldsjw.mid" target="_blank">The Chaos Emeralds</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1><a href="/sonichq/geocities/EnchantedForest/Dell/7835/cchaosemeraldsjw.mid" target="_blank">The Chaos Emeralds</a></font></td>
 <td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>0132</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>5.22</font></td>
@@ -127,7 +127,7 @@ Sections</font>
 </tr>
 
 <tr>
-<td><font face=Verdana color=FFFFFF size=-1><a href="http://www.geocities.com/EnchantedForest/Dell/7835/celevatorsonicjj.mid" target="_blank">Elevator Sonic</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1><a href="/sonichq/geocities/EnchantedForest/Dell/7835/celevatorsonicjj.mid" target="_blank">Elevator Sonic</a></font></td>
 <td><font face=Verdana color=FFFFFF size=-1>by Jarel Jones</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>0120</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>6.52</font></td>

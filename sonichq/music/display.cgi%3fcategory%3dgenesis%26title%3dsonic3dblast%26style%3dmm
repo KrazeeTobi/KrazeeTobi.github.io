@@ -10,13 +10,13 @@
 </style>
 </head>
 
-<body text=000000 link=FFFFFF vlink=FF0000 background=/images/backgrounds/bluecurve.gif>
+<body text=000000 link=FFFFFF vlink=FF0000 background=/sonichq/images/backgrounds/bluecurve.gif>
 &nbsp
 
 <!-- HQ TITLE BAR -->
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=640>
 <tr>
-<td VALIGN=TOP COLSPAN=3 WIDTH=640><img SRC=/megaman/images/MMHQ-bar.gif BORDER=0 height=30 width=640></td>
+<td VALIGN=TOP COLSPAN=3 WIDTH=640><img SRC=/sonichq/megaman/images/MMHQ-bar.gif BORDER=0 height=30 width=640></td>
 </tr>
 </table>
 <!-- END HQ TITLE BAR -->
@@ -53,7 +53,7 @@ Sections</font>
 
 <br>&nbsp;
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 COLS=1 WIDTH=100%><td>
-<center><img SRC="/megaman/images/sprites/rockmanandforte/misc/metall/metall.gif">
+<center><img SRC="/sonichq/megaman/images/sprites/rockmanandforte/misc/metall/metall.gif">
 <br><font face=Verdana color=FFFFFF size=-2>Please 
 <a href="mailto:shq_music@echidnoyle.org">submit</a> any MIDIs we don't already have. Thanx!</font></center>
 </td></table>
@@ -199,7 +199,7 @@ Sections</font>
 </tr>
 
 <tr>
-<td><font face=Verdana color=FFFFFF size=-1><a href="http://www.sonichq.org/music/midis/sonic/3dblast/s3db_boss_u.mid">Boss Theme</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1><a href="https://web.archive.org/20011101000000/http://www.sonichq.org/music/midis/sonic/3dblast/s3db_boss_u.mid">Boss Theme</a></font></td>
 <td><font face=Verdana color=FFFFFF size=-1>by Unknown Composer</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>0057</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>11.5</font></td>
@@ -207,7 +207,7 @@ Sections</font>
 </tr>
 
 <tr>
-<td><font face=Verdana color=FFFFFF size=-1><a href="http://www.sonichq.org/music/midis/sonic/3dblast/s3db_bossv1_jw.mid">Boss Theme (1)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1><a href="https://web.archive.org/20011101000000/http://www.sonichq.org/music/midis/sonic/3dblast/s3db_bossv1_jw.mid">Boss Theme (1)</a></font></td>
 <td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>0428</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>74.8</font></td>
@@ -215,7 +215,7 @@ Sections</font>
 </tr>
 
 <tr>
-<td><font face=Verdana color=FFFFFF size=-1><a href="http://www.sonichq.org/music/midis/sonic/3dblast/s3db_bossv2_jw.mid">Boss Theme (2)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1><a href="https://web.archive.org/20011101000000/http://www.sonichq.org/music/midis/sonic/3dblast/s3db_bossv2_jw.mid">Boss Theme (2)</a></font></td>
 <td><font face=Verdana color=FFFFFF size=-1>by John Weeks</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>0211</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>42.7</font></td>

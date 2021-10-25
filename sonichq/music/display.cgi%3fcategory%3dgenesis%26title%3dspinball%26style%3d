@@ -10,13 +10,13 @@
 </style>
 </head>
 
-<body text=000000 link=FFFFFF vlink=FF0000 background=/images/backgrounds/bluecurve.gif>
+<body text=000000 link=FFFFFF vlink=FF0000 background=/sonichq/images/backgrounds/bluecurve.gif>
 &nbsp
 
 <!-- HQ TITLE BAR -->
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=640>
 <tr>
-<td VALIGN=TOP COLSPAN=3 WIDTH=640><img SRC=/images/HQ-bar.gif BORDER=0 height=30 width=640></td>
+<td VALIGN=TOP COLSPAN=3 WIDTH=640><img SRC=/sonichq/images/HQ-bar.gif BORDER=0 height=30 width=640></td>
 </tr>
 </table>
 <!-- END HQ TITLE BAR -->
@@ -53,7 +53,7 @@ Sections</font>
 
 <br>&nbsp;
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 COLS=1 WIDTH=100%><td>
-<center><img SRC="/images/sprites/3d-runright.gif" height=50 width=51>
+<center><img SRC="/sonichq/images/sprites/3d-runright.gif" height=50 width=51>
 <br><font face=Verdana color=FFFFFF size=-2>Please 
 <a href="mailto:shq_music@echidnoyle.org">submit</a> any MIDIs we don't already have. Thanx!</font></center>
 </td></table>

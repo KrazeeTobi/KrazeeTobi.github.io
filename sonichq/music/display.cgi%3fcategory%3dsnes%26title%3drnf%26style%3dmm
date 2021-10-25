@@ -10,13 +10,13 @@
 </style>
 </head>
 
-<body text=000000 link=FFFFFF vlink=FF0000 background=/images/backgrounds/bluecurve.gif>
+<body text=000000 link=FFFFFF vlink=FF0000 background=/sonichq/images/backgrounds/bluecurve.gif>
 &nbsp
 
 <!-- HQ TITLE BAR -->
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=640>
 <tr>
-<td VALIGN=TOP COLSPAN=3 WIDTH=640><img SRC=/megaman/images/MMHQ-bar.gif BORDER=0 height=30 width=640></td>
+<td VALIGN=TOP COLSPAN=3 WIDTH=640><img SRC=/sonichq/megaman/images/MMHQ-bar.gif BORDER=0 height=30 width=640></td>
 </tr>
 </table>
 <!-- END HQ TITLE BAR -->
@@ -53,7 +53,7 @@ Sections</font>
 
 <br>&nbsp;
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 COLS=1 WIDTH=100%><td>
-<center><img SRC="/megaman/images/sprites/rockmanandforte/misc/metall/metall.gif">
+<center><img SRC="/sonichq/megaman/images/sprites/rockmanandforte/misc/metall/metall.gif">
 <br><font face=Verdana color=FFFFFF size=-2>Please 
 <a href="mailto:shq_music@echidnoyle.org">submit</a> any MIDIs we don't already have. Thanx!</font></center>
 </td></table>
@@ -79,7 +79,7 @@ Sections</font>
 <br><font face=Impact color=3333FF>12 Total</font>
 <table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
 <tr>
-<td><font face=Verdana color=FFFFFF size=-1><a href="http://www.geocities.com/EnchantedForest/Tower/4309/rmfburner.mid" target="_blank">Burner Man</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1><a href="/sonichq/geocities/EnchantedForest/Tower/4309/rmfburner.mid" target="_blank">Burner Man</a></font></td>
 <td><font face=Verdana color=FFFFFF size=-1>by Maelgrim</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>0155</font></td>
 <td><font face=Verdana color=FFFFFF size=-1>29.1</font></td>
