@@ -3,33 +3,33 @@
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
    <title>Mega Man HQ Gaming Info - Mega Man 2</title>
-<script src=/scripts/sonic-init.js></script>
+<script src=/sonichq/scripts/sonic-init.js></script>
 <style type="text/css">
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
-<link rel=stylesheet href=/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/css/main.css type="text/css">
 </head>
 
-<body text="#000000" bgcolor="white" link=blue vlink=blue background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<body text="#000000" bgcolor="white" link=blue vlink=blue background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
 
 <br>
 
 <center>
-<IFRAME SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
+<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
 MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
+<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
 </SCRIPT>
 <NOSCRIPT>
-<A HREF="http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank" HEIGHT="60" WIDTH="468"><IMG SRC="http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y"></A>
+<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank" HEIGHT="60" WIDTH="468"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y"></A>
 </NOSCRIPT>
 </IFRAME>
-<IFRAME SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-120&TARGET=_blank" HEIGHT="60" WIDTH="120" SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0"
+<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-120&TARGET=_blank" HEIGHT="60" WIDTH="120" SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0"
 VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="http://ads1.ad-flow.com/?DC=ztnet-ron-120&JS=Y&TARGET=_blank">
+<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-120&JS=Y&TARGET=_blank">
 </SCRIPT>
 <NOSCRIPT>
-<A HREF="http://ads1.ad-flow.com/?SHT=ztnet-ron-120" TARGET="_blank" HEIGHT="60" WIDTH="120"><IMG SRC="http://ads1.ad-flow.com/?SIT=ztnet-ron-120"></A>
+<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-120" TARGET="_blank" HEIGHT="60" WIDTH="120"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-120"></A>
 </NOSCRIPT>
 </IFRAME>
 </center>
@@ -69,9 +69,9 @@ else if(bVer >= 4) css=1;
 </script>
 
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=50% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=right bgcolor=black width=100%><font color=white>Anchor Links</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr>
 
 <tr><td colspan=3 VALIGN=TOP bgcolor=ffffff>
@@ -79,13 +79,13 @@ else if(bVer >= 4) css=1;
 <a href=#anchor0 onclick="show('table0')">General Info</a> | <a href=#anchor1 onclick="show('table1')">Robot Masters</a> | <a href=#anchor2 onclick="show('table2')">Weapons & Items</a></div></font></td></tr>
 
 <tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 <!main table top>
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
-<tr><td width=19><img src=/topleft.gif width=19></td>
+<tr><td width=19><img src=/sonichq/topleft.gif width=19></td>
 
 <td bgcolor=black width=100% height=50>
 <script language=JavaScript>
@@ -95,12 +95,12 @@ document.write(titlepic + titlelogo)
 </script>
 &nbsp;</td>
 
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
-<script src=/scripts/menu.js></script>
+<script src=/sonichq/scripts/menu.js></script>
 <noscript>&nbsp;</noscript>
 </font></td></table>
 
@@ -136,22 +136,22 @@ Quick Info
 
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100%><tr>
-<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
-<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 
 <div id=table0 align=center>
 
-<a name=anchor0><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor0><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table0')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table0')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>General Info</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -167,21 +167,21 @@ Quick Info
 <div class=itemtext><a href=mm2robots.txt>Official Enemy Names List</a><br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table1 align=center>
 
-<a name=anchor1><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor1><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table1')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table1')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Robot Masters</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -202,21 +202,21 @@ Quick Info
 <p>Metal -> Wood -> Air -> Flash -> Quick -> Crash -> Heat -> Bubble<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div><div id=table2 align=center>
 
-<a name=anchor2><p><img src=/images/borders/bluebar.jpg><p></a>
+<a name=anchor2><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
-<td><img src=/images/borders/topleft.gif></td>
+<td><img src=/sonichq/images/borders/topleft.gif></td>
 <td align=center bgcolor=black width=100%>
-<a href=javascript:hide('table2')><img src=/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
+<a href=javascript:hide('table2')><img src=/sonichq/xbutton.gif align=right border=0 hspace=3 vspace=3></a><a href=#top><img src=/sonichq/upbutton.gif align=right border=0 hspace=3 vspace=3></a>
 <font color=white>Weapons & Items</font></td>
-<td><img src=/images/borders/topright.gif></td>
+<td><img src=/sonichq/images/borders/topright.gif></td>
 </tr></table>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70%><tr>
@@ -269,9 +269,9 @@ E-Tank<br>
 Mega Man 2 introduces the E-Tank.  Select it and Mega Man's energy will increase to the maximum 28 level, although weapon energy is unaffected.  You can store 4 at a time in MM2, and they aren't part of MM2's passwords.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
-<td><img SRC=/bottomleft.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
 <td width=99% bgcolor=000000>&nbsp;</td>
-<td><img SRC=/bottomright.gif BORDER=0 height=20></td>
+<td><img SRC=/sonichq/bottomright.gif BORDER=0 height=20></td>
 </tr></table>
 
 </div>

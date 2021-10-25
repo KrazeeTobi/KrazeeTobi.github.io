@@ -7,18 +7,18 @@
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
-<script src=http://www.sonichq.org/scripts/megaman-init.js></script>
+<script src=/sonichq/scripts/megaman-init.js></script>
 <script language=JavaScript>
 <!--
-document.write('<link rel=stylesheet href=http://www.sonichq.org/megaman/css/' + theme + '.css type="text/css">')
+document.write('<link rel=stylesheet href=/sonichq/megaman/css/' + theme + '.css type="text/css">')
 //-->
 </script>
 <noscript>
-<link rel=stylesheet href=http://www.sonichq.org/megaman/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/megaman/css/main.css type="text/css">
 </noscript>
 </head>
 
-<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/megaman/images/backgrounds/mmgraybg.gif" bgproperties="fixed">
+<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/sonichq/megaman/images/backgrounds/mmgraybg.gif" bgproperties="fixed">
 
 <br>
 
@@ -29,7 +29,7 @@ document.write('<link rel=stylesheet href=http://www.sonichq.org/megaman/css/' +
 
 <!main table top>
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" class=maintable>
-<tr><td width=19><img src=/topleft.gif width=19></td>
+<tr><td width=19><img src=/sonichq/topleft.gif width=19></td>
 
 <td bgcolor=black width=100% height=50>
 <script language=JavaScript>
@@ -39,12 +39,12 @@ document.write(titlepic + titlelogo)
 </script>
 &nbsp;</td>
 
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
-<script src=/scripts/menu.js></script>
+<script src=/sonichq/scripts/menu.js></script>
 <noscript>&nbsp;</noscript>
 </font></td></table>
 
@@ -112,9 +112,9 @@ You think you're a Mega Man expert?  Ha!  Try some of these ego-boosting challeb
 
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
-<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Mega Man & Co. are © Capcom.</center></font></td>
-<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 
