@@ -17,7 +17,7 @@ else{
 
 	//title[0] = 'Sonic HQ';
 	//link[0] = '/';
-	//menutext[0] = '<a href=/main.htm>Main Page</a>';
+	//menutext[0] = '<a href=/sonichq/main.htm>Main Page</a>';
 }
 
 function showmenu(number) {
