@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+
+/* pageSubstance setting ===================================================== */
+#pageSubstance{
+	width:645px;
+	margin:0 0 2em 0;
+}
+
+#pageSubstance p{
+	float:right;
+	width:350px;
+	padding:0 0 1em 0;
+}
+
+#pageSubstance p#charaImage{
+	float:left;
+	width:295px;
+	padding:0;
+	text-align:center;
+}

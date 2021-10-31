@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/* chara-data setting ===================================================== */
+#chara-data{
+	margin:280px 0 1em 0;
+}
+
+#chara-data h2{
+	width:642px;
+	height:61px;
+	text-indent:-1000em;
+}
+
+#chara-data p{
+	padding:5px 35px 24px 20px;
+	background:url("chara-data/p_bg.gif") no-repeat left bottom;
+}
+
+
+#chara-data p#charaImage{
+	position:absolute;
+	top:100px;
+	left:0px;
+	display:block;
+	padding:0;
+	width:300px;
+	background:none;
+	text-align:center;
+}
+
+#chara-data dl{
+	position:absolute;
+	top:100px;
+	left:320px;
+	display:block;
+	padding:0;
+	width:350px;
+	height:340px;
+}
+
+#chara-data dt,
+#chara-data dd{
+	margin:0px;
+	padding:0px;
+	width:1px;
+	height:0px;
+	position:absolute;
+	top:0px;
+	left:-999px;
+	z-index:100;
+	display:run-in;
+	border-style:none;
+	overflow:hidden;
+}

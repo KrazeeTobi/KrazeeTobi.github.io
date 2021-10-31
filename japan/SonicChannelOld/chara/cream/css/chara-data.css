@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+/* chara-data setting ===================================================== */
+
+#chara-data h2{
+	background:url("chara-data/h2_bg.gif") no-repeat left top;
+}
+
+#chara-data dl{
+	background:url("chara-data/dl_bg.gif") no-repeat left 1em;
+}

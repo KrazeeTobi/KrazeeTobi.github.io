@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/* block layout setting ===================================================== */
+h2#navigation-title01{
+	background:url("contents-navigation/navigation-title01.gif") no-repeat;
+}
+
+h2#navigation-title02{
+	background:url("contents-navigation/navigation-title02.gif") no-repeat;
+}
+
+
+/* btn_bg ================================================================= */
+/* active page */
+
+#history-1990 li#navigation-1990 a,
+#history-1991 li#navigation-1991 a,
+#history-1992 li#navigation-1992 a,
+#history-1993 li#navigation-1993 a,
+#history-1994 li#navigation-1994 a,
+#history-1995 li#navigation-1995 a,
+#history-1996 li#navigation-1996 a,
+#history-1997 li#navigation-1997 a,
+#history-1998 li#navigation-1998 a,
+#history-1999 li#navigation-1999 a,
+#history-2000 li#navigation-2000 a,
+#history-2001 li#navigation-2001 a,
+#history-2002 li#navigation-2002 a,
+#history-2003 li#navigation-2003 a,
+#history-2004 li#navigation-2004 a,
+#history-2005 li#navigation-2005 a,
+#history-2006 li#navigation-2006 a,
+#history-2007 li#navigation-2007 a,
+#history-2008 li#navigation-2008 a,
+#history-2009 li#navigation-2009 a,
+#history-2010 li#navigation-2010 a,
+#history-2011 li#navigation-2011 a,
+#history-2012 li#navigation-2012 a,
+#history-2013 li#navigation-2013 a,
+#history-2014 li#navigation-2014 a,
+#history-2015 li#navigation-2015 a,
+#history-2016 li#navigation-2016 a,
+#history-2017 li#navigation-2017 a{
+background:url(../../../../common/css/contents-navigation/a.gif) 218px center;
+	border:1px solid #a60303;	
+	border-bottom:1px dotted #a60303;
+	color:#ffea29;
+}
+

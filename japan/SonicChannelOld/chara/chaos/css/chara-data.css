@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/* chara-data setting ===================================================== */
+#chara-data{
+	margin:310px 0 1em 0;
+}
+
+#chara-data h2{
+	background:url("chara-data/h2_bg.gif") no-repeat left top;
+}
+
+#chara-data dl{
+	top:157px;
+	left:445px;
+	width:360px;
+	background:url("chara-data/dl_bg.gif") no-repeat left 1em;
+}
+
+
+
+#chara-data dl{
+	top:100px;
+	left:280px;
+}

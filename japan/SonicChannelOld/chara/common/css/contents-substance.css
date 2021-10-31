@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+#contents-substance{
+	position:relative;
+}
+
+
+/* transition data	    ===================================================== */
+#contents-substance td{
+	font-weight:normal;
+}
+
+#contents-substance .nohight{
+	line-height:0;
+}
+
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
