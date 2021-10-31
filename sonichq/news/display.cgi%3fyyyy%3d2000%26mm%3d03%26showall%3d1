@@ -3,34 +3,34 @@
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
    <title>Sonic HQ News - 03/2000</title>
-<script src=/scripts/sonic-init.js></script>
+<script src=/sonichq/scripts/sonic-init.js></script>
 <style type="text/css">
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
 <script language=JavaScript>
 <!--
-document.write('<link rel=stylesheet href=http://www.sonichq.org/css/' + theme + '.css type="text/css">')
+document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="text/css">')
 //-->
 </script>
 <noscript>
-<link rel=stylesheet href=http://www.sonichq.org/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/css/main.css type="text/css">
 </noscript>
 </head>
 
-<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
 &nbsp;
 
 <br>
 
 <span class=pathlinks><table class=glow>
-<a href=../ target=_top>Sonic HQ</a> | <a href="http://www.sonichq.org/news/news.htm">News</a> | 03/2000</table></span>
+<a href=../ target=_top>Sonic HQ</a> | <a href="/sonichq/news/news.htm">News</a> | 03/2000</table></span>
 
 <center>
 
 <!main table top>
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" class=maintable>
-<tr><td width=19><img src=/topleft.gif width=19></td>
+<tr><td width=19><img src=/sonichq/topleft.gif width=19></td>
 
 <td bgcolor=black width=100% height=50>
 <script language=JavaScript>
@@ -40,12 +40,12 @@ document.write(titlepic)
 </script>
 <img src=topbar-title.gif align=right></td>
 
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
-<script src=/scripts/menu.js></script>
+<script src=/sonichq/scripts/menu.js></script>
 <noscript>&nbsp;</noscript>
 </font></td></table>
 
@@ -79,15 +79,15 @@ Welcome to the best Sonic news source on the net!  This page will generally be u
 <p><b>SHQ News Editors</b>
 
 <hr><center>
-<a href="archive.php3"><img src="http://www.sonichq.org/news/images/1.gif" border=0></a><br>
-<a href="interviews.php3"><img src="http://www.sonichq.org/news/images/2.gif" border=0></a><br>
-<a href="editorials"><img src="http://www.sonichq.org/news/images/3.gif" border=0></a><br>
-<a href="survey"><img src="http://www.sonichq.org/news/poll.jpg" border=0></a><br>
-<img src="http://www.sonichq.org/news/images/translate.gif" border=0><br>
+<a href="archive.php3"><img src="/sonichq/news/images/1.gif" border=0></a><br>
+<a href="interviews.php3"><img src="/sonichq/news/images/2.gif" border=0></a><br>
+<a href="editorials"><img src="/sonichq/news/images/3.gif" border=0></a><br>
+<a href="survey"><img src="/sonichq/news/poll.jpg" border=0></a><br>
+<img src="/sonichq/news/images/translate.gif" border=0><br>
 <FORM ACTION='http://www.onlinetrans.com/link.cgi' METHOD=POST>
 <INPUT TYPE=SUBMIT VALUE='Translate to'> 
 <input name=partner value=SystranSoft TYPE=hidden>
-<input name=urltext value='http://www.sonichq.org/news/news.htm' TYPE=hidden>
+<input name=urltext value='/sonichq/news/news.htm' TYPE=hidden>
 
 <SELECT NAME=lp>
 <OPTION VALUE=en_fr>French
@@ -123,9 +123,9 @@ Reasaurus Toys are currently in the process of making thier <font color=red>Soni
 
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
-<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
-<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 

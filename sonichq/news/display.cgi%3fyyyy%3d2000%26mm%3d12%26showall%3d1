@@ -3,34 +3,34 @@
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
    <title>Sonic HQ News - 12/2000</title>
-<script src=/scripts/sonic-init.js></script>
+<script src=/sonichq/scripts/sonic-init.js></script>
 <style type="text/css">
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
 <script language=JavaScript>
 <!--
-document.write('<link rel=stylesheet href=http://www.sonichq.org/css/' + theme + '.css type="text/css">')
+document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="text/css">')
 //-->
 </script>
 <noscript>
-<link rel=stylesheet href=http://www.sonichq.org/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/css/main.css type="text/css">
 </noscript>
 </head>
 
-<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
 &nbsp;
 
 <br>
 
 <span class=pathlinks><table class=glow>
-<a href=../ target=_top>Sonic HQ</a> | <a href="http://www.sonichq.org/news/news.htm">News</a> | 12/2000</table></span>
+<a href=../ target=_top>Sonic HQ</a> | <a href="/sonichq/news/news.htm">News</a> | 12/2000</table></span>
 
 <center>
 
 <!main table top>
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" class=maintable>
-<tr><td width=19><img src=/topleft.gif width=19></td>
+<tr><td width=19><img src=/sonichq/topleft.gif width=19></td>
 
 <td bgcolor=black width=100% height=50>
 <script language=JavaScript>
@@ -40,12 +40,12 @@ document.write(titlepic)
 </script>
 <img src=topbar-title.gif align=right></td>
 
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
-<script src=/scripts/menu.js></script>
+<script src=/sonichq/scripts/menu.js></script>
 <noscript>&nbsp;</noscript>
 </font></td></table>
 
@@ -156,7 +156,7 @@ Following the news and rumors of Tails maybe or maybe not showing up in SA2, I h
 </table></div>
 
 <div class=itemtext>
-Dub here! And today we get the long awaited Sonic #95 spoilers! Bunnie Rabbot fans will definetely want this one for the first story. But Miles "Tails" Prower fans - buckle your seatbelts: "The Chosen One", the final Knuckles arc before Sonic #100 and the follow up to one of the biggest side storylines in Archie starts here.....  <p><hr> <a href=http://www.sonichq.org/comics/images/covers/sonic/large/sonic95.jpg><img src=http://www.sonichq.org/comics/images/covers/sonic/thumbnails/sonic95.jpg align=right></a><b>Sonic The Hedgehog #95</b> <br>"Enemy Mine" <br>"The Chosen One - Part One"  <br>Written by Karl Bollers and Ken Penders <br>Art by James Fry And Ron Lim  <br>Inks By Andrew Pepoy and Ken Penders.  <br> <br>A trip to Robotropolis to rescue the roboticized Overlanders baffles Sonic and Bunnie, as many of the Overlanders haven't even been roboticized! Meanwhile, Kodos has gone over the top, affected by radiation, leading Sonic and Bunnie to assist Arachnis in battle against Kodos as they attempt to make their way through the Great Forest. Is Kodos' condition part of a bigger threat? Can Arachnis be trusted? And just what can Robotnik be up to by allowing the Overlanders to exist free of roboticization? And in the backup story - His fellow enchidnas might not have the answers to Knuckles' problem, but Athair believes he does. He recruits Tails, along with Merlin Prower, to assist with the solution, leading to the moment many have asked for: the ultimate destiny of Sonic's major domo revealed...  <hr> <p>Coolness. Not only do we get a story with Sonic and Bunnie (my personal fave of the FF's) but we get the long requested Chosen One arc that I know a bunch of you will be happy to hear, plus the return of Athair as Tails may possibly meet his uncle Merlin Prower who hasn't been seen since back in the day. :)  <p>As an off note, the miniature version of this cover doesn't really do it justice. Sonic trapped in Spaz's "Spider Man" webbing makes this a SWEET cover and probably his best one in a while just for the layout. I'm not that happy with Ron Lim doing the art for the Knuckles/Tails back, but overall this looks to be a pretty good issue in the making. And if it follows the upswing trend the books have been taking since #88 (skipping SSS#15 - it doesn't exist >_<) then #100 may be looking good after all... <br>
+Dub here! And today we get the long awaited Sonic #95 spoilers! Bunnie Rabbot fans will definetely want this one for the first story. But Miles "Tails" Prower fans - buckle your seatbelts: "The Chosen One", the final Knuckles arc before Sonic #100 and the follow up to one of the biggest side storylines in Archie starts here.....  <p><hr> <a href=/sonichq/comics/images/covers/sonic/large/sonic95.jpg><img src=/sonichq/comics/images/covers/sonic/thumbnails/sonic95.jpg align=right></a><b>Sonic The Hedgehog #95</b> <br>"Enemy Mine" <br>"The Chosen One - Part One"  <br>Written by Karl Bollers and Ken Penders <br>Art by James Fry And Ron Lim  <br>Inks By Andrew Pepoy and Ken Penders.  <br> <br>A trip to Robotropolis to rescue the roboticized Overlanders baffles Sonic and Bunnie, as many of the Overlanders haven't even been roboticized! Meanwhile, Kodos has gone over the top, affected by radiation, leading Sonic and Bunnie to assist Arachnis in battle against Kodos as they attempt to make their way through the Great Forest. Is Kodos' condition part of a bigger threat? Can Arachnis be trusted? And just what can Robotnik be up to by allowing the Overlanders to exist free of roboticization? And in the backup story - His fellow enchidnas might not have the answers to Knuckles' problem, but Athair believes he does. He recruits Tails, along with Merlin Prower, to assist with the solution, leading to the moment many have asked for: the ultimate destiny of Sonic's major domo revealed...  <hr> <p>Coolness. Not only do we get a story with Sonic and Bunnie (my personal fave of the FF's) but we get the long requested Chosen One arc that I know a bunch of you will be happy to hear, plus the return of Athair as Tails may possibly meet his uncle Merlin Prower who hasn't been seen since back in the day. :)  <p>As an off note, the miniature version of this cover doesn't really do it justice. Sonic trapped in Spaz's "Spider Man" webbing makes this a SWEET cover and probably his best one in a while just for the layout. I'm not that happy with Ron Lim doing the art for the Knuckles/Tails back, but overall this looks to be a pretty good issue in the making. And if it follows the upswing trend the books have been taking since #88 (skipping SSS#15 - it doesn't exist >_<) then #100 may be looking good after all... <br>
 </div><div class=titlebar><table class=glow>
 <b>Sonic Zippo Image</b> - Neon Chaos 11:45 am 12-14-00
 </table></div>
@@ -168,7 +168,7 @@ Dub here! And today we get the long awaited Sonic #95 spoilers! Bunnie Rabbot fa
 </table></div>
 
 <div class=itemtext>
-<img src=http://www.sonichq.org/news/archive/Interviews/images/bunnie2.jpg align=right>  Howdy folks! Dub here - it's been a LONG TIME coming, a LONG TIME waiting, and a LONG TIME in getting it here - but I can assure you the waits are more than worth it! Today - for the month of December we present what I've promised you since the anniversary: The SHQ Interview with Daniel J. Drazen! And if thats not enough to appease you, we even got an interview with Alison "Sonique" Scharlemann - THE Sonique credited with Sonic Pandemonium, Perfect Chaos, the late Shadow Of Light, and now FUS: the online fight to get one of the fandom's cartoons back on the air!  <p>I can guarantee that these are two of the biggest and neatest fan interviews we've ever done, so get to reading!  <p><b><a href=http://www.sonichq.org/news/archive/Interviews/drazen_interview.htm>Daniel J. Drazen</a></b> - Would you believe he's one of the oldest and most well respected Sonic The Hedgehog fans online? Have you ever wondered who that well spoken dude on the mailing lists is who consistently churns out reviews of the Archie Sonic Comics every month since..oh, Sonic #18? :) Or have you heard of the infamous fanfic called Mobius Apocalypse? From Archie, to its writers, to Sega, to writing fanfiction, to practically everything else as well as tips for the young aspiring writer and whats new, take a peek and get to know Daniel J. Drazen - one of the cream of the crop among Sonic fans.  <p><b><a href=http://www.sonichq.org/news/archive/Interviews/sonique_interview.htm>Sonique</a></b> - She can be one of the nicest people you meet if you talk to her, but cross her the wrong way and she wont hesitate to tell you what she thinks. ^__^ She's vocal, she's outspoken and she's one of the most well known long-time webmasters in the Sonic fandom! Her name is Alison Scharlemann, but you all know her as the unique "Sonique"! From Sonic Pandemonium, to Shadow Of Light, to currently FUS, join us as we have a sit with tonights lady of the evening and discuss whats new since we last saw her! And Sonic Underground fans, bring your flame retardant sheets ready...Prepare for a liitle Pandemonium - Sonique Style! :O) (Note: ***There is some mild language left in to keep the interview in tact)  <p>Thats it for today! Read those and then check out our Poll Position below! And feel free to discuss anything you read there on the Station Square MB! <br>
+<img src=/sonichq/news/archive/Interviews/images/bunnie2.jpg align=right>  Howdy folks! Dub here - it's been a LONG TIME coming, a LONG TIME waiting, and a LONG TIME in getting it here - but I can assure you the waits are more than worth it! Today - for the month of December we present what I've promised you since the anniversary: The SHQ Interview with Daniel J. Drazen! And if thats not enough to appease you, we even got an interview with Alison "Sonique" Scharlemann - THE Sonique credited with Sonic Pandemonium, Perfect Chaos, the late Shadow Of Light, and now FUS: the online fight to get one of the fandom's cartoons back on the air!  <p>I can guarantee that these are two of the biggest and neatest fan interviews we've ever done, so get to reading!  <p><b><a href=/sonichq/news/archive/Interviews/drazen_interview.htm>Daniel J. Drazen</a></b> - Would you believe he's one of the oldest and most well respected Sonic The Hedgehog fans online? Have you ever wondered who that well spoken dude on the mailing lists is who consistently churns out reviews of the Archie Sonic Comics every month since..oh, Sonic #18? :) Or have you heard of the infamous fanfic called Mobius Apocalypse? From Archie, to its writers, to Sega, to writing fanfiction, to practically everything else as well as tips for the young aspiring writer and whats new, take a peek and get to know Daniel J. Drazen - one of the cream of the crop among Sonic fans.  <p><b><a href=/sonichq/news/archive/Interviews/sonique_interview.htm>Sonique</a></b> - She can be one of the nicest people you meet if you talk to her, but cross her the wrong way and she wont hesitate to tell you what she thinks. ^__^ She's vocal, she's outspoken and she's one of the most well known long-time webmasters in the Sonic fandom! Her name is Alison Scharlemann, but you all know her as the unique "Sonique"! From Sonic Pandemonium, to Shadow Of Light, to currently FUS, join us as we have a sit with tonights lady of the evening and discuss whats new since we last saw her! And Sonic Underground fans, bring your flame retardant sheets ready...Prepare for a liitle Pandemonium - Sonique Style! :O) (Note: ***There is some mild language left in to keep the interview in tact)  <p>Thats it for today! Read those and then check out our Poll Position below! And feel free to discuss anything you read there on the Station Square MB! <br>
 </div><div class=titlebar><table class=glow>
 <b>Poll Position And Reader Reviews: December!</b> - WB 15:25 pm 12-11-00
 </table></div>
@@ -307,15 +307,15 @@ Welcome to the best Sonic news source on the net!  This page will generally be u
 <p><b>SHQ News Editors</b>
 
 <hr><center>
-<a href="archive.php3"><img src="http://www.sonichq.org/news/images/1.gif" border=0></a><br>
-<a href="interviews.php3"><img src="http://www.sonichq.org/news/images/2.gif" border=0></a><br>
-<a href="editorials"><img src="http://www.sonichq.org/news/images/3.gif" border=0></a><br>
-<a href="survey"><img src="http://www.sonichq.org/news/poll.jpg" border=0></a><br>
-<img src="http://www.sonichq.org/news/images/translate.gif" border=0><br>
+<a href="archive.php3"><img src="/sonichq/news/images/1.gif" border=0></a><br>
+<a href="interviews.php3"><img src="/sonichq/news/images/2.gif" border=0></a><br>
+<a href="editorials"><img src="/sonichq/news/images/3.gif" border=0></a><br>
+<a href="survey"><img src="/sonichq/news/poll.jpg" border=0></a><br>
+<img src="/sonichq/news/images/translate.gif" border=0><br>
 <FORM ACTION='http://www.onlinetrans.com/link.cgi' METHOD=POST>
 <INPUT TYPE=SUBMIT VALUE='Translate to'> 
 <input name=partner value=SystranSoft TYPE=hidden>
-<input name=urltext value='http://www.sonichq.org/news/news.htm' TYPE=hidden>
+<input name=urltext value='/sonichq/news/news.htm' TYPE=hidden>
 
 <SELECT NAME=lp>
 <OPTION VALUE=en_fr>French
@@ -353,9 +353,9 @@ Reasaurus Toys are currently in the process of making thier <font color=red>Soni
 
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
-<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
-<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 

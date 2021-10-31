@@ -3,34 +3,34 @@
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
    <title>Sonic HQ News - 07/2000</title>
-<script src=/scripts/sonic-init.js></script>
+<script src=/sonichq/scripts/sonic-init.js></script>
 <style type="text/css">
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
 <script language=JavaScript>
 <!--
-document.write('<link rel=stylesheet href=http://www.sonichq.org/css/' + theme + '.css type="text/css">')
+document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="text/css">')
 //-->
 </script>
 <noscript>
-<link rel=stylesheet href=http://www.sonichq.org/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/css/main.css type="text/css">
 </noscript>
 </head>
 
-<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
 &nbsp;
 
 <br>
 
 <span class=pathlinks><table class=glow>
-<a href=../ target=_top>Sonic HQ</a> | <a href="http://www.sonichq.org/news/news.htm">News</a> | 07/2000</table></span>
+<a href=../ target=_top>Sonic HQ</a> | <a href="/sonichq/news/news.htm">News</a> | 07/2000</table></span>
 
 <center>
 
 <!main table top>
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" class=maintable>
-<tr><td width=19><img src=/topleft.gif width=19></td>
+<tr><td width=19><img src=/sonichq/topleft.gif width=19></td>
 
 <td bgcolor=black width=100% height=50>
 <script language=JavaScript>
@@ -40,12 +40,12 @@ document.write(titlepic)
 </script>
 <img src=topbar-title.gif align=right></td>
 
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
-<script src=/scripts/menu.js></script>
+<script src=/sonichq/scripts/menu.js></script>
 <noscript>&nbsp;</noscript>
 </font></td></table>
 
@@ -66,7 +66,7 @@ The last issue of "Sonic the Comic" to feature an original story is now on sale.
 </table></div>
 
 <div class=itemtext>
-<a href=http://www.sonichq.org/news/images/x642.jpg><img src=images/x64.jpg align=right></a>  <P>  Say hello to Sonic 89's color cover, just released! And from the look of things - the rumors may be true and someone may be getting the boot out of Knothole Village... <hr>  <p>"Thicker Than Water" <br>"Return To Albion - Part Two" <br>Writer(s): Karl Bollers & Ken Penders <br>Penciler(s): James Fry & Steve Butler <br>Inker(s): Andrew Pepoy & Pam Eklund <br> <br>The heroes deal with the disastrous results of last issue's major turmoil, and in the process face their own inner turmoil as well. Princess Sally is among the hardest hit, keeping a vigil for her ailing father, King Max - while Sonic blames himself for King Max's condition. Meanwhile, Doctor Robotnik has returned to see the damage his headquarters has suffered. Marshaling forces of Shadow Bots and Robians, he plots his revenge, even as Sonic ponders the Sword of Acorns' alleged ability to restore the Robians' own free will....And in the backup story, Knuckles and friends return to Albion, where many surprises await them - including Antoine discovering his roboticised father, General D'Coolette there.  <P>  Credit:<A HREF="http://westfieldcompany.com/wow/cod_a.html" target="_whole">Worlds of Westfield</A><br>
+<a href=/sonichq/news/images/x642.jpg><img src=images/x64.jpg align=right></a>  <P>  Say hello to Sonic 89's color cover, just released! And from the look of things - the rumors may be true and someone may be getting the boot out of Knothole Village... <hr>  <p>"Thicker Than Water" <br>"Return To Albion - Part Two" <br>Writer(s): Karl Bollers & Ken Penders <br>Penciler(s): James Fry & Steve Butler <br>Inker(s): Andrew Pepoy & Pam Eklund <br> <br>The heroes deal with the disastrous results of last issue's major turmoil, and in the process face their own inner turmoil as well. Princess Sally is among the hardest hit, keeping a vigil for her ailing father, King Max - while Sonic blames himself for King Max's condition. Meanwhile, Doctor Robotnik has returned to see the damage his headquarters has suffered. Marshaling forces of Shadow Bots and Robians, he plots his revenge, even as Sonic ponders the Sword of Acorns' alleged ability to restore the Robians' own free will....And in the backup story, Knuckles and friends return to Albion, where many surprises await them - including Antoine discovering his roboticised father, General D'Coolette there.  <P>  Credit:<A HREF="http://westfieldcompany.com/wow/cod_a.html" target="_whole">Worlds of Westfield</A><br>
 </div><div class=titlebar><table class=glow>
 <b>Sonic HQ RA News</b> - Tristan 21:35 pm 07-02-00
 </table></div>
@@ -114,7 +114,7 @@ In response to the article below, Sonic Underground is still being shown on Cana
 </table></div>
 
 <div class=itemtext>
-<a href=http://www.sonichq.org/news/images/hsunchan.jpg><img src=images/hsusmall.jpg align=left></a>  <p>Electronic Gaming Monthly must REALLY like Sonic The Hedgehog.  <p>He's been on thier covers more times than any other character, he's gotten more coverage by them than any other videogame magazine, and this month he and his arch-nemesis Doctor Eggman make an appearance in EGM's monthly comic strip - "The Adventures of Hsu and Chan!"....Well...a reasonable facsimile of Sonic anyway - you see, this guy is really Arnie the Ground Squirrel - and that blue stuff is mousse! ^_____^  <p>Take a gander at the strip by clicking the panel on the left, and when you're done head on over to <a href=http://www.ape-law.com/evilmonkey target="_whole">"Evil Monkey Productions"</a> and give Hsu and Chan Tanaka's creator Norman Von Scott a hollar! Tell him what you thought of it.<br>
+<a href=/sonichq/news/images/hsunchan.jpg><img src=images/hsusmall.jpg align=left></a>  <p>Electronic Gaming Monthly must REALLY like Sonic The Hedgehog.  <p>He's been on thier covers more times than any other character, he's gotten more coverage by them than any other videogame magazine, and this month he and his arch-nemesis Doctor Eggman make an appearance in EGM's monthly comic strip - "The Adventures of Hsu and Chan!"....Well...a reasonable facsimile of Sonic anyway - you see, this guy is really Arnie the Ground Squirrel - and that blue stuff is mousse! ^_____^  <p>Take a gander at the strip by clicking the panel on the left, and when you're done head on over to <a href=http://www.ape-law.com/evilmonkey target="_whole">"Evil Monkey Productions"</a> and give Hsu and Chan Tanaka's creator Norman Von Scott a hollar! Tell him what you thought of it.<br>
 </div><div class=titlebar><table class=glow>
 <b>Daily Radar Top 100</b> - [DCX]Liquid Rain 13:18 pm 07-01-00
 </table></div>
@@ -145,15 +145,15 @@ Welcome to the best Sonic news source on the net!  This page will generally be u
 <p><b>SHQ News Editors</b>
 
 <hr><center>
-<a href="archive.php3"><img src="http://www.sonichq.org/news/images/1.gif" border=0></a><br>
-<a href="interviews.php3"><img src="http://www.sonichq.org/news/images/2.gif" border=0></a><br>
-<a href="editorials"><img src="http://www.sonichq.org/news/images/3.gif" border=0></a><br>
-<a href="survey"><img src="http://www.sonichq.org/news/poll.jpg" border=0></a><br>
-<img src="http://www.sonichq.org/news/images/translate.gif" border=0><br>
+<a href="archive.php3"><img src="/sonichq/news/images/1.gif" border=0></a><br>
+<a href="interviews.php3"><img src="/sonichq/news/images/2.gif" border=0></a><br>
+<a href="editorials"><img src="/sonichq/news/images/3.gif" border=0></a><br>
+<a href="survey"><img src="/sonichq/news/poll.jpg" border=0></a><br>
+<img src="/sonichq/news/images/translate.gif" border=0><br>
 <FORM ACTION='http://www.onlinetrans.com/link.cgi' METHOD=POST>
 <INPUT TYPE=SUBMIT VALUE='Translate to'> 
 <input name=partner value=SystranSoft TYPE=hidden>
-<input name=urltext value='http://www.sonichq.org/news/news.htm' TYPE=hidden>
+<input name=urltext value='/sonichq/news/news.htm' TYPE=hidden>
 
 <SELECT NAME=lp>
 <OPTION VALUE=en_fr>French
@@ -191,9 +191,9 @@ Reasaurus Toys are currently in the process of making thier <font color=red>Soni
 
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
-<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
-<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 

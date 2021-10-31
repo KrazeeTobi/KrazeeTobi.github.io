@@ -3,34 +3,34 @@
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
    <title>Sonic HQ News - 11/2000</title>
-<script src=/scripts/sonic-init.js></script>
+<script src=/sonichq/scripts/sonic-init.js></script>
 <style type="text/css">
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
 </style>
 <script language=JavaScript>
 <!--
-document.write('<link rel=stylesheet href=http://www.sonichq.org/css/' + theme + '.css type="text/css">')
+document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="text/css">')
 //-->
 </script>
 <noscript>
-<link rel=stylesheet href=http://www.sonichq.org/css/main.css type="text/css">
+<link rel=stylesheet href=/sonichq/css/main.css type="text/css">
 </noscript>
 </head>
 
-<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
 &nbsp;
 
 <br>
 
 <span class=pathlinks><table class=glow>
-<a href=../ target=_top>Sonic HQ</a> | <a href="http://www.sonichq.org/news/news.htm">News</a> | 11/2000</table></span>
+<a href=../ target=_top>Sonic HQ</a> | <a href="/sonichq/news/news.htm">News</a> | 11/2000</table></span>
 
 <center>
 
 <!main table top>
 <p><table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" class=maintable>
-<tr><td width=19><img src=/topleft.gif width=19></td>
+<tr><td width=19><img src=/sonichq/topleft.gif width=19></td>
 
 <td bgcolor=black width=100% height=50>
 <script language=JavaScript>
@@ -40,12 +40,12 @@ document.write(titlepic)
 </script>
 <img src=topbar-title.gif align=right></td>
 
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><td valign=middle width=100% bgcolor=black><font size=2>
-<script src=/scripts/menu.js></script>
+<script src=/sonichq/scripts/menu.js></script>
 <noscript>&nbsp;</noscript>
 </font></td></table>
 
@@ -258,7 +258,7 @@ Just a reminding note that Sonic The Hedgehog #90 will be released today. You ca
 </table></div>
 
 <div class=itemtext>
-<a href=http://www.sonichq.org/comics/images/covers/sonic/large/sonic94.jpg><img src=http://www.sonichq.org/comics/images/covers/sonic/thumbnails/sonic94.jpg align=left></a> Loops are thrown aplenty in this preview. As if Double Cross' news post wasn't foreboding enough....now we get something that FURTHER adds to the mystery that is the road to the coveted anniversary issue: <b>Sonic The Hedgehog #100</b>...  <p><hr> "New Order 2"  <br>Written by Karl Bollers <br>Art by James Fry  <br>Inks by Andrew Pepoy.  <br> <br>As beautiful as the new Knothole Village is, Sonic just can't adjust to it knowing that Robotnik's presence - and that of the Overlanders - persists in Robotropolis. For his part, Elias has chosen the path of peace, electing to focus on turning Knothole into a permanent habitat rather than trying to reclaim Robotropolis. By issue's end, however, dark alliances shall be made and peril shall befall the Freedom Fighters - in the form of both natural disasters and wicked enemies... <hr>  <p>OK - Several things in this preview caught my eye. Namely:  <p>1. Check out that cover and one thing will <i>immediately</i> catch your eye - namely the centerpoint of Spaz's piece: <b>Knothole High School</b>! @__@ And not only that but we see Sonic walking with Tails and Mina (sans Rotor trailing behind them) in a congested courtyard nonetheless. Bunnie and Antione are walking in the opposite direction, but Sally is nowhere to be seen....It looks like after Sonic 93, Mina, Rote and Tails will be getting bigger roles after all. I specifically remember WAAAAAY back before Sonic #50, Ken Penders said he had wanted to try something like this (the high school thing) but I didn't think they'd actually play it out. THIS could be interesting...and its CERTAINLY something new that hasnt been done before in the book. Makes you wonder what on earth they have planned for after 100.  <p>2. NEW Knothole Village? Robotropolis is now populated with Overlanders _AND_ Doc R? And Elias wants to "move on" on reclaiming Knothole? And then there are the titles of "New Order" and "Darkness Falls" revealed below. It should be neat to see how this all will turn out in the end. After tomorrow - 9 issues to go till the big Double Zero...  <br>
+<a href=/sonichq/comics/images/covers/sonic/large/sonic94.jpg><img src=/sonichq/comics/images/covers/sonic/thumbnails/sonic94.jpg align=left></a> Loops are thrown aplenty in this preview. As if Double Cross' news post wasn't foreboding enough....now we get something that FURTHER adds to the mystery that is the road to the coveted anniversary issue: <b>Sonic The Hedgehog #100</b>...  <p><hr> "New Order 2"  <br>Written by Karl Bollers <br>Art by James Fry  <br>Inks by Andrew Pepoy.  <br> <br>As beautiful as the new Knothole Village is, Sonic just can't adjust to it knowing that Robotnik's presence - and that of the Overlanders - persists in Robotropolis. For his part, Elias has chosen the path of peace, electing to focus on turning Knothole into a permanent habitat rather than trying to reclaim Robotropolis. By issue's end, however, dark alliances shall be made and peril shall befall the Freedom Fighters - in the form of both natural disasters and wicked enemies... <hr>  <p>OK - Several things in this preview caught my eye. Namely:  <p>1. Check out that cover and one thing will <i>immediately</i> catch your eye - namely the centerpoint of Spaz's piece: <b>Knothole High School</b>! @__@ And not only that but we see Sonic walking with Tails and Mina (sans Rotor trailing behind them) in a congested courtyard nonetheless. Bunnie and Antione are walking in the opposite direction, but Sally is nowhere to be seen....It looks like after Sonic 93, Mina, Rote and Tails will be getting bigger roles after all. I specifically remember WAAAAAY back before Sonic #50, Ken Penders said he had wanted to try something like this (the high school thing) but I didn't think they'd actually play it out. THIS could be interesting...and its CERTAINLY something new that hasnt been done before in the book. Makes you wonder what on earth they have planned for after 100.  <p>2. NEW Knothole Village? Robotropolis is now populated with Overlanders _AND_ Doc R? And Elias wants to "move on" on reclaiming Knothole? And then there are the titles of "New Order" and "Darkness Falls" revealed below. It should be neat to see how this all will turn out in the end. After tomorrow - 9 issues to go till the big Double Zero...  <br>
 </div><!end of sections>
 
 </td>
@@ -283,15 +283,15 @@ Welcome to the best Sonic news source on the net!  This page will generally be u
 <p><b>SHQ News Editors</b>
 
 <hr><center>
-<a href="archive.php3"><img src="http://www.sonichq.org/news/images/1.gif" border=0></a><br>
-<a href="interviews.php3"><img src="http://www.sonichq.org/news/images/2.gif" border=0></a><br>
-<a href="editorials"><img src="http://www.sonichq.org/news/images/3.gif" border=0></a><br>
-<a href="survey"><img src="http://www.sonichq.org/news/poll.jpg" border=0></a><br>
-<img src="http://www.sonichq.org/news/images/translate.gif" border=0><br>
+<a href="archive.php3"><img src="/sonichq/news/images/1.gif" border=0></a><br>
+<a href="interviews.php3"><img src="/sonichq/news/images/2.gif" border=0></a><br>
+<a href="editorials"><img src="/sonichq/news/images/3.gif" border=0></a><br>
+<a href="survey"><img src="/sonichq/news/poll.jpg" border=0></a><br>
+<img src="/sonichq/news/images/translate.gif" border=0><br>
 <FORM ACTION='http://www.onlinetrans.com/link.cgi' METHOD=POST>
 <INPUT TYPE=SUBMIT VALUE='Translate to'> 
 <input name=partner value=SystranSoft TYPE=hidden>
-<input name=urltext value='http://www.sonichq.org/news/news.htm' TYPE=hidden>
+<input name=urltext value='/sonichq/news/news.htm' TYPE=hidden>
 
 <SELECT NAME=lp>
 <OPTION VALUE=en_fr>French
@@ -327,9 +327,9 @@ Reasaurus Toys are currently in the process of making thier <font color=red>Soni
 
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
-<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
-<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 
