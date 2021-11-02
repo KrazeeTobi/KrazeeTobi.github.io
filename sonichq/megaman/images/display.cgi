@@ -40,26 +40,20 @@ A{text-decoration:none} -->
 <table border=0 cellspacing=0 cellpadding=0><tr><td><font face=Verdana>
 
 <table border=1 bordercolor=404FE0 width=100% cellspacing=0><tr align=center>
-<td><a href=backgrounds/BluesGryBG.gif><img src=backgrounds/thumbnails/BluesGryBG.gif border=0></a></td>
-<td><a href=backgrounds/RollGrayBG.gif><img src=backgrounds/thumbnails/RollGrayBG.gif border=0></a></td>
 <td><a href=backgrounds/checkers.gif><img src=backgrounds/thumbnails/checkers.gif border=0></a></td>
 <td><a href=backgrounds/database.gif><img src=backgrounds/thumbnails/database.gif border=0></a></td>
-</tr>
-<tr align=center>
 <td><a href=backgrounds/database2.gif><img src=backgrounds/thumbnails/database2.gif border=0></a></td>
 <td><a href=backgrounds/dustbg.gif><img src=backgrounds/thumbnails/dustbg.gif border=0></a></td>
+</tr>
+<tr align=center>
 <td><a href=backgrounds/dustbg2.gif><img src=backgrounds/thumbnails/dustbg2.gif border=0></a></td>
 <td><a href=backgrounds/dustbg3.gif><img src=backgrounds/thumbnails/dustbg3.gif border=0></a></td>
-</tr>
-<tr align=center>
 <td><a href=backgrounds/forte1bg.gif><img src=backgrounds/thumbnails/forte1bg.gif border=0></a></td>
 <td><a href=backgrounds/fortegraybg.gif><img src=backgrounds/thumbnails/fortegraybg.gif border=0></a></td>
-<td><a href=backgrounds/junkbg.gif><img src=backgrounds/thumbnails/junkbg.gif border=0></a></td>
-<td><a href=backgrounds/mm3select.gif><img src=backgrounds/thumbnails/mm3select.gif border=0></a></td>
 </tr>
 <tr align=center>
+<td><a href=backgrounds/junkbg.gif><img src=backgrounds/thumbnails/junkbg.gif border=0></a></td>
 <td><a href=backgrounds/mmgraybg.gif><img src=backgrounds/thumbnails/mmgraybg.gif border=0></a></td>
-<td><a href=backgrounds/skullbg.gif><img src=backgrounds/thumbnails/skullbg.gif border=0></a></td>
 <td><a href=backgrounds/soccerheads.gif><img src=backgrounds/thumbnails/soccerheads.gif border=0></a></td>
 </table>
 
