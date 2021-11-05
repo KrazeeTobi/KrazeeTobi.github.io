@@ -1,8 +1,9 @@
 <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
 <html>
 <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-   <title>HQ Community Rules & Guide</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>HQ Community Rules & Guide</title>
+<LINK REL="SHORTCUT ICON" HREF="favicon.ico">
 <style type="text/css">
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
@@ -23,18 +24,18 @@ document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="t
 <br>
 
 <center>
-<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
+<IFRAME SRC="https://web.archive.org/20011105000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
 MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
+<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011105000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
 </SCRIPT>
 <NOSCRIPT>
-<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank" HEIGHT="60" WIDTH="468"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y"></A>
+<A HREF="https://web.archive.org/20011105000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011105000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
 </NOSCRIPT>
 </IFRAME>
 </center>
 
 <p><span class=pathlinks><table class=glow>
-<a href=../ target=_top>Sonic HQ</a> | <a href="">Features</a> | Sonic Survey</table></span>
+<a href=../ target=_top>Sonic HQ</a> | <a href="">Forum</a> | Rules</table></span>
 
 <center>
 
@@ -63,7 +64,7 @@ document.write(titlepic + titlelogo)
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><tr>
 
 <td VALIGN=TOP WIDTH="70%" bgcolor=ffffff class=itemtable>
-<font face=Arial size=-1 color=black>
+<font face=Arial size=2 class=itemtable>
 
 <!sections>
 <div class=titlebar><table class=glow>
@@ -134,13 +135,17 @@ Just because someone doesnt answer your post or if its skipped over doesnt alway
 </table></div>
 
 <div class=itemtext>
-Spam is anything that "clutters" the board needlessly and is either WAAAY off topic for that area or is just insanely vapid with no reason for it to have even been posted. For instance, there's the good spam (authorized by the SPA ^__^) that can make you laugh out of your seat or bad spam that's just mad stupid and is posted for the simple fact of cluttering the vicinity. TOO MUCH of that bad spam can get on everyones nerves. :P 
+NOTE - These rules don't apply to the spam forum.
+
+<p>Spam is anything that "clutters" the board needlessly and is either WAAAY off topic for that area or is just insanely vapid with no reason for it to have even been posted. For instance, there's the good spam (authorized by the SPA ^__^) that can make you laugh out of your seat or bad spam that's just mad stupid and is posted for the simple fact of cluttering the vicinity. TOO MUCH of that bad spam can get on everyones nerves. :P 
 
 <p>Posters who consistantly post spam will get warned. We're not being anal, but here are some things that we and other posters consider "bad spam". Try to avoid it when posting.
 
-<p><li><b>Single-Sentence Topics</b> - Avoid posting one-liner topics. Sometimes such posts are good for responses, but don't make one-liner responses frequently. If your sig is large, uncheck it (there's a checkbox under the posting form) when you do post a one-liner response.
+<p><li><b>Single-Sentence Topics</b> - Avoid posting one-liner topics. Sometimes such posts are good for responses, but don't make one-liner responses frequently. If your sig is large, uncheck it (there's a checkbox under the posting form) when you do post a one-liner response.  Note - this is less important in replies.  Replies can be one-liners, but don't post a TON of one-liner replies.
 
-<p><li><b>Pointless Posts</b> - This doesn't mean you can't post wackiness. By all means do. But your posts should have some entertaining, informational, or intellectual point. "Do You like Sonic/Mega Man!" Well DUH! This is a Sonic/Mega Man messageboard. Messages with nothing more than "Sonic is cool! I like his spikes!" or just plain "Wow" are really fruitless topic wise.  The exception is in the fluff/spam/testing forum, where you can post pointless stuff.
+<p><li><b>Pointless Posts</b> - This doesn't mean you can't post wackiness. By all means do. But your posts should have some entertaining, informational, or intellectual point. "Do You like Sonic/Mega Man!" Well DUH! This is a Sonic/Mega Man messageboard. Messages with nothing more than "Sonic is cool! I like his spikes!" or just plain "Wow" are really fruitless topic wise.
+
+<p><li><b>Insanity Vs. Spam</b> - On some of the forums, people like to get crazy and post insanity.  This is a lot of fun, but not when people post spam too.  Sometimes it's hard to tell the difference, but generally, good insanity is creative and written either to encourage replies or to have some kind of comedic value.  Filling a topic with baby talk or words related to biological functions is not comedy.  Something that involves some creativity or effort like a script or joke is good insanity.
 
 <p><li><b>Post Counts</b> - Don't start new threads about your post counts, unless it's a 1000-mark.  Otherwise, just note it in a normal post you're making or post it in a topic set up specifically for post counts (found in the MoFo 2).  Don't pad your post count by spamming.
 
@@ -158,13 +163,15 @@ Spam is anything that "clutters" the board needlessly and is either WAAAY off to
 </table></div>
 
 <div class=itemtext>
-The admins aren't here to be bullies or dictators, but rather try to keep everything in line and make sure the board doesnt fall headfirst into the flaming pits of internet hell. ^__^ If you disagree with something an administrator has done then try and talk to the admin and figure out if you two can solve the problem peacefully so you both can avoid it again - in other words dont come barging in like a ninny demanding someones head just 'cause your toes got stepped on :). That way you can avoid confrontation and everyone can be happy. ALL Admins reserve the right to delete or edit what they deem fit, HOWEVER no admin is allowed to abuse thier status over others.
+The admins and mods aren't here to be bullies or dictators, but rather try to keep everything in line and make sure the board doesnt fall headfirst into the flaming pits of internet hell. ^__^ If you disagree with something an administrator has done then try and talk to the admin and figure out if you two can solve the problem peacefully so you both can avoid it again - in other words dont come barging in like a ninny demanding someones head just 'cause your toes got stepped on :). That way you can avoid confrontation and everyone can be happy. ALL Admins reserve the right to delete or edit what they deem fit, HOWEVER no admin is allowed to abuse thier status over others.
+
+<p>Mods can be board-wide mods or forum specific, or both.  A board mod is supposed to help in moderating in general.  Meanwhile, forum-specific mods have the job of concentrating on a specific forum not just to moderate it, but also to encourage discussion there by posting themselves.
 
 <p><li>Admins<br>
 Vector<br>
 LianneKa Echidna a.k.a. True Red<br>
 Samanfur The Fox<br>
-Svanuri
+Svanuri<br>
 WB<br>
 Chainspike / Jazz Chan<br>
 CuckooGuy<br>
@@ -172,10 +179,16 @@ Troophead<br>
 Mobius Tetherblood
 
 <p><li>Moderators<br>
-Coyote Calhoun<br>
-TL Kidnoyle<br>
-Jinsoku<br>
-Sonic Whammy<p>
+Coyote Calhoun - Board<br>
+Nick D Biped - Board, Knothole Village, Gaming Academy<br>
+The Virus AJG - South Island<br>
+TL Kidnoyle - Board<br>
+Pundit - Knothole Village<br>
+Real Tails - Board, Emerald Visitor Center<br>
+Jinsoku - Board<br>
+Syera - RP Guild<br>
+Rico Underwood - RP Guild<br>
+Sonic Whammy - Game Shows<p>
 </div><div class=titlebar><table class=glow>
 <a name=Smilies>Using Smilies</a>
 </table></div>
@@ -208,7 +221,7 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 
 Welcome to the HQ Community! As an extra rule, be sure to _HAVE FUN_. We may be a little strict sometimes, but we want everyone who visits to have a good time, have fun and or just live life without fear of being maimed by a flamer or caught up petty arguments and spam. :) The server or webpage does not make a board, its the people and the ATTITUDES that visit.
 
-<p><venter><a href=https://web.archive.org/20011101000000/http://66.51.112.89/hotlink/zandalea5/top25.html><img src=https://web.archive.org/20011101000000/http://66.51.112.89/hotlink/zandalea5/top25.gif></a></center>
+<p><venter><a href=https://web.archive.org/20011105000000/http://66.51.112.89/hotlink/zandalea5/top25.html><img src=https://web.archive.org/20011105000000/http://66.51.112.89/hotlink/zandalea5/top25.gif></a></center>
 </font></td></tr>
 </table>
 <!end main table middle>

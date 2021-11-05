@@ -3,9 +3,9 @@
 <TITLE>Sonic HQ - The Ultimate Sonic Source</TITLE>
 </HEAD>
 
-<FRAMESET ROWS = "75, *" border="0">
-<FRAME NAME = "menu" SRC = "main/frames/menu3.htm#TOP" SCROLLING="no" >
-<FRAME NAME = "index2" SRC = "main/frames/index3.htm" SCROLLING="auto">
+<FRAMESET ROWS = "100, *" border="0">
+<FRAME NAME = "menu" SRC = "main/frames/menu1.htm#TOP" SCROLLING="no" >
+<FRAME NAME = "index2" SRC = "main/frames/index1.htm" SCROLLING="auto">
 </FRAMESET>
 
 <noframes>
