@@ -26,7 +26,7 @@ var titlelogo = '<IMG SRC=/sonichq/megaman/images/titlebar/logo1.gif align=right
 	link[3] = '/megaman/music.php3';
 	link[4] = '/megaman/fanfair/';
 	link[5] = '/megaman/images/';
-	link[6] = 'https://web.archive.org/20011101000000/http://pub12.ezboard.com/fsonichqcommunityfrm14';
+	link[6] = 'https://web.archive.org/20011106000000/http://pub12.ezboard.com/fsonichqcommunityfrm14';
 	link[7] = '/megaman/directory.php3';
 	menutext[0] = '<a href=/sonichq/megaman/features/updateboard.htm>Update Board</a><br><a href=/sonichq/megaman/features/staff.php3>Staff</a><br><a href=/sonichq/megaman/features/nostalgia.php3>Time Capsule</a>';
 	menutext[1] = '';
@@ -35,12 +35,12 @@ var titlelogo = '<IMG SRC=/sonichq/megaman/images/titlebar/logo1.gif align=right
 	menutext[4] = '<a href=/sonichq/megaman/fanfair/edited/>Hoaxes</a><br><a href=/sonichq/megaman/fanfair/fanart/>Fan Art</a><br><a href=/sonichq/megaman/fanfair/fangames.php3>Fan Games</a><br><a href=/sonichq/megaman/fanfair/fancomics>Fan Comics</a>';
 	menutext[5] = '<a href=/sonichq/megaman/images/boxcovers>Box Art</a><br><a href=/sonichq/megaman/images/screenshots>Screenshots</a><br><a href=/sonichq/megaman/images/proart>Character Art</a><br><a href=/sonichq/megaman/images/sprites>Sprites</a><br><a href=/sonichq/megaman/images/merchandise>Merchandise Pics</a><br><a href=/sonichq/megaman/images/manga>Rockman Manga</a>';
 	menutext[6] = '';
-	menutext[7] = '<a href=https://web.archive.org/20011101000000/http://www.ibis-research.com/MM/ target=_blank>Mega Man Home Page</a><br><a href=https://web.archive.org/20011101000000/http://www.protoman.com/ target=_blank>The Protoman Homepage</a><br><a href=https://web.archive.org/20011101000000/http://members.tripod.com/~Maelgrim/Rockman.html target=_blank>Rockman\'s World</a><br><a href=https://web.archive.org/20011101000000/http://www.rockmanrobotcentre.8m.com/ target=_blank>Auto\'s Rockman Robot Centre</a><br><a href=https://web.archive.org/20011101000000/http://www.kontek.net/m3a/ target=_blank>M3A - Mega Man MOD Archives</a>';
+	menutext[7] = '<a href=https://web.archive.org/20011106000000/http://www.ibis-research.com/MM/ target=_blank>Mega Man Home Page</a><br><a href=https://web.archive.org/20011106000000/http://www.protoman.com/ target=_blank>The Protoman Homepage</a><br><a href=https://web.archive.org/20011106000000/http://members.tripod.com/~Maelgrim/Rockman.html target=_blank>Rockman\'s World</a><br><a href=https://web.archive.org/20011106000000/http://www.rockmanrobotcentre.8m.com/ target=_blank>Auto\'s Rockman Robot Centre</a><br><a href=https://web.archive.org/20011106000000/http://www.kontek.net/m3a/ target=_blank>M3A - Mega Man MOD Archives</a>';
 
 function MidiPlayer () {
 midiplayer = window.open("", "MidiPlayer", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,width=200,height=60")
 midiplayer.document.open();
-midiplayer.document.write('<html><title>Midi Player</title><base href=/sonichq/><body LEFTMARGIN=0 TOPMARGIN=0 MARGINHEIGHT=0 MARGINWIDTH=0><embed src=' + midi + ' autostart=true width=200 height=60 loop=true><br><center>' + caption + '</center></html>');
+midiplayer.document.write('<html><title>Midi Player</title><base href=/sonichq/><body LEFTMARGIN=0 TOPMARGIN=0 MARGINHEIGHT=0 MARGINWIDTH=0><embed src=' + midi + ' autostart=true width=286 height=46 loop=true><br><center>' + caption + '</center></html>');
 midiplayer.document.close();
 }
 
@@ -52,7 +52,7 @@ var captions = new Array;
 
 	midis[i]="/sonichq/geocities/EnchantedForest/Tower/4309/mm8Tengu.mid"
 	captions[i]="Tengu Man (Saturn) by Maelgrim"
-	midis[++i]="https://web.archive.org/20011101000000/http://www.geocities.com/EnchantedForest/Glade/8862/Gravityman.mid"
+	midis[++i]="/sonichq/geocities/EnchantedForest/Glade/8862/Gravityman.mid"
 	captions[i]="Gravity Man Echo Remix by Maelgrim"
 	midis[++i]="music/midis/mm/x3/GravityBeetle-jj.mid"
 	captions[i]="Gravity Beetle's Stage by Jarel Jones"
@@ -84,7 +84,7 @@ var captions = new Array;
 
 	midis[++i]="/sonichq/music/midis/sonic/3k/flyingbattery2-k.mid"
 	captions[i]="Flying Battery Act 1 by Koryan"
-	midis[++i]="/sonichq/geocities/EnchantedForest/Dell/7835/skcflyingbattery.mid"
+	midis[++i]="/sonichq/geocities/enchantedforest/dell/7835/skcflyingbattery.mid"
 	captions[i]="Flying Battery Act 1 by SEGA"
 	midis[++i]="music/midis/sonic/3dcd/panicpuppetjr.mid"
 	captions[i]="Panic Puppet Zone Act 1 by Jeff Read"
