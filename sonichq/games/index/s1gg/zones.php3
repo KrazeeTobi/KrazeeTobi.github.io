@@ -16,37 +16,15 @@ A{text-decoration:none} -->
 <br>
 
 <center>
-<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
+<IFRAME SRC="https://web.archive.org/20011107000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
 MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
+<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011107000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
 </SCRIPT>
 <NOSCRIPT>
-<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
+<A HREF="https://web.archive.org/20011107000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011107000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
 </NOSCRIPT>
 </IFRAME>
-<!-- ---------- Advertising.com Banner Code -------------- --> 
-<!-- popup an Ad.com banner no more than once per hour on page entry --> 
-<script language="JavaScript"> 
-<!-- 
-function setCookie(NameOfCookie, value, expirehours) { 
-var ExpireDate = new Date (); 
-ExpireDate.setTime(ExpireDate.getTime() + (expirehours * 3600 * 1000)); 
-document.cookie = NameOfCookie + "=" + escape(value) + 
-((expirehours == null) ? "" : "; expires=" + ExpireDate.toGMTString()) + 
-"; path=/sonichq/;" ; 
-} 
-if (document.cookie.indexOf('AdComPop60917')==-1) 
-{ 
-setCookie('AdComPop60917','yes',1);
-var bnum=new Number(Math.floor(99999999 * Math.random())+1);
-document.write('<SCR'+'IPT LANGUAGE="JavaScript" '); 
-document.write(' SRC="https://web.archive.org/20011101000000/http://servedby.advertising.com/pops=1/site=60917/bnum='+bnum+'">'); 
-document.write('</SCR'); 
-document.write('IPT>'); 
-} 
-// --> 
-</script> 
-<!-- ---------- Copyright 2000, Advertising.com ---------- --></center>
+</center>
 
 <p><span class=pathlinks><table class=glow>
 <a href=../../../>Sonic HQ</a> | <a href=../../>Gaming Info</a> | <a href=../>Game List</a> | Sonic The Hedgehog - Game Gear, Master System</table></span>
