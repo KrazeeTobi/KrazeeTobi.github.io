@@ -10,18 +10,24 @@ font-family:Verdana,Arial; font-size:10pt; color:white;
 .itemtable{
 background-color:#303f66; background-image:url(/sonichq/images/backgrounds/bluecubism-dark.jpg); background-attachment: fixed;
 }
+.itemtable td {
+font-family:Verdana,Arial; font-size:10pt; color:white;
+}
+.itemtable textarea {
+width=95%;height=100;
+}
 
 .titlebar a {color:ffffff;}
 .titlebar {
 background-color:#404FE0; layer-background-color:#404FE0;
-padding-left:4; width:100%;
-font-family:Verdana,Arial; font-size:10pt; color:white; font-weight:bold
+padding-left:4; width:100%; font-weight:bold;
+font-family:Verdana,Arial; font-size:10pt; color:white;
 }
 
 .itemtext {
 border-left:4 solid B3B3B3; border-right:4 solid B3B3B3;
-padding-left:4; padding-right:4;
-font-family:Verdana,Arial; font-size:10pt; color:white; font-weight:bold
+padding-left:4; padding-right:4; font-weight:bold;
+font-family:Verdana,Arial; font-size:10pt; color:white;
 }
 
 .sidebar {

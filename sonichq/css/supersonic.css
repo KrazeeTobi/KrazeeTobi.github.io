@@ -1,0 +1,33 @@
+body {background-image:url(/sonichq/images/backgrounds/SuperSonicBG.gif)}
+a {color:#cccc00;}
+
+.itemtable {background-color:ffffff; layer-background-color:ffffff; font-family:Arial; font-size:10pt; color:black;}
+.itemtable td {
+font-family:Arial; font-size:10pt; color:black;
+}
+.itemtable textarea {
+width=95%;height=100;
+}
+
+.titlebar a {color:ffffff; font-weight:bold}
+.titlebar {
+background-color:#cccc00; layer-background-color:#cccc00;
+background-image:url(/sonichq/m_supersonic.gif); background-repeat:no-repeat; background-position:top right;
+padding-left:4; width:100%; color:white;
+}
+
+.itemtext {
+border-left:4 solid B3B3B3; border-right:4 solid B3B3B3; padding-left:4; padding-right:4;
+}
+
+.sidebar a {color:#cccc00;}
+.sidebar {
+background-color:black; layer-background-color:black;
+margin-left:4; padding-left:4; padding-right:4;
+font-family:Arial; font-size:10pt; color:white;
+}
+
+.menu {background-color:black;layer-background-color:black;font-size:12;font-family:arial;color:ffffff}
+.menu a {color:#cccc00;text-decoration:none}
+a.menu {color:#cccc00;text-decoration:none}
+.menu a:hover {color:#ff606f;text-decoration:none}
