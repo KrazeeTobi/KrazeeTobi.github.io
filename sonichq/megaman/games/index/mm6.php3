@@ -2,7 +2,7 @@
 <html>
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-   <title>Mega Man HQ Gaming Info - Mega Man 5</title>
+   <title>Mega Man HQ Gaming Info - Mega Man 6</title>
 <script src=/sonichq/scripts/sonic-init.js></script>
 <style type="text/css">
 <!-- a:hover {text-decoration: underline}
@@ -27,7 +27,7 @@ MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
 </center>
 
 <p><span class=pathlinks><table class=glow>
-<a href=../../>Mega Man HQ</a> | <a href=../>Gaming Info</a> | <a href=#>Game List</a> | Mega Man 5 - Nintendo Entertainment System</table></span>
+<a href=../../>Mega Man HQ</a> | <a href=../>Gaming Info</a> | <a href=#>Game List</a> | Mega Man 6 - Nintendo Entertainment System</table></span>
 
 <center>
 
@@ -108,11 +108,11 @@ Quick Info
 </table></div>
 
 <div class=itemtext>
-<LI><b><u>Title:</b></u> Mega Man 5
-<LI><b><u>Release Date:</b></u> 1992
+<LI><b><u>Title:</b></u> Mega Man 6
+<LI><b><u>Release Date:</b></u> 1993
 <LI><b><u>System Console:</b></u> Nintendo Entertainment System
-<LI><b><u>First Appearances:</b></u> Beat, Dark Man, L-Tank, M-Tank
-<LI><b><u>Robot Masters:</b></u> Gravity Man, Wave Man, Gyro Man, Star Man, Charge Man, Napalm Man, Stone Man, Crystal Man
+<LI><b><u>First Appearances:</b></u> Rush Jet Adapter, Rush Power Adapter, Energy Balancer
+<LI><b><u>Robot Masters:</b></u> Blizzard Man, Flame Man, Plant Man, Knight Man, Centaur Man, Tomahawk Man, Wind Man, Yamato Man
 <br><br></div><!end of sections>
 
 </td>
@@ -150,11 +150,14 @@ Quick Info
 <td VALIGN=TOP bgcolor=ffffff class=itemtable>
 <font face=Arial size=-1 color=black><div class=titlebar>Intro</div>
 
-<div class=itemtext>This is where the repetition starts in the MM series.  The plot and castle areas have obviou similarities to those of MM4, and the final boss is an almost total clone of the boss in MM4.  However, if you don't worry about that, MM5 could be considered the best game of the entire MM series.  It's extremely well balanced and polished, and many of the enemies use brains against you rather thn brawn.  Very few of them take more than a few hits to defeat, but most are shielded, attack at odd angles, use speed, fire multiple sprayed shots to make it difficult to dodge them, or even duck.  This is definitely one of the best MM games.<br><br></div><div class=titlebar>Story</div>
+<div class=itemtext>Mega Man 6 introduces the unique Rush adapter setup.  It also includes one of my favorite special weapons in the series.  However, MM6 is also considered by some to be the worst major MM game.  It's really not all that different than any other MM game, so I'm not sure why some fans feel this way.  I really think that the only major flaws are somewhat repetitive Master Robots, a very obvious plot twist, and the fact that it yet again repeats the invisible saucer attack as the final boss.<br><br></div><div class=titlebar>Story</div>
 
-<div class=itemtext>8 mysterious robots have appeared, trying to take over the world under the command of... Protoman?  Protoman starts to act even weirder when he kidnaps Dr. Light, leaving his scarf behind for Mega Man.  SPOILER: Mega Man fights his way through Protoman's fortress, encountering 3 increasingly mobile robots (or is it 1 robot with upgrades?) named Sentinel 1, 2, and 3.  When he reaches, Protoman, he is reluctant to start a fght, and Protoman basts him, taking his energy to 1 point.  Suddenly, a whistle sounds, and another Protoman, this one with a scarf, appears, and the 2 start to fight.  The scarfed Protoman wins, and the unscarfed Protoman's disguise disappears, revealing a 4th sentinel-type robot.  Protoman gives Mega Man an L-Tank, which restores his energy immediately.  When Mega Man wins, Dr. Wily appears, surrprised that Mega Man had defeated "Dark Man."  He tells the Blue Bomber that Dr. Light is in Wily's castle.  After Mega Man defeats Wily's saucer, which is only a SLIGHTLY different version of the MM4 saucer, Wily runs away, and Mega Man chases him to where Dr. Light is.  MM rescues Light, but the castle starts to explode, and the roof falls.  Mega Man catches it, showing strength that makes Guts Man look like a shrimp.  Wily gets away, and you then hear a whistle as part of the wall is blasted away, giving Mega Man and Dr. Light a route out.  The walls is held up by someone just while MM and Light get out of the castle.  In the next scene, Wily's saucer is seen flying away, Mega Man and Dr. Light stand oytside the exploding castle, and Protoman is seen watching them.<br><br></div><div class=titlebar>Unique Features</div>
+<div class=itemtext>A mysterious billionaire named Mr. X is sponsoring a robot contest.  8 robot designers from around the world enter the tournament (which is evidenced by the fact that nearly every robot in the game has an ethnic feel).  However, Mr. X steals the robots, reveals that he has been controlling Wily all along, and takes over the world.  SPOILER:  Obviously, Mr. X is Dr. Wily in a cheap disguise.  Come on, you can tell just by looking at him.  I kinda suspect that the game designers intended this as a joke.  However, I think it would have been REALLY hilarious if Mega Man had suspected Wily, and that disguise had turned out to be real, meaning that Wily really had been working for a guy who looks just like a disguised version of himself.  I have a weird sense of humor.  Anyway, when Mega Man defeats Mr. X, X takes off the disguise, showing that he is Wily, and Mega Man hops back in surprise.  MM chases Wily into a very Japanese-styled version of the Skull castle.  This time, when Mega Man defeats Wily, he ties up the guy and takes him to jail.  A "To Be Continued" mark appears, which I think is the first case of foreshadowing in the MM series.  MM7 would then continue the plot, as well as giving a few subtle hints itself about MM8.<br><br></div><div class=titlebar>Unique Features</div>
 
-<div class=itemtext>Besides the Super Arrow, M-Tank, and Beat, MM5 is most unique for the way its enemies are handled.  As I mentioned before, most of them are lightweights who are placed strategically or use special techniques.  Mega Man also uses this strategy, as most of the special weapons in MM5 are light-powered, designed mostly to give Mega Man a way to hit enemies in many situations, or even block shots.  It should also be mentioned that this is the first game in which Mega Man uses an actual vehicle that he finds in a level.  Most of Wave Man's stage is played while Mega Man is riding a jetski.<br><br></div></font></td></tr></table>
+<div class=itemtext>1.  The most unique aspect of MM6 is its use of the Rush Jet and Rush Power adapters.<br><br>
+2.  Beat also attacks differently this time, defeating an enemy in one hit, but using as many energy points as it would takre to defeat that enemy with the regulr plasma cannon.<br><br>
+3.  This game includes the first appearance of the Energy Balancer in the original MM series.  You get it from Protoman in Tomahawk Man's stage.<br><br>
+4.  Another unique feature is the fact that 4 of the Master Robots appear twice in their levels.  The path of the level branches, with 1 path leading to the normal version of the robot, and another path, requiring one of the adapters, leading to a different room, where you fight the same bss, but get a Beat letter if you win.  If you re-enter a level after winning against the normal boss, the level will be another color.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
 <td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
@@ -178,13 +181,15 @@ Quick Info
 <td VALIGN=TOP bgcolor=ffffff class=itemtable>
 <font face=Arial size=-1 color=black><div class=titlebar>Vulnerability Loop</div>
 
-<div class=itemtext>Gravity -> Gyro -> Crystal -> Napalm -> Stone -> Charge -> Wave -> Star -> Gravity<br><br></div><div class=titlebar>Beginner's Level Orders</div>
+<div class=itemtext>Flame -> Blizzard -> Plant -> Tomahawk -> Yamato -> Knight -> Centaur -> Wind -> Flame<br><br></div><div class=titlebar>Beginner's Level Orders</div>
 
 <div class=itemtext>This level order starts with Gravity Man, and gives you the proper Master Weapon for all following bosses.
-<p>Gravity -> Gyro -> Crystal -> Napalm -> Stone -> Charge -> Wave -> Star<br><br></div><div class=titlebar>Advanced Level Order</div>
+<p>Flame -> Blizzard -> Plant -> Tomahawk -> Yamato -> Knight -> Centaur -> Wind
+<p>This one starts with the slightly tougher Knight Man, and you'll have to redo 2 levels to get all the Beat plates, but you'll get a better set of weapons early.
+<p>Knight -> Centaur -> Wind -> Flame -> Blizzard -> Plant -> Knight -> Centaur -> Tomahawk -> Yamato<br><br></div><div class=titlebar>Advanced Level Order</div>
 
-<div class=itemtext>If you're planning to use the Mega Buster against most or all of the bosses, this level order will keep you equipped with the best weapons possible for each level.  Wave Man's stage comes first because there's only 1 enemy in the level that you can use special weapons against.
-<p>Wave -> Gyro -> Napalm -> Gravity -> Stone -> Charge -> Star -> Crystal<br><br></div></font></td></tr></table>
+<div class=itemtext>If you're planning to use the Mega Buster against most or all of the bosses, this level order will keep you equipped with the best weapons possible for each level.
+<p>Flame -> Plant -> Centaur -> Knight -> Tomahawk -> Yamato -> Blizzard -> Wind<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
 <td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
@@ -208,40 +213,40 @@ Quick Info
 <td VALIGN=TOP bgcolor=ffffff class=itemtable>
 <font face=Arial size=-1 color=black><div class=titlebar>Weapons</div>
 
-<div class=itemtext>Gyro Attack<br>
-Usefulness: 7<br>
-Energy Cost: 1<br>
-The Gyro Attack is similar to the Magnet Missile in MM3.  A gyro is fired stright forward, and you can press up or down to make it change direction vertically.  It's useful for hitting enemies at odd angles and has above average power.<br>
-Napalm Bomb<br>
-Usefulness: 6<br>
-Energy Cost: 1<br>
-This bomb rolls along the ground and explodes when it hits something.  You can shoot 3 at a time, which makes it handy for defending the ground directly in front of you, and it's very powerful, although you'll have to get close to use it against most large enemies.<br>
-Star Crash<br>
-Usefulness: 4<br>
-Energy Cost: 3<br>
-A one-hit 'rotating shield-type' weapon, the Star Crash can be used as its name implies, or thrown by pressing the fire button a second time.  It's very useful for blocking the falling crystals in Crystal Man's stage.<br>
-Power Stone<br>
-Usefulness: 4<br>
-Energy Cost: 1<br>
-This is an interesting weapon.  3 stones appear around Mega Man and quickly move outward in a spiral, covering a large portion of the screen.  However, the stones each have below average firepower.  This is a useful weapon agaibst flying enemies and in situations where many enemies are on screen at a time.<br>
-Crystal Eye<br>
-Usefulness: 4<br>
-Energy Cost: 1<br>
-The Crystal Eye is fairly powerful and a very cool concept, but there aren't really many situations in the game where its special properties become particularly useful.  It fires forward as a large shot and becoms 3 small shots when it touches a wall - one bounces back towards the direction it comes from, and the other 2 bounce off at 45 degree angles around it.  The shots continue to bounce around for a number of seconds.<br>
-Charge Kick<br>
-Usefulness: 4<br>
-Energy Cost: 1<br>
-The Charge Kick makes Mega Man's slide offensive.  It will go through some shields, such as the flipping shields of the ground turret enemies, though its power is just about equivalent to 1 or 2 regular plasma shots against most enemies.  Be sure to avoid sliding unecessarily, as it will count as a shot with your weapon energy.<br>
-Gravity Hold<br>
-Usefulness: 3<br>
+<div class=itemtext>Centaur Flash<br>
+Usefulness: 10<br>
 Energy Cost: 4<br>
-This weapon flashes and hits every enemy on the screen, floating any enemies it defeats into the air.  However, it only has as much power as a regular plasma shot.<br>
-Water Wave<br>
+The Centaur Flash immediately flashes across the entire screen.  Mega Man has used flash weapons before, but this one is actually very powerful.  It has as much power as 4 regular plasma shots against most enemies.  Obviously, the only disadvantage of this spectacular weapon is its energy efficiency.  You have to use it only in certain places, or just pick up as much weapon energy as possible.  It's best to use the Centaur Flash when you're making challenging jumps near numerous flying enemies.  The Centaur Flash will also help if you're trying to get through Flame Man's stage without letting any flame dispensers hit the oil pools.<br>
+Flame Blast<br>
+Usefulness: 8<br>
+Energy Cost: 1<br>
+The Flame Blast is actually pretty similar to the attack Heat Man uses in MM2.  A fireball is thrown forward and up, and falls in an arc.  When it hits the floor or a wall, it creates a column or bar of fire.<br>
+Silver Tomahawk<br>
+Usefulness: 5<br>
+Energy Cost: 1<br>
+This weapon flies forward and rises faster and faster, forming a curved path.  It has above average power and can be useful in many situations.<br>
+Knight Chain<br>
+Usefulness: 5<br>
+Energy Cost: 1/2<br>
+This mace is an aimable version of the Rolling Cutter with average power.  You can throw it in a forward arc, or diagonally up and down.  However, unlike the Rolling Cutter, it won't score multiple hits.<br>
+Plamt Barrier<br>
+Usefulness: 4<br>
+Energy Cost: 4<br>
+This is another one-hit shield.  Mega Man can walk with it and can't fire it.  What makes it unique is its power - it has about as much power as 4 regular plasma shots against most enemies.  It's handy when you're in a corner and an enemy is approaching quickly.<br>
+Yamato Spear<br>
 Usefulness: 2<br>
-Energy Cost: 2<br>
-The Water Wave travels quickly along the ground.  Each Water Wave contains 3 waves in one, so it's usually good for multiple hits.  Although its firepower is less than average and it's difficult to hit enemies with it, the Water Wave has the unique ability to block enemy shots.<br><br></div><div class=titlebar>Items</div>
+Energy Cost: 1/2<br>
+A forward-firing shot shaped like an arrowhead.  It has below average power, but goes through shields.<br>
+Blizzard Attack<br>
+Usefulness: 2<br>
+Energy Cost: 3<br>
+4 snowflakes appear behind Mega Man and fly forward in a spread with below average power.  2 move forward, and the top and bottom snowflakes move diagonally forward.<br>
+Wind Storm<br>
+Usefulness: 1<br>
+Energy Cost: 1<br>
+This weapon travels along the ground, like the Water Wave of MM5.  It's not very powerful, and, like MM5's Gravity Hold, will carry any enemy it defeats into the air.<br><br></div><div class=titlebar>Items</div>
 
-<div class=itemtext>Rush Coil, Rush Jet, Beat, Super Arrow, E-Tank, M-Tank<br><br></div></font></td></tr></table>
+<div class=itemtext>Rush Jet Adapter, Rush Power Adapter, Beat, E-Tank<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
 <td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>
