@@ -1,0 +1,32 @@
+body {background-image:url(/sonichq/megaman/images/backgrounds/fortegraybg.gif);}
+a {color:#E04FE0;}
+
+.pathlinks a {color:purple;}
+.glow {filter:GLOW(color=#cc00cc, strength=#+7);}
+
+.titlebar a {color:ffffff; font-weight:bold}
+.titlebar {
+background-color:purple; layer-background-color:purple;
+padding-left:4; padding-bottom:2; width:100%;
+font-family:Arial; font-size:10pt; color:white;
+}
+
+td.itemtable{
+background-color:ffffff; layer-background-color:ffffff; font-family:Arial; font-size:10pt;
+}
+
+div.itemtext {
+border-left:4 solid black; border-right:4 solid black;
+font-family:Arial; font-size:10pt;
+}
+
+td.sidebar {
+background-color:black; layer-background-color:black;
+margin-left:4; padding-left:4; padding-right:4;
+font-family:Arial; font-size:10pt; color:white;
+}
+
+.menu {background-color:black;layer-background-color:black;font-size:12;font-family:arial;color:ffffff;}
+.menu a {color:ffffff}
+.menu a:hover {color:#E04FE0;text-decoration:none}
+a.menu {color:ffffff}
