@@ -1,0 +1,46 @@
+body {
+  background-color: #000000;
+}
+h1 {
+  color: #ffffff;
+}
+h2 {
+  color: #ffffff;
+}
+h3 {
+  color: #ffffff;
+}
+h4 {
+  color: #ffffff;
+}
+h5 {
+  color: #ffffff;
+}
+h6 {
+  color: #ffffff;
+}
+p {
+  color: #ffffff;
+}
+a:link {
+	color: #3333FF;
+}
+a:visited {
+	color: #9933CC;
+}
+a:hover {
+	color: #3333FF;
+}
+a:active {
+	color: #FF3333;
+}
+ul {
+  list-style: none; /* Remove default bullets */
+}
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #ffffff; /* Change the color */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
