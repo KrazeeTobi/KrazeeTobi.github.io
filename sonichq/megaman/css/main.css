@@ -1,0 +1,45 @@
+body {background-image:url(/megaman/images/backgrounds/mmgraybg.gif);}
+a {color:#6699ff;}
+a:active {color:#000099;}
+
+.titlebar a {color:ffffff; font-weight:bold}
+.titlebar {
+background-color:#404FE0; layer-background-color:#404FE0;
+padding-left:4; padding-bottom:2; width:100%;
+font-family:Arial; font-size:10pt; color:white;
+}
+
+div.titlebar2 a {color:ffffff; font-weight:bold}
+div.titlebar2 {
+background-color:#595959; layer-background-color:#595959;
+padding-left:4; padding-bottom:2;
+font-family:Arial; font-size:10pt; color:white;
+}
+
+div.titlebar3 a {color:ffffff; font-weight:bold}
+div.titlebar3 {
+background-color:#e0404f; layer-background-color:#e0404f;
+padding-left:4; padding-bottom:2;
+font-family:Arial; font-size:10pt; color:white;
+}
+
+td.itemtable{
+background-color:ffffff; layer-background-color:ffffff; font-family:Arial; font-size:10pt;
+}
+
+div.itemtexta {color:blue;}
+div.itemtext {
+border-left:4 solid B3B3B3; border-right:4 solid B3B3B3;
+font-family:Arial; font-size:10pt;
+}
+
+td.sidebar {
+background-color:black; layer-background-color:black;
+margin-left:4; padding-left:4; padding-right:4;
+font-family:Arial; font-size:10pt; color:white;
+}
+
+.menu {background-color:black;layer-background-color:black;font-size:12;font-family:arial;color:ffffff;}
+.menu a {color:ffffff}
+.menu a:hover {color:6699ff;text-decoration:none}
+a.menu {color:ffffff}

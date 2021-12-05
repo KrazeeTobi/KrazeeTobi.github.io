@@ -56,295 +56,295 @@ document.write(titlepic + titlelogo)
 
 <!sections>
 <div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.geocities.com/TimesSquare/Galaxy/5270/>Maq's Hunter Hide-Out</a>
+<a href=https://web.archive.org/20011205000000/http://www.geocities.com/TimesSquare/Galaxy/5270/>Maq's Hunter Hide-Out</a>
 </table></div>
 
 <div class=itemtext>
 Lots of Rockman X managa scans here. Has lots of other stuff too; fanfic, fan art, music.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.mxblizzard.8m.com>Matter X and Blizzard's Megaman Page</a>
+<a href=https://web.archive.org/20011205000000/http://www.mxblizzard.8m.com>Matter X and Blizzard's Megaman Page</a>
 </table></div>
 
 <div class=itemtext>
 Has pictures, sprites, and some downloads.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.maverickhunter.com>Maverick Hunter.com</a>
+<a href=https://web.archive.org/20011205000000/http://www.maverickhunter.com>Maverick Hunter.com</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.maverickhunterhq.homestead.com>Maverick Hunter HQ</a>
+<a href=https://web.archive.org/20011205000000/http://www.maverickhunterhq.homestead.com>Maverick Hunter HQ</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://suenpuffy.tripod.com/>Maverick Hunter's Lounge</a>
+<a href=https://web.archive.org/20011205000000/http://suenpuffy.tripod.com/>Maverick Hunter's Lounge</a>
 </table></div>
 
 <div class=itemtext>
 Fanfic, art, and more stuff.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.megarockman.homestead.com>Mav's Mega Man Site</a>
+<a href=https://web.archive.org/20011205000000/http://www.megarockman.homestead.com>Mav's Mega Man Site</a>
 </table></div>
 
 <div class=itemtext>
 Has a nice image gallery, MP3 collection, manga scans, and good Mega Man X4 anime screenshots.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.geocities.com/megaman3_2000>The Mechanical Maniacs</a>
+<a href=https://web.archive.org/20011205000000/http://www.geocities.com/megaman3_2000>The Mechanical Maniacs</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.megaman2000.homestead.com/megaman2000.html>Mega Man 2000</a>
+<a href=https://web.archive.org/20011205000000/http://www.megaman2000.homestead.com/megaman2000.html>Mega Man 2000</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.geocities.com/mmxlee/index.htm>Megaman 2000 - Arte Anime's Section</a>
+<a href=https://web.archive.org/20011205000000/http://www.geocities.com/mmxlee/index.htm>Megaman 2000 - Arte Anime's Section</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://beamsaber.verge-rpg.com>Megaman 21XX</a>
+<a href=https://web.archive.org/20011205000000/http://beamsaber.verge-rpg.com>Megaman 21XX</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.geocities.com/TimesSquare/Lair/8306/main.htm>Mega Man and X Info Center</a>
+<a href=https://web.archive.org/20011205000000/http://www.geocities.com/TimesSquare/Lair/8306/main.htm>Mega Man and X Info Center</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://megaman.rulestheweb.com>Mega Man Archives</a>
+<a href=https://web.archive.org/20011205000000/http://megaman.rulestheweb.com>Mega Man Archives</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.megamanonline.com>Mega Man Assault</a>
+<a href=https://web.archive.org/20011205000000/http://www.megamanonline.com>Mega Man Assault</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://mmattack.cjb.net>Mega Man Attack</a>
+<a href=https://web.archive.org/20011205000000/http://mmattack.cjb.net>Mega Man Attack</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://home6.swipnet.se/~w-67337/megaman>Mega Man Base</a>
+<a href=https://web.archive.org/20011205000000/http://home6.swipnet.se/~w-67337/megaman>Mega Man Base</a>
 </table></div>
 
 <div class=itemtext>
 Pictures, walkthroughs, and sprites.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://megamanblue.homestead.com/MEGAMANblue.html>Megaman Blue</a>
+<a href=https://web.archive.org/20011205000000/http://megamanblue.homestead.com/MEGAMANblue.html>Megaman Blue</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.geocities.com/TimesSquare/Metro/9233/MMcentral>Mega Man Central</a>
+<a href=https://web.archive.org/20011205000000/http://www.geocities.com/TimesSquare/Metro/9233/MMcentral>Mega Man Central</a>
 </table></div>
 
 <div class=itemtext>
 Your basic Mega Man page.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.megamancentral.cjb.net>Megaman Central</a>
+<a href=https://web.archive.org/20011205000000/http://www.megamancentral.cjb.net>Megaman Central</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.megamancentral.com>Mega Man Central</a>
+<a href=https://web.archive.org/20011205000000/http://www.megamancentral.com>Mega Man Central</a>
 </table></div>
 
 <div class=itemtext>
 This site covers Mega Man news, games info, and more<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://superultimatemegamansite.homestead.com/>Mega Man CyBorg</a>
+<a href=https://web.archive.org/20011205000000/http://superultimatemegamansite.homestead.com/>Mega Man CyBorg</a>
 </table></div>
 
 <div class=itemtext>
 This site has a very wide variety of pics, including pics from the Mega Man TV Show and X4 Anime clips.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.rockmanx.com>The Mega Man Database</a>
+<a href=https://web.archive.org/20011205000000/http://www.rockmanx.com>The Mega Man Database</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.homestead.com/mega_man/megaman_extreme.html>Mega Man Extreme</a>
+<a href=https://web.archive.org/20011205000000/http://www.homestead.com/mega_man/megaman_extreme.html>Mega Man Extreme</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.geocities.com/TimesSquare/Bunker/6690>Mega Man Gold Mega Man Power Homepage</a>
+<a href=https://web.archive.org/20011205000000/http://www.geocities.com/TimesSquare/Bunker/6690>Mega Man Gold Mega Man Power Homepage</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.geocities.com/TimesSquare/Ring/6507>Mega Man Intelligence HQ</a>
+<a href=https://web.archive.org/20011205000000/http://www.geocities.com/TimesSquare/Ring/6507>Mega Man Intelligence HQ</a>
 </table></div>
 
 <div class=itemtext>
 Has game information and a hefty MIDI collection.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://ourworld-top.cs.com/Zergonite/index.htm>Mega Man Legacy</a>
+<a href=https://web.archive.org/20011205000000/http://ourworld-top.cs.com/Zergonite/index.htm>Mega Man Legacy</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://members.fortunecity.com/felipe61/megamanomegabase.html>Mega Man Marine Base</a>
+<a href=https://web.archive.org/20011205000000/http://members.fortunecity.com/felipe61/megamanomegabase.html>Mega Man Marine Base</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.geocities.com/TimesSquare/Arena/5907/Mmain.html>Mega Man Master Robot Designs</a>
+<a href=https://web.archive.org/20011205000000/http://www.geocities.com/TimesSquare/Arena/5907/Mmain.html>Mega Man Master Robot Designs</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.megamanmasters.com>Mega Man Masters</a>
+<a href=https://web.archive.org/20011205000000/http://www.megamanmasters.com>Mega Man Masters</a>
 </table></div>
 
 <div class=itemtext>
 A great site, lots of stuff.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.megaman.co.uk>Mega Man Matrix</a>
+<a href=https://web.archive.org/20011205000000/http://www.megaman.co.uk>Mega Man Matrix</a>
 </table></div>
 
 <div class=itemtext>
 Contains games info and a nice art gallery. Covers classic Mega Man, Mega Man X, and Legends.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://megaman.vgznetwork.com>Mega Man: Metal Blade</a>
+<a href=https://web.archive.org/20011205000000/http://megaman.vgznetwork.com>Mega Man: Metal Blade</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.chocobo.org/~Rockman>Megaman: Metal Heroes:</a>
+<a href=https://web.archive.org/20011205000000/http://www.chocobo.org/~Rockman>Megaman: Metal Heroes:</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://megamanonline.cjb.net>Mega Man Online</a>
+<a href=https://web.archive.org/20011205000000/http://megamanonline.cjb.net>Mega Man Online</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.geocities.com/TimesSquare/Arcade/6144>Mega Man: Robotic War Machine</a>
+<a href=https://web.archive.org/20011205000000/http://www.geocities.com/TimesSquare/Arcade/6144>Mega Man: Robotic War Machine</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://mmsh.briansemu.com>Mega Man Scrap Heap</a>
+<a href=https://web.archive.org/20011205000000/http://mmsh.briansemu.com>Mega Man Scrap Heap</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://mmss.cjb.net>The Mega Man Super Site</a>
+<a href=https://web.archive.org/20011205000000/http://mmss.cjb.net>The Mega Man Super Site</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://members.tripod.com/Shotoman/shotoman.html>Mega Man: The Power Fighter</a>
+<a href=https://web.archive.org/20011205000000/http://members.tripod.com/Shotoman/shotoman.html>Mega Man: The Power Fighter</a>
 </table></div>
 
 <div class=itemtext>
 This place has character information, fanfic, and the "Warrior with Hair of Fire" translation project, translating IRA's Fire Man comic into English.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.angelfire.com/pa3/mega>Mega Man: The Robotic Legend</a>
+<a href=https://web.archive.org/20011205000000/http://www.angelfire.com/pa3/mega>Mega Man: The Robotic Legend</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.geocities.com/mmunion>Mega Man United</a>
+<a href=https://web.archive.org/20011205000000/http://www.geocities.com/mmunion>Mega Man United</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.geocities.com/Area51/Jupiter/2268/index.html>The Mega Man Universe</a>
+<a href=https://web.archive.org/20011205000000/http://www.geocities.com/Area51/Jupiter/2268/index.html>The Mega Man Universe</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.gis.net/~mls/Megapage.htm>Mega Man X: Maverick Hunter Headquarters 206</a>
+<a href=https://web.archive.org/20011205000000/http://www.gis.net/~mls/Megapage.htm>Mega Man X: Maverick Hunter Headquarters 206</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://mightor.simplenet.com/x/index.html>Mega Man X4</a>
+<a href=https://web.archive.org/20011205000000/http://mightor.simplenet.com/x/index.html>Mega Man X4</a>
 </table></div>
 
 <div class=itemtext>
 Part of Mightor Productions. Their Mega Man X4 page has a lot of screenshots, info, and Japanese song MP3's of Mega Man X4.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://homes.acmecity.com/batman/haley/26>Megaman Xcitement</a>
+<a href=https://web.archive.org/20011205000000/http://homes.acmecity.com/batman/haley/26>Megaman Xcitement</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.geocities.com/Tokyo/Towers/5241/index.html>The Mega Man X Emporium</a>
+<a href=https://web.archive.org/20011205000000/http://www.geocities.com/Tokyo/Towers/5241/index.html>The Mega Man X Emporium</a>
 </table></div>
 
 <div class=itemtext>
 Has fanfic and fan art.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.geocities.com/Area51/Dimension/8952>MegaManZ's Fortress</a>
+<a href=https://web.archive.org/20011205000000/http://www.geocities.com/Area51/Dimension/8952>MegaManZ's Fortress</a>
 </table></div>
 
 <div class=itemtext>
 This place has a gallery of pictures, fanfic, and fan art.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://homestead.com/megamatts/Matts_megamanpge.html>Mega Matt's Megaman page</a>
+<a href=https://web.archive.org/20011205000000/http://homestead.com/megamatts/Matts_megamanpge.html>Mega Matt's Megaman page</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://megarock.cjb.net>Megarock</a>
+<a href=https://web.archive.org/20011205000000/http://megarock.cjb.net>Megarock</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.geocities.com/TimesSquare/9936/index.html>MMXZ Productions Megaman Exodus</a>
+<a href=https://web.archive.org/20011205000000/http://www.geocities.com/TimesSquare/9936/index.html>MMXZ Productions Megaman Exodus</a>
 </table></div>
 
 <div class=itemtext>
 &nbsp;<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://www.geocities.com/graydo15>Mockone's Megaman Page</a>
+<a href=https://web.archive.org/20011205000000/http://www.geocities.com/graydo15>Mockone's Megaman Page</a>
 </table></div>
 
 <div class=itemtext>
 Has a sprites and pictures gallery, and a Cutman Shrine.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011105000000/http://members.nbci.com/Myzary/mmindex.html>Myzary's Megaman Index</a>
+<a href=https://web.archive.org/20011205000000/http://members.nbci.com/Myzary/mmindex.html>Myzary's Megaman Index</a>
 </table></div>
 
 <div class=itemtext>
