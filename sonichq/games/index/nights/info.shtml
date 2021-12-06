@@ -3,7 +3,7 @@
 <title>Sonic HQ - The Games Page</title>
 </header>
 
-<body bgcolor="orange" background="/sonichq/images/backgrounds/swirly.gif"
+<body bgcolor="orange" background="/images/backgrounds/swirly.gif"
  text="000066" link="#405961" vlink="#ff0000">
 <embed src="/sonichq/geocities/EnchantedForest/Dell/6657/Take_the_Snow_Train.mid" autostart="true" hidden="true" loop="true">
 

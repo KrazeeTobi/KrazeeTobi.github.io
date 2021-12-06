@@ -21,7 +21,7 @@ ran = parseInt(((seed - (parseInt(seed/1000,10) * 1000))/10)/100*nummidis + 1,10
 	caption="Tengu Man (Saturn) by Maelgrim"; theme=1
 }
 	if (ran == (3)) {
-	midi=("https://web.archive.org/20011101000000/http://www.geocities.com/EnchantedForest/Glade/8862/Gravityman.mid")
+	midi=("https://web.archive.org/20011206000000/http://www.geocities.com/EnchantedForest/Glade/8862/Gravityman.mid")
 	caption=("Gravity Man Echo Remix by Maelgrim"); theme=1}
 
 	if (ran == (4)) {

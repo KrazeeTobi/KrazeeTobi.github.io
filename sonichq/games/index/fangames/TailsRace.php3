@@ -11,12 +11,23 @@ A{text-decoration:none} -->
 <link rel=stylesheet href=/sonichq/css/main.css type="text/css">
 </head>
 
-<body text="#000000" bgcolor="white" link=blue vlink=blue background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
-&nbsp;
+<body text="#000000" bgcolor="white" link=blue vlink=blue background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
 
 <br>
 
-<span class=pathlinks><table class=glow>
+<center>
+<IFRAME SRC="https://web.archive.org/20011206000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
+MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
+<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011206000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="https://web.archive.org/20011206000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011206000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
+</NOSCRIPT>
+</IFRAME>
+<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011206000000/http://ads.ad-flow.com/?DC=ztnet-pop1&JS=Y"></SCRIPT>
+</center>
+
+<p><span class=pathlinks><table class=glow>
 <a href=../../../>Sonic HQ</a> | <a href=../../>Gaming Info</a> | <a href=../>Game List</a> | Tails Race - PC Fan Game</table></span>
 
 <center>
@@ -108,9 +119,9 @@ Additional Links
 </table></div>
 
 <div class=itemtext>
-<a href="https://web.archive.org/20011101000000/http://www.geocities.com/TimesSquare/8867">Author Web Page</a> | <a href=/sonichq/images/games.html>Download</a>
+<a href="https://web.archive.org/20011206000000/http://www.geocities.com/TimesSquare/8867">Author Web Page</a> | <a href=/sonichq/images/games.html>Download</a>
 
-<p><center><embed src=/sonichq/geocities/enchantedforest/dell/7835/s2endingk.mid autostart="true" loop="true" width=200 height=60><br>Sonic 2 Ending by Koryan</center>
+<p><center><embed src=/sonichq/geocities/EnchantedForest/Dell/7835/s2endingk.mid autostart="true" loop="true" width=200 height=60><br>Sonic 2 Ending by Koryan</center>
 <br><br></div><!end of sections>
 
 </td>
@@ -126,15 +137,15 @@ Additional Links
 
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100%><tr>
-<td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
+<td><img SRC="/bottomleft.gif" BORDER=0 height=20></td>
 <td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
-<td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
+<td><img SRC="/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
 
 <div id=table0 align=center>
 
-<a name=anchor0><p><img src=/sonichq/images/bluebar.jpg><p></a>
+<a name=anchor0><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
 <td><img src=/sonichq/images/borders/topleft.gif></td>

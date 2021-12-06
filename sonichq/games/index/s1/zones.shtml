@@ -29,7 +29,7 @@ Sonic The Hedgehog 1 (Walkthrough)
 <tr><td bgcolor=black width=1>&nbsp;</td><td width=100%><center>
 <br>
 
-<b><font face="Arial" size=-1><a href=/sonichq/main.htm>Sonic HQ</a> / <a href=../../>Gaming Info</a> / <a href=../>The Games List</a> / 
+<b><font face="Arial" size=-1><a href=https://web.archive.org/20011206000000/http://sonichq.org/main.htm>Sonic HQ</a> / <a href=../../>Gaming Info</a> / <a href=../>The Games List</a> / 
 Index Page / <a href=index.shtml>Guide And Walkthrough</a>
 </font></H2>
 
@@ -48,11 +48,11 @@ Index Page / <a href=index.shtml>Guide And Walkthrough</a>
 <td>
 <p>
 <table width=333 border=0 cellspacing=0 cellpadding=0><tr>
-<td width=10 height=20><img src="/sonichq/images/borders/topleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/images/borders/topleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2 color=cyan>
 Other Sonic 1 Sections
 </font></td>
-<td width=10 height=20><img src="/sonichq/images/borders/topright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/images/borders/topright.gif" width=10 height=20></td>
 </tr>
 <tr><td colspan=3>
 <table border=0 cellspacing=0 cellpadding=0><tr>
@@ -67,9 +67,9 @@ Other Sonic 1 Sections
 </tr></table>
 </td></tr>
 <tr>
-<td width=10 height=20><img src="/sonichq/images/borders/bottomleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/images/borders/bottomleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2>&nbsp;</font></td>
-<td width=10 height=20><img src="/sonichq/images/borders/bottomright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/images/borders/bottomright.gif" width=10 height=20></td>
 </tr></table>
 </td>
 <td>
@@ -103,9 +103,9 @@ with the game, like insights on its creation, special things and whatnots - you 
 <br>
 
 <p><table width=420 border=0 cellspacing=0 cellpadding=0 align=right><tr><a name="special">
-<td width=10 height=20><img src="/sonichq/images/borders/topleft.gif" width=10 height=35></td>
+<td width=10 height=20><img src="/images/borders/topleft.gif" width=10 height=35></td>
 <td width=100% bgcolor=000000><font face=Arial size=-1 color=red><img src=../images/boxart.jpg align=right></font></td>
-<td width=10 height=20><img src="/sonichq/images/borders/topright.gif" width=10 height=35></td>
+<td width=10 height=20><img src="/images/borders/topright.gif" width=10 height=35></td>
 </tr>
 <tr><td colspan=3>
 <table border=0 cellspacing=0 cellpadding=0><tr>
@@ -121,9 +121,9 @@ with the game, like insights on its creation, special things and whatnots - you 
 </tr></table>
 </td></tr>
 <tr>
-<td width=10 height=20><img src="/sonichq/images/borders/bottomleft.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/images/borders/bottomleft.gif" width=10 height=20></td>
 <td width=100% bgcolor=000000><font face=Arial size=-2>&nbsp;</font></td>
-<td width=10 height=20><img src="/sonichq/images/borders/bottomright.gif" width=10 height=20></td>
+<td width=10 height=20><img src="/images/borders/bottomright.gif" width=10 height=20></td>
 </tr></table>
 
 <p><p><embed autostart="true" loop="true" width=200 height=60 src=/sonichq/music/midis/s1/Labyrinthyamaha.mid><br>Labyrinth Zone
@@ -327,7 +327,7 @@ view in one spot. ^_^</center>
 <TR>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=zones.shtml#z1><u>Green Hill Zone<u></a><a name=z8>
-<p><IMG SRC="/sonichq/images/screenshots/sonic1beta/s1beta1.jpg">
+<p><IMG SRC="/images/screenshots/sonic1beta/s1beta1.jpg">
 </FONT></FONT></B></CENTER>
 </TD>
 <TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
@@ -343,7 +343,7 @@ and top that with a badnik that can only be found in the Spring Yard Zone.
 </center></TD>
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=zones.shtml#z2><u>Marble Zone<u></a><a name=z9>
-<p><IMG SRC="/sonichq/images/screenshots/sonic1beta/s1beta2.jpg">
+<p><IMG SRC="/images/screenshots/sonic1beta/s1beta2.jpg">
 </FONT></FONT></B></CENTER>
 </TD>
 </TR>
@@ -352,7 +352,7 @@ and top that with a badnik that can only be found in the Spring Yard Zone.
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=zones.shtml#z3><u>Sparkling Zone</u></a></b><a name=z10>
 <br> AKA - Spring Yard Zone
-<p><IMG SRC="/sonichq/images/screenshots/sonic1beta/s1beta3.jpg">
+<p><IMG SRC="/images/screenshots/sonic1beta/s1beta3.jpg">
 </FONT></FONT></B></CENTER>
 </TD>
 <TD><CENTER><FONT FACE="Arial" size=-1 width=60%>
@@ -369,7 +369,7 @@ It makes sense considering the bright lights of the regular Spring yard, but the
 <TD bgcolor=black><CENTER><B><FONT FACE="Arial" size=-1 color=white width=40%>
 <LI> <a href=zones.shtml#z6><u>Clock Work Zone</u></a></b><a name=z10>
 <br> AKA - Scrap Brain Zone
-<p><IMG SRC="/sonichq/images/screenshots/sonic1beta/s1beta4.jpg">
+<p><IMG SRC="/images/screenshots/sonic1beta/s1beta4.jpg">
 </FONT></FONT></B></CENTER>
 </TD>
 </TR>
