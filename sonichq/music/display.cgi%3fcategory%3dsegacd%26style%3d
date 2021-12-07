@@ -68,41 +68,34 @@ Sections</font>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=468>
 <tr><td VALIGN=TOP WIDTH=360>
-<font face=Arial,Helvetica><font color=3333FF size=+3>Sega Saturn
+<font face=Arial,Helvetica><font color=3333FF size=+3>Sega CD / Mega CD
 </font>
 <br><font size=-1>Sonic HQ - The Music Page
-<br>69 total files.</font></font></td></tr>
+<br>67 total files.</font></font></td></tr>
 
 <tr><td COLSPAN=2 WIDTH=468>
 
 <br><b><font face=Arial,Helvetica size=-1>Title list below:</font></b>
-<br><font face=Impact color=3333FF>4 Total</font>
+<br><font face=Impact color=3333FF>3 Total</font>
 <table BORDER=0 COLS=4 WIDTH=100% BGCOLOR=999999>
 
 <tr>
-<td><font face=Verdana color=FFFFFF size=-1><a href="display.cgi?category=saturn&title=sonicjam&style=">Sonic Jam</a></font></td>
-<td><font face=Verdana color=FFFFFF size=-1>(2
+<td><font face=Verdana color=FFFFFF size=-1><a href="display.cgi?category=segacd&title=soniccd_past&style=">Sonic CD "Past" Mix</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>(6
 )</font></td>
 </tr>
 
 
 <tr>
-<td><font face=Verdana color=FFFFFF size=-1><a href="display.cgi?category=saturn&title=sonicr&style=">Sonic R</a></font></td>
-<td><font face=Verdana color=FFFFFF size=-1>(28
+<td><font face=Verdana color=FFFFFF size=-1><a href="display.cgi?category=segacd&title=soniccd_segacd&style=">Sonic CD (Sega CD, PC)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>(31
 )</font></td>
 </tr>
 
 
 <tr>
-<td><font face=Verdana color=FFFFFF size=-1><a href="display.cgi?category=saturn&title=sonic3dbcd&style=">Sonic 3D Blast (CD Version)</a></font></td>
-<td><font face=Verdana color=FFFFFF size=-1>(35
-)</font></td>
-</tr>
-
-
-<tr>
-<td><font face=Verdana color=FFFFFF size=-1><a href="display.cgi?category=saturn&title=nights&style=">Nights into Dreams</a></font></td>
-<td><font face=Verdana color=FFFFFF size=-1>(4
+<td><font face=Verdana color=FFFFFF size=-1><a href="display.cgi?category=segacd&title=soniccd_megacd&style=">Sonic CD (Mega CD)</a></font></td>
+<td><font face=Verdana color=FFFFFF size=-1>(30
 )</font></td>
 </tr>
 </table>
