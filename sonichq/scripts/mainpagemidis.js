@@ -1,31 +1,31 @@
 <!--
 
 var nummidi = 187
-var midi = ("/sonichq/geocities/EnchantedForest/Dell/7835/kcasolatedislandk3.mid")
+var midi = ("/sonichq/geocities/enchantedforest/dell/7835/kcasolatedislandk3.mid")
 var caption = ("Isolated Island Zone by Koryan")
 day = new Date()
 seed = day.getTime()
 ran = parseInt(((seed - (parseInt(seed/1000,10) * 1000))/10)/100*nummidi + 1,10)
 
 if (ran==1) {
-midi="/sonichq/geocities/EnchantedForest/Dell/7835/kcasolatedislandk3.mid"
+midi="/sonichq/geocities/enchantedforest/dell/7835/kcasolatedislandk3.mid"
 caption="Sonic And Knuckles - Isolated Island Zone" }
 
-if (ran==2) { midi="/sonichq/geocities/EnchantedForest/Dell/6657/doomsday.mid"
+if (ran==2) { midi="/sonichq/geocities/enchantedforest/dell/6657/doomsday.mid"
 caption="Sonic And Knuckles - The Doomsday Zone" }
 
 if (ran==3) { midi="/sonichq/forum/twinklecircuitmid.mid"
 caption="Sonic Adventure - Twinkle Circuit" }
 
-if (ran==4) { midi="/sonichq/geocities/EnchantedForest/Dell/7835/skcskcredits.mid"
+if (ran==4) { midi="/sonichq/geocities/enchantedforest/dell/7835/skcskcredits.mid"
 caption="Sonic And Knuckles - Credit Medley" }
 
 if (ran==5){
-midi="/sonichq/geocities/EnchantedForest/Dell/7835/s3creditsek3.mid"
+midi="/sonichq/geocities/enchantedforest/dell/7835/s3creditsek3.mid"
 caption="Sonic 3 Credits by Edan Koch"}
 
 if (ran==6){
-midi="/sonichq/geocities/EnchantedForest/Dell/7835/s1starlightjr.mid"
+midi="/sonichq/geocities/enchantedforest/dell/7835/s1starlightjr.mid"
 caption="Star Light Zone by Jeff Read"}
 
 if (ran==7) midi="/sonichq/music/midis/castlevania/CV1-outoftime.mid"
@@ -34,7 +34,7 @@ if (ran==7) caption="Castlevania 1 - Out Of Time: Original Gear Tower Remix"
 if (ran==8) midi="/sonichq/forum/chalaheadchala.mid"
 if (ran==8) caption="Dragonball Z - Japanese Opening: Cha La Head Cha La"
 
-if (ran==9) midi="/sonichq/geocities/EnchantedForest/Tower/4309/mm8Tengu.mid"
+if (ran==9) midi="/sonichq/geocities/enchantedforest/tower/4309/mm8Tengu.mid"
 if (ran==9) caption="Tengu Man's Stage (Saturn Version)"
 
 if (ran==10) midi="/sonichq/music/midis/s3/IceCapZoneAct1.mid"
@@ -49,7 +49,7 @@ if (ran==12) caption="Astro Man's Stage"
 if (ran==13) midi="/sonichq/forum/BattleTheme.mid"
 if (ran==13) caption="Super Mario Kart - The Battle Theme !!!"
 
-if (ran==14) midi="/sonichq/geocities/EnchantedForest/Dell/6657/sth2g-04.mid"
+if (ran==14) midi="/sonichq/geocities/enchantedforest/dell/6657/sth2g-04.mid"
 if (ran==14) caption="Green Hills Zone - Sonic 2 Game Gear"
 
 if (ran==15) midi="/sonichq/comics/midis/xky-k-18.mid"
@@ -64,7 +64,7 @@ if (ran==17) caption="Sonic 3 - Boss Music (Enhanced)"
 if (ran==18) midi="/sonichq/forum/slayersnext.mid"
 if (ran==18) caption="The Slayers Next - Theme Song"
 
-if (ran==19) midi="https://web.archive.org/20011101000000/http://www.geocities.com/Tokyo/Flats/7107/Sounds/pioneer.mid"
+if (ran==19) midi="https://web.archive.org/20011209000000/http://www.geocities.com/Tokyo/Flats/7107/Sounds/pioneer.mid"
 if (ran==19) caption="Tenchi Muyo! In Love: The OAV Series - I Am A Pioneer!"
 
 if (ran==20) midi="/sonichq/comics/midis/s3dbfinalfightjw.mid"
@@ -73,7 +73,7 @@ if (ran==20) caption="Final Fight Zone (Sega Genesis Version)"
 if (ran==21) midi="/sonichq/comics/midis/finalfightsat.mid"
 if (ran==21) caption="Final Fight Zone (Sega Saturn Version)"
 
-if (ran==22) midi="https://web.archive.org/20011101000000/http://www.geocities.com/Tokyo/Flats/7107/Sounds/pioneer.mid"
+if (ran==22) midi="https://web.archive.org/20011209000000/http://www.geocities.com/Tokyo/Flats/7107/Sounds/pioneer.mid"
 if (ran==22) caption="Tenchi Muyo! In Love: The OAV Series - I Am A Pioneer!"
 
 if (ran==23) midi="/sonichq/comics/midis/kdl2st7.mid"
@@ -97,7 +97,7 @@ if (ran==28) caption="Super Mario Land 3 - Warioland: Take the A Train!"
 if (ran==29) midi="/sonichq/forum/Kirbyabuilding.mid"
 if (ran==29) caption="Kirby's Adventure - Butter Building Remix"
 
-if (ran==30) midi="https://web.archive.org/20011101000000/http://members.tripod.com/~blackbat2/bubw11.mid"
+if (ran==30) midi="https://web.archive.org/20011209000000/http://members.tripod.com/~blackbat2/bubw11.mid"
 if (ran==30) caption="Cheese Wheels - OF DOOM !!!!!!!"
 
 if (ran==31) midi="/sonichq/music/midis/mm/5/crystal.mid"
@@ -142,7 +142,7 @@ if (ran==43) caption="Mario RPG - Culex Battle"
 if (ran==44) midi="/sonichq/music/midis/mario/Bowserkp.mid"
 if (ran==44) caption="Mario RPG - Bowser's Keep"
 
-if (ran==45) midi="/sonichq/geocities/EnchantedForest/Tower/4309/rfastestthingek.mid"
+if (ran==45) midi="/sonichq/geocities/enchantedforest/tower/4309/rfastestthingek.mid"
 if (ran==45) caption="Saturday Morning Remix"
 
 if (ran==46) midi="/sonichq/music/midis/dkc/1/factory.mid"
@@ -151,7 +151,7 @@ if (ran==46) caption="Donkey Kong Country - Factory Remix"
 if (ran==47) midi="/sonichq/music/midis/castlevania/CV1-outoftime.mid"
 if (ran==47) caption="Castlevania 1 - Out Of Time: Original Gear Tower Remix"
 
-if (ran==48) midi="/sonichq/geocities/EnchantedForest/Tower/4309/Mmis_sfo.mid"
+if (ran==48) midi="/sonichq/geocities/enchantedforest/tower/4309/Mmis_sfo.mid"
 if (ran==48) caption="Mario Is Missing - San Fransisco Remix"
 
 if (ran==49) midi="/sonichq/music/midis/rivercity/rcr-boss.mid"
@@ -160,7 +160,7 @@ if (ran==49) caption="River City Ransom - Boss Music"
 if (ran==50) midi="/sonichq/forum/mm3-snkm.mid"
 if (ran==50) caption="Mega Man 3 - Snake Man"
 
-if (ran==51) midi="/sonichq/geocities/EnchantedForest/Dell/7835/skccredits.mid"
+if (ran==51) midi="/sonichq/geocities/enchantedforest/dell/7835/skccredits.mid"
 if (ran==51) caption="Sonic And Knuckles - Credits"
 
 if (ran==52) midi="/sonichq/music/midis/s3/IceCapZoneAct1.mid"
@@ -169,13 +169,13 @@ if (ran==52) caption="Ice Cap Zone - American Remix"
 if (ran==53) midi="/sonichq/forum/festersquest.mid"
 if (ran==53) caption="The Addams Family NES - Uncle Fester's Quest"
 
-if (ran==54) midi="/sonichq/geocities/EnchantedForest/Dell/7835/kcspeedsliderk2.mid"
+if (ran==54) midi="/sonichq/geocities/enchantedforest/dell/7835/kcspeedsliderk2.mid"
 if (ran==54) caption="Speed Slider Zone - Koryan"
 
-if (ran==55) midi="/sonichq/geocities/EnchantedForest/Dell/7835/kcmarinamadnessk.mid"
+if (ran==55) midi="/sonichq/geocities/enchantedforest/dell/7835/kcmarinamadnessk.mid"
 if (ran==55) caption="Marina Madness Zone - Koryan"
 
-if (ran==56) midi="/sonichq/geocities/EnchantedForest/Dell/7835/skclaunchbase.mid"
+if (ran==56) midi="/sonichq/geocities/enchantedforest/dell/7835/skclaunchbase.mid"
 if (ran==56) caption="Launch Base Zone - Japanese Mix"
 
 if (ran==57) midi="/sonichq/music/midis/castlevania/CV3-rising.mid"
@@ -189,7 +189,7 @@ midi="/sonichq/music/midis/mm/3/gemini2.mid"
 caption="Mega Man 3 - Gemini Man"}
 
 if (ran==60){
-midi="/sonichq/geocities/EnchantedForest/Dell/7835/skcflyingbattery.mid"
+midi="/sonichq/geocities/enchantedforest/dell/7835/skcflyingbattery.mid"
 caption="Flying Battery Zone"}
 
 if (ran==61){
@@ -197,7 +197,7 @@ midi="/sonichq/music/midis/mm/3/topman.mid"
 caption="Mega Man 3 - Top Man Remix"}
 
 if (ran==62){
-midi="/sonichq/geocities/EnchantedForest/Dell/7835/VSReturntothetoxiccaves.mid"
+midi="/sonichq/geocities/enchantedforest/dell/7835/VSReturntothetoxiccaves.mid"
 caption="Toxic Caves Remix - Jeff Read"}
 
 if (ran==63){
@@ -205,7 +205,7 @@ midi="/sonichq/music/midis/zelda/underworld.mid"
 caption="Legend Of Zelda - Underworld: Crystal Caverns Remix"}
 
 if (ran==64){
-midi="/sonichq/geocities/EnchantedForest/Dell/7835/gs1bridgejr.mid"
+midi="/sonichq/geocities/enchantedforest/dell/7835/gs1bridgejr.mid"
 caption="Bridge Zone - Sonic 1 Game Gear"}
 
 if (ran==65){
@@ -220,16 +220,16 @@ if (ran==67){
 midi="/sonichq/music/midis/sgg/underground.mid"
 caption="Underground Zone - Sonic 2 Game Gear"}
 
-if (ran == (68)) midi=("/sonichq/geocities/EnchantedForest/Tower/4309/sonicnknux.mid")
+if (ran == (68)) midi=("/sonichq/geocities/enchantedforest/tower/4309/sonicnknux.mid")
 if (ran == (68)) caption=("<br>Sonic And Knuckles - David Bulmer")
 
-if (ran == (69)) midi=("/sonichq/geocities/EnchantedForest/Dell/7835/skcskysanctuary.mid")
+if (ran == (69)) midi=("/sonichq/geocities/enchantedforest/dell/7835/skcskysanctuary.mid")
 if (ran == (69)) caption=("<br>Sky Sanctuary Zone")
 
-if (ran == (70)) midi=("/sonichq/geocities/EnchantedForest/Dell/7835/skcspecial.mid")
+if (ran == (70)) midi=("/sonichq/geocities/enchantedforest/dell/7835/skcspecial.mid")
 if (ran == (70)) caption=("<br>Sonic 3 - Special Zone")
 
-if (ran == (71)) midi=("/sonichq/geocities/EnchantedForest/Dell/7835/s2specialk.mid")
+if (ran == (71)) midi=("/sonichq/geocities/enchantedforest/dell/7835/s2specialk.mid")
 if (ran == (71)) caption=("<br>Sonic 2 - Special Zone")
 
 if (ran == (72)) midi=("/sonichq/music/midis/s1/Labyrinthyamaha.mid")
@@ -241,7 +241,7 @@ if (ran == (73)) caption=("<br>Marble Zone")
 if (ran == (74)) midi=("/sonichq/music/midis/s2/sth2btb.mid")
 if (ran == (74)) caption=("<br>Boss The Boss Remix - J.D. Harding")
 
-if (ran == (75)) midi=("/sonichq/geocities/EnchantedForest/Dell/7835/sraresortislandjj.mid")
+if (ran == (75)) midi=("/sonichq/geocities/enchantedforest/dell/7835/sraresortislandjj.mid")
 if (ran == (75)) caption=("<br>Resort Island Zone")
 
 if (ran == (76)) midi=("/sonichq/music/midis/mm/3/topman.mid")
@@ -388,16 +388,16 @@ if (ran == (122)) caption=("<br>They Call Me Sonic!")
 if (ran == (122)) midi=("/sonichq/music/midis/segasonic/tcmsonic.mid")
 if (ran == (122)) caption=("<br>They Call Me Sonic!")
 
-if (ran == (123)) midi=("https://web.archive.org/20011101000000/http://www.geocities.com/EnchantedForest/Glade/8862/Gravityman.mid")
+if (ran == (123)) midi=("https://web.archive.org/20011209000000/http://www.geocities.com/EnchantedForest/Glade/8862/Gravityman.mid")
 if (ran == (123)) caption=("<br>Gravity Man - Echo Remix")
 
-if (ran == (124)) midi=("/sonichq/geocities/EnchantedForest/Tower/4309/Gravityman2.mid")
+if (ran == (124)) midi=("/sonichq/geocities/enchantedforest/tower/4309/Gravityman2.mid")
 if (ran == (124)) caption=("<br>Gravity Man - Beat Remix")
 
 if (ran == (125)) midi=("/sonichq/comics/midis/gravitytechno.mid")
 if (ran == (125)) caption=("<br>Gravity Man - Techno Remix")
 
-if (ran == (126)) midi=("/sonichq/geocities/EnchantedForest/Tower/4309/starlight.mid")
+if (ran == (126)) midi=("/sonichq/geocities/enchantedforest/tower/4309/starlight.mid")
 if (ran == (126)) caption=("<br>Sonic 1 - Star Light Zone")
 
 if (ran == (127)) midi=("/sonichq/comics/midis/c2-st2.mid")
@@ -412,31 +412,31 @@ if (ran == (129)) caption=("<br>Sonic CD - Tidal Tempest Zone (Bad Future)")
 if (ran == (130)) midi=("/sonichq/comics/midis/dark2.mid")
 if (ran == (130)) caption=("<br>Final Fantasy - Dark City")
 
-if (ran == (131)) midi=("/sonichq/geocities/EnchantedForest/Dell/7835/skccredits.mid")
+if (ran == (131)) midi=("/sonichq/geocities/enchantedforest/dell/7835/skccredits.mid")
 if (ran == (131)) caption=("<br>Sonic And Knuckles - Credits")
 
-if (ran == (132)) midi=("/sonichq/geocities/EnchantedForest/Dell/7835/skcballoonpark.mid")
+if (ran == (132)) midi=("/sonichq/geocities/enchantedforest/dell/7835/skcballoonpark.mid")
 if (ran == (132)) caption=("<br>Sonic And Knuckles - Balloon Park Zone")
 
-if (ran == (133)) midi=("/sonichq/geocities/EnchantedForest/Dell/7835/skcballoonpark.mid")
+if (ran == (133)) midi=("/sonichq/geocities/enchantedforest/dell/7835/skcballoonpark.mid")
 if (ran == (133)) caption=("<br>Sonic And Knuckles - Balloon Park Zone")
 
-if (ran == (134)) midi=("/sonichq/geocities/EnchantedForest/Dell/7835/skcballoonpark.mid")
+if (ran == (134)) midi=("/sonichq/geocities/enchantedforest/dell/7835/skcballoonpark.mid")
 if (ran == (134)) caption=("<br>Sonic And Knuckles - Balloon Park Zone")
 
-if (ran == (135)) midi=("/sonichq/geocities/EnchantedForest/Dell/7835/skcballoonpark.mid")
+if (ran == (135)) midi=("/sonichq/geocities/enchantedforest/dell/7835/skcballoonpark.mid")
 if (ran == (135)) caption=("<br>Sonic And Knuckles - Balloon Park Zone")
 
-if (ran == (136)) midi=("/sonichq/geocities/EnchantedForest/Dell/7835/skcballoonpark.mid")
+if (ran == (136)) midi=("/sonichq/geocities/enchantedforest/dell/7835/skcballoonpark.mid")
 if (ran == (136)) caption=("<br>Sonic And Knuckles - Balloon Park Zone")
 
-if (ran == (137)) midi=("/sonichq/geocities/EnchantedForest/Dell/7835/skcballoonpark.mid")
+if (ran == (137)) midi=("/sonichq/geocities/enchantedforest/dell/7835/skcballoonpark.mid")
 if (ran == (137)) caption=("<br>Sonic And Knuckles - Balloon Park Zone")
 
 if (ran == (138)) midi=("/sonichq/comics/midis/TwinklePark1.mid")
 if (ran == (138)) caption=("<br>Sonic Adventure - Twinkle Park Zone (Panic Puppet Remix)")
 
-if (ran == (139)) midi=("/sonichq/geocities/EnchantedForest/Dell/7835/skcs3finalboss.mid")
+if (ran == (139)) midi=("/sonichq/geocities/enchantedforest/dell/7835/skcs3finalboss.mid")
 if (ran == (139)) caption=("<br>Sonic 3 - Death Egg Launch")
 
 if (ran == (140)) midi=("/sonichq/music/midis/sjmuseum.mid")
@@ -445,10 +445,10 @@ if (ran == (140)) caption=("<br>Sonic Jam Museum")
 if (ran == (150)) midi=("/sonichq/music/midis/sjmuseum.mid")
 if (ran == (150)) caption=("<br>Sonic Jam Museum")
 
-if (ran == (151)) midi=("/sonichq/geocities/EnchantedForest/Dell/7835/smcdpalmtreepanicpk.mid")
+if (ran == (151)) midi=("/sonichq/geocities/enchantedforest/dell/7835/smcdpalmtreepanicpk.mid")
 if (ran == (151)) caption=("<br>Sonic CD - Palmtree Panic Zone (Past Mix)")
 
-if (ran == (152)) midi=("/sonichq/geocities/EnchantedForest/Dell/7835/smcdpalmtreepanicpk.mid")
+if (ran == (152)) midi=("/sonichq/geocities/enchantedforest/dell/7835/smcdpalmtreepanicpk.mid")
 if (ran == (152)) caption=("<br>Sonic CD - Palmtree Panic Zone (Past Mix)")
 
 if (ran == (153)) midi=("/sonichq/comics/midis/mm3spark.mid")
@@ -493,7 +493,7 @@ if (ran == (165)) caption=("<br>Sonic and Knuckles Competition - Azure Lake Zone
 if (ran == (166)) midi=("/sonichq/music/midis/s3/azure.mid")
 if (ran == (166)) caption=("<br>Sonic and Knuckles Competition - Azure Lake Zone")
 
-if (ran == (167)) midi=("/sonichq/geocities/EnchantedForest/Dell/7835/sraresortislandjj.mid")
+if (ran == (167)) midi=("/sonichq/geocities/enchantedforest/dell/7835/sraresortislandjj.mid")
 if (ran == (167)) caption=("<br>Resort Island Zone")
 
 if (ran == (168)) midi=("/sonichq/music/midis/castlevania/CV3-rising.mid")

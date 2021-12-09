@@ -6,12 +6,12 @@
 <!--a:hover { color: #ffffff} -->
 </style>
 </head>
-<body bgcolor="#000000" TEXT="#ffffff" LINK="#ffcc00" VLINK="#ffffcc" ALINK="#ffffcc" background="http://www.sonichq.org/comics/images/SKLogobw.jpg" bgproperties=fixed>
+<body bgcolor="#000000" TEXT="#ffffff" LINK="#ffcc00" VLINK="#ffffcc" ALINK="#ffffcc" background="/sonichq/comics/images/SKLogobw.jpg" bgproperties=fixed>
 
 </text>
 <fontcolor="#e5e5e5">
 
-<TABLE ALIGN=CENTER BORDER=3 CELLSPACING=2 width=80% bordercolor=ffcc00 background="http://www.sonichq.org/images/backgrounds/sasonicbg.gif">
+<TABLE ALIGN=CENTER BORDER=3 CELLSPACING=2 width=80% bordercolor=ffcc00 background="/sonichq/images/backgrounds/sasonicbg.gif">
 <TR ALIGN=CENTER bgcolor=black><TD bgcolor=black colspan=2>
 <img src=26.gif align=left>
 <img src=gallery.jpg align=right>
@@ -26,7 +26,7 @@
           to Comics Scans</font></a></b></font></div>
       </td>
 <td bgcolor="#2B0000" height="28" width="200"> 
-        <div align="center"><font face="Arial, Helvetica, sans-serif"><b><a href="http://www.sonichq.org/images/gallery.html"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Back 
+        <div align="center"><font face="Arial, Helvetica, sans-serif"><b><a href="/sonichq/images/gallery.html"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Back 
           to Downloads</font></a></b></font></div>
       </td>
       <td bgcolor="#2B0000" height="28" width="200"> 
@@ -281,12 +281,12 @@
 <tr><td align=center BORDER=0>
 <B><font face="Arial" size=2><img src="images/emeraldicon.gif"><A HREF="images/whistle.jpg"> Give A Little Whistle! --- Sonic #49</a><br>
 </td><td align=center BORDER=0>
-<B><font face="Arial" size=2><img src="images/emeraldicon.gif"><A HREF="http://www.kenpenders.com/sonic/sss6al.jpg"> Test Subject: Overlander... --- Sonic #50: The Directors Cut</a><br>
+<B><font face="Arial" size=2><img src="images/emeraldicon.gif"><A HREF="https://web.archive.org/20011209000000/http://www.kenpenders.com/sonic/sss6al.jpg"> Test Subject: Overlander... --- Sonic #50: The Directors Cut</a><br>
 </td></tr>
 
 
 <tr><td align=center BORDER=0>
-<B><font face="Arial" size=2><img src="images/emeraldicon.gif"><A HREF="http://www.kenpenders.com/sonic/sss6bl.jpg"> Attack On Crocbot! --- Sonic #50: The Directors Cut</a><br>
+<B><font face="Arial" size=2><img src="images/emeraldicon.gif"><A HREF="https://web.archive.org/20011209000000/http://www.kenpenders.com/sonic/sss6bl.jpg"> Attack On Crocbot! --- Sonic #50: The Directors Cut</a><br>
 </td><td align=center BORDER=0>
 <B><font face="Arial" size=2><img src="images/emeraldicon.gif"><A HREF="images/slap.jpg"> Hell Hath No Fury --- Sonic #50: the Directors Cut</a><br>
 </td></tr>
@@ -300,7 +300,7 @@
 
 
 <tr><td align=center BORDER=0>
-<B><font face="Arial" size=2><img src="images/emeraldicon.gif"><A HREF="http://www.kenpenders.com/sonic/sss6cl.jpg">The Last Confrontation --- Sonic #50: the Directors Cut</a><br>
+<B><font face="Arial" size=2><img src="images/emeraldicon.gif"><A HREF="https://web.archive.org/20011209000000/http://www.kenpenders.com/sonic/sss6cl.jpg">The Last Confrontation --- Sonic #50: the Directors Cut</a><br>
 </td><td align=center BORDER=0>
 <B><font face="Arial" size=2><img src="images/emeraldicon.gif"><A HREF="images/sonrobgb.jpg"> The Final Battle --- Sonic #50: the Directors Cut</a><br>
 </td></tr>
@@ -370,7 +370,7 @@
 
 
 <tr><td align=center BORDER=0>
-<B><font face="Arial" size=2> <img src="images/emeraldicon.gif"> <A HREF="http://www.kenpenders.com/sonic/sss7bl.jpg">Particle Beam! --- Sonic Super Special #7</a><br>
+<B><font face="Arial" size=2> <img src="images/emeraldicon.gif"> <A HREF="https://web.archive.org/20011209000000/http://www.kenpenders.com/sonic/sss7bl.jpg">Particle Beam! --- Sonic Super Special #7</a><br>
 </td><td align=center BORDER=0>
 <B><font face="Arial" size=2> <img src="images/emeraldicon.gif"> <A HREF="images/platform.jpg">Mobius World Tour: The Hand That Rocked The World! --- Sonic #62</a><br>
 </td></tr>
