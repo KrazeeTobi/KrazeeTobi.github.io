@@ -37,7 +37,7 @@ document.write('<link rel=stylesheet href=/sonichq/megaman/css/' + theme + '.css
 document.write(titlepic)
 //-->
 </script>
-<img src=0gif align=right></td>
+<img src=/sonichq/fanfair/topbar-title.gif align=right></td>
 
 <td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>

@@ -56,37 +56,37 @@ document.write(titlepic + titlelogo)
 
 <!sections>
 <div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011111000000/http://www.ibis-research.com/MM/ target=_blank>Mega Man Home Page</a>
+<a href=https://web.archive.org/20011210000000/http://www.ibis-research.com/MM/ target=_blank>Mega Man Home Page</a>
 </table></div>
 
 <div class=itemtext>
 The original and still the best, the Mebga an Home Page literally founded the Mega Man internet.  The great Mandi Paugh, a DigiPen grad, runs this page, and it's one of the more often updated Mega Man pages.  It features tons of information, Mandi Paugh's Mega Man book series, superb fan art, a good amount of editorializing, and the Mega Grams.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011111000000/http://www.protoman.com/ target=_blank>The Protoman Homepage</a>
+<a href=https://web.archive.org/20011210000000/http://www.protoman.com/ target=_blank>The Protoman Homepage</a>
 </table></div>
 
 <div class=itemtext>
 One of the first big MM sites, the Protoman HomePage features reviews, MODs, fan stuff, and some pretty hilarious sprite humor.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011111000000/http://members.tripod.com/~Maelgrim/Rockman.html target=_blank>Rockman's World</a>
+<a href=https://web.archive.org/20011210000000/http://members.tripod.com/~Maelgrim/Rockman.html target=_blank>Rockman's World</a>
 </table></div>
 
 <div class=itemtext>
 Owned and operated by Maelgrim, the great MM MIDI composer.  It's a very extensive site.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011111000000/http://www.rockmanrobotcentre.8m.com/ target=_blank>Auto's Rockman Robot Centre</a>
+<a href=https://web.archive.org/20011210000000/http://www.rockmanrobotcentre.8m.com/ target=_blank>Auto's Rockman Robot Centre</a>
 </table></div>
 
 <div class=itemtext>
 This is a large, great-looking site, although the navigation can be very confusing.  Here's a hint: the first page is not the main index - the teleportation room is.  There are some pages under construction in the Robot Centre that sound very impressive.  The site features news, a picture gallery, and informatiion, although its main attraction is the collection of custom sprites by Auto.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011111000000/http://www.kontek.net/m3a/ target=_blank>M3A - Mega Man MOD Archives</a>
+<a href=https://web.archive.org/20011210000000/http://www.kontek.net/m3a/ target=_blank>M3A - Mega Man MOD Archives</a>
 </table></div>
 
 <div class=itemtext>
 Hundreds of MOD-format Mega Man music files.<p>
 </div><div class=titlebar><table class=glow>
-<a href=https://web.archive.org/20011111000000/http://www.geocities.com/TimesSquare/Arcade/1717/ target=_blank>The Unique Mega Man Home Page</a>
+<a href=https://web.archive.org/20011210000000/http://www.geocities.com/TimesSquare/Arcade/1717/ target=_blank>The Unique Mega Man Home Page</a>
 </table></div>
 
 <div class=itemtext>
