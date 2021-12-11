@@ -16,15 +16,14 @@ A{text-decoration:none} -->
 <br>
 
 <center>
-<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
-MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
-</SCRIPT>
-<NOSCRIPT>
-<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank" HEIGHT="60" WIDTH="468"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y"></A>
-</NOSCRIPT>
-</IFRAME>
-</center>
+<!-- Place the following code where you want an ad to appear -->
+<IFRAME SRC="https://web.archive.org/20011211000000/http://ads.ad-flow.com/?DC=ztnet-ron-top&DH=Y&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
+<ILAYER SRC="https://web.archive.org/20011211000000/http://ads.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank&DH=Y" HEIGHT="60" WIDTH="468">
+</ILAYER>
+<NOLAYER>
+<A HREF="https://web.archive.org/20011211000000/http://ads.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011211000000/http://ads.ad-flow.com/?SIT=ztnet-ron-top" HEIGHT="60" WIDTH="468"></A>
+</NOLAYER>
+</IFRAME></center>
 
 <p><span class=pathlinks><table class=glow>
 <a href=/sonichq/>Sonic HQ</a> | <a href=/sonichq/games/>Gaming Info</a> | <a href=/sonichq/games/index/>Game List</a> | Sonic Adventure 2 - Sega Dreamcast</table></span>
@@ -163,7 +162,7 @@ alt="Sonic Adventure 2"></center>
 
 <div class=itemtext>SA2 features a REALLY NICE tutorial available in the "Extra" menu at the main screen, and the background music is excellent, so I'd suggest using that.  I'm going to concentrate on errata & notes for basic moves & undocumented advanced moves on this page.<br><br></div><div class=titlebar>Basic Moves</div>
 
-<div class=itemtext><p><b>All</b>
+<div class=itemtext><b>All</b>
 <li>Jump - Press A.
 <li>Action Menu - Press Y to change the current command on the "B" menu at the top of the screen.  The single biggest design issue in SA2 is the messed-up handling of the action menu.  There is a spiffy delayed slide-in effect on the menu.  Unfortunately, when you have to do something fast, this means that you can't be 100% sure the X/B button will do what you want unless you wait for the menu to slide out, and in many cases you have to do the move before it does so.  This is especially annoying when you need to light dash while running or in the air and when you're in the Chao Garden.
 <li>Pick - Press X/B near an object.  You can be sure you'll pick up the object when "Pick" is on the action menu.  Objects that you can pick up depend on the stage you're in and tend to be very small.  Some objects have hidden animals under them that you can collect by picking up the ohject.  Pick, Put, Hold , and Throw are all void when Tails and Eggman are in their mechs.
@@ -207,13 +206,19 @@ alt="Sonic Adventure 2"></center>
 <li>Extreme! (Magenta) - 1500 Points
 <li>Perfect! (Rainbow) - 2000 Points<br><br></div><div class=titlebar>Tricks & Advanced Moves - Sonic / Shadow</div>
 
-<div class=itemtext><!-- You can add to your score
+<div class=itemtext>You can add to your score in 2 ways - defeating enemies especially in a sequence) & using objects.  You really have to know the stage well to get all the object bonu8ses, but there are certain things to look out for.  A emblem scores for Sonic & Shadow range from 10,000 to 25,000, approximately.
 
-<li><b>Ramps</b> - City Escape-->Under Construction<br><br></div><div class=titlebar>Tricks & Advanced Moves - Tails / Eggman</div>
+<p><li><b>Optional Objects</b> - Everywhere - You can sometimes get bonuses by using objecyts that you don't have to use to finish the stage, but will involve a lot of style to use properly.  Examples include optional grinding rails just about anywhere (you frequently have to grind at high speed to get the full bonus, so crouch).  Another example is the bomb item monitor in Crazy Gadget, which will get you a "Cool" bonus if you get it or get close to it by bouncing off a floating spring enemy.  Jumping on 3 ramps in succession and landing on the 3-spring battery in a certain area f City Escape will get a "Tight" bonus.  Grabbing the high handle on the rocket in Metal Harbor instead of the low one will get you an "Extreme" bonus.  You can get a bonus by going through or even touching the 3rd in the sequence of 3 closing doors in Pyramid Cave.
+<li><b>Ramps</b> - City Escape & Radical Highway - Press A while running on a ramp.  Depending on which ramp you use and how you use it, you can get a "Nice," "Cool," or "Awesome" bonus.  Normal ramps always seem to give a "Nice," but when Sonic is on the "snowboard," hitting a ramp at high seed will give a "Cool" and hitting it at high speed and turning while jumping will give a "Awesome."
+<li><b>Jumping Rails</b> - Final Rush & Sky Rail - Rails that have an upward bump at the end will give you a bonus and launch you in the air if you jump at that bump.  It seems that you must land on ground and not another rail to get the bonus.  At high speeds you get an "Awesome" bonus.  In Final Rush, such rails are marked with a glowing green X.  In Sky Rail, the first rail works that way and I believe there's 1 other rail with a bonus too.<br><br></div><div class=titlebar>Tricks & Advanced Moves - Tails / Eggman</div>
 
-<div class=itemtext>Under Construction<br><br></div><div class=titlebar>Tricks & Advanced Moves - Knuckles / Rouge</div>
+<div class=itemtext>All bonus scoring for Tails & Eggman seems to be based on enemies, but obviously, they can get some very large enemy bonuses.  Be sure to target all bombs on a bomb robot and try moving around nnd holding the laser to include enemies i multiple rooms in the same bonus.  Note that getting hit while firing will cancel your bonus.  Bomb packs on posts count as enemies too.  A emblem scores for Tails & Eggman range from 20,000 to 50,000, approximately.
 
-<div class=itemtext>Under Construction<br><br></div></font></td></tr></table>
+<p><li><b>Propeller Dash</b> - Tails Only - Chao Garden - A cool quirk about Tails' flying in the Chao Garden is that he can hover more than once.  Release the hover and quickly enter the command to hover.  Tails will have a "forward" animation as long as you keep pushing in a direction.  It looks like he's using his tails to go forward, like when he's running.  Useless but interesting.<br><br></div><div class=titlebar>Tricks & Advanced Moves - Knuckles / Rouge</div>
+
+<div class=itemtext>You can get bonuses from enemies and getting emeralds.  The emerald bonus is based on the timer and how many hints you use.  A emblem scores for Knuckles & Rouge range from 10,000 to 15,000, approximately.
+
+<p><li><b>Spiral Upprt / Screw Kick</b> - Have you noticed that certain areas of Rouge's stages seem to be just barely out of jumping range?  Well, there's an undocumented move that lets you reach them.  Rotate the Control Stick and it will appear on the Action Menu, just press X/B.  Use this to get the 1-UP in Dry Lagoon, as 1 example.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>
 <td><img SRC=/sonichq/bottomleft.gif BORDER=0 height=20></td>

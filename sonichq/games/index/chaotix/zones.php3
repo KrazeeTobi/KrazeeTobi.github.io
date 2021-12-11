@@ -12,11 +12,20 @@ A{text-decoration:none} -->
 </head>
 
 <body text="#000000" bgcolor="white" link=blue vlink=blue background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
-&nbsp;
 
 <br>
 
-<span class=pathlinks><table class=glow>
+<center>
+<!-- Place the following code where you want an ad to appear -->
+<IFRAME SRC="https://web.archive.org/20011211000000/http://ads.ad-flow.com/?DC=ztnet-ron-top&DH=Y&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
+<ILAYER SRC="https://web.archive.org/20011211000000/http://ads.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank&DH=Y" HEIGHT="60" WIDTH="468">
+</ILAYER>
+<NOLAYER>
+<A HREF="https://web.archive.org/20011211000000/http://ads.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011211000000/http://ads.ad-flow.com/?SIT=ztnet-ron-top" HEIGHT="60" WIDTH="468"></A>
+</NOLAYER>
+</IFRAME></center>
+
+<p><span class=pathlinks><table class=glow>
 <a href=../../../>Sonic HQ</a> | <a href=../../>Gaming Info</a> | <a href=../>Game List</a> | Knuckles' Chaotix - Sega 32X / Super 32X</table></span>
 
 <center>
@@ -112,7 +121,7 @@ Other Pages
 </table></div>
 
 <div class=itemtext>
-<table align=right border=0><td><embed src="https://web.archive.org/20011101000000/http://www.geocities.com/EnchantedForest/Glade/8862/isolatedisland.mid" height=25 width=50 autostart="true" loop="true"></td><td width=5>&nbsp;</td></table>
+<table align=right border=0><td><embed src="https://web.archive.org/20011211000000/http://www.geocities.com/EnchantedForest/Glade/8862/isolatedisland.mid" height=25 width=50 autostart="true" loop="true"></td><td width=5>&nbsp;</td></table>
 <center>[<a href=/sonichq/music/display.cgi?category=32x&title=chaotix>Music</a> | <a href=info.shtml>Original Emuzone Page</a> | <a href=/sonichq/geocities/EnchantedForest/Dell/6657/KnucklesChaotix.html>Geocities Page</a>]</center>
 <br><br></div><!end of sections>
 
@@ -122,7 +131,7 @@ Other Pages
 <td width=4>&nbsp;</td>
 <td valign=top bgcolor=000000 class=sidebar><font face=Arial size=-1 color=white><br>
 
-<center><img src=/sonichq/geocities/EnchantedForest/Dell/6657/32chaobox.gif alt="Knuckles' Chaotix"></center>
+<center><img src=/sonichq/images/screenshots/knuckleschaotix/32chaobox.gif alt="Knuckles' Chaotix"></center>
 </font></td></tr>
 </table>
 <!end main table middle>
@@ -137,7 +146,7 @@ Other Pages
 
 <div id=table0 align=center>
 
-<a name=anchor0><p><img src=/sonichq/geocities/EnchantedForest/Dell/7834/bluebar.jpg><p></a>
+<a name=anchor0><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
 <td><img src=/sonichq/images/borders/topleft.gif></td>
@@ -161,7 +170,7 @@ Other Pages
 
 </div><div id=table1 align=center>
 
-<a name=anchor1><p><img src=/sonichq/geocities/EnchantedForest/Dell/7834/bluebar.jpg><p></a>
+<a name=anchor1><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
 <td><img src=/sonichq/images/borders/topleft.gif></td>
@@ -185,7 +194,7 @@ Other Pages
 
 </div><div id=table2 align=center>
 
-<a name=anchor2><p><img src=/sonichq/geocities/EnchantedForest/Dell/7834/bluebar.jpg><p></a>
+<a name=anchor2><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
 <td><img src=/sonichq/images/borders/topleft.gif></td>
@@ -209,7 +218,7 @@ Other Pages
 
 </div><div id=table3 align=center>
 
-<a name=anchor3><p><img src=/sonichq/geocities/EnchantedForest/Dell/7834/bluebar.jpg><p></a>
+<a name=anchor3><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
 <td><img src=/sonichq/images/borders/topleft.gif></td>
@@ -233,7 +242,7 @@ Other Pages
 
 </div><div id=table4 align=center>
 
-<a name=anchor4><p><img src=/sonichq/geocities/EnchantedForest/Dell/7834/bluebar.jpg><p></a>
+<a name=anchor4><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
 <td><img src=/sonichq/images/borders/topleft.gif></td>
@@ -257,7 +266,7 @@ Other Pages
 
 </div><div id=table5 align=center>
 
-<a name=anchor5><p><img src=/sonichq/geocities/EnchantedForest/Dell/7834/bluebar.jpg><p></a>
+<a name=anchor5><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
 <td><img src=/sonichq/images/borders/topleft.gif></td>
@@ -281,7 +290,7 @@ Other Pages
 
 </div><div id=table6 align=center>
 
-<a name=anchor6><p><img src=/sonichq/geocities/EnchantedForest/Dell/7834/bluebar.jpg><p></a>
+<a name=anchor6><p><img src=/sonichq/images/borders/bluebar.jpg><p></a>
 
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=70% height=20><tr>
 <td><img src=/sonichq/images/borders/topleft.gif></td>
@@ -295,7 +304,7 @@ Other Pages
 <td VALIGN=TOP bgcolor=ffffff class=itemtable>
 <font face=Arial size=-1 color=black><div class=titlebar>Off The Wall</div>
 
-<div class=itemtext><center><br><img src=/sonichq/geocities/EnchantedForest/Dell/6657/32chaoscr2.gif></center>
+<div class=itemtext><center><br><img src=/sonichq/images/screenshots/knuckleschaotix/32chaoscr2.gif></center>
 <p>You're thrown into the inside of a giant, five-sided tube, where each wall thinks it's the center of gravity. Bright colors create a hypnotizing world, where the object is to collect enough Blue Spheres before reaching the goal.<br><br></div></font></td></tr></table>
 
 <table border=0 cellspacing=0 cellpadding=0 width=70%><tr>

@@ -1,8 +1,9 @@
 <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
 <html>
 <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-   <title>Design HQ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Design HQ</title>
+<LINK REL="SHORTCUT ICON" HREF="favicon.ico">
 <style type="text/css">
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
@@ -23,15 +24,14 @@ document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="t
 <br>
 
 <center>
-<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
-MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
-</SCRIPT>
-<NOSCRIPT>
-<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank" HEIGHT="60" WIDTH="468"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y"></A>
-</NOSCRIPT>
-</IFRAME>
-</center>
+<!-- Place the following code where you want an ad to appear -->
+<IFRAME SRC="https://web.archive.org/20011211000000/http://ads.ad-flow.com/?DC=ztnet-ron-top&DH=Y&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
+<ILAYER SRC="https://web.archive.org/20011211000000/http://ads.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank&DH=Y" HEIGHT="60" WIDTH="468">
+</ILAYER>
+<NOLAYER>
+<A HREF="https://web.archive.org/20011211000000/http://ads.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011211000000/http://ads.ad-flow.com/?SIT=ztnet-ron-top" HEIGHT="60" WIDTH="468"></A>
+</NOLAYER>
+</IFRAME></center>
 
 <p><span class=pathlinks><table class=glow>
 <a href=/sonichq/design>Design HQ</a> | <a href=/sonichq/design/ezboard>EZBoard Customization</a> | Style Sheets For Admins</table></span>
@@ -63,7 +63,7 @@ document.write(titlepic + titlelogo)
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><tr>
 
 <td VALIGN=TOP WIDTH="70%" bgcolor=ffffff class=itemtable>
-<font face=Arial size=-1 color=black>
+<font face=Arial size=2 class=itemtable>
 
 <!sections>
 <div class=titlebar><table class=glow>
@@ -107,7 +107,7 @@ To make individual text glow, use this technique.  The default color is red, and
 </table></div>
 
 <div class=itemtext>
-To see this code in-browser, click  <a href=https://web.archive.org/20011101000000/http://pub12.ezboard.com/bsonichqcommunity>here</a>.  This code customizes buttons, checkboxes, and the drop-box menus used for EZRings and the Jump To Forum box.  "Input" contains properties for the buttons and checkboxes, and "select"  contains properties for the combo boxes.<p>"Color", "font-family", and "font-size" control text, "background-color" controls the colors of the buttons and boxes themselves, "vertical-align:middle" vertically centers the text on the buttons and boxes, "margin-left" puts space between the buttons and the boxes on the EZRing and Jump To Forum menus, and the border settings put a shaded border around the buttons.<p><textarea rows=10 cols=40><style>
+To see this code in-browser, click  <a href=https://web.archive.org/20011211000000/http://pub12.ezboard.com/bsonichqcommunity>here</a>.  This code customizes buttons, checkboxes, and the drop-box menus used for EZRings and the Jump To Forum box.  "Input" contains properties for the buttons and checkboxes, and "select"  contains properties for the combo boxes.<p>"Color", "font-family", and "font-size" control text, "background-color" controls the colors of the buttons and boxes themselves, "vertical-align:middle" vertically centers the text on the buttons and boxes, "margin-left" puts space between the buttons and the boxes on the EZRing and Jump To Forum menus, and the border settings put a shaded border around the buttons.<p><textarea rows=10 cols=40><style>
 input {
 color:#ffffff;
 font-family:verdana,arial,helvetica,sans-serif;
@@ -146,6 +146,14 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 </script>
 
 <u>Style Sheets For Admins</u><p>Styles generally take effect on page elements that ppear below them on the page, so you should probably put most styles in your custom header unless otherwise noted.
+<p><center><IFRAME SRC="https://web.archive.org/20011211000000/http://ads1.ad-flow.com/?DC=ztnet-ron-rst&TARGET=_blank" HEIGHT="125" WIDTH="125" SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
+<SCRIPT LANGUAGE="JavaScript">document.write('<SCR'+'IPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011211000000/http://ads1.ad-flow.com/?DC=ztnet-ron-rst&JS=Y&TARGET=_blank"></SCR'+'IPT>');</SCRIPT>
+<NOSCRIPT>
+<A HREF="https://web.archive.org/20011211000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-rst" TARGET="_blank"><IMG SRC="https://web.archive.org/20011211000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-rst" HEIGHT="125" WIDTH="125"></A>
+</NOSCRIPT>
+</IFRAME>
+</center>
+
 </font></td></tr>
 </table>
 <!end main table middle>
@@ -153,7 +161,7 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
 <td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
-<td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
+<td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2001 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
 <td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>

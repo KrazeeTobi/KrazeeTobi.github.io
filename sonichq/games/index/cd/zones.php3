@@ -16,24 +16,14 @@ A{text-decoration:none} -->
 <br>
 
 <center>
-<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
-MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
-</SCRIPT>
-<NOSCRIPT>
-<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
-</NOSCRIPT>
-</IFRAME>
-<!-- GOCLICK.COM POP-UNDER CODE V1 -->
-<script language="Javascript"> <!--
-var dd=document; dd.cookie='ct=1; path=/sonichq/';
-if ((dd.cookie.length > 0 && (dd.cookie.indexOf('ush=1') <= 0))) {
-dd.write('<scri'+'pt language="javascript" '+
-'src="https://web.archive.org/20011101000000/http://earth.goclick.com/pad2.mod?V=1&AID=6857&'+
-'SEARCH=web%20hosting"></scri'+'pt>');
-dd.cookie='push=1; path=/sonichq/'; }
-// --></script>
-<!-- END OF POP-UNDER CODE --></center>
+<!-- Place the following code where you want an ad to appear -->
+<IFRAME SRC="https://web.archive.org/20011211000000/http://ads.ad-flow.com/?DC=ztnet-ron-top&DH=Y&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
+<ILAYER SRC="https://web.archive.org/20011211000000/http://ads.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank&DH=Y" HEIGHT="60" WIDTH="468">
+</ILAYER>
+<NOLAYER>
+<A HREF="https://web.archive.org/20011211000000/http://ads.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011211000000/http://ads.ad-flow.com/?SIT=ztnet-ron-top" HEIGHT="60" WIDTH="468"></A>
+</NOLAYER>
+</IFRAME></center>
 
 <p><span class=pathlinks><table class=glow>
 <a href=../../../>Sonic HQ</a> | <a href=../../>Gaming Info</a> | <a href=../>Game List</a> | Sonic the Hedgehog CD - Sega CD/Mega CD, PC</table></span>
