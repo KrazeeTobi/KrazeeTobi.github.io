@@ -74,7 +74,7 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 <br>
 Welcome to the best Sonic news source on the net!  This page will generally be updated everyday.  As a rule, you must give us a link credit if you want to take news reported by us.
 
-<p><b>Click <a href2=http://pub12.ezboard.com/fsonichqcommunitystationsquarenewsandeditorials href=edititem.cgi?id=new&series=sonic>here</a> to post your own news, rumors, and links to points of interest and we'll copy it to the news page if it checks out!</b>
+<p><b>Click <a href2=https://web.archive.org/20011217000000/http://pub12.ezboard.com/fsonichqcommunitystationsquarenewsandeditorials href=edititem.cgi?id=new&series=sonic>here</a> to post your own news, rumors, and links to points of interest and we'll copy it to the news page if it checks out!</b>
 
 <p><b>SHQ News Editors</b>
 
@@ -84,7 +84,7 @@ Welcome to the best Sonic news source on the net!  This page will generally be u
 <a href="editorials"><img src="/sonichq/news/images/3.gif" border=0></a><br>
 <a href="survey"><img src="/sonichq/news/poll.jpg" border=0></a><br>
 <img src="/sonichq/news/images/translate.gif" border=0><br>
-<FORM ACTION='http://www.onlinetrans.com/link.cgi' METHOD=POST>
+<FORM ACTION='https://web.archive.org/20011217000000/http://www.onlinetrans.com/link.cgi' METHOD=POST>
 <INPUT TYPE=SUBMIT VALUE='Translate to'> 
 <input name=partner value=SystranSoft TYPE=hidden>
 <input name=urltext value='/sonichq/news/news.htm' TYPE=hidden>
@@ -108,7 +108,7 @@ Important news is colored in <font color=red>red</font>!<br>
 <hr>
 <font color=red>Charles Bellfield has confirmed the existance of a joint Nintendo/Sega project that may be in the form of an RPG</font>. Other than the fact that it exists, nothing else (such as whether it will involve Nintendo and Sega characters or if its a new series entirely) has been confirmed on it. HOWEVER this story does correlate to a much OLDER rumor that a Nintendo/Sega RPG starring Sonic The Hedgehog and Super Mario was in the works. We'll keep you updated on anything new.
 <hr>
-<font color=red>Sega has confirmed that it is stopping production on all Dreamcasts and will be moving on to develop for other systems.</font> Theres a _LOT_ to this story and if you wish to learn more you can read the reprinted article and discuss your opinions on the situation at The Station Square Newsboard. The link to the full story & discussion can be found <a href=http://pub12.ezboard.com/fsonichqcommunitystationsquarenewsandeditorials.showMessage?topicID=181.topic>here.</a>
+<font color=red>Sega has confirmed that it is stopping production on all Dreamcasts and will be moving on to develop for other systems.</font> Theres a _LOT_ to this story and if you wish to learn more you can read the reprinted article and discuss your opinions on the situation at The Station Square Newsboard. The link to the full story & discussion can be found <a href=https://web.archive.org/20011217000000/http://pub12.ezboard.com/fsonichqcommunitystationsquarenewsandeditorials.showMessage?topicID=181.topic>here.</a>
 <hr>
 <font color=red>The landmark 100th issue of Archie Comic's "Sonic The Hedgehog" is out.</font>
 <hr>
@@ -130,9 +130,9 @@ Reasaurus Toys are currently in the process of making thier <font color=red>Soni
 <!end main table bottom>
 
 <!-- SONIC EXCHANGE-->
-<font color="4B1FFC"><P align=center><A HREF="http://www.p-a-u-l.com/cgi-bin/ads.pl?advert=NonSSI&page=01" target="whole"><IMG SRC="http://www.p-a-u-l.com/cgi-bin/ads.pl?ID=sonichq&page=02" HEIGHT=40 WIDTH=400 ALT="Sonic Exchange - Sonic The Hedgehog Banner Exchange!"></A><BR><SMALL><A HREF="http://www.p-a-u-l.com/sonic/banex/">Sonic Exchange - Sonic The Hedgehog Banner Exchange!</A></SMALL></P> </font>
+<font color="4B1FFC"><P align=center><A HREF="https://web.archive.org/20011217000000/http://www.p-a-u-l.com/cgi-bin/ads.pl?advert=NonSSI&page=01" target="whole"><IMG SRC="https://web.archive.org/20011217000000/http://www.p-a-u-l.com/cgi-bin/ads.pl?ID=sonichq&page=02" HEIGHT=40 WIDTH=400 ALT="Sonic Exchange - Sonic The Hedgehog Banner Exchange!"></A><BR><SMALL><A HREF="https://web.archive.org/20011217000000/http://www.p-a-u-l.com/sonic/banex/">Sonic Exchange - Sonic The Hedgehog Banner Exchange!</A></SMALL></P> </font>
 <!-- BEGIN FASTCOUNTER CODE -->
-<p><a href="http://member.linkexchange.com/cgi-bin/fc/fastcounter-login?1057150" target="_top"><img border="0" src="http://fastcounter.linkexchange.com/fastcounter?1057150+2114307"></a><!-- END FASTCOUNTER CODE --><br><font face="arial" size="-2"><font color="green">hits since Apr 11, 1999.</font></font><br><!-- BEGIN FASTCOUNTER LINK --><font face="arial" size="1"><a href="http://fastcounter.linkexchange.com/fc-join" target="_top">FastCounter by LinkExchange</a></font><br>
+<p><a href="https://web.archive.org/20011217000000/http://member.linkexchange.com/cgi-bin/fc/fastcounter-login?1057150" target="_top"><img border="0" src="https://web.archive.org/20011217000000/http://fastcounter.linkexchange.com/fastcounter?1057150+2114307"></a><!-- END FASTCOUNTER CODE --><br><font face="arial" size="-2"><font color="green">hits since Apr 11, 1999.</font></font><br><!-- BEGIN FASTCOUNTER LINK --><font face="arial" size="1"><a href="https://web.archive.org/20011217000000/http://fastcounter.linkexchange.com/fc-join" target="_top">FastCounter by LinkExchange</a></font><br>
 <!-- END FASTCOUNTER LINK -->
 
 </center>

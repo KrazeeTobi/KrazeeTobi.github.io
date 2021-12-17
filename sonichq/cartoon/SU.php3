@@ -1,8 +1,9 @@
 <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
 <html>
 <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-   <title>Sonic HQ Cartoon Info</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Sonic HQ Cartoon Info</title>
+<LINK REL="SHORTCUT ICON" HREF="favicon.ico">
 <style type="text/css">
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
@@ -23,15 +24,17 @@ document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="t
 <br>
 
 <center>
-<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
-MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
-</SCRIPT>
-<NOSCRIPT>
-<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
-</NOSCRIPT>
-</IFRAME>
-</center>
+<a href="https://web.archive.org/20011217000000/http://www.aitsafe.com/go.htm?go=www.zophar.net%2Fstore%2Fitems.phtml%3Fn64-acc%23n64-adaptoid&afid=18480&tm=3&im=1" target="_top"><img src="https://web.archive.org/20011217000000/http://www.zophar.net/things/adap.gif" width="468" height="60" border=0 alt="N64 Adaptoid @ ZD Store"></a>
+<script language="JavaScript"> 
+<!-- 12 hours 
+ 
+if (document.cookie.indexOf("whd_webhitsdirect") == -1) { 
+var expdate = new Date((new Date()).getTime() + 86400000); 
+document.cookie="whd_webhitsdirect=general; expires=" + expdate.toGMTString() + "; path=/sonichq/;"; 
+document.write("<script language=\"javascript\">whdAffiliate=79</script> <SCRIPT LANGUAGE=\"JavaScript\" src=\"https://web.archive.org/20011217000000/http://www.webhitsdirect.com/whd.js\"></script>"); 
+} 
+//--> 
+</script></center>
 
 <p><span class=pathlinks><table class=glow>
 <a href=../ target=_top>Sonic HQ</a> | <a href=>Cartoon Info</a> | Sonic Underground (Syndicated Cartoon) a.k.a. "SU"</table></span>
@@ -50,7 +53,7 @@ document.write(titlepic + titlelogo)
 </script>
 &nbsp;</td>
 
-<td width=19><img src=/topright.gif width=19></td></tr>
+<td width=19><img src=/sonichq/topright.gif width=19></td></tr>
 </table>
 <!end main table top>
 
@@ -63,7 +66,7 @@ document.write(titlepic + titlelogo)
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><tr>
 
 <td VALIGN=TOP WIDTH="70%" bgcolor=ffffff class=itemtable>
-<font face=Arial size=-1 color=black>
+<font face=Arial size=2 class=itemtable>
 
 <!sections>
 <div class=titlebar><table class=glow>
@@ -222,6 +225,14 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 </script>
 
 <center><u>Episode List</u><br><a href=#0>Episode 0</a><br><a href=#1>Episode 1</a><br><a href=#2>Episode 2</a><br><a href=#3>Episode 3</a><br><a href=#4>Episode 4</a><br><a href=#5>Episode 5</a><br><a href=#6>Episode 6</a><br><a href=#7>Episode 7</a><br><a href=#8>Episode 8</a><br><a href=#9>Episode 9</a><br><a href=#10>Episode 10</a><br><a href=#11>Episode 11</a><br><a href=#12>Episode 12</a><br><a href=#13>Episode 13</a><br><a href=#14>Episode 14</a><br><a href=#15>Episode 15</a><br><a href=#16>Episode 16</a><br><a href=#17>Episode 17</a><br><a href=#18>Episode 18</a><br><a href=#19>Episode 19</a><br><a href=#20>Episode 20</a><br><a href=#21>Episode 21</a><br><a href=#22>Episode 22</a><br><a href=#23>Episode 23</a><br><a href=#24>Episode 24</a><br><a href=#25>Episode 25</a><br><a href=#26>Episode 26</a><br><a href=#27>Episode 27</a><br><a href=#28>Episode 28</a><br><a href=#29>Episode 29</a><br><a href=#30>Episode 30</a><br><a href=#31>Episode 31</a><br><a href=#32>Episode 32</a><br><a href=#33>Episode 33</a><br><a href=#34>Episode 34</a><br><a href=#35>Episode 35</a><br><a href=#36>Episode 36</a><br><a href=#37>Episode 37</a><br><a href=#38>Episode 38</a><br><a href=#39>Episode 39</a><br></center>
+<p><center><IFRAME SRC="https://web.archive.org/20011217000000/http://ads1.ad-flow.com/?DC=ztnet-ron-rst&TARGET=_blank" HEIGHT="125" WIDTH="125" SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
+<SCRIPT LANGUAGE="JavaScript">document.write('<SCR'+'IPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011217000000/http://ads1.ad-flow.com/?DC=ztnet-ron-rst&JS=Y&TARGET=_blank"></SCR'+'IPT>');</SCRIPT>
+<NOSCRIPT>
+<A HREF="https://web.archive.org/20011217000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-rst" TARGET="_blank"><IMG SRC="https://web.archive.org/20011217000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-rst" HEIGHT="125" WIDTH="125"></A>
+</NOSCRIPT>
+</IFRAME>
+</center>
+
 </font></td></tr>
 </table>
 <!end main table middle>
@@ -229,7 +240,7 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
 <td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
-<td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
+<td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2001 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
 <td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>

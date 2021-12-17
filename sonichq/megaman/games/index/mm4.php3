@@ -16,15 +16,17 @@ A{text-decoration:none} -->
 <br>
 
 <center>
-<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
-MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
-</SCRIPT>
-<NOSCRIPT>
-<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank" HEIGHT="60" WIDTH="468"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y"></A>
-</NOSCRIPT>
-</IFRAME>
-</center>
+<a href="https://web.archive.org/20011217000000/http://www.aitsafe.com/go.htm?go=www.zophar.net%2Fstore%2Fitems.phtml%3Fn64-acc%23n64-adaptoid&afid=18480&tm=3&im=1" target="_top"><img src="https://web.archive.org/20011217000000/http://www.zophar.net/things/adap.gif" width="468" height="60" border=0 alt="N64 Adaptoid @ ZD Store"></a>
+<script language="JavaScript"> 
+<!-- 12 hours 
+ 
+if (document.cookie.indexOf("whd_webhitsdirect") == -1) { 
+var expdate = new Date((new Date()).getTime() + 86400000); 
+document.cookie="whd_webhitsdirect=general; expires=" + expdate.toGMTString() + "; path=/sonichq/;"; 
+document.write("<script language=\"javascript\">whdAffiliate=79</script> <SCRIPT LANGUAGE=\"JavaScript\" src=\"https://web.archive.org/20011217000000/http://www.webhitsdirect.com/whd.js\"></script>"); 
+} 
+//--> 
+</script></center>
 
 <p><span class=pathlinks><table class=glow>
 <a href=../../>Mega Man HQ</a> | <a href=../>Gaming Info</a> | <a href=#>Game List</a> | Mega Man 4 - Nintendo Entertainment System</table></span>

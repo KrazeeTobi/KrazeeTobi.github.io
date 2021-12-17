@@ -8,11 +8,11 @@ Instructions:
 <tr><td>Title:</td><td><input type=text name=title value="" size=30></td></tr>
 <tr><td>Reporter:</td><td><input type=text name=reporter value="" size=30></td></tr>
 <input type=hidden name=yyyy value="2001" size=4 maxlength=4>
-<input type=hidden name=mm value="8" size=2 maxlength=2>
-<input type=hidden name=dd value="8" size=2 maxlength=2>
-<input type=hidden name=hour value="9" size=2 maxlength=2>
-<input type=hidden name=min value="41" size=2 maxlength=2>
-<input type=hidden name=time value="200108080941" size=12 maxlength=12>
+<input type=hidden name=mm value="12" size=2 maxlength=2>
+<input type=hidden name=dd value="17" size=2 maxlength=2>
+<input type=hidden name=hour value="18" size=2 maxlength=2>
+<input type=hidden name=min value="1" size=2 maxlength=2>
+<input type=hidden name=time value="200112171801" size=12 maxlength=12>
 </table>
 
 <p>Categories:

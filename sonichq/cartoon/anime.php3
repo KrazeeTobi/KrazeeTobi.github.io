@@ -1,8 +1,9 @@
 <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
 <html>
 <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-   <title>Sonic HQ Cartoon Info</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Sonic HQ Cartoon Info</title>
+<LINK REL="SHORTCUT ICON" HREF="favicon.ico">
 <style type="text/css">
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
@@ -23,15 +24,17 @@ document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="t
 <br>
 
 <center>
-<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
-MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
-</SCRIPT>
-<NOSCRIPT>
-<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
-</NOSCRIPT>
-</IFRAME>
-</center>
+<a href="https://web.archive.org/20011217000000/http://www.aitsafe.com/go.htm?go=www.zophar.net%2Fstore%2Fitems.phtml%3Fn64-acc%23n64-adaptoid&afid=18480&tm=3&im=1" target="_top"><img src="https://web.archive.org/20011217000000/http://www.zophar.net/things/adap.gif" width="468" height="60" border=0 alt="N64 Adaptoid @ ZD Store"></a>
+<script language="JavaScript"> 
+<!-- 12 hours 
+ 
+if (document.cookie.indexOf("whd_webhitsdirect") == -1) { 
+var expdate = new Date((new Date()).getTime() + 86400000); 
+document.cookie="whd_webhitsdirect=general; expires=" + expdate.toGMTString() + "; path=/sonichq/;"; 
+document.write("<script language=\"javascript\">whdAffiliate=79</script> <SCRIPT LANGUAGE=\"JavaScript\" src=\"https://web.archive.org/20011217000000/http://www.webhitsdirect.com/whd.js\"></script>"); 
+} 
+//--> 
+</script></center>
 
 <p><span class=pathlinks><table class=glow>
 <a href=../ target=_top>Sonic HQ</a> | <a href=>Cartoon Info</a> | Sonic the Hedgehog (Japanese OAV) a.k.a. "Sonic Anime"</table></span>
@@ -63,7 +66,7 @@ document.write(titlepic + titlelogo)
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><tr>
 
 <td VALIGN=TOP WIDTH="70%" bgcolor=ffffff class=itemtable>
-<font face=Arial size=-1 color=black>
+<font face=Arial size=2 class=itemtable>
 
 <!sections>
 <div class=titlebar><table class=glow>
@@ -102,6 +105,14 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 <a href=#1>Episode 1</a><br>
 <a href=#2>Episode 2</a><br>
 <a href=#usrelease>American Release</a><br></center>
+<p><center><IFRAME SRC="https://web.archive.org/20011217000000/http://ads1.ad-flow.com/?DC=ztnet-ron-rst&TARGET=_blank" HEIGHT="125" WIDTH="125" SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
+<SCRIPT LANGUAGE="JavaScript">document.write('<SCR'+'IPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011217000000/http://ads1.ad-flow.com/?DC=ztnet-ron-rst&JS=Y&TARGET=_blank"></SCR'+'IPT>');</SCRIPT>
+<NOSCRIPT>
+<A HREF="https://web.archive.org/20011217000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-rst" TARGET="_blank"><IMG SRC="https://web.archive.org/20011217000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-rst" HEIGHT="125" WIDTH="125"></A>
+</NOSCRIPT>
+</IFRAME>
+</center>
+
 </font></td></tr>
 </table>
 <!end main table middle>
@@ -109,7 +120,7 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
 <td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
-<td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
+<td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2001 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
 <td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>

@@ -60,7 +60,7 @@ Sky Lagoon Site Spotlight - 8-8-00
 </table></div>
 
 <div class=itemtext>
-<a href=https://web.archive.org/20011113000000/http://fly.to/sky_lagoon target=_blank><img src=spotlight.jpg align=left></a>  I'm really glad to get this award, especially considering I've been open just under 24 hours.  ^_^  I'd like to thank magmad for this award and for believing in my site.<p>
+<a href=https://web.archive.org/20011217000000/http://fly.to/sky_lagoon target=_blank><img src=spotlight.jpg align=left></a>  I'm really glad to get this award, especially considering I've been open just under 24 hours.  ^_^  I'd like to thank magmad for this award and for believing in my site.<p>
 </div><!end of sections>
 
 </td>

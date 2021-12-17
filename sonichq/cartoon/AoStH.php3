@@ -1,8 +1,9 @@
 <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
 <html>
 <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-   <title>Sonic HQ Cartoon Info</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Sonic HQ Cartoon Info</title>
+<LINK REL="SHORTCUT ICON" HREF="favicon.ico">
 <style type="text/css">
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
@@ -23,15 +24,17 @@ document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="t
 <br>
 
 <center>
-<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
-MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
-</SCRIPT>
-<NOSCRIPT>
-<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
-</NOSCRIPT>
-</IFRAME>
-</center>
+<a href="https://web.archive.org/20011217000000/http://www.aitsafe.com/go.htm?go=www.zophar.net%2Fstore%2Fitems.phtml%3Fn64-acc%23n64-adaptoid&afid=18480&tm=3&im=1" target="_top"><img src="https://web.archive.org/20011217000000/http://www.zophar.net/things/adap.gif" width="468" height="60" border=0 alt="N64 Adaptoid @ ZD Store"></a>
+<script language="JavaScript"> 
+<!-- 12 hours 
+ 
+if (document.cookie.indexOf("whd_webhitsdirect") == -1) { 
+var expdate = new Date((new Date()).getTime() + 86400000); 
+document.cookie="whd_webhitsdirect=general; expires=" + expdate.toGMTString() + "; path=/sonichq/;"; 
+document.write("<script language=\"javascript\">whdAffiliate=79</script> <SCRIPT LANGUAGE=\"JavaScript\" src=\"https://web.archive.org/20011217000000/http://www.webhitsdirect.com/whd.js\"></script>"); 
+} 
+//--> 
+</script></center>
 
 <p><span class=pathlinks><table class=glow>
 <a href=../ target=_top>Sonic HQ</a> | <a href=>Cartoon Info</a> | Adventures of Sonic the Hedgehog (Syndicated Cartoon) a.k.a. "AoStH"</table></span>
@@ -63,7 +66,7 @@ document.write(titlepic + titlelogo)
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><tr>
 
 <td VALIGN=TOP WIDTH="70%" bgcolor=ffffff class=itemtable>
-<font face=Arial size=-1 color=black>
+<font face=Arial size=2 class=itemtable>
 
 <!sections>
 <div class=titlebar><table class=glow>
@@ -463,7 +466,7 @@ Another reasonable episode for Tails fans, owing to the ending, but that`s about
 </table></div>
 
 <div class=itemtext>
-No information available - if you can provide a good summary for it <u><a href="mailto:neoblackbat@hotmail.com">email me.</a></u><p>
+No information available - if you can provide a good summary for it send an <u><a href="mailto:lianne_ka@hotmail.com">email</a></u>.<p>
 </div><div class=titlebar><table class=glow>
 <a name=48>#48. Quest For The Chaos Emeralds - Part One: Blackbot The Pirate</a>
 </table></div>
@@ -471,18 +474,18 @@ No information available - if you can provide a good summary for it <u><a href="
 <div class=itemtext>
 Robotnik has decided that its time to take care of Sonic once and for all - and to do that he'll need the legendary Chaos Emeralds to fulfill his quest! 
 Robotnik first decides to steal the emeralds, and goes back in time for the long lost "Emerald of Invisibility". Once there, he lands on Black Beard's ship and shoots him with none other than a "Roboticizer Gun" (<i>reference to Sonic SatAm, perhaps?</i>) 
-and has him sail the ship to a desert island where they dig up the emerald. Meanwhile back on Mobius in its present time, Sonic gets recurring character Professor Dinglehopper to make the rocket-powered skateboard, which both he and Tails use to go back in time at various stops and stop Robotnik once and for all!
+and has him sail the ship to a desert island where they dig up the emerald. Meanwhile back on Mobius in its present time, Sonic gets recurring character Professor Caninestein to make the rocket-powered skateboard, which both he and Tails use to go back in time at various stops and stop Robotnik once and for all!
 However they all seem to run into a small snag - The emerald itself is invisible, so Robotnik thinks it's not there!! Sonic takes this opportunity to steal it, and Robotnik can't find Sonic or the emerald and takes off into the next episode...
 <br>
 <br>This episode marks the beginning of the 4 part "Quest For The Chaos Emerald" saga - possibly one of the most remembered of the AoSTH episodes and surprisingly just about all of the 4 parts were honestly decent! Note the references to Sonic SatAm in the form of a "Roboticiser gun".
-Professor Dinglehopper's appearance is really the only thing that somewhat mars the episode barring AoSTH's substandard kiddie plots and animation. But this ep and the next 4 are probably the only REAL salvageable episodes in the entire series next to <i>Grounder The Genius</i>. What can be noted in these episodes however 
+Professor Caninestein's appearance is really the only thing that somewhat mars the episode barring AoSTH's substandard kiddie plots and animation. But this ep and the next 4 are probably the only REAL salvageable episodes in the entire series next to <i>Grounder The Genius</i>. What can be noted in these episodes however 
 is the fact that this marks the Chaos Emeralds first apparance in a Sonic cartoon (even if the concept of them is wrong). Each of the 4 emeralds have a separate power and a special note is none of the four emeralds except for one look like they do in the comics and games. <p>
 </div><div class=titlebar><table class=glow>
 <a name=49>#49. Quest For The Chaos Emeralds - Part Two: Hedgehog Of The Hound Table</a>
 </table></div>
 
 <div class=itemtext>
-Part two has the devilish Doctor Robotnik landing in King 'Arf'ur's court (he's a dog, prehaps a relative of the dog scientist - Professsor Dinglehopper?). It's in this setting that Robotnik poses as a black knight and sieges the castle, trying to take the emerald located in this time period. He fails yet again, and zips off to unfold...<p>
+Part two has the devilish Doctor Robotnik landing in King 'Arf'ur's court (he's a dog, prehaps a relative of the dog scientist - Professsor Caninestein?). It's in this setting that Robotnik poses as a black knight and sieges the castle, trying to take the emerald located in this time period. He fails yet again, and zips off to unfold...<p>
 </div><div class=titlebar><table class=glow>
 <a name=50>#50. Quest For The Chaos Emeralds - Part Three: Robotnik's Pyramid Scheme</a>
 </table></div>
@@ -641,6 +644,14 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 </script>
 
 <center><u>Episode List</u><br><a href=#0>Episode 0</a><br><a href=#1>Episode 1</a><br><a href=#2>Episode 2</a><br><a href=#3>Episode 3</a><br><a href=#4>Episode 4</a><br><a href=#5>Episode 5</a><br><a href=#6>Episode 6</a><br><a href=#7>Episode 7</a><br><a href=#8>Episode 8</a><br><a href=#9>Episode 9</a><br><a href=#10>Episode 10</a><br><a href=#11>Episode 11</a><br><a href=#12>Episode 12</a><br><a href=#13>Episode 13</a><br><a href=#14>Episode 14</a><br><a href=#15>Episode 15</a><br><a href=#16>Episode 16</a><br><a href=#17>Episode 17</a><br><a href=#18>Episode 18</a><br><a href=#19>Episode 19</a><br><a href=#20>Episode 20</a><br><a href=#21>Episode 21</a><br><a href=#22>Episode 22</a><br><a href=#23>Episode 23</a><br><a href=#24>Episode 24</a><br><a href=#25>Episode 25</a><br><a href=#26>Episode 26</a><br><a href=#27>Episode 27</a><br><a href=#28>Episode 28</a><br><a href=#29>Episode 29</a><br><a href=#30>Episode 30</a><br><a href=#31>Episode 31</a><br><a href=#32>Episode 32</a><br><a href=#33>Episode 33</a><br><a href=#34>Episode 34</a><br><a href=#35>Episode 35</a><br><a href=#36>Episode 36</a><br><a href=#37>Episode 37</a><br><a href=#38>Episode 38</a><br><a href=#39>Episode 39</a><br><a href=#40>Episode 40</a><br><a href=#41>Episode 41</a><br><a href=#42>Episode 42</a><br><a href=#43>Episode 43</a><br><a href=#44>Episode 44</a><br><a href=#45>Episode 45</a><br><a href=#46>Episode 46</a><br><a href=#47>Episode 47</a><br><a href=#48>Episode 48</a><br><a href=#49>Episode 49</a><br><a href=#50>Episode 50</a><br><a href=#51>Episode 51</a><br><a href=#52>Episode 52</a><br><a href=#53>Episode 53</a><br><a href=#54>Episode 54</a><br><a href=#55>Episode 55</a><br><a href=#56>Episode 56</a><br><a href=#57>Episode 57</a><br><a href=#58>Episode 58</a><br><a href=#59>Episode 59</a><br><a href=#60>Episode 60</a><br><a href=#61>Episode 61</a><br><a href=#62>Episode 62</a><br><a href=#63>Episode 63</a><br><a href=#64>Episode 64</a><br><a href=#65>Episode 65</a><br><a href=#66>Episode 66</a><br></center>
+<p><center><IFRAME SRC="https://web.archive.org/20011217000000/http://ads1.ad-flow.com/?DC=ztnet-ron-rst&TARGET=_blank" HEIGHT="125" WIDTH="125" SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
+<SCRIPT LANGUAGE="JavaScript">document.write('<SCR'+'IPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011217000000/http://ads1.ad-flow.com/?DC=ztnet-ron-rst&JS=Y&TARGET=_blank"></SCR'+'IPT>');</SCRIPT>
+<NOSCRIPT>
+<A HREF="https://web.archive.org/20011217000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-rst" TARGET="_blank"><IMG SRC="https://web.archive.org/20011217000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-rst" HEIGHT="125" WIDTH="125"></A>
+</NOSCRIPT>
+</IFRAME>
+</center>
+
 </font></td></tr>
 </table>
 <!end main table middle>
@@ -648,7 +659,7 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
 <td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
-<td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
+<td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2001 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
 <td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>

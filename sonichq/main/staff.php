@@ -1,8 +1,9 @@
 <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
 <html>
 <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-   <title>Sonic HQ Staff</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Sonic HQ Staff</title>
+<LINK REL="SHORTCUT ICON" HREF="favicon.ico">
 <style type="text/css">
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
@@ -23,15 +24,17 @@ document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="t
 <br>
 
 <center>
-<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
-MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
-</SCRIPT>
-<NOSCRIPT>
-<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" height="60" width="468"></A>
-</NOSCRIPT>
-</IFRAME>
-</center>
+<a href="https://web.archive.org/20011217000000/http://www.aitsafe.com/go.htm?go=www.zophar.net%2Fstore%2Fitems.phtml%3Fn64-acc%23n64-adaptoid&afid=18480&tm=3&im=1" target="_top"><img src="https://web.archive.org/20011217000000/http://www.zophar.net/things/adap.gif" width="468" height="60" border=0 alt="N64 Adaptoid @ ZD Store"></a>
+<script language="JavaScript"> 
+<!-- 12 hours 
+ 
+if (document.cookie.indexOf("whd_webhitsdirect") == -1) { 
+var expdate = new Date((new Date()).getTime() + 86400000); 
+document.cookie="whd_webhitsdirect=general; expires=" + expdate.toGMTString() + "; path=/sonichq/;"; 
+document.write("<script language=\"javascript\">whdAffiliate=79</script> <SCRIPT LANGUAGE=\"JavaScript\" src=\"https://web.archive.org/20011217000000/http://www.webhitsdirect.com/whd.js\"></script>"); 
+} 
+//--> 
+</script></center>
 
 <p><span class=pathlinks><table class=glow>
 <a href=../ target=_top>Sonic HQ</a> | Staff & Contact Info</table></span>
@@ -63,7 +66,7 @@ document.write(titlepic + titlelogo)
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><tr>
 
 <td VALIGN=TOP WIDTH="70%" bgcolor=ffffff class=itemtable>
-<font face=Arial size=-1 color=black>
+<font face=Arial size=2 class=itemtable>
 
 <!sections>
 <div class=titlebar><table class=glow>
@@ -87,18 +90,41 @@ Vector currently maintains the Games Page and gives his advice wherever else it 
 <TABLE BORDER=0><TR><TD><CENTER>
 <IMG SRC=staffimages/truered.jpg ALIGN=top><br>
 <FONT SIZE=-1><A HREF=mailto:lianne_ka@hotmail.com>lianne_ka@hotmail.com</A></TD><br>
-<TD><FONT SIZE=-1><b><font color="blue">Katrice Georges</b> - "True Red, LianneKa"
+<TD><FONT SIZE=-1><b><font color="blue">Katrice Georges</b> - "True Red, Lianne-Ka, Sailor Cancer Star"
 <br><b>Position</b>: Co-Web, Forum Admin
 <br><b>AIM</b>: SailorJulieSu
 <br><b>ICQ</b>: 56951829</font>
 
-<p>Co-web of Sonic HQ, more info coming.</TABLE>
+<p>Co-web of Sonic HQ.  I'm a college junior who maintains three other sites on the web, so I tend to be very busy.  Right now, I mainly work on the Comics & News pages and work on the General Profiles for a few different universes here.  I'm rarely on AIM as I normally get flooded, so email or leaving a message via ICQ are much better ways to get in contact.</TABLE>
 <p>
 </div><div class=titlebar><table class=glow>
 General Staffers
 </table></div>
 
 <div class=itemtext>
+
+<TABLE BORDER=0><TR><TD><CENTER>
+<IMG SRC=staffimages/neoseifer.jpg ALIGN=top><br>
+<FONT SIZE=-1><A HREF=mailto:gray_fox@richmond.com>gray_fox@richmond.com</A></TD><br>
+<TD><FONT SIZE=-1><b><FONT SIZE=-1><font color="blue">Andy Fields</b> - "NeoSeifer, Gray Fox, SOC Gray"
+<br><b>Position</b>: News Maintainer, Fan Art, Music
+<br><b>AIM</b>: NeoSqueeks
+<br><b>ICQ</b>: 93858500</font>
+
+<p>Andy isn't your typical high school student. Actually, he is, he just likes to say he isn't.  Long time Sega and Sonic fan, Andy's Sega fandom started with his old Master System (Which still, by some kind of divine intervention, still works). Obsessive about being up to date about news of all kinds, he is also very into the world of fan art, he loves to see other people's work. He's also into Mystery Science Theatre 3000, probably to such a degree that it's unhealthy. He's also never short of game music, as his large collection of game music takes up multiple gigs on his hard drive. You can hear some of his collection on his internet radio station, <a href=https://web.archive.org/20011217000000/http://www.ehz.f2s.com/dogr target=_blank>Dark Omen Game Radio</a>.
+</TABLE>
+
+<TABLE BORDER=0><TR><TD><CENTER>
+<IMG SRC=staffimages/tl.jpg ALIGN=top><br><img src=staffimages/tl2.gif><br>
+<FONT SIZE=-1><A HREF=mailto:webmaster@echidnoyle.org>webmaster<br>@echidnoyle.org</A></TD><br>
+<TD><FONT SIZE=-1><b><FONT SIZE=-1><font color="blue">Eric Larson</b> - "TL"
+<br><b>Position</b>: Directory, Coding, Forum Moderator
+<br><b>AIM</b>: Seraphin TL
+<br><b>ICQ</b>: NA</font>
+
+<p>Well, I got stuck writing my own description, so, here I go ...<br><br>
+Working at HQ is actually one of the things I've aspired to do for quite awhile now, and I'm glad to finally be on board. ^_^ I'm sixteen, and I'm a computer nut - social life, what's that? ;D I tinker, I program, I design, I build, I read ungodly long "Teach Yourself" books ... but most of all, I chat. I hang out at a plethora of forums (including HQ's own Mobius Forum) and I'm on AIM a <u>lot</u>. ^_^ Catch me sometime!
+</td></tr></TABLE>
 
 <TABLE BORDER=0><TR><TD><CENTER>
 <IMG SRC=staffimages/lien.jpg ALIGN=top width=100 height=113>
@@ -112,18 +138,6 @@ General Staffers
 often gets on Dub and Vector when something seems out of whack in design (And we have no choice BUT to follow her - 
 otherwise she may throw pecans at us if we don't listen ^___^) Lien is really sweet though, and after her high school and 
 college prep classes, she maintains the Comics Page along with WB. Lien also has a wish and desire to become a cartoon animator after college.</TABLE>
-
-<TABLE BORDER=0><TR><TD><CENTER>
-<IMG SRC=staffimages/tl.jpg ALIGN=top><br><img src=staffimages/tl2.gif><br>
-<FONT SIZE=-1><A HREF=mailto:webmaster@echidnoyle.org>webmaster<br>@echidnoyle.org</A></TD><br>
-<TD><FONT SIZE=-1><b><FONT SIZE=-1><font color="blue">Eric Larson</b> - "TL"
-<br><b>Position</b>: Directory, Coding, Forum Moderator
-<br><b>AIM</b>: Seraphin TL
-<br><b>ICQ</b>: NA</font>
-
-<p>Well, I got stuck writing my own description, so, here I go ...<br><br>
-Working at HQ is actually one of the things I've aspired to do for quite awhile now, and I'm glad to finally be on board. ^_^ I'm sixteen, and I'm a computer nut - social life, what's that? ;D I tinker, I program, I design, I build, I read ungodly long "Teach Yourself" books ... but most of all, I chat. I hang out at a plethora of forums (including HQ's own Mobius Forum) and I'm on AIM a <u>lot</u>. ^_^ Catch me sometime!
-</td></tr></TABLE>
 
 <TABLE BORDER=0><TR><TD><CENTER>
 <IMG SRC=staffimages/sam.jpg ALIGN=top>
@@ -141,12 +155,23 @@ She's two times the fun wrapped up and rolled into one!!!.....Or is that a Wuzzl
 
 <TABLE BORDER=0><TR><TD><CENTER>
 <FONT SIZE=-1><A HREF=mailto:???>???</A></TD><br>
-<TD><FONT SIZE=-1><b><FONT SIZE=-1><font color="blue">Dr Lighthead</b> - "Bumper"
+<TD><FONT SIZE=-1><b><FONT SIZE=-1><font color="blue">Dr Lighthead</b> - "Dr Lighthead"
 <br><b>Position</b>: Profile Writer, News Maintainer
 <br><b>AIM</b>: Dr Lighthead
 <br><b>ICQ</b>: NA</font>
 
 <p>-no description-
+</TABLE>
+
+<TABLE BORDER=0><TR><TD><CENTER>
+<IMG SRC=https://web.archive.org/20011217000000/http://planetdreamcast.com/sonic/svcomics/zonic-mirage/images/messageboard/barlifetez.gif ALIGN=top><br>
+<FONT SIZE=-1><A HREF=mailto:tails_sa@hotmail.com>tails_sa@hotmail.com</A></TD><br>
+<TD><FONT SIZE=-1><b><FONT SIZE=-1><font color="blue">Jonathan M</b> - "SA Tails"
+<br><b>Position</b>: Profile Writer
+<br><b>AIM</b>: MilesPrower SA
+<br><b>ICQ</b>: NA</font>
+
+<p>Mwe'llo all you happy peeps, name's SA Tails. I help with the profiles relating to the Sonic comics, and other random stuff I can't think of.. o.o I'm generally friendly, I like helpin' out with sites. I work on my own located at the addy <a href=https://web.archive.org/20011217000000/http://www.zonic-mirage.net target=_blank>www.zonic-mirage.net</a> (gotta put a shameless plug here), and I help out with other sites such as SonicVerse Team.
 </TABLE>
 <p>
 </div><div class=titlebar><table class=glow>
@@ -161,7 +186,7 @@ News Staff
 <br><b>AIM</b>: SSFrefTrevor or Bumper347
 <br><b>ICQ</b>: NA</font>
 
-<p>Bumper is our main news editor.
+<p>Bumper is one of our main news editors.
 </TABLE>
 
 <TABLE BORDER=0><TR><TD><CENTER>
@@ -176,7 +201,7 @@ News Staff
 <p>Way down under in Australia sits slaphappy Rlan. A cordial chap by nature (except when it comes to Sega Ozisoft) Rlan is a really mellow dude with a really mellow demeanor!
 Friendly, always willing to put in advice and two cents, he also sits on staff as one of the 4 news directors with WB, MTB, and Tristan!
 
-<p>Rlan also runs <a href=https://web.archive.org/20011101000000/http://ssrg.emulationzone.org/fanmade/ target="_whole">Sonic Fan Games HQ</a>.
+<p>Rlan also runs <a href=https://web.archive.org/20011217000000/http://ssrg.emulationzone.org/fanmade/ target="_whole">Sonic Fan Games HQ</a>.
 </TABLE>
 
 <TABLE BORDER=0 cellspacing=4 cellpadding=4><TR><TD><CENTER>
@@ -190,7 +215,7 @@ Friendly, always willing to put in advice and two cents, he also sits on staff a
 <p>Tristan is ready and willing to go search the deepest, darkest reaches of the Internet to bring you news from all aspects 
 on the Sonic community.  He is also ready to test every code and analyze every piece of information he gets.  Then, he'll 
 put them in the Game Info section.  In his spare time, if he ever has any due to working on his site, 
-<a href="https://web.archive.org/20011101000000/http://tssz.emulationzone.org" target="_whole">TSSZ</a>, he listens to the 1,000+ news themes he has, watch the news from 
+<a href="https://web.archive.org/20011217000000/http://tssz.emulationzone.org" target="_whole">TSSZ</a>, he listens to the 1,000+ news themes he has, watch the news from 
 different cities every chance he has, and tell the public that he is not insane because he's into TV News... Tristan also 
 wants to anchor the local news from a top TV market, such as Philly, New York, or, his favorite for the obvious reasons, Los Angeles.  Maybe you'll see him someday on your local affiliate.  Who knows?</TABLE>
 <p>
@@ -201,7 +226,7 @@ Specialized Staffers
 <div class=itemtext>
 
 <TABLE BORDER=0><TR><TD><CENTER>
-<IMG SRC=staffimages/ron.gif><br><FONT SIZE=-1><A HREF=mailto:nate2_tails1@go.com>nate2_tails1@go.com</A></TD><br>
+<IMG SRC=staffimages/ron.jpg><br><FONT SIZE=-1><A HREF=mailto:nate2_tails1@go.com>nate2_tails1@go.com</A></TD><br>
 <TD><FONT SIZE=-1><b><FONT SIZE=-1><font color="blue">Nathan</b> -  "Ron Prower- The Real Tails"
 <br><b>Position</b>: Official HQ Secretary, Q&A, Vistor Center Mod
 <br><b>AIM</b>: RealTails
@@ -264,9 +289,9 @@ sense into those mad ravenous newbies! And whats this about MTB I hear? ^_^
 </TABLE>
 
 <TABLE BORDER=0 cellspacing=4 cellpadding=4><TR><TD><CENTER>
-<table border=0><tr><td><IMG SRC=https://web.archive.org/20011101000000/http://members.aol.com/TemplarNY/torch.gif></td>
+<table border=0><tr><td><IMG SRC=https://web.archive.org/20011217000000/http://members.aol.com/TemplarNY/torch.gif></td>
 <td><IMG SRC=staffimages/tether.gif></td>
-<td><IMG SRC=https://web.archive.org/20011101000000/http://members.aol.com/TemplarNY/torch.gif></td></table>
+<td><IMG SRC=https://web.archive.org/20011217000000/http://members.aol.com/TemplarNY/torch.gif></td></table>
 <IMG SRC=staffimages/tether.jpg>
 <FONT SIZE=-1><A HREF="mailto:mobius_tblood@hotmail.com">mobius_tblood@hotmail.com</A></TD><br>
 <TD><FONT SIZE=-1><b><FONT SIZE=-1><font color="blue">Vassilis Detsikas</b> - "Mobius Tetherblood"
@@ -302,7 +327,7 @@ Special Contibutors
 
 <TABLE BORDER=0><TR><TD><CENTER>
 <IMG SRC=staffimages/andy.jpg ALIGN=top >
-<FONT SIZE=-1><A HREF=https://web.archive.org/20011101000000/http://www.emulationzone.org target="_blank">https://web.archive.org/20011101000000/http://www.emulationzone.org/</A></TD><br>
+<FONT SIZE=-1><A HREF=https://web.archive.org/20011217000000/http://www.emulationzone.org target="_blank">https://web.archive.org/20011217000000/http://www.emulationzone.org/</A></TD><br>
 <TD><FONT SIZE=-1><b><font color="orange">Andy Wolan And The Emulation Zone </font></b> -
 Special thanks goes to the Emulation Zone for letting us use their space ! They saved us from the evil demonspawn of webservice that is..."Geocities!!!!" - and for that fate worse than death we are ever grateful! Seriously though, we'd like to thank Andy and 
 the staff at the Emulation Zone for hosting us! It really was nice of them! Pop over to thier page and give it a peek when you finish here!</TABLE>
@@ -320,7 +345,7 @@ and is also well versed on the doings of Dudley Do-Right, Snidely Whiplash, Nell
 
 <TABLE BORDER=0><TR><TD><CENTER>
 <IMG SRC=staffimages/jared.jpg ALIGN=top >
-<FONT SIZE=-1><A HREF=https://web.archive.org/20011101000000/http://www.theghz.com/ target="_blank">Neo Green Hill Zone And Forum</A></TD><br>
+<FONT SIZE=-1><A HREF=https://web.archive.org/20011217000000/http://www.theghz.com/ target="_blank">Neo Green Hill Zone And Forum</A></TD><br>
 <TD><FONT SIZE=-1><b><font color="orange">Jared Matte aka. Green Gibbon </font></b> -
 Never think in the presence of the Green Gibbon! Thinking is illegal - and so is Pikachu! Green Gibbon is the owner of the coveted Neo Green Hill Zone! See the Gameplay Page on our Games section? We would <u>NEVER</u> have been able to pull that off without the help of the NGHZ owner and several members of the forum there including Martin Braid, Possesed Spam, Bo Bayles, 
 DH Master, Micheal "G. Silver" Stearns, Dave Bulmer, James "Popcorn" Duffy, and a certain friend of mine named Roland "Jim Doe" Lowery! Pop over to the NGHZ and give the guys a holler! And if you're good little boys and girls, you might even get a Drano Cookie! *smile*</TABLE>
@@ -340,12 +365,20 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 </script>
 
 <center><u>Contact</u></center>
-<p><b>NOTE To Anyone Who Wants To Contact The Staff:</b><br>To contact the HQ staff, you should usually post on the <a href=https://web.archive.org/20011101000000/http://pub12.ezboard.com/fsonichqcommunityfrm11>Customer Service Forum</a>.  There are threads set up for common topics, such as reporting 404s, and you should post in these categories if your comment fits into them.  Start a new topic if your comment is unique.  I can't speak for everyone else, but my e-mail is SWAMPED and I have stuff to reply to from last year!  If you want a response, I'd strongly recommend posting on the forum. If you want to e-mail it, you should probably contact Real Tails / Ron Prower. - Vec
+<p><b>NOTE To Anyone Who Wants To Contact The Staff:</b><br>To contact the HQ staff, you should usually post on the <a href=https://web.archive.org/20011217000000/http://pub12.ezboard.com/fsonichqcommunityfrm11>Customer Service Forum</a>.  There are threads set up for common topics, such as reporting 404s, and you should post in these categories if your comment fits into them.  Start a new topic if your comment is unique.  I can't speak for everyone else, but my e-mail is SWAMPED and I have stuff to reply to from last year!  If you want a response, I'd strongly recommend posting on the forum. If you want to e-mail it, you should probably contact Real Tails / Ron Prower. - Vec
 <p><center><u>Staff</u></center>
 <p>On this page, you'll find contact points and short descriptions for all of the hard-working staffers here at HQ. ^_^
 <p><center><u>More Staff Pages</u></center>
 <p><a href=joining.php>Join The Staff!</a><br>
 <a href=halloffame.php>Staff Hall Of Fame!</a>
+<p><center><IFRAME SRC="https://web.archive.org/20011217000000/http://ads1.ad-flow.com/?DC=ztnet-ron-rst&TARGET=_blank" HEIGHT="125" WIDTH="125" SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
+<SCRIPT LANGUAGE="JavaScript">document.write('<SCR'+'IPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011217000000/http://ads1.ad-flow.com/?DC=ztnet-ron-rst&JS=Y&TARGET=_blank"></SCR'+'IPT>');</SCRIPT>
+<NOSCRIPT>
+<A HREF="https://web.archive.org/20011217000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-rst" TARGET="_blank"><IMG SRC="https://web.archive.org/20011217000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-rst" HEIGHT="125" WIDTH="125"></A>
+</NOSCRIPT>
+</IFRAME>
+</center>
+
 </font></td></tr>
 </table>
 <!end main table middle>
@@ -353,7 +386,7 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
 <td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
-<td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
+<td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2001 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
 <td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
