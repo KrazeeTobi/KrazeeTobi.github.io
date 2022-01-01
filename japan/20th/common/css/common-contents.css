@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/* common contents   ===================================================== */
+
+#common-contents{
+	width:900px;
+	margin:0 auto;
+	position:relative;
+}
+
+/* clear fix */
+#common-contents{/*for IE 5.5-7*/
+	zoom:1;
+}
+
+#common-contents:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+/*-----------------------------------------------------
+#common-contents h2
+-----------------------------------------------------*/
+#common-contents h2{
+	width:264px;
+	height:74px;
+	position:fixed;
+	top:310px;
+
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;	
+}
+
+/*-----------------------------------------------------
+#common-contents contents-navigation
+-----------------------------------------------------*/
+#common-contents nav#contents-navigation{
+	position:fixed;
+	display:block;
+	width:270px;
+	top:430px;
+	padding:0 0 75px;
+	background:url(common-contents/nav.png) left bottom no-repeat;
+}
+
+#common-contents nav#contents-navigation ul{
+	background:url(common-contents/ul.png) repeat-y #000;
+	padding:0 0 0 20px;
+}
+
+
+#common-contents nav#contents-navigation ul li{
+	background:url(common-contents/li.png) no-repeat left center;
+	border-bottom:1px dotted #f00;
+	padding:0 0 0 ;
+}
+
+#common-contents nav#contents-navigation ul li:last-child{
+	border-bottom:none;
+}
+
+#common-contents nav#contents-navigation ul li a{
+	display:block;
+	padding:0.5em 0 0.5em 18px;
+	text-decoration:none;
+	color:#fff;
+}
+
+#common-contents nav#contents-navigation ul li a:hover{
+	color:#000;
+	background:#f90;
+}
+
+/*20150128追加RUNNERSキャンペーン↓↓↓↓↓↓↓↓↓↓↓↓*/
+#common-contents nav#contents-navigation p{
+	display:block;
+	position:absolute;
+	bottom:-112px;
+	left:-13px;
+}
+/*20150128追加↑↑↑↑↑↑↑↑↑↑↑↑*/
+
+
+/*-----------------------------------------------------
+#common-contents article
+-----------------------------------------------------*/
+#common-contents article{
+	float:right;
+	width:600px;
+}
+
+
+#common-contents article article{
+	float:none;
+	width:560px;
+}
+
+
+#common-contents article h3{
+	border:3px solid #000;
+	margin:0 0 5px;
+}
+
+#common-contents .h3Wrap{
+	border:2px solid #fff;
+	background:url(common-contents/h3.png) left center no-repeat;
+	padding:0.5em 0.5em 0.5em 40px;
+	color:#fff;
+	font-weight:bold;
+}
+
+#common-contents .contensSubstance{
+	border:2px #fd7728 solid;
+	margin:0 0 5px;
+}
+
+#common-contents .divWrap{
+	border:3px #ec1600 solid;
+	background:url(common-contents/contensSubstance.png);
+	padding:15px;
+}
+
+
+/* clear fix */
+#common-contents .divWrap{/*for IE 5.5-7*/
+	zoom:1;
+}
+
+#common-contents .divWrap:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+#common-contents .clear{
+	clear:both;
+}

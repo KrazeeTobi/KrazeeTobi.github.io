@@ -1,0 +1,191 @@
+<article>
+	<h3>
+		<time>2011.11.24</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-generations_trial">TOPICS「関連商品情報」の「ソニック ジェネレーションズ 体験版」を更新！</a></li>
+		<li><a href="topics/index.html#product-iphone_application">TOPICS「関連商品情報」の「iPhone / iPod touch・iPad向けアプリ」を更新！</a></li>
+		<li><a href="topics/index.html#collaborate-bearbrick">TOPICS「コラボレーション情報」の「BE@RBRICK」を追加！</a></li>
+	</ul>
+	<h3>
+		<time>2011.11.14</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-sonic_generations">TOPICS「関連商品情報」の「ソニック ジェネレーションズ」を更新！</a></li>
+	</ul>
+	<h3>
+		<time>2011.11.11</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#event-sonic20th_campaign">TOPICS「イベントキャンペーン情報」の『ソニック20周年グッズプレゼントキャンペーン』を追加！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.11.09</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#event-segakara_melody">TOPICS「イベントキャンペーン情報」の『「セガカラMelody」キャンペーン』を更新！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.11.07</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#collaborate-toyota_tactis">TOPICS「コラボレーション情報」の「トヨタ『ラクティスUFOキャッチャー』」を追加！</a></li>
+	</ul>
+	<h3>
+		<time>2011.11.01</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-sound_track">TOPICS「関連商品情報」の「サウンドトラック」を更新！　</a></li>
+		<li><a href="topics/index.html#collaborate-miku_diva">TOPICS「コラボレーション情報」の『初音ミク -Project DIVA- extend』を更新！</a></li>
+	</ul>
+	<h3>
+		<time>2011.10.27</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#collaborate-miku_diva">TOPICS「コラボレーション情報」の『初音ミク -Project DIVA- extend』を追加！</a></li>
+	</ul>
+	<h3>
+		<time>2011.10.24</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#event-sonic_puyopuyo">TOPICS「イベントキャンペーン情報」の『「ソニック」x「ぷよぷよ」イラストコンテスト』を追加！</a></li>
+	</ul>
+	<h3>
+		<time>2011.10.19</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-sonic_generations">TOPICS「関連商品情報」の「ソニック ジェネレーションズ」を更新！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.10.14</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-sonic_guitar">TOPICS「関連商品情報」の「ソニック・ザ・ヘッジホッグギター」に追加！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.10.12</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-sound_track">TOPICS「関連商品情報」の「サウンドトラック」を更新！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.10.05</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-editmode">TOPICS「関連商品情報」に「EDITMODE」を追加！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.10.03</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-sonic_generations">TOPICS「関連商品情報」の「ソニック ジェネレーションズ」を更新！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.09.19</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-eightbit_maniacs">TOPICS「関連商品情報」の『「8BIT MANIACS」きせかえコンテンツ』を追加！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.09.14</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#event-segakara_melody">TOPICS「イベントキャンペーン情報」の『「セガカラMelody」キャンペーン』を追加！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.09.07</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#event-sonic20th_twitter">TOPICS「イベントキャンペーン情報」の『「ソニック20周年」公式Twitter』を追加！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.09.06</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#event-tokyo_game_show_2011">TOPICS「イベントキャンペーン情報」の『TOKYO GAME SHOW2011』を追加！　</a></li>
+		<li><a href="topics/index.html#product-cospa">TOPICS「関連商品情報」の「COSPA」を追加！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.09.02</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-home_sewing">TOPICS「関連商品情報」の「ホームソーイング生地」を追加！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.08.29</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-cospa">TOPICS「関連商品情報」の「COSPA」を追加！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.08.26</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-sonic_guitar">TOPICS「関連商品情報」の「ソニック・ザ・ヘッジホッグ・ギター」を追加！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.08.25</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-sonic_generations">TOPICS「関連商品情報」の「ソニック ジェネレーションズ」を更新！　</a></li>
+		<li><a href="enjoy/index.html">「おたのしみ」の「ムービー」に様々な方からお祝いメッセージをいただきました！</a></li>
+	</ul>
+	<h3>
+		<time>2011.08.09</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-sound_track">TOPICS「関連商品情報」の「サウンドトラック」を更新！　</a></li>
+		<li><a href="topics/index.html#product-sega_vintage">TOPICS「関連商品情報」の「セガビンテージコレクション」を更新！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.07.22</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-mobile_charamix">TOPICS「関連商品情報」に「『ケータイ★キャラミックス！』きせかえコンテンツ」を追加！</a></li>
+	</ul>
+	<h3>
+		<time>2011.07.14</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#event-sonic20th_twitter">TOPICS「イベントキャンペーン情報」の「「ソニック20周年」公式Twitter」を更新！</a></li>
+		<li><a href="topics/index.html#collaborate-powersmash">TOPICS「コラボレーション情報」に『パワースマッシュ4』を追加！</a></li>
+		<li><a href="enjoy/index.html">「おたのしみ」Twitterアイコン配布を開始致しました！</a></li>
+	</ul>
+	<h3>
+		<time>2011.07.07</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#event-puyosega">TOPICS「イベントキャンペーン情報」の「「★ぷよぷよ！セガ」キャンペーン」を更新！</a></li>
+	</ul>
+	<h3>
+		<time>2011.07.06</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-sega_vintage">TOPICS「関連商品情報」に「セガビンテージコレクション」を追加！</a></li>
+	</ul>
+	<h3>
+		<time>2011.07.05</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#event-sonic_tweet">ソニック20周年特別企画「Sonic★Tweet」を公開しました。</a></li>
+	</ul>
+	<h3>
+		<time>2011.06.29</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#collaborate-border_break">TOPICS「コラボレーション情報」の「ボーダーブレイク エアバースト」を更新！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.06.28</time>
+	</h3>
+	<ul>
+		<li><a href="topics/index.html#product-sound_track">TOPICS「関連商品情報」の「サウンドトラック」を更新！　</a></li>
+	</ul>
+	<h3>
+		<time>2011.06.23</time>
+	</h3>
+	<ul>
+		<li style="color:#f00;font-weight:bold;">Happy Birthday SONIC!!</li>
+		<li>「ソニック20周年」公式サイトをリニューアルしました。</li>
+	</ul>
+</article>

@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*-----------------------------------------------------
+contents-contents h2
+-----------------------------------------------------*/
+#common-contents h2{
+	background:url(common-contents/h2.png) no-repeat;
+}
+
+
+/*-----------------------------------------------------
+contents-navigation
+-----------------------------------------------------*/
+#contents-navigation ul li a{
+	font-size:x-small;
+	padding:0.2em 0 0.2em 20px;
+}
+
+#contents-navigation ul li a span{
+	font-size:x-small;
+	padding:0 0 0 1em;
+	color:#999;
+}
+#contents-navigation .paging{
+	text-align:center;
+	padding-bottom:5px;
+}
+#contents-navigation .paging *{
+	font-size:x-small;
+	padding:3px 5px;
+}
+#contents-navigation .paging span{
+	color:#666;
+	font-weight:bold;
+}
+#contents-navigation .paging .pagelink{
+}
+#contents-navigation .paging .nowlink{
+	background:#ff9900;
+	color:#000;
+}
+#contents-navigation .paging .pageno{
+	display:none;
+}
+
+/*-----------------------------------------------------
+#contens-picture
+-----------------------------------------------------*/
+#common-contents article #contens-picture{
+	width:540px;
+	padding:10px;
+	margin:0 0 1em;
+	background:#103ab9;
+}
+/* clear fix */
+#contens-picture ul{
+	zoom:1;/*for IE 5.5-7*/
+}
+#contens-picture ul:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;	
+	line-height:0; 
+	visibility:hidden;
+}
+
+#contens-picture ul li{
+	float:left;
+	padding:0 10px 0 0;
+}
+
+/*-----------------------------------------------------
+#contens-sentences
+-----------------------------------------------------*/
+#contens-sentences{
+	width:540px;
+}
+
+/*-----------------------------------------------------
+.contentsThm
+-----------------------------------------------------*/
+.contentsThm{
+	width:552px;
+	padding:8px 0px 5px 5px;
+	background:#103ab9;
+}
+
+.contentsThm:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+.contentsThm li{
+	float:left;
+	padding:0 6px 0 0;
+}
+
+
+/*-----------------------------------------------------
+.itemThm
+-----------------------------------------------------*/
+.itemThm{
+	width:560px;
+}
+
+.itemThm:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+.itemThm li{
+	float:left;
+	padding:0 10px 0 0;
+}
+
+.itemThm li a{
+	text-decoration:none;
+}
+
+.itemThm li h4{
+	display:block;
+	background:#103ab9;
+	color:#fff;
+	padding:0.5em;
+
+	
+}
+
+
