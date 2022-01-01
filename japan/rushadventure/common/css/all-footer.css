@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+#all-footer{
+	width:700px;
+	overflow:hidden;
+	margin:0 auto;
+	padding:10px 0;
+	clear:both;
+}
+
+#all-footer dl{
+	width:700px;
+	height:2em;
+	overflow:hidden;
+	text-align:center;
+}
+
+#all-footer dt,#all-footer dd{
+	/*float:left;*/
+	display:inline;
+	color:#999;
+}
+
+#all-footer dt{
+	padding:0 0 0 1em;
+}
+
+#all-footer li{
+	display:block;
+	float:left;
+}
+
+#logo-sd{
+	padding:18px 0 0 208px;
+}
+
+#logo-sr{
+	padding:18px 0 0 20px;
+}
+
+#all-footer p{
+	text-align:center;
+	font-size:x-small;
+}
+
+#all-footer p a{
+	font-size:x-small;
+}

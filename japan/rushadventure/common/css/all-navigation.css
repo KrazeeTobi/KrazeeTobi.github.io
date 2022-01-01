@@ -1,0 +1,169 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* all-navigation ===================================================== */
+#all-navigation{
+	padding:0;
+	width:195px;
+	height:525px;
+	background:url(all-navigation/div-bg.gif) no-repeat;
+	float:right;
+}
+
+#btn-contents01{
+	padding:22px 0 0 0px;
+	width:195px;
+	clear:both;
+}
+
+#btn-contents02{
+	padding:0 0 2px 0;
+	width:195px;
+	clear:both;
+}
+
+#btn-contents01 li,#btn-contents02 li{
+	float:left;
+	display:block;
+	margin:0;
+	padding:0;
+	width:195px;
+	height:30px;
+}
+
+#btn-contents01 li a,#btn-contents02 li a{
+	display:block;
+	width:195px;
+	height:30px;
+	font-size:0;
+	line-height:0;
+	text-decoration:none;
+	text-indent:-5000px;
+}
+
+/*link-none時----------------------------------------------------------*/
+
+#btn06,#btn07,#btn08,#bnr01{
+	font-size:0;
+	line-height:0;
+	text-decoration:none;
+	text-indent:-5000px;
+}
+
+/* btn out ===========================================================*/
+
+#btn01 a{
+	background:url(all-navigation/li-btn01-bg.gif) no-repeat left 0;
+}
+
+#btn02 a{
+	background:url(all-navigation/li-btn02-bg.gif) no-repeat left 0;
+}
+
+#btn03 a{
+	background:url(all-navigation/li-btn03-bg.gif) no-repeat left 0;
+}
+
+#btn04 a{
+	background:url(all-navigation/li-btn04-bg.gif) no-repeat left 0;
+}
+
+#btn05 a{
+	background:url(all-navigation/li-btn05-bg.gif) no-repeat left 0;
+}
+
+#btn06 a{
+	background:url(all-navigation/li-btn06-bg.gif) no-repeat left 0;
+}
+
+
+#btn07 a{
+	background:url(all-navigation/li-btn07-bg.gif) no-repeat left 0;
+}
+
+
+#btn08 a{
+	background:url(all-navigation/li-btn08-bg.gif) no-repeat left 0;
+}
+/*mouse linkアクティブ時*/
+
+#btn06{
+	background:url(all-navigation/li-btn06-bg.gif) no-repeat left 0;
+}
+
+#btn07{
+	background:url(all-navigation/li-btn07-bg.gif) no-repeat left 0;
+}
+
+#btn08{
+	background:url(all-navigation/li-btn08-bg.gif) no-repeat left 0;
+}	
+
+/* btn over / active===================================================*/
+#btn01 a:hover{
+	background:url(all-navigation/li-btn01-bg.gif) no-repeat left -40px;
+}
+
+#btn02 a:hover{
+	background:url(all-navigation/li-btn02-bg.gif) no-repeat left -40px;
+}
+
+#btn03 a:hover{
+	background:url(all-navigation/li-btn03-bg.gif) no-repeat left -40px;
+}
+
+#btn04 a:hover{
+	background:url(all-navigation/li-btn04-bg.gif) no-repeat left -40px;
+}
+
+
+#btn05 a:hover{
+	background:url(all-navigation/li-btn05-bg.gif) no-repeat left -40px;
+}
+
+#btn06 a:hover{
+	background:url(all-navigation/li-btn06-bg.gif) no-repeat left -40px;
+}
+
+
+#btn07 a:hover{
+	background:url(all-navigation/li-btn07-bg.gif) no-repeat left -40px;
+}
+
+
+#btn08 a:hover{
+	background:url(all-navigation/li-btn08-bg.gif) no-repeat left -40px;
+}
+/*mouse overアクティブ時*/
+
+/* banner ===========================================================*/
+
+#btn-banner{
+	padding:32px 0 0 2px;
+	clear:both;
+}
+
+#bnr01{
+	display:block;
+	width:190px;
+	height:110px;
+	padding:0 0 5px 0; 
+	background:url(all-navigation/li-bnr01-bg.gif) no-repeat;
+}
+
+#bnr02{
+	display:block;
+	width:190px;
+	height:110px;
+	background:url(all-navigation/li-bnr02-bg.gif) no-repeat;
+}
+
+#bnr01 a,#bnr02 a{
+	display:block;
+	width:190px;
+	height:110px;
+	font-size:0;
+	line-height:0;
+	text-decoration:none;
+	text-indent:-5000px;
+}

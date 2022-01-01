@@ -1,0 +1,225 @@
+/* all-substance   ===================================================== */
+
+#all-substance{
+	float:right;
+	width:580px;
+	padding:0 5px 5em 0;	
+	color:#660000;	
+}
+
+#all-substance h2{
+	margin:0;
+	padding:0;
+	line-height:0;	
+}
+
+#all-substance h3.subtitle1{
+	background:url(all-substance/h3-bg03.gif) no-repeat left center;
+	clear:both;
+
+	margin:1em 15px 1em;
+	padding:40px 0px 15px 100px;
+	
+	font-size:medium;
+	font-weight:bold;
+	color:#7e4d0d;	
+}
+
+/*=========================================================================*/
+#all-substance h3.subtitle2{
+	background:url(all-substance/h3-bg14.gif) no-repeat left center;
+	clear:both;
+
+	margin:1em 15px 1em;
+	padding:40px 0px 15px 100px;
+	
+	font-size:medium;
+	font-weight:bold;
+	color:#7e4d0d;	
+}
+
+#all-substance h3.subtitle3{
+	background:url(all-substance/h3-bg17.gif) no-repeat left center;
+	clear:both;
+
+	margin:1em 15px 1em;
+	padding:40px 0px 15px 100px;
+	
+	font-size:medium;
+	font-weight:bold;
+	color:#7e4d0d;	
+}
+
+#all-substance h3.subtitle4{
+	background:url(all-substance/h3-bg05.gif) no-repeat left center;
+	clear:both;
+
+	margin:1em 15px 1em;
+	padding:40px 0px 15px 100px;
+	
+	font-size:medium;
+	font-weight:bold;
+	color:#7e4d0d;	
+}
+
+#all-substance h3.subtitle5{
+	background:url(all-substance/h3-bg04.gif) no-repeat left center;
+	clear:both;
+
+	margin:1em 15px 1em;
+	padding:40px 0px 15px 100px;
+	
+	font-size:medium;
+	font-weight:bold;
+	color:#7e4d0d;	
+}
+
+#all-substance h3.subtitle6{
+	background:url(all-substance/h3-bg03.gif) no-repeat left center;
+	clear:both;
+
+	margin:1em 15px 1em;
+	padding:40px 0px 15px 100px;
+	
+	font-size:medium;
+	font-weight:bold;
+	color:#7e4d0d;	
+}
+/*============================================================================*/
+
+#all-substance .first{
+	margin:10px 15px 1em;
+}
+
+#all-substance p{
+	margin:0 50px 1em;
+}
+
+/*marin-link*/
+#all-substance a,#all-substance a:link,a:visited {
+	color:#0099FF;
+	text-decoration:underline;
+}
+#all-substance a:hover,#all-substance a:active {
+	color:#FF3300;
+	text-decoration:underline;
+}
+
+/* marin layout  ===================================================== */
+.columnOne{
+	display:block;
+	line-height:1em;
+	padding:0 0 0.5em 0;
+}
+
+.columnOne span{
+	display:block;
+	padding:0.3em 0 0 0;
+	font-size:85%;
+	line-height:1em;
+	color:#ffc;
+}
+
+#all-substance div.floatLeft{
+	clear:both;
+	margin:0;
+	padding:0 10px 1em 50px;
+	line-height:0;
+/*	width:250px; */
+}
+
+#all-substance div.floatRight{
+	clear:both;
+	margin:0;
+	padding:0 50px 1em 10px;
+	line-height:0;
+/*	width:250px; */
+}
+
+#all-substance div.floatLeft p,
+#all-substance div.floatRight p{
+	display:block;
+	margin:0 0 0.5em;
+	padding:0.3em 0 0 0;
+
+	font-size:85%;
+	line-height:1.2em;
+	color:#339900;
+}
+
+/* marin textcolor  ===================================================== 
+#all-substance{
+	color:#660000;
+}
+*/
+
+/* soundtrack layout  ===================================================== */
+
+div.soundtrack{
+	display:block;
+	width:550px;
+/*	padding:0 15px 0.5em; */
+	margin:0 15px 0.5em;;
+}
+
+/* for mac ie 5 */
+/*\*//*/
+div.soundtrack{
+	display:inline-table;
+}
+/**/
+
+div.soundtrack p{
+	display:block;
+	float:left;
+	margin:0;
+	padding:0 15px 0 0;
+	width:150px;
+}
+
+div.soundtrack dl{
+	display:block;
+	float:right;
+	margin:0;
+	padding:0;
+	width:390px;
+	font-size:85%;
+}
+
+
+div.soundtrack dl dt{
+	clear:both;
+	float:left;
+	margin:0;
+	padding:0;
+	width:50px;
+}
+
+div.soundtrack dl dd{
+	float:left;
+	margin:0;
+	padding:0;
+	width:340px;
+}
+
+/* Flash  ===================================================== */
+.flashcontents{
+	margin:0 34px 1em;
+}
+
+#noflash{
+	width:512px;
+	height:337px;
+	background:#485469;
+	vertical-align:bottom;
+	overflow:hidden;
+}
+
+#noflash p{
+	position:relative;
+	top:140px;
+
+	margin:0;
+	padding:0;
+	text-align:center;
+}

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* common tag   ===================================================== */
+html,body,
+div,span,
+ul,li,dl,dt,dd,
+h1,h2,h3,h4,h5,h6,
+p,a,img{
+	margin:0;
+	padding:0;
+	border:0; 
+	line-height:1.5em;
+	font-size:small;
+	font-weight:normal;
+	font-style:normal;
+	color:#663300;
+}
+
+html,body{
+	font-family:"ＭＳ Ｐゴシック", MS PGothic,  Osaka, "ヒラギノ角ゴ Pro W3", sans-serif;
+}
+
+body{
+	/*background:url(all-tag/body-bg.jpg) no-repeat top center #f9e5c4;*/
+	background:url(all-tag/body-bg.jpg) no-repeat top center #fff;
+}
+
+ul,li{
+	list-style:none;
+}
+
+a {
+	color: #0080F8;
+}
+
+a:link {
+	color: #0080F8;
+}
+
+a:visited {
+	color: #0080F8;
+}
+
+a:hover {
+	color: #0080F8;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #0080F8;
+}

@@ -1,0 +1,14 @@
+/* CSS Document */
+
+#contents-substance div{
+	clear:both;
+}
+
+#contents-substance h2{
+	height:50px;
+}
+
+#contents-substance #flash-area{
+	width:500px;
+	height:520px;
+}

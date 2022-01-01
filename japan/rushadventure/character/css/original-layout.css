@@ -1,0 +1,36 @@
+/* CSS Document */
+
+#contents-substance div{
+	clear:both;
+}
+
+#contents-substance div{
+	margin-bottom:24px;
+}
+
+#contents-substance div p{
+	display:block;
+	width:220px;
+	float:left;
+	padding-bottom:10px;
+}
+
+#contents-substance div div p{
+	margin:0 10px 0 0;
+	display:inline;
+	width:270px;
+	color:#663300;
+}
+
+#contents-substance h2{
+	height:50px;
+}
+
+.chara-right{
+	float:right;
+	width:280px;
+}
+
+.chara-right p{
+	padding-top:10px;
+}

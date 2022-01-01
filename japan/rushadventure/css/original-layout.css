@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+
+#contents-substance{
+	background:none;
+}
+
+/*ムービーエリア====================================================================*/
+#movie-area{
+	width:490px;
+	height:285px;
+	margin:5px 5px 5px 5px;
+	background:#000;
+}
+
+#movie-area p{
+	padding:2em 1em;
+	color:#fff;
+}
+
+/*バナーエリア====================================================================*/
+/*マリンの部屋*/
+#bnr03{
+	display:block;
+	width:240px;
+	height:125px;
+	float:left;
+	padding:0 0 5px 5px;
+	background:url(original-layout/cs-bnr01-bg.gif) no-repeat right 0;
+	font-size:0;
+	line-height:0;
+	text-decoration:none;
+	text-indent:-5000px;
+}
+
+/*スタッフコラム*/
+#bnr04{
+	display:block;
+	width:240px;
+	height:125px;
+	float:right;
+	padding:5px 5px 0 0;
+	background:url(original-layout/cs-bnr02-bg.gif) no-repeat left 0;
+	font-size:0;
+	line-height:0;
+	text-decoration:none;
+	text-indent:-5000px;
+}
+
+#bnr03 a,#bnr04 a{
+	display:block;
+	width:240px;
+	height:125px;
+	font-size:0;
+	line-height:0;
+	text-decoration:none;
+	text-indent:-5000px;
+}
+
+/*新着情報====================================================================*/
+
+#contents-substance h2{
+	width:490px;
+	height:40px;
+	clear:both;
+	padding:0 0 0 5px;
+	font-size:0;
+	line-height:0;
+	text-decoration:none;
+	text-indent:-5000px;
+	background:url(original-layout/h2-bg.gif) no-repeat center 0;
+}
+
+#contents-substance dl{
+	display:block;
+	width:490px;
+	padding:0 0 20px 5px;
+	background:url(original-layout/dl-bg.gif) no-repeat center bottom;
+}
+
+#contents-substance dt{
+	float:left;
+	padding:0 0 0 1.4em;
+	color:#FFF;	
+	text-align:left;
+}
+
+#contents-substance dd{
+	padding:0 1em 0 7em;
+	color:#FFF;	
+	text-align:left;
+}
+
+
+/*新着情報リンク設定*/
+#contents-substance dd a,#contents-substance dd a:link,a:visited {
+	color:#33FFFF;
+	text-decoration:underline;
+}
+#contents-substance dd a:hover,#contents-substance dd a:active {
+	color:#FF3300;
+	text-decoration:underline;
+}

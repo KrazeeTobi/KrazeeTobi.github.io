@@ -1,0 +1,24 @@
+/* CSS Document */
+
+
+
+/*dot=================================================================*/
+
+.topDotLine{
+	padding:10px 0 10px 0;
+	margin:0 0 0 15px;
+	width:550px;
+	background:url("original-layout/line_dot.gif")	no-repeat center top;
+}
+
+.bottomDotLine{
+	padding:5px 0 10px 0;
+	margin:0 0 0 15px;
+	width:550px;
+	background:url("original-layout/line_dot.gif")	no-repeat center bottom;
+}
+
+
+.topDotLine p{
+color:#11175f;
+}

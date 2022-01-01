@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+#all-header{
+	width:700px;
+	height:225px;
+	overflow:hidden;
+	margin:0 auto; 
+}
+
+#all-header ul{
+	width:700px;
+	height:60px;
+	overflow:hidden;
+}
+
+#all-header li{
+	display:block;
+	float:left;
+}
+
+#logo-sega{
+	padding:12px 0 0 10px;
+}
+
+#logo-st{
+	padding:20px 0 0 412px;
+}
+
+#logo-sc{
+	padding:20px 0 0 8px;
+}
+
+#all-header p{
+	display:block;
+	padding:18px 0 0 35px;
+}
+
+#all-header h1{
+	padding:15px 0 0 35px;	
+}

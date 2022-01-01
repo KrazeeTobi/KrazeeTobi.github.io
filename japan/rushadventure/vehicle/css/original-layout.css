@@ -1,0 +1,37 @@
+/* CSS Document */
+
+#contents-substance div{
+	padding:20px 30px 10px;
+	background:url(original-layout/div-bg.gif) no-repeat left 15px;;
+}
+
+#contents-substance div div{
+	width:440px;
+	padding:0;
+	margin:0 0 15px;
+	clear:both;
+	background:none;
+}
+
+/* clear fix */
+#contents-substance div div{
+	zoom:1;/*for IE 5.5-7*/
+}
+#contents-substance div div:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+#contents-substance div div h3{
+	width:440px;
+	margin:0 0 20px;
+}
+
+#contents-substance div div p{
+	display:block;
+	width:220px;
+	float:left;
+}
