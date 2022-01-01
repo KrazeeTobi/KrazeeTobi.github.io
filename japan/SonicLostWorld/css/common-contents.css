@@ -1,0 +1,81 @@
+/* CSS Document */
+#common-contents {
+	position: relative;
+	height: 675px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: url(../css/common-contents/common-contents.jpg) no-repeat center top;
+	opacity: 0;
+}
+
+
+
+#common-contents h1 {
+	position: absolute;
+	left: 50%;
+	top: 305px;
+	height: 87px;
+	width: 504px;
+	margin: 0 0 0 -252px;
+	z-index: 10;
+	display: none;
+}
+
+
+
+#contents-hardware {
+	position: absolute;
+	left: 50%;
+	top: 515px;
+	height: 95px;
+	width: 360px;
+	margin: 0 0 0 -180px;
+	z-index: 10;
+	display: none;
+	text-align: center;
+}
+
+#contents-hardware h2 {
+	padding: 10px 0 0;
+}
+
+
+#contents-hardware ul li {
+	padding: 0 15px 0;
+	display: inline;
+}
+
+
+#hardware-after {
+	position: absolute;
+	top: 515px;
+	height: 95px;
+	width: 100%;
+	z-index: 2;
+	display: block;
+	display: none;
+	background: #fff;
+	opacity: 0.68;
+}
+
+
+
+#contents-character {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	height: 675px;
+	width: 900px;
+	margin: 0 0 0 -450px;
+}
+
+
+#contents-character img{
+	position: absolute;
+	left: 79px;
+	top: 42px;
+	margin: 0 auto;
+	z-index: 1;
+	display: none;
+}

@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Author" content="(C) SEGA" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="keyword" content="ソニック・ザ･ヘッジホッグ4 エピソードI,SONIC THE HEADGEHOG 4 EpisodeⅠ,SONIC CHANNEL,ソニックチャンネル,SEGA,セガ,SONICTEAM,ソニックチーム,SONIC,ソニック" />
+<meta name="desctiption" content="ここは『ソニック・ザ･ヘッジホッグ4 エピソードI』公式ポータルサイトです。" />
+<title>SEGA｜ソニック・ザ･ヘッジホッグ4 エピソードI</title>
+<script src="common/js/jquery-1.4.1.min.js" type="text/javascript"></script>
+<script src="common/js/jquery.mousewheel.js" type="text/javascript"></script>
+<script src="common/js/jquery.scrollTo-min.js" type="text/javascript"></script>
+<script src="common/js/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="common/js/swfobject.js" type="text/javascript"></script>
+<script src="common/js/iepngfix.js" type="text/javascript"></script>
+<script src="common/js/jquery.colorbox-min.js" type="text/javascript"></script>
+<script src="js/import.js" type="text/javascript"></script>
+<link rel="stylesheet" href="common/css/colorbox.css" type="text/css" />
+</head>
+<body>
+<div id="common-header">
+	<p id="header-sega"><a href="http://sega.jp/"><img src="common/image/common-header_sega.gif" alt="SEGA" width="97" height="32" /></a></p>
+	<p id="header-segasammy"><a href="http://www.segasammy.co.jp/"><img src="common/image/common-header_segasammy.gif" alt="SEGA-SAMMY GROUP" width="74" height="24" /></a></p>
+	<ul>
+		<li id="header-corporate"><a href="http://sega.jp/corp/">会社情報</a></li>
+		<li id="header-contact"><a href="http://sega.jp/contact/">お問い合わせ</a></li>
+		<li id="header-sitemap"><a href="http://sega.jp/sitemap/">サイトマップ</a></li>
+	</ul>
+</div>
+<h1><a href="#contents-section01"><img src="image/h1.png" alt="ソニック・ザ･ヘッジホッグ4 エピソードI" width="362" height="278" /></a></h1>
+<div id="common-contents">
+	<div id="contents-section01">
+		<h2>サイトトップ</h2>
+		<ul class="navigationBtngation">
+			<li class="navigationBtn02"><a href="#contents-section02">ソニック4とは</a></li>
+			<li class="navigationBtn03"><a href="#contents-section03">キャラクター</a></li>
+			<li class="navigationBtn04"><a href="#contents-section04">ゾーン紹介</a></li>
+			<li class="navigationBtn05"><a href="#contents-section05">購入について</a></li>
+			<li class="navigationBtn06"><a href="#contents-section06">ギャラリー</a></li>
+		</ul>
+		<p><img src="contents-section01/image/p.png" alt="好評配信中！" width="223" height="48" /></p>
+		<dl>
+			<dt>配信日</dt>
+			<dd>好評配信中！</dd>
+			<dt>ジャンル</dt>
+			<dd>2Dアクション</dd>
+			<dt>プレイ人数</dt>
+			<dd>1人</dd>
+		</dl>
+		<div>
+			<h3>更新情報</h3>
+			<dl>
+				<dt>2012.05.15</dt>
+				<dd>Google PlayよりAndroid版配信開始！</dd>
+				<dt>2010.10.12</dt>
+				<dd><span style="color:#f00;font-weight:bold;">本日より配信！</span></dd>
+				<dd><a href="#contents-section05">購入について</a></dd>
+				<dd><a href="#contents-section06">ギャラリー追加</a></dd>
+				<dt>2010.10.05</dt>
+				<dd><a href="#contents-section03">キャラクター追加</a></dd>
+				<dd><a href="#contents-section04">ゾーン紹介追加</a></dd>
+				<dd><a href="#contents-section06">ギャラリー追加</a></dd>
+				<dt>2010.10.01</dt>
+				<dd>価格・配信日決定！</dd>
+				<dt>2010.09.24</dt>
+				<dd><a href="#contents-section03">キャラクター追加</a></dd>
+				<dd><a href="#contents-section04">ゾーン紹介追加</a></dd>
+				<dd><a href="#contents-section06">ギャラリー追加</a></dd>
+				<dt>2010.09.10</dt>
+				<dd><a href="#contents-section06">ギャラリー追加</a></dd>
+				<dt>2010.08.18</dt>
+				<dd><a href="#contents-section03">キャラクター追加</a></dd>
+				<dd><a href="#contents-section04">ゾーン紹介追加</a></dd>
+				<dd><a href="#contents-section06">ギャラリー追加</a></dd>
+				<dt>2010.05.21</dt>
+				<dd><a href="#contents-section06">ギャラリー追加「E3用ムービー」公開</a></dd>
+				<dt>2010.04.09</dt>
+				<dd>公式サイトリニューアルオープン！</dd>
+				<dt>2010.02.05</dt>
+				<dd>公式サイトオープン！</dd>
+			</dl>
+		</div>
+	</div>
+	<div id="contents-section02">
+		<h2>ソニック4とは</h2>
+		<ul class="navigationBtngation">
+			<li class="navigationBtn03"><a href="#contents-section03">キャラクター</a></li>
+			<li class="navigationBtn04"><a href="#contents-section04">ゾーン紹介</a></li>
+			<li class="navigationBtn05"><a href="#contents-section05">購入について</a></li>
+			<li class="navigationBtn06"><a href="#contents-section06">ギャラリー</a></li>
+		</ul>
+		<div class="contentsArea">
+			<p class="picFirst"><img src="contents-section02/image/pic_01.gif" alt="" width="200" height="150" /></p>
+			<p>1991年、メガドライブ用ゲームソフトとして記念すべき第一作 『ソニック・ザ・ヘッジホッグ』が誕生しました。</p>
+			<p>他に無い圧倒的なスピード感とゲーム性が多くのファンに支持され、相棒のテイルスが加わった続編『ソニック・ザ・ヘッジホッグ 2』好敵手ナックルズが登場する『ソニック・ザ・ヘッジホッグ 3』とシリーズを重ね、その壮大な物語は『ソニック・ザ・ヘッジホッグ 3』の後編にあたる『ソニック＆ナックルズ』にて大団円を迎えました。</p>
+			<p>その後もソニックは、ゲーム機の進化に合わせた様々なタイトルがリリースされていますが、1994年に完結したオリジナルシリーズは長く沈黙を保ち続けていました。</p>
+			<p>時は流れ『ソニック＆ナックルズ』から16年。<br />
+				あのソニックがついに復活します。</p>
+			<p>オリジナルシリーズ第２章、いよいよ幕開けです！ </p>
+			<p class="picSecond"><img src="contents-section02/image/pic_02.jpg" alt="" width="435" height="242" /></p>
+		</div>
+	</div>
+	<div id="contents-section03">
+		<h2>キャラクター</h2>
+		<ul class="navigationBtngation">
+			<li class="navigationBtn02"><a href="#contents-section02">ソニック4とは</a></li>
+			<li class="navigationBtn04"><a href="#contents-section04">ゾーン紹介</a></li>
+			<li class="navigationBtn05"><a href="#contents-section05">購入について</a></li>
+			<li class="navigationBtn06"><a href="#contents-section06">ギャラリー</a></li>
+		</ul>
+		<div class="contentsArea">
+			<h3 id="section03-preview">
+				<script  type="text/javascript">
+					//<![CDATA[
+						if( _agent.indexOf('iPhone') != -1 ||
+								_agent.indexOf('iPod') != -1 ||
+								_agent.indexOf('iPad') != -1) {
+							document.write('<img src="contents-section03/image/h3_character01.gif" alt="ソニック・ザ・ヘッジホッグ" width="433" height="213">');
+						}else{		
+							var so = new SWFObject("contents-section03/swf/chara_01.swf", "section03-preview", "464", "235", "9", "#ffffff");
+							so.addParam("quality", "low");
+							so.addParam("scale", "noscale");
+							so.addParam("allowScriptAccess", "always");
+							so.addParam("wmode", "transparent");
+							so.write("section03-preview");
+						}
+					//]]>
+				</script>
+				<noscript>
+				<img src="contents-section03/image/h3_character01.gif" alt="ソニック・ザ・ヘッジホッグ" width="433" height="213">
+				</noscript>
+			</h3>
+			<p>史上最速の青いハリネズミ。自由気ままが大好きで曲がった事が大キライ。<br />
+				少し短気なところもあるけれど、困った人がいると放っておけない優しさを持っている。</p>
+			<p>つかの間の平安が訪れたソニックに、再びエッグマンの魔の手が忍び寄る。<br />
+				今度の冒険もそう簡単には終わせてくれない？</p>
+		</div>
+		<h4>登場キャラクター</h4>
+		<ul id="section03-character">
+			<li id="character-navigation01"><a href="contents-section03/character_01.html">ソニック･ザ・ヘッジホッグ</a></li>
+			<li id="character-navigation02"><a href="contents-section03/character_02.html">Dr.エッグマン</a></li>
+		</ul>
+		<h4>敵キャラクター</h4>
+		<ul id="section03-enemy">
+			<li id="enemy-navigation01"><a href="contents-section03/enemy_01.html">モトラ</a></li>
+			<li id="enemy-navigation02"><a href="contents-section03/enemy_02.html">メレオン</a></li>
+			<li id="enemy-navigation03"><a href="contents-section03/enemy_03.html">ハリセンボ</a></li>
+			<li id="enemy-navigation04"><a href="contents-section03/enemy_04.html">バタバタ</a></li>
+			<li id="enemy-navigation05"><a href="contents-section03/enemy_05.html">スティンガー</a></li>
+			<li id="enemy-navigation06"><a href="contents-section03/enemy_06.html">ブクブク</a></li>
+			<li id="enemy-navigation07"><a href="contents-section03/enemy_07.html">ハロゲン</a></li>
+			<li id="enemy-navigation08"><a href="contents-section03/enemy_08.html">モグリン</a></li>
+			<li id="enemy-navigation09"><a href="contents-section03/enemy_09.html">ウニウニ</a></li>
+			<li id="enemy-navigation10"><a href="contents-section03/enemy_10.html">カマキラー</a></li>
+			<li id="enemy-navigation11"><a href="contents-section03/enemy_11.html">カニパンチ</a></li>
+		</ul>
+	</div>
+	<div id="contents-section04">
+		<h2>ゾーン紹介</h2>
+		<ul class="navigationBtngation">
+			<li class="navigationBtn02"><a href="#contents-section02">ソニック4とは</a></li>
+			<li class="navigationBtn03"><a href="#contents-section03">キャラクター</a></li>
+			<li class="navigationBtn05"><a href="#contents-section05">購入について</a></li>
+			<li class="navigationBtn06"><a href="#contents-section06">ギャラリー</a></li>
+		</ul>
+		<div class="contentsArea">
+			<h3>スプラッシュヒル</h3>
+			<p>常夏の海と緑との対比が美しい丘陵地。<br />
+				丘の上から見渡す夕焼けの景色はまさに絶景。<br />
+				滑らかな傾斜をハイスピードで駆け抜ける爽快なステージです。</p>
+			<h4 class="h4Second">スクリーンショット</h4>
+			<ul>
+				<li><a href="contents-section04/image/pic01_01.jpg" rel="screenshot"><img src="contents-section04/image/thm01_01.gif" alt="スクリーンショット01" width="100" height="56" /></a></li>
+				<li><a href="contents-section04/image/pic01_02.jpg" rel="screenshot"><img src="contents-section04/image/thm01_02.gif" alt="スクリーンショット02" width="100" height="56" /></a></li>
+				<li><a href="contents-section04/image/pic01_03.jpg" rel="screenshot"><img src="contents-section04/image/thm01_03.gif" alt="スクリーンショット03" width="100" height="56" /></a></li>
+				<li><a href="contents-section04/image/pic01_04.jpg" rel="screenshot"><img src="contents-section04/image/thm01_04.gif" alt="スクリーンショット03" width="100" height="56" /></a></li>
+				<li><a href="contents-section04/image/pic01_05.jpg" rel="screenshot"><img src="contents-section04/image/thm01_05.gif" alt="スクリーンショット01" width="100" height="56" /></a></li>
+				<li><a href="contents-section04/image/pic01_06.jpg" rel="screenshot"><img src="contents-section04/image/thm01_06.gif" alt="スクリーンショット02" width="100" height="56" /></a></li>
+				<li><a href="contents-section04/image/pic01_07.jpg" rel="screenshot"><img src="contents-section04/image/thm01_07.gif" alt="スクリーンショット03" width="100" height="56" /></a></li>
+				<li><a href="contents-section04/image/pic01_08.jpg" rel="screenshot"><img src="contents-section04/image/thm01_08.gif" alt="スクリーンショット03" width="100" height="56" /></a></li>
+			</ul>
+		</div>
+		<ul id="section04-navigation">
+			<li id="navigation-zone01"><a href="contents-section04/01.html">スプラッシュヒル</a></li>
+			<li id="navigation-zone02"><a href="contents-section04/02.html">ロストラビリンス</a></li>
+			<li id="navigation-zone03"><a href="contents-section04/03.html">カジノストリート</a></li>
+			<li id="navigation-zone04"><a href="contents-section04/04.html">マッドギア</a></li>
+		</ul>
+	</div>
+	<div id="contents-section05">
+		<h2>購入について</h2>
+		<ul class="navigationBtngation">
+			<li class="navigationBtn02"><a href="#contents-section02">ソニック4とは</a></li>
+			<li class="navigationBtn03"><a href="#contents-section03">キャラクター</a></li>
+			<li class="navigationBtn04"><a href="#contents-section04">ゾーン紹介</a></li>
+			<li class="navigationBtn06"><a href="#contents-section06">ギャラリー</a></li>
+		</ul>
+		<div>
+
+			<h3><img src="contents-section05/image/android.png" alt="Google play" width="445" height="60" /></h3>
+			<p>インターネットに接続されたAndoroidからGoogle play公式サイト<a href="https://play.google.com/store/apps/details?id=jp.com.sega.sonic4ep1&feature=search_result#?t=W251bGwsMSwxLDEsImpwLmNvbS5zZWdhLnNvbmljNGVwMSJd
+">『ソニック・ザ・ヘッジホッグ4 エピソードI』詳細ページ</a>からご購入ください。</p>
+
+			<h3><img src="contents-section05/image/iphone.png" alt="iPhone/iPod touch" width="445" height="60" /></h3>
+			<p>インターネットに接続されたiPhone、iPod touchからApp Storeで、
+またはiTunesがインストールされたパソコンでアップル公式サイト<a href="http://itunes.apple.com/jp/app/id393995839">『ソニック・ザ・ヘッジホッグ4 エピソードI』詳細ページ</a>からご購入ください。</p>
+			<h3><img src="contents-section05/image/windows.png" alt="Windows Phone" width="445" height="60" /></h3>
+			<p>インターネットに接続されたWindows PhoneからMarketplaceで、マイクロソフト公式サイト<a href="http://www.windowsphone.com/ja-JP/apps/d46de6ea-3774-e011-81d2-78e7d1fa76f8">『ソニック・ザ・ヘッジホッグ4 エピソードI』詳細ページ</a>からご購入ください。</p>
+			<h3><img src="contents-section05/image/ps3.png" alt="Playstation&reg;3" width="445" height="60" /></h3>
+			<p>インターネットに接続されたPlayStation&reg;3からPlayStation&reg;Storeでご購入ください。</p>
+			<p>購入について詳しくは、ソニー公式サイト<a href="http://www.jp.playstation.com/psn/store/korehajipss/">「PlayStation.com(Japan)｜これからはじめるPlayStation&reg;Store」ページ</a>をご確認ください。</p>
+			<h3><img src="contents-section05/image/wii.png" alt="Wii" width="445" height="60" /></h3>
+			<p>インターネットに接続されたWiiからWiiショッピングチャンネルでご購入ください。購入にはWiiポイントが必要です。</p>
+			<p>Wiiポイントおよびニンテンドーポイントプリペイド番号について詳しくは、任天堂公式サイト<a href="http://www.nintendo.co.jp/wii/shopping_ch/wii_points/">「『Wiiポイント』・『ニンテンドーポイントプリペイド番号』の購入方法」ページ</a>をご確認ください。</p>
+			<h3><img src="contents-section05/image/xbox.png" alt="Xbox360" width="445" height="60" /></h3>
+			<p>インターネットに接続されたXbox360からXbox LIVEマーケットプレースでご購入ください。
+購入にはマイクロソフトポイントが必要です。</p>
+			<p> マイクロソフトポイントについて詳しくは、マイクロソフト公式サイト<a href="http://marketplace.xbox.com/ja-JP/Product/SONIC-4-Episode-I/66acd000-77fe-1000-9115-d80258410a07">「Xbox.com | Xbox LIVE マーケットプレース - マイクロソフト ポイント」ページ</a>をご確認ください</p>
+		</div>
+	</div>
+	<div id="contents-section06">
+		<h2>ギャラリー</h2>
+		<ul class="navigationBtngation">
+			<li class="navigationBtn02"><a href="#contents-section02">ソニック4とは</a></li>
+			<li class="navigationBtn03"><a href="#contents-section03">キャラクター</a></li>
+			<li class="navigationBtn04"><a href="#contents-section04">ゾーン紹介</a></li>
+			<li class="navigationBtn05"><a href="#contents-section05">購入について</a></li>
+		</ul>
+		<div class="contentsArea">
+			<h3 id="section06-movie">Movie</h3>
+			<ul>
+				<li><a href="contents-section06/movie_07.html" rel="gallerymovie" title="iPhoneロンチトレーラー"><span class="newInfo">NEW</span><img src="contents-section06/image/mov_07.gif" width="100" height="70" alt="iPhoneロンチトレーラー" /></a></li>
+				<li><a href="contents-section06/movie_06.html" rel="gallerymovie" title="ロンチトレーラー"><span class="newInfo">NEW</span><img src="contents-section06/image/mov_06.gif" width="100" height="70" alt="ロンチトレーラー" /></a></li>			
+				<li><a href="contents-section06/movie_05.html" rel="gallerymovie" title="マッドギア"><img src="contents-section06/image/mov_05.gif" width="100" height="70" alt="マッドギア" /></a></li>
+				<li><a href="contents-section06/movie_04.html" rel="gallerymovie" title="カジノストリート"><img src="contents-section06/image/mov_04.gif" width="100" height="70" alt="カジノストリート" /></a></li>
+				<li><a href="contents-section06/movie_03.html" rel="gallerymovie" title="ロストラビリンス"><img src="contents-section06/image/mov_03.gif" width="100" height="70" alt="ロストラビリンス" /></a></li>
+				<li><a href="contents-section06/movie_02.html" rel="gallerymovie" title="E3"><img src="contents-section06/image/mov_02.gif" width="100" height="70" alt="E3" /></a></li>
+				<li><a href="contents-section06/movie_01.html" rel="gallerymovie" title="ティザー"><img src="contents-section06/image/mov_01.gif" width="100" height="70" alt="ティザー" /></a></li>
+			</ul>
+			<h3 id="section06-wall">Wallpaper</h3>
+			<ul>
+				<li><img src="contents-section06/image/wall_02.gif" width="100" height="70" alt="壁紙01" />
+					<ul>
+						<li><a href="contents-section06/image/wp02_1280x1024.zip">1280x1024</a></li>
+						<li><a href="contents-section06/image/wp02_1280x800.zip">1280x800</a></li>
+						<li><a href="contents-section06/image/wp02_1024x768.zip">1024x768</a></li>
+					</ul>
+				</li>
+				<li><img src="contents-section06/image/wall_01.gif" width="100" height="70" alt="壁紙01" />
+					<ul>
+						<li><a href="contents-section06/image/wp01_1280x1024.zip">1280x1024</a></li>
+						<li><a href="contents-section06/image/wp01_1280x800.zip">1280x800</a></li>
+						<li><a href="contents-section06/image/wp01_1024x768.zip">1024x768</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="common-footer">
+	<ul>
+		<li><a href="http://www.nintendo.co.jp/wii/wiiware/"><img src="common/image/logo_wiiware.gif" alt="WiiWare" width="150" height="43" /></a></li>
+		<li><a href="http://www.jp.playstation.com/psn/"><img src="common/image/logo_playstation.gif" alt="PlayStation&reg;Network" width="212" height="43" /></a></li>
+		<li><a href="http://www.xbox.com/ja-JP/livearcade/"><img src="common/image/logo_xboxlive.gif" alt="XBOX LIVE arcade" width="140" height="43" /></a></li>
+		<li><a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewGrouping?id=25209&amp;mt=8"><img src="common/image/logo_appstore.gif" alt="App Store" width="109" height="43" /></a></li>
+
+<li><a href="https://play.google.com"><img src="common/image/logo_google.png" alt="Android Market" width="104" height="39" /></a></li>
+		<li><a href="http://www.windowsphone.com/ja-JP/"><img src="common/image/logo_windowsphone.gif" alt="Windows Phone" width="150" height="34" /></a></li>
+		<li id="footer-sound">
+			<script  type="text/javascript">
+				//<![CDATA[
+				var so = new SWFObject("swf/sound.swf", "section06-gallery", "110", "28", "9", "#ffffff");
+				so.addParam("quality", "high");
+				so.addParam("scale", "noscale");
+				so.addParam("wmode", "transparent");
+				so.addParam("allowScriptAccess", "always");
+				so.write("footer-sound");
+			//]]>
+			</script>
+		</li>
+	</ul>
+
+<ul>
+	<li><a href="http://sonic.sega.jp/SonicChannel/"><img src="common/image/logo_sonicchannel.gif" alt="SONIC CHANNEL" width="130" height="43" /></a></li>
+		<li><a href="http://www.sonicteam.com/"><img src="common/image/logo_sonicteam.gif" alt="SONICTEAM" width="115" height="43" /></a></li>
+		<li><a href="../"><img src="common/image/logo_sonic4.gif" alt="Sonic The Hedgehog4" width="90" height="35" /></a></li>
+</ul>
+
+	<p>&copy;SEGA<br />『ソニック・ザ・ヘッジホッグ4 エピソードⅠ』公式サイトは、株式会社セガが運営しております。	[<a href="http://sega.jp/contact/soft/">本製品に関するお問い合わせはこちら</a>] </p>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-349115-24");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

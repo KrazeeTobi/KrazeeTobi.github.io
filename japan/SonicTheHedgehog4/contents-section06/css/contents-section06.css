@@ -1,0 +1,76 @@
+
+@charset "UTF-8";
+/* contents-section01   ===================================================== */
+#contents-section06{
+}
+/* —ÕŽž */
+#contents-section06 .newInfo{
+	position:absolute;
+	left:8px;
+	top:5px;
+}
+
+
+#contents-section06 h2{
+	background:url(contents-section06/h2.png);
+}
+
+* html #contents-section06 h2{
+	/*IEPINGFIX*/
+	behavior: expression(IEPNGFIX.fix(this)); 
+}
+
+
+/* h3 */
+#contents-section06 div.contentsArea h3{
+	margin:0 15px 1em;
+	width:293px;
+	height:25px;	
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;
+	clear:both;
+}
+
+
+#contents-section06 h3#section06-movie{
+	background:url(contents-section06/section06-movie.png) no-repeat;
+}
+
+#contents-section06 h3#section06-wall{
+	background:url(contents-section06/section06-wall.png) no-repeat;
+}
+
+* html #contents-section06 h3#section06-movie,
+* html #contents-section06 h3#section06-wall{
+	/*IEPINGFIX*/
+	behavior: expression(IEPNGFIX.fix(this)); 
+}
+
+
+/*ul*/
+#contents-section06 div.contentsArea ul{
+	width:420px;
+	padding:0 0 5px 14px;
+}
+
+/*li*/
+#contents-section06 div.contentsArea ul li{
+	float:left;
+	padding:0 0 5px 5px;
+	position:relative;
+}
+
+
+#contents-section06 div.contentsArea ul li ul{
+	width:100px;
+	padding:0;
+}
+
+#contents-section06 div.contentsArea ul li ul li{
+	list-style:inside disc;
+	width:100px;
+	float:none;
+	padding:0;
+}

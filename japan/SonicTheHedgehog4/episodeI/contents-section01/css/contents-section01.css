@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/* contents-section01   ===================================================== */
+#contents-section01{
+
+}
+
+
+#contents-section01 p{
+	position: absolute;
+	left: 395px;
+/*		top: 75px;*/
+	top: 125px;
+	height: 140px;
+	width: 235px;
+	padding: 5px;
+	display: block;
+}
+
+
+
+#contents-section01 dl{
+	width:245px;
+/*	height:150px;*/
+	height:178px;
+	position:absolute;
+	top:70px;
+/*		top: 75px;*/
+	left:655px;
+/*	left:525px;*/
+	background:url(contents-section01/dl.gif) no-repeat;
+	
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;	
+}
+
+
+#common-contents #contents-section01 div{
+	position: absolute;
+	left: 450px;
+	top: 310px;
+	height: 180px;
+	width: 400px;
+	padding: 0;
+	background: url(contents-section01/div_dl.png) no-repeat;
+}
+
+
+* html #contents-section01 div{
+	/*IEPINGFIX*/
+	background:url(contents-section01/div_dl_IE6.gif) no-repeat;
+}
+
+
+#contents-section01 div h3{
+	height: 35px;
+	overflow: hidden;
+	line-height: 0em;
+	text-decoration: none;
+	text-indent: -9999px;
+}
+
+
+#contents-section01 div dl{
+	position: static;
+	height: 138px;
+	width: 380px;
+	padding: 0 7px;
+	margin: 0 3px;
+	overflow: auto;
+	line-height: 1.8em;
+	text-indent: 0;
+	background: none;
+}
+
+#contents-section01 div dl dt{
+	font-weight:bold;
+	color:#fc0;
+}
+
+#contents-section01 div dl dd{
+	padding-left:0.75em;
+	background:url(contents-section01/dvi_dl_dd.gif) no-repeat 0.25em 0.8em;
+}

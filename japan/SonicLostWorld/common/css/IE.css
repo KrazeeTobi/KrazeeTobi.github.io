@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* 基本テキスト色 */
+/* 基本リンクテキスト色 */
+/* screenサイズ */
+/* ナビ左マージン*/
+/* BG サイズ*/
+#common-contents {
+  background: url(IE/common-contents.jpg) no-repeat center top;
+}
+#common-contents #impress {
+  /*------------------------------------------------------------
+  //共通
+  ------------------------------------------------------------*/
+}
+#common-contents #impress #bg {
+  display: none;
+}
+#common-contents #impress #contents-top img {
+  margin: -20px 0 0 -20px;
+}
+#common-contents #impress div.contentsWindow {
+  margin: 85px 120px;
+}

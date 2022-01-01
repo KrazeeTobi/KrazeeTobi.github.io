@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* common-class ===================================================== */
+.newInfo{
+	display:block;
+	width:33px;
+	height:12px;	
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;
+	background:url(common-class/newInfo.gif) no-repeat;
+	position:relative;
+	left:5px;
+	top:5px;
+}

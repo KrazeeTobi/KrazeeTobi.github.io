@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/* common-contents   ===================================================== */
+#common-footer {
+	position:relative;
+	width: 100%;
+	height: 110px;
+	padding-top: 95px;
+	text-align: center;
+}
+
+#common-footer ul {
+	margin: 0 auto;
+	width: 260px;
+}
+
+#common-footer ul li {
+	width: 130px;
+	float: left;
+	display: block;
+}
+
+#common-footer p {
+	clear: both;
+	font-size: 90%;
+	color: #021e73;
+}
+
+#common-footer p a {
+	font-size: small;
+}
+
+#common-footer p a,
+#common-footer p a:visited {
+	color: #ff3300;
+}
+
+#common-footer p a:hover,
+#common-footer p a:active {
+	color: #ff6600;
+}

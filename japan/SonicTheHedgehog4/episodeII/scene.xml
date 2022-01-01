@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<prml version="2.0.0" type="text/prml">
+	<scene name="game" title="ゲーム紹介" cls="SceneSwfLoad" url="game.swf" update="0" no="1">
+		<scene name="tag_action" title="タッグアクション" cls="SceneGame" url="" update="0" />
+		<scene name="coop_play" title="協力プレイ" cls="SceneGame" url="" update="0" />
+		<scene name="episode_metal" title="エピソードメタル" cls="SceneGame" url="" update="0" />
+        <scene name="special_stage" title="スペシャルステージ" cls="SceneGame" url="" update="0" />
+	</scene>
+	<scene name="story" title="ストーリー" cls="SceneSwfLoad" url="story.swf" update="0" no="2" />
+	<scene name="character" title="キャラクター" cls="SceneSwfLoad" url="character.swf" update="0" no="3">
+		<scene name="sonic" title="ソニック" cls="SceneCharacter" url="" update="0" />
+		<scene name="tails" title="テイルス" cls="SceneCharacter" url="" update="0" />
+		<scene name="eggman" title="エッグマン" cls="SceneCharacter" url="" update="0" />
+		<scene name="metal_sonic" title="メタルソニック" cls="SceneCharacter" url="" update="0" />
+		<scene name="fullboar" title="ウリボ" cls="SceneCharacter" url="enemy_01_01.swf" x="230" y="178" update="0" />
+		<scene name="chop_chop" title="ピラーナ" cls="SceneCharacter" url="enemy_01_02.swf" x="238" y="158" update="0" />
+		<scene name="zoomer" title="シューン" cls="SceneCharacter" url="enemy_01_03.swf" x="225" y="183" update="0" />
+		<scene name="steelion" title="ドドン" cls="SceneCharacter" url="enemy_02_01.swf" x="200" y="125" update="0" />
+		<scene name="spikes" title="ヤドリン" cls="SceneCharacter" url="enemy_02_02.swf" x="230" y="153" update="0" />
+		<scene name="snowy" title="ベアラ" cls="SceneCharacter" url="enemy_02_03.swf" x="180" y="101" update="0" />
+		<scene name="scarabesque" title="スカラ" cls="SceneCharacter" url="enemy_03_01.swf" x="190" y="189" update="0" />
+		<scene name="flamer" title="ボーラ" cls="SceneCharacter" url="enemy_03_02.swf" x="145" y="15" update="0" />
+		<scene name="sandworm" title="ドワーム" cls="SceneCharacter" url="enemy_03_03.swf" x="190" y="82" update="0" />
+		<scene name="balkiry" title="バルキーン" cls="SceneCharacter" url="enemy_04_01.swf" x="250" y="205" update="0" />
+		<scene name="clucker" title="コケッコー" cls="SceneCharacter" url="enemy_04_02.swf" x="245" y="143" update="0" />
+		<scene name="turtloids" title="ドースン" cls="SceneCharacter" url="enemy_04_03.swf" x="222" y="113" update="0" />
+	</scene>
+	<scene name="stage" title="ステージ" cls="SceneSwfLoad" url="stage.swf" update="0" no="4">
+		<scene name="zone1" title="ZONE1" cls="SceneStage" url="" update="0">
+			<scene name="img1" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_01_01.jpg" update="0" />
+			<scene name="img2" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_01_02.jpg" update="0" />
+			<scene name="img3" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_01_03.jpg" update="0" />
+			<scene name="img4" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_01_04.jpg" update="0" />
+			<scene name="img5" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_01_05.jpg" update="0" />
+			<scene name="img6" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_01_06.jpg" update="0" />
+			<scene name="img7" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_01_07.jpg" update="0" />
+			<scene name="img8" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_01_08.jpg" update="0" />
+			<scene name="img9" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_01_09.jpg" update="0" />
+			<scene name="img10" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_01_10.jpg" update="0" />
+			<scene name="img11" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_01_11.jpg" update="0" />
+			<scene name="img12" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_01_12.jpg" update="0" />
+		</scene>
+		<scene name="zone2" title="ZONE2" cls="SceneStage" url="" update="0">
+			<scene name="img13" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_02_01.jpg" update="0" />
+			<scene name="img14" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_02_02.jpg" update="0" />
+			<scene name="img15" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_02_03.jpg" update="0" />
+			<scene name="img16" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_02_04.jpg" update="0" />
+			<scene name="img17" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_02_05.jpg" update="0" />
+			<scene name="img18" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_02_06.jpg" update="0" />
+			<scene name="img19" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_02_07.jpg" update="0" />
+			<scene name="img20" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_02_08.jpg" update="0" />
+			<scene name="img21" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_02_09.jpg" update="0" />
+			<scene name="img22" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_02_10.jpg" update="0" />
+			<scene name="img23" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_02_11.jpg" update="0" />
+			<scene name="img24" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_02_12.jpg" update="0" />
+		</scene>
+		<scene name="zone3" title="ZONE3" cls="SceneStage" url="" update="0">
+			<scene name="img25" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_03_01.jpg" update="0" />
+			<scene name="img26" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_03_02.jpg" update="0" />
+			<scene name="img27" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_03_03.jpg" update="0" />
+			<scene name="img28" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_03_04.jpg" update="0" />
+			<scene name="img29" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_03_05.jpg" update="0" />
+			<scene name="img30" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_03_06.jpg" update="0" />
+			<scene name="img31" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_03_07.jpg" update="0" />
+			<scene name="img32" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_03_08.jpg" update="0" />
+			<scene name="img33" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_03_09.jpg" update="0" />
+			<scene name="img34" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_03_10.jpg" update="0" />
+			<scene name="img35" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_03_11.jpg" update="0" />
+			<scene name="img36" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_03_12.jpg" update="0" />
+		</scene>
+		<scene name="zone4" title="ZONE4" cls="SceneStage" url="" update="0">
+			<scene name="img37" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_04_01.jpg" update="0" />
+			<scene name="img38" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_04_02.jpg" update="0" />
+			<scene name="img39" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_04_03.jpg" update="0" />
+			<scene name="img40" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_04_04.jpg" update="0" />
+			<scene name="img41" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_04_05.jpg" update="0" />
+			<scene name="img42" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_04_06.jpg" update="0" />
+			<scene name="img43" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_04_07.jpg" update="0" />
+			<scene name="img44" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_04_08.jpg" update="0" />
+			<scene name="img45" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_04_09.jpg" update="0" />
+			<scene name="img46" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_04_10.jpg" update="0" />
+			<scene name="img47" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_04_11.jpg" update="0" />
+			<scene name="img48" title="スクリーンショット" cls="SceneImageLoad" url="stage/ss_04_12.jpg" update="0" />
+		</scene>
+	</scene>
+	<scene name="plat" title="対応機種" cls="SceneSwfLoad" url="plat.swf" update="0" no="5">
+		<scene name="ps3" title="PS3" cls="ScenePlat" url="" update="0" />
+		<scene name="xbox" title="XBOX" cls="ScenePlat" url="" update="0" />
+		<scene name="iphone" title="iPhone/iPod touch/iPad" cls="ScenePlat" url="" update="0" />
+		<scene name="android" title="Android" cls="ScenePlat" url="" update="0" />
+		<scene name="windowsphone" title="Windows Phone" cls="ScenePlat" url="" update="0" />
+	</scene>
+</prml>

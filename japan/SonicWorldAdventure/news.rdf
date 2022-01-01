@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:admin="http://webns.net/mvcb/"
+xmlns="http://purl.org/rss/1.0/">
+
+<channel rdf:about="">
+<title></title>
+<link></link>
+<description><![CDATA[]]></description>
+<dc:language>ja</dc:language>
+<dc:date>2009-04-09T00:00:00+09:00</dc:date>
+<admin:generatorAgent rdf:resource="http://www.towofu.net/soft/rsspost.php" />
+
+<items>
+<rdf:Seq>
+<rdf:li rdf:resource="" />
+<rdf:li rdf:resource="#200904070000" />
+<rdf:li rdf:resource="#200904070000" />
+<rdf:li rdf:resource="#200903310000" />
+<rdf:li rdf:resource="#200903110000" />
+<rdf:li rdf:resource="#200902270000" />
+</rdf:Seq>
+</items>
+
+</channel>
+
+<item rdf:about="">
+<title>06月12日　公式サイトを更新！</title>
+<link></link>
+<description><![CDATA[・「インフォメーション」追加！]]></description>
+<dc:date>2009-04-09T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#200904070000">
+<title>04月09日　公式サイトを更新！</title>
+<link></link>
+<description><![CDATA[・「インフォメーション」追加！]]></description>
+<dc:date>2009-04-09T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#200904070000">
+<title>04月07日　公式サイトを更新！</title>
+<link></link>
+<description><![CDATA[・「ハミだしブログ」更新！]]></description>
+<dc:date>2009-04-07T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#200903310000">
+<title>03月31日　公式サイトを更新！</title>
+<link></link>
+<description><![CDATA[・「ディレクターブログ」更新！]]></description>
+<dc:date>2009-03-31T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#200903110000">
+<title>03月11日　公式サイトを更新！</title>
+<link></link>
+<description><![CDATA[・「サウンド」追加！]]></description>
+<dc:date>2009-03-11T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#200902270000">
+<title>02月27日　公式サイトを更新！</title>
+<link></link>
+<description><![CDATA[・「ムービー」追加！]]></description>
+<dc:date>2009-02-27T00:00:00+09:00</dc:date>
+</item>
+
+</rdf:RDF>

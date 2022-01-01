@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:admin="http://webns.net/mvcb/"
+xmlns="http://purl.org/rss/1.0/">
+
+<channel rdf:about="">
+<title></title>
+<description><![CDATA[]]></description>
+<dc:language>ja</dc:language>
+<dc:date>2012-06-27T00:00:00+09:00</dc:date>
+<admin:generatorAgent rdf:resource="http://www.towofu.net/soft/rsspost.php" />
+
+<items>
+<rdf:Seq>
+<rdf:li rdf:resource="#201202270000" />
+</rdf:Seq>
+</items>
+
+</channel>
+
+<item rdf:about="#201206270000">
+<title>6月27日　Android版配信！</title>
+<description><![CDATA[Android版配信！]]></description>
+<dc:date>2012-06-27T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#201205160000">
+<title>5月16日　公式サイト更新しました！</title>
+<description><![CDATA[公式サイト更新しました！
+・[ムービー]追加！
+・[ゲーム紹介]追加！
+・[キャラクター]追加！
+・[ステージ]追加！
+・[対応機種]更新！]]></description>
+<dc:date>2012-05-16T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#201204060000">
+<title>4月6日　公式サイト更新しました！</title>
+<description><![CDATA[公式サイト更新しました！
+・[ムービー]追加！
+・[ゲーム紹介]追加！
+・[ストーリー]公開！
+・[キャラクター]追加！
+・[ステージ]追加！
+・[対応機種]追加！]]></description>
+<dc:date>2012-04-06T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#201202270000">
+<title>2月27日　公式サイトオープンしました！</title>
+<description><![CDATA[公式サイトオープンしました！
+・[ゲーム紹介]公開！
+・[キャラクター]公開！
+・[ステージ]公開！
+・[対応機種]公開！]]></description>
+<dc:date>2012-02-27T00:00:00+09:00</dc:date>
+</item>
+
+</rdf:RDF>

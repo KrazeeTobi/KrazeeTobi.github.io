@@ -1,0 +1,1474 @@
+@charset "UTF-8";
+/*よく使うmixin*/
+/* アニメーション設定 */
+@-webkit-keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@-moz-keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@-webkit-keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+@-moz-keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+@keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+/*
+
+@mixin headline01{
+	color:#fff;
+	padding:4px 0.5em 4px 38px;
+	margin:0 0 5px;
+	line-hight:0;
+	@include border-radius(5px);
+}
+
+@mixin sp-margin{
+	@include mq{
+		@if $mq-sp{
+			margin-left:5px;
+			margin-right:5px;
+		}
+	}
+}
+
+@mixin textRed{
+	color:$color-02 !important;
+}
+
+@mixin buttonOver{
+	&:hover{
+		color:$link-color-03;
+		background-position:-500px;
+
+	}
+}
+*/
+/* 基本テキスト色 */
+/* 配色・オレンジ */
+/* 配色 グレー */
+/* 配色 黄色 */
+/* 配色 赤*/
+/* 基本リンクテキスト色 */
+/* 背景色グラデーション */
+/* screenサイズ */
+/*-------------------------------------------------------
+アニメーション設定
+-------------------------------------------------------*/
+/*-------------------------------------------------------
+コンテンツ設定
+-------------------------------------------------------*/
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  header {
+    position: fixed;
+    width: 100%;
+  }
+  header Ul {
+    padding-right: 40px;
+  }
+}
+
+/*よく使うmixin*/
+/* アニメーション設定 */
+@-webkit-keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@-moz-keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@-webkit-keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+@-moz-keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+@keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+/*
+
+@mixin headline01{
+	color:#fff;
+	padding:4px 0.5em 4px 38px;
+	margin:0 0 5px;
+	line-hight:0;
+	@include border-radius(5px);
+}
+
+@mixin sp-margin{
+	@include mq{
+		@if $mq-sp{
+			margin-left:5px;
+			margin-right:5px;
+		}
+	}
+}
+
+@mixin textRed{
+	color:$color-02 !important;
+}
+
+@mixin buttonOver{
+	&:hover{
+		color:$link-color-03;
+		background-position:-500px;
+
+	}
+}
+*/
+/* 基本テキスト色 */
+/* 配色・オレンジ */
+/* 配色 グレー */
+/* 配色 黄色 */
+/* 配色 赤*/
+/* 基本リンクテキスト色 */
+/* 背景色グラデーション */
+/* screenサイズ */
+/*-------------------------------------------------------
+アニメーション設定
+-------------------------------------------------------*/
+/*-------------------------------------------------------
+コンテンツ設定
+-------------------------------------------------------*/
+nav#common-navigation {
+  position: absolute;
+  width: 100%;
+  top: 70px;
+}
+nav#common-navigation ul {
+  height: 30px;
+  background: url(common-navigation/ul.png) repeat;
+  z-index: 1200;
+  width: 100%;
+  min-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: -.40em;
+  /* 文字間を詰めて隙間を削除する */
+}
+nav#common-navigation ul li {
+  display: inline-block;
+  letter-spacing: normal;
+  /* 文字間を通常に戻す */
+  width: 179px;
+  height: 30px;
+  /*後から追加の例外処理　サイトトップページに戻る*/
+}
+nav#common-navigation ul li.comingSoon {
+  line-height: 0;
+  height: 30px;
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+nav#common-navigation ul li a {
+  line-height: 0;
+  display: block;
+  width: 180px;
+  height: 30px;
+  position: relative;
+  font-size: 0;
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background: url(common-navigation/common-navigation_li_a.png);
+}
+nav#common-navigation ul li a .newInfo {
+  /*
+  top:2px;
+  background:url(nav/newInfo.png) no-repeat left top;
+  */
+}
+nav#common-navigation ul li#navigation-sitetop a {
+  background-position: 0 0px;
+}
+nav#common-navigation ul li#navigation-sitetop a:hover {
+  background-position: 0 -30px;
+}
+nav#common-navigation ul li#navigation-sitetop.comingSoon {
+  background: url(common-navigation/common-navigation_li_a.png) 0 0;
+  display: inline-block;
+  text-align: right;
+}
+nav#common-navigation ul li#navigation-story a {
+  background-position: -180px 0px;
+}
+nav#common-navigation ul li#navigation-story a:hover {
+  background-position: -180px -30px;
+}
+nav#common-navigation ul li#navigation-story.comingSoon {
+  background: url(common-navigation/common-navigation_li_a.png) -180px 0;
+  display: inline-block;
+  text-align: right;
+}
+nav#common-navigation ul li#navigation-character a {
+  background-position: -360px 0px;
+}
+nav#common-navigation ul li#navigation-character a:hover {
+  background-position: -360px -30px;
+}
+nav#common-navigation ul li#navigation-character.comingSoon {
+  background: url(common-navigation/common-navigation_li_a.png) -360px 0;
+  display: inline-block;
+  text-align: right;
+}
+nav#common-navigation ul li#navigation-gamesystem a {
+  background-position: -540px 0px;
+}
+nav#common-navigation ul li#navigation-gamesystem a:hover {
+  background-position: -540px -30px;
+}
+nav#common-navigation ul li#navigation-gamesystem.comingSoon {
+  background: url(common-navigation/common-navigation_li_a.png) -540px 0;
+  display: inline-block;
+  text-align: right;
+}
+nav#common-navigation ul li#navigation-world a {
+  background-position: -720px 0px;
+}
+nav#common-navigation ul li#navigation-world a:hover {
+  background-position: -720px -30px;
+}
+nav#common-navigation ul li#navigation-world.comingSoon {
+  background: url(common-navigation/common-navigation_li_a.png) -720px 0;
+  display: inline-block;
+  text-align: right;
+}
+nav#common-navigation ul li#navigation-sitetop {
+  position: relative;
+}
+nav#common-navigation ul li#navigation-sitetop a {
+  height: 50px;
+  position: absolute;
+  background: none;
+  text-indent: 0;
+  overflow: visible;
+  white-space: nowrap;
+  overflow: hidden;
+}
+nav#common-navigation #navigation-memu {
+  background: url(common-navigation/common-navigation_tablet.png) no-repeat;
+  width: 25px;
+  height: 25px;
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: none;
+  cursor: pointer;
+}
+nav#common-navigation #navigation-pagetop {
+  display: none;
+  width: 45px;
+  height: 55px;
+  display: block;
+  position: fixed;
+  bottom: 0px;
+  right: 10px;
+  z-index: 1500;
+}
+nav#common-navigation #navigation-pagetop a {
+  background: url(common-navigation/navigation-pagetop.png) no-repeat;
+  display: block;
+  width: 45px;
+  height: 45px;
+  padding-bottom: 10px;
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  nav#common-navigation {
+    /*
+    */
+    position: absolute;
+    background: none;
+    top: 0;
+  }
+  nav#common-navigation ul {
+    display: none;
+    min-width: 0;
+    top: 0 !important;
+    left: 0;
+    height: 100%;
+    padding: 10px 0;
+    position: fixed;
+    margin: auto auto;
+  }
+  nav#common-navigation ul li {
+    margin: 0 auto;
+    display: block;
+  }
+  nav#common-navigation ul li.comingSoon {
+    display: block !important;
+  }
+  nav#common-navigation ul li#navigation-sitetop {
+    height: 60px;
+  }
+  nav#common-navigation ul li#navigation-sitetop a {
+    height: 50px;
+    position: absolute;
+    background: none;
+    text-indent: 0;
+    overflow: visible;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  nav#common-navigation #navigation-memu {
+    display: block;
+    position: fixed;
+    top: 3px;
+    right: 1px;
+    z-index: 2000;
+  }
+}
+
+/*よく使うmixin*/
+/* アニメーション設定 */
+@-webkit-keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@-moz-keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@-webkit-keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+@-moz-keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+@keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+/*
+
+@mixin headline01{
+	color:#fff;
+	padding:4px 0.5em 4px 38px;
+	margin:0 0 5px;
+	line-hight:0;
+	@include border-radius(5px);
+}
+
+@mixin sp-margin{
+	@include mq{
+		@if $mq-sp{
+			margin-left:5px;
+			margin-right:5px;
+		}
+	}
+}
+
+@mixin textRed{
+	color:$color-02 !important;
+}
+
+@mixin buttonOver{
+	&:hover{
+		color:$link-color-03;
+		background-position:-500px;
+
+	}
+}
+*/
+/* 基本テキスト色 */
+/* 配色・オレンジ */
+/* 配色 グレー */
+/* 配色 黄色 */
+/* 配色 赤*/
+/* 基本リンクテキスト色 */
+/* 背景色グラデーション */
+/* screenサイズ */
+/*-------------------------------------------------------
+アニメーション設定
+-------------------------------------------------------*/
+/*-------------------------------------------------------
+コンテンツ設定
+-------------------------------------------------------*/
+#common-contents h1 {
+  margin: 0;
+}
+#common-contents h1 img {
+  max-width: 100%;
+  height: auto;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #common-contents h1 {
+    padding-top: 30px;
+  }
+}
+#common-contents article {
+  clear: both;
+  margin: 0px 5px 20px;
+  padding: 0 0 0;
+  width: 890px;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #common-contents article {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+}
+#common-contents article h2 {
+  background: url(common-contents/h2.jpg) left center no-repeat;
+  padding: 13px 0 13px 25px;
+  height: 34px;
+  position: relative;
+  /* newタグ用　1014 */
+}
+#common-contents article h2 img {
+  height: 34px;
+  width: auto;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #common-contents article h2 {
+    height: 25px;
+    padding: 10px 0 10px 25px;
+  }
+  #common-contents article h2 img {
+    height: 25px;
+    width: auto;
+  }
+}
+#common-contents article h3 {
+  background: url(common-contents/h3_01.png) left top no-repeat;
+  border: 1px dotted #fff;
+  padding: 8px 0 8px 20px;
+  margin: 20px 10px 15px;
+  height: 24px;
+  position: relative;
+}
+#common-contents article h3 img {
+  height: 24px;
+  position: relative;
+  z-index: 5;
+}
+#common-contents article h3:after {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: 4;
+  content: url("common-contents/h3_after.png");
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #common-contents article h3 {
+    margin: 15px 0 10px;
+  }
+  #common-contents article h3 img {
+    height: 20px;
+    width: auto;
+  }
+}
+#common-contents article h4 {
+  background: url(common-contents/h4.png) left 5px center no-repeat #c11c2c;
+  padding: 7px 0 5px 35px;
+  font-size: medium;
+  color: white;
+  position: relative;
+  /* newタグ用　1014 */
+}
+
+/*よく使うmixin*/
+/* アニメーション設定 */
+@-webkit-keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@-moz-keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@-webkit-keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+@-moz-keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+@keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+/*
+
+@mixin headline01{
+	color:#fff;
+	padding:4px 0.5em 4px 38px;
+	margin:0 0 5px;
+	line-hight:0;
+	@include border-radius(5px);
+}
+
+@mixin sp-margin{
+	@include mq{
+		@if $mq-sp{
+			margin-left:5px;
+			margin-right:5px;
+		}
+	}
+}
+
+@mixin textRed{
+	color:$color-02 !important;
+}
+
+@mixin buttonOver{
+	&:hover{
+		color:$link-color-03;
+		background-position:-500px;
+
+	}
+}
+*/
+/* 基本テキスト色 */
+/* 配色・オレンジ */
+/* 配色 グレー */
+/* 配色 黄色 */
+/* 配色 赤*/
+/* 基本リンクテキスト色 */
+/* 背景色グラデーション */
+/* screenサイズ */
+/*-------------------------------------------------------
+アニメーション設定
+-------------------------------------------------------*/
+/*-------------------------------------------------------
+コンテンツ設定
+-------------------------------------------------------*/
+#contents-story {
+  position: relative;
+  overflow: hidden;
+}
+#contents-story .bx-viewport {
+  margin: 0;
+}
+#contents-story ul {
+  width: 100%;
+  height: 437px;
+  position: relative;
+}
+#contents-story ul li {
+  width: 100%;
+}
+#contents-story ul li img {
+  max-width: 100%;
+  height: auto;
+}
+#contents-story section {
+  position: relative;
+  z-index: 60;
+  margin: -100px auto 0;
+  padding: 1em 1em 0;
+  width: 95%;
+  border: 1px dotted #fff;
+  background: url(common-contents/div.png);
+}
+#contents-story section p {
+  font-size: 85%;
+  padding: 0 0 1em;
+  color: white;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #contents-story section {
+    margin: 0;
+    position: static;
+    width: auto;
+  }
+}
+
+/*よく使うmixin*/
+/* アニメーション設定 */
+@-webkit-keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@-moz-keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@-webkit-keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+@-moz-keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+@keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+/*
+
+@mixin headline01{
+	color:#fff;
+	padding:4px 0.5em 4px 38px;
+	margin:0 0 5px;
+	line-hight:0;
+	@include border-radius(5px);
+}
+
+@mixin sp-margin{
+	@include mq{
+		@if $mq-sp{
+			margin-left:5px;
+			margin-right:5px;
+		}
+	}
+}
+
+@mixin textRed{
+	color:$color-02 !important;
+}
+
+@mixin buttonOver{
+	&:hover{
+		color:$link-color-03;
+		background-position:-500px;
+
+	}
+}
+*/
+/* 基本テキスト色 */
+/* 配色・オレンジ */
+/* 配色 グレー */
+/* 配色 黄色 */
+/* 配色 赤*/
+/* 基本リンクテキスト色 */
+/* 背景色グラデーション */
+/* screenサイズ */
+/*-------------------------------------------------------
+アニメーション設定
+-------------------------------------------------------*/
+/*-------------------------------------------------------
+コンテンツ設定
+-------------------------------------------------------*/
+#contents-character {
+  background: url(contents-character/contents-character.jpg) no-repeat;
+}
+#contents-character:after {
+  content: ".";
+  display: block;
+  height: 0px;
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+}
+#contents-character ul:after {
+  content: ".";
+  display: block;
+  height: 0px;
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+}
+#contents-character ul li {
+  float: left;
+  margin: 0 0 0 10px;
+}
+#contents-character ul li a {
+  display: block;
+}
+#contents-character ul li a:hover img {
+  -webkit-animation: animationScale01 0.1s ease 1;
+  -moz-animation: animationScale01 0.1s ease 1;
+  animation: animationScale01 0.1s ease 1;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #contents-character ul {
+    text-align: center;
+  }
+  #contents-character ul li {
+    width: 18%;
+    margin: 0 1%;
+    float: none;
+    display: inline-block;
+  }
+  #contents-character ul li a img {
+    width: 100%;
+    height: auto;
+  }
+}
+#contents-character h3 {
+  clear: both;
+}
+
+/*よく使うmixin*/
+/* アニメーション設定 */
+@-webkit-keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@-moz-keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@-webkit-keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+@-moz-keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+@keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+/*
+
+@mixin headline01{
+	color:#fff;
+	padding:4px 0.5em 4px 38px;
+	margin:0 0 5px;
+	line-hight:0;
+	@include border-radius(5px);
+}
+
+@mixin sp-margin{
+	@include mq{
+		@if $mq-sp{
+			margin-left:5px;
+			margin-right:5px;
+		}
+	}
+}
+
+@mixin textRed{
+	color:$color-02 !important;
+}
+
+@mixin buttonOver{
+	&:hover{
+		color:$link-color-03;
+		background-position:-500px;
+
+	}
+}
+*/
+/* 基本テキスト色 */
+/* 配色・オレンジ */
+/* 配色 グレー */
+/* 配色 黄色 */
+/* 配色 赤*/
+/* 基本リンクテキスト色 */
+/* 背景色グラデーション */
+/* screenサイズ */
+/*-------------------------------------------------------
+アニメーション設定
+-------------------------------------------------------*/
+/*-------------------------------------------------------
+コンテンツ設定
+-------------------------------------------------------*/
+#contents-gamesystem {
+  background: url(contents-gamesystem/contents-gamesystem.jpg) no-repeat;
+}
+#contents-gamesystem:after {
+  content: ".";
+  display: block;
+  height: 0px;
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+}
+#contents-gamesystem > p {
+  margin: 1em;
+  font-size: 95%;
+}
+#contents-gamesystem section div {
+  clear: both;
+  margin: 0 10px 20px;
+}
+#contents-gamesystem section div:after {
+  content: ".";
+  display: block;
+  height: 0px;
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #contents-gamesystem section div {
+    margin: 0 0 10px;
+  }
+}
+#contents-gamesystem section div > div {
+  margin: 0;
+  background: url(common-contents/div.png);
+}
+#contents-gamesystem section div > div p {
+  padding: 1em;
+  font-size: 85%;
+  color: white;
+}
+#contents-gamesystem section div div + p {
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+#contents-gamesystem section div div + p .newInfo2 {
+  left: 1px;
+  top: 1px;
+  z-index: 2;
+}
+#contents-gamesystem section div div + p a {
+  display: block;
+  line-height: 0;
+}
+#contents-gamesystem section div div + p a img {
+  border: 1px dotted #000;
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #contents-gamesystem section div div + p a img {
+    width: 100%;
+    height: auto;
+  }
+}
+#contents-gamesystem section div.columnHarf div {
+  display: block;
+  width: 435px;
+  margin: 0;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #contents-gamesystem section div.columnHarf div {
+    width: 100%;
+  }
+}
+#contents-gamesystem section div.columnOneThrid div {
+  display: block;
+  width: 590px;
+  margin: 0;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #contents-gamesystem section div.columnOneThrid div {
+    width: 100%;
+  }
+}
+#contents-gamesystem section div.floatLeft div {
+  float: left;
+}
+#contents-gamesystem section div.floatLeft div + p {
+  float: right;
+}
+#contents-gamesystem section div.floatRight div {
+  float: right;
+}
+#contents-gamesystem section div.floatRight div + p {
+  float: left;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #contents-gamesystem section div.floatLeft div, #contents-gamesystem section div.floatRight div {
+    float: none;
+    height: auto;
+  }
+  #contents-gamesystem section div.floatLeft div + p, #contents-gamesystem section div.floatRight div + p {
+    float: none;
+    text-align: center;
+  }
+}
+
+/*よく使うmixin*/
+/* アニメーション設定 */
+@-webkit-keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@-moz-keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@keyframes animationScale01 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@-webkit-keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+@-moz-keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+@keyframes animationScale02 {
+  0% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+/*
+
+@mixin headline01{
+	color:#fff;
+	padding:4px 0.5em 4px 38px;
+	margin:0 0 5px;
+	line-hight:0;
+	@include border-radius(5px);
+}
+
+@mixin sp-margin{
+	@include mq{
+		@if $mq-sp{
+			margin-left:5px;
+			margin-right:5px;
+		}
+	}
+}
+
+@mixin textRed{
+	color:$color-02 !important;
+}
+
+@mixin buttonOver{
+	&:hover{
+		color:$link-color-03;
+		background-position:-500px;
+
+	}
+}
+*/
+/* 基本テキスト色 */
+/* 配色・オレンジ */
+/* 配色 グレー */
+/* 配色 黄色 */
+/* 配色 赤*/
+/* 基本リンクテキスト色 */
+/* 背景色グラデーション */
+/* screenサイズ */
+/*-------------------------------------------------------
+アニメーション設定
+-------------------------------------------------------*/
+/*-------------------------------------------------------
+コンテンツ設定
+-------------------------------------------------------*/
+#contents-world {
+  background: url(contents-world/contents-world.jpg) no-repeat;
+  /* end ul */
+}
+#contents-world:after {
+  content: ".";
+  display: block;
+  height: 0px;
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+}
+#contents-world ul {
+  margin: 20px 0 0 0;
+  /* end li */
+  /* end @if $mq-tablet */
+  /* end @include mq */
+}
+#contents-world ul:after {
+  content: ".";
+  display: block;
+  height: 0px;
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+}
+#contents-world ul li {
+  float: left;
+  margin: 0 0 0 10px;
+}
+#contents-world ul li a {
+  display: block;
+}
+#contents-world ul li a:hover img {
+  -webkit-animation: animationScale01 0.1s ease 1;
+  -moz-animation: animationScale01 0.1s ease 1;
+  animation: animationScale01 0.1s ease 1;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@media only screen and (min-width: 769px) {
+  #contents-world ul {
+    /* end @if $mq-tablet */
+  }
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #contents-world ul {
+    margin: 15px 0 0;
+    padding-bottom: 20px;
+    /* end mq-tablet li */
+    /* end @if $mq-tablet */
+  }
+  #contents-world ul li {
+    width: 31%;
+    height: auto;
+    padding: 0;
+    margin: 1% 1%;
+    /* end mq-tablet  a */
+  }
+  #contents-world ul li a {
+    display: block;
+    line-height: 0;
+  }
+  #contents-world ul li a img {
+    border: 1px dotted #000;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 1px) {
+  #contents-world ul {
+    /* end @if $mq-tablet */
+  }
+}
+
+/*
+@import "common-title";
+@import "common-navigation";
+@import "common-navibutton";
+@import "common-class";
+*/

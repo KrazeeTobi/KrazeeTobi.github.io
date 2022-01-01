@@ -1,0 +1,101 @@
+/*
+	Colorbox Core Style:
+	The following CSS is consistent between example themes and should not be altered.
+*/
+/*#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999;padding:10px 30px;
+overflow:visble;
+}
+/*#cboxWrapper {max-width:none;}*/
+#cboxWrapper {max-width:none;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+	User Style:
+	Change the following styles to modify the appearance of Colorbox.  They are
+	ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:url(colorbox/overlay.png) repeat 0 0;}
+#colorbox{outline:0;margin:20px auto;}
+	/* ボックスの端の設定ここから */
+	/* ボックス左上角 */
+	#cboxTopLeft{width:21px; height:21px; background:url(colorbox/window_edge.png) no-repeat left top;}
+	/* ボックス右上角 */
+	#cboxTopRight{width:21px; height:21px; background:url(colorbox/window_edge.png) no-repeat right top;;}
+	/* ボックス左下角 */
+	#cboxBottomLeft{width:21px; height:21px; background:url(colorbox/window_edge.png) no-repeat left bottom;;}
+	/* ボックス右下角 */
+	#cboxBottomRight{width:21px; height:21px; background:url(colorbox/window_edge.png) no-repeat right bottom;}
+	/* ボックス左辺 */
+	#cboxMiddleLeft{width:21px; background:url(colorbox/window_side.png) left top repeat-y;}
+	/* ボックス右辺 */
+	#cboxMiddleRight{width:21px; background:url(colorbox/window_side.png) right top repeat-y;}
+	/* ボックス上辺 */
+	#cboxTopCenter{height:21px; background:url(colorbox/window_horizontal.png) 21px 0 repeat-x;}
+	/* ボックス下辺 */
+	#cboxBottomCenter{height:21px; background:url(colorbox/window_horizontal.png) 0 -21px repeat-x;}
+	
+	/* 表示させるボックス自体 ここから */
+/*	#cboxContent{background:#15325e; overflow:hidden;}*/
+	#cboxContent{background:#000;}
+	/* 表示させるボックス自体 ここまで */
+	/* 必要なら調整 ここから */
+		.cboxIframe{background:#000;}
+		#cboxError{padding:50px; border:1px solid #ccc;}
+		/* ボックス内の幅 */
+		#cboxLoadedContent{margin:0;}
+		/* タイトル部分 */
+/*		#cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}*/
+		#cboxTitle{display:none;font-size:0;text-indent:-1000px;}
+		/* 下の"何番目"（2 of 3...とか）表示の表示設定 */
+/*		#cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}*/
+		#cboxCurrent{display:none;}
+		/* ローディング中の背景*/
+		#cboxLoadingOverlay{background:url(colorbox/loading_background.png) no-repeat center center;}
+		/* ローディング中*/
+		#cboxLoadingGraphic{background:url(colorbox/loading.gif) no-repeat center center;}
+
+		/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+		
+		/*戻る・進む・閉じるボタン*/
+		#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+		
+		/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+		#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+		#cboxPrevious:focus, #cboxNext:focus, #cboxSlideshow:focus, #cboxClose:focus {outline:0;}
+		
+		#cboxSlideshow{position:absolute; bottom:400px; right:30px; color:#0092ef;}
+		
+		#cboxPrevious{position:absolute; top:43%; left:-55px; background:url(colorbox/button_nextprev.png) no-repeat 0 0; width:42px; height:72px; text-indent:-9999px;}
+		#cboxPrevious:hover{background-position:0px -72px;}
+		#cboxNext{position:absolute; top:43%; right:-55px; background:url(colorbox/button_nextprev.png) no-repeat -42px 0; width:42px; height:72px; text-indent:-9999px;}
+		#cboxNext:hover{background-position:-42px -72px;}
+
+		/*閉じる*/
+		#cboxClose{position:absolute; top:-32px; right:-8px; background:url(colorbox/button_close.png) no-repeat 0 0; width:32px; height:32px; text-indent:-9999px;}
+		#cboxClose:hover{background-position:0 -32px;}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}

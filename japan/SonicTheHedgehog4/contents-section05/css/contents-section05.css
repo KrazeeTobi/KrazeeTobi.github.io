@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* contents-section05   ===================================================== */
+#contents-section05{
+}
+
+
+#contents-section05 h2{
+	background:url(contents-section05/h2.png);
+}
+
+* html #contents-section05 h2{
+	/*IEPINGFIX*/
+	behavior: expression(IEPNGFIX.fix(this)); 
+}
+
+
+
+#common-contents #contents-section05 div{
+}
+
+
+#contents-section05 h3{
+	padding:3.5em 0 0;
+	margin:0;
+	height:60px;
+}
+
+#contents-section05 h3 img{
+	padding:0;
+	margin:0;
+	line-height:0;
+}
+
+
+#contents-section05 h3:first-child{
+	padding:0;
+}
+
+#contents-section05 p{
+	margin:0 0 0 5px;
+	padding:0.5em 10px 0.5em 30px;
+	width:400px;
+}
+

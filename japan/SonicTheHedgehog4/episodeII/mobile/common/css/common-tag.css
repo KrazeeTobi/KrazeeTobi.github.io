@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* common tag   ===================================================== */
+body{
+	color: #111;  
+	font-family: ArialMT, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", メイリオ, sans-serif;  
+	line-height: 1.3em;
+}  
+
+div,span,
+ol,ul,li,dl,dt,dd,
+h1,h2,h3,h4,h5,h6,	
+p,a,img,
+table,td,th,
+blockquote{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	font-size: small;
+	font-style: normal;
+	font-weight: normal;
+	color: #111;
+}
+
+
+ul li,
+ol li {
+	list-style: none;
+}
+
+
+a,
+a:visited {
+	color: #ffcc00;
+}
+
+a:hover,
+a:active {
+	color: #ff3300;
+}
+
+
+em{
+	color:#f00;
+	font-weight:bold;
+	font-style:normal;	
+}

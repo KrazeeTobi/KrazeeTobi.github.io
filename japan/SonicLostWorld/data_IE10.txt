@@ -1,0 +1,545 @@
+<!------------------------------------------------------------
+//通常のモノとの違い
+//data-z="0"
+//data-rotate-x="0"
+-------------------------------------------------------------->
+			<!------------------------------------------------------------
+			//トップ
+			-------------------------------------------------------------->
+			<div id="contents-top" class="step basic" data-x="-3000" data-y="500" data-z="0" data-rotate="-45" data-scale="2"> <img src="image/top/main.png" width="940" height="640">
+			<a id="top-anchor01" href="#contents-wiiu-dlc0" class="contentsLink"><img src="image/top/banner.png" width="204" height="186"></a>
+			<a id="top-anchor02" href="#information-verup01" title="" ></a>
+</div>
+			<!------------------------------------------------------------
+			//ものがたり
+			-------------------------------------------------------------->
+			<div id="contents-story" class="step basic contentsWindow" data-x="750" data-y="-200" data-z="0" data-rotate="-120" data-scale="0.8" data-rotate-x="0" >
+				<h2><img src="image/story/h2.png" width="123" height="39" alt="ものがたり"></h2>
+				<div id="slideshow"> <img src="image/story/story_01.jpg" width="660" height="265" class="active"> <img src="image/story/story_02.jpg" width="660" height="265"> <img src="image/story/story_03.jpg" width="660" height="265"> <img src="image/story/story_04.jpg" width="660" height="265"> <img src="image/story/story_05.jpg" width="660" height="265"> <img src="image/story/story_06.jpg" width="660" height="265"> <img src="image/story/story_07.jpg" width="660" height="265"> <img src="image/story/story_08.jpg" width="660" height="265"> </div>
+				<div id="film-top"><img src="image/story/film.gif" width="660" height="30" alt=""></div>
+				<div id="film-bottom"><img src="image/story/film.gif" width="660" height="30" alt=""></div>
+				<div id="story-txt"><img src="image/story/story_txt.png" width="373" height="239"></div>
+			</div>
+			<!------------------------------------------------------------
+			//キャラクター
+			--------------------------------------------------------------> 
+			<!-----ソニック----->
+			<div id="contents-sonic" class="step basic contentsWindow" data-x="1600" data-y="-200" data-z="0" data-rotate="170" data-scale="0.4" data-rotate-x="0" >
+				<h2><img src="image/chara/h2.png" width="136" height="40" alt="キャラクター"></h2>
+				<img src="image/chara/chara_sonic.png" width="679" height="450" class="charaImage" alt="ソニック"> </div>
+			<!-----テイルス----->
+			<div id="contents-tails" class="step basic contentsWindow" data-x="1800" data-y="800" data-z="0" data-rotate="-70" data-scale="0.5" data-rotate-x="0" >
+				<h2><img src="image/chara/h2.png" width="136" height="40" alt="キャラクター"></h2>
+				<img src="image/chara/chara_tails.png" width="676" height="450" class="charaImage" alt="テイルス"> </div>
+			<!-----エッグマン----->
+			<div id="contents-eggman" class="step basic contentsWindow" data-x="800" data-y="900" data-z="0" data-rotate="-18" data-scale="1.2" data-rotate-x="0" >
+				<h2><img src="image/chara/h2.png" width="136" height="40" alt="キャラクター" alt="Dr.エッグマン"></h2>
+				<img src="image/chara/chara_eggman.png" width="680" height="430" class="charaImage"></div>
+			<!-----オーボット＆キューボット----->
+			<div id="contents-robot" class="step basic contentsWindow" data-x="800" data-y="1800" data-z="0" data-rotate="120" data-scale="0.9" data-rotate-x="0" >
+				<h2><img src="image/chara/h2.png" width="136" height="40" alt="キャラクター"></h2>
+				<img src="image/chara/chara_robot.png" width="680" height="422" class="charaImage" alt="オーボット＆キューボット"> </div>
+			
+			<!-----ザボック----->
+			<div id="contents-zavok" class="step basic contentsWindow contnetsRokki" data-x="-300" data-y="1000" data-z="0" data-rotate="165" data-scale="0.4" data-rotate-x="0" >
+				<h2><img src="image/chara/h2.png" width="136" height="40" alt="キャラクター"></h2>
+				<div id="rokki-zavok"><img src="image/chara/chara_rokki_01.png" width="682" height="450" class="charaImage" alt="ザボック"><a href="http://www.youtube.com/v/mTLjXBmI6YY?version=3&amp;rel=0" rel="rokki" title="ザボック 紹介動画" class="buttonMovie"></a></div>
+				<ul id="rokki-nav">
+					<li id="nav-zavok" class="selected"><a href="#contents-zavok" class="contentsLink"></a></li>
+					<li id="nav-zazz"><a href="#contents-zazz" class="contentsLink"></a></li>
+					<li id="nav-zomon"><a href="#contents-zomon" class="contentsLink"></a></li>
+					<li id="nav-zik"><a href="#contents-zik" class="contentsLink"></a></li>
+					<li id="nav-zeena"><a href="#contents-zeena" class="contentsLink"></a></li>
+					<li id="nav-zor"><a href="#contents-zor" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			
+			<!-----ザズ----->
+			<div id="contents-zazz" class="step basic contentsWindow contnetsRokki" data-x="1500" data-y="1400" data-z="0" data-rotate="75" data-scale="0.8" data-rotate-x="0" >
+				<h2><img src="image/chara/h2.png" width="136" height="40" alt="キャラクター"></h2>
+				<div id="rokki-zazz"><img src="image/chara/chara_rokki_02.png" width="682" height="450" class="charaImage" alt="ザズ"><a href="http://www.youtube.com/v/6ZLXZrWbXb0?version=3&amp;rel=0" rel="rokki" title="ザズ 紹介動画" class="buttonMovie"></a></div>
+				<ul id="rokki-nav">
+					<li id="nav-zavok"><a href="#contents-zavok" class="contentsLink"></a></li>
+					<li id="nav-zazz" class="selected"><a href="#contents-zazz" class="contentsLink"></a></li>
+					<li id="nav-zomon"><a href="#contents-zomon" class="contentsLink"></a></li>
+					<li id="nav-zik"><a href="#contents-zik" class="contentsLink"></a></li>
+					<li id="nav-zeena"><a href="#contents-zeena" class="contentsLink"></a></li>
+					<li id="nav-zor"><a href="#contents-zor" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			<!-----ゾモン----->
+			<div id="contents-zomon" class="step basic contentsWindow contnetsRokki" data-x="1450" data-y="300" data-z="0" data-rotate="17" data-scale="0.4" data-rotate-x="0" >
+				<h2><img src="image/chara/h2.png" width="136" height="40" alt="キャラクター"></h2>
+				<div id="rokki-zomon"><img src="image/chara/chara_rokki_03.png" width="682" height="450" class="charaImage" alt="ゾモン"><a href="http://www.youtube.com/v/Aq8ARtiw5WA?version=3&amp;rel=0" rel="rokki" title="ゾモン 紹介動画" class="buttonMovie"></a></div>
+				<ul id="rokki-nav">
+					<li id="nav-zavok"><a href="#contents-zavok" class="contentsLink"></a></li>
+					<li id="nav-zazz"><a href="#contents-zazz" class="contentsLink"></a></li>
+					<li id="nav-zomon" class="selected"><a href="#contents-zomon" class="contentsLink"></a></li>
+					<li id="nav-zik"><a href="#contents-zik" class="contentsLink"></a></li>
+					<li id="nav-zeena"><a href="#contents-zeena" class="contentsLink"></a></li>
+					<li id="nav-zor"><a href="#contents-zor" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			
+			<!-----ジーク----->
+			<div id="contents-zik" class="step basic contentsWindow contnetsRokki" data-x="500" data-y="450" data-z="0" data-rotate="212" data-scale="0.5" data-rotate-x="0" >
+				<h2><img src="image/chara/h2.png" width="136" height="40" alt="キャラクター"></h2>
+				<div id="rokki-zik"><img src="image/chara/chara_rokki_04.png" width="682" height="450" class="charaImage" alt="ジーク"><a href="http://www.youtube.com/v/4cXGSiEYDss?version=3&amp;rel=0" rel="rokki" title="ジーク 紹介動画" class="buttonMovie"></a></div>
+				<ul id="rokki-nav">
+					<li id="nav-zavok"><a href="#contents-zavok" class="contentsLink"></a></li>
+					<li id="nav-zazz"><a href="#contents-zazz" class="contentsLink"></a></li>
+					<li id="nav-zomon"><a href="#contents-zomon" class="contentsLink"></a></li>
+					<li id="nav-zik" class="selected"><a href="#contents-zik" class="contentsLink"></a></li>
+					<li id="nav-zeena"><a href="#contents-zeena" class="contentsLink"></a></li>
+					<li id="nav-zor"><a href="#contents-zor" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			
+			<!-----ジーナ----->
+			<div id="contents-zeena" class="step basic contentsWindow contnetsRokki" data-x="0" data-y="450" data-z="0" data-rotate="137" data-scale="0.5" data-rotate-x="0" >
+				<h2><img src="image/chara/h2.png" width="136" height="40" alt="キャラクター"></h2>
+				<div id="rokki-zeena"><img src="image/chara/chara_rokki_05.png" width="682" height="450" class="charaImage" alt="ジーナ"><a href="http://www.youtube.com/v/_-AJTW2L8sg?version=3&amp;rel=0" rel="rokki" title="ジーナ紹介動画" class="buttonMovie"></a></div>
+				<ul id="rokki-nav">
+					<li id="nav-zavok"><a href="#contents-zavok" class="contentsLink"></a></li>
+					<li id="nav-zazz"><a href="#contents-zazz" class="contentsLink"></a></li>
+					<li id="nav-zomon"><a href="#contents-zomon" class="contentsLink"></a></li>
+					<li id="nav-zik"><a href="#contents-zik" class="contentsLink"></a></li>
+					<li id="nav-zeena" class="selected"><a href="#contents-zeena" class="contentsLink"></a></li>
+					<li id="nav-zor"><a href="#contents-zor" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			
+			<!-----ゾア----->
+			<div id="contents-zor" class="step basic contentsWindow contnetsRokki" data-x="2500" data-y="1000" data-z="0" data-rotate="32" data-scale="0.9" data-rotate-x="0" >
+				<h2><img src="image/chara/h2.png" width="136" height="40" alt="キャラクター"></h2>
+				<div id="rokki-zor"><img src="image/chara/chara_rokki_06.png" width="682" height="450" class="charaImage" alt="ゾア"><a href="http://www.youtube.com/v/Fqe_SyoV3RM?version=3&amp;rel=0" rel="rokki" title="ゾア紹介動画" class="buttonMovie"></a></div>
+				<ul id="rokki-nav">
+					<li id="nav-zavok"><a href="#contents-zavok" class="contentsLink"></a></li>
+					<li id="nav-zazz"><a href="#contents-zazz" class="contentsLink"></a></li>
+					<li id="nav-zomon"><a href="#contents-zomon" class="contentsLink"></a></li>
+					<li id="nav-zik"><a href="#contents-zik" class="contentsLink"></a></li>
+					<li id="nav-zeena"><a href="#contents-zeena" class="contentsLink"></a></li>
+					<li id="nav-zor" class="selected"><a href="#contents-zor" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			<!------------------------------------------------------------
+			//Wii U版
+			--------------------------------------------------------------> 
+			<!-----アクション　基本のアクション----->
+			<div id="contents-wiiu-action" class="step basic contentsWindow" data-x="-1500" data-y="1500" data-z="0" data-rotate="0" data-scale="0.85" data-rotate-x="0" >
+				<h2><img src="image/wiiu/h2_01.png" width="225" height="41" alt="Wii U版 アクション"></h2>
+				<img src="image/wiiu/action.jpg" width="660" height="410" alt="基本のアクション" class="jpgBackground">
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/wiiu/ss_action_01.jpg" rel="wiiuAction" title="乗り越える"><img src="image/wiiu/thm_action_01.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/wiiu/ss_action_02.jpg" rel="wiiuAction" title="壁を登る"><img src="image/wiiu/thm_action_02.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/wiiu/ss_action_03.jpg" rel="wiiuAction" title="壁を走る"><img src="image/wiiu/thm_action_03.png" width="135" height="75" alt=""></a></li>
+					<li class="thm4"><a href="image/wiiu/ss_action_04.jpg" rel="wiiuAction" title="壁から壁へ跳び移る"><img src="image/wiiu/thm_action_04.png" width="135" height="75" alt=""></a></li>
+					<li class="thm5"><a href="image/wiiu/ss_action_05.jpg" rel="wiiuAction" title="キック"><img src="image/wiiu/thm_action_05.png" width="135" height="75" alt=""></a></li>
+					<li class="thm6"><a href="image/wiiu/ss_action_06.jpg" rel="wiiuAction" title="マルチロックオン"><img src="image/wiiu/thm_action_06.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonColorpower"><a href="#contents-wiiu-colorpower" class="contentsLink">カラーパワー<span class="newInfo">NEW</span></a></li>
+					<li class="buttonAction selected"><a href="#contents-wiiu-action" class="contentsLink">基本のアクション</a></li>
+				</ul>
+			</div>
+			<!-----アクション　カラーパワー----->
+			<div id="contents-wiiu-colorpower" class="step basic contentsWindow" data-x="-1300" data-y="1000" data-z="0" data-rotate="190" data-scale="0.8" data-rotate-x="0" >
+				<h2><img src="image/wiiu/h2_01.png" width="225" height="41" alt="Wii U版 アクション"></h2>
+				<img src="image/wiiu/colorpower.png" width="660" height="410" alt="カラーパワー">
+				<a href="http://www.youtube.com/v/Fqe_SyoV3RM?version=3&amp;rel=0" rel="colorWiiu" title="グリーン・ホバー紹介動画" class="buttonMovie colorOne"></a>
+				<a href="http://www.youtube.com/v/Fqe_SyoV3RM?version=3&amp;rel=0" rel="colorWiiu" title="マゼンタ・リズム紹介動画" class="buttonMovie colorTwo"></a>
+				<a href="http://www.youtube.com/v/Fqe_SyoV3RM?version=3&amp;rel=0" rel="colorWiiu" title="インディゴ・アステロイド紹介動画" class="buttonMovie colorThree"></a>
+				<a href="http://www.youtube.com/v/Fqe_SyoV3RM?version=3&amp;rel=0" rel="colorWiiu" title="イエロー・ドリル紹介動画" class="buttonMovie colorFour"></a>
+				<a href="http://www.youtube.com/v/Fqe_SyoV3RM?version=3&amp;rel=0" rel="colorWiiu" title="クリムゾン・イーグル紹介動画" class="buttonMovie colorFive"></a>
+				<a href="http://www.youtube.com/v/Fqe_SyoV3RM?version=3&amp;rel=0" rel="colorWiiu" title="オレンジ・ロケット紹介動画" class="buttonMovie colorSix"></a>
+				<a href="http://www.youtube.com/v/Fqe_SyoV3RM?version=3&amp;rel=0" rel="colorWiiu" title="シアン・レーザー紹介動画" class="buttonMovie colorSeven"></a>
+				<ul class="navSlide">
+					<li class="buttonColorpower selected"><a href="#contents-wiiu-colorpower" class="contentsLink">カラーパワー</a></li>
+					<li class="buttonAction"><a href="#contents-wiiu-action" class="contentsLink">基本のアクション</a></li>
+				</ul>
+			</div>
+			
+			<!-----特徴　2p協力プレイ----->
+			<div id="contents-wiiu-coop" class="step basic contentsWindow" data-x="-1300" data-y="400" data-z="0" data-rotate="0" data-scale="0.8" data-rotate-x="0" >
+				<h2><img src="image/wiiu/h2_03.png" width="167" height="41" alt="Wii U版の特徴"></h2>
+				<img src="image/wiiu/feature_01.png" width="660" height="430" alt="2P協力プレイ"> <a href="#contents-n3ds-tailslab" class="button2Tailslab contentsLink">テイルスラボ</a>
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/wiiu/ss_feature_coop_01.jpg" rel="wiiuCoop" title="ヘリコプター"><img src="image/wiiu/thm_feature_coop_01.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/wiiu/ss_feature_coop_02.jpg" rel="wiiuCoop" title="戦闘機"><img src="image/wiiu/thm_feature_coop_04.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/wiiu/ss_feature_coop_03.jpg" rel="wiiuCoop" title="ステルス機"><img src="image/wiiu/thm_feature_coop_03.png" width="135" height="75" alt=""></a></li>
+					<li class="thm4"><a href="image/wiiu/ss_feature_coop_04.jpg" rel="wiiuCoop" title="ホバークラフト"><img src="image/wiiu/thm_feature_coop_04.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonMiiverse"><a href="#contents-wiiu-miiverse" class="contentsLink">MiiVerse</a></li>
+					<li class="buttonRace"><a href="#contents-wiiu-race" class="contentsLink">2Pレース</a></li>
+					<li class="buttonCoop selected"><a href="#contents-wiiu-coop" class="contentsLink">2P協力プレイ</a></li>
+				</ul>
+			</div>
+			
+			<!-----特徴　2pレース----->
+			<div id="contents-wiiu-race" class="step basic contentsWindow" data-x="-700" data-y="0" data-z="0" data-rotate="190" data-scale="0.7" data-rotate-x="0" >
+				<h2><img src="image/wiiu/h2_03.png" width="167" height="41" alt="Wii U版の特徴"></h2>
+				<img src="image/wiiu/feature_02.png" width="660" height="430" alt="2Pレース">
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/wiiu/ss_feature_race_01.jpg" rel="wiiuRace" title="2Pレース（2P対戦）"><img src="image/wiiu/thm_feature_race_01.png" width="200" height="112" alt=""></a></li>
+					<li class="thm2"><a href="image/wiiu/ss_feature_race_02.jpg" rel="wiiuRace" title="2Pレース（2P対戦）"><img src="image/wiiu/thm_feature_race_02.png" width="200" height="112" alt=""></a></li>
+					<li class="thm3"><a href="image/wiiu/ss_feature_race_03.jpg" rel="wiiuRace" title="2Pレース（2P対戦）"><img src="image/wiiu/thm_feature_race_03.png" width="200" height="112" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonMiiverse"><a href="#contents-wiiu-miiverse" class="contentsLink">MiiVerse</a></li>
+					<li class="buttonRace selected"><a href="#contents-wiiu-race" class="contentsLink">2Pレース</a></li>
+					<li class="buttonCoop"><a href="#contents-wiiu-coop" class="contentsLink">2P協力プレイ</a></li>
+				</ul>
+			</div>
+			<!-----特徴　Miiverse----->
+			<div id="contents-wiiu-miiverse" class="step basic contentsWindow" data-x="-1500" data-y="-200" data-z="0" data-rotate="30" data-scale="0.4" data-rotate-x="0" >
+				<h2><img src="image/wiiu/h2_03.png" width="167" height="41" alt="Wii U版の特徴"></h2>
+				<img src="image/wiiu/feature_03.png" width="660" height="430" alt="Miiverse">
+				<a href="http://www.youtube.com/v/Fqe_SyoV3RM?version=3&amp;rel=0" rel="colormiiverse" title="ブラック・ボム紹介動画" class="buttonMovie"></a>
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/wiiu/ss_feature_miiverse_01.jpg" rel="wiiuMiiverse" title="Miiverse"><img src="image/wiiu/thm_feature_miiverse_01.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/wiiu/ss_feature_miiverse_02.jpg" rel="wiiuMiiverse" title="Miiverse"><img src="image/wiiu/thm_feature_miiverse_02.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonMiiverse selected"><a href="#contents-wiiu-miiverse" class="contentsLink">MiiVerse</a></li>
+					<li class="buttonRace"><a href="#contents-wiiu-race" class="contentsLink">2Pレース</a></li>
+					<li class="buttonCoop"><a href="#contents-wiiu-coop" class="contentsLink">2P協力プレイ</a></li>
+				</ul>
+			</div>
+			
+			<!-----ステージ　01---->
+			<div id="contents-wiiu-stage1" class="step basic contentsWindow contentsStage" data-x="-2700" data-y="-1000" data-z="0" data-rotate="20" data-scale="0.80" data-rotate-x="0" >
+				<h2><img src="image/wiiu/h2_02.png" width="204" height="41" alt="Wii U版 ステージ"></h2>
+				<img src="image/wiiu/stage_01.jpg" width="660" height="410" alt="" class="jpgBackground">
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/wiiu/ss_stage_11.jpg" rel="wiiuStage1" title="Zone1"><img src="image/wiiu/thm_stage_11.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/wiiu/ss_stage_12.jpg" rel="wiiuStage1" title="Zone2"><img src="image/wiiu/thm_stage_12.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/wiiu/ss_stage_13.jpg" rel="wiiuStage1" title="Zone3"><img src="image/wiiu/thm_stage_13.png" width="135" height="75" alt=""></a></li>
+					<li class="thm4"><a href="image/wiiu/ss_stage_14.jpg" rel="wiiuStage1" title="Zone4"><img src="image/wiiu/thm_stage_14.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonStage1 selected"><a href="#contents-wiiu-stage1" class="contentsLink"></a></li>
+					<li class="buttonStage2"><a href="#contents-wiiu-stage2" class="contentsLink"></a></li>
+					<li class="buttonStage3"><a href="#contents-wiiu-stage3" class="contentsLink"></a></li>
+					<li class="buttonStage4"><a href="#contents-wiiu-stage4" class="contentsLink"></a></li>
+					<li class="buttonStage5"><a href="#contents-wiiu-stage5" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			<!-----ステージ　02---->
+			<div id="contents-wiiu-stage2" class="step basic contentsWindow contentsStage" data-x="-2000" data-y="-1200" data-z="0" data-rotate="100" data-scale="0.80" data-rotate-x="0" >
+				<h2><img src="image/wiiu/h2_02.png" width="204" height="41" alt="Wii U版 ステージ"></h2>
+				<img src="image/wiiu/stage_02.jpg" width="660" height="410" alt="" class="jpgBackground">
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/wiiu/ss_stage_21.jpg" rel="wiiuStage2" title="Zone1"><img src="image/wiiu/thm_stage_21.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/wiiu/ss_stage_22.jpg" rel="wiiuStage2" title="Zone2"><img src="image/wiiu/thm_stage_22.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/wiiu/ss_stage_23.jpg" rel="wiiuStage2" title="Zone3"><img src="image/wiiu/thm_stage_23.png" width="135" height="75" alt=""></a></li>
+					<li class="thm4"><a href="image/wiiu/ss_stage_24.jpg" rel="wiiuStage2" title="Zone4"><img src="image/wiiu/thm_stage_24.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonStage1"><a href="#contents-wiiu-stage1" class="contentsLink"></a></li>
+					<li class="buttonStage2 selected"><a href="#contents-wiiu-stage2" class="contentsLink"></a></li>
+					<li class="buttonStage3"><a href="#contents-wiiu-stage3" class="contentsLink"></a></li>
+					<li class="buttonStage4"><a href="#contents-wiiu-stage4" class="contentsLink"></a></li>
+					<li class="buttonStage5"><a href="#contents-wiiu-stage5" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			
+			<!-----ステージ　03---->
+			<div id="contents-wiiu-stage3" class="step basic contentsWindow contentsStage" data-x="-1300" data-y="-1300" data-z="0" data-rotate="15" data-scale="0.80" data-rotate-x="0" >
+				<h2><img src="image/wiiu/h2_02.png" width="204" height="41" alt="Wii U版 ステージ"></h2>
+				<img src="image/wiiu/stage_03.jpg" width="660" height="410" alt="" class="jpgBackground">
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/wiiu/ss_stage_31.jpg" rel="wiiuStage3" title="Zone1"><img src="image/wiiu/thm_stage_31.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/wiiu/ss_stage_32.jpg" rel="wiiuStage3" title="Zone2"><img src="image/wiiu/thm_stage_32.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/wiiu/ss_stage_33.jpg" rel="wiiuStage3" title="Zone3"><img src="image/wiiu/thm_stage_33.png" width="135" height="75" alt=""></a></li>
+					<li class="thm4"><a href="image/wiiu/ss_stage_34.jpg" rel="wiiuStage3" title="Zone4"><img src="image/wiiu/thm_stage_34.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonStage1"><a href="#contents-wiiu-stage1" class="contentsLink"></a></li>
+					<li class="buttonStage2"><a href="#contents-wiiu-stage2" class="contentsLink"></a></li>
+					<li class="buttonStage3 selected"><a href="#contents-wiiu-stage3" class="contentsLink"></a></li>
+					<li class="buttonStage4"><a href="#contents-wiiu-stage4" class="contentsLink"></a></li>
+					<li class="buttonStage5"><a href="#contents-wiiu-stage5" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			
+			<!-----ステージ　04---->
+			<div id="contents-wiiu-stage4" class="step basic contentsWindow contentsStage" data-x="-800" data-y="-800" data-z="0" data-rotate="-20" data-scale="0.6" data-rotate-x="0" >
+				<h2><img src="image/wiiu/h2_02.png" width="204" height="41" alt="Wii U版 ステージ"></h2>
+				<img src="image/wiiu/stage_04.jpg" width="660" height="410" alt="" class="jpgBackground">
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/wiiu/ss_stage_41.jpg" rel="wiiuStage4" title="Zone1"><img src="image/wiiu/thm_stage_41.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/wiiu/ss_stage_42.jpg" rel="wiiuStage4" title="Zone2"><img src="image/wiiu/thm_stage_42.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/wiiu/ss_stage_43.jpg" rel="wiiuStage4" title="Zone3"><img src="image/wiiu/thm_stage_43.png" width="135" height="75" alt=""></a></li>
+					<li class="thm4"><a href="image/wiiu/ss_stage_44.jpg" rel="wiiuStage4" title="Zone4"><img src="image/wiiu/thm_stage_44.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonStage1"><a href="#contents-wiiu-stage1" class="contentsLink"></a></li>
+					<li class="buttonStage2"><a href="#contents-wiiu-stage2" class="contentsLink"></a></li>
+					<li class="buttonStage3"><a href="#contents-wiiu-stage3" class="contentsLink"></a></li>
+					<li class="buttonStage4 selected"><a href="#contents-wiiu-stage4" class="contentsLink"></a></li>
+					<li class="buttonStage5"><a href="#contents-wiiu-stage5" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			<!-----ステージ　05---->
+			<div id="contents-wiiu-stage5" class="step basic contentsWindow contentsStage" data-x="0" data-y="-500" data-z="0" data-rotate="90" data-scale="0.85" data-rotate-x="0" >
+				<h2><img src="image/wiiu/h2_02.png" width="204" height="41" alt="Wii U版 ステージ"></h2>
+				<img src="image/wiiu/stage_05.jpg" width="660" height="410" alt="" class="jpgBackground">
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/wiiu/ss_stage_51.jpg" rel="wiiuStage5" title="Zone1"><img src="image/wiiu/thm_stage_51.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/wiiu/ss_stage_52.jpg" rel="wiiuStage5" title="Zone2"><img src="image/wiiu/thm_stage_52.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/wiiu/ss_stage_53.jpg" rel="wiiuStage5" title="Zone3"><img src="image/wiiu/thm_stage_53.png" width="135" height="75" alt=""></a></li>
+					<li class="thm4"><a href="image/wiiu/ss_stage_54.jpg" rel="wiiuStage5" title="Zone4"><img src="image/wiiu/thm_stage_54.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonStage1"><a href="#contents-wiiu-stage1" class="contentsLink"></a></li>
+					<li class="buttonStage2"><a href="#contents-wiiu-stage2" class="contentsLink"></a></li>
+					<li class="buttonStage3"><a href="#contents-wiiu-stage3" class="contentsLink"></a></li>
+					<li class="buttonStage4"><a href="#contents-wiiu-stage4" class="contentsLink"></a></li>
+					<li class="buttonStage5 selected"><a href="#contents-wiiu-stage5" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			
+			<!-----DLC00---->
+			<div id="contents-wiiu-dlc0" class="step basic contentsWindow contentsDlc" data-x="400" data-y="-1500" data-z="0" data-rotate="90" data-scale="0.85" data-rotate-x="0" >
+				<h2><img src="image/wiiu/h2_04.png" width="351" height="42" alt="Wii U版 ダウンロードコンテンツ"></h2>
+				<img src="image/wiiu/dlc_00.jpg" width="660" height="410" alt="" class="jpgBackground">
+				
+			<ul class="navSlide">
+				<li class="buttonDlc0 selected"><a href="#contents-wiiu-dlc0" class="contentsLink"></a></li>
+				<li class="buttonDlc1"><a href="#contents-wiiu-dlc1" class="contentsLink"></a></li>
+				<li class="buttonDlc2"><a href="#contents-wiiu-dlc2" class="contentsLink"></a></li>
+				<li class="buttonDlc3"><a href="#contents-wiiu-dlc3" class="contentsLink"></a></li>
+			</ul>
+			</div>
+			
+			<!-----DLC01---->
+			<div id="contents-wiiu-dlc1" class="step basic contentsWindow contentsDlc" data-x="1200" data-y="-1200" data-z="0" data-rotate="30" data-scale="0.8" data-rotate-x="0" >
+				<h2><img src="image/wiiu/h2_04.png" width="351" height="42" alt="Wii U版 ダウンロードコンテンツ"></h2>
+				<img src="image/wiiu/dlc_01.jpg" width="660" height="410" alt="" class="jpgBackground">
+				
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/wiiu/ss_dlc_11.jpg" rel="wiiuDlc1" title="ナイトメア：スクリーンショット01"><img src="image/wiiu/thm_dlc_11.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/wiiu/ss_dlc_12.jpg" rel="wiiuDlc1" title="ナイトメア：スクリーンショット02"><img src="image/wiiu/thm_dlc_12.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/wiiu/ss_dlc_13.jpg" rel="wiiuDlc1" title="ナイトメア：スクリーンショット03"><img src="image/wiiu/thm_dlc_13.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonDlc0"><a href="#contents-wiiu-dlc0" class="contentsLink"></a></li>
+					<li class="buttonDlc1 selected"><a href="#contents-wiiu-dlc1" class="contentsLink"></a></li>
+					<li class="buttonDlc2"><a href="#contents-wiiu-dlc2" class="contentsLink"></a></li>
+					<li class="buttonDlc3"><a href="#contents-wiiu-dlc3" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			
+			<!-----DLC02---->
+			<div id="contents-wiiu-dlc2" class="step basic contentsWindow contentsDlc" data-x="2100" data-y="-1500" data-z="0" data-rotate="-70" data-scale="0.7" data-rotate-x="0" >
+				<h2><img src="image/wiiu/h2_04.png" width="351" height="42" alt="Wii U版 ダウンロードコンテンツ"></h2>
+				<img src="image/wiiu/dlc_02.jpg" width="660" height="410" alt="" class="jpgBackground">
+				
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/wiiu/ss_dlc_21.jpg" rel="wiiuDlc2" title="ヨッシーアイランドZONE：スクリーンショット01"><img src="image/wiiu/thm_dlc_21.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/wiiu/ss_dlc_22.jpg" rel="wiiuDlc2" title="ヨッシーアイランドZONE:スクリーンショット02"><img src="image/wiiu/thm_dlc_22.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/wiiu/ss_dlc_23.jpg" rel="wiiuDlc2" title="ヨッシーアイランドZONE:スクリーンショット03"><img src="image/wiiu/thm_dlc_23.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonDlc0"><a href="#contents-wiiu-dlc0" class="contentsLink"></a></li>
+					<li class="buttonDlc1"><a href="#contents-wiiu-dlc1" class="contentsLink"></a></li>
+					<li class="buttonDlc2 selected"><a href="#contents-wiiu-dlc2" class="contentsLink"></a></li>
+					<li class="buttonDlc3"><a href="#contents-wiiu-dlc3" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			
+			<!-----DLC03---->
+			<div id="contents-wiiu-dlc3" class="step basic contentsWindow contentsDlc" data-x="2500" data-y="-800" data-z="0" data-rotate="30" data-scale="0.85" data-rotate-x="0" >
+				<h2><img src="image/wiiu/h2_04.png" width="351" height="42" alt="Wii U版 ダウンロードコンテンツ"></h2>
+				<img src="image/wiiu/dlc_03.jpg" width="660" height="410" alt="" class="jpgBackground">
+				
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/wiiu/ss_dlc_31.jpg" rel="wiiuDlc3" title="XXX：スクリーンショット01"><img src="image/wiiu/thm_dlc_31.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/wiiu/ss_dlc_32.jpg" rel="wiiuDlc3" title="xxx：スクリーンショット02"><img src="image/wiiu/thm_dlc_32.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/wiiu/ss_dlc_33.jpg" rel="wiiuDlc3" title="xxx：スクリーンショット03"><img src="image/wiiu/thm_dlc_33.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonDlc0"><a href="#contents-wiiu-dlc0" class="contentsLink"></a></li>
+					<li class="buttonDlc1"><a href="#contents-wiiu-dlc1" class="contentsLink"></a></li>
+					<li class="buttonDlc2"><a href="#contents-wiiu-dlc2" class="contentsLink"></a></li>
+					<li class="buttonDlc3 selected"><a href="#contents-wiiu-dlc3" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			
+			<!------------------------------------------------------------
+			//nintendo3ds版
+			--------------------------------------------------------------> 
+			<!-----アクション　基本のアクション----->
+			<div id="contents-n3ds-action" class="step basic contentsWindow" data-x="-200" data-y="1500" data-z="0" data-rotate="190" data-scale="0.4" data-rotate-x="0" >
+				<h2><img src="image/n3ds/h2_01.png" width="332" height="41" alt="ニンテンドー3DS版 アクション"></h2>
+				<img src="image/n3ds/action.jpg" width="660" height="410" alt="基本のアクション" class="jpgBackground">
+				<ul class="thmList screenN3ds">
+					<li class="thm1"><a href="image/n3ds/ss_action_01.jpg" rel="n3dsAction" title="ぶら下がる"><img src="image/n3ds/thm_action_01.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/n3ds/ss_action_02.jpg" rel="n3dsAction" title="八双跳び"><img src="image/n3ds/thm_action_02.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/n3ds/ss_action_03.jpg" rel="n3dsAction" title="壁を走る"><img src="image/n3ds/thm_action_03.png" width="135" height="75" alt=""></a></li>
+					<li class="thm4"><a href="image/n3ds/ss_action_04.jpg" rel="n3dsAction" title="壁を登る"><img src="image/n3ds/thm_action_04.png" width="135" height="75" alt=""></a></li>
+					<li class="thm5"><a href="image/n3ds/ss_action_05.jpg" rel="n3dsAction" title="サマーソルト"><img src="image/n3ds/thm_action_05.png" width="135" height="75" alt=""></a></li>
+					<li class="thm6"><a href="image/n3ds/ss_action_06.jpg" rel="n3dsAction" title="ホーミングアタック"><img src="image/n3ds/thm_action_06.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonColorpower"><a href="#contents-n3ds-colorpower" class="contentsLink">カラーパワー<span class="newInfo">NEW</span></a></li>
+					<li class="buttonAction selected"><a href="#contents-n3ds-action" class="contentsLink">基本のアクション</a></li>
+				</ul>
+			</div>
+			<!-----アクション　カラーパワー----->
+			<div id="contents-n3ds-colorpower" class="step basic contentsWindow" data-x="-500" data-y="1500" data-z="0" data-rotate="450" data-scale="0.3" data-rotate-x="0" >
+				<h2><img src="image/n3ds/h2_01.png" width="332" height="41" alt="ニンテンドー3DS版 アクション"></h2>
+				<img src="image/n3ds/colorpower.png" width="681" height="420" alt="カラーパワー">
+				<a href="http://www.youtube.com/v/Fqe_SyoV3RM?version=3&amp;rel=0" rel="colorN3ds" title="インディゴ・アステロイド紹介動画" class="buttonMovie colorOne"></a>
+				<a href="http://www.youtube.com/v/Fqe_SyoV3RM?version=3&amp;rel=0" rel="colorN3ds" title="レッドバースト紹介動画" class="buttonMovie colorTwo"></a>
+				<a href="http://www.youtube.com/v/Fqe_SyoV3RM?version=3&amp;rel=0" rel="colorN3ds" title="シアン・レーザー紹介動画" class="buttonMovie colorThree"></a>
+				<a href="http://www.youtube.com/v/Fqe_SyoV3RM?version=3&amp;rel=0" rel="colorN3ds" title="イエロー・ドリル紹介動画" class="buttonMovie colorFour"></a>
+				<a href="http://www.youtube.com/v/Fqe_SyoV3RM?version=3&amp;rel=0" rel="colorN3ds" title="グレイ・クエイク紹介動画" class="buttonMovie colorFive"></a>
+				<a href="http://www.youtube.com/v/Fqe_SyoV3RM?version=3&amp;rel=0" rel="colorN3ds" title="アイボリー・ライトニング紹介動画" class="buttonMovie colorSix"></a>
+				<ul class="navSlide">
+					<li class="buttonColorpower selected"><a href="#contents-n3ds-colorpower" class="contentsLink">カラーパワー</a></li>
+					<li class="buttonAction"><a href="#contents-n3ds-action" class="contentsLink">基本のアクション</a></li>
+				</ul>
+			</div>
+			
+			<!-----特徴　テイルスラボ----->
+			<div id="contents-n3ds-tailslab" class="step basic contentsWindow" data-x="-500" data-y="500" data-z="0" data-rotate="75" data-scale="0.4" data-rotate-x="0" >
+				<h2><img src="image/n3ds/h2_01.png" width="332" height="41" alt="ニンテンドー3DS版の特徴"></h2>
+				<img src="image/n3ds/feature_01.png" width="660" height="430" alt="テイルスラボ"> <a href="#contents-wiiu-coop" class="button2Coop contentsLink">ラジコン</a>
+				<ul class="thmList screenN3ds">
+					<li class="thm1"><a href="image/n3ds/ss_feature_tails_01.jpg" rel="n3dsTailslab" title="テイルスラボ"><img src="image/n3ds/thm_feature_tails_01.png" width="200" height="112" alt=""></a></li>
+					<li class="thm2"><a href="image/n3ds/ss_feature_tails_02.jpg" rel="n3dsTailslab" title="ラジコン"><img src="image/n3ds/thm_feature_tails_02.png" width="200" height="112" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonSpecial"><a href="#contents-n3ds-special" class="contentsLink">スペシャルステージ</a></li>
+					<li class="buttonConfront"><a href="#contents-n3ds-confront" class="contentsLink">2P対戦</a></li>
+					<li class="buttonTailslab selected"><a href="#contents-n3ds-tailslab" class="contentsLink">テイルスラボ</a></li>
+				</ul>
+			</div>
+			
+			<!-----特徴　対戦----->
+			<div id="contents-n3ds-confront" class="step basic contentsWindow" data-x="150" data-y="1200" data-z="0" data-rotate="250" data-scale="0.6" data-rotate-x="0" >
+				<h2><img src="image/n3ds/h2_01.png" width="332" height="41" alt="ニンテンドー3DS版の特徴"></h2>
+				<img src="image/n3ds/feature_02.png" width="660" height="430" alt="対戦プレイ">
+				<ul class="thmList screenN3ds">
+					<li class="thm1"><a href="image/n3ds/ss_feature_confront_01.jpg" rel="n3dsConfront" title="レース"><img src="image/n3ds/thm_feature_confront_01.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/n3ds/ss_feature_confront_02.jpg" rel="n3dsConfront" title="バトル"><img src="image/n3ds/thm_feature_confront_02.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/n3ds/ss_feature_confront_03.jpg" rel="n3dsConfront" title="スペシャルステージ"><img src="image/n3ds/thm_feature_confront_03.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonSpecial"><a href="#contents-n3ds-special" class="contentsLink">スペシャルステージ</a></li>
+					<li class="buttonConfront selected"><a href="#contents-n3ds-confront" class="contentsLink">2P対戦</a></li>
+					<li class="buttonTailslab"><a href="#contents-n3ds-tailslab" class="contentsLink">テイルスラボ</a></li>
+				</ul>
+			</div>
+			<!-----特徴　スペシャルステージ----->
+			<div id="contents-n3ds-special" class="step basic contentsWindow" data-x="-2100" data-y="1200" data-z="0" data-rotate="190" data-scale="0.6" data-rotate-x="0" >
+				<h2><img src="image/n3ds/h2_01.png" width="332" height="41" alt="ニンテンドー3DS版の特徴"></h2>
+				<img src="image/n3ds/feature_03.png" width="660" height="430" alt="スペシャルステージ">
+				<ul class="thmList screenN3ds">
+					<li class="thm1"><a href="image/n3ds/ss_feature_special_01.jpg" rel="n3dsSpecieal" title="スペシャルステージ"><img src="image/n3ds/thm_feature_special_01.png" width="200" height="112" alt=""></a></li>
+					<li class="thm2"><a href="image/n3ds/ss_feature_special_02.jpg" rel="n3dsSpecieal" title="スペシャルステージ"><img src="image/n3ds/thm_feature_special_02.png" width="200" height="112" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonSpecial selected"><a href="#contents-n3ds-special" class="contentsLink">スペシャルステージ</a></li>
+					<li class="buttonConfront"><a href="#contents-n3ds-confront" class="contentsLink">2P対戦</a></li>
+					<li class="buttonTailslab"><a href="#contents-n3ds-tailslab" class="contentsLink">テイルスラボ</a></li>
+				</ul>
+			</div>
+
+			<!-----ステージ　01---->
+			<div id="contents-n3ds-stage1" class="step basic contentsWindow contentsStage" data-x="-4500" data-y="-2100" data-z="0" data-rotate="50" data-scale="0.85" data-rotate-x="0" >
+				<h2><img src="image/n3ds/h2_02.png" width="311" height="41" alt="ニンテンドー3DS版 ステージ"></h2>
+				<img src="image/n3ds/stage_01.jpg" width="660" height="410" alt="" class="jpgBackground">
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/n3ds/ss_stage_11.jpg" rel="n3dsStage1" title="Zone1"><img src="image/n3ds/thm_stage_11.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/n3ds/ss_stage_12.jpg" rel="n3dsStage1" title="Zone2"><img src="image/n3ds/thm_stage_12.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/n3ds/ss_stage_13.jpg" rel="n3dsStage1" title="Zone3"><img src="image/n3ds/thm_stage_13.png" width="135" height="75" alt=""></a></li>
+					<li class="thm4"><a href="image/n3ds/ss_stage_14.jpg" rel="n3dsStage1" title="Zone4"><img src="image/n3ds/thm_stage_14.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonStage1 selected"><a href="#contents-n3ds-stage1" class="contentsLink"></a></li>
+					<li class="buttonStage2"><a href="#contents-n3ds-stage2" class="contentsLink"></a></li>
+					<li class="buttonStage3"><a href="#contents-n3ds-stage3" class="contentsLink"></a></li>
+					<li class="buttonStage4"><a href="#contents-n3ds-stage4" class="contentsLink"></a></li>
+					<li class="buttonStage5"><a href="#contents-n3ds-stage5" class="contentsLink"></a></li>
+				</ul>
+			</div>
+					
+			<!-----ステージ　02---->
+			<div id="contents-n3ds-stage2" class="step basic contentsWindow contentsStage" data-x="-3800" data-y="-2000" data-z="0" data-rotate="0" data-scale="0.80" data-rotate-x="0" >
+				<h2><img src="image/n3ds/h2_02.png" width="311" height="41" alt="ニンテンドー3DS版 ステージ"></h2>
+				<img src="image/n3ds/stage_02.jpg" width="660" height="410" alt="" class="jpgBackground">
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/n3ds/ss_stage_21.jpg" rel="n3dsStage2" title="Zone1"><img src="image/n3ds/thm_stage_21.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/n3ds/ss_stage_22.jpg" rel="n3dsStage2" title="Zone2"><img src="image/n3ds/thm_stage_22.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/n3ds/ss_stage_23.jpg" rel="n3dsStage2" title="Zone3"><img src="image/n3ds/thm_stage_23.png" width="135" height="75" alt=""></a></li>
+					<li class="thm4"><a href="image/n3ds/ss_stage_24.jpg" rel="n3dsStage2" title="Zone4"><img src="image/n3ds/thm_stage_24.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonStage1"><a href="#contents-n3ds-stage1" class="contentsLink"></a></li>
+					<li class="buttonStage2 selected"><a href="#contents-n3ds-stage2" class="contentsLink"></a></li>
+					<li class="buttonStage3"><a href="#contents-n3ds-stage3" class="contentsLink"></a></li>
+					<li class="buttonStage4"><a href="#contents-n3ds-stage4" class="contentsLink"></a></li>
+					<li class="buttonStage5"><a href="#contents-n3ds-stage5" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			
+			<!-----ステージ　03---->
+			<div id="contents-n3ds-stage3" class="step basic contentsWindow contentsStage" data-x="-3200" data-y="-2100" data-z="0" data-rotate="-50" data-scale="0.85" data-rotate-x="0" >
+				<h2><img src="image/n3ds/h2_02.png" width="311" height="41" alt="ニンテンドー3DS版 ステージ"></h2>
+				<img src="image/n3ds/stage_03.jpg" width="660" height="410" alt="" class="jpgBackground">
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/n3ds/ss_stage_31.jpg" rel="n3dsStage3" title="Zone1"><img src="image/n3ds/thm_stage_31.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/n3ds/ss_stage_32.jpg" rel="n3dsStage3" title="Zone2"><img src="image/n3ds/thm_stage_32.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/n3ds/ss_stage_33.jpg" rel="n3dsStage3" title="Zone3"><img src="image/n3ds/thm_stage_33.png" width="135" height="75" alt=""></a></li>
+					<li class="thm4"><a href="image/n3ds/ss_stage_34.jpg" rel="n3dsStage3" title="Zone4"><img src="image/n3ds/thm_stage_34.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonStage1"><a href="#contents-n3ds-stage1" class="contentsLink"></a></li>
+					<li class="buttonStage2"><a href="#contents-n3ds-stage2" class="contentsLink"></a></li>
+					<li class="buttonStage3 selected"><a href="#contents-n3ds-stage3" class="contentsLink"></a></li>
+					<li class="buttonStage4"><a href="#contents-n3ds-stage4" class="contentsLink"></a></li>
+					<li class="buttonStage5"><a href="#contents-n3ds-stage5" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			
+			<!-----ステージ　04---->
+			<div id="contents-n3ds-stage4" class="step basic contentsWindow contentsStage" data-x="-2600" data-y="-1900" data-z="0" data-rotate="90" data-scale="0.75" data-rotate-x="0" >
+				<h2><img src="image/n3ds/h2_02.png" width="311" height="41" alt="ニンテンドー3DS版 ステージ"></h2>
+				<img src="image/n3ds/stage_04.jpg" width="660" height="410" alt="" class="jpgBackground">
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/n3ds/ss_stage_41.jpg" rel="n3dsStage4" title="Zone1"><img src="image/n3ds/thm_stage_41.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/n3ds/ss_stage_42.jpg" rel="n3dsStage4" title="Zone2"><img src="image/n3ds/thm_stage_42.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/n3ds/ss_stage_43.jpg" rel="n3dsStage4" title="Zone3"><img src="image/n3ds/thm_stage_43.png" width="135" height="75" alt=""></a></li>
+					<li class="thm4"><a href="image/n3ds/ss_stage_44.jpg" rel="n3dsStage4" title="Zone4"><img src="image/n3ds/thm_stage_44.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonStage1"><a href="#contents-n3ds-stage1" class="contentsLink"></a></li>
+					<li class="buttonStage2"><a href="#contents-n3ds-stage2" class="contentsLink"></a></li>
+					<li class="buttonStage3"><a href="#contents-n3ds-stage3" class="contentsLink"></a></li>
+					<li class="buttonStage4 selected"><a href="#contents-n3ds-stage4" class="contentsLink"></a></li>
+					<li class="buttonStage5"><a href="#contents-n3ds-stage5" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			<!-----ステージ　05---->
+			<div id="contents-n3ds-stage5" class="step basic contentsWindow contentsStage" data-x="-1800" data-y="-2100" data-z="0" data-rotate="-15" data-scale="0.9" data-rotate-x="0" >
+				<h2><img src="image/n3ds/h2_02.png" width="311" height="41" alt="ニンテンドー3DS版 ステージ"></h2>
+				<img src="image/n3ds/stage_05.jpg" width="660" height="410" alt="" class="jpgBackground">
+				<ul class="thmList screenWiiu">
+					<li class="thm1"><a href="image/n3ds/ss_stage_51.jpg" rel="n3dsStage5" title="Zone1"><img src="image/n3ds/thm_stage_51.png" width="135" height="75" alt=""></a></li>
+					<li class="thm2"><a href="image/n3ds/ss_stage_52.jpg" rel="n3dsStage5" title="Zone2"><img src="image/n3ds/thm_stage_52.png" width="135" height="75" alt=""></a></li>
+					<li class="thm3"><a href="image/n3ds/ss_stage_53.jpg" rel="n3dsStage5" title="Zone3"><img src="image/n3ds/thm_stage_53.png" width="135" height="75" alt=""></a></li>
+					<li class="thm4"><a href="image/n3ds/ss_stage_54.jpg" rel="n3dsStage5" title="Zone4"><img src="image/n3ds/thm_stage_54.png" width="135" height="75" alt=""></a></li>
+				</ul>
+				<ul class="navSlide">
+					<li class="buttonStage1"><a href="#contents-n3ds-stage1" class="contentsLink"></a></li>
+					<li class="buttonStage2"><a href="#contents-n3ds-stage2" class="contentsLink"></a></li>
+					<li class="buttonStage3"><a href="#contents-n3ds-stage3" class="contentsLink"></a></li>
+					<li class="buttonStage4"><a href="#contents-n3ds-stage4" class="contentsLink"></a></li>
+					<li class="buttonStage5 selected"><a href="#contents-n3ds-stage5" class="contentsLink"></a></li>
+				</ul>
+			</div>
+			<div id="overview" class="step" data-x="0" data-y="0" data-scale="15"></div>
+			<div id="bg" class="step" data-x="0" data-y="0" data-Z="0" data-rotate="0" data-scale="1" ><img src="image/bg.jpg" width="12000" height="6500"></div>

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* contents-section02   ===================================================== */
+#contents-section02{
+}
+
+#contents-section02 h2{
+	background:url(contents-section02/h2.png);
+}
+
+* html #contents-section02 h2{
+	/*IEPINGFIX*/
+	behavior: expression(IEPNGFIX.fix(this)); 
+}
+
+#contents-section02 p{
+	padding:0 0 1em;
+}
+
+/*‰æ‘œ*/
+#contents-section02 img{
+	border:1px solid #fff;
+}
+#contents-section02 .picFirst{
+	padding:0 0.5em 0 0;
+	float:left;
+}
+#contents-section02 .picSecond{
+	padding:0.5em 0 0.5em 0.5em;
+	float:right;
+}
+#contents-section02 .picThird{	
+	text-align:center;
+}

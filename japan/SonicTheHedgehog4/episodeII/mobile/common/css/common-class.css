@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+.ui-header .ui-title, .ui-footer .ui-title {
+	margin: 0;
+}
+
+.ui-page{
+	border: 0;
+	background-color:#fff;
+}
+
+.ui-header {
+	border: 0;
+	height: 50px;
+	background:#fff url(common-class/header_bg.gif) top left repeat-x;
+}
+
+.ui-content {
+	margin:0;
+	padding:0;
+	border:0;
+	background:#fff url(common-class/body.jpg) top left repeat-x;
+}
+
+.ui-footer {
+	border: 0;
+	background:#fff url(common-class/footer_bg.gif) top left repeat-x;
+}
+
+/* SEGAロゴ */
+body#index header h1 img{
+	margin: 8px;
+}
+
+/* EPISODEIIロゴ */
+body:not([id="index"]) header h1 img{
+	margin: 5px;
+}
+
+/* 第二階層ページタイトル */
+body:not([id="index"]) .ui-content > h1 {
+	height: 34px;
+	background:#fff url(common-class/h1_title_bg.gif) top left repeat-x;
+	color: #fff;
+	line-height: 34px;
+	margin: 6px 0;
+	padding-left: 5px;
+	font-weight: bold;
+	-webkit-box-shadow: 0 1px 5px 1px #000;
+	-moz-box-shadow: 0 1px 5px 1px #000;
+	box-shadow: 0 1px 5px 1px #000;
+}
+
+body:not([id="index"]) .ui-content > section > h1 {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#1e4be3), to(#01c6fe));
+	background-image: -webkit-linear-gradient(left, #1e4be3, #01c6fe); 
+	background-image:    -moz-linear-gradient(left, #1e4be3, #01c6fe);
+	background-image:     -ms-linear-gradient(left, #1e4be3, #01c6fe);
+	background-image:      -o-linear-gradient(left, #1e4be3, #01c6fe);
+	background-image:         linear-gradient(left, #1e4be3, #01c6fe);
+	color: #fff;
+	border: solid #fff 1px;
+	padding-left: 5px;
+	margin: 6px 5px;
+	height: 35px;
+	line-height: 35px;
+	font-weight: bold;
+}
+
+
+/* F
+-----------------------------------------------------------------------------------------------------------*/
+.ui-bar-f {
+	border: 1px solid #F7C942;
+	background: 			#e5d71c;
+	color: 					#333;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#e58b1c), to(#e5d71c)); 
+	background-image: -webkit-linear-gradient(top, #e58b1c, #e5d71c); 
+	background-image:    -moz-linear-gradient(top, #e58b1c, #e5d71c);
+	background-image:     -ms-linear-gradient(top, #e58b1c, #e5d71c);
+	background-image:      -o-linear-gradient(top, #e58b1c, #e5d71c);
+	background-image:         linear-gradient(top, #e58b1c, #e5d71c);
+}
+
+.ui-bar-a {
+	text-shadow:none;
+}
+
+.ui-body-f {
+	border: 0;
+}
+
+.ui-body-f .ui-link-inherit {
+	color: 					#ff6600;
+}
+
+.ui-body-f .ui-link {
+	color: 					#ff6600;
+}
+
+
+.ui-btn-up-f {
+	border: 1px solid #F7C942;
+	background: 			#e5d71c;
+	font-weight: bold;
+	color: 					#333;
+	text-shadow: 0 1px 0 #fff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#e58b1c), to(#e5d71c)); 
+	background-image: -webkit-linear-gradient(top, #e58b1c, #e5d71c); 
+	background-image:    -moz-linear-gradient(top, #e58b1c, #e5d71c); 
+	background-image:     -ms-linear-gradient(top, #e58b1c, #e5d71c); 
+	background-image:      -o-linear-gradient(top, #e58b1c, #e5d71c); 
+	background-image:         linear-gradient(top, #e58b1c, #e5d71c);
+}
+
+.ui-btn-up-f a.ui-link-inherit {
+	color: 					#333;
+}
+.ui-btn-hover-f {
+	border: 1px solid #e79952;
+	background: 			#fbe26f;
+	font-weight: bold;
+	color: 					#111;
+	text-shadow: 0 1px 1px #fff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fcf0b5), to(#fbe26f));
+	background-image: -webkit-linear-gradient(top, #fcf0b5, #fbe26f);
+	background-image:    -moz-linear-gradient(top, #fcf0b5, #fbe26f);
+	background-image:     -ms-linear-gradient(top, #fcf0b5, #fbe26f);
+	background-image:      -o-linear-gradient(top, #fcf0b5, #fbe26f);
+	background-image:         linear-gradient(top, #fcf0b5, #fbe26f);
+}
+.ui-btn-hover-f a.ui-link-inherit {
+	color: 					#333;
+}
+.ui-btn-down-f {
+	border: 1px solid #F7C942;
+	background: 			#e58b1c;
+	font-weight: bold;
+	color: 					#111;
+	text-shadow: 0 1px 1px #ffffff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#e5d71c), to(#e58b1c));
+	background-image: -webkit-linear-gradient(top, #e5d71c, #e58b1c);
+	background-image:    -moz-linear-gradient(top, #e5d71c, #e58b1c);
+	background-image:     -ms-linear-gradient(top, #e5d71c, #e58b1c);
+	background-image:      -o-linear-gradient(top, #e5d71c, #e58b1c);
+	background-image:         linear-gradient(top, #e5d71c, #e58b1c);
+}
+.ui-btn-down-f a.ui-link-inherit {
+	color: 					#333;
+}
+.ui-btn-up-f, .ui-btn-hover-f, .ui-btn-down-f {
+	font-family: Helvetica, Arial, sans-serif;
+	text-decoration: none;
+}
+
+footer{
+	padding:10px 0;
+	text-align: center;
+}
+footer ul{
+	margin:10px; 
+	padding:0;
+	clear:both;
+	text-align:center;
+}
+
+footer ul li{
+	display:inline;
+	list-style:none;
+}
+
+footer p{
+	clear:both;
+	font-size:x-small;
+	line-height:2em;
+	padding:0;
+	margin:0 10px; 
+	color: #021e73;
+}

@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/* common-contents   ===================================================== */
+
+#common-contents {
+	margin: 0 auto;
+	position:relative;
+	width: 900px;
+	height: 584px;
+	padding: 0;
+}

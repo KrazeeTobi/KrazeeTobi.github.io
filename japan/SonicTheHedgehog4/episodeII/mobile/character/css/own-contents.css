@@ -1,0 +1,32 @@
+/* CSS Document */
+
+#common-contents > section {
+	margin-bottom: 15px;
+}
+
+#common-contents > section > div {
+	margin: 0 5px;
+	padding: 5px;
+	background-color: rgba(0,0,0,0.6);
+	border-radius:7px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+}
+
+#common-contents > section > div:after {
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+#common-contents > section > div > p:first-child {
+	float: left;	
+}
+
+#common-contents > section > div > p:nth-child(2) {
+	padding-left:133px;
+	color: #fff;
+}

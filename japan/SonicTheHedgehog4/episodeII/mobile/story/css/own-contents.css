@@ -1,0 +1,22 @@
+/* CSS Document */
+#common-contents > div {
+	margin: 0 5px 25px 5px;
+	padding: 5px;
+	background-color: rgba(0,0,0,0.6);
+	border-radius:7px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+}
+
+#common-contents > div > p:first-child{
+	text-align: center;
+}
+
+#common-contents > div > p {
+	color: #fff;
+}
+
+#common-contents > div > ul {
+	margin-top: 10px;
+	text-align: center;	
+}

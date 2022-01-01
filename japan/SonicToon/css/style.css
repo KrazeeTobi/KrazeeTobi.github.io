@@ -1,0 +1,456 @@
+@charset "UTF-8";
+/*よく使うmixin*/
+/* アニメーション設定 */
+@-webkit-keyframes animationScale01 {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+@-moz-keyframes animationScale01 {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes animationScale01 {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+@-webkit-keyframes animationScale02 {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+
+@-moz-keyframes animationScale02 {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+
+@keyframes animationScale02 {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    /*		@include transform(scale(1.05));*/
+  }
+}
+
+/*
+
+@mixin headline01{
+	color:#fff;
+	padding:4px 0.5em 4px 38px;
+	margin:0 0 5px;
+	line-hight:0;
+	@include border-radius(5px);
+}
+
+@mixin sp-margin{
+	@include mq{
+		@if $mq-sp{
+			margin-left:5px;
+			margin-right:5px;
+		}
+	}
+}
+
+@mixin textRed{
+	color:$color-02 !important;
+}
+
+@mixin buttonOver{
+	&:hover{
+		color:$link-color-03;
+		background-position:-500px;
+
+	}
+}
+*/
+/* 基本テキスト色 */
+/* 配色・オレンジ */
+/* 配色 グレー */
+/* 配色 黄色 */
+/* 配色 赤*/
+/* 基本リンクテキスト色 */
+/* 背景色グラデーション */
+/* screenサイズ */
+/*
+	//allは使わないほうがいいかもしれない。
+	//IE8対策のため、基本書式を書いた後に、「mq-tablet」のみで差分を書く。
+	@include mq{
+		@if $mq-all{
+		}
+		@if $mq-default{
+		}
+		@if $mq-tablet{
+		}
+	}
+*/
+/*-------------------------------------------------------
+アニメーション設定
+-------------------------------------------------------*/
+/*
+以下の書式だと
+各ベンダーごとのkeyframeのなかに、
+各ベンダーのベンダープレフィックスが付いてしまうので、
+後で対策を練ること
+*/
+/*-------------------------------------------------------
+コンテンツ設定
+-------------------------------------------------------*/
+#common-contents {
+  position: relative;
+  /*調整する可能性*/
+}
+#common-contents:after {
+  content: ".";
+  display: block;
+  height: 0px;
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+}
+#common-contents #contents-main {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+}
+#common-contents #contents-main img {
+  max-width: 100%;
+  height: auto;
+}
+#common-contents #contents-main #main-title {
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  width: 100%;
+  height: auto;
+  padding-top: 60%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#common-contents #contents-main #main-title:after {
+  content: ".";
+  display: block;
+  height: 0px;
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+}
+#common-contents #contents-main #main-title li {
+  padding: 0 5px;
+  float: left;
+}
+#common-contents #contents-main #main-title li a {
+  display: block;
+}
+#common-contents #contents-main #main-title li a:hover {
+  opacity: 0.8;
+  -webkit-animation: animationScale01 0.1s ease 1;
+  -moz-animation: animationScale01 0.1s ease 1;
+  animation: animationScale01 0.1s ease 1;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #common-contents #contents-main #main-title {
+    left: 0px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #common-contents #contents-main #main-title li {
+    width: 49.5%;
+    padding: 0 0.25%;
+  }
+}
+#common-contents #main-link-knowledge {
+  width: 100%;
+  text-align: center;
+}
+#common-contents #contents-trailer,
+#common-contents #contents-information,
+#common-contents #contents-spec {
+  border: 1px dotted #999;
+  background: #3b4556;
+}
+#common-contents #contents-trailer h2,
+#common-contents #contents-information h2,
+#common-contents #contents-spec h2 {
+  background: url(common-contents/div.png);
+  border-bottom: 1px solid #f27b23;
+  padding: 5px;
+  margin: 0;
+  height: 25px;
+}
+#common-contents #contents-trailer h2 img,
+#common-contents #contents-information h2 img,
+#common-contents #contents-spec h2 img {
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #common-contents #contents-trailer,
+  #common-contents #contents-information,
+  #common-contents #contents-spec {
+    margin: 0 0 10px;
+  }
+}
+#common-contents #contents-information, #common-contents #contents-spec {
+  width: 438px;
+  margin: 0 4px 10px;
+  float: left;
+}
+#common-contents #contents-information:after, #common-contents #contents-spec:after {
+  content: ".";
+  display: block;
+  height: 0px;
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #common-contents #contents-information, #common-contents #contents-spec {
+    width: 100%;
+    margin: 0 0 10px;
+    float: none;
+  }
+}
+#common-contents #contents-trailer {
+  margin: 10px 4px;
+}
+#common-contents #contents-trailer ul {
+  padding: 10px 5px;
+}
+#common-contents #contents-trailer ul:after {
+  content: ".";
+  display: block;
+  height: 0px;
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+}
+#common-contents #contents-trailer ul li {
+  float: left;
+  display: block;
+  margin: 5px 5px;
+  height: 112px;
+}
+#common-contents #contents-trailer ul li a {
+  display: block;
+  line-height: 0;
+  font-size: 0;
+}
+#common-contents #contents-trailer ul li a:hover {
+  opacity: 0.9;
+  -webkit-animation: animationScale01 0.1s ease 1;
+  -moz-animation: animationScale01 0.1s ease 1;
+  animation: animationScale01 0.1s ease 1;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #common-contents #contents-trailer {
+    margin: 0 0 10px;
+  }
+  #common-contents #contents-trailer ul {
+    padding: 0;
+  }
+  #common-contents #contents-trailer ul li {
+    width: 33%;
+    height: auto;
+    padding: 0;
+    margin: 0 0.15%;
+  }
+  #common-contents #contents-trailer ul li img {
+    width: 100%;
+    height: auto;
+  }
+}
+#common-contents #contents-information #information-list {
+  height: 210px;
+  padding: 10px;
+  overflow-y: scroll;
+}
+#common-contents #contents-information #information-list section {
+  padding: 10px 0;
+}
+#common-contents #contents-information #information-list section:after {
+  content: ".";
+  display: block;
+  height: 0px;
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+}
+#common-contents #contents-information #information-list section time {
+  font-size: small;
+  color: #fffa9e;
+  border-top: 1px dotted white;
+  background: #15325e;
+  display: block;
+  padding: 5px;
+  margin: 0 0 5px;
+}
+#common-contents #contents-information #information-list section time:after {
+  content: ".";
+  display: block;
+  height: 0px;
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+}
+#common-contents #contents-information #information-list section ul li {
+  padding: 0 0 5px;
+  padding-left: 0.5em;
+  border-bottom: none;
+  list-style: inside disc;
+  font-size: small;
+  color: white;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #common-contents #contents-information section#information-list {
+    height: auto;
+    overflow-y: auto;
+  }
+}
+#common-contents #contents-spec {
+  position: relative;
+}
+#common-contents #contents-spec div {
+  padding: 20px 0 0 110px;
+  height: 210px;
+}
+#common-contents #contents-spec div h3, #common-contents #contents-spec div dt, #common-contents #contents-spec div dd {
+  font-size: x-small;
+  color: white;
+  font-weight: bold;
+}
+#common-contents #contents-spec div h3 {
+  color: #fffa9e;
+  margin: 1em 0 0;
+}
+#common-contents #contents-spec div dl dt {
+  float: left;
+}
+#common-contents #contents-spec div dl dt:after {
+  content: " ： ";
+}
+#common-contents #contents-spec ul {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+#common-contents #contents-spec ul li {
+  position: absolute;
+}
+#common-contents #contents-spec ul #spec-cero {
+  top: 50px;
+  right: 10px;
+}
+#common-contents #contents-spec ul #spec-wiiu {
+  top: 50px;
+  left: 15px;
+}
+#common-contents #contents-spec ul #spec-n3ds {
+  top: 170px;
+  left: 15px;
+}
+@media only screen and (min-width: 2px) and (max-width: 768px) {
+  #common-contents #contents-spec:after {
+    content: ".";
+    display: block;
+    height: 0px;
+    clear: both;
+    line-height: 0;
+    visibility: hidden;
+  }
+  #common-contents #contents-spec div {
+    position: absolute;
+    padding: 10px 0;
+    left: 100px;
+    height: auto;
+  }
+  #common-contents #contents-spec ul {
+    position: relative;
+    width: 80px;
+    padding: 10px 5px;
+  }
+  #common-contents #contents-spec ul li {
+    text-align: center;
+    position: relative;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
+
+/*
+@import "common-title";
+@import "common-navigation";
+@import "common-navibutton";
+@import "common-class";
+*/

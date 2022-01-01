@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/* common-header   ===================================================== */
+
+#common-header {
+	position:relative;
+	margin: 0 auto;
+	width: 900px;
+	height: 60px;
+}
+
+/* clear fix */
+#common-header{
+	zoom:1;/*for IE 5.5-7*/
+}
+
+#common-header:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;	
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+
+/* ul */
+#common-header ul{
+	float: right;
+	height: 20px;
+	width: 183px;
+	padding: 10px 10px 0 10px;
+	margin-top: 15px;
+	border-right: 1px solid #e0e0e0;
+	border-left: 1px solid #e0e0e0;
+}
+
+/* li */
+#common-header ul li {
+	float: left;
+	height: 9px;
+	overflow: hidden;
+	display: block;
+}
+
+
+
+/* #header-sega */
+#header-sega{
+	float: left;
+	height: 32px;
+	width: 97px;
+	padding: 14px 0 0 0;
+}
+
+
+
+/* #header-segasammy */
+#header-segasammy{
+	float: right;
+	height: 24px;
+	width: 74px;
+	padding: 18px 0 0 8px;
+}
+
+
+/* #header-corporate */
+#header-corporate {
+	width: 43px;
+	padding-right: 10px;
+}
+
+
+#header-corporate a{
+	height: 9px;
+	width: 43px;
+	overflow: hidden;
+	line-height: 0em;
+	text-decoration: none;
+	display: block;
+	text-indent: -9999px;
+	background: url(common-header/header-corporate.gif);
+}
+
+/* #header-contact */
+#header-contact {
+	width: 61px;
+	padding-right: 10px;
+}
+
+
+#header-contact a{
+	height: 9px;
+	width: 61px;
+	overflow: hidden;
+	line-height: 0em;
+	text-decoration: none;
+	display: block;
+	text-indent: -9999px;
+	background: url(common-header/header-contact.gif);
+}
+
+/* #header-sitemap */
+#header-sitemap {
+	width: 58px;
+}
+
+#header-sitemap a{
+	height: 9px;
+	width: 58px;
+	overflow: hidden;
+	line-height: 0em;
+	text-decoration: none;
+	display: block;
+	text-indent: -9999px;
+	background: url(common-header/header-sitemap.gif);
+}

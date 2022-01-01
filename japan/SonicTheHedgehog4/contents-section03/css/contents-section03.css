@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/* contents-section03   ===================================================== */
+#contents-section03{
+}
+
+#contents-section03 h2{
+	background:url(contents-section03/h2.png);
+}
+* html #contents-section03 h2{
+	/*IEPINGFIX*/
+	behavior: expression(IEPNGFIX.fix(this)); 
+}
+
+#contents-section03 p{
+	line-height:1.4em;
+	margin-bottom:0.8em;
+}
+
+#contents-section03 h4{
+	display:none;
+}
+
+ul#section03-character,
+ul#section03-enemy{
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;
+	font-size:0px;
+}
+
+ul#section03-character{
+	position:absolute;
+	top:100px;
+	left:910px;
+	width:200px;
+	padding:18px 0 0 0;
+	background:url(contents-section03/section03-character_ul.gif) top left no-repeat;
+}
+
+ul#section03-enemy{
+	position:absolute;
+	top:170px;
+	left:910px;
+	width:200px;
+	padding:18px 0 0 0;
+	background:url(contents-section03/section03-enemy_ul.gif) top left no-repeat;
+}
+
+#section03-navigation li{
+	display:block;
+	width:200px;
+	height:25px;
+	margin:0 0 1px;
+}
+
+#contents-section03 ul li a{
+	font-size:0;
+}
+
+
+#character-navigation01{
+	background:url(contents-section03/character-navigation01.gif) no-repeat left top;
+}
+#character-navigation02{
+	background:url(contents-section03/character-navigation02.gif) no-repeat left top;
+}
+
+#enemy-navigation01{
+	background:url(contents-section03/enemy-navigation01.gif) no-repeat left top;
+}
+#enemy-navigation02{
+	background:url(contents-section03/enemy-navigation02.gif) no-repeat left top;
+}
+#enemy-navigation03{
+	background:url(contents-section03/enemy-navigation03.gif) no-repeat left top;
+}
+#enemy-navigation04{
+	background:url(contents-section03/enemy-navigation04.gif) no-repeat left top;
+}
+#enemy-navigation05{
+	background:url(contents-section03/enemy-navigation05.gif) no-repeat left top;
+}
+#enemy-navigation06{
+	background:url(contents-section03/enemy-navigation06.gif) no-repeat left top;
+}
+#enemy-navigation07{
+	background:url(contents-section03/enemy-navigation07.gif) no-repeat left top;
+}
+#enemy-navigation08{
+	background:url(contents-section03/enemy-navigation08.gif) no-repeat left top;
+}
+#enemy-navigation09{
+	background:url(contents-section03/enemy-navigation09.gif) no-repeat left top;
+}
+#enemy-navigation10{
+	background:url(contents-section03/enemy-navigation10.gif) no-repeat left top;
+}
+#enemy-navigation11{
+	background:url(contents-section03/enemy-navigation11.gif) no-repeat left top;
+}
+
+
+
+#character-navigation01:hover{
+	background:url(contents-section03/character-navigation01.gif) no-repeat left bottom;
+}
+
+#character-navigation02:hover{
+	background:url(contents-section03/character-navigation02.gif) no-repeat left bottom;
+}
+
+#enemy-navigation01:hover{
+	background:url(contents-section03/enemy-navigation01.gif) no-repeat left bottom;
+}
+#enemy-navigation02:hover{
+	background:url(contents-section03/enemy-navigation02.gif) no-repeat left bottom;
+}
+#enemy-navigation03:hover{
+	background:url(contents-section03/enemy-navigation03.gif) no-repeat left bottom;
+}
+#enemy-navigation04:hover{
+	background:url(contents-section03/enemy-navigation04.gif) no-repeat left bottom;
+}
+#enemy-navigation05:hover{
+	background:url(contents-section03/enemy-navigation05.gif) no-repeat left bottom;
+}
+#enemy-navigation06:hover{
+	background:url(contents-section03/enemy-navigation06.gif) no-repeat left bottom;
+}
+#enemy-navigation07:hover{
+	background:url(contents-section03/enemy-navigation07.gif) no-repeat left bottom;
+}
+#enemy-navigation08:hover{
+	background:url(contents-section03/enemy-navigation08.gif) no-repeat left bottom;
+}
+#enemy-navigation09:hover{
+	background:url(contents-section03/enemy-navigation09.gif) no-repeat left bottom;
+}
+#enemy-navigation10:hover{
+	background:url(contents-section03/enemy-navigation10.gif) no-repeat left bottom;
+}
+#enemy-navigation11:hover{
+	background:url(contents-section03/enemy-navigation11.gif) no-repeat left bottom;
+}
+
+
+#section03-character li a,
+#section03-enemy li a{
+	display:block;
+	width:200px;
+	height:25px;
+}

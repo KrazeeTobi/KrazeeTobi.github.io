@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/* common-contents   ===================================================== */
+#common-contents{
+	position:relative;
+	height: 600px;
+	width: 16800px;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	z-index: 3;
+	background: url(common-contents/common-contents.gif) repeat;
+}
+
+/* 子div */
+#common-contents div{
+	position: relative;
+	float: left;
+	height: 600px;
+	width: 2800px;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+
+/* 孫ウィンドウ */
+#common-contents div div{
+	position:absolute;
+	top:103px;
+	left:413px;
+	width:464px;
+	height:344px;
+	overflow:auto;
+	padding:15px;
+}
+
+/* コンテンツ背景Window */
+#common-contents div div.innerWindow{
+	position:absolute;
+	top:100px;
+	left:410px;
+	padding:0;
+	margin:0;
+	width:500px;
+	height:380px;
+	background:url(common-contents/innerWindow.png);
+}
+
+* html .innerWindow{
+	/*IEPINGFIX*/
+	behavior: expression(IEPNGFIX.fix(this)); 
+}
+
+
+
+/*h2*/
+#common-contents div h2{
+	position:absolute;
+	width:455px;
+	height:70px;
+	left:220px;
+	top:1px;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;
+}
+
+
+
+/* ナビ */
+#common-contents div ul.navigationBtngation{
+	position:absolute;
+	top:0;
+	left:0;
+	width:400px;
+}
+
+#common-contents div ul.navigationBtngation li{
+	position:absolute;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;
+}
+
+#common-contents div ul.navigationBtngation li a{
+	display:block;
+}
+
+.navigationBtn02{
+	top:305px;
+	left:120px;
+}
+.navigationBtn02 a{
+	width:135px;
+	height:55px;
+}
+
+.navigationBtn03{
+	top:335px;
+	left:255px;
+}
+.navigationBtn03 a{
+	width:135px;
+	height:55px;
+}
+
+.navigationBtn04{
+	top:375px;
+	left:145px;
+}
+.navigationBtn04 a{
+	width:135px;
+	height:45px;
+}
+
+.navigationBtn05{
+	top:425px;
+	left:120px;
+}
+.navigationBtn05 a{
+	width:135px;
+	height:55px;
+}
+
+.navigationBtn06{
+	top:435px;
+	left:260px;
+}
+.navigationBtn06 a{
+	width:135px;
+	height:55px;
+}

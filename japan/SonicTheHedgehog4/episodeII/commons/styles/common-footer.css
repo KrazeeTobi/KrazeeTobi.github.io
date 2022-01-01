@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* common-contents   ===================================================== */
+#common-footer{
+	position:relative;
+	width: 100%;
+	padding: 5px 0;
+	z-index:20;
+	background: url(common-footer/common-footer.gif) repeat-x;
+}
+
+
+#common-footer ul{
+	clear:both;
+	padding: 10px 0 0 0px;
+}
+
+
+
+#common-footer ul li{
+	float: left;
+	padding: 0 0 0 1px;
+	display: block;
+}
+
+#common-footer ul li#footer-sound{
+	float: right;
+	padding: 0 10px 0 0;
+}
+
+
+#common-footer p{
+	clear: both;
+	padding: 0.25em 0 0 10px;
+	font-size: 90%;
+	color: #021e73;
+}
+
+
+#common-footer p a{
+	font-size: small;
+}
+
+
+#common-footer p a,
+#common-footer p a:visited {
+	color: #ff3300;
+}
+
+#common-footer p a:hover,
+#common-footer p a:active {
+	color: #ff6600;
+}

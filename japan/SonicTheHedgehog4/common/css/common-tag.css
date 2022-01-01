@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* common tag   ===================================================== */
+div,span,
+ol,ul,li,dl,dt,dd,
+h1,h2,h3,h4,h5,h6,
+p,a,img,
+table,td,th,
+blockquote{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-family: "ＭＳ Ｐゴシック", MS PGothic,  Osaka, "ヒラギノ角ゴ Pro W3", sans-serif;
+	font-size: small;
+	font-style: normal;
+	font-weight: normal;
+	color: #fff;
+	line-height: 1.8em;
+}
+
+body{
+	padding: 0;
+	margin: 0;
+	background: url(common-tag/body.png) repeat-x scroll #fff;
+}
+
+ul li,ol li {
+	list-style: none;
+}
+
+a, a:visited {
+	color:#ffaa33;
+	text-decoration: underline;
+}
+
+a:hover, a:active {
+		color: #ffcc99;
+	text-decoration: underline;
+}
+
+* html img{
+	behavior: expression(IEPNGFIX.fix(this));
+}
+
+
+h1 {
+	position:absolute;
+	top: 596px;
+	width: 100%;
+	z-index:10;
+	text-align: center;
+}
+
+h1 img{
+	z-index:15;
+}

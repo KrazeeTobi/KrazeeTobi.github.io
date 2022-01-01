@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* #common-background03 ===================================================== */
+#common-background03{
+	position:absolute;
+	left: 0px;
+	height: 600px;
+	width: 124px;
+	padding: 0;
+	margin: 0;
+	z-index: 9;
+	background: url(common-background03/common-background03.png) no-repeat;
+}
+
+
+
+* html #common-background03{
+	/*IEPINGFIX*/
+	behavior: expression(IEPNGFIX.fix(this)); 
+}
+
+

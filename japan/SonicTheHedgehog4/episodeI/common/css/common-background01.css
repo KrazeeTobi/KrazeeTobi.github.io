@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* common-contents   ===================================================== */
+#common-background01{
+	position: absolute;
+	left: 0;
+	top: 60px;
+	height: 600px;
+	width: 33600px;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	z-index: 2;
+}
+
+
+#common-background01:after{
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	display: block;
+	content: ".";
+}
+
+
+/* clear fix */
+* html #common-background01{
+    zoom:1;/*for IE 5.5-7*/
+}
+
+#common-background01 div{
+	float: left;
+	height: 600px;
+	width: 2800px;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
