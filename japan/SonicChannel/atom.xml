@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>ソニックチャンネル</title>
+	<link rel="alternate" type="text/html" href="/SonicChannel/" />
+	<link rel="self" type="application/atom+xml" href="/SonicChannel/atom.xml" />
+	<id>tag:otori.cs2.sega.co.jp,2021-03-19:/sonic.sega.jp/SonicChannel/2</id>
+	<updated>2021-12-10T03:17:57Z</updated>
+	<subtitle>ソニック公式ポータルサイト「ソニックチャンネル」へようこそ！</subtitle>
+	<generator uri="http://www.sixapart.com/movabletype/">Movable Type Pro 7.6.0</generator>
+	<entry>
+		<title>2022年01月「Happy New Year!」</title>
+		<link rel="alternate" type="text/html" href="/SonicChannel/fanart/20211228_002795/" />
+		<id>tag:ohsaki.ec2.sega.co.jp,2021:/sonic.sega.jp/SonicChannel//2.2795</id>
+		<published>2021-12-28T13:00:47Z</published>
+		<updated>2021-12-27T13:10:52Z</updated>
+		<summary>今月もファンアートのコーナーにたくさんの作品をご応募頂き、ありがとうございます！...</summary>
+		<author>
+			<name>(C)SEGA</name>
+		</author>
+			<category term="ファンアート" scheme="http://www.sixapart.com/ns/types#category" />
+		<content type="html" xml:lang="ja" xml:base="/SonicChannel/">
+		</content>
+	</entry>
+	<entry>
+		<title><![CDATA[レゴ&reg;アイデア ソニック・ザ・ヘッジホッグ&trade;-グリーンヒルゾーン]]></title>
+		<link rel="alternate" type="text/html" href="/SonicChannel/topics/goods/20211228_002790/" />
+		<id>tag:ohsaki.ec2.sega.co.jp,2021:/sonic.sega.jp/SonicChannel//2.2790</id>
+		<published>2021-12-28T12:07:03Z</published>
+		<updated>2021-12-28T06:21:18Z</updated>
+		<summary>レゴでグリーンヒルゾーンを再現できるセットが登場！  セットには、ソニック、Dr...</summary>
+		<author>
+			<name>(C)SEGA</name>
+		</author>
+			<category term="グッズ" scheme="http://www.sixapart.com/ns/types#category" />
+			<category term="トピックス" scheme="http://www.sixapart.com/ns/types#category" />
+		<content type="html" xml:lang="ja" xml:base="/SonicChannel/">
+		</content>
+	</entry>
+	<entry>
+		<title>「ソニックおみくじ2022キャンペーン」をTwitterで開催！</title>
+		<link rel="alternate" type="text/html" href="/SonicChannel/topics/event/20211228_002789/" />
+		<id>tag:ohsaki.ec2.sega.co.jp,2021:/sonic.sega.jp/SonicChannel//2.2789</id>
+		<published>2021-12-28T12:04:21Z</published>
+		<updated>2021-12-27T14:17:16Z</updated>
+		<summary> 新年のお祝いとして、ソニック・ザ・ヘッジホッグ【公式】Twitterにて「ソニ...</summary>
+		<author>
+			<name>(C)SEGA</name>
+		</author>
+			<category term="イベント" scheme="http://www.sixapart.com/ns/types#category" />
+			<category term="トピックス" scheme="http://www.sixapart.com/ns/types#category" />
+		<content type="html" xml:lang="ja" xml:base="/SonicChannel/">
+		</content>
+	</entry>
+	<entry>
+		<title>かべがみ大喜利 2022年1月【テイルスは何を......？】</title>
+		<link rel="alternate" type="text/html" href="/SonicChannel/special/ohgiri/20211227_002779/" />
+		<id>tag:ohsaki.ec2.sega.co.jp,2021:/sonic.sega.jp/SonicChannel//2.2779</id>
+		<published>2021-12-27T07:34:28Z</published>
+		<updated>2021-12-27T08:54:18Z</updated>
+		<summary>かべがみ・カレンダーイラストを紹介する新コーナー「かべがみ大喜利」が始まります！...</summary>
+		<author>
+			<name>(C)SEGA</name>
+		</author>
+			<category term="かべがみ大喜利" scheme="http://www.sixapart.com/ns/types#category" />
+			<category term="スペシャル" scheme="http://www.sixapart.com/ns/types#category" />
+		<content type="html" xml:lang="ja" xml:base="/SonicChannel/">
+		</content>
+	</entry>
+	<entry>
+		<title>「ROCK &apos;N&apos; SONIC THE HEDGEHOG」グッズ</title>
+		<link rel="alternate" type="text/html" href="/SonicChannel/topics/goods/20211220_002776/" />
+		<id>tag:ohsaki.ec2.sega.co.jp,2021:/sonic.sega.jp/SonicChannel//2.2776</id>
+		<published>2021-12-20T13:48:26Z</published>
+		<updated>2021-12-20T02:50:06Z</updated>
+		<summary>ギタープレイ中のソニックの描き下ろしアートワークを使用した新グッズ、「ROCK ...</summary>
+		<author>
+			<name>(C)SEGA</name>
+		</author>
+			<category term="インフォメーション" scheme="http://www.sixapart.com/ns/types#category" />
+			<category term="グッズ" scheme="http://www.sixapart.com/ns/types#category" />
+			<category term="トピックス" scheme="http://www.sixapart.com/ns/types#category" />
+		<content type="html" xml:lang="ja" xml:base="/SonicChannel/">
+		</content>
+	</entry>
+</feed>
