@@ -1,0 +1,80 @@
+/* all-contentsarea===================================================== */
+#all-contentsarea{
+	background:#fff url(all-contentsarea/div-bg.gif) repeat-y;
+}
+
+#all-contentsarea ul{
+	background:#fff url(all-contentsarea/ul-bg.jpg) no-repeat;
+	margin:0 5px 50px;
+}
+
+#all-contentsarea ul li{
+	float:left;
+	padding:0 0 0 13px;
+	width:250px;
+}
+
+#all-contentsarea ul{
+   min-height:1%;/*for WinIE 7*/
+}
+
+* html div#all-contentsarea ul{
+	/*\*/height:1%;/*for WinIE 6*/
+	display:inline-table;/* for MacIE */
+}
+
+
+#all-contentsarea ul li h3{
+	width:224px;
+	height:119px;
+	margin:0 auto 10px;
+}
+
+#all-contentsarea ul li p{
+	width:224px;
+	margin:0 auto 10px;
+}
+
+#all-contentsarea ul li h3 a,
+#all-contentsarea ul li h3 span{
+	width:224px;
+	height:119px;
+
+	color:#8adbff;
+
+	font-size:1px;
+	font-family: sans-serif;
+	line-height:0;
+	text-decoration:none;
+	text-indent:-5000px;
+}
+
+li#btn01 h3 a{
+	display:block;
+	background:#fff url(all-contentsarea/a-bg-01.gif) no-repeat;
+}
+
+li#btn01 h3 a:hover{
+	display:block;
+	background:#fff url(all-contentsarea/a-bg-01.gif) no-repeat 0 -170px;
+}
+
+li#btn02 h3 a{
+	display:block;
+	background:#fff url(all-contentsarea/a-bg-02.gif) no-repeat;
+}
+
+li#btn02 h3 a:hover{
+	display:block;
+	background:#fff url(all-contentsarea/a-bg-02.gif) no-repeat 0 -170px;
+}
+
+li#btn03 h3 a{
+	display:block;
+	background:#fff url(all-contentsarea/a-bg-03.gif) no-repeat;
+}
+
+li#btn03 h3 a:hover{
+	display:block;
+	background:#fff url(all-contentsarea/a-bg-03.gif) no-repeat 0 -170px;
+}

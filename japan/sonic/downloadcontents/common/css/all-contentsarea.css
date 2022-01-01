@@ -1,0 +1,19 @@
+/* all-contentsarea===================================================== */
+#all-contentsarea{
+	width:810px;
+	margin:0 auto;
+	background:#fff url(all-contentsarea/div-bg.gif) repeat-y;
+}
+
+
+/* css hack	 ================================================================ */
+/* for mac ie 5 */
+/*\*//*/
+
+div#all-contentsarea{
+  position: relative;
+  left:50%;
+  margin-left: -405px;
+	display:inline-table;
+}/**/
+

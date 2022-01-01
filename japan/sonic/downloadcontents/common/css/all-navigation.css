@@ -1,0 +1,89 @@
+/* all-navigation ===================================================== */
+#all-navigation{
+	float:left;
+	width:220px;
+	padding:35px 0 20px 5px;
+	background:url(all-navigation/div-bg.jpg) no-repeat right top;
+}
+
+#all-navigation ul{
+	width:210px;
+	margin:0 5px 100px;
+}
+
+#all-navigation h3{
+	display:block;
+	margin:0 5px 0;
+	height:130px;
+}
+
+#all-navigation ul li a,
+#all-navigation ul li span{
+	width:210px;
+	height:50px;
+	color:#8adbff;
+
+	font-size:1px;
+	font-family: sans-serif;
+	line-height:0;
+	text-decoration:none;
+	text-indent:-5000px;
+}
+
+/* btn  ------------------------------------------------------------ */
+#all-navigation ul li{
+	width:210px;
+	height:50px;
+	padding:0 0 5px;
+}
+/* default */
+#all-navigation ul li a{
+	display:block;
+	width:210px;
+	height:50px;
+}
+
+#all-navigation ul li#btn001 a{
+	display:block;
+	background:#fff url(all-navigation/a-bg-01.gif) no-repeat;
+}
+
+#all-navigation ul li#btn001 a:hover{
+	display:block;
+	background:#fff url(all-navigation/a-bg-01.gif) no-repeat 0 -75px;
+}
+
+#all-navigation ul li#btn002 a{
+	display:block;
+	background:#fff url(all-navigation/a-bg-02.gif) no-repeat;
+}
+
+#all-navigation ul li#btn002 a:hover{
+	display:block;
+	background:#fff url(all-navigation/a-bg-02.gif) no-repeat 0 -75px;
+}
+
+#all-navigation ul li#btn003 a{
+	display:block;
+	background:#fff url(all-navigation/a-bg-03.gif) no-repeat;
+}
+
+#all-navigation ul li#btn003 a:hover{
+	display:block;
+	background:#fff url(all-navigation/a-bg-03.gif) no-repeat 0 -75px;
+}
+
+ul#now001 li#btn001 a{
+	display:block;
+	background:#f00 url(all-navigation/a-bg-01.gif) no-repeat 0 -75px;
+}
+
+ul#now002 li#btn002 a{
+	display:block;
+	background:#f00 url(all-navigation/a-bg-02.gif) no-repeat 0 -75px;
+}
+
+ul#now003 li#btn003 a{
+	display:block;
+	background:#f00 url(all-navigation/a-bg-03.gif) no-repeat 0 -75px;
+}

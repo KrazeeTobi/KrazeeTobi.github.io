@@ -1,0 +1,26 @@
+/* all-footer     ===================================================== */
+#all-footer{
+	width:810px;
+	height:60px;
+	margin:0 auto;
+	background:#fff url(all-footer/div-bg.gif) repeat-y;
+
+}
+
+#all-footer p{
+	display:block;
+	width:780px;
+	padding:10px 10px 20px;
+	margin:0 5px;
+	background:#fff url(all-footer/p-bg.gif) repeat-x top;
+	text-align:right;
+	color:#999;
+	font-size:85%;
+}
+
+div#all-footer:after{
+	content:"";
+	display:none;
+	height:0px;
+	clear:both;
+}

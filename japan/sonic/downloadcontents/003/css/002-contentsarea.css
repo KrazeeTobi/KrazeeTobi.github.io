@@ -1,0 +1,15 @@
+/* 002-contentsarea===================================================== */
+#stage-flow{
+	margin:0 15px 20px;
+	width:550px;
+	height:158px;
+}
+
+#stage-flow p{
+	margin:0;
+	padding:0;
+	line-height:0;
+	width:275px;
+	display:block;
+	float:left;
+}

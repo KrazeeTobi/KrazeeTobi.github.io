@@ -1,0 +1,26 @@
+body{
+	margin-top: 4px;
+	border-style: solid;
+	border-width: 4px;
+	border-color: #FF6600;
+	color: #000000;
+	background-color: #cee3fe;
+	scrollbar-base-color: #ff6600;
+	scrollbar-arrow-color: #ff0000;
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN", "Osaka";
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: left top;
+}
+a:link {color: #ff0000; text-decoration: none; }
+a:visited {color: #ff0000; text-decoration: none; }
+a:active {color:#ff0000; text-decoration: none; }
+a:hover {color:#ff0000; text-decoration: none; }
+tr{font-size:x-small;}
+#big{font-size:16pt;color: #000000;font-weight: bolder;}
+#middle{font-size:10pt;color: #ff0000;font-weight: bolder}
+#small{font-size:10pt;color: #000000;}
+#blue { color : blue } 
+#red { color : red } 
+#white {font-size:8pt;color : white } 
+#red {font-size:7pt;color : red } 

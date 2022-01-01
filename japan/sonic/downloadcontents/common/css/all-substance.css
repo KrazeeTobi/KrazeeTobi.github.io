@@ -1,0 +1,99 @@
+/* all-substance   ===================================================== */
+
+#all-substance{
+	float:right;
+	width:580px;
+	padding:0 5px 5em 0;
+	
+	background:url(all-substance/div-bg.jpg) no-repeat left top;
+}
+
+
+#all-substance:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+#all-substance:after{
+   min-height:1%;/*for WinIE 7*/
+}
+
+* html #all-substance:after{
+	/*\*/height:1%;/*for WinIE 6*/
+	display:inline-table;/*for MacIE*/
+}
+
+
+#all-substance h2{
+	margin:0;
+	padding:0;
+	line-height:0;	
+}
+
+#all-substance h3{
+	clear:both;
+
+	margin:2em 15px 1em;
+	padding:0.2em 0.5em;
+	border-left:9px solid #fff;
+	border-bottom:1px solid #fff;
+	
+	font-size:medium;
+	font-weight:bold;
+}
+
+#all-substance h3.first{
+	margin:10px 15px 1em;
+}
+
+#all-substance p{
+	margin:0 15px 1em;
+}
+
+
+/* column layout  ===================================================== */
+div.column{
+	display:block;
+	padding:0 15px 10px;
+	width:550px;
+}
+
+div.column:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+div.column{
+   min-height:1%;/*for WinIE 7*/
+}
+
+* html div.column{
+	/*\*/height:1%;/*for WinIE 6*/
+	display:inline-table;/*for MacIE*/
+}
+
+
+#all-substance div.column .columnLeft{
+	float:left;
+	margin:0;
+	line-height:0;
+	width:210px;
+}
+
+#all-substance div.column .columnRight{
+	float:left;
+	display:block;
+	padding:0;
+	width:345px;
+}
+
+#all-substance div.column div p{
+	margin:0;
+	padding:0 0 1em;
+}

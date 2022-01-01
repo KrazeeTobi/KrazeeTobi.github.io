@@ -1,0 +1,109 @@
+/*---------------------   all   ---------------------*/
+*{
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+body {
+	font-family:"‚l‚r ‚oƒSƒVƒbƒN", MS PGothic,  Osaka, "ƒqƒ‰ƒMƒmŠpƒS Pro W3", sans-serif;
+	color:#666;
+	width:100%;
+	font-size:80%;
+	background-color: #fff;
+}
+
+a {
+	color: #0080F8;
+	font-weight: bold;
+}
+a:link {
+	font-weight: bold;
+	text-decoration: none;
+}
+a:visited {
+	font-weight: bold;
+	text-decoration: none;
+	color: #0080F8;
+}
+a:hover {
+	font-weight: bold;
+	text-decoration: underline;
+	color: #00A5FA;
+}
+a:active {
+	font-weight: bold;
+	text-decoration: none;
+	color: #0080F8;
+}
+
+
+ul,li{
+	list-style:none;
+}
+/*--------------------- flash  ---------------------*/
+
+
+/*----------------- noflash header -----------------*/
+#header{
+	background:url(image/body_bg.gif) repeat-x;
+	width:100%;
+	height:68px;
+	padding:0 0 150px 0;
+	_text-align:center;
+}
+
+#header ul{
+	width:800px;
+	height:68px;
+	margin:0 auto;
+}
+
+#header ul li{
+	float:left;
+}
+
+#sega{
+	padding:16px 0 0 21px;
+}
+
+#st{
+	padding:16px 0 0 21px;
+}
+
+#st{
+	padding:19px 0 0 444px;
+}
+
+#sc{
+	padding:19px 0 0 6px;
+}
+
+#sonic15th{
+	padding:7px 0 0 9px;
+}
+
+/*----------------- noflash contents -----------------*/
+
+#contents{
+	width:800px;
+	margin:0 auto;
+	text-align:left;
+}
+
+#contents h1,
+#contents p{
+	float:left;
+}
+
+#contents p{
+	float:left;
+	width:400px;
+	padding:0 0 1em 40px;
+}
+
+p#copyright{
+	clear:both;
+	width:800px;
+	padding:150px 0 0 0;
+}

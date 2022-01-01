@@ -1,0 +1,24 @@
+body{
+	border-style: solid;
+	border-color: #ffffff;
+	color: #000000;
+	background-color: #ffffff;
+	scrollbar-base-color: #ffffff;
+	scrollbar-arrow-color: #0088ff;
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN", "Osaka", "Arial";
+background-repeat: repeat-x;
+
+}
+a:link {color: #ff8800; text-decoration: none; }
+a:visited {color: #ff8800; text-decoration: none; }
+a:active {color:#ff0000; text-decoration: none; }
+a:hover {color:#ff0000; text-decoration: none; }
+tr{font-size:x-small;}
+#big{font-size:16pt;color: #000000;font-weight: bolder;}
+#middle{font-size:12pt;color: #ff0000;font-weight: bolder;}
+#small{font-size:10pt;color: #22bbff;}
+#blue {color:blue} 
+#red {color:red} 
+#white {font-size:8pt; color:white} 
+#red {font-size:7pt; color:red} 
+#copy {font-size:8pt; color:red} 
