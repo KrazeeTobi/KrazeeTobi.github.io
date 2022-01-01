@@ -1,4 +1,0 @@
-PuffUP
-PuffUpIdle
-Swim
-Turn

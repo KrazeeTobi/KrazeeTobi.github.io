@@ -1,7 +1,0 @@
-Die
-Head_Butt
-Hit
-Idle
-Ink
-Swim
-Turn

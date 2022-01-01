@@ -1,6 +1,0 @@
-Bite
-Die
-Hit
-Idle
-Jump
-Run
