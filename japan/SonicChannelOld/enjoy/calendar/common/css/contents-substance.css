@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+
+/* newImage setting only calendar ========================================== */
+ul.thumbnailList li span.newImage{
+	margin:0 0 0 23px;
+}
+
+
+
+/* list h2 text align setting  ============================================= */
+#contents-substance ul.thumbnailList li h2{
+	padding:0 0 0 17px;
+	text-align:left;
+}
+
+/* h2.howTo setting   ====================================================== */
+h2#howTo{
+	clear:both;
+	display:block;
+	background:url("contents-substance/how_to_h2.gif") no-repeat left center;	
+	text-indent:-1000em;
+}
+
+/* ol.howTo setting   ====================================================== */
+#contents-substance ol{
+	width:618px;
+	padding:15px 0 0.5em;
+	margin-top:15px;
+	border-top:1px dashed #666;
+}
+#contents-substance ol li{
+	float:left;
+	padding:0 0 0 46px;
+	width:120px;
+	height:150px;
+	background:url("contents-substance/how_to_bg_li.gif") no-repeat 15px 40px;
+	font-size:0;
+
+	/* for win IE*/
+	_padding:0;	
+	_width:166px;
+	_text-align:right;
+}
+#contents-substance ol li.noHowToBg{
+	padding:0;
+	width:120px;
+	background:none;
+	font-size:0;
+}
