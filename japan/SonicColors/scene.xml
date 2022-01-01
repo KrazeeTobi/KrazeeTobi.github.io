@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<prml version="2.0.0" type="text/prml">
+	<scene name="character" title="ものがたりとキャラクター" cls="SceneSwfLoad" url="character.swf" update="0">
+		<scene name="sonic" title="ソニック" cls="SceneCharacter" url="" update="0" />
+		<scene name="tails" title="テイルス" cls="SceneCharacter" url="" update="0" />
+		<scene name="yacker" title="ヤッカー" cls="SceneCharacter" url="" update="0" />
+		<scene name="eggman" title="エッグマン" cls="SceneCharacter" url="" update="0" />
+		<scene name="orbot" title="オーポット" cls="SceneCharacter" url="" update="0" />
+		<scene name="cubot" title="キューポット" cls="SceneCharacter" url="" update="0" />
+	</scene>
+	<scene name="action" title="ソニックのアクション" cls="SceneThrough" url="" update="0">
+		<scene name="wii_action" title="Wii" cls="SceneSwfLoad" url="action_wii.swf" update="0" />
+		<scene name="wii_base" title="基本のアクション" cls="SceneSwfLoad" url="action_wii_detail.swf" update="0" />
+		<scene name="wii_cyan" title="シアン・レーザー" cls="SceneSwfLoad" url="action_wii_detail.swf" update="0" />
+		<scene name="wii_yellow" title="イエロー・ドリル" cls="SceneSwfLoad" url="action_wii_detail.swf" update="0" />
+		<scene name="wii_green" title="グリーン・ホバー" cls="SceneSwfLoad" url="action_wii_detail.swf" update="0" />
+		<scene name="wii_orange" title="オレンジ・ロケット" cls="SceneSwfLoad" url="action_wii_detail.swf" update="0" />
+		<scene name="wii_pink" title="ピンク・スパイク" cls="SceneSwfLoad" url="action_wii_detail.swf" update="0" />
+		<scene name="wii_blue" title="ブルー・キューブ" cls="SceneSwfLoad" url="action_wii_detail.swf" update="0" />
+		<scene name="wii_purple" title="パープル・フレンジー" cls="SceneSwfLoad" url="action_wii_detail.swf" update="0" />
+		<scene name="ds_action" title="ニンテンドーDS" cls="SceneSwfLoad" url="action_ds.swf" update="0" />
+		<scene name="ds_base" title="基本のアクション" cls="SceneSwfLoad" url="action_ds_detail.swf" update="0" />
+		<scene name="ds_cyan" title="シアン・レーザー" cls="SceneSwfLoad" url="action_ds_detail.swf" update="0" />
+		<scene name="ds_yellow" title="イエロー・ドリル" cls="SceneSwfLoad" url="action_ds_detail.swf" update="0" />
+		<scene name="ds_red" title="レッド・バースト" cls="SceneSwfLoad" url="action_ds_detail.swf" update="0" />
+		<scene name="ds_orange" title="オレンジ・ロケット" cls="SceneSwfLoad" url="action_ds_detail.swf" update="0" />
+		<scene name="ds_violet" title="バイオレット・ボイド" cls="SceneSwfLoad" url="action_ds_detail.swf" update="0" />
+	</scene>
+	<scene name="stage" title="冒険の舞台" cls="SceneSwfLoad" url="stage.swf" update="0">
+		<scene name="wii_tropical_resort" title="トロピカル リゾート Wii" cls="SceneSwfLoad" url="tropical_resort.swf" update="0" hold="1">
+			<scene name="wii_tr_img1" title="スクリーンショット" cls="SceneImageLoad" url="stage/wii_tropical_resort1.jpg" update="0" />
+			<scene name="wii_tr_img2" title="スクリーンショット" cls="SceneImageLoad" url="stage/wii_tropical_resort2.jpg" update="0" />
+			<scene name="wii_tr_img3" title="スクリーンショット" cls="SceneImageLoad" url="stage/wii_tropical_resort3.jpg" update="0" />
+		</scene>
+		<scene name="wii_sweet_mountain" title="スウィート マウンテン Wii" cls="SceneSwfLoad" url="sweet_mountain.swf" update="0" hold="1">
+			<scene name="wii_sw_img1" title="スクリーンショット" cls="SceneImageLoad" url="stage/wii_sweet_mountain1.jpg" update="0" />
+			<scene name="wii_sw_img2" title="スクリーンショット" cls="SceneImageLoad" url="stage/wii_sweet_mountain2.jpg" update="0" />
+			<scene name="wii_sw_img3" title="スクリーンショット" cls="SceneImageLoad" url="stage/wii_sweet_mountain3.jpg" update="0" />
+		</scene>
+		<scene name="wii_starlight_carnival" title="スターライト カーニバル Wii" cls="SceneSwfLoad" url="starlight_carnival.swf" update="0" hold="1">
+			<scene name="wii_st_img1" title="スクリーンショット" cls="SceneImageLoad" url="stage/wii_starlight_carnival1.jpg" update="0" />
+			<scene name="wii_st_img2" title="スクリーンショット" cls="SceneImageLoad" url="stage/wii_starlight_carnival2.jpg" update="0" />
+			<scene name="wii_st_img3" title="スクリーンショット" cls="SceneImageLoad" url="stage/wii_starlight_carnival3.jpg" update="0" />
+		</scene>
+		<scene name="wii_planet_wisp" title="プラネット ウィスプ Wii" cls="SceneSwfLoad" url="planet_wisp.swf" update="0" hold="1">
+			<scene name="wii_pl_img1" title="スクリーンショット" cls="SceneImageLoad" url="stage/wii_planet_wisp1.jpg" update="0" />
+			<scene name="wii_pl_img2" title="スクリーンショット" cls="SceneImageLoad" url="stage/wii_planet_wisp2.jpg" update="0" />
+			<scene name="wii_pl_img3" title="スクリーンショット" cls="SceneImageLoad" url="stage/wii_planet_wisp3.jpg" update="0" />
+		</scene>
+		<scene name="ds_tropical_resort" title="トロピカル リゾート ニンテンドーDS" cls="SceneStageDs" url="" update="0" hold="1">
+			<scene name="ds_tr_img1" title="スクリーンショット" cls="SceneImageLoad" url="stage/ds_tropical_resort1.gif" update="0" />
+			<scene name="ds_tr_img2" title="スクリーンショット" cls="SceneImageLoad" url="stage/ds_tropical_resort2.gif" update="0" />
+			<scene name="ds_tr_img3" title="スクリーンショット" cls="SceneImageLoad" url="stage/ds_tropical_resort3.gif" update="0" />
+			<scene name="ds_tr_img4" title="スクリーンショット" cls="SceneImageLoad" url="stage/ds_tropical_resort4.gif" update="0" />
+		</scene>
+		<scene name="ds_sweet_mountain" title="スウィート マウンテン ニンテンドーDS" cls="SceneStageDs" url="" update="0" hold="1">
+			<scene name="ds_sw_img1" title="スクリーンショット" cls="SceneImageLoad" url="stage/ds_sweet_mountain1.gif" update="0" />
+			<scene name="ds_sw_img2" title="スクリーンショット" cls="SceneImageLoad" url="stage/ds_sweet_mountain2.gif" update="0" />
+			<scene name="ds_sw_img3" title="スクリーンショット" cls="SceneImageLoad" url="stage/ds_sweet_mountain3.gif" update="0" />
+			<scene name="ds_sw_img4" title="スクリーンショット" cls="SceneImageLoad" url="stage/ds_sweet_mountain4.gif" update="0" />
+		</scene>
+		<scene name="ds_starlight_carnival" title="スターライト カーニバル ニンテンドーDS" cls="SceneStageDs" url="" update="0" hold="1">
+			<scene name="ds_st_img1" title="スクリーンショット" cls="SceneImageLoad" url="stage/ds_starlight_carnival1.gif" update="0" />
+			<scene name="ds_st_img2" title="スクリーンショット" cls="SceneImageLoad" url="stage/ds_starlight_carnival2.gif" update="0" />
+			<scene name="ds_st_img3" title="スクリーンショット" cls="SceneImageLoad" url="stage/ds_starlight_carnival3.gif" update="0" />
+			<scene name="ds_st_img4" title="スクリーンショット" cls="SceneImageLoad" url="stage/ds_starlight_carnival4.gif" update="0" />
+		</scene>
+		<scene name="ds_planet_wisp" title="プラネット ウィスプ ニンテンドーDS" cls="SceneStageDs" url="" update="0" hold="1">
+			<scene name="ds_pl_img1" title="スクリーンショット" cls="SceneImageLoad" url="stage/ds_planet_wisp1.gif" update="0" />
+			<scene name="ds_pl_img2" title="スクリーンショット" cls="SceneImageLoad" url="stage/ds_planet_wisp2.gif" update="0" />
+			<scene name="ds_pl_img3" title="スクリーンショット" cls="SceneImageLoad" url="stage/ds_planet_wisp3.gif" update="0" />
+			<scene name="ds_pl_img4" title="スクリーンショット" cls="SceneImageLoad" url="stage/ds_planet_wisp4.gif" update="0" />
+		</scene>
+	</scene>
+	<scene name="twoplay" title="ふたりでプレイ" cls="SceneSwfLoad" url="twoplay.swf" update="0" hold="1">
+		<scene name="twoplay_play1" title="Wii 協力プレイ" cls="SceneFlvLoad" url="swf/multi_wii_01.f4v" update="0" />
+		<scene name="twoplay_play2" title="Wii 合体カラーパワー" cls="SceneFlvLoad" url="swf/multi_wii_02.f4v" update="0" />
+		<scene name="twoplay_play3" title="ニンテンドーDS" cls="SceneFlvLoad" url="swf/multi_ds.f4v" update="0" />
+	</scene>
+	<scene name="movie" title="動画を観る" cls="SceneSwfLoad" url="movie.swf" update="1" />
+	<scene name="download" title="ダウンロード" cls="SceneSwfLoad" url="download.swf" update="1" />
+</prml>

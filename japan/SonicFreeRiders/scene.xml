@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<prml version="2.0.0" type="text/prml">
+	<scene name="howto" title="遊び方" cls="SceneThrough" url="" update="0">
+		<scene name="howto_01" title="①『ソニック フリーライダーズ』とは？" cls="SceneSwfLoad" url="howto_01.swf" update="0" />
+		<scene name="howto_02" title="②「エクストリームギア」に乗ってみよう！" cls="SceneSwfLoad" url="howto_02.swf" update="0" />
+		<scene name="howto_03" title="③エアトリックを決めてエアを獲得しよう！" cls="SceneSwfLoad" url="howto_03.swf" update="0" />
+		<scene name="howto_04" title="④様々なアクションで有利に進めよう！" cls="SceneSwfLoad" url="howto_04.swf" update="0" />
+		<scene name="howto_05" title="⑤スキルを駆使してベストタイムを狙おう！" cls="SceneSwfLoad" url="howto_05.swf" update="0" />
+		<scene name="howto_06" title="⑥バイクギアを乗りこなそう！" cls="SceneSwfLoad" url="howto_06.swf" update="0" />
+		<scene name="howto_07" title="⑦その他のコース固有のアクション！" cls="SceneSwfLoad" url="howto_07.swf" update="0" />
+	</scene>
+	<scene name="multi" title="マルチプレイ" cls="SceneThrough" url="" update="0">
+		<scene name="multi_01" title="①2人で対戦プレイ：フリーレース" cls="SceneSwfLoad" url="multi_01.swf" update="0" />
+		<scene name="multi_02" title="②2人で協力プレイ：タッグレース" cls="SceneSwfLoad" url="multi_02.swf" update="0" />
+		<scene name="multi_03" title="③2～4人で協力／対戦プレイ:リレーレース" cls="SceneSwfLoad" url="multi_03.swf" update="0" />
+		<scene name="multi_04" title="④Xbox LIVEで、世界中のライダーと勝負！" cls="SceneSwfLoad" url="multi_04.swf" update="0" />
+	</scene>
+	<scene name="item" title="アイテム" cls="SceneSwfLoad" url="item.swf" update="0" />
+	<scene name="story_chara" title="ストーリー＆キャラクター" cls="SceneSwfLoad" url="story_chara.swf" update="0" />
+	<scene name="course" title="コース" cls="SceneSwfLoad" url="course.swf" update="1" hold="1">
+		<scene name="course_1_1" title="スクリーンショット" cls="SceneImageLoad" url="course_1_1.jpg" update="0" />
+		<scene name="course_1_2" title="スクリーンショット" cls="SceneImageLoad" url="course_1_2.jpg" update="0" />
+		<scene name="course_1_3" title="スクリーンショット" cls="SceneImageLoad" url="course_1_3.jpg" update="0" />
+		<scene name="course_1_4" title="スクリーンショット" cls="SceneImageLoad" url="course_1_4.jpg" update="0" />
+		<scene name="course_1_5" title="スクリーンショット" cls="SceneImageLoad" url="course_1_5.jpg" update="0" />
+		<scene name="course_2_1" title="スクリーンショット" cls="SceneImageLoad" url="course_2_1.jpg" update="0" />
+		<scene name="course_2_2" title="スクリーンショット" cls="SceneImageLoad" url="course_2_2.jpg" update="0" />
+		<scene name="course_2_3" title="スクリーンショット" cls="SceneImageLoad" url="course_2_3.jpg" update="0" />
+		<scene name="course_2_4" title="スクリーンショット" cls="SceneImageLoad" url="course_2_4.jpg" update="0" />
+		<scene name="course_2_5" title="スクリーンショット" cls="SceneImageLoad" url="course_2_5.jpg" update="0" />
+		<scene name="course_3_1" title="スクリーンショット" cls="SceneImageLoad" url="course_3_1.jpg" update="0" />
+		<scene name="course_3_2" title="スクリーンショット" cls="SceneImageLoad" url="course_3_2.jpg" update="0" />
+		<scene name="course_3_3" title="スクリーンショット" cls="SceneImageLoad" url="course_3_3.jpg" update="0" />
+		<scene name="course_3_4" title="スクリーンショット" cls="SceneImageLoad" url="course_3_4.jpg" update="0" />
+		<scene name="course_3_5" title="スクリーンショット" cls="SceneImageLoad" url="course_3_5.jpg" update="0" />
+		<scene name="course_4_1" title="スクリーンショット" cls="SceneImageLoad" url="course_4_1.jpg" update="0" />
+		<scene name="course_4_2" title="スクリーンショット" cls="SceneImageLoad" url="course_4_2.jpg" update="0" />
+		<scene name="course_4_3" title="スクリーンショット" cls="SceneImageLoad" url="course_4_3.jpg" update="0" />
+		<scene name="course_4_4" title="スクリーンショット" cls="SceneImageLoad" url="course_4_4.jpg" update="0" />
+		<scene name="course_4_5" title="スクリーンショット" cls="SceneImageLoad" url="course_4_5.jpg" update="0" />
+		<scene name="course_5_1" title="スクリーンショット" cls="SceneImageLoad" url="course_5_1.jpg" update="0" />
+		<scene name="course_5_2" title="スクリーンショット" cls="SceneImageLoad" url="course_5_2.jpg" update="0" />
+		<scene name="course_5_3" title="スクリーンショット" cls="SceneImageLoad" url="course_5_3.jpg" update="0" />
+		<scene name="course_5_4" title="スクリーンショット" cls="SceneImageLoad" url="course_5_4.jpg" update="0" />
+		<scene name="course_5_5" title="スクリーンショット" cls="SceneImageLoad" url="course_5_5.jpg" update="0" />
+		<scene name="course_6_1" title="スクリーンショット" cls="SceneImageLoad" url="course_6_1.jpg" update="1" />
+		<scene name="course_6_2" title="スクリーンショット" cls="SceneImageLoad" url="course_6_2.jpg" update="1" />
+		<scene name="course_6_3" title="スクリーンショット" cls="SceneImageLoad" url="course_6_3.jpg" update="1" />
+		<scene name="course_6_4" title="スクリーンショット" cls="SceneImageLoad" url="course_6_4.jpg" update="1" />
+		<scene name="course_6_5" title="スクリーンショット" cls="SceneImageLoad" url="course_6_5.jpg" update="1" />
+		<scene name="course_7_1" title="スクリーンショット" cls="SceneImageLoad" url="course_7_1.jpg" update="1" />
+		<scene name="course_7_2" title="スクリーンショット" cls="SceneImageLoad" url="course_7_2.jpg" update="1" />
+		<scene name="course_7_3" title="スクリーンショット" cls="SceneImageLoad" url="course_7_3.jpg" update="1" />
+		<scene name="course_7_4" title="スクリーンショット" cls="SceneImageLoad" url="course_7_4.jpg" update="1" />
+		<scene name="course_7_5" title="スクリーンショット" cls="SceneImageLoad" url="course_7_5.jpg" update="1" />
+		<scene name="course_8_1" title="スクリーンショット" cls="SceneImageLoad" url="course_8_1.jpg" update="1" />
+		<scene name="course_8_2" title="スクリーンショット" cls="SceneImageLoad" url="course_8_2.jpg" update="1" />
+		<scene name="course_8_3" title="スクリーンショット" cls="SceneImageLoad" url="course_8_3.jpg" update="1" />
+		<scene name="course_8_4" title="スクリーンショット" cls="SceneImageLoad" url="course_8_4.jpg" update="1" />
+		<scene name="course_8_5" title="スクリーンショット" cls="SceneImageLoad" url="course_8_5.jpg" update="1" />
+	</scene>
+	<scene name="topics" title="トピックス" cls="SceneSwfLoad" url="topics.swf" update="0" />
+	<scene name="trailer" title="トレーラー" cls="SceneSwfLoad" url="trailer.swf" update="0" />
+	<scene name="report" title="イベントレポート" cls="SceneThrough" url="" update="1">
+		<scene name="vol_02" title="東京ジョイポリス「ソニック フリーライダーズ」ゲーム大会レポート" cls="SceneSwfLoad" url="report_02.swf" update="0" />
+		<scene name="vol_01" title="『Games Japan Festa 2010』レポート" cls="SceneSwfLoad" url="report_01.swf" update="0" />
+	</scene>
+</prml>

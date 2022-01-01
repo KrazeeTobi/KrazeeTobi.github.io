@@ -1,0 +1,106 @@
+/* common-contents ------------------------------------------ */
+#common-contents h1{
+	display:block;
+	font-family: sans-serif;
+	line-height:0;
+	text-decoration:none;
+	text-indent:-5000px;
+	
+	width:820px;
+	height:84px;
+	margin:0 0 10px;
+	background:url(original-contents/common-contents-h1_bg.jpg) no-repeat top center;	
+}
+
+#common-contents-wallPaper,#common-contents-banner{
+	padding-left:6px;
+	width:780px;
+}
+#common-contents-wallPaper h2,#common-contents-banner h2{
+	clear:both;
+	padding:15px 0px 0px 40px;
+	height:50px;
+	background:url(original-contents/download-h2_bg.jpg) no-repeat left top;
+}
+#common-contents-wallPaper ul{
+	padding:135px 0px 20px 0px;
+	float:left;
+	width:193px;
+	display:block;
+	font-family: sans-serif;
+	line-height:0;
+	text-decoration:none;
+	text-indent:-5000px;
+}
+#common-contents-wallPaper ul#wp01{
+	background:url(original-contents/download-wallpaper01.jpg) no-repeat center top;
+}
+#common-contents-wallPaper ul#wp02{
+	background:url(original-contents/download-wallpaper02.jpg) no-repeat center top;
+}
+#common-contents-wallPaper ul#wp03{
+	background:url(original-contents/download-wallpaper03.jpg) no-repeat center top;
+}
+#common-contents-wallPaper ul#wp04{
+	background:url(original-contents/download-wallpaper04.jpg) no-repeat center top;
+}
+
+#common-contents-wallPaper p{
+	float:left;
+	width:193px;
+	text-align:center;
+}
+
+#common-contents-wallPaper ul li a{
+	display:block;
+	text-decoration:none;
+	text-indent:-9999px;
+	height:25px;
+	overflow:hidden;
+	line-height:0em;
+	font-size:0px;
+	vertical-align:top;
+}
+#common-contents-wallPaper ul li.download-btn1280_1024 a {
+	background:url(original-contents/download-btn1280_1024.jpg) no-repeat center 0px;
+}
+#common-contents-wallPaper ul li.download-btn1280_1024 a:hover{
+	background:url(original-contents/download-btn1280_1024.jpg) no-repeat center -25px;
+}
+#common-contents-wallPaper ul li.download-btn1280_800 a {
+	background:url(original-contents/download-btn1280_800.jpg) no-repeat center 0px;
+}
+#common-contents-wallPaper ul li.download-btn1280_800 a:hover{
+	background:url(original-contents/download-btn1280_800.jpg) no-repeat center -25px;
+}
+#common-contents-wallPaper ul li.download-btn1024_768 a {
+	background:url(original-contents/download-btn1024_768.jpg) no-repeat center 0px;
+}
+#common-contents-wallPaper ul li.download-btn1024_768 a:hover{
+	background:url(original-contents/download-btn1024_768.jpg) no-repeat center -25px;
+}
+
+#common-contents-banner .banner-area{
+	clear:both;
+	padding-left:20px;
+}
+#common-contents-banner .banner-area img{
+	float:left;
+	padding-bottom:30px;
+}
+#banner-transverse,#banner-length{
+	padding-right:20px;
+	float:right;
+}
+#banner-transverse textarea{
+	margin-bottom:15px;
+	width:320px;
+	height:100px;
+}
+#banner-length textarea{
+	margin-bottom:15px;
+	width:560px;
+	height:100px;
+}
+
+

@@ -1,0 +1,95 @@
+/* contents-navigation ------------------------------------------ */
+#contents-navigation{
+	width:210px;
+	float:left;
+	padding:0 0 0 30px;
+}
+
+/* h2 ------------------------------------------ */
+
+#contents-navigation h2{
+	display:block;
+	text-decoration:none;
+	text-indent:-9999px;
+	width:210px;
+	height:20px;
+	overflow:hidden;
+	line-height:0em;
+	font-size:0;
+	background:url(contents-navigation/h2_bg.gif) no-repeat;
+}
+
+/* ul ------------------------------------------ */
+#contents-navigation ul#navigation-wrap{
+	width:210px;
+	padding:0 0 9px;
+	background:url(contents-navigation/ul_bg.gif) no-repeat bottom;
+}
+
+/* li ------------------------------------------ */
+#contents-navigation ul#navigation-wrap li#wrap-strategy,#contents-navigation ul#navigation-wrap li#wrap-capture{
+	padding:27px 0 0 0;
+	display:block;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;
+}
+#contents-navigation ul#navigation-wrap li#wrap-strategy{background:url(contents-navigation/ul_strategy.gif) no-repeat;}
+#contents-navigation ul#navigation-wrap li#wrap-capture{background:url(contents-navigation/ul_capture.gif) no-repeat;}
+
+#contents-navigation ul#navigation-wrap li ul li{
+	margin:0;
+	padding:0;
+	position:relative;
+	width:210px;
+	height:25px;
+	vertical-align:top;
+}
+
+
+/* a ------------------------------------------ */
+#contents-navigation ul#navigation-wrap li ul li a{
+	width:210px;
+	height:25px;
+	display:block;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:normal;
+}
+
+/* navigation01 */
+#contents-navigation ul li#li-companion a{background:url(contents-navigation/li_strategy01.gif) no-repeat;}
+#contents-navigation ul li#li-companion a:hover{background:url(contents-navigation/li_strategy01.gif) no-repeat -210px;}
+/* navigation02 */
+#contents-navigation ul li#li-weakpoint a{background:url(contents-navigation/li_strategy02.gif) no-repeat;}
+#contents-navigation ul li#li-weakpoint a:hover{background:url(contents-navigation/li_strategy02.gif) no-repeat -210px;}
+/* navigation03 */
+#contents-navigation ul li#li-chao a{background:url(contents-navigation/li_strategy03.gif) no-repeat;}
+#contents-navigation ul li#li-chao a:hover{background:url(contents-navigation/li_strategy03.gif) no-repeat -210px;}
+/* navigation04 */
+#contents-navigation ul li#li-experience a{background:url(contents-navigation/li_strategy04.gif) no-repeat;}
+#contents-navigation ul li#li-experience a:hover{background:url(contents-navigation/li_strategy04.gif) no-repeat -210px;}
+/* navigation05 */
+#contents-navigation ul li#li-recovery a{background:url(contents-navigation/li_strategy05.gif) no-repeat;}
+#contents-navigation ul li#li-recovery a:hover{background:url(contents-navigation/li_strategy05.gif) no-repeat -210px;}
+
+/* navigation06 */
+#contents-navigation ul li#li-soldier a{background:url(contents-navigation/li_capture01.gif) no-repeat;}
+#contents-navigation ul li#li-soldier a:hover{background:url(contents-navigation/li_capture01.gif) no-repeat -210px;}
+/* navigation07 */
+#contents-navigation ul li#li-swatbot a{background:url(contents-navigation/li_capture02.gif) no-repeat;}
+#contents-navigation ul li#li-swatbot a:hover{background:url(contents-navigation/li_capture02.gif) no-repeat -210px;}
+/* navigation08 */
+#contents-navigation ul li#li-hideout a{background:url(contents-navigation/li_capture03.gif) no-repeat;}
+#contents-navigation ul li#li-hideout a:hover{background:url(contents-navigation/li_capture03.gif) no-repeat -210px;}
+/* navigation09 */
+#contents-navigation ul li#li-pipe a{background:url(contents-navigation/li_capture04.gif) no-repeat;}
+#contents-navigation ul li#li-pipe a:hover{background:url(contents-navigation/li_capture04.gif) no-repeat -210px;}
+/* navigation10 */
+#contents-navigation ul li#li-arrow a{background:url(contents-navigation/li_capture05.gif) no-repeat;}
+#contents-navigation ul li#li-arrow a:hover{background:url(contents-navigation/li_capture05.gif) no-repeat -210px;}
+
+
+

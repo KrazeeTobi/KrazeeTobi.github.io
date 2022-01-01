@@ -1,0 +1,33 @@
+/* common-contents --------------------------- */
+#common-contents{
+	background:url(common-contents/common-contents_bg.gif) repeat-y top center;
+}
+
+/* clear fix */
+#common-contents{
+	zoom:1;/*for IE 5.5-7*/
+}
+
+#common-contents:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+
+/*  */
+#common-contents h1{
+	width:820px;
+	height:84px;
+	margin:0 0 10px;
+	
+	display:block;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;	
+	
+	background:url(common-contents/h1_bg.jpg) repeat-y top;
+}

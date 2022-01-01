@@ -1,0 +1,96 @@
+/* common-navigation ------------------------------------------ */
+#common-navigation{
+	margin-top:-10px;
+	height:175px;
+	width:840px;
+	background:url(common-navigation/common-navigation_bg.jpg) no-repeat center center;
+}
+* html #common-navigation{
+	behavior: expression(IEPNGFIX.fix(this));
+} 
+/* common-navigation ボタンエリア ------------------------------------------ */
+#common-navigation ul {
+	position:relative;
+	top:95px;
+	left:335px;
+	width:477px;
+	height:63px;
+	background:url(common-navigation/button-contents_bg.gif) no-repeat right top;
+}
+#common-navigation ul li {
+	float:left;
+	width:140px;
+	height:29px;
+	overflow:hidden;
+	position:relative;
+}
+
+#common-navigation ul li#li-top{
+	position:relative;
+	top:-29px;
+	width:49px;
+	height:58px;
+}
+#common-navigation ul li a, #common-navigation ul li.li-comingsoon {
+	display:block;
+	text-decoration:none;
+	text-indent:-9999px;
+	width:140px;
+	height:29px;
+	overflow:hidden;
+	line-height:0em;	
+}
+#common-navigation ul li#li-top a{
+	width:49px;
+	height:58px;
+}
+
+#common-navigation ul li#li-story a {
+	background:url(common-navigation/button-story.jpg) no-repeat left 0px;
+}
+#common-navigation ul li#li-character a {
+	background:url(common-navigation/button-character.jpg) no-repeat left 0px;
+}
+#common-navigation ul li#li-gamesystem a {
+	background:url(common-navigation/button-gamesystem.jpg) no-repeat left 0px;
+}
+#common-navigation ul li#li-chao a {
+	background:url(common-navigation/button-chao.jpg) no-repeat left 0px;
+}
+#common-navigation ul li#li-capture a {
+	background:url(common-navigation/button-capture.jpg) no-repeat left 0px;
+}
+#common-navigation ul li#li-download a {
+	background:url(common-navigation/button-download.jpg) no-repeat left 0px;
+}
+#common-navigation ul li#li-top a {
+	background:url(common-navigation/button-top.jpg) no-repeat left 0px;
+}
+
+#common-navigation ul li#li-story a:hover {
+	background:url(common-navigation/button-story.jpg) no-repeat left -29px;
+}
+#common-navigation ul li#li-character a:hover {
+	background:url(common-navigation/button-character.jpg) no-repeat left -29px;
+}
+#common-navigation ul li#li-gamesystem a:hover {
+	background:url(common-navigation/button-gamesystem.jpg) no-repeat left -29px;
+}
+#common-navigation ul li#li-chao a:hover {
+	background:url(common-navigation/button-chao.jpg) no-repeat left -29px;
+}
+#common-navigation ul li#li-capture a:hover {
+	background:url(common-navigation/button-capture.jpg) no-repeat left -29px;
+}
+#common-navigation ul li#li-download a:hover {
+	background:url(common-navigation/button-download.jpg) no-repeat left -29px;
+}
+#common-navigation ul li#li-top a:hover {
+	background:url(common-navigation/button-top.jpg) no-repeat left -58px;
+}
+
+#common-navigation ul li.li-coming{
+	background:url(common-navigation/button-coming.jpg) no-repeat;
+}
+
+

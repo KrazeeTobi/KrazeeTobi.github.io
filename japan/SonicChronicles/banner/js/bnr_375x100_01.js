@@ -1,0 +1,1 @@
+document.write('<a href="http://sonic.sega.jp/SonicChronicles/"><img src="http://sonic.sega.jp/SonicChronicles/banner/image/bnr_375x100_01.jpg" alt="ソニッククロニクル" width="375" height="100" border="0" /></a>')

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:admin="http://webns.net/mvcb/"
+xmlns="http://purl.org/rss/1.0/">
+
+<channel rdf:about="">
+<title></title>
+<description><![CDATA[]]></description>
+<dc:language>ja</dc:language>
+<dc:date>2010-12-22T00:00:00+09:00</dc:date>
+<admin:generatorAgent rdf:resource="http://www.towofu.net/soft/rsspost.php" />
+
+<items>
+<rdf:Seq>
+<rdf:li rdf:resource="#201012220000" />
+<rdf:li rdf:resource="#201012170000" />
+<rdf:li rdf:resource="#201011180000" />
+<rdf:li rdf:resource="#201011100000" />
+<rdf:li rdf:resource="#201009160000" />
+<rdf:li rdf:resource="#201008230000" />
+<rdf:li rdf:resource="#201006160000" />
+<rdf:li rdf:resource="#201005270000" />
+</rdf:Seq>
+</items>
+
+</channel>
+
+<item rdf:about="#201012220000">
+<title>12月22日　インタビュー掲載！</title>
+<link>http://sonic.sega.jp/SonicChannel/creators/029/001/index.html</link>
+<description><![CDATA[・サントラ発売記念、床井 健一＆大谷 智哉のインタビューを「ソニックチャンネル」に掲載！]]></description>
+<dc:date>2010-12-22T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#201012170000">
+<title>12月17日　公式サイト更新！</title>
+<description><![CDATA[・[動画を観る]追加！
+・[ダウンロード]公開！]]></description>
+<dc:date>2010-12-17T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#201011180000">
+<title>11月18日　公式サイト更新！</title>
+<description><![CDATA[本日発売！！
+・[ソニックのアクション]追加！
+・[ぼうけんのぶたい]追加！]]></description>
+<dc:date>2010-11-18T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#201011100000">
+<title>11月10日　公式サイト更新！</title>
+<description><![CDATA[・[動画を観る]追加！]]></description>
+<dc:date>2010-11-10T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#201009160000">
+<title>10月15日　公式サイト更新！</title>
+<description><![CDATA[・[ソニックのアクション]追加！
+・[ぼうけんのぶたい]追加！
+・[ふたりでプレイ]公開！
+・[動画を観る]追加！]]></description>
+<dc:date>2010-10-15T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#201009160000">
+<title>9月16日　公式サイトリニューアルオープン！</title>
+<description><![CDATA[公式サイトリニューアルオープン！
+・[ものがたりとキャラクター]公開！
+・[ソニックのアクション]公開！
+・[ぼうけんのぶたい]公開！]]></description>
+<dc:date>2010-09-16T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#201008230000">
+<title>6月16日　公式サイト更新！</title>
+<description><![CDATA[・スクリーンショット追加！
+・ムービー追加！]]></description>
+<dc:date>2010-08-23T00:00:00+09:00</dc:date>
+</item>
+
+
+<item rdf:about="#201006160000">
+<title>6月16日　公式サイトリニューアル！</title>
+<description><![CDATA[・スクリーンショット追加！
+・ムービー追加！]]></description>
+<dc:date>2010-06-16T00:00:00+09:00</dc:date>
+</item>
+
+
+<item rdf:about="#201005270000">
+<title>5月27日　公式サイト公開！</title>
+<description><![CDATA[・公式サイト公開！！]]></description>
+<dc:date>2010-05-27T00:00:00+09:00</dc:date>
+</item>
+
+
+</rdf:RDF>

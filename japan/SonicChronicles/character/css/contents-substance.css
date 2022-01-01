@@ -1,0 +1,106 @@
+/* contents-substance ------------------------------------------ */
+#contents-substance{
+	width:540px;
+	float:right;
+	padding:0 30px 0 0;
+}
+
+/* h2 ------------------------------------------ */
+#contents-substance h2{
+	padding:0;
+	margin:0;
+	line-height:0;
+}
+
+/* div ------------------------------------------ */
+
+
+#contents-substance div{
+	padding:0 0 15px;
+	margin:0;
+	background:url(contents-substance/div_bg.gif) repeat-y;
+}
+
+/* clear fix */
+/*for IE 5.5-7*/
+#contents-substance div{
+	zoom:1;
+}
+/*for modern browser*/
+#contents-substance div:after{
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+
+/* h3 ------------------------------------------ */
+#contents-substance div h3{
+	margin:0;
+	padding:0;
+	width:320px;
+	height:39px;
+	text-align:center;
+}
+
+/* div div ------------------------------------------ */
+#contents-substance div div{
+	width:280px;
+	margin:0 10px 15px;
+	padding:15px 10px 0;
+	background:url(contents-substance/div-div_bg.gif);
+}
+
+/*IE6*/
+* html #contents-substance div div{
+	width:280px;
+	margin:0 5px 15px;
+}
+
+
+/* div p ------------------------------------------ */
+#contents-substance div p{
+	display:block;
+	width:220px;
+	padding:0;
+	margin:0;
+	text-align:center;
+	/*position:relative;*/
+}
+
+#contents-substance div p img{
+/*	position:relative;
+	top:-30px;
+	*/
+}
+
+
+/* div div p------------------------------------------ */
+#contents-substance div div p{
+	display:inline;
+	width:280px;
+	padding:0 0 1em;
+	text-align:left;
+}
+
+
+/* float ------------------------------------------ */
+/* div-odd */
+.div-odd h3,.div-odd div{
+	float:right;
+}
+.div-odd p{
+	float:left;
+}
+
+/* div-even */
+.div-even h3, .div-even div{
+	float:left;
+}
+.div-even p{
+	float:right;
+}
+
+

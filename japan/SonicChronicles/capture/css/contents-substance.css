@@ -1,0 +1,82 @@
+/* contents-substance ------------------------------------------ */
+#contents-substance{
+	width:540px;
+	float:right;
+	padding:0 30px 30px 0;
+	color:#fff;
+}
+
+/*  ------------------------------------------ */
+#contents-substance p.border-bar{
+	padding:0;
+	margin:0;
+	line-height:0;
+}
+
+/* contents-substance ------------------------------------------ */
+#contents-substance div{
+	padding:0;
+	margin:0;
+	background:url(contents-substance/div_bg.gif) repeat-y;
+	boder:1px solid #f00;
+}
+#contents-substance div p{
+	margin-bottom:1em;
+	padding:0 10px 10px;
+}
+
+/* clear fix */
+/*for IE 5.5-7*/
+#contents-substance div{
+	zoom:1;
+}
+/*for modern browser*/
+#contents-substance div:after{
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+
+/* h2 ------------------------------------------ */
+#contents-substance div h2{
+	margin:0 0 0 4px;
+	height:159px;
+	text-align:left;
+}
+
+/* div ------------------------------------------ */
+#contents-substance div div{
+	margin-bottom:10px;
+	background:url(contents-substance/div-div_bg_bttom.gif) no-repeat 4px bottom;
+}
+#contents-substance div div div.sectionPack{
+	padding:0px 15px 15px 15px;
+	background:url(contents-substance/div-div_bg.gif) repeat-y 4px 0px;
+}
+#contents-substance div div div div{
+	background:none;
+}
+
+
+/* ol ------------------------------------------ */
+#contents-substance div div ol{
+	padding:30px;
+}
+#contents-substance div div ol li{
+	list-style:decimal;
+}
+
+
+
+/* class ------------------------------------------ */
+.leftStance{
+	width:250px;
+	float:left;
+}
+.rightStance{
+	width:250px;
+	float:right;
+}

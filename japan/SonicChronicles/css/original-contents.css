@@ -1,0 +1,145 @@
+/* common-header --------------------------- */
+#common-header{
+}
+
+/* common-navigation ------------------------------------------ */
+#common-navigation{
+	margin-top:0px;
+	height:0px;
+	width:428px;
+	background:none;
+	position:relative;
+}
+
+#common-navigation ul {
+	position:absolute;
+	top:-118px;
+	left:190px;
+	background:url(original-contents/button-top_bg.gif) no-repeat -5px -3px;
+}
+
+* html #common-navigation ul{
+	behavior: expression(IEPNGFIX.fix(this));
+}
+
+/* body ------------------------------------------ */
+body#top {
+	background:url(original-contents/top-body_bg.jpg) repeat-x top center #000;
+}
+
+/* top-main --------------------------- */
+#top-main h1,#top-main p,#common-contents #top-spec dl,#common-contents #top-spec dl dt,#common-contents #top-spec dl dd{
+	display:block;
+	font-size:0px;
+	font-family: sans-serif;
+	line-height:0;
+	text-decoration:none;
+	text-indent:-5000px;
+}
+#top-main{
+	position:relative;
+	width:1036px;
+	height:635px;
+	background:url(original-contents/top-main_bg.jpg) no-repeat center center;
+	margin-top:-9px;
+}
+#top-main #flashcontent{
+	position:absolute;
+	height:354px;
+	top:35px;
+	left:110px;
+}
+#top-main h1{
+	width:321px;
+	height:168px;
+	position:absolute;
+	top:419px;
+	left:135px;
+	background:url(original-contents/logo_chronicles.gif) no-repeat;
+}
+
+#top-main #campaign-banner a{
+	display:block;
+	font-size:0px;
+	font-family: sans-serif;
+	line-height:0;
+	text-decoration:none;
+	text-indent:-5000px;
+
+	width:382px;
+	height:117px;
+	position:absolute;
+	top:48px;
+	left:517px;
+}
+
+/* common-contents ------------------------------------------ */
+#common-contents{
+	background:url(original-contents/top-contents-bg.gif) repeat-y center top;
+}
+#common-contents #top-spec{
+	padding:10px 0px 0px 40px;
+	float:left;
+	width:260px;
+}
+#common-contents #top-spec dl{
+	margin-bottom:20px;
+	width:252px;
+	height:109px;
+	background:url(original-contents/top-spec.gif) no-repeat;
+}
+#common-contents #top-spec p{
+position:relative;
+}
+#common-contents #top-spec p img{
+	margin-right:10px;
+}
+#common-contents #top-infomation{
+	width:470px;
+	float:right;
+}
+#common-contents #top-infomation h2{
+margin-bottom:0px;
+	padding:15px 0px 0px 15px;
+	height:53px;
+	background:url(original-contents/top-h2_bg01.jpg) no-repeat -10px top;
+}
+#common-contents #top-infomation dl{
+	position:relative;
+	top:-15px;
+	width:428px;
+	border:solid 1px #a9a9a9;
+	background:url(original-contents/top-infomation_bg.jpg) repeat-y center center;
+}
+#common-contents #top-infomation dt{
+	padding:10px 20px 0px 20px;
+}
+#common-contents #top-infomation dd{
+	padding:0px 20px 10px 20px;
+}
+
+#common-contents #top-BioWare{
+	clear:both;
+}
+#common-contents #top-BioWare h2{
+	height:80px;
+	background:url(original-contents/top-h2_bg02.jpg) no-repeat center top;
+	padding:25px 0px 0px 90px;
+}
+#common-contents #top-BioWare p img{
+	padding-left:40px;
+	width:300px;
+	float:left;
+
+}
+#common-contents #top-BioWare div{
+	padding-right:40px;
+	width:420px;
+	float:right;
+	margin-bottom:20px;
+}
+
+#common-footer{
+	background:url(original-contents/top-footer-bg.gif) no-repeat top center #192730;	
+
+}

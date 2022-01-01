@@ -1,0 +1,224 @@
+/* contents-substance ------------------------------------------ */
+#contents-substance{
+	width:540px;
+	float:right;
+	padding:0 30px 30px 0;
+}
+
+/*  ------------------------------------------ */
+#contents-substance p.border-bar{
+	padding:0;
+	margin:0;
+	line-height:0;
+}
+
+/* div ------------------------------------------ */
+#contents-substance div{
+	padding:0;
+	margin:0;
+	background:url(contents-substance/div_bg.gif) repeat-y;
+	boder:1px solid #f00;
+}
+
+/* clear fix */
+/*for IE 5.5-7*/
+#contents-substance div{
+	zoom:1;
+}
+/*for modern browser*/
+#contents-substance div:after{
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+
+/* h2 ------------------------------------------ */
+#contents-substance div h2{
+	margin:0 0 0 4px;
+	padding:0;
+	height:39px;
+	text-align:left;
+}
+/* h3 ------------------------------------------ */
+#contents-substance div div h3{
+	clear:both;
+	height:25px;
+	font-weight:bold;
+	color:#fff;
+	padding:6px 0px 0px 0px;
+	text-indent:0.5em;
+	margin-bottom:15px;
+	border-left:#fff solid 5px;
+	background:url(contents-substance/div-div_bg.gif);
+}
+
+
+/* div div ------------------------------------------ */
+#contents-substance div div{
+	margin:0 0px 15px;
+	padding:15px 10px 0;
+	background:none;
+}
+
+
+
+/* div p ------------------------------------------ */
+#contents-substance div p{
+	padding:0;
+	margin:0;
+	text-align:center;
+	/*position:relative;*/
+}
+
+
+
+/* div div p------------------------------------------ */
+#contents-substance div div p{
+	padding:0 0 1em;
+	text-align:left;
+}
+
+
+#contents-substance div div div,#contents-substance #section-conversation div div,
+#contents-substance #section-promotion div div{
+	padding:0 0 1em;
+	text-align:left;
+}
+/* div-even */
+#contents-substance div div div div.div-even,#contents-substance #section-conversation div div.div-even,
+#contents-substance #section-promotion div div.div-even{
+	width:240px;
+	float:left;
+}
+/* div-odd */
+#contents-substance div div div div.div-odd,#contents-substance #section-conversation div div.div-odd,
+#contents-substance #section-promotion div div.div-odd{
+	width:240px;
+	float:right;
+}
+
+/* div ol ------------------------------------------ */
+#contents-substance div ol{
+	padding:0;
+	margin:0;
+	list-style-position:inside;
+}
+#contents-substance div ol li{
+	float:left;
+	margin-bottom:15px;
+}
+
+/* div dl ------------------------------------------ */
+#contents-substance div dl {
+	padding:0px 20px 15px 20px;
+}
+#contents-substance div dl dt{
+	clear:both;
+	padding:0;
+	width: 10em;
+	font-weight:bold;
+	color:#fff;
+	float:left;
+}
+#contents-substance div dl dt img{
+	padding-right:1.5em;
+	vertical-align:middle;
+}
+#contents-substance div dl dd{
+	_height: 1%; /* Hack for Win IE6 */
+	width:auto;
+	padding: 5px 0px 5px 10px;
+	margin-bottom:10px;
+}
+
+#contents-substance div dl dd ul li{
+	text-decoration:none;
+	text-indent:-9999px;
+	width:20px;
+	height:20px;
+	overflow:hidden;
+	line-height:0em;
+	float:left;
+}
+#contents-substance div dl dd.select-chara-area{
+	position:relative;
+	padding: 5px 0px 5px 10px;
+	margin-left:10em;
+	color:#fff;
+	background:url(contents-substance/div-div_bg.gif);
+}
+#contents-substance div dl dd.select-chara-area ul{
+	position:absolute;
+	top:5px;
+	left:10em;
+}
+#contents-substance div dl dd ul li.aicon-sonic{
+	background:url(contents-substance/chara_aicon_sonic.gif) no-repeat left center;
+}
+#contents-substance div dl dd ul li.aicon-amy{
+	background:url(contents-substance/chara_aicon_amyrose.gif) no-repeat left center;
+}
+#contents-substance div dl dd ul li.aicon-shadow{
+	background:url(contents-substance/chara_aicon_shadow.gif) no-repeat left center;
+}
+#contents-substance div dl dd ul li.aicon-tails{
+	background:url(contents-substance/chara_aicon_tails.gif) no-repeat left center;
+}
+#contents-substance div dl dd ul li.aicon-rouge{
+	background:url(contents-substance/chara_aicon_rouge.gif) no-repeat left center;
+}
+#contents-substance div dl dd ul li.aicon-cream{
+	background:url(contents-substance/chara_aicon_cream.gif) no-repeat left center;
+}
+#contents-substance div dl dd ul li.aicon-knuckles{
+	background:url(contents-substance/chara_aicon_knuckles.gif) no-repeat left center;
+}
+#contents-substance div dl dd ul li.aicon-omega{
+	background:url(contents-substance/chara_aicon_omega.gif) no-repeat left center;
+}
+#contents-substance div dl dd ul li.aicon-big{
+	background:url(contents-substance/chara_aicon_big.gif) no-repeat left center;
+}
+
+/* section-battle section-power-move ------------------------------------------ */
+#contents-substance #section-battle div div, #contents-substance #section-power-move div div{
+	margin-bottom:0;
+	width:520px;
+	padding-top:15px;
+	background:url(contents-substance/section_line_bg.gif) repeat-x top left;
+}
+#contents-substance #section-battle div div dl,#contents-substance #section-power-move div div dl{
+	width:230px;
+	float:left;
+	clear:both;
+}
+#contents-substance #section-power-move div div dl{
+	padding-left:10px;
+	padding-right:0px;
+}
+#contents-substance #section-power-move div div dl dt,
+#contents-substance #section-power-move div div dl dd{
+	padding:0;
+	width:230px;
+}
+#contents-substance #section-power-move div div dl dd{
+	clear:both;
+}
+#contents-substance #section-battle div div dl dd{
+	position:relative;
+	top:-0.8em;
+	padding-left:50px;
+	clear:both;
+}
+
+#contents-substance #section-battle div div p,#contents-substance #section-power-move div div p{
+	width:250px;
+	float:right;
+}
+
+#contents-substance #section-battle div div#action-defense dl{
+	width:480px;
+}

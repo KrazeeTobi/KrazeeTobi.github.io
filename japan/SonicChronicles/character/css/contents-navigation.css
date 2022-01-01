@@ -1,0 +1,161 @@
+/* contents-navigation ------------------------------------------ */
+#contents-navigation{
+	width:210px;
+	float:left;
+	padding:0 0 0 30px;
+}
+
+/* h2 ------------------------------------------ */
+
+#contents-navigation h2{
+	display:block;
+	text-decoration:none;
+	text-indent:-9999px;
+	width:210px;
+	height:20px;
+	overflow:hidden;
+	line-height:0em;
+	font-size:0;
+	background:url(contents-navigation/h2_bg.gif) no-repeat;
+}
+
+/* ul ------------------------------------------ */
+#contents-navigation ul{
+	width:210px;
+	padding:0 0 9px;
+	background:url(contents-navigation/ul_bg.gif) no-repeat bottom;
+}
+
+/* li ------------------------------------------ */
+#contents-navigation ul li{
+	position:relative;
+	width:210px;
+	height:25px;
+	vertical-align:top;
+	margin:0;
+	padding:0;
+}
+
+#contents-navigation ul li.li-coming{
+	display:block;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:normal;
+	background:url(contents-navigation/li-coming_bg.gif) no-repeat;
+}
+
+/* a ------------------------------------------ */
+#contents-navigation ul li a{
+	width:210px;
+	height:25px;
+	display:block;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:normal;
+}
+/* sonic */
+#contents-navigation ul li#li-sonic a{
+	background:url(contents-navigation/li-sonic_bg.gif) no-repeat;
+}
+
+#contents-navigation ul li#li-sonic a:hover{
+	background:url(contents-navigation/li-sonic_bg.gif) no-repeat -210px;
+}
+/* tails */
+#contents-navigation ul li#li-tails a{
+	background:url(contents-navigation/li-tails_bg.gif) no-repeat;
+}
+
+#contents-navigation ul li#li-tails a:hover{
+	background:url(contents-navigation/li-tails_bg.gif) no-repeat -210px;
+}
+
+/* knuckles */
+#contents-navigation ul li#li-knuckles a{
+	background:url(contents-navigation/li-knuckles_bg.gif) no-repeat;
+}
+
+#contents-navigation ul li#li-knuckles a:hover{
+	background:url(contents-navigation/li-knuckles_bg.gif) no-repeat -210px;
+}
+
+/* amy */
+#contents-navigation ul li#li-amy a{
+	background:url(contents-navigation/li-amy_bg.gif) no-repeat;
+}
+
+#contents-navigation ul li#li-amy a:hover{
+	background:url(contents-navigation/li-amy_bg.gif) no-repeat -210px;
+}
+
+/* cream */
+#contents-navigation ul li#li-cream a{
+	background:url(contents-navigation/li-cream_bg.gif) no-repeat;
+}
+
+#contents-navigation ul li#li-cream a:hover{
+	background:url(contents-navigation/li-cream_bg.gif) no-repeat -210px;
+}
+
+/* big */
+#contents-navigation ul li#li-big a{
+	background:url(contents-navigation/li-big_bg.gif) no-repeat;
+}
+
+#contents-navigation ul li#li-big a:hover{
+	background:url(contents-navigation/li-big_bg.gif) no-repeat -210px;
+}
+
+/* rouge */
+#contents-navigation ul li#li-rouge a{
+	background:url(contents-navigation/li-rouge_bg.gif) no-repeat;
+}
+
+#contents-navigation ul li#li-rouge a:hover{
+	background:url(contents-navigation/li-rouge_bg.gif) no-repeat -210px;
+}
+
+/* shadow */
+#contents-navigation ul li#li-shadow a{
+	background:url(contents-navigation/li-shadow_bg.gif) no-repeat;
+}
+
+#contents-navigation ul li#li-shadow a:hover{
+	background:url(contents-navigation/li-shadow_bg.gif) no-repeat -210px;
+}
+
+/* omega */
+#contents-navigation ul li#li-omega a{
+	background:url(contents-navigation/li-omega_bg.gif) no-repeat;
+}
+
+#contents-navigation ul li#li-omega a:hover{
+	background:url(contents-navigation/li-omega_bg.gif) no-repeat -210px;
+}
+
+/* eggman */
+#contents-navigation ul li#li-eggman a{
+	background:url(contents-navigation/li-eggman_bg.gif) no-repeat;
+}
+
+#contents-navigation ul li#li-eggman a:hover{
+	background:url(contents-navigation/li-eggman_bg.gif) no-repeat -210px;
+}
+
+/* shade */
+#contents-navigation ul li#li-shade a{
+	background:url(contents-navigation/li-shade_bg.gif) no-repeat;
+}
+
+#contents-navigation ul li#li-shade a:hover{
+	background:url(contents-navigation/li-shade_bg.gif) no-repeat -210px;
+}
+
+
+
+
+
+
+

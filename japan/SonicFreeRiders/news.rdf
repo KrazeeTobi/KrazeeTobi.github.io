@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:admin="http://webns.net/mvcb/"
+xmlns="http://purl.org/rss/1.0/">
+
+<channel rdf:about="">
+<title></title>
+<description><![CDATA[]]></description>
+<dc:language>ja</dc:language>
+<dc:date>2010-11-26T00:00:00+09:00</dc:date>
+<admin:generatorAgent rdf:resource="http://www.towofu.net/soft/rsspost.php" />
+
+<items>
+<rdf:Seq>
+<rdf:li rdf:resource="#201011260000" />
+<rdf:li rdf:resource="#201011190000" />
+<rdf:li rdf:resource="#201011160000" />
+<rdf:li rdf:resource="#201011050000" />
+<rdf:li rdf:resource="#201010220000" />
+</rdf:Seq>
+</items>
+
+</channel>
+
+<item rdf:about="#201011260000">
+<title>11月19日</title>
+<description><![CDATA[・[コース]追加！
+・[イベントレポート]追加！]]></description>
+<dc:date>2010-11-26T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#201011190000">
+<title>11月19日</title>
+<description><![CDATA[・[ストーリー＆キャラクター]公開！
+・[トピックス]公開！]]></description>
+<dc:date>2010-11-19T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#201011160000">
+<title>11月16日</title>
+<description><![CDATA[・[イベントレポート]公開！]]></description>
+<dc:date>2010-11-16T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#201011050000">
+<title>11月05日</title>
+<description><![CDATA[・[遊び方]公開！
+・[マルチプレイ]公開！
+・[アイテム]公開！
+・[コース]追加！
+・[トレーラー]追加！]]></description>
+<dc:date>2010-11-05T00:00:00+09:00</dc:date>
+</item>
+
+
+<item rdf:about="#201010220000">
+<title>10月22日　公式サイトリニューアルオープン！</title>
+<description><![CDATA[公式サイトリニューアルオープン！
+・[コース]公開！
+・[トレーラー]公開！]]></description>
+<dc:date>2010-10-22T00:00:00+09:00</dc:date>
+</item>
+
+</rdf:RDF>

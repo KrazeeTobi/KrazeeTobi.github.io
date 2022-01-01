@@ -1,0 +1,97 @@
+/* contents-navigation ------------------------------------------ */
+#contents-navigation{
+	width:210px;
+	float:left;
+	padding:0 0 0 30px;
+}
+
+/* h2 ------------------------------------------ */
+
+#contents-navigation h2{
+	display:block;
+	text-decoration:none;
+	text-indent:-9999px;
+	width:210px;
+	height:20px;
+	overflow:hidden;
+	line-height:0em;
+	font-size:0;
+	background:url(contents-navigation/h2_bg.gif) no-repeat;
+}
+
+/* ul ------------------------------------------ */
+#contents-navigation ul{
+	width:210px;
+	padding:0 0 9px;
+	background:url(contents-navigation/ul_bg.gif) no-repeat bottom;
+}
+
+/* li ------------------------------------------ */
+#contents-navigation ul li{
+	position:relative;
+	width:210px;
+	height:25px;
+	vertical-align:top;
+	margin:0;
+	padding:0;
+}
+
+#contents-navigation ul li.li-coming{
+	display:block;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:normal;
+	background:url(contents-navigation/li-coming_bg.gif) no-repeat;
+}
+
+/* a ------------------------------------------ */
+#contents-navigation ul li a{
+	width:210px;
+	height:25px;
+	display:block;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:normal;
+}
+
+/* navigation01 */
+#contents-navigation ul li#li-attaches a{
+	background:url(contents-navigation/li_attaches.gif) no-repeat;
+}
+
+#contents-navigation ul li#li-attaches a:hover{
+	background:url(contents-navigation/li_attaches.gif) no-repeat -210px;
+}
+/* navigation02 */
+#contents-navigation ul li#li-kind a{
+	background:url(contents-navigation/li_kind.gif) no-repeat;
+}
+
+#contents-navigation ul li#li-kind a:hover{
+	background:url(contents-navigation/li_kind.gif) no-repeat -210px;
+}
+
+/* navigation03 */
+#contents-navigation ul li#li-communication a{
+	background:url(contents-navigation/li_communication.gif) no-repeat;
+}
+
+#contents-navigation ul li#li-communication a:hover{
+	background:url(contents-navigation/li_communication.gif) no-repeat -210px;
+}
+
+/* navigation04 */
+#contents-navigation ul li#li-secret a{
+	background:url(contents-navigation/li_secret.gif) no-repeat;
+}
+
+#contents-navigation ul li#li-secret a:hover{
+	background:url(contents-navigation/li_secret.gif) no-repeat -210px;
+}
+
+
+
+
+

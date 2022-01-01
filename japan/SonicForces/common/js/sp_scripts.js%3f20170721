@@ -1,0 +1,116 @@
+$(document).ready(function(){
+/*------------------------------------------------------------
+初期化
+------------------------------------------------------------*/
+	var _requestAnimationFrame = window.requestAnimationFrame
+		|| window.webkitRequestAnimationFrame
+		|| window.mozRequestAnimationFrame
+		|| window.setTimeout;
+	window.requestAnimationFrame = requestAnimationFrame;
+	
+	// 基準実行時間
+	var _basetime = Date.now();
+	// _fps
+	var _fps = 1000/20;
+	//変数
+	var _x = 0;
+	
+	
+	var _navigationMenu1 = $('nav>div:nth-child(1)');
+	var _navigationMenu2 = $('nav>div:nth-child(2)');
+	var _closeButton =$('#nav-close')
+	var _menuButton = $('#nav-menu');
+	
+	
+	
+	//「トップへ」出現タイミング
+	var _navigationLogoTop = 500; 
+	
+	//swipebox
+	$(".swipeBox").swipebox({
+		useSVG : false
+	});
+	
+	$("#bg2").addClass("sp"+ Math.floor( Math.random() * 6 + 1));
+	
+	animate_handler();
+	
+/*------------------------------------------------------------
+イベント
+------------------------------------------------------------*/
+	_menuButton.click(function () {
+		_navigationMenu1.slideToggle();
+		_navigationMenu2.slideToggle();
+	});
+	_closeButton.click(function () {
+		_navigationMenu1.slideToggle();
+		_navigationMenu2.slideToggle();
+	});
+	
+	
+	
+	//スクロール
+	$(window).scroll(function(){
+		
+		//背景アニメーション
+		var _dy = $(this).scrollTop();
+		/*
+		var _bg1 = (_dy) * 1 + 'px '+ (_dy) * 13 + 'px';
+//		var _bgset = _bg1+","+_bg2+","+_bg3;
+		$("#common-contents").css({"background-position":_bg1});
+		*/
+		
+		
+		//トップへ　出現切り替え
+		if(_dy >= _navigationLogoTop){
+			$("#nav-top").addClass("active");
+		}else{
+			$("#nav-top").removeClass("active");
+		}
+	});
+	
+	//スムースゲーションスクロール
+	$("a[href^='#']").click(function(){
+		var _offset = -70;
+		$('html,body').animate({
+			scrollTop: $($(this).attr("href")).offset().top + _offset
+			},
+			2000,
+			'easeInOutCubic'
+		);
+		return false;
+	});
+	
+/*------------------------------------------------------------
+function
+------------------------------------------------------------*/
+	//アニメーション
+	function animate_handler() {  
+		var _now   = Date.now();
+		var _check = _now - _basetime;
+		if( _check / _fps >= 1 ) {
+			_basetime = _now;
+			draw();
+		}
+		_requestAnimationFrame( animate_handler, _fps );
+	}
+	//アニメーション処理
+	function draw() {
+		//スワイプボックスがオープン時もしくはPC以外は動かさない
+		if(!$.swipebox.isOpen){
+			if(++_x>=1300) _x=0;
+			var _random = (Math.floor( Math.random() * 10 )/10) /20;
+			var _bg2 = 0.2 + _random;
+			var _newInfo = 0.4 + _random * 4;
+			$("#bg2").css({"opacity":_bg2});
+			$(".newInfo").css({"background-position":newColor()});
+		}
+	}	
+	//NEWのカラー
+	function newColor(){
+		var _color = Math.floor( Math.random() * 7 );
+		var _positionArray = ["0px 0px","0px -20px","0px -40px","0px -20px","0px -20px","0px 0px","0px 0px"];
+		return _positionArray[_color];
+	}
+	
+});

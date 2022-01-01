@@ -1,0 +1,45 @@
+
+/* tag ------------------------------------------ */
+div,span,
+ul,li,dl,dt,dd,
+h1,h2,h3,h4,h5,h6,
+p,a,img,form,blockquote  {
+	margin: 0;
+	padding: 0;
+	border: none;
+	line-height:1.5em;
+	font-size:small;
+	font-weight:normal;
+	font-style:normal;
+}
+body {
+	margin:0;
+	background:url(common-tag/common-tag_body_bg.jpg) repeat-x top center #000000;
+	text-align:left;
+	position:relative;
+}
+body div {
+	text-align: left;
+	margin: 0 auto;
+}
+ul li,ol li {
+	list-style:none;
+}
+
+em {
+	font-style:normal;
+	font-weight:bold;
+	color:#C30;
+}
+a, a:visited {
+	color:#ff99bb;
+	text-decoration:underline;
+}
+a:hover, a:active {
+	color:#ff99bb;
+	text-decoration:underline;
+}
+* html img{
+	behavior: expression(IEPNGFIX.fix(this));
+}
+

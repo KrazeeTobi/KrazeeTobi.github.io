@@ -1,0 +1,18 @@
+#common-contents{
+	color:#96dbe0;
+	width:820px;
+	margin:0 auto;
+	background:url(common-contents/common-contents-bg.jpg) repeat-y center top;
+}
+#common-contents:after{
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+/* clear fix */
+* html #common-contents {
+    zoom:1;/*for IE 5.5-7*/
+}
+

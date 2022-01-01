@@ -1,0 +1,58 @@
+
+/* header --------------------------------------- */
+#common-header {
+	background:url(common-header/common-header_bg.png) repeat-x;
+	width:100%;
+	height:69px;
+	padding:0;
+	margin:0;
+	_text-align:center;
+	overflow:hidden;
+	position:relative;
+	z-index:10;
+}
+* html #common-header{
+	behavior: expression(IEPNGFIX.fix(this));
+} 
+
+
+#common-header ul {
+	width:840px;
+	height:70px;
+	margin:0 auto;
+	_margin:0;
+}
+#common-header ul li {
+	float:left;
+	display:block;
+}
+#sega {
+	padding:14px 0 0 20px;
+	width:97px;
+}
+#sc {
+	padding:20px 0 0 10px;
+	width:87px;
+}
+#bio {
+	padding:19px 0 0 460px;
+	width:145px;
+}
+
+/* IE6 png linkon ----------------- */
+* html body #common-header {
+	background:none;
+}
+* html body #common-header #ie6header{
+	width:100%;
+	height:72px;
+	z-index:1;
+	
+	background:url(common-header/common-header_bg.png) repeat-x;
+	behavior: expression(IEPNGFIX.fix(this));
+}
+
+* html body #common-header ul {
+	position:relative;
+	top:-72px;
+}

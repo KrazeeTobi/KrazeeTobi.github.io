@@ -1,0 +1,137 @@
+/* contents-substance ------------------------------------------ */
+#contents-substance{
+	width:540px;
+	float:right;
+	padding:0 30px 30px 0;
+}
+
+/*  ------------------------------------------ */
+#contents-substance p.border-bar{
+	padding:0;
+	margin:0;
+	line-height:0;
+}
+
+/* div ------------------------------------------ */
+#contents-substance div{
+	padding:0;
+	margin:0;
+	background:url(contents-substance/div_bg.gif) repeat-y;
+	boder:1px solid #f00;
+}
+#contents-substance div p{
+	margin-bottom:1em;
+}
+
+/* clear fix */
+/*for IE 5.5-7*/
+#contents-substance div{
+	zoom:1;
+}
+/*for modern browser*/
+#contents-substance div:after{
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+
+/* h2 h3------------------------------------------ */
+#contents-substance div h2{
+	margin:0 0 0 4px;
+	padding:0;
+	height:39px;
+	text-align:left;
+}
+#contents-substance div h3{
+	padding-left:10px;
+}
+/* div div ------------------------------------------ */
+#contents-substance div div{
+	margin:0 0px 15px;
+	padding:15px 15px 0;
+	background:none;
+}
+
+/* dl ------------------------------------------ */
+#contents-substance div div dl{
+	padding-left:80px;
+	height:10em;
+}
+#contents-substance div div dl#chao1{
+	background:url(contents-substance/kind-dl-chao1.gif) no-repeat;
+}
+#contents-substance div div dl#chao2{
+	background:url(contents-substance/kind-dl-chao2.gif) no-repeat;
+}
+#contents-substance div div dl#chao3{
+	background:url(contents-substance/kind-dl-chao3.gif) no-repeat;
+}
+#contents-substance div div dl#chao4{
+	background:url(contents-substance/kind-dl-chao4.gif) no-repeat;
+}
+#contents-substance div div dl#chao5{
+	background:url(contents-substance/kind-dl-chao5.gif) no-repeat;
+}
+#contents-substance div div dl#chao6{
+	background:url(contents-substance/kind-dl-chao6.gif) no-repeat;
+}
+
+#contents-substance div div dl dt{
+	padding-right:1em;
+	float:left;
+	color:#fff;
+	font-weight:bold;
+	width:50px;
+}
+/* clear fix */
+/*for IE 5.5-7*/
+#contents-substance div div dl dt{
+	zoom:1;
+}
+/*for modern browser*/
+#contents-substance div div dl dt:after{
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+#contents-substance div div dl dd{
+	margin-left:70px;
+	width:350px;
+}
+/* div div div ------------------------------------------ */
+#contents-substance div div div{
+	padding:0;
+	margin:0;
+}
+#contents-substance div #head-section  {
+	background:url(contents-substance/section_line_bg.gif) repeat-x center bottom ;
+}
+#contents-substance #head-section div{
+	margin:0;
+	padding:0;
+}
+/* div-even */
+#contents-substance div div div.div-even{
+	width:245px;
+	float:left;
+}
+/* div-odd */
+#contents-substance div div div.div-odd{
+	width:245px;
+	float:right;
+}
+/* class ------------------------------------------ */
+.leftStance{
+	width:240px;
+	float:left;
+}
+.rightStance{
+	width:240px;
+	float:right;
+}
+

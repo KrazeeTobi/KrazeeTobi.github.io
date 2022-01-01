@@ -1,0 +1,25 @@
+
+.iepngfix {  
+	behavior: expression(IEPNGFIX.fix(this));  
+}
+
+.newInfo{
+	position:absolute;
+	top:5px;
+	right:3px;
+	z-index:100;
+	
+	display:block;
+	width:21px;
+	height:9px;
+	background:url(common-class/span_bg.gif) no-repeat;
+	text-decoration:none;
+	text-indent:-9999px;
+
+	line-height:0em;
+	overflow:hidden;
+}
+
+.text-bold{
+	font-weight:bold;
+}

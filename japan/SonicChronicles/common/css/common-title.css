@@ -1,0 +1,18 @@
+/* common-title --------------------------- */
+#common-title{
+	margin:0 auto;
+	position:relative;
+	clear:both;
+	z-index:50;
+	width:800px;
+	background-color:#395669;
+}
+
+#common-title h1{
+	height:90px;
+	display:block;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+
