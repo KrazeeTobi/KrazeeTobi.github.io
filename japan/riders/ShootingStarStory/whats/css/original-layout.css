@@ -1,0 +1,279 @@
+@charset "UTF-8";
+
+
+
+/* ==========================================================================================================
+all-tag
+========================================================================================================== */
+html,body,
+div,span,
+ul,li,dl,dt,dd,
+h1,h2,h3,h4,h5,h6,
+p,a,img{
+	margin:0;
+	padding:0;
+	border:0; 
+	line-height:1.5em;
+	font-size:small;
+	font-weight:normal;
+	font-style:normal;
+	color:#4d4d4d;
+}
+
+html,body{
+
+}
+
+body{
+	background:url(original-layout/body-bg.jpg) repeat-x top center #fff;
+}
+
+ul,li{
+	list-style:none;
+}
+
+a {
+	color: #666666;
+}
+
+a:link {
+	color: #666666;
+}
+
+a:visited {
+	color: #666666;
+}
+
+a:hover {
+	color: #00CCFF;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #989898;
+}
+
+/* ==========================================================================================================
+header-area
+========================================================================================================== */
+#header-area{
+	width:700px;
+	height:191px;
+	overflow:hidden;
+	margin:0 auto 0; 
+	background:url(original-layout/header-area-bg.jpg) no-repeat center 60px;
+}
+
+#header-area ul{
+	width:700px;
+	height:60px;
+	overflow:hidden;
+}
+
+#header-area li{
+	display:block;
+	float:left;
+}
+
+#sega{
+	padding:12px 0 0 10px;
+}
+
+#st{
+	padding:20px 0 0 412px;
+}
+
+#sc{
+	padding:22px 0 0 8px;
+}
+
+#header-area h1,#header-area h2{
+	display:run-in;
+	position:absolute;
+	top:0px;
+	left:-999px;
+	z-index:100;
+	width:1px;
+	height:0px;
+	overflow:hidden;
+	margin:0px;
+	padding:0px;
+	border-style:none;
+}
+
+/* ==========================================================================================================
+contents-area
+========================================================================================================== */
+#contents-area{
+	width:700px;
+	margin:0 auto 20px;
+	background:url(original-layout/contents-area-bg.jpg) repeat-y;
+}
+
+/* ==========================================================================================================
+world-ranking
+========================================================================================================== */
+#world-ranking01{
+	width:630px;
+	margin:0 auto 20px;
+	padding:25px 0 0;
+}
+
+
+#contents-area div.world-ranking{
+	width:630px;
+	margin:0 auto 45px;
+	padding:0 0 0 0;
+}
+
+/* clear fix */
+#contents-area div.world-ranking{
+	zoom:1;/*for IE 5.5-7*/
+}
+
+#contents-area .world-ranking:after{/*for modern browser*/
+	content:".";
+	display:block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+#world-ranking01 p{
+	width:630px;
+	padding:15px 0 25px 0;
+	color:#660000;	
+}
+
+
+div.world-ranking p{
+	width:295px;
+	padding:15px 0 25px 0;
+	color:#0018c8;
+}
+
+
+
+/* world-ranking h2 h3 -------------------------------------------------------------------------------------- */
+#world-ranking01 h2{
+	width:325px;
+	height:35px;
+    overflow:hidden;
+	font-size:0;
+	line-height:0;
+	text-indent:-5000px;
+	text-decoration:none;
+	background:url(original-layout/h2_00.gif) no-repeat center;
+}
+
+
+#world-ranking02{
+	width:291px;
+	height:23px;
+ 	overflow:hidden;
+	font-size:0;
+	line-height:0; 
+	text-indent:-5000px;
+	text-decoration:none;
+	background:url(original-layout/h2_01.gif) no-repeat center;
+}
+
+#world-ranking03{
+	width:291px;
+	height:23px;
+ 	overflow:hidden;
+	font-size:0;
+	line-height:0; 
+	text-indent:-5000px;
+	text-decoration:none;
+	background:url(original-layout/h2_02.gif) no-repeat center;
+}
+
+#world-ranking04{
+	width:291px;
+	height:23px;
+ 	overflow:hidden;
+	font-size:0;
+	line-height:0; 
+	text-indent:-5000px;
+	text-decoration:none;
+	background:url(original-layout/h2_03.gif) no-repeat center;
+}
+
+#world-ranking05{
+	width:291px;
+	height:23px;
+ 	overflow:hidden;
+	font-size:0;
+	line-height:0; 
+	text-indent:-5000px;
+	text-decoration:none;
+	background:url(original-layout/h2_04.gif) no-repeat center;
+}
+
+#world-ranking06{
+	width:291px;
+	height:23px;
+ 	overflow:hidden;
+	font-size:0;
+	line-height:0; 
+	text-indent:-5000px;
+	text-decoration:none;
+	background:url(original-layout/h2_05.gif) no-repeat center;
+}
+
+
+/* world-ranking img -------------------------------------------------------------------------------------- */
+.world-ranking span.floatRight{
+	float:right;
+}
+
+
+/* ==========================================================================================================
+form-area
+========================================================================================================== */
+#form-area{
+	width:588px;
+	padding:0 50px 20px 60px;
+	overflow:hidden;
+	font-size:0;
+	line-height:0; 
+	text-indent:-5000px;
+	text-decoration:none;
+	background:url(original-layout/form-area-bg.jpg) no-repeat center bottom;
+}
+
+
+
+/* ==========================================================================================================
+footer-area
+========================================================================================================== */
+#footer-area{
+	width:700px;
+	overflow:hidden;
+	margin:0 auto;
+	padding:10px 0 30px;
+
+}
+
+#footer-area li{
+	display:block;
+	float:left;
+}
+
+#footer-area p{
+	text-align:center;
+	font-size:x-small;
+}
+
+#footer-area p a{
+	font-size:x-small;
+}
+
+#footer-area a:link,#footer-area a:visited,#footer-area a:hover,#footer-area a:active{ 
+	color: #0080F8;
+}
+
+#footer-area p a img{
+	margin:20px 0 0 0;
+}

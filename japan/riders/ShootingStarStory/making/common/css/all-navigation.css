@@ -1,0 +1,70 @@
+/* all-navigation ===================================================== */
+#all-navigation{
+	float:left;
+	width:220px;
+	padding:35px 0 20px 5px;
+	background:url(all-navigation/div-bg.jpg) no-repeat 5px top;
+}
+
+#all-navigation ul{
+	width:210px;
+	margin:10px 5px 5px;
+	background:#000000;
+}
+
+#all-navigation h3,
+#all-navigation p{
+	display:block;
+	margin:0 5px 0;
+}
+
+#all-navigation h3{
+	height:130px;
+}
+
+
+#all-navigation p{
+	padding:5px;
+	color:#999;
+	font-size:85%;
+	line-height:1.2em;
+}
+
+
+/* btn  ------------------------------------------------------------ */
+#all-navigation ul li{
+	width:208px;
+	padding:0;
+	margin:0 0 1px 0;
+	border:1px solid #9efff9;
+}
+
+/* default */
+#all-navigation ul li a{
+	display:block;
+	width:180px;
+	padding:8px 1px 6px 27px;
+	background:url(all-navigation/a-bg.gif) no-repeat 0px center #b4a788; 
+	/* txt */
+	color:#fff;
+	font-size:85%;
+	text-decoration:none;
+}
+
+/* over */
+#all-navigation ul li a:hover{
+	background:url(all-navigation/a-bg.gif) no-repeat -220px center #10288b; 
+	color:#fffc00;
+}
+
+/* active */
+#vol001 li#btn001 a,#vol002 li#btn002 a,#vol003 li#btn003 a,#vol004 li#btn004 a,#vol005 li#btn005 a,
+#vol006 li#btn006 a,#vol007 li#btn007 a,#vol008 li#btn008 a,#vol009 li#btn009 a,#vol010 li#btn010 a,
+#vol011 li#btn011 a{
+	background:url(all-navigation/a-bg.gif) no-repeat -220px center #10288b; 
+	color:#fffc00;
+}
+
+#all-navigation ul li a span{
+	font-weight:bold;
+}

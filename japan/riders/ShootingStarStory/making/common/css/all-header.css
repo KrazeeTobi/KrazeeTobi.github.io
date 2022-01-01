@@ -1,0 +1,59 @@
+/* all-header     ===================================================== */
+#all-header{
+	background:url(all-header/div-bg.jpg) no-repeat center top;
+	width:810px;
+	height:225px;
+	margin:0 auto 0;
+}
+
+#all-header ul{
+	width:800px;
+	height:68px;
+	margin:0 auto;
+}
+
+#all-header ul li{
+	float:left;
+}
+
+#sega{
+	padding:14px 0 0 20px;
+}
+
+#st{
+	padding:19px 0 0 490px;
+}
+
+#sc{
+	padding:21px 0 0 6px;
+}
+
+#all-header h1{
+	margin:0px;
+	padding:0px;
+	width:1px;
+	height:0px;
+	position:absolute;
+	top:0px;
+	left:-999px;
+	z-index:100;
+	display:run-in;
+	border-style:none;
+	overflow:hidden;
+}
+
+#all-header h2{
+	margin:0px 570px 0px  20px;
+	height:75px;
+
+}
+
+#all-header h2 a{
+	display:block;
+	height:75px;
+	
+	font-size:0px;
+	font-family: sans-serif;
+	line-height:0;
+	text-decoration:none;
+}

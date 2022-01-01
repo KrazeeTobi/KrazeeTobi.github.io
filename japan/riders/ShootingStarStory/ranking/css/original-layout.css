@@ -1,0 +1,586 @@
+/* ==========================================================================================================
+all-tag
+========================================================================================================== */
+html,body,
+div,span,
+ul,li,dl,dt,dd,
+h1,h2,h3,h4,h5,h6,
+p,a,img{
+	margin:0;
+	padding:0;
+	border:0; 
+	line-height:1.5em;
+	font-size:small;
+	font-weight:normal;
+	font-style:normal;
+	color:#4d4d4d;
+}
+
+html,body{
+
+}
+
+body{
+	background:url(original-layout/body-bg.jpg) repeat-x top center #fff;
+}
+
+ul,li{
+	list-style:none;
+}
+
+a {
+	color: #666666;
+}
+
+a:link {
+	color: #666666;
+}
+
+a:visited {
+	color: #666666;
+}
+
+a:hover {
+	color: #00CCFF;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #989898;
+}
+
+/* ==========================================================================================================
+header-area
+========================================================================================================== */
+#header-area{
+	width:700px;
+	height:176px;
+	overflow:hidden;
+	margin:0 auto 0;
+	background:url(original-layout/header-area-bg.jpg) no-repeat center 60px;
+}
+
+#header-area ul{
+	width:700px;
+	height:60px;
+	overflow:hidden;
+}
+
+#header-area li{
+	display:block;
+	float:left;
+}
+
+#sega{
+	padding:12px 0 0 10px;
+}
+
+#st{
+	padding:20px 0 0 412px;
+}
+
+#sc{
+	padding:22px 0 0 8px;
+}
+
+#header-area h1,#header-area p{
+	display:run-in;
+	position:absolute;
+	top:0px;
+	left:-999px;
+	z-index:100;
+	width:1px;
+	height:0px;
+	overflow:hidden;
+	margin:0px;
+	padding:0px;
+	border-style:none;
+}
+
+/* ==========================================================================================================
+course-area
+========================================================================================================== */
+#course-area{
+	width:700px;
+	height:98px;
+	overflow:hidden;
+	margin:0 auto; 
+	padding:6px 0 0 0;
+	background:url(original-layout/zone-area-bg.jpg) no-repeat center bottom;
+}
+
+/* clear fix */
+#course-area{
+	zoom:1;/*for IE 5.5-7*/
+}
+
+#course-area:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+#course-area ul{
+	padding:0px 50px;
+	width:600px;
+	height:98px;
+	overflow:hidden;
+}
+
+#course-area li{
+	float:left;
+	width:150px;
+	height:23px;
+	overflow:hidden;
+	
+	font-size:0;
+	line-height:0;
+	text-indent:-5000px;
+	text-decoration:none;
+}
+
+#course-area li a{
+	display:block;
+	width:148px;
+	height:21px;
+	margin:1px;
+}
+
+/* btn-bg default --------------------------------------------------------------------------------- */
+#course01{
+	background:url(original-layout/li-course01.gif) no-repeat;
+}
+
+#course02{
+	background:url(original-layout/li-course02.gif) no-repeat;
+}
+
+#course03{
+	background:url(original-layout/li-course03.gif) no-repeat;
+}
+
+#course04{
+	background:url(original-layout/li-course04.gif) no-repeat;
+}
+
+#course05{
+	background:url(original-layout/li-course05.gif) no-repeat;
+}
+
+#course06{
+	background:url(original-layout/li-course06.gif) no-repeat;
+}
+
+#course07{
+	background:url(original-layout/li-course07.gif) no-repeat;
+}
+
+#course08{
+	background:url(original-layout/li-course08.gif) no-repeat;
+}
+
+#course09{
+	background:url(original-layout/li-course09.gif) no-repeat;
+}
+
+#course10{
+	background:url(original-layout/li-course10.gif) no-repeat;
+}
+
+#course11{
+	background:url(original-layout/li-course11.gif) no-repeat;
+}
+
+#course12{
+	background:url(original-layout/li-course12.gif) no-repeat;
+}
+
+#course13{
+	background:url(original-layout/li-course13.gif) no-repeat;
+}
+
+#course14{
+	background:url(original-layout/li-course14.gif) no-repeat;
+}
+
+#course15{
+	background:url(original-layout/li-course15.gif) no-repeat;
+}
+
+#course16{
+	background:url(original-layout/li-course16.gif) no-repeat;
+}
+
+/* btn-bg active / over --------------------------------------------------------------------------- */
+#course01:hover,#c01 #course01{
+	background:url(original-layout/li-course01.gif) no-repeat left -33px;
+}
+
+#course02:hover,#c02 #course02{
+	background:url(original-layout/li-course02.gif) no-repeat left -33px;
+}
+
+#course03:hover,#c03 #course03{
+	background:url(original-layout/li-course03.gif) no-repeat left -33px;
+}
+
+#course04:hover,#c04 #course04{
+	background:url(original-layout/li-course04.gif) no-repeat left -33px;
+}
+
+#course05:hover,#c05 #course05{
+	background:url(original-layout/li-course05.gif) no-repeat left -33px;
+}
+
+#course06:hover,#c06 #course06{
+	background:url(original-layout/li-course06.gif) no-repeat left -33px;
+}
+
+#course07:hover,#c07 #course07{
+	background:url(original-layout/li-course07.gif) no-repeat left -33px;
+}
+
+#course08:hover,#c08 #course08{
+	background:url(original-layout/li-course08.gif) no-repeat left -33px;
+}
+
+#course09:hover,#c09 #course09{
+	background:url(original-layout/li-course09.gif) no-repeat left -33px;
+}
+
+#course10:hover,#c10 #course10{
+	background:url(original-layout/li-course10.gif) no-repeat left -33px;
+}
+
+#course11:hover,#c11 #course11{
+	background:url(original-layout/li-course11.gif) no-repeat left -33px;
+}
+
+#course12:hover,#c12 #course12{
+	background:url(original-layout/li-course12.gif) no-repeat left -33px;
+}
+
+#course13:hover,#c13 #course13{
+	background:url(original-layout/li-course13.gif) no-repeat left -33px;
+}
+
+#course14:hover,#c14 #course14{
+	background:url(original-layout/li-course14.gif) no-repeat left -33px;
+}
+
+#course15:hover,#c15 #course15{
+	background:url(original-layout/li-course15.gif) no-repeat left -33px;
+}
+
+#course16:hover,#c16 #course16{
+	background:url(original-layout/li-course16.gif) no-repeat left -33px;
+}
+
+/* ==========================================================================================================
+contents-area
+========================================================================================================== */
+#contents-area{
+	width:700px;
+	margin:0 auto 20px;
+	background:url(original-layout/contents-area-bg.jpg) repeat-y;
+}
+
+/* ==========================================================================================================
+course-name
+========================================================================================================== */
+#course-name{
+}
+
+#contents-area #course-name{
+	width:600px;
+	margin:0 auto 20px;
+	padding:15px 0 0;
+}
+
+/* clear fix */
+#contents-area #course-name{
+	zoom:1;/*for IE 5.5-7*/
+}
+
+#contents-area #course-name:after{/*for modern browser*/
+	content:".";
+	display:block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+
+/* ZONE NAME -------------------------------------------------------------------------------------- */
+#course-name h2{
+	float:left;
+	width:245px;
+	height:120px;
+	overflow:hidden;
+	font-size:0;
+	line-height:0;
+	text-indent:-5000px;
+	text-decoration:none;
+}
+
+#c01 #contents-area #course-name h2{
+	background:url(original-layout/h2-bg01.gif) no-repeat;
+}
+
+#c02 #contents-area #course-name h2{
+	background:url(original-layout/h2-bg02.gif) no-repeat;
+}
+
+#c03 #contents-area #course-name h2{
+	background:url(original-layout/h2-bg03.gif) no-repeat;
+}
+
+#c04 #contents-area #course-name h2{
+	background:url(original-layout/h2-bg04.gif) no-repeat;
+}
+
+#c05 #contents-area #course-name h2{
+	background:url(original-layout/h2-bg05.gif) no-repeat;
+}
+
+#c06 #contents-area #course-name h2{
+	background:url(original-layout/h2-bg06.gif) no-repeat;
+}
+
+#c07 #contents-area #course-name h2{
+	background:url(original-layout/h2-bg07.gif) no-repeat;
+}
+
+#c08 #contents-area #course-name h2{
+	background:url(original-layout/h2-bg08.gif) no-repeat;
+}
+
+#c09 #contents-area #course-name h2{
+	background:url(original-layout/h2-bg09.gif) no-repeat;
+}
+
+#c10 #contents-area #course-name h2{
+	background:url(original-layout/h2-bg10.gif) no-repeat;
+}
+
+#c11 #contents-area #course-name h2{
+	background:url(original-layout/h2-bg11.gif) no-repeat;
+}
+
+#c12 #contents-area #course-name h2{
+	background:url(original-layout/h2-bg12.gif) no-repeat;
+}
+
+#c13 #contents-area #course-name h2{
+	background:url(original-layout/h2-bg13.gif) no-repeat;
+}
+
+#c14 #contents-area #course-name h2{
+	background:url(original-layout/h2-bg14.gif) no-repeat;
+}
+
+#c15 #contents-area #course-name h2{
+	background:url(original-layout/h2-bg15.gif) no-repeat;
+}
+
+#c16 #contents-area #course-name h2{
+	background:url(original-layout/h2-bg16.gif) no-repeat;
+}
+
+#course-name p{
+	float:right;
+	padding:30px 0 0 0;	
+	font-size:x-small;
+	color:#0054d2;
+}
+
+
+
+
+/* ==========================================================================================================
+navi-area
+========================================================================================================== */
+#contents-area #navi-area{
+	width:600px;
+	margin:0.5em auto;
+}
+
+/* clear fix */
+#contents-area #navi-area{
+	zoom:1;/*for IE 5.5-7*/
+}
+
+#contents-area #navi-area:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+#navi-area #navi-left{
+	float:left;
+	color:#999999;	
+}
+
+#navi-area #navi-right{
+	float:right;
+	color:#999999;
+}
+
+
+#navi-area #navi-left li{
+	display:inline;
+	padding:0 1em 0 0;
+}
+
+#navi-area #navi-right li{
+	display:inline;
+	padding:0 0 0 1em;
+}
+
+/* ==========================================================================================================
+ranking-area
+========================================================================================================== */
+#ranking-area{
+	width:600px;
+	margin:0 auto 20px;
+}
+
+
+/* table ------------------------------------------------------------------------------------------ */
+#ranking-area table{
+	width:600px;
+	color:#fff;
+	background:url(original-layout/table-bg.jpg) repeat-y;
+	border-top:solid #00bc00 1px;
+	border-left:solid #00bc00 1px;
+}
+
+#ranking-area table #table-header th{
+	background:#13212a;
+	color:#e4ff00;
+}
+
+#ranking-area table th,
+#ranking-area table td{
+	padding:0.5em 5px;
+	text-align:center;
+	border-right:solid #00bc00 1px;	
+	border-bottom:solid #00bc00 2px;
+}
+
+#ranking-area table th{
+	font-weight:bold;
+}
+
+#ranking-area table td.table-rank{
+	width:64px;
+}
+
+#ranking-area table td.table-name{
+	width:160px;
+}
+
+#ranking-area table th.table-rank,
+#ranking-area table td.table-name{
+	padding:0.5em 5px 0.5em 10px;
+}
+
+#ranking-area table td.table-name,
+#ranking-area table td.table-gear{
+	text-align:left;
+}
+
+#ranking-area table td.table-gear img{
+	padding:0 2px 0 0;
+	vertical-align:middle;
+}
+
+
+/* ==========================================================================================================
+error-area
+========================================================================================================== */
+#error-area{
+	width:650px;
+	margin:0 auto 200px;
+}
+
+#error-area h3{
+	font-size:x-large;
+	font-weight:bold;
+}
+
+#error-area p{
+	font-size:medium;
+}
+
+
+/* ==========================================================================================================
+form-area
+========================================================================================================== */
+#form-area{
+	width:600px;
+	padding:0 50px 40px 50px;
+	background:url(original-layout/form-area-bg.jpg) no-repeat center bottom;
+}
+
+/* clear fix */
+#form-area{
+	zoom:1;/*for IE 5.5-7*/
+}
+
+#form-area:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+
+#form-area form{
+	display:block;
+	width:325px;
+	float:left;
+}
+
+#form-area form input{
+	width:150px;
+}
+
+
+/* ==========================================================================================================
+footer-area
+========================================================================================================== */
+#footer-area{
+	width:700px;
+	overflow:hidden;
+	margin:0 auto;
+	padding:10px 0 30px;
+
+}
+
+#footer-area li{
+	display:block;
+	float:left;
+}
+
+#footer-area p{
+	text-align:center;
+	font-size:x-small;
+}
+
+#footer-area p a{
+	font-size:x-small;
+}
+
+#footer-area a:link,#footer-area a:visited,#footer-area a:hover,#footer-area a:active{ 
+	color: #0080F8;
+}
+
+#footer-area p a img{
+	margin:20px 0 0 0;
+}

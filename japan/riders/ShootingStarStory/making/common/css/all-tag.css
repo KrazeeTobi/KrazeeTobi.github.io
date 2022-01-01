@@ -1,0 +1,74 @@
+/* common tag   ===================================================== */
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	line-height:1.5em;
+}
+
+div,ul,dl{
+   min-height:1%;
+}
+
+div:after,ul:after,dl:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+* html div,* html ul,* html dl{
+	/*\*/height:1%;/*for WinIE*/
+}
+
+
+html,body {
+	background:#000000 url(all-tag/body-bg.gif) repeat-x top;
+	font-family:"£Í£Ó £Ð¥´¥·¥Ã¥¯", MS PGothic,  Osaka, "¥Ò¥é¥®¥Î³Ñ¥´ Pro W3", sans-serif;
+	color:#000000;
+	font-size:small;
+	font-weight:normal;
+	font-style:normal;
+}
+
+ul,li{
+	list-style:none;
+}
+
+hr{
+	margin:0;
+	width:0px;
+	height:0px;
+	clear:both;
+	_position:absolute;  /* win IE*/ 
+	_top:-999px;  /* win IE*/ 
+}
+
+a,a:link,a:visited {
+	color: #fc0;
+	text-decoration:underline;
+}
+a:hover,a:active {
+	color: #fffc00;
+	text-decoration:underline;
+}
+
+em{
+	font-weight:bold;
+}
+
+br{
+	line-height:1em;
+}
+
+/* css hack	 ================================================================ */
+/* for mac ie 5 */
+/*\*//*/
+hr{
+	display:inline-table;
+	clear:both;
+	visibility:hidden;
+}
+/**/
+

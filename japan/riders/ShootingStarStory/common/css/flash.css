@@ -1,0 +1,159 @@
+/*---------------------   all   ---------------------*/
+*{
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+body {
+	font-family:"‚l‚r ‚oƒSƒVƒbƒN", MS PGothic,  Osaka, "ƒqƒ‰ƒMƒmŠpƒS Pro W3", sans-serif;
+	color:#aaa;
+	width:100%;
+	font-size:80%;
+	background-color: #000;
+}
+
+a {
+	color: #099;
+	font-weight: bold;
+}
+a:link {
+	font-weight: bold;
+	text-decoration: none;
+}
+a:visited {
+	font-weight: bold;
+	text-decoration: none;
+	color: #099;
+}
+a:hover {
+	font-weight: bold;
+	text-decoration: underline;
+	color: #099;
+}
+a:active {
+	font-weight: bold;
+	text-decoration: none;
+	color: #099;
+}
+
+
+ul,li{
+	list-style:none;
+}
+
+/*--------------------- footer ---------------------*/
+#footer{
+	height:220px;
+	border-top:double 4px #fff;
+	background:url(../image/footer_bg.jpg) repeat-x top;	
+	text-align:center;
+}
+
+#footer ul{
+	width:800px;
+	margin:10px auto;
+}
+
+
+/* clear fix */
+#footer ul{
+    zoom:1;/*for IE 5.5-7*/
+}
+
+#footer ul:after{/*for modern browser*/
+    content:".";
+    display: block;
+    height:0px;
+    clear:both;
+    visibility:hidden;
+}
+
+#footer ul li{
+	float:left;
+}
+
+
+#segadirect{
+	width:670px;
+	text-align:left;
+}
+
+#wifi{
+	width:50px;
+
+}
+
+#wii{
+	padding-top:2px;
+	width:80xp;
+}
+
+#footer p{
+	clear:both;
+	padding:1em 0 0 0;
+	text-align:center;
+}
+
+
+
+/*--------------------- flash  ---------------------*/
+
+
+
+
+/*----------------- noflash header -----------------*/
+#header{
+	background:url(../image/body_bg.gif) repeat-x;	
+	width:100%;
+	height:68px;
+	padding:0 0 150px 0;
+	_text-align:center;
+}
+
+#header ul{
+	width:800px;
+	height:68px;
+	margin:0 auto;
+}
+
+#header ul li{
+	float:left;
+}
+
+#sega{
+	padding:16px 0 0 21px;
+}
+
+#st{
+	padding:19px 0 0 484px;
+}
+
+#sc{
+	padding:19px 0 0 6px;
+}
+
+
+/*----------------- noflash contents -----------------*/
+
+
+
+#flashcontent{
+	background:#FFF;
+	margin:0 auto;
+	text-align:center;
+}
+
+#flashcontent #contents{
+	padding:0 0 150px;
+}
+
+#flashcontent h1{
+	padding:0 0 50px 0;
+}
+
+#flashcontent p{
+	color:#333;
+	padding:0 0 1em;
+}
+

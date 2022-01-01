@@ -1,0 +1,231 @@
+/* all-substance   ===================================================== */
+
+#all-substance{
+	float:right;
+	width:580px;
+	padding:0 5px 5em 0;	
+	color:#FFFFFF;
+}
+
+#all-substance h2{
+	margin:0;
+	padding:0 0 20px 0px ;
+	line-height:0;	
+}
+
+#all-substance h3.subtitle{
+	background:url(all-substance/h3-bg.gif) no-repeat left center;
+	clear:both;
+
+	margin:1em 15px 1em;
+	padding:10px 0px 5px 35px;
+	
+	font-size:medium;
+	font-weight:bold;
+	color:#00FFFF;	
+}
+
+/*============================================================================*/
+
+#all-substance .first{
+	margin:10px 15px 1em;
+}
+
+#all-substance p{
+	clear:both;
+	margin:0 15px 1em;
+}
+
+/*making-link*/
+/*
+#all-substance a,#all-substance a:link,a:visited {
+	color:#0099FF;
+	text-decoration:underline;
+}
+#all-substance a:hover,#all-substance a:active {
+	color:#FF3300;
+	text-decoration:underline;
+}
+*/
+/* making layout  ===================================================== */
+.floatLeft ul li{
+	float:left;
+	display:block;
+	padding:0 3px 1em 0;
+	margin:0 3px 0.2em 0;	
+}
+
+
+.floatLeft ul li span{
+	display:block;
+	padding:0 0 1em;
+	font-size:x-small;
+	_font-size:xx-small;
+	color:#66CCFF;
+}
+
+
+/*コメントサイズ指定01================================================*/
+
+#pic01-comment{
+	width:160px;
+}
+#pic02-comment{
+	width:240px;
+}
+#pic03-comment{
+	width:260px;
+}
+#pic04-comment{
+	width:140px;
+}
+#pic05-comment{
+	width:250px;
+}
+#pic06-comment{
+	width:290px;
+}
+#pic07-comment{
+	width:240px;
+}
+#pic08-comment{
+	width:210px;
+}
+#pic09-comment{
+	width:200px;
+}
+#pic10-comment{
+	width:260px;
+}
+#pic11-comment{
+	width:235px;
+}
+#pic12-comment{
+	width:255px;
+}
+#pic13-comment{
+	width:235px;
+}
+#pic14-comment{
+	width:295px;
+}
+/*--------------------------------------------------------------------*/
+/*コメントサイズ指定02================================================*/
+
+#pic01-comment2{
+	width:245px;
+}
+#pic02-comment2{
+	width:245px;
+}
+#pic03-comment2{
+	width:255px;
+}
+#pic04-comment2{
+	width:500px;
+}
+#pic05-comment2{
+	width:245px;
+}
+#pic06-comment2{
+	width:230px;
+}
+#pic07-comment2{
+	width:255px;
+}
+#pic08-comment2{
+	width:255px;
+}
+#pic09-comment2{
+	width:245px;
+}
+#pic10-comment2{
+	width:220px;
+}
+#pic11-comment2{
+	width:245px;
+}
+#pic12-comment2{
+	width:245px;
+}
+#pic13-comment2{
+	width:145px;
+}
+#pic14-comment2{
+	width:245px;
+}
+#pic15-comment2{
+	width:245px;
+}
+#pic16-comment2{
+	width:245px;
+}
+#pic17-comment2{
+	width:245px;
+}
+/*--------------------------------------------------------------------*/
+/*コメントサイズ指定03================================================*/
+
+#pic01-comment3{
+
+	width:560px;
+}
+#pic02-comment3{
+	width:275px;
+}
+#pic03-comment3{
+	width:275px;
+}
+#pic04-comment3{
+	width:275px;
+}
+#pic05-comment3{
+	width:275px;
+}
+#pic06-comment3{
+	width:230px;
+}
+
+/*--------------------------------------------------------------------*/
+
+.pic-comment01 ul li{
+	width:510px;
+}
+
+.pic-comment01 ul li img{
+	padding:0 6px 0 0;
+}
+
+
+.pic-comment03 ul li{
+	width:562px;
+}
+
+.pic-comment03 ul li img{
+	padding:0 6px 0 0;
+}
+
+
+/*--------------------------------------------------------------------*/
+
+.columnOne{
+	display:block;
+	line-height:1em;
+	padding:0 0 0.5em 0;
+}
+
+.columnOne span{
+	display:block;
+	padding:0.3em 0 0 0;
+	font-size:85%;
+	line-height:1em;
+	color:#ffc;
+}
+
+#all-substance div.floatLeft{
+	clear:both;
+	margin:0;
+	padding:0 0 0.5em 8px;
+	line-height:0;
+ 	width:570px;
+}
