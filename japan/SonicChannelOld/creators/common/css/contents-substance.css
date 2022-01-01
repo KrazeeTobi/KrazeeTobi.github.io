@@ -1,0 +1,304 @@
+@charset "UTF-8";
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+
+#substance-title h2{
+	float:left;
+	width:300px;
+	height:26px;
+	color:#ffea29;
+	font-weight:bold;
+	padding:4px 0 0 0;
+}
+
+#substance-title ul{
+	display:block;
+	width:300px;
+	padding:4px 0 0 0;
+	float:right;
+	text-align:right;
+}
+#substance-title li{
+	display:inline;
+	padding:0 0 0 0.2em;	
+}
+
+
+/* creator-profile setting   ================================================== */
+#creator-profile{
+	width:630px;
+}
+#creator-profile p{
+	padding:0 0 10px 0;
+	margin:0 0 5px 0;
+	border-bottom:1px dashed #666;
+}
+
+
+#creator-profile p span{
+	font-size:85%;
+}
+
+/* creator-interview setting   ================================================ */
+#creator-interview{
+	width:630px;
+	margin:1em 0 2em;
+}
+
+#creator-interview h3{
+	padding:2px 0;
+	font-size:120%;
+	font-weight:bold;
+	color:#090;
+}
+
+#creator-interview h4{
+	font-weight:bold;
+	margin:1em 0 0 0;
+	padding:0 0 0 25px;
+}
+
+#creator-interview p{
+	margin:1em 0 0 0;
+	padding:0 0 0 25px;
+	clear:both;
+}
+
+#creator-interview p.listener{
+	margin:2em 0 0 0;
+	background:url("contents-substance/listner_p.gif") no-repeat left 0.5em;
+	color:#36F;
+}
+
+#creator-interview .topDotLine{
+	padding:10px 0 0 0;
+	width:630px;
+	border-top:1px dashed #666;	
+
+}
+
+#creator-interview .bottomDotLine{
+	padding:0 0 10px 0;
+	width:630px;
+	border-bottom:1px dashed #666;
+}
+
+#creator-interview p.creator-info{
+	display:block;
+	margin:1em 0 0 25px;
+	padding:0.5em;
+	background-color:#6cf;
+}
+
+
+#creator-interview p .floatLeft{
+	margin:0 0.5em 0.2em 0;
+}
+
+#creator-interview p .floatRight{
+	margin:0 0 0.2em 0.5em;
+}
+
+#creator-interview p span img{
+	margin:0 0 0.2em 0;
+}
+
+#creator-interview blockquote{
+	margin:0 0 1em 0;
+}
+
+/* Column */
+#creator-interview div{
+	width:605px;
+	margin:1em 0 0 0;
+	padding:0 0 0 25px;
+/*\*//*/
+	display:inline-table;/*for MacIE*/
+/**/
+}
+
+#creator-interview div div{
+	width:320px;
+	margin:0;
+	padding:0;
+/*\*//*/
+	display:inline-table;/*for MacIE*/
+/**/
+}
+
+
+#creator-interview div:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+#creator-interview div span{
+	font-size:x-small;
+}
+
+#creator-interview div span.floatLeft{
+	display:block;
+	margin:0 5px 0.2em 0;
+}
+
+#creator-interview div span.floatRight{
+	margin:0 0 0.2em 0.5em;
+}
+
+#creator-interview div p{
+	clear:none;
+	margin:0 0 1em 0;
+	padding:0;
+}
+
+
+#creator-interview p.nameTag{
+	margin:0;
+	font-weight:bold;
+}
+/* soundtrack setting ============================================== */
+div#soundtrack dl{
+	display:block;
+	width:510px;
+	padding:0.5em 0 0 0;
+	float:left;
+}
+div#soundtrack dl dt{
+	padding:0 0 0.5em 0;
+}
+div#soundtrack p{
+	display:block;
+	width:120px;
+	padding:0.5em 0 0 0;
+	text-align:right;
+	float:left;
+}
+
+
+/* page-end setting   ====================================================== */
+#page-end{
+	clear:both;
+	width:626px;
+}
+
+#page-end h3 a{
+	padding:2px 0;
+	float:left;
+	font-size:120%;
+	font-weight:bold;
+}
+
+#page-end ul{
+	float:right;
+	text-align:right;
+	padding:0.2em 0 0 0;
+}
+
+#page-end li{
+	display:inline;
+	padding:0 0 0 0.2em;	
+}
+
+
+
+/* ======================================================
+新仕様書式  vol.29以降
+====================================================== */
+
+/* substance-text setting ================================================= */
+#substance-profile{
+	margin:0 0 20px;
+}
+
+#substance-profile ul{
+	margin:1em 0;
+	border-top:#666 dashed 1px;
+}
+
+#substance-profile ul li{
+	border-bottom:#666 dashed 1px;
+	padding:10px 0; 
+}
+
+#substance-profile ul li span{
+	font-weight:bold;
+}
+#substance-profile ul li dl{
+	width:645px;
+}
+/* clear fix */
+#substance-profile ul li dl{
+	zoom:1;/*for IE 5.5-7*/
+}
+
+#substance-profile ul li dl:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+
+#substance-profile ul dt,
+#substance-profile ul dd,
+#substance-profile ul a{
+	font-size:x-small;
+	_font-size:xx-small;
+}
+
+#substance-profile ul li dl dt{
+	clear:both;
+	width:40px;
+	float:left;
+	padding:0 5px 0 0;
+}
+
+#substance-profile ul li dl dd{
+	width:600px;
+	float:right	;
+}
+
+/* substance-text setting   ====================================================== */
+
+#substance-text p.txtStaff:before{
+	content:"─ ";
+}
+
+#substance-text p.txtStaff{
+	color:#36F;	
+	#text-indent:25px;/*for IE 6-7*/
+	#background:url("contents-substance/listner_p.gif") 0 10px no-repeat;/*for IE 6-7*/
+	#zoom:1;/*for IE 6-7*/
+}
+
+
+/* substance-end setting   ====================================================== */
+#substance-end{
+	clear:both;
+	width:626px;
+}
+
+#substance-end h3 a{
+	padding:2px 0;
+	float:left;
+	font-size:120%;
+	font-weight:bold;
+}
+
+#substance-end ul{
+	float:right;
+	text-align:right;
+	padding:0.2em 0 0 0;
+}
+
+#substance-end li{
+	display:inline;
+	padding:0 0 0 0.2em;	
+}

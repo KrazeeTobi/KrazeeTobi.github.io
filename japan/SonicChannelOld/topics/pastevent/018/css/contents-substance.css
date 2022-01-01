@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+
+#contents-substance{
+	width:650px;
+	padding:0 0 30px 10px;
+}
+
+
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+
+#eventContents p{
+	padding:0 0 1em;
+}
+
+#eventContents ul{
+	width:650px;
+	display:inline-table;/*for MacIE*/
+}
+
+#eventContents ul:after{
+    content:".";
+    display: block;
+    height:0px;
+    clear:both;
+    visibility:hidden;
+}
+
+#eventContents ul li{
+	float:left;
+	display:block;
+	width:216px;
+	padding:0 0 1em;
+}
+
+#eventContents ul li span{
+	display:block;
+	width:215px;
+	font-size:x-small;
+	_font-size:xx-small;
+}

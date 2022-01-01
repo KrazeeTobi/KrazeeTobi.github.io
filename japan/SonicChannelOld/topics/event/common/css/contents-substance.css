@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+
+div.profile {
+    border-top: 1px dashed #666666;
+    border-bottom: 1px dashed #666666;
+    margin: 1em 0;
+    padding: 0.5em;
+}
+
+div.profile dl dt {
+	margin-top: 0.5em;
+}
+
+div.profile dl dt:first-child {
+	margin-top: 0;
+}
+
+table dl dt {
+	float: left;
+	margin: 0 0 0.8em;
+	width: 5.5em;
+}
+
+table dl dd {
+	margin-bottom: 0.8em;
+	margin-left: 6em;
+}

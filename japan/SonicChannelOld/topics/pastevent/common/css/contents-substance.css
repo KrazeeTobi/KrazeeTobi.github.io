@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/* column setting   ===================================================== */
+/* 165 */
+#column165{
+	width:645px;
+	margin:0 0 2em 0;
+}
+
+#column165:after{
+	content: "";
+	display: block;
+	height: 0px;
+	clear: both;
+}
+
+#column165 p.left165{
+	float:left;
+	width:165px;
+}
+
+#column165 p.right480{
+	float:right;
+	width:480px;
+}
+
+/* 180 */
+#column180{
+	width:645px;
+	margin:0 0 2em 0;
+}
+
+#column180:after{
+	content: "";
+	display: block;
+	height: 0px;
+	clear: both;
+}
+
+#column180 p.left180{
+	float:left;
+	width:175px;
+}
+
+#column180 p.right480{
+	float:right;
+	width:470px;
+}
+
+
+ul.bannerList{
+	margin:0 0 0.3em;
+}
+

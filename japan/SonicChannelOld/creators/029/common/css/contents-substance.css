@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/* page title setting   ===================================================== */
+
+
+/* substance-text setting   ===================================================== */
+#substance-text p{
+	padding:0 0 0.7em;
+}
+
+#substance-text p span,
+#substance-text p a{
+	font-weight:bold;
+}
+
+/* substance-text class setting ================================================= */
+span.txtOtani{
+	color:#F60;
+}
+
+span.txtTokoi{
+	color:#390;
+}
+
+span.star{
+	color:#FC0;
+}

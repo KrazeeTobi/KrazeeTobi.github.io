@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/* block layout setting ===================================================== */
+#contents-navigation h2{
+	background:url("contents-navigation/h2.gif") no-repeat;
+}
+
+/* btn_bg ================================================================= */
+/* active page */
+
+#usa-001 li#navigation-001 a,
+#usa-002 li#navigation-002 a,
+#usa-003 li#navigation-003 a,
+#usa-004 li#navigation-004 a,
+#usa-005 li#navigation-005 a,
+#usa-006 li#navigation-006 a,
+#usa-007 li#navigation-007 a,
+#usa-008 li#navigation-008 a,
+#usa-009 li#navigation-009 a,
+#usa-010 li#navigation-010 a,
+#usa-011 li#navigation-011 a,
+#usa-012 li#navigation-012 a,
+#usa-013 li#navigation-013 a,
+#usa-014 li#navigation-014 a,
+#usa-015 li#navigation-015 a,
+#usa-016 li#navigation-016 a,
+#usa-017 li#navigation-017 a,
+#usa-018 li#navigation-018 a,
+#usa-019 li#navigation-019 a,
+#usa-020 li#navigation-020 a,
+#usa-021 li#navigation-021 a
+{
+	background:url(../../../common/css/contents-navigation/a.gif) 218px center;
+	border:1px solid #a60303;	
+	border-bottom:1px dotted #a60303;
+	color:#ffea29;
+}

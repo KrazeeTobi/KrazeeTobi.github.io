@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* substance-date setting   ===================================================== */
+
+#substance-date{
+	clear:both;
+	width:645px;
+	height:50px;
+	padding:0 0 10px 0;
+//	background:#f00;
+	overflow:hidden;
+}
+#substance-date h2{
+	font-size:medium;
+	padding:5px;
+}
+
+#substance-date #date-month{
+	height:1em;
+	padding:5px;
+	//line-height:1.6em;
+	display:block;
+	overflow:hidden;
+	font-size:medium;
+	border-bottom:#021e73 1px solid;
+	position:relative;
+	background:#021e73;
+}
+
+
+
+#substance-date *.selectedDate{
+	color:#999;
+	text-decoration:none;
+}
+
+
+/* #substance-thumbnail ============================================================ */
+#substance-thumbnail{
+	width:640px;
+	min-height:600px;
+}
+
+
+/* thumbnail-list ============================================================ */
+ul#thumbnail-list{
+	width:640px;
+}
+
+ul#thumbnail-list:after{
+	content:"";
+	display:block;
+	height:0px;
+	clear:both;
+}
+
+ul#thumbnail-list li{
+	float:left;
+	padding:0 4px 2px 0;
+}
+
+ul#thumbnail-list li img{
+	cursor:pointer;
+	border:1px solid #000;
+}
+
+ul#thumbnail-list li img:hover{
+	border:1px solid #F00;
+}
+
+
+/* thumbnailMenu ============================================================ */
+#thumbnail-loading{
+	width:640px;;
+	height:100px;
+	display:block;
+	text-align:center;
+	font-size:medium;
+	margin:0px 0 0;
+	padding:0px 0 0;
+	background:url(contents-substance/thumbnail-loading.gif) center 2em no-repeat;
+}
+
+/* thumbnailMenu ============================================================ */
+/*
+ul#thumbnailBtn{
+	width:645px;
+}
+ul#thumbnailBtn:after{
+	content: "";
+	display: block;
+	height: 0px;
+	clear: both;
+}
+*/

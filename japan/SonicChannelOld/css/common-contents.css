@@ -1,0 +1,6 @@
+@charset "UTF-8";
+/* common-contents   ===================================================== */
+#common-contents{
+	position:relative;
+	z-index:80;
+}

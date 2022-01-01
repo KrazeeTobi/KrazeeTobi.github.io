@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+
+
+#substance-title p{
+	float:left;
+	width:300px;
+	height:26px;
+	color:#ffea29;
+	font-weight:bold;
+	padding:4px 0 0 0;
+}
+
+
+#substance-title ul{
+	display:block;
+	width:300px;
+	padding:4px 0 0 0;
+	float:right;
+	text-align:right;
+}
+#substance-title li{
+	display:inline;
+	padding:0 0 0 0.2em;	
+}
+
+
+
+/* substance-text setting   ===================================================== */
+#substance-text{
+}
+
+#substance-text p{
+	padding:0 0 0.7em;
+	
+}
+
+#substance-text p span,
+#substance-text p a{
+	font-weight:bold;
+}
+
+
+/* substance-text class setting ================================================= */
+span.txtSenoue{
+	color:#00C;
+}
+
+span.txtHataya{
+	color:#F30;
+}
+
+span.txtOtani{
+	color:#066;
+}
+
+span.txtTokoi{
+	color:#933;
+}
+
+
+/* substance-end setting   ====================================================== */
+#substance-end{
+	clear:both;
+	width:645px;
+}
+
+#substance-end h3{
+	float:left;
+}
+#substance-end ul{
+	float:right;
+	text-align:right;
+	padding:0.2em 0 0 0;
+}
+#substance-end li{
+	display:inline;
+	padding:0 0 0 0.2em;	
+}
+
+

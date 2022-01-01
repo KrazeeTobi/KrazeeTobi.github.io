@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/* layout setting   ===================================================== */
+#picChange{
+	width:645px;
+}
+
+#picChange h2,
+#picChange h3{
+	line-height:1.2em;
+}
+
+#picChange h2{
+	margin:0 0 1em 0;
+	color: #090;
+	font-weight: bold;
+}
+
+#picChange p,
+#picChange ul{
+	clear:both;
+	margin:0 0 1em 0;
+}
+
+#picChange ul:after{
+	content: "";
+	display: block;
+	height: 0px;
+	clear: both;
+}
+
+#picChange li{
+	float:left;
+	margin:0;
+	padding:0 0.2em 0 0.4em;
+	text-indent:0;
+	background:url("contents-pic-change/mark_li.gif") no-repeat left 0.45em;
+	line-height:1.1em;
+}
+#picChange li.noListStyle{
+	padding:0;
+	background:none;
+}
+
+/* picBox setting   ======================================================== */
+#picBox{
+	width:380px;
+	height:295px;
+	overflow:hidden;
+	border:1px solid #000;
+	background:#fff;
+}
+#picBox p{
+	display:block;
+	margin:0 0 500px 0;
+}
+
+#picBox p img{
+	margin:19px;
+}
+
+#picRight{
+	float:right;
+	width:270px;
+}
+
+
+/* pic setting   =========================================================== */
+#pic2,#pic3,#pic4,#pic5,#pic6,#pic7,#pic8,#pic9,#pic10,#pic11,
+#pic12,#pic13,#pic14,#pic15,#pic16,#pic17,#pic18,#pic19,#pic20{
+	display:none;
+}
+

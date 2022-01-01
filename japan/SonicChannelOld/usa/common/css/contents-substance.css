@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+/* layout setting   ===================================================== */
+
+#contents-substance img.floatLeft{
+	margin:0 0.5em 0.1em 0;
+}
+#contents-substance img.floatRight{
+	margin:0 0 0.1em 0.5em;
+}
+
+
+/* contents-substance setting   ================================================ */
+#contents-substance p{
+	margin:0 0 1em 0;
+}
+
+
+#contents-substance p.listener{
+	margin:2em 0 0 0;
+	background:url("contents-substance/listner_p.gif") no-repeat left 0.5em;
+	color:#36F;
+	padding:0 0 0 25px;
+	clear:both;
+}
+
+#contents-substance p.answer{
+	margin:1em 0 0 0;
+	padding:0 0 0 25px;
+	clear:both;
+}
+
+
+/* Column */
+contents-substance div{
+	margin:1em 0 0 0;
+	padding:0;
+
+/*\*//*/
+	display:inline-table;/*for MacIE*/
+/**/
+}
+
+#contents-substance div:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+/* for interview*/
+#contents-substance div.answer{
+	width:605px;
+	padding:0 0 0 25px;
+}
+
+#contents-substance div span{
+	line-height:1.2em;
+	font-size:x-small;
+}
+
+#contents-substance div span.floatLeft{
+	display:block;
+	margin:0 5px 0.2em 0;
+}
+
+#contents-substance div span.floatRight{
+	margin:0 0 0.2em 0.5em;
+}
+
+#contents-substance div p{
+	clear:none;
+	margin:0 0 1em 0;
+	padding:0;
+}
+
+/* usa-profile setting   ====================================================== */
+#usa-profile{
+	margin:5em 0 0 0 ;
+	padding:10px 0 0 0;
+	border-top:1px dashed #666;
+}
+
+#usa-profile p{
+	padding:0 0 1em 0;
+}
+
+#usa-profile img.floatLeft{
+	margin:0 0.5em 0 0;
+}
+
+#usa-profile dl{
+	clear:both;
+	width:630px;
+	padding:10px 0 0 0;
+	border-top:1px dashed #666;
+}
+
+#usa-profile dl dd{
+	margin:0 0 1em 0.5em;
+}	
+
+/* page title setting   ===================================================== */
+#contents-substance #substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+#contents-substance #substance-title p{
+	padding-top:4px;
+}
+

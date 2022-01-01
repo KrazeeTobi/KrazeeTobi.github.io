@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+#contents-substance{
+	float:right;
+	width:645px;
+	background:url("contents-substance/substance-title.gif") no-repeat top left;
+	padding:0 0 30px 15px;
+}
+
+#substance-title{
+	width:645px;
+	height:90px;
+	margin-bottom:30px;
+
+	overflow:hidden;
+}
+
+#substance-title h1{
+	width:645px;
+	height:60px;
+	
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;
+	font-size:0;
+
+}
+
+#substance-title p{
+	width:645px;
+	height:26px;
+	color:#ffea29;
+	font-weight:bold;
+	padding-top:4px;
+}

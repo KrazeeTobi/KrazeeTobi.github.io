@@ -1,0 +1,10 @@
+document.write( '<script type="text/javascript" src="../common/js/jquery.history.js"></script>' );
+document.write( '<script type="text/javascript" src="../common/js/jquery.hashchange.js"></script>' );
+document.write( '<script type="text/javascript" src="../common/js/jquery.smoothMove.js"></script>' );
+document.write( '<script type="text/javascript" src="../common/js/jquery.accordionMove.js"></script>' );
+document.write( '<script type="text/javascript" src="../common/js/jquery.displayContentDetail.js"></script>' );
+document.write( '<script type="text/javascript" src="../common/js/jquery.backTop.js"></script>' );
+document.write( '<script type="text/javascript" src="../common/js/jquery.closeArticle.js"></script>' );
+document.write( '<script type="text/javascript" src="../common/js/jquery.footer.js"></script>' );
+document.write( '<script type="text/javascript" src="../common/js/contents-read.js"></script>' );
+document.write( '<script type="text/javascript" src="../common/js/common.js"></script>' );

@@ -1,0 +1,112 @@
+/* CSS Document */
+
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+
+
+/* charaList */
+div#charaList {
+	clear:both;
+	width:490px;
+}
+
+div#charaList p{
+	margin:0 0 1em;
+}
+
+div#charaList ul{
+	display:block;
+	height:60px;
+	margin:0 0 15px 0;	
+	clear:both;
+}
+
+div#charaList ul li{
+	display:block;
+	float:left;
+	margin:0 1px 0 0; 
+	font-size:xx-small;
+}
+
+div#charaList ul li img{
+	display:block;
+}
+
+div#charaList ul li span{
+	margin:1px 0 0 0;
+	padding:1px 0;
+	display:block;
+	background:#666;
+	color:#ccc;
+	font-size:x-small;
+	_font-size:xx-small;
+	text-align:center;
+}
+
+div#charaList div.dotLine {
+	display:block;
+	width:488px;
+	height:20px;
+	background:url(http://sonic.sega.jp/SonicChannelOld/common/css/contents-substance/h1_line.gif) repeat-x left center;
+	clear:both;
+}
+
+div#charaList div.dotLine hr{
+	display:none;
+}
+
+
+/* questionBox */
+div.questionBox{
+	clear:both;
+	width:645px;
+}
+
+#q1{
+	background:url(../image/fig_sonic.gif) no-repeat 460px 170px;
+}
+
+#q3{
+	background:url(../image/fig_shadow.gif) no-repeat 485px 10px;
+}
+
+#q4{
+	background:url(../image/fig_tails.gif) no-repeat 485px 35px;
+}
+
+#q5{
+	background:url(../image/fig_amy.gif) no-repeat 485px top;
+}
+
+#q6{
+	background:url(../image/fig_knuckles.gif) no-repeat 485px top;
+}
+
+
+/* midashi ten */
+#contents-substance td,
+#event16 table span{
+	line-height:1.4em;
+}
+#contents-substance td{
+	padding:0 0 0.2em 0;
+}
+
+#event16 table span{
+	line-height:1.2em;
+	margin:0 0 0.3em 0;
+}
+
+#contents-substance p{
+	line-height:1.2em;
+}
+
+.textGreen{
+	color:#090;
+}
+
+.textBlue{
+	color:#36f;
+}

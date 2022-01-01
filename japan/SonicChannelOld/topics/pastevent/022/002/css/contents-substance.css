@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/* substance-text setting ================================================= */
+#pic-1st{
+	display:block;
+	width:190px;
+	margin:0 15px 0 0;
+	float:left;
+	font-size:x-small;
+}
+
+#pic-2nd{
+	display:block;
+	width:320px;
+	margin:0 0 0 15px;
+	clear:both;
+	float:right;
+	font-size:x-small;
+}
+
+#pic-3rd{
+	display:block;
+	width:320px;
+	margin:0 15px 0 0;
+	clear:both;
+	float:left;
+	font-size:x-small;
+}

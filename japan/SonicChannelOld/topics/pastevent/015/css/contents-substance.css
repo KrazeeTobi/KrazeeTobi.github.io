@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+
+
+/* CSS Document */
+
+#picChange *{
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+#picChange{
+	width:645px;
+}
+
+#picChange ul, #picChange li{
+	list-style:none;
+}
+
+#picChange div{
+	width:320px;
+}
+
+#picChange img{
+	margin:0;
+	clear:none;
+}
+
+#picChange div#thumbnail,#picChange div#pic01{
+	display:block;
+}
+
+#thumbnail{
+	float:right;
+	width:306px;
+}
+
+#thumbnail ul li{
+	float:left;
+	padding:0 15px 15px 0;
+}
+
+#picChange p,
+#picChange ul{
+	clear:none;
+	margin:0;
+}
+
+#picChange p{
+	padding:0 0 5px 0;
+}
+#thumbnail p{
+	width:310px;
+	padding-bottom:11px;
+	margin-bottom:10px;
+	background:url(http://sonic.sega.jp/SonicChannelOld/event/015/dotted.gif) repeat-x bottom left;
+}

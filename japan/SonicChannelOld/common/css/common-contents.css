@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* own-main   ===================================================== */
+#common-contents{
+	width:900px;
+	margin:0 auto;
+	padding:0 0 50px;
+	position:relative;
+	background:url(common-contents/common-contents.gif) repeat-y;
+	
+}
+/* clear fix */
+#common-contents{
+	zoom:1;/*for IE 5.5-7*/
+}
+
+#common-contents:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+
+

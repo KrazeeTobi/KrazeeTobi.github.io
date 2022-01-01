@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+#common-contents em{
+	font-style:normal;
+}
+
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+
+

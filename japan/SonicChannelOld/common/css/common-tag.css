@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* common tag   ===================================================== */
+div,span,
+ol,ul,li,dl,dt,dd,
+h1,h2,h3,h4,h5,h6,
+p,a,img,
+table,td,th,
+blockquote{
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:small;
+	line-height:1.6em;
+	font-weight:normal;
+	font-style:normal;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color:#666;
+}
+
+body{
+	margin:0;
+	background:url(common-tag/body.gif) repeat-x #fff;
+}
+
+ul,li{
+	list-style:none;
+}
+
+hr{
+	margin:0;
+	width:0px;
+	height:0px;
+	clear:both;
+	_position:absolute;  /* win IE*/ 
+	_top:-999px;  /* win IE*/ 
+}
+
+*+html hr{  /* win IE7 + OPERA 8*/ 
+	position:absolute;
+	top:-999px;
+}
+
+a {
+	color: #09f;
+	font-weight: bold;
+	text-decoration:underline;
+}
+a:link {
+	font-weight: bold;
+}
+a:visited {
+	font-weight: bold;
+	color: #09f;
+}
+a:hover {
+	font-weight: bold;
+	color: #f60;
+}
+a:active {
+	font-weight: bold;
+	color: #f60;
+}
+
+em{
+	font-weight:bold;
+	color:#021e73;
+	font-style:normal;
+}
+
+blockquote{
+	clear:both;
+	font-size:x-small;
+	_font-size:xx-small;  /*IE*/ 
+	line-height:1.2em;
+}
+
+/* css hack	 ================================================================ */
+/* for win IE */
+br {
+    _letter-spacing: 0;
+}
+/* for mac ie 5 */
+/*\*//*/
+hr{
+	display:none;
+}
+/**/
+

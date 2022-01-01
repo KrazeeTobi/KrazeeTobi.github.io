@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* contents-topics   ===================================================== */
+#contents-navigation{
+	padding:20px 5px;
+}
+
+/* h2 */
+#contents-navigation h2{
+	width:210px;
+	height:37px;
+	margin:0 5px;
+	background:url(contents-topics/h2.gif) no-repeat left top;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0;
+	font-size:0;
+}
+
+
+#contents-navigation ul{
+	border-top:8px solid #021e73;
+	padding:0 5px;
+	margin:0 0 10px;
+}
+

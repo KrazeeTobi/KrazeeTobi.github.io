@@ -1,0 +1,329 @@
+@charset "UTF-8";
+/* common class   ===================================================== */
+/* hidden ------------------------------------------------------------- */
+.displayNone{
+	display:none;
+}
+.displayHidden {
+	margin:0px;
+	padding:0px;
+	width:1px;
+	height:0px;
+	position:absolute;
+	top:0px;
+	left:-999px;
+	z-index:100;
+	display:run-in;
+	border-style:none;
+	overflow:hidden;
+}
+
+/* float ------------------------------------------------------------- */
+.floatLeft{
+	float:left;
+}
+.floatRight{
+	float:right;
+}
+.clearBoth{
+	clear:both;
+}
+.clearNone{
+	clear:none;
+}
+
+
+
+/* dotline ------------------------------------------------------------ */
+.dotlinetop{
+	padding:15px 0 0 0;
+	border-top:1px dashed #666;
+}
+.dotlinebottom{
+	padding-bottom:0 0 10px 0;
+	border-bottom:1px dashed #666;
+}
+
+/* margin ------------------------------------------------------------ */
+.mt5 {
+	margin:5px 0 0 0;
+}
+.mt10 {
+	margin:10px 0 0 0;
+}
+.mt20 {
+	margin:20px 0 0 0;
+}
+
+.mb5 {
+	margin:0 0 5px 0;
+}
+.mb10 {
+	margin:0 0 10px 0;
+}
+
+.mr5 {
+	margin:0 5px 0 0;
+}
+.mr10 {
+	margin:0 10px 0 0;
+}
+
+.ml5 {
+	margin:0 0 0 5px;
+}
+.ml10 {
+	margin:0 0 0 10px;
+}
+
+.mt1em {
+	margin:1em 0 0 0;
+}
+.mt2em {
+	margin:2em 0 0 0;
+}
+
+.mb1em {
+	margin:0 0 1em 0;
+}
+.mb2em {
+	margin:0 0 2em 0;
+}
+
+/* padding ---------------------------------------------------------- */
+.pt5 {
+	padding:5px 0 0 0;
+}
+.pt10 {
+	padding:10px 0 0 0;
+}
+
+.pb5 {
+	padding:0 0 5px 0;
+}
+.pb10 {
+	padding:0 0 10px 0;
+}
+
+.pr5 {
+	padding:0 5px 0 0;
+}
+.pr10 {
+	padding:0 10px 0 0;
+}
+
+.pl5 {
+	padding:0 0 0 5px;
+}
+.pl10 {
+	padding:0 0 0 10px;
+}
+
+.pt1em {
+	padding:1em 0 0 0;
+}
+.pt2em {
+	padding:2em 0 0 0;
+}
+
+.pb1em {
+	padding:0 0 1em 0;
+}
+.pb2em {
+	padding:0 0 2em 0;
+}
+
+
+
+
+
+.pr1em {
+	padding:0 1em 0 0;
+}
+.pr2em {
+	padding:0 2em 0 0;
+}
+
+.pl1em {
+	padding:0 0 0 1em;
+}
+.pl2em {
+	padding:0 0 0 2em;
+}
+
+
+
+/* text size -------------------------------------------------------- */
+.txt-small{
+	font-size:small;
+	_font-size:x-small;  /*IE*/ 
+}
+.txt-xsmall{
+	font-size:x-small;
+	_font-size:xx-small;  /*IE*/ 
+}
+.txt-xxsmall{
+	font-size:xx-small;
+}
+
+/* text weight ----------------------------------------------------- */
+.txtBold{
+	font-weight:bold;
+	letter-spacing:-0.04em;
+}
+
+/* text align ------------------------------------------------------ */
+.txtCenter{
+	text-align:center;
+}
+.txtLeft{
+	text-align:left;
+}
+.txtRight{
+	text-align:right;
+}
+
+/* text color ------------------------------------------------------ */
+.txtRed{
+	color:#f00;
+}
+
+.textLiteBlue{
+	color: #36F;
+}
+
+/* caution --------------------------------------------------------- */
+.caution{
+	clear:both;
+	font-size:x-small;
+	_font-size:xx-small;  /*IE*/ 
+	line-height:1.2em;
+}
+
+/* citeLink -------------------------------------------------------- */
+a.citeLink{
+	text-decoration:underline;
+	font-weight:normal;
+	color:#666;
+}
+a.citeLink:link{
+	text-decoration:underline;
+	font-weight:normal;
+	color:#666;
+}
+a.citeLink:visited{
+	text-decoration:underline;
+	font-weight:normal;
+	color:#666;
+}
+a.citeLink:hover{
+	text-decoration:underline;
+	font-weight:normal;
+	color:#f96;
+}
+a.citeLink:active{
+	text-decoration:underline;
+	font-weight:normal;
+	color:#f96;
+}
+
+
+/* layout class	 =================================================== */
+/* bannar list -----------------------------------------------------
+ 632px
+┌─────┬────────┐
+│150px　　 │　　　　　 470px│
+│bannerLeft│　　 bannerRight│
+└─────┴────────┘
+-------------------------------------------------------------------- */
+ul.bannerList{
+	width:632px;
+	margin:0 0 2em;
+	border-top:1px dashed #666;
+/*	background:url("all-class/bannerlist_line_ul.gif") no-repeat left bottom;
+*/
+
+}
+
+ul.bannerList li{
+/*	clear:both; */
+	display:block;
+	padding:10px 0 3px 0;
+	width:632px;
+	min-height:50px;
+	_height:50px;
+/*	background:url("all-class/bannerlist_line_ul.gif") no-repeat left bottom;*/
+	border-bottom:1px dashed #666;
+/*\*//*/
+	display:inline-table;/*for MacIE*/
+/**/
+}
+
+ul.bannerList li:after{
+	content: "";
+	display: block;
+	height: 0px;
+	clear: both;
+}
+
+ul.bannerList li.noBorder{
+	background:none;
+}
+
+ul.bannerList li .bannerRight{
+	display:block;
+	float:right;
+	width:470px;
+	padding:0 0 5px 0;
+}
+ul.bannerList li .bannerLeft{
+	display:block;
+	float:left;
+	width:150px;
+}
+
+/* games list -----------------------------------------------------
+ul.bannerList li 632px
+┌──────────────────┬─────────┐
+│391px　　　　　　　　　　　　　　　 │　　　　　　 235px│
+│gamesLeft　　　　　　　　　　　　　 │　　　　gamesRight│
+│┌───────┬────────┐│　　　　　　　　　│
+││150px　　　　 │　　　　　 235px││　　　　　　　　　│
+││gamesLeftLeft │　gamesLeftRight││　　　　　　　　　│
+│└───────┴────────┘│　　　　　　　　　│
+└──────────────────┴─────────┘
+-------------------------------------------------------------------- */
+ul.bannerList li .gamesRight{
+	float:right;
+	padding:1px 0 5px 0;
+	width:235px;
+}
+ul.bannerList li .gamesLeft{
+	display:block;
+	float:left;
+	padding:0 0 5px 0;
+	width:391px;
+}
+
+ul.bannerList li .gamesLeft .gamesLeftRight{
+	padding:1px 0 0 0;
+	display:block;
+	float:right;
+	width:235px;
+}
+
+ul.bannerList li .gamesLeft .gamesLeftLeft{
+	display:block;
+	float:left;
+	width:150px;
+}
+ul.bannerList li h2{	
+	padding:0 0 5px 0;
+}
+
+ul.bannerList li dt{	
+	float:left;
+}
+ul.bannerList li hr{
+	display:none;
+}

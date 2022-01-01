@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/* common class   ===================================================== */
+.txtCaution{
+	font-size:x-small;
+	text-indent:0 !important;
+}
+
+.txtCenter{
+	text-align:center;
+}
+
+.txtRed{
+	color:#f00;
+}
+
+.imgLeft img{
+	padding-right:1em;
+	padding-bottom:1em;
+	float:left;
+
+}
+
+.imgRight img{
+	padding-left:1em;
+	padding-bottom:1em;
+	float:right;
+}
+
+.imgLeft:after,
+.imgRight:after{
+	content: "";
+	display: block;
+	height: 0px;
+	clear: both;
+}
+
+.floatLeft{
+	padding-right:1em;
+	padding-bottom:1em;
+	float:left;
+	clear:both;
+}
+.floatRight{
+	padding-left:1em;
+	padding-bottom:1em;
+	float:right;
+	clear:both;
+}
+
+.newInfo{
+	display:block;
+	width:35px;
+	height:14px;
+	font-size:0;
+	line-height: 0em;
+	text-decoration: none;
+	text-indent: -9999px;
+	background:url(common-class/newInfo.gif) no-repeat;
+	position:absolute;
+	top:0px;
+	left:18px;
+}
+
+.time{
+	font-family:'Georgia';
+	font-size:x-large;
+	display:block;
+	padding:0.3em;
+	color:#021e73;
+	text-align: right;
+}
+
+.notIndent{	
+	text-indent: 0;
+}
+.Indent{
+	text-indent:1em;
+}
+
+.notPadding{	
+	padding:0;
+}

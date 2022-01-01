@@ -1,0 +1,64 @@
+#main-iview{
+	display: block;
+	width:692px;
+	height:198px;
+	background: #ddd;
+	position: relative;
+	overflow: hidden;
+}
+
+
+#main-iview .iviewSlider{
+	display: block;
+	width:692px;
+	height:198px;
+	overflow: hidden;
+}
+
+
+#main-iview .iviewLink{
+	display: block;
+	width:692px;
+	height:198px;
+	position: absolute;
+	z-index: 4;
+}
+
+#main-iview div.iview-directionNav {
+	position: absolute;
+	top: 87px;
+	left: 0px;
+	z-index: 9;
+	width: 100%;
+	border:#f00;
+}
+
+#main-iview div.iview-directionNav a {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	width: 27px;
+	height: 27px;
+	background-image: url(../img/bg_direction_nav.png);
+	text-indent: -9999px;
+	transition: left 0.3s ease-in-out;
+	transition-property: left,right;
+}
+
+#main-iview div.iview-directionNav a.iview-nextNav {
+	right: -27px;
+	background-position: 27px 0px;
+}
+
+#main-iview div.iview-directionNav a.iview-prevNav {
+	left: -27px;
+	background-position: 0px 0px
+}
+
+#main-iview.iview-hover div.iview-directionNav a.iview-nextNav {
+	right: 20px;
+}
+
+#main-iview.iview-hover div.iview-directionNav a.iview-prevNav {
+	left: 20px;
+}

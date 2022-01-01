@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* page title setting   ===================================================== */
+#contents-substance #substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+
+/* table setting ================================================= */
+table{
+	width:640px;
+	margin:2px 0;
+	border:1px solid #999;
+}
+
+table th,table td{
+	vertical-align:top;
+	border-top:1px solid #666;
+	border-left:1px solid #666;
+}
+
+table th{
+	padding:0.5em 5px 2px;	
+}
+table td{
+	padding:0.5em 2px 2px 0.5em;
+}
+
+table td p{
+	margin:0 0 0.5em 0;
+}
+
+table td ul{
+	margin:0 0 0.5em 0;
+}
+
+table td ul li{
+	padding:0 0 0 0.7em;
+	margin:0;
+	text-indent:0;
+	background:url("pastdata-news/mark_li.gif") no-repeat 0.2em 0.5em;
+	line-height:1.1em;
+}
+
+table td dl{
+	margin:0 0 0.5em 0;
+}
+
+table td dl dt{
+	float:left;
+}
+
+
+#contents-news div p.newsImage{
+	float:left;
+	width:90px;
+	text-align:center;
+}
+
+/* backgorund setting ===================================================== */
+
+.new01{
+	background-color:#AAE3EC;
+}
+.new02{
+	background-color:#D2F0F4;
+}
+.sc{
+	background-color:#C6EFC2;
+}
+.gray{
+	background-color:#E9E9E9;
+}
+
+.new01 {
+	background-color:#AAE3EC;
+}
+.new02 {
+	background-color:#D2F0F4;
+}
+.periodical {
+	background-color:#C6EFC2;
+}
+.gray {
+	background-color:#E9E9E9;
+}
+.style15 {
+	font-weight: bold
+}
+.txtRed {
+	color:#f00;
+}
+/* new design===================================================== */

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+
+#contents-substance p{
+	margin:0 0 1em;
+}
+
+#contents-substance h2{
+	font-weight:bold;
+	padding:15px 0 0.5em;
+	margin-bottom:0.5em;
+	border-bottom:1px dashed #666;
+	clear:both;
+}
+
+
+#contents-substance div.profile{
+	padding:0.5em 0 0.5em;
+	margin-bottom:0.5em;
+	border-bottom:1px dashed #666;
+}

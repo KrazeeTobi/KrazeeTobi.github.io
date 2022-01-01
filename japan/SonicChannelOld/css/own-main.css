@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/* own-main   ===================================================== */
+#own-main{
+	width:900px;
+	height:250px;
+	margin:0 auto;
+	padding:0;
+	position:relative;
+}
+/* clear fix */
+#own-main{
+	zoom:1;/*for IE 5.5-7*/
+}
+
+#own-main:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+#own-main h1{
+	padding:1px 0px;
+	display:block;
+	width:692px;
+	height:198px;
+	position:relative;
+	z-index:100;
+
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;
+	display:none;
+}
+
+#own-main p{
+	display:block;
+	
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;
+
+	position:absolute;
+	z-index:0;
+}
+
+
+/* own-main   ===================================================== */
+#own-main p.chara1{
+	width:396px;
+	height:688px;
+	background:url(own-main/sonic.png) no-repeat;
+	top:-20px;
+	left:645px;
+}
+#own-main p.chara2{
+	width:478px;
+	height:591px;
+	background:url(own-main/tails.png) no-repeat;
+	top:-9px;
+	left:595px;
+}
+#own-main p.chara3{
+	width:426px;
+	height:746px;
+	background:url(own-main/shadow.png) no-repeat;
+	top:-24px;
+	left:660px;
+}
+#own-main p.chara4{
+	width:445px;
+	height:691px;
+	background:url(own-main/silver.png) no-repeat;
+	top:-29px;
+	left:672px;
+}
+#own-main p.chara5{
+	width:455px;
+	height:688px;
+	background:url(own-main/metalsonic.png) no-repeat;
+	top:-9px;
+	left:610px;
+}
+#own-main p.chara6{
+	width:353px;
+	height:690px;
+	background:url(own-main/rouge.png) no-repeat;
+	top:-23px;
+	left:695px;
+}
+#own-main p.chara7{
+	width:480px;
+	height:691px;
+	background:url(own-main/knuckles.png) no-repeat;
+	top:-9px;
+	left:645px;
+}
+#own-main p.chara8{
+	width:373px;
+	height:717px;
+	background:url(own-main/braze.png) no-repeat;
+	top:-29px;
+	left:660px;
+}
+#own-main p.chara9{
+	width:520px;
+	height:912px;
+	background:url(own-main/eggman.png) no-repeat;
+	top:-29px;
+	left:645px;
+}
+#own-main p.chara10{
+	width:450px;
+	height:680px;
+	background:url(own-main/amy.png) no-repeat;
+	top:-19px;
+	left:600px;
+}
+#own-main p.chara11{
+	width:633px;
+	height:622px;
+	background:url(own-main/big.png) no-repeat;
+	top:0px;
+	left:535px;
+}
+#own-main p.sonic20th{
+	width:633px;
+	height:822px;
+	background:url(own-main/sonic20th.png) no-repeat;
+	top:-30px;
+	left:585px;
+}
+#own-main p.eggman20th{
+	width:520px;
+	height:912px;
+	background:url(own-main/eggman20th.png) no-repeat;
+	top:-29px;
+	left:635px;
+}
+
+#own-main h2{
+	display:block;
+	width:240px;
+	height:50px;
+	margin:0;
+	padding:0;
+	
+	background:url(own-main/h2.gif) no-repeat;
+	
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;
+	
+	float:left;
+}
+
+
+#own-main ul{
+	padding:2px 0 0;
+	height:48px;
+}
+
+#own-main ul li {
+	float:left;
+	width:150px;
+	height:45px;
+	padding:0 1px 0 0;
+	position:relative;
+	z-index:150;
+}

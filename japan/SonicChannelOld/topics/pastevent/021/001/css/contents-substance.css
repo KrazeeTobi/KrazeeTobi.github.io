@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/* substance-text setting ================================================= */
+
+#substance-profile{
+	margin:0 0 20px;
+}
+
+#substance-profile li{
+	border-bottom:#666 dashed 1px;
+	padding:10px 0; 
+}
+
+#substance-profile li span{
+	font-weight:bold;
+}
+
+#substance-profile li dl{
+	width:645px;
+}
+
+/* clear fix */
+#substance-profile li dl{
+	zoom:1;/*for IE 5.5-7*/
+}
+
+#substance-profile li dl:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+
+#substance-profile dt,
+#substance-profile dd,
+#substance-profile a{
+	font-size:x-small;
+	_font-size:xx-small;
+}
+
+#substance-profile li dl dt{
+	clear:both;
+	width:40px;
+	float:left;
+	padding:0 5px 0 0;
+}
+
+#substance-profile li dl dd{
+	width:600px;
+	float:right	;
+}
+
+
+
+
+
+/* substance-text class setting ================================================= */
+#pic-1st{
+	display:block;
+	width:320px;
+	margin:0 15px 0 0;
+	float:left;
+}
+
+#pic-2nd{
+	display:block;
+	width:190px;
+	margin:0 0 0 15px;
+	clear:both;
+	float:right;
+}
+
+#pic-3rd{
+	display:block;
+	width:320px;
+	margin:0 15px 0 0;
+	clear:both;
+	float:left;
+}

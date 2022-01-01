@@ -1,0 +1,285 @@
+@charset "UTF-8";
+/* common-contents setting   ===================================================== */
+#common-contents {
+}
+/* substance-thumbnail setting   ===================================================== */
+ul#substance-thumbnail{
+	width:700px;
+	height:100%;
+}
+
+ul#substance-thumbnail li{
+	background:url(contents-substance/substance-thumbnail_li.gif) no-repeat;
+	width:315px;
+	height:170px;
+	float:left;
+	margin:0 15px 15px 0;
+}
+
+ul#substance-thumbnail li img{
+	float:left;
+	padding:10px 0px 0 10px;
+	width:150px;
+	height:150px;
+}
+
+ul#substance-thumbnail li a{
+	display:block;
+	width:140px;
+	height:115px;
+	padding:10px 10px 5px 0;
+	float:right;
+}
+
+ul#substance-thumbnail li span{
+	display:block;
+	width:140px;
+	height:27px;
+	margin:0;
+	float:right;
+	padding:3px 7px 0 0;
+	text-align:center;
+	color:#FFF;
+}
+
+/* substance-list setting   ===================================================== */
+ul#substance-list li{
+	display:block;
+	width:605px;
+	height:25px;
+	padding:5px 5px 5px 35px;
+	line-height:25px;
+	background:url(contents-substance/substance-list_li.gif) no-repeat;
+}
+
+/* clear fix */
+ul#substance-list li{
+	zoom:1;/*for IE 5.5-7*/
+}
+
+ul#substance-list li:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+
+ul#substance-list li a{
+	float:left;
+	display:block;
+	width:445px;
+	height:25px;
+	line-height:25px;
+	overflow:hidden;
+}
+
+ul#substance-list li span{
+	float:right;
+	padding-right:5px;
+	width:155px;
+	height:25px;
+	line-height:25px;
+	color:#FFF;
+	text-align:right;
+}
+/* contents-substance setting   ===================================================== */
+#contents-substance p{
+	text-indent:1em;
+	padding-bottom:15px;
+}
+#contents-substance p.notIndent{
+	text-indent:0em;
+}
+
+#contents-substance h2{
+	color:#a60303;
+	font-size:medium;
+	font-weight:bold;
+	clear:both;
+	border-bottom:1px solid #6778ab;
+	padding:0 0 1em;
+}
+
+#contents-substance h2:first-of-type{
+	border-top:none;
+	margin:0;
+}
+
+#contents-substance h2{
+	color:#a60303;
+	font-size:medium;
+	font-weight:bold;
+	clear:both;
+	border-bottom:1px solid #6778ab;
+	padding:0 0 1em;
+}
+
+#contents-substance h3{
+	border-bottom:1px solid #021e73;
+	color:#021e73;
+	font-weight:bold;
+	margin-bottom:.5em;
+}
+
+#contents-substance h6{
+	clear:both;
+	font-size:small;
+	font-weight:bold;
+	border-top:1px dotted #ccc;
+	padding:0.5em 0;
+	color: #0F38B2;
+}
+
+/* contents-substance table setting   ===================================================== */
+#contents-substance table{
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-collapse:collapse;
+	margin:0 0 1em;
+}
+
+#contents-substance table caption {
+	caption-side: top;
+	text-align: left;
+	font-weight: bold;
+}
+
+#contents-substance th{
+	width:130px;
+	background:#103ab9;
+	text-align:left;
+	font-weight:bold;
+	color:#FFF;
+	white-space:nowrap;
+}
+
+#contents-substance th,
+#contents-substance td{
+	border-bottom:1px solid #ccc;
+	border-right:1px solid #ccc;
+	padding:0.5em;
+	vertical-align:top;
+}
+
+#contents-substance td{
+/*
+	color:#000;
+*/
+}
+
+/* 2013/11/27 不具合解消
+#contents-substance td a{
+	white-space:nowrap;
+}
+*/
+
+/* contents-substance imgBox setting   ===================================================== */
+#contents-substance .imgBox{
+	text-align:center;
+	margin:0 auto;
+	padding:0;	
+}
+
+#contents-substance .imgBox img{
+	padding:5px 0px 5px 15px;
+}
+
+#contents-substance .imgBox img:first-child{
+	padding:5px 0px 5px 0px;
+}
+
+#contents-substance .attentionBox{
+	background:#FF9;
+	margin:1em;
+	padding:1em 1em 0;
+	font-size:x-small;
+}
+
+#contents-substance .imgLeft th{
+	width:auto;
+	padding-right:30px;
+}
+
+#contents-substance .imgLeft p{
+	clear:none;
+}
+
+/* contents-substance txtAttention setting   ===================================================== */
+#contents-substance .txtAttention {
+    clear: both;
+    font-size: xx-small !important;
+    text-indent: 0;
+}
+
+/* contents-substance profile setting   ===================================================== */
+#contents-substance .profile {
+    border-top: 1px dotted #CCCCCC;
+    margin: 1em 0 0;
+    padding: 0.5em;
+}
+
+#contents-substance .profile dl dt {
+	margin-top: 0.5em;
+}
+
+#contents-substance .profile dl dt:first-child {
+	margin-top: 0;
+}
+
+#contents-substance p.imgInline {
+	display:inline;
+}
+
+#contents-substance .ml13 {
+	margin-left:13px;	
+}
+
+/* 2013/11/27 width変更 */
+#contents-substance table.musicdetail th{
+	width:75px;
+	white-space:normal;
+}
+
+#contents-substance table.musicdetail td{
+	width:330px;
+	white-space:normal;
+}
+
+#contents-substance table.musiclist {
+	border: 0;
+}
+
+#contents-substance table.musiclist th,
+#contents-substance table.musiclist td {
+	border: 0;
+	width: auto;
+	color:#666666;
+	background:none;
+	padding:0 0.5em;
+}
+
+#contents-substance table td ul.disc li {
+	list-style: disc inside none;
+}
+
+
+#contents-substance dl.dtHeader {
+	margin-bottom:1em;
+}
+
+#contents-substance dl.dtHeader dt {
+	font-weight:bold;	
+}
+
+#contents-substance ul.discMulti li {
+	list-style: disc inside none;
+	text-indent:-1em;
+	padding-left:1em;
+}
+/* contents-substance table width setting   ===================================================== */
+#contents-substance .twidth{
+	width:100%;
+}

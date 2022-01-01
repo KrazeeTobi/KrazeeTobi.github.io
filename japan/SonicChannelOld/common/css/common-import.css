@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/*SONIC CHANNEL stylesheet 2009
+--------------------------------------------------------------------------------
+General page structure
+--------------------------------------------------------------------------------
+body
+  |
+  |
+  |--#common-header
+  |
+  |--#common-topicpath
+  |
+  |--#common-contentsarea
+  |    |
+  |    |--(#contents-substance)
+  |    |
+  |    |--(#contents-navl)
+  |
+  |--#common-navg
+  |
+  |--#common-footer
+*/
+
+
+@import "common-tag.css";
+@import "common-class.css";
+@import "common-header.css";
+@import "common-footer.css";
+@import "common-navigation.css";
+@import "common-contents.css";
+@import "contents-substance.css";
+@import "contents-navigation.css";
+
+@import "colorbox.css";
+
+/*
+
+
+
+@import "common-navg.css";
+@import "common-topicpath.css";
+
+@import "contents-navl.css";
+
+*/

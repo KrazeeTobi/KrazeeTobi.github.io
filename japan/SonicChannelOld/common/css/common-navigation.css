@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/* common-navigation  ===================================================== */
+#common-navigation{
+	width:900px;
+	height:100px;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+/* clear fix */
+#common-navigation{
+	zoom:1;/*for IE 5.5-7*/
+}
+#common-navigation:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+/* li */
+#common-navigation li{
+	float:left;
+	width:110px;
+	height:70px;
+}
+
+#common-navigation li a{
+	display:block;
+	height:70px;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;
+	font-size:0;
+}
+
+/* #navigation-top */
+li#navigation-top{
+	width:240px;
+	height:100px;
+}
+
+li#navigation-top a{
+	width:240px;
+	height:100px;
+	background:url(common-navigation/navigation-top.gif) no-repeat top left;
+}
+
+/* li a */
+li#navigation-topics a{
+	background:url(common-navigation/navigation-topics.gif) no-repeat top left;
+}
+li#navigation-gametitle a{
+	background:url(common-navigation/navigation-gametitle.gif) no-repeat top left;
+}
+li#navigation-character a{
+	background:url(common-navigation/navigation-character.gif) no-repeat top left;
+}
+li#navigation-fanart a{
+	background:url(common-navigation/navigation-fanart.gif) no-repeat top left;
+}
+li#navigation-enjoy a{
+	background:url(common-navigation/navigation-enjoy.gif) no-repeat top left;
+}
+li#navigation-event a{
+	background:url(common-navigation/navigation-event.gif) no-repeat top left;
+}
+li#navigation-sitemap a{
+	background:url(common-navigation/navigation-sitemap.gif) no-repeat top left;
+}
+
+/* li a:hover */
+li#navigation-topics a:hover{
+	background:url(common-navigation/navigation-topics.gif) no-repeat left -70px;
+}
+li#navigation-gametitle a:hover{
+	background:url(common-navigation/navigation-gametitle.gif) no-repeat left -70px;
+}
+li#navigation-character a:hover{
+	background:url(common-navigation/navigation-character.gif) no-repeat left -70px;
+}
+li#navigation-fanart a:hover{
+	background:url(common-navigation/navigation-fanart.gif) no-repeat left -70px;
+}
+li#navigation-enjoy a:hover{
+	background:url(common-navigation/navigation-enjoy.gif) no-repeat left -70px;
+}
+li#navigation-event a:hover{
+	background:url(common-navigation/navigation-event.gif) no-repeat left -70px;
+}
+li#navigation-sitemap a:hover{
+	background:url(common-navigation/navigation-sitemap.gif) no-repeat left -70px;
+}
+
+
+/* topic-path */
+#common-navigation p{
+	display:block;
+	float:left;
+	width:650px;
+	height:30px;
+	padding:4px 0 0 8px;
+	font-size:small;
+}
+
+#common-navigation p a{
+	font-size:small;
+}

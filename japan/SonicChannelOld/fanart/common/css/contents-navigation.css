@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+/* base layout setting ===================================================== */
+#contents-navigation h2{
+	background:url("contents-navigation/h2.gif") no-repeat;
+}
+
+/* block layout setting ===================================================== */
+#contents-navigation p{
+	display:block;
+	width:230px;
+	padding:0;
+	margin:0 auto;
+	line-height:0em;
+	font-size:0;
+	background:#F93;
+}
+
+
+#contents-navigation p a{
+	display:block;
+	width:230px;
+	height:40px;
+	padding:0;
+	margin:0;
+}
+
+
+/* btn_bg ================================================================= */
+/* active page */
+li#navigation-post a{
+	background:url(../../../common/css/contents-navigation/a.gif) 218px center;
+	border:1px solid #a60303;	
+	border-bottom:1px dotted #a60303;
+	color:#ffea29;
+	border:1px solid #f00;
+}
+
+
+#fanart-index div#contents-navigation li#navigation-index a,
+#fanart-oubo div#contents-navigation li#navigation-oubo a,
+#fanart-201406 div#contents-navigation li#navigation-index a{
+	background:url(../../../common/css/contents-navigation/a.gif) 218px center;
+	border:1px solid #a60303;	
+	border-bottom:1px dotted #a60303;
+	color:#ffea29;
+}

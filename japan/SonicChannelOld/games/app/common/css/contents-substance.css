@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* page title setting   ===================================================== */
+#contents-substance #title-logo{
+	float:left;
+	display:block;
+	width:250px;
+	height:250px;
+	background:#666;
+	margin:0 15px 15px 0;
+}
+
+#contents-substance h2{
+	font-size:medium;
+	color:#a60303;
+	font-weight:bold;
+	display:block;
+	border-bottom:#a60303 1px solid;
+	margin:0 0 5px 0;
+}
+
+
+/* clear fix */
+#contents-substance #title-logo{
+	zoom:1;/*for IE 5.5-7*/
+}
+
+#contents-substance #title-logo:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+#contents-substance table{
+	clear:both;
+	width:100%;
+	border-top:#021e73 1px solid;
+	border-left:#021e73 1px solid;
+}
+
+#contents-substance table th{
+	background:#021e73;
+	border-bottom:#fff 1px solid;
+	border-right:#fff 1px solid;
+	color:#fff;
+	text-align:left;
+	padding:0.5em;
+}
+
+#contents-substance table td{
+	background:#fff;
+	border-bottom:#021e73 1px solid;
+	border-right:#021e73 1px solid;
+	padding:0.5em;
+}
+
+#contents-substance #title-screen{
+	margin:10px 0 0 0;
+}
+
+/* clear fix */
+#contents-substance #title-logo{
+	zoom:1;/*for IE 5.5-7*/
+}
+
+#contents-substance #title-logo:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+#contents-substance #title-screen li{
+	float:left;
+	padding:0 5px 5px 0;
+}

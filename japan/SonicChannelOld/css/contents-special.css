@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* contents-news layout setting ===================================================== */
+#contents-special{
+	clear:both;
+	width:660px;
+	padding:30px 0 50px 240px;
+}
+
+/* h2 */
+#contents-special h2{
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0;
+	font-size:0;	
+}
+
+#contents-special ul{
+	width:660px;
+}
+
+/* clear fix */
+#contents-special ul{
+	zoom:1;/*for IE 5.5-7*/
+}
+
+#contents-special ul:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+
+
+#contents-special li{
+	float:left;
+	padding:0 5px 0 10px;
+	width:150px;
+	line-height:1.2em;
+}

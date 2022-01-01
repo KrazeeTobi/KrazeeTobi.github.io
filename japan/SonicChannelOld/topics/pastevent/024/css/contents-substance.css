@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+
+#contents-substance{
+	width:650px;
+	padding:0 0 30px 10px;
+}
+
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+
+
+#eventContents{
+	width:650px;		
+}
+
+#eventContents p{
+	padding:0 0 1em;
+}
+
+#eventContents ul{
+	width:650px;
+	display:inline-table;/*for MacIE*/
+}
+
+#eventContents ul:after{
+    content:".";
+    display: block;
+    height:0px;
+    clear:both;
+    visibility:hidden;
+}
+
+#eventContents ul li{
+	float:left;
+	display:block;
+	width:216px;
+	padding:0 0 1em;
+}
+
+#eventContents ul li span{
+	display:block;
+	width:215px;
+	font-size:x-small;
+	_font-size:xx-small;
+}
+
+
+.pic-Right{
+	float:right;
+	margin:0 0 0 0;
+	padding:0 0 5px 5px;
+}
+
+.titles{
+	clear:both;
+	width:645px;
+	margin:10px 0 0 0;
+}
+
+#contents-substance h2 {
+    border-bottom: 1px dashed #666666;
+    clear: both;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    padding: 15px 0 0.5em;
+}
+
+#pic-1nd{
+	display:block;
+	width:320px;
+	margin:0 0 0 15px;
+	clear:both;
+	float:right;
+	font-size:x-small;
+}
+
+#pic-1nd:after{
+    content:".";
+    display: block;
+    height:0px;
+    clear:both;
+    visibility:hidden;
+}
+
+#pic-2nd{
+	display:block;
+	width:320px;
+	margin:0 15px 0 0;
+	clear:both;
+	float:left;
+}
+
+#pic-2nd:after{
+    content:".";
+    display: block;
+    height:0px;
+    clear:both;
+    visibility:hidden;
+}

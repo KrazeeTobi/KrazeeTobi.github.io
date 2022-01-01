@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* substance-text setting ================================================= */
+#pic-1st{
+	display:block;
+	width:320px;
+	margin:0 0 0 15px;
+	float:right;
+}
+
+#pic-2nd{
+	display:block;
+	width:320px;
+	margin:0 15px 0 0;
+	clear:both;
+	float:left;
+}
+
+#pic-3rd{
+	display:block;
+	width:320px;
+	margin:0 0 0 15px;
+	clear:both;
+	float:right;
+}
+
+
+/* substance-information setting ================================================= */
+#substance-information{
+	clear:both;
+	border-top:#666 dashed 1px;
+	border-bottom:#666 dashed 1px;
+	padding:15px 0;
+}
+
+/* clear fix */
+#substance-information{
+	zoom:1;/*for IE 5.5-7*/
+}
+
+#substance-information:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+
+#substance-information p{
+	width:180px;
+	padding:0 15px 0 0;
+	float:left;
+}
+
+
+#substance-information h2{
+	padding:0 0 1em 0;
+}

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/* block layout setting ===================================================== */
+#contents-navigation h2{
+	background:url("contents-navigation/h2.gif") no-repeat;
+}
+
+
+
+/* btn_bg ================================================================= */
+/* active page */
+
+#creators-001 li#navigation-001 a,
+#creators-002 li#navigation-002 a,
+#creators-003 li#navigation-003 a,
+#creators-004 li#navigation-004 a,
+#creators-005 li#navigation-005 a,
+#creators-006 li#navigation-006 a,
+#creators-007_latter li#navigation-007_latter a,
+#creators-007_first li#navigation-007_first a,
+#creators-008 li#navigation-008 a,
+#creators-009 li#navigation-009 a,
+#creators-010 li#navigation-010 a,
+#creators-011 li#navigation-011 a,
+#creators-012 li#navigation-012 a,
+#creators-013 li#navigation-013 a,
+#creators-014 li#navigation-014 a,
+#creators-015 li#navigation-015 a,
+#creators-016 li#navigation-016 a,
+#creators-017 li#navigation-017 a,
+#creators-018 li#navigation-018 a,
+#creators-019 li#navigation-019 a,
+#creators-020 li#navigation-020 a,
+#creators-021 li#navigation-021 a,
+#creators-022 li#navigation-022 a,
+#creators-023 li#navigation-023 a,
+#creators-024 li#navigation-024 a,
+#creators-025 li#navigation-025 a,
+#creators-026 li#navigation-026 a,
+#creators-027 li#navigation-027 a,
+#creators-028 li#navigation-028 a,
+#creators-029 li#navigation-029 a
+{
+	background:url(../../../common/css/contents-navigation/a.gif) 218px center;
+	border:1px solid #a60303;	
+	border-bottom:1px dotted #a60303;
+	color:#ffea29;
+}
