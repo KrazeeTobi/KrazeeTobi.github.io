@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>ソニックアドバンス２</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<script language="JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_nbGroup(event, grpName) { //v3.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : args[i+1];
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    if ((nbArr = document[grpName]) != null)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = args[i+1];
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" background="images/bg2.gif" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('images/btn00a.gif','images/btn01b.gif','images/btn00.gif','images/btn02a.gif','images/btn02b.gif','images/btn01a.gif','images/btn03a.gif','images/btn03b.gif','images/btn04b.gif','images/btn05b.gif')">
+<div id="Layer1" style="position:absolute; left:100px; top:139px; width:52; height:57; z-index:1"><img src="images/alpha.gif" width="52" height="57" name="aa"></div>
+<div id="Layer2" style="position:absolute; left:101px; top:185px; width:52; height:57; z-index:2"><img src="images/alpha.gif" width="52" height="57" name="bb"></div>
+<div id="Layer3" style="position:absolute; left:101px; top:230px; width:52; height:57; z-index:3"><img src="images/alpha.gif" width="52" height="57" name="cc"></div>
+<table width="156" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><img src="images/logo_s2.gif" width="156" height="133"></td>
+  </tr>
+  <tr> 
+    <td background="images/btn_bg.gif"> <a href="about.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('btn00a','','images/btn00a.gif',1)" target="rightFrame"><img src="images/btn00b.gif" width="142" height="43" border="0" name="btn00a"></a> 
+      <br>
+      <a href="cream.html" onClick="MM_nbGroup('down','group1','btn01a','images/btn01a.gif',1)" onMouseOut="MM_nbGroup('out')" onMouseOver="MM_nbGroup('over','btn01a','images/btn01b.gif','','aa','images/btn00.gif','',1)" target="rightFrame"><img src="images/btn01a.gif" width="142" height="45" border="0" name="btn01a"></a> 
+      <br>
+      <a href="action.html" onClick="MM_nbGroup('down','group1','btn02a','images/btn02a.gif',1)" onMouseOut="MM_nbGroup('out')" onMouseOver="MM_nbGroup('over','btn02a','images/btn02b.gif','','bb','images/btn00.gif','',1)" target="rightFrame"><img src="images/btn02a.gif" width="142" height="43" border="0" name="btn02a"></a> 
+      <br>
+      <a href="special.html" onClick="MM_nbGroup('down','group1','btn03a','images/btn03a.gif',1)" onMouseOut="MM_nbGroup('out')" onMouseOver="MM_nbGroup('over','btn03a','images/btn03b.gif','','cc','images/btn00.gif','',1)" target="rightFrame"><img src="images/btn03a.gif" width="142" height="43" border="0" name="btn03a"></a> 
+      <br>
+      <a href="secret.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','images/btn04b.gif',1)" target="rightFrame"><img src="images/btn04a.gif" width="142" height="43" border="0" name="Image1"></a> 
+      <br>
+      <a href="dl.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','images/btn05b.gif',1)" target="rightFrame"><img src="images/btn05a.gif" width="142" height="43" border="0" name="Image2"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td><img src="images/btn_btm.gif" width="142" height="57"></td>
+  </tr>
+</table>
+<div align="center"> 
+  <p><font size="2" color="#00CC33"><b><a href="http://www.c-player.com/ac18006/message" target="_blank"><font size="3" color="#009900">【BBS(掲示板)】</font></a></b></font><font size="2" color="#FFFF00"><b><a href="../bbs/f_bbs.html" target="_top"><font color="#00FFFF"><br>
+    </font></a></b></font><font size="1" color="#FF0000">『アドバンス２』の<br>
+    情報交換をしよう！<b><br>
+    </b></font><br>
+    <a href="http://segadirect.jp/" target="_blank"><img src="images/segadirect.gif" width="100" height="56" hspace="28" border="0" alt="SEGA DIRECT にて予約受付中！"></a><br>
+    <font size="2" color="#FF0000"><font size="1">SEGA DIRECT にて<br>
+    好評発売中！</font></font> <br>
+    <br>
+    <font size="1"><a href="http://sonic.sega.jp/advance3/" target="_top"><img src="images/sonicadvance3_banner.gif" width="150" alt="ソニックアドバンス３ 公式サイト" border="0" hspace="3" height="45"><br>
+    </a></font><font size="2" color="#FFFF00"><font color="#FF0000" size="1">最新作 
+    『ソニックアドバンス３』<br>
+    ページはコチラ！</font></font><br>
+    <br>
+    <font size="1"><a href="http://sonic.sega.jp/advance/index.html" target="_top"><img src="images/s_sonicgba_banner.gif" alt="ソニックアドバンス 公式サイト" width="150" height="45" hspace="3" border="0"><br>
+    </a></font><font size="2" color="#FFFF00"><font color="#FF0000" size="1">前作 
+    『ソニックアドバンス』<br>
+  ページはコチラ</font><font size="2" color="#FF0000"><font size="1">！</font></font></font></p>
+</div>
+</body>
+</html>

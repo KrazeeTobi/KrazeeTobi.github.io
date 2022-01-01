@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<prml version="2.0.0" type="text/prml">
+	<scene name="story" title="物語" cls="SceneLoad" swf="story.swf" update="0" />
+	<scene name="gallery" title="ギャラリー" cls="SceneThroughButton" update="1">
+		<scene name="movie" title="ムービー" cls="SceneLoad" swf="movie.swf" update="0" />
+		<scene name="screenshot" title="スクリーンショット" cls="SceneLoad" swf="screen.swf" update="0" />
+		<scene name="fanart" title="ファンアート" cls="SceneLoad" swf="fanart.swf" update="1" />
+	</scene>
+	<scene name="character" title="キャラクター" cls="SceneThroughButton" update="0">
+		<scene name="sonic" title="ソニック" cls="SceneLoad" swf="chara_sonic.swf" update="0" />
+		<scene name="cariburn" title="カリバーン" cls="SceneLoad" swf="chara_caliburn.swf" update="0" />
+		<scene name="merlina" title="マリーン" cls="SceneLoad" swf="chara_merlina.swf" update="0" />
+		<scene name="arthur" title="アーサー王" cls="SceneLoad" swf="chara_arthur.swf" update="0" />
+		<scene name="roundtable" title="円卓の騎士" cls="SceneLoad" swf="chara_roundtable.swf" update="0" />
+	</scene>
+	<scene name="world" title="冒険の舞台" cls="SceneThroughButton" update="0">
+		<scene name="camelotcastle" title="キャメロットキャッスル" cls="SceneLoad" swf="world_camelot.swf" update="0" index="350" />
+		<scene name="deepwoods" title="ディープ・ウッズ" cls="SceneLoad" swf="world_deepwoods.swf" update="0" index="350" />
+		<scene name="titanic" title="タイタニック" cls="SceneLoad" swf="world_titanic.swf" update="0" index="350" />
+		<scene name="mistylake" title="ミスティ・レイク" cls="SceneLoad" swf="world_mistylake.swf" update="0" index="350" />
+	</scene>
+		<scene name="howto" title="あそび方" cls="SceneThroughButton" update="0">
+		<scene name="soulsurge" title="ソウルサージ" cls="SceneLoad" swf="howto_soulsurge.swf" update="0" />
+		<scene name="chivalry" title="騎士道" cls="SceneLoad" swf="howto_chivalry.swf" update="0" />
+		<scene name="style" title="スタイル" cls="SceneLoad" swf="howto_style.swf" update="0" />
+		<scene name="item" title="アイテム" cls="SceneLoad" swf="howto_item.swf" update="0" />
+	</scene>
+	<scene name="multi" title="マルチプレイ" cls="SceneLoad" swf="multi.swf" update="0" />
+	<scene name="ranking" title="ランキング" cls="SceneLoad" swf="ranking.swf" update="0" />
+	<scene name="download" title="ダウンロード" cls="SceneThroughButton" update="0">
+		<scene name="wallpaper" title="壁紙" cls="SceneLoad" swf="wallpaper.swf" update="0" />
+		<scene name="papercraft" title="ペーパークラフト" cls="SceneLoad" swf="papercraft.swf" update="0" />
+	</scene>
+	<scene name="topics" title="トピックス" update="0" />
+
+</prml>

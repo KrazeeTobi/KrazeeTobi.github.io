@@ -1,0 +1,116 @@
+@charset "shift_jis";
+
+/***********************************************/
+/* FileName: hard.css  WiiU Wii DS 3DS         */
+/* data:2013/10/17                             */
+/***********************************************/
+
+
+/* hard */
+body{
+	background:#C6DCF6;
+	position:relative;
+	}
+/*  ----------- */	
+	
+/*1.container
+***************************************/
+#Container{
+	background:none;/*hard*/
+}
+
+/*2.contents
+***************************************/
+#contents{
+	overflow:inherit;
+}
+
+/*4.about
+***************************************/
+#Container .about #main{
+	padding-top:696px;
+	padding-bottom:300px;
+	}	
+#Container .about div.bg-box img{
+	display:none;
+}
+#Container .about-bg01{
+	background:url(../images/about/bg_about01_s.jpg) no-repeat center top;		
+}
+#Container .about-bg01 div.noflash img{
+	display:block;
+}
+/*about02*/
+#main .about02{
+	margin-top:0;
+}
+
+/*4.chara
+***************************************/
+#Container .chara{
+	width:150%;	
+	}
+#Container .chara #main{
+}
+#Container .chara{
+	display:block;
+}
+#main .chara-box{
+}
+#Container .bg-box{
+	overflow:inherit;
+}
+.chara div.bg-box img{
+	display:none;
+}
+
+
+
+/*5.enjoy
+***************************************/
+#Container .enjoy{
+	background:none;
+	width:150%;
+}
+#Container .enjoy #main{
+	width:100%;
+	}
+#Container .enjoy #main .wrapper{
+	background:none;
+	width:100%;
+}
+#Container .enjoy ul li.movie-box dd div#mov-wrapper{
+	height:414px;
+	}
+#Container .enjoy h3.ttl-formal{
+	background:none;
+}
+#Container .enjoy h3.ttl-dream{
+	background:none;
+}
+#Container .enjoy p.txt-howto{
+	margin:0 auto 20px;
+	/padding: 0 0 20px 0;
+	}
+
+
+/*7.mode
+***************************************/
+	
+#Container .mode{
+	background:none;
+}
+
+
+/*6.nav
+***************************************/
+#contents #nav{
+	position:absolute;
+	width:100%;
+	margin: 0 auto;
+	text-align:center;
+	}
+#contents #nav div.inline {
+    margin: 0 auto;
+	/*background:#FFF;*/
+}

@@ -1,0 +1,330 @@
+@charset "Shift_JIS";
+
+body {
+	margin:0;
+	padding:0;
+	background: url(../common/bg.gif);
+	text-align: center;
+}
+
+img {
+	margin:0;
+	padding:0;
+	border: 0;
+}
+
+ul,li {
+	margin:0;
+	padding:0;
+	list-style: none;
+	font-size: 10px;
+}
+
+
+a {
+	outline: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+div#all {
+	margin: auto;
+	padding-bottom: 50px;
+	width: 714px;
+	text-align: left;
+}
+
+.m_8px {
+	margin-top: 8px;
+}
+
+#main {
+	padding: 0px 2px;
+	width: 714px;
+	height: 631px;
+	background: url(../img/top_bg.gif) repeat-y;
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++
+				under_linktext
++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+#textlink {
+	padding: 20px 30px;
+}
+
+#textlink ul {
+	text-align: center;
+}
+
+#textlink ul li {
+	display: inline;
+	letter-spacing: 2px;
+	line-height: 1.8;
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN", Osaka, "ƒqƒ‰ƒMƒmŠpƒS Pro W3";
+}
+
+/*+++++++++++++++++++++++++++++++++*/
+
+#copy {
+	display: block;
+	width: 714px;
+	height: 57px;
+	background: url(../common/copy.gif) 0px 0px no-repeat;		
+}
+
+#olympic {
+	margin: 11px 0px 0px 301px;
+}
+
+#olympic a {
+	display: block;
+	width: 108px;
+	height: 21px;
+	background: url(../common/olympic.gif) 0px 0px no-repeat;		
+}
+
+#ninten {
+	margin-left: 620px;
+}
+
+#ninten a {
+	display: block;
+	width: 82px;
+	height: 36px;
+	background: url(../common/nintendo.gif) 0px 0px no-repeat;		
+}
+
+#nindslogo {
+	margin: 20px 12px 24px 140px;
+}
+
+#nindslogo a {
+	display: block;
+	width: 100px;
+	height: 14px;
+	background: url(../common/ds_logo.gif) no-repeat;
+}
+
+#nindslogo2 {
+	position: absolute;
+	top: 23px;
+	left: 604px;
+}
+
+#nindslogo2 a {
+	display: block;
+	width: 100px;
+	height: 14px;
+	background: url(../common/ds_logo.gif) no-repeat;
+}
+
+/*+++++++++++++++++++++++++++++++++*/
+
+#go_top,
+#go_top1,
+#go_top3,
+#go_top4,
+#go_top5 {
+	position: absolute;
+	top: 55px;
+	left: 565px;
+}
+
+#go_top1 a {
+	display: block;
+	width: 141px;
+	height: 18px;
+	background: url(../common/go_top1.gif) 0px 0px no-repeat;
+}
+
+
+#go_top1 a:hover {
+	background: url(../common/go_top1.gif) 0px -18px no-repeat;
+}
+
+#go_top a {
+	display: block;
+	width: 141px;
+	height: 18px;
+	background: url(../common/go_top2.gif) 0px 0px no-repeat;
+}
+
+
+#go_top a:hover {
+	background: url(../common/go_top2.gif) 0px -18px no-repeat;
+}
+
+
+#go_top3 a {
+	display: block;
+	width: 141px;
+	height: 18px;
+	background: url(../common/go_top3.gif) 0px 0px no-repeat;
+}
+
+
+#go_top3 a:hover {
+	background: url(../common/go_top3.gif) 0px -18px no-repeat;
+}
+
+
+#go_top4 a {
+	display: block;
+	width: 141px;
+	height: 18px;
+	background: url(../common/go_top4.gif) 0px 0px no-repeat;
+}
+
+
+#go_top4 a:hover {
+	background: url(../common/go_top4.gif) 0px -18px no-repeat;
+}
+
+
+#go_top5 a {
+	display: block;
+	width: 141px;
+	height: 18px;
+	background: url(../common/go_top5.gif) 0px 0px no-repeat;
+}
+
+
+#go_top5 a:hover {
+	background: url(../common/go_top5.gif) 0px -18px no-repeat;
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++
+				menu_btn
++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+#menu_top,
+#menu {
+	display: block;
+	width: 714px;
+	height: 60px;
+}
+
+#menu_top {
+	background: url(../common/btn_under1.gif) no-repeat;
+}
+
+#menu {
+	background: url(../common/btn_under2.gif) no-repeat;
+}
+
+#menu_top ul,
+#menu ul {
+	margin-left: 11px;
+}
+
+
+#menu_top ul li,
+#menu ul li {
+	float: left;
+	display: block;
+	width: 133px;
+	height: 60px;
+}
+
+.staybtn1,
+.staybtn2,
+.staybtn3,
+.staybtn4,
+.btn1,
+.btn2,
+.btn3,
+.btn4 {
+	margin-right: 6px;
+}
+
+.staybtn1,
+.staybtn2,
+.staybtn3,
+.staybtn4,
+.staybtn5,
+.btn1 a,
+.btn2 a,
+.btn3 a,
+.btn4 a,
+.btn5 a {
+	display: block;
+	width: 133px;
+	height: 60px;
+}
+
+.btn1 a {
+	background: url(../common/btn1.gif) 0px -60px no-repeat;	
+}
+
+.btn1 a:hover,
+.staybtn1 {
+	background: url(../common/btn1.gif) 0px 0px no-repeat;	
+}
+
+.btn2 a {
+	background: url(../common/btn2.gif) 0px -60px no-repeat;	
+}
+
+.btn2 a:hover,
+.staybtn2 {
+	background: url(../common/btn2.gif) 0px 0px no-repeat;	
+}
+
+
+.btn3 a {
+	background: url(../common/btn3.gif) 0px -60px no-repeat;	
+}
+
+.btn3 a:hover,
+.staybtn3 {
+	background: url(../common/btn3.gif) 0px 0px no-repeat;	
+}
+
+.btn4 a {
+	background: url(../common/btn4.gif) 0px -60px no-repeat;	
+}
+
+.btn4 a:hover,
+.staybtn4 {
+	background: url(../common/btn4.gif) 0px 0px no-repeat;	
+}
+
+.btn5 a {
+	background: url(../common/btn5.gif) 0px -60px no-repeat;	
+}
+
+.btn5 a:hover,
+.staybtn5 {
+	background: url(../common/btn5.gif) 0px 0px no-repeat;	
+}
+
+
+/*=================================================
+add header
+=================================================*/
+#add_header{
+	width: 100%;
+	height: 54px;
+	background-image: url(../img/bg_add_header.png);
+	background-repeat: repeat-x;
+	text-align: center;
+}
+
+#add_header #wrap{
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#add_header #wrap .add_btn{
+	width: 580px;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+
+#add_header #wrap .add_btn a img{
+	border: none;
+}

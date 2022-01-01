@@ -1,0 +1,67 @@
+﻿@charset "utf-8";
+html, body {
+	height :100%;
+	overflow :auto;
+	margin :0;
+	padding :0;
+	background :#000000;
+}
+#flashcontent {
+	height:100%;
+	margin:0 auto;
+	line-height :0;
+}
+#flashcontent * {
+	line-height	:150%;
+}
+
+#flashcontent #attention {
+	color :#ffffff;
+	font-size :80%;
+	text-align :center;
+	background :#000000;
+}
+#flashcontent #attention h1, #flashcontent #attention h2 {
+	color :#ffffff;
+}
+#flashcontent #attention img {
+	border :0;
+}
+#flashcontent #attention p.appendix {
+	text-align :center;
+}
+#flashcontent #attention a {
+	color:#fbffb6;
+}
+#flashcontent #attention a:hover {
+	color:#b6f7ff;
+}
+
+
+#flashcontent #attention #header {
+	background:url(../images/body_bg.gif) repeat-x;
+	width:100%;
+}
+#flashcontent #attention #header ul {
+	width:800px;
+	height:68px;
+	margin:0 auto;
+}
+#flashcontent #attention #header ul li {
+	float:left;
+	list-style:none;
+	display:block;
+}
+#flashcontent #attention #header ul li img {
+	text-decoration:none;
+	border:none;
+}
+#flashcontent #attention #header #sega {
+	padding:14px 0 0 20px;
+}
+#flashcontent #attention #header #st {
+	padding:19px 0 0 484px;
+}
+#flashcontent #attention #header #sc {
+	padding:20px 0 0 6px;
+}

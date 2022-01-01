@@ -1,0 +1,194 @@
+@charset "shift_jis";
+
+/***********************************************/
+/* FileName: colorbox.css                     */
+/* data:2013/10/18                             */
+/***********************************************/
+
+/*
+1.container
+2.contents
+3.main
+4.about
+6.pagetop
+7.footer
+*/
+
+body{
+	overflow-x:hidden;
+	padding:0;
+	}
+/*1.container
+***************************************/
+#Container{
+	margin:0 auto;
+	padding:0;
+	/*border:solid 3px #2666A8;
+	border-radius:10px;
+	background:#EAF5FB url(../images/mode/online/bg_contents.jpg) no-repeat left top;*/
+}
+/*2.Common style
+***************************************/
+h1{
+	text-align:center;
+	margin:0;
+	padding:0;
+	}	
+p{
+	margin:0 0 28px;
+	}
+div.image{
+	position:relative;
+	padding:0 3px;
+	overflow:hidden;
+	}
+div.image div.thumbnail{
+	margin:0 auto;
+	width:525px;
+	}
+div.image div.thumbnail ul{
+	width:4405px;
+	height:365px;
+	position:relative;
+	margin:0 auto;
+	zoom:1;
+	}
+div.image div.thumbnail ul.static{
+	width:auto;
+	height:365px;
+	position:relative;
+	margin:0 auto;
+	zoom:1;
+	}
+div.image div.thumbnail li{
+	float:left;
+	margin:0;
+	width:525px;
+	}
+#online div.image div.thumbnail ul{
+	}	
+#online div.image div.thumbnail li{
+	padding:0 50px 0 0;
+	width:784px;
+	}	
+#online div.image div.thumbnail li.static-list{
+	padding:0;
+	width:auto;
+	}	
+div.image div.thumbnail dl{
+	}
+#online div.image div.thumbnail dl{
+	width:525px;
+	}	
+div.image div.thumbnail dt{
+	margin:0 0 10px;
+	text-align:center;
+	}
+#online div.image div.thumbnail dt{
+	text-align:left;
+	}	
+div.image div.thumbnail dd{
+	text-align:center;
+	}
+div.image div.thumbnail dd img{
+	width:100%;
+	}		
+div.image ul.navi{
+	}
+div.image ul.navi li{
+	display:inline-block;
+	/display:inline;
+	text-align:center;
+	zoom:1;
+	margin:0 10px;
+	}
+	
+div.image ul.pager{
+	margin:0 0 10px;
+	}
+div.image ul.pager li{
+	position:absolute;
+	top:50%;
+	margin:-92px 0 0 ;
+	z-index:20;
+	}
+div.image ul.pager li img{
+	vertical-align:top;
+	}	
+div.image ul.pager li.prev{
+	left:80px;
+	}
+div.image ul.pager li.next{
+	right:80px;
+	}
+	
+div.image ul.side{
+	margin:0;
+	}
+div.image ul.side li{
+	position:absolute;
+	top:0;
+	z-index:10;
+	}
+div.image ul.side li img{
+	vertical-align:top;
+	}	
+div.image ul.side li.left{
+	left:0;
+	}
+div.image ul.side li.right{
+	right:0;
+	}						
+
+/*3.mode online
+***************************************/
+div#online{
+	}	
+
+/*4.mode tour
+***************************************/
+div#tour h1{
+	padding:28px 0 0;
+	}
+div#tour div.image{
+	padding:30px 0 8px ;
+	}	
+div#tour div.image div.thumbnail ul{
+	width:2300px;
+	height:375px;
+	}
+div#tour div.image div.thumbnail ul.static{
+	width:auto;
+	height:375px;
+	}
+div#tour div.image div.thumbnail li{
+	}		
+div#tour div.image div.thumbnail dt{
+	margin-bottom:20px;
+	text-align:left;
+	}		
+div#tour div.image ul.pager li{
+	margin:-35px 0 0 ;
+	}
+	
+/*5.about Miiverse
+***************************************/
+div#miiverse h1{
+	padding:5px 0 23px;
+	}
+div#miiverse p.link{
+	text-align:right;
+	margin:0 25px 20px;
+	}	
+	
+/*5.about sochi
+***************************************/
+div#sochi h1{
+	padding:0;
+	}
+
+/*7.close
+***************************************/
+#Container p.close{
+	display:none;
+	}		

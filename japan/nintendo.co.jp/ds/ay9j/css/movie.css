@@ -1,0 +1,17 @@
+@charset "Shift_JIS";
+
+
+
+#gm_go_movie {
+	display: block;
+	width: 136px;
+	height: 46px;
+	background: url(../img/go_movie.gif) 0px -92px no-repeat;	
+}
+
+#gb_go_book {
+	display: block;
+	width: 136px;
+	height: 46px;
+	background: url(../img/go_book.gif) 0px -92px no-repeat;	
+}

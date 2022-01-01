@@ -1,0 +1,271 @@
+@charset "Shift_JIS";
+body{
+	line-height:1.5;
+	color:#555;
+	font-size:12px;
+}
+html,body,div,ul,li,img,p{
+	padding:0;
+	margin:0;
+}
+li{list-style:none;}
+th{font-weight:normal;}
+table {border-collapse:collapse;}
+img {
+	vertical-align:bottom;
+}
+#content{
+	width:300px;
+	padding:0 10px 10px 10px;
+	border-top:solid 1px #D4D4D4;
+}
+#header{
+	padding:7px 10px 5px;
+	border-bottom:solid 1px #D4D4D4;
+	margin-bottom:2px;
+	width:300px;
+	line-height:1;
+}
+
+.section{
+	margin-bottom:20px;
+}
+
+#header #logo_nintendo{
+	float:left;
+}
+
+#header #logo_wiiu{
+	float:right;
+}
+
+#mainArea{
+	width:300px;
+	margin:0 10px 1px;
+}
+
+#mainArea #img_main{
+	float:left;
+	margin:0 0 1px 11px;
+}
+#mainArea #img_main img{
+	vertical-align:bottom;
+}
+
+#mainArea #ceronetwork{
+	float:right;
+	width:68px;
+	margin-top:8px;
+}
+
+#mainArea #cero{
+	float:left;
+}
+#mainArea #nintendonetwork{
+	float:right;
+}
+
+#titleArea{
+	border-left:solid 4px #0096C8;
+	padding:0 0 0 11px;
+}
+
+#titleArea #title_name{
+	padding:10px 0 1em;
+	font-size:15px;
+}
+
+.border_radius{
+	border-image: url("../img/border_radius.gif") 5 round;
+	-webkit-border-image: url("../img/border_radius.gif") 5 round;
+	border-style:solid;
+	border-width:5px; 
+	padding:11px 7px;
+}
+.border_radius_half{
+	border-image: url("../img/border_radius_half.gif") 5 round;
+	-webkit-border-image: url("../img/border_radius_half.gif") 5 round;
+	border-style:solid;
+	border-width:5px;
+	padding:11px 7px;
+}
+
+#dlToggleSwitch{
+	margin-top:5px;
+	text-decoration:underline;
+	color:#0096C8;
+	padding-left:1.1em;
+	background:url("../img/icon_link_slide.gif") no-repeat left 4px;
+}
+#dlToggleSwitch.plus{
+	background-position:left 4px;
+}
+#dlToggleSwitch.minus{
+	background-position:left -16px;
+}
+
+#dlToggle{
+	display:none;
+}
+
+.downloadable {
+	margin:12px 0;
+	text-align:center;
+}
+.border_radius_table {
+	background-image:url('../img/border_radius_top.gif'),url('../img/border_radius_btm.gif'),url('../img/border_radius_rept.gif');
+	background-repeat:no-repeat, no-repeat, repeat-y;
+	background-position:left top, left bottom, left top;
+}
+#controller .border_radius_table.half {
+	background-image:url('../img/border_radius_gray_btm.gif'),url('../img/border_radius_rept.gif');
+	background-repeat:no-repeat, repeat-y;
+	background-position:left bottom, left top;
+	padding-bottom:5px;
+}
+#controller .border_radius_table table {
+	margin:0 1px 0;
+	
+}
+.border_radius_table th,
+.border_radius_table td {
+	border-bottom:solid 1px #D4D4D4;
+}
+.border_radius_table th{
+	border-right:solid 1px #D4D4D4;
+}
+#controller .border_radius_table .header{
+	background-color:#F2F1EE;
+	border-right:none;
+	color:#0096C8;
+	text-align:center;
+	padding:4px 0;
+}
+#controller .border_radius_table th{
+	color:#555;
+}
+.border_radius_table .tail_cell{
+	border-bottom:none;
+}
+#controller .border_radius_table td {
+	text-align:center;
+}
+
+#controller .border_radius_table .header.non_icon{
+	padding:12px 0;
+}
+#controller .border_radius_table .tail_cell{
+	color:#555;
+	background-color:#F2F1EE;
+	border:none;
+}
+
+
+.border_radius_table .header .remocon{
+	padding:0.5em 0;
+	
+	display:box;
+	box-align:center;
+	box-pack:center;
+	
+	display:-webkit-box;
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+}
+.border_radius_table .header .remocon > div{
+	min-height:24px;
+
+	display:box;
+	box-align:center;
+	box-pack:center;
+
+	display:-webkit-box;
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+}
+.icon_gamepad{
+	background:url("../img/icon_gamepad.gif") no-repeat left center;
+	padding-left:28px;
+}
+.icon_remocon{
+	background:url("../img/icon_remocon.gif") no-repeat left center;
+	padding-left:13px;
+}
+.icon_nunchak{
+	background:url("../img/icon_nunchak.gif") no-repeat left center;
+	padding-left:35px;
+}
+.icon_procon{
+	background:url("../img/icon_procon.gif") no-repeat left center;
+	padding-left:32px;
+}
+.icon_clacon{
+	background:url("../img/icon_clacon.gif") no-repeat left center;
+	padding-left:48px;
+}
+
+#controller #toggleSwitch{
+	background:url('../img/btn_controller_on.gif') no-repeat 0 0;
+}
+#controller #toggle{
+	display:none;
+}
+
+th{
+	color:#0096C8;
+}
+
+th,td{
+	padding:12px 5px 12px 10px;
+	text-align:left;
+}
+
+span.bold{
+	font-weight:bold;
+	color:#0096C8;
+}
+
+a.link {
+	color:#0096C8;
+	padding-left:1.4em;
+	background:url('../img/list_link.gif') no-repeat 2px center;
+}
+
+div.notes,
+ul.notes li{
+	text-indent:-1em;
+	margin-left:1em;
+	font-size:11px;
+	text-align:left;
+}
+
+#internet .border_radius_half{
+	padding:0 7px;
+}
+.list_internet li{
+	line-height:2;
+	padding-left:1em;
+	background:url('../img/list_internet.gif') no-repeat 0 center;
+}
+
+#footer li img{
+	vertical-align:bottom;
+}
+#copyright{
+	font-size:9px;
+	color:#666;
+}
+
+/*clearfix*/
+#header,
+#mainArea,
+#ceronetwork,
+{zoom:1;}
+#header:after,
+#mainArea:after,
+#ceronetwork:after {
+  content: ""; 
+  display: block; 
+  clear: both;
+}
+

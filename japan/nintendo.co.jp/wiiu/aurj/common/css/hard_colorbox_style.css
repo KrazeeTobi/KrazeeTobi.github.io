@@ -1,0 +1,29 @@
+@charset "shift_jis";
+
+/***********************************************/
+/* FileName: colorbox.css                     */
+/* data:2013/10/18                             */
+/***********************************************/
+
+/*
+1.container
+2.contents
+3.main
+4.about
+6.pagetop
+7.footer
+*/
+
+
+/*7.close
+***************************************/
+#Container p.close{
+	position:absolute;
+	right:0;
+	top:0;
+	display:block;
+	}	
+.static-box{
+	width:845px;
+	margin:0 auto;
+}

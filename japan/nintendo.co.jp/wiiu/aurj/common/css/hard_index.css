@@ -1,0 +1,32 @@
+@charset "shift_jis";
+
+/***********************************************/
+/* FileName: hard_index.css  Wii　　　　　     */
+/* data:2013/10/25                             */
+/***********************************************/
+
+/*2.contents
+***************************************/
+#contents{
+	overflow:inherit;
+	padding:0 0 20px;
+	text-align:center;
+}
+#contents #main{
+	width:100%;
+	text-align:center;
+}
+
+
+
+/*4.nav
+***************************************/
+
+#contents #nav-index{
+	padding:280px 0 0 ;
+	}
+#contents #main #flashArea{
+	min-width: auto;
+	background:none;
+	}
+	

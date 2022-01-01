@@ -1,0 +1,1509 @@
+@charset "shift_jis";
+
+/***********************************************/
+/* FileName: container.css                     */
+/* data:2013/10/17                             */
+/***********************************************/
+
+/*
+1.container
+2.contents
+3.main
+4.about
+6.pagetop
+7.footer
+*/
+
+/*1.container
+***************************************/
+#Container{
+	background:#c7ddf5;
+	/*background:url(../images/bacground.gif) repeat;*/
+	margin:0 auto;
+	padding:0;
+	position:relative;
+}
+.load #Container{
+	min-width:960px;
+	width:expression(document.body.clientWidth < 960 ? "960px" : "100%");
+}
+#Container .bg-box{
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	text-align: center;
+/*left: 7px;*/
+}
+/*2.contents
+***************************************/
+#contents{
+	margin:0 auto;
+	padding:0;
+	text-align:left;
+	overflow:hidden;
+	_zoom:1;
+}
+#Container #main{
+	display:block;
+	width:940px;
+	margin:0 auto;
+	padding:0 0 150px 0;
+	overflow:hidden;
+	position:relative;
+}
+#Container #main.modemain{
+	display:block;
+	width:940px;
+	margin:0 auto;
+	/*padding:0 0 150px 0;*/
+	padding:0 0 350px 0;
+	overflow:hidden;
+	position:relative;
+}
+
+/*3.main
+***************************************/
+#contents #main{
+	margin:0 auto;
+	position:relative;
+	text-align:center;
+}
+/*4.about
+***************************************/
+	
+#Container .about{
+	padding:0 0 0 0;
+	/*padding:123px 0 0 0;*/
+	display:block;
+	width:100%;
+/*	height:100%;*/
+}
+#Container .about #main{
+
+	overflow:visible;
+	z-index:10;
+	padding-bottom:300px;
+}
+
+/* IE6 style */
+*html #Container #contents{
+	position:relative;
+	}
+*html #Container .about .about-bg-wrapper{
+	position:absolute;
+	left:0;
+	top:0
+	}
+*html #Container .bg-box{
+
+	}	
+#main .about-content{
+	position:relative;
+	display:block;
+	width:100%;
+	height:100%;
+}
+#main .about-innner{
+	position:relative;
+	display:block;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+/*about01*/
+
+#about01{
+	/*max-width:1600px;*/
+}
+
+#main .about01{
+	min-height:696px;
+	*height:696px;
+}
+#Container .about-bg01{
+	background:url(../images/about/bg_about01.jpg) no-repeat center top;
+	top:0;
+	height:696px;
+	min-width:940px;	
+}
+#Container .about-bg01 div.noflash{
+	position:relative;
+	max-width:940px;
+	margin:0 auto;
+	height:696px;
+	}
+#Container .about-bg01 div.noflash img{
+	position:absolute;
+	
+	left:50px;
+	bottom:162px;
+}
+#main .about-innner h2.title-about01{
+	z-index: 100;
+	position: absolute;
+	top: 78px;
+	left: 46px;
+}
+#main .about-innner p.txt-about01{
+	z-index: 100;
+	position: absolute;
+	top: 171px;
+	left: 7px;
+}
+#main .about-innner ul.btn-about01{
+	z-index: 100;
+	position: absolute;
+	top: 365px;
+	left: 45px;
+}
+#main .about-content p.chara01{
+	position: absolute;
+	top: -26px;
+	right: -99px;
+}
+#main .about-content p.chara02{
+	position:absolute;
+	top: 0px;
+	right: -80px;
+}
+/*about02*/
+#main .about02{
+	min-height:422px;
+	*height:422px;
+	margin-top:693px;
+}
+#Container .about-bg02{
+	top:696px;
+	height:422px;
+}
+#Container .about-bg02 img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-305px;
+	margin-left:-800px;
+}
+#main .about-innner li.img-aboutcap01{
+	z-index: 100;
+	position: absolute;
+	top: 127px;
+	/*right: 295px;*/
+	left: 385px;
+}
+#main .about-innner li.img-aboutcap02{
+	z-index: 100;
+	position: absolute;
+	top: 126px;
+	/*right: 26px;*/
+	left: 654px;
+}
+#main .about-content p.chara03{
+	position: absolute;
+	top: -80px;
+	left: -132px;
+}
+#main .about-content p.chara04{
+	position: absolute;
+	top: 78px;
+	left: 30px;
+}
+
+/*about-r*/
+#main .about-innner h2.title-about-r{
+	z-index: 100;
+	position: absolute;
+	top: 62px;
+	left: 382px;
+}
+#main .about-innner p.txt-about-r{
+	z-index: 100;
+	position: absolute;
+	top: 290px;
+	/*right: 25px;*/
+	left: 381px;
+}
+#main .about-innner ul.btn-about-r{
+	z-index: 100;
+	position: absolute;
+	top: 336px;
+	left: 691px;
+}
+
+/*about03*/
+#main .about03{
+	min-height:422px;
+	*height:422px;
+}
+#Container .about-bg03{
+	top:1108px;
+	height:422px;
+}
+#Container .about-bg03 img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-305px;
+	margin-left:-800px;
+}
+#main .about-innner h2.title-about03{
+	z-index: 100;
+	position: absolute;
+	top: 60px;
+	left: 18px;
+}
+#main .about-innner p.txt-about03{
+	z-index: 100;
+	position: absolute;
+	top: 107px;
+	left: 20px;
+}
+#main .about-innner p.img-about03{
+	z-index: 100;
+	position: absolute;
+	top: 151px;
+	left: 20px;
+}
+#main .about-innner ul.btn-about03{
+	z-index: 100;
+	position: absolute;
+	top: 342px;
+	left: 704px;
+}
+#main .about-innner li.img-aboutcap03{
+	z-index: 100;
+	position: absolute;
+	top: 125px;
+	left: 382px;
+}
+#main .about-innner li.img-aboutcap04{
+	z-index: 100;
+	position: absolute;
+	top: 125px;
+	left: 652px;
+}
+#main .about-content p.chara05{
+	position: absolute;
+	top: 53px;
+	right: -19px;
+}
+
+/*about04*/
+#main .about04{
+	min-height:424px;
+	*height:424px;
+}
+#Container .about-bg04{
+	top:1528px;
+	height:424px;
+}
+#Container .about-bg04 img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-315px;
+	margin-left:-800px;
+}
+#main .about-innner h2.title-about04{
+	z-index: 100;
+	position: absolute;
+	top: 62px;
+	left: 393px;
+}
+#main .about-innner p.txt-about04{
+	z-index: 100;
+	position: absolute;
+	top: 291px;
+	left: 398px;
+}
+#main .about-innner ul.btn-about04{
+	z-index: 100;
+	position: absolute;
+	top: 347px;
+	left: 615px;
+}
+#main .about-content p.chara06{
+	position: absolute;
+	top: 52px;
+	left: -43px;
+}
+#main .about-content p.chara07{
+	position: absolute;
+	top: 51px;
+	left: 145px;
+}
+/*about05*/
+#main .about05{
+	min-height:460px;
+	*height:460px;
+}
+#Container .about-bg05{
+	top:1948px;
+	height:530px;
+}
+#Container .about-bg05 img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-330px;
+	margin-left:-800px;
+}
+#main .about05 h2{
+	z-index: 100;
+	position: absolute;
+	top: 34px;
+	left: 50%;
+	margin-left: -217px;
+}
+#main .about05 div.slide-wrapper{
+	/position:relative;
+	/width: 932px;
+	background:#036;
+	}
+#main .about05 ul.slide-nav{
+	position: absolute;
+	top: 200px;
+	width: 932px;
+	left: 4px;
+}
+#main .about05 ul.slide-nav li.side-prev{
+	position:absolute;
+	left:0;
+	display: none;
+}
+#main .about05 ul.slide-nav li.side-next{
+	position:absolute;
+	right:0;
+	display: none;
+}
+/*box-ala*/
+#main .about-innner div.slide-ala{
+	width:800px;
+	height:205px;
+	margin:160px auto 0;
+	overflow:hidden;
+	zoom:1;
+	position:relative;
+}
+#main .about-innner div.slide-ala ul{
+	width:4000px;
+	height:205px;
+	position:relative;
+	left:0;
+	zoom:1;
+}
+#main .about-innner div.slide-ala li{
+	position:relative;
+	float:left;
+	display:block;
+	width:800px;
+	height:205px;
+}
+#main .about-innner div.slide-ala li p.txt-ala{
+	position: absolute;
+	left: 4px;
+	top: 4px;
+	width: 340px;
+}
+#main .about-innner div.slide-ala li p.img-ala{
+	position: absolute;
+	right: 6px;
+	top: 2px;
+	width: 446px;
+	height: 201px;
+}
+#main .about-innner div.slide-ala li p.btn{
+	position: absolute;
+	left: 88px;
+	top: 141px;
+}
+#main .about-content ul.nav-ala li{
+	display:inline;
+}
+
+.end_miiverse_txt {
+    position: absolute;
+    left: 38px;
+    top: 141px;
+    font-size: 11px;
+    width: 260px;
+    text-align: left;
+}
+
+/*about06*/
+#main .about06{
+	background:url(../images/about/bg_tv.png) no-repeat center top;
+	padding:0;
+	min-height:474px;
+	*height:474px;
+	width:935px;
+	margin:10px auto 0 auto;
+}
+#Container .about-bg06{
+	/*top: 2453px;
+	height: 1516px;*/
+	top: 2420px;
+	height: 750px;
+
+	*height: 750px;
+}
+#Container .about-bg06 img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-800px;
+	margin-top:-755px;
+
+}
+#main .about06 h3{
+	float:left;
+	padding:0 4px 0 20px;
+	width:270px;
+}
+#main .about06 ul{
+	padding:26px 0 0 0;
+}
+#main .about06 li{
+	width:266px;
+	display:inline-block;
+	*display:inline;
+	padding:0 16px 0 16px;
+	zoom:1;
+}
+#main .about06 dt{
+	padding:0;
+	margin:0;
+	height:175px;
+}
+
+/*5.enjoy
+***************************************/
+#Container .enjoy{
+	display:block;
+	background:url(../images/enjoy/bg_main.jpg) no-repeat center top;
+}
+
+#Container .enjoy #main{
+	width:100%;
+	padding:0;
+}
+#main .visual .inner{
+	position:relative;
+	display:block;
+	width:940px;
+	height:332px;
+	margin:0 auto;
+}
+#main .visual .inner h2{
+	position: absolute;
+	top: 68px;
+	left: 0px;
+	z-index:100;
+}
+#main .visual .inner p.txt-visual{
+	position: absolute;
+	top: 127px;
+	z-index: 100;
+	left: 0px;
+}
+
+#main .visual .inner p.txt-java{
+	position: absolute;
+	top: 228px;
+	z-index: 110;
+	left: 0px;
+}
+
+#main .visual .inner  #flash-area{
+	position: absolute;
+	bottom: 36px;
+	right: 2px;
+}
+#Container .enjoy #main .wrapper{
+	width:100%;
+	background:url(../images/enjoy/bg_wrapper.jpg) repeat-y center top;
+	padding:0 0 270px;
+
+}
+#Container .enjoy h3{
+	margin:0 0 20px 0;
+}
+#Container .enjoy h3.ttl-formal{
+	background:url(../images/enjoy/bg_formal.jpg) no-repeat top center;
+}
+#Container .enjoy h3.ttl-dream{
+	background:url(../images/enjoy/bg_dream.jpg) no-repeat top center;
+}
+#Container .enjoy ul{
+	width:930px;
+	margin:0 auto;
+	text-align:left;
+}
+#Container .enjoy ul.list-formal li{
+	background:url(../images/enjoy/bg_listformal.png) no-repeat top left;
+	width:213px;
+	height:172px;
+	position:relative;
+	display:inline-block;
+	*display: inline;  
+	zoom: 1;
+	margin:0 0 15px 15px; 
+	}
+#Container .enjoy ul.list-dream li{
+	background:url(../images/enjoy/bg_listdream.png) no-repeat top left;
+	width:213px;
+	height:172px;
+	position:relative;
+	display:inline-block;
+	*display: inline;  
+	zoom: 1;
+	margin:0 0 15px 15px; 
+	}
+#Container .enjoy ul.list-formal li.formal-item dd,
+#Container .enjoy ul.list-dream li.dream-item dd{
+	position: absolute;
+	top: 5px;
+	left: 3px;
+	}
+	
+#Container .enjoy ul.list-formal li.formal-item dt,	
+#Container .enjoy ul.list-dream li.dream-item dt{
+	position: absolute;
+	bottom: 2px;
+	left: 2px;
+	z-index: 100;
+}
+#Container .enjoy ul li.movie-box{
+	background:url(../images/enjoy/bg_movie.png) no-repeat top center;
+	width:942px;
+	height:750px;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	position:relative;
+	display: none;
+	}
+*html #Container .enjoy ul li.movie-box div.box-wrapper{
+	position:relative;
+	height:750px;
+	}	
+#Container .enjoy ul li.bg-dream{
+	background:url(../images/enjoy/bg_movie.png) no-repeat top center;
+	position:relative;
+}
+#Container .enjoy ul li.movie-box p.btn-close{
+	position: absolute;
+	top: 23px;
+	right: 50px;
+	z-index: 100;
+}
+
+#Container .enjoy ul li.movie-box p.btn-prevmovie{
+	position: absolute;
+	top: 295px;
+	left: 48px;
+	z-index: 100;
+}
+#Container .enjoy ul li.movie-box p.btn-nextmovie{
+	position: absolute;
+	top: 295px;
+	right: 47px;
+	z-index: 100;
+}
+
+#Container .enjoy ul li.movie-box dl{
+	width:890px;
+	margin:0 auto;
+	text-align:center;
+	background:url(../images/enjoy/bg_moviebottom.jpg) no-repeat center bottom;
+	z-index:100;
+	zoom:1;
+}
+#Container .enjoy ul li.movie-box dt{
+	padding:15px 0 24px 0;
+	text-align:left;
+}
+#Container .enjoy ul li.movie-box dd{
+	padding:0 0 16px;
+
+}
+#Container .enjoy ul li.movie-box dd div#mov-wrapper{
+	height:441px;
+	}
+#Container .enjoy p.txt-lead{
+	}	
+#Container .enjoy p.txt-howto{
+	display:block;
+	margin:0 auto;
+	padding: 0 0 20px 0;
+
+	/*background:url(../images/enjoy/bg_moviebottom.jpg) no-repeat center bottom;*/
+	}	
+/*	
+#Container .enjoy ul li.bg-dream p.txt-howto{
+	background:url(../images/enjoy/bg_moviebottom.jpg) no-repeat center bottom;
+	}
+*/	
+	
+/*4.chara
+***************************************/
+	
+#Container .chara #main{
+	width:100%;
+	padding:0;
+	z-index:10;
+}
+#Container .chara{
+	display:block;
+}
+#main .chara-box{
+	display:block;
+	width:940px;
+	margin:0 auto;
+}
+#main .chara-content{
+	position:relative;
+	display:block;
+	width:100%;
+	height:100%;
+
+}
+#chara-content03{
+	left: 20px;
+}
+#main .chara-innner{
+	position:relative;
+	display:block;
+	width:100%;
+	height:100%;
+}
+#main .chara-innner [lr]{
+	/*opacity: 0;*/
+}
+*html #main div.list-wrapper{
+	position:relative;
+	width:100%;
+	margin: 0 auto;
+	z-index:1;
+	}
+#main div.chara-list{
+	position:absolute;
+	display:block;
+	height:180px;
+	width:100%;
+	margin:0 auto;
+	background:url(../images/character/bg_list.png) repeat-x left top;
+	z-index:10000;
+	*left:0;
+}
+#main div.chara-list .btn-ttl{
+	position:fixed;
+	top:0;
+	left:50%;
+	margin-left:-83px;
+	display:none;
+}
+#main div.chara-list ul{
+	display:block;
+	width:960px;
+	margin:0 auto;
+}
+#main div.chara-list li{
+	display:inline;
+	padding:0 2px 0 0;
+	margin:0;
+	width:86px;
+}
+#main ul.chara-list01{
+	margin:0 auto;
+	padding:0 40px 0 0;
+}
+#main ul.chara-list02{
+	margin:0 auto;
+	padding:0 0 0 40px;
+}
+/*chara01*/
+#main div.chara01{
+	min-height:585px;
+	*height:585px;
+	padding:180px 0 0 0;
+}
+#Container .chara-bg01{
+	top:0;
+	height:765px;
+}
+#Container .chara-bg01 img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-497px;
+	margin-left:-800px;
+}
+#main .chara-innner h2.title-mario{
+	z-index: 200;
+	position: absolute;
+	top: 320px;
+	left: 72px;
+}
+#main .chara-innner p.txt-mario{
+	z-index: 200;
+	position: absolute;
+	top: 386px;
+	left: 71px;
+}
+#main .chara-innner p.txt-namemario{
+	position: absolute;
+	top: 498px;
+	left: 8px;
+}
+#main .chara-innner h2.title-sonic{
+	z-index: 200;
+	position: absolute;
+	top: 486px;
+	left: 440px;
+}
+#main .chara-innner p.txt-sonic{
+	z-index: 200;
+	position: absolute;
+	top: 554px;
+	left: 440px;
+}
+#main .chara-innner p.txt-namesonic{
+	position: absolute;
+	top: 629px;
+	left: 728px;
+}
+#main .chara-content .chara-img{
+	position: relative;
+	left: 0;
+	top: 0;
+	/*opacity: 0;*/
+}
+#main .chara-content p.mario{
+	position: absolute;
+	top: 149px;
+	left: 27px;
+	z-index: 100;
+}
+#main .chara-content p.sonic{
+	position: absolute;
+	top: 238px;
+	left: 357px;
+	z-index: 100;
+}
+/*chara02*/
+#main .chara02{
+	min-height:597px;
+	*height:597px;
+}
+#Container .chara-bg02{
+	top:765px;
+	height:597px;
+}
+#Container .chara-bg02 img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-496px;
+	margin-left:-800px;
+}
+#main .chara-innner h2.title-amy{
+	z-index: 200;
+	position: absolute;
+	top: 272px;
+	left: 74px;
+}
+#main .chara-innner p.txt-amy{
+	z-index: 200;
+	position: absolute;
+	top: 337px;
+	left: 76px;
+}
+#main .chara-innner p.txt-nameamy{
+	position: absolute;
+	top: 386px;
+	left: 29px;
+}
+#main .chara-innner h2.title-peach{
+	z-index: 200;
+	position: absolute;
+	top: 194px;
+	left: 706px;
+}
+#main .chara-innner p.txt-peach{
+	z-index: 200;
+	position: absolute;
+	top: 257px;
+	left: 706px;
+}
+#main .chara-innner p.txt-namepeach{
+	position: absolute;
+	top: 273px;
+	left: 733px;
+}
+#main .chara-content p.amy-peach{
+	z-index: 100;
+	position: absolute;
+	top: 63px;
+	left: 220px;
+}
+/*chara03*/
+#main .chara03{
+	min-height:600px;
+	*height:600px;
+}
+#Container .chara-bg03{
+	top: 1362px;
+	height: 600px;
+}
+#Container .chara-bg03 img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-380px;
+	margin-left:-800px;
+}
+#main .chara-innner h2.title-waluigi{
+	z-index: 200;
+	position: absolute;
+	top: 14px;
+	left: 21px;
+}
+#main .chara-innner p.txt-waluigi{
+	z-index: 200;
+	position: absolute;
+	top: 77px;
+	left: 22px;
+}
+#main .chara-innner p.txt-namewaluigi{
+	position: absolute;
+	top: 231px;
+	left: -79px;
+}
+#main .chara-innner h2.title-luigi{
+	z-index: 200;
+	position: absolute;
+	top: 488px;
+	left: 211px;
+}
+#main .chara-innner p.txt-luigi{
+	z-index: 200;
+	position: absolute;
+	top: 549px;
+	left: 210px;
+}
+#main .chara-innner p.txt-nameluigi{
+	position: absolute;
+	top: 458px;
+	left: -5px;
+}
+#main .chara-innner h2.title-silver{
+	z-index: 200;
+	position: absolute;
+	top: 64px;
+	left: 481px;
+}
+#main .chara-innner p.txt-silver{
+	z-index: 200;
+	position: absolute;
+	top: 132px;
+	left: 481px;
+}
+#main .chara-innner p.txt-namesilver{
+	position: absolute;
+	top: 49px;
+	left: 552px;
+}
+#main .chara-innner h2.title-tails{
+	z-index: 200;
+	position: absolute;
+	top: 484px;
+	left: 660px;
+}
+#main .chara-innner p.txt-tails{
+	z-index: 200;
+	position: absolute;
+	top: 544px;
+	left: 660px;
+}
+#main .chara-innner p.txt-nametails{
+	position: absolute;
+	top: 172px;
+	left: 756px;
+}
+#main .chara-content p.group01{
+	z-index: 100;
+	position: absolute;
+	top: 45px;
+	left: 51px;
+}
+/*chara04*/
+#main .chara04{
+	min-height:600px;
+	*height:600px;
+}
+#Container .chara-bg04{
+	top: 1962px;
+	height: 600px;
+}
+#Container .chara-bg04 img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-380px;
+	margin-left:-800px;
+}
+#main .chara-innner h2.title-vector{
+	z-index: 200;
+	position: absolute;
+	top: 385px;
+	left: 73px;
+}
+#main .chara-innner p.txt-vector{
+	z-index: 200;
+	position: absolute;
+	top: 450px;
+	left: 74px;
+}
+#main .chara-innner p.txt-namevector{
+	position: absolute;
+	top: 169px;
+	left: 289px;
+}
+#main .chara-innner h2.title-wario{
+	z-index: 200;
+	position: absolute;
+	top: 159px;
+	left: 640px;
+}
+#main .chara-innner p.txt-wario{
+	z-index: 200;
+	position: absolute;
+	top: 222px;
+	left: 640px;
+}
+#main .chara-innner p.txt-namewario{
+	position: absolute;
+	top: 358px;
+	left: 732px;
+}
+#main .chara-content p.wario{
+	z-index: 100;
+	position: absolute;
+	top: 254px;
+	left: 435px;
+}
+#main .chara-content p.vector{
+	z-index: 100;
+	position: absolute;
+	top: 23px;
+	left: 51px;
+}
+/*chara05*/
+#main .chara05{
+	min-height:600px;
+	*height:600px;
+}
+#Container .chara-bg05{
+	top: 2562px;
+	height: 600px;
+}
+#Container .chara-bg05 img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-380px;
+	margin-left:-800px;
+}
+#main .chara-innner h2.title-knuckles{
+	z-index: 200;
+	position: absolute;
+	top: 168px;
+	left: 674px;
+}
+#main .chara-innner p.txt-knuckles{
+	z-index: 200;
+	position: absolute;
+	top: 234px;
+	left: 676px;
+}
+#main .chara-innner p.txt-nameknuckles{
+	position: absolute;
+	top: 355px;
+	left: 626px;
+}
+#main .chara-innner h2.title-yoshi{
+	z-index: 200;
+	position: absolute;
+	top: 420px;
+	left: 114px;
+}
+#main .chara-innner p.txt-yoshi{
+	z-index: 200;
+	position: absolute;
+	top: 485px;
+	left: 114px;
+}
+#main .chara-innner p.txt-nameyoshi{
+	z-index: 100;
+	position: absolute;
+	top: 243px;
+	left: 13px;
+}
+#main .chara-content p.knucles-yoshi{
+	z-index: 100;
+	position: absolute;
+	top: 15px;
+	left: -79px;
+}
+/*chara06*/
+#main .chara06{
+	min-height:600px;
+	*height:600px;
+}
+#Container .chara-bg06{
+	top: 3162px;
+	height: 600px;
+}
+#Container .chara-bg06 img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-378px;
+	margin-left:-800px;
+}
+#main .chara-innner h2.title-daisy{
+	z-index: 200;
+	position: absolute;
+	top: 428px;
+	left: 163px;
+}
+#main .chara-innner p.txt-daisy{
+	z-index: 200;
+	position: absolute;
+	top: 494px;
+	left: 164px;
+}
+#main .chara-innner p.txt-namedaisy{
+	position: absolute;
+	top: 275px;
+	left: 239px;
+}
+#main .chara-innner h2.title-blaze{
+	z-index: 200;
+	position: absolute;
+	top: 225px;
+	left: 748px;
+}
+#main .chara-innner p.txt-blaze{
+	z-index: 200;
+	position: absolute;
+	top: 291px;
+	left: 750px;
+}
+#main .chara-innner p.txt-nameblaze{
+	position: absolute;
+	top: 360px;
+	left: 725px;
+}
+#main .chara-content p.daisy{
+	z-index: 100;
+	position: absolute;
+	top: -19px;
+	left: -176px;
+}
+#main .chara-content p.blaze{
+	z-index: 100;
+	position: absolute;
+	top: 11px;
+	left: 393px;
+}
+/*chara07*/
+#main .chara07{
+	min-height:600px;
+	*height:600px;
+}
+#Container .chara-bg07{
+	top: 3762px;
+	height: 600px;
+}
+#Container .chara-bg07 img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-378px;
+	margin-left:-800px;
+}
+#main .chara-innner h2.title-shadow{
+	z-index: 200;
+	position: absolute;
+	top: 30px;
+	left: 71px;
+}
+#main .chara-innner p.txt-shadow{
+	z-index: 200;
+	position: absolute;
+	top: 95px;
+	left: 73px;
+}
+#main .chara-innner p.txt-nameshadow{
+	position: absolute;
+	top: 227px;
+	left: -41px;
+}
+#main .chara-innner h2.title-donkey{
+	z-index: 200;
+	position: absolute;
+	top: 474px;
+	left: 610px;
+}
+#main .chara-innner p.txt-donkey{
+	z-index: 200;
+	position: absolute;
+	top: 536px;
+	left: 610px;
+}
+#main .chara-innner p.txt-namedonkey{
+	position: absolute;
+	top: -27px;
+	left: 480px;
+}
+#main .chara-content p.shadow-donkey{
+	z-index: 100;
+	position: absolute;
+	top: 23px;
+	left: 96px;
+}
+/*chara08*/
+#main .chara08{
+	min-height:869px;
+	*height:659px;
+}
+#Container .chara-bg08{
+	top: 4362px;
+	height: 849px;
+}
+#Container .chara-bg08 img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-427px;
+	margin-left:-800px;
+}
+#main .chara-innner h2.title-dreggman{
+	z-index: 200;
+	position: absolute;
+	top: 219px;
+	left: 0px;
+}
+#main .chara-innner p.txt-dreggman{
+	z-index: 200;
+	position: absolute;
+	top: 281px;
+	left: 0px;
+}
+#main .chara-innner p.txt-namedreggman{
+	position: absolute;
+	top: -34px;
+	left: -58px;
+}
+#main .chara-innner h2.title-koopa{
+	z-index: 200;
+	position: absolute;
+	top: 40px;
+	left: 720px;
+}
+#main .chara-innner p.txt-koopa{
+	z-index: 200;
+	position: absolute;
+	top: 104px;
+	left: 720px;
+}
+#main .chara-innner p.txt-namekoopa{
+	position: absolute;
+	top: 109px;
+	left: 688px;
+}
+#main .chara-innner h2.title-jr{
+	z-index: 200;
+	position: absolute;
+	top: 17px;
+	left: 330px;
+}
+#main .chara-innner p.txt-jr{
+	z-index: 200;
+	position: absolute;
+	top: 83px;
+	left: 330px;
+}
+#main .chara-innner p.txt-namejr{
+	position: absolute;
+	top: 98px;
+	left: 392px;
+}
+#main .chara-innner h2.title-metal{
+	z-index: 200;
+	position: absolute;
+	top: 474px;
+	left: 660px;
+}
+#main .chara-innner p.txt-metal{
+	z-index: 200;
+	position: absolute;
+	top: 537px;
+	left: 660px;
+}
+#main .chara-innner p.txt-namemetal{
+	position: absolute;
+	top: 335px;
+	left: 706px;
+}
+#main .chara-content p.group02{
+	z-index: 100;
+	position: absolute;
+	top: 47px;
+	left: 2px;
+}
+/*7.mode
+***************************************/
+	
+#Container .mode{
+	display:block;
+	background:url(../images/mode/bg_mode.jpg) no-repeat center top;
+}
+#Container .mode .visual{
+	position:relative;
+	min-height:360px;
+	*height:360px;
+	overflow:visible;
+}
+
+#Container .mode .visual h2{
+	position: absolute;
+	top: 68px;
+	left: -1px;
+	z-index: 100;
+}
+#Container .mode .visual p.txt-visual{
+	position: absolute;
+	top: 123px;
+	left: 1px;
+	z-index: 100;
+}
+#Container .mode .visual p.flash-area{
+	position: absolute;
+	top: -1px;
+	left: 344px;
+	z-index: 90;
+}
+#Container .mode ul.mode-box{
+	position:relative;
+	display:block;
+	width:470px;
+	float:left;
+	z-index:500;
+}
+#Container .mode ul.mode-box01 dl{
+	background:url(../images/mode/bg_mode01.png) repeat-y center top;
+}
+#Container .mode ul.mode-box02 dl{
+	background:url(../images/mode/bg_mode02bottom.png) no-repeat center bottom;
+}
+#Container .mode ul.mode-box03 dl{
+	background:url(../images/mode/bg_mode03bottom.png) no-repeat center bottom;
+}
+#Container .mode ul.mode-box li{
+	display:inline;
+}
+#Container .mode ul.mode-box li dl{
+		display:block;
+	position:relative;
+}
+#Container .mode ul.mode-box li dt{
+	height:50px;
+	position:relative;
+	z-index:100;
+}
+#Container .mode ul.mode-box li dd{
+	padding:0 0 30px;
+}
+#Container .mode ul.mode-box li dt img{
+	position: absolute;
+	bottom: 2px;
+	left: 71px;
+}
+#Container .mode ul.mode-box dl.mode01 .icon{
+	position: absolute;
+	top: -25px;
+	left: 17px;
+}
+#Container .mode ul.mode-box .icon .icon-img{
+	position:relative;
+	left:0;
+	top:0;
+	/*opacity:0;*/
+}
+#Container .mode ul.mode-box .icon-num{
+	position: absolute;
+	top: 4px;
+	left: 360px;
+}
+#Container .mode ul.mode-box .icon-num .num-img{
+	position: relative;
+	top: 4px;
+	left: 0;
+}
+#Container .mode ul.mode-box dl.mode02 .icon{
+	position: absolute;
+	top: -33px;
+	left: 2px;
+}
+#Container .mode ul.mode-box dl.mode03{
+	background:url(../images/mode/bg_mode01bottom.png) no-repeat center bottom;
+}
+#Container .mode ul.mode-box dl.mode03 .icon{
+	position: absolute;
+	top: 1px;
+	left: -2px;
+}
+#Container .mode ul.mode-box dl.mode04 .icon{
+	position: absolute;
+	top: -15px;
+	left: -5px;
+}
+#Container .mode ul.mode-box dl.mode05 .icon{
+	position: absolute;
+	top: -14px;
+	left: 8px;
+}
+#Container .mode ul.mode-box dl p{
+	padding: 0 0 5px;
+}
+#Container .mode ul.mode-box dl a{
+	display:block;
+	text-align:right;
+	padding:0 45px 0 0;
+}
+#Container .mode p.mode-chara{
+	position: absolute;
+	bottom: 250px;
+	right: 15px;
+}
+/*6.nav
+***************************************/
+#contents #nav{
+	width:100%;
+	background:url(../images/bg_nav.png) repeat-x left top;
+	position:fixed;
+	bottom:0;
+	z-index:2000;
+	overflow:visible;
+	}
+#contents #nav div.inline {
+    margin: 0 auto;
+    width: 960px;
+	z-index:10000;
+	min-height:154px;
+	position:relative;
+	overflow:visible;
+}
+#contents #nav div.inline p.totop{
+	z-index: 1000;
+	position: absolute;
+	top: -34px;
+	right:2px;
+}
+#contents #nav div.inline p.btn-next{
+	z-index: 1000;
+	position:fixed;
+	bottom: 118px;
+	left: 50%;
+	margin-left:-20px;
+}
+#contents #nav h1{
+	position:absolute;
+	top:-60px;
+	left:4px;
+	z-index:2000;
+}
+#nav ul.global-navi{
+	margin:134px 0 0 0;
+	width:720px;
+	float:right;
+	}
+
+#nav ul.global-navi li{
+	position:relative;
+	display:inline-block;
+	margin:0;
+	}
+#nav ul.global-navi li span{
+	position: absolute;
+	top: -51px;
+	left: 45%;
+	}
+#nav ul.global-navi li a{
+	position:relative;
+	z-index:100;
+	}
+
+#nav div.inline {
+    margin: 0 auto 32px;
+	width:940px;
+    overflow: hidden;
+    position: relative;
+}
+#nav ul.link-nav{
+	position: absolute;
+	bottom: 50px;
+	overflow: hidden;
+	margin: 0 auto;
+	display: block;
+	right:0;
+	width: 720px;
+}
+#nav ul.link-nav li {
+	float:left;
+}
+#nav ul.link-nav li.toenglish {
+    float: right;
+}
+
+#nav div.nav-company {
+	margin-top:-66px;
+    overflow: hidden;
+    position: relative;
+	height:74;
+}
+#nav ul.company{
+	display:block;
+	height:74px;
+	width:940px;
+    margin: 0 auto;
+}
+#nav ul.link-nav ul.company li{
+	margin:0;
+	padding:0;
+}
+#nav ul.company li.logo {
+    display: inline;
+    float: left;
+}
+
+#nav li.copyright {
+    display: block;
+    float: left;
+	width:674px;
+	margin-left:30px;
+}
+
+#nav ul.company  li.device {
+    display: inline;
+    float: right;
+}
+
+.iframe5{
+	width: 1px;
+	height: 1px;
+	visibility: hidden;
+	display: none;
+}

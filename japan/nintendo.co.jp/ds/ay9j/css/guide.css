@@ -1,0 +1,147 @@
+@charset "Shift_JIS";
+
+#guide_all {
+	margin: auto;
+	width: 720px;
+	height: 580px;
+	text-align: left;
+	background: url(../guide/img/bg1.gif) no-repeat;
+}
+
+#guide_all2 {
+	margin: auto;
+	width: 720px;
+	height: 580px;
+	text-align: left;
+	background: url(../guide/img/bg2.gif) no-repeat;
+}
+
+#guide_all3 {
+	margin: auto;
+	width: 720px;
+	height: 580px;
+	text-align: left;
+	background: url(../guide/img/bg3.gif) no-repeat;
+}
+
+#guide_main {
+	width: 720px;
+	height: 580px;
+}
+
+#guide_title {
+	padding: 22px 0px 8px 60px;
+}
+
+#guide_title h1 {
+	float: left;
+	width: 270px;
+}
+
+#guide_title h2 {
+	float: left;
+	width: 365px;
+}
+
+#syumoku {
+	margin-left: 60px;
+}
+
+#guide_left {
+	float: left;
+	width: 410px;
+}
+
+#guide_movie {
+	float: left;
+	width: 250px;
+	height: 420px;
+}
+
+#guide_flash_01 {
+	background: url(../guide/img/guide_noflash000.jpg) no-repeat;	
+}
+
+#guide_flash_02 {
+	background: url(../guide/img/guide_noflash000.jpg) no-repeat;	
+}
+
+#guide_flash_03 {
+	background: url(../guide/img/guide_noflash000.jpg) no-repeat;	
+}
+
+#guide_btn {
+	display: block;
+	width: 645px;
+	height: 45px;
+}
+
+#guibtn1 a,
+#stay_guibtn1 {
+	float: left;
+	display: block;
+	width: 180px;
+	height: 45px;
+}
+
+#guibtn1 a {
+	background: url(../guide/img/guide_btn1.gif) 0px -45px no-repeat;	
+}
+
+#guibtn1 a:hover,
+#stay_guibtn1 {
+	background: url(../guide/img/guide_btn1.gif) 0px 0px no-repeat;	
+}
+
+#guibtn2 a,
+#stay_guibtn2 {
+	float: left;
+	display: block;
+	width: 169px;
+	height: 45px;
+	background: url(../guide/img/guide_btn2.gif) 0px -45px no-repeat;	
+}
+
+#guibtn2 a {
+	background: url(../guide/img/guide_btn2.gif) 0px -45px no-repeat;	
+}
+
+
+#guibtn2 a:hover,
+#stay_guibtn2 {
+	background: url(../guide/img/guide_btn2.gif) 0px 0px no-repeat;	
+}
+
+#guibtn3 a,
+#stay_guibtn3 {
+	float: left;
+	display: block;
+	width: 180px;
+	height: 45px;
+}
+
+#guibtn3 a {
+	background: url(../guide/img/guide_btn3.gif) 0px -45px no-repeat;	
+}
+
+#guibtn3 a:hover,
+#stay_guibtn3 {
+	background: url(../guide/img/guide_btn3.gif) 0px 0px no-repeat;	
+}
+
+#guide_close  a{
+	margin-top: 30px;
+	margin-left: 60px;
+}
+
+#guide_close a {
+	float: left;
+	display: block;
+	width: 55px;
+	height: 15px;
+	background: url(../guide/img/close.gif) 0px 0px no-repeat;	
+}
+
+#guide_close a:hover {
+	background: url(../guide/img/close.gif) 0px 0px no-repeat;	
+}

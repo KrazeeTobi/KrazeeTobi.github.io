@@ -1,0 +1,49 @@
+@charset "Shift_JIS";
+
+
+#dream_title {
+	position: relative;
+	display: block;
+	width: 710px;
+	height: 75px;
+	background: url(../dream/img/title.jpg) no-repeat;
+}
+
+#dream_reed {
+	display: block;
+	width: 710px;
+	height: 124px;
+	background: url(../dream/img/reed.jpg) no-repeat;
+}
+
+#dream_flash {
+	display: block;
+	width: 710px;
+	height: 371px;
+	background: url(../dream/img/dream_noflash_001.jpg) no-repeat;
+}
+
+#dream_flash_01 {
+	display: block;
+	width: 710px;
+	height: 371px;
+	background: url(../dream/img/dream_noflash_002.jpg) no-repeat;
+}
+
+#dream_flash_02 {
+	display: block;
+	width: 710px;
+	height: 371px;
+	background: url(../dream/img/dream_noflash_003.jpg) no-repeat;
+}
+
+#dream_flash_03 {
+	display: block;
+	width: 710px;
+	height: 371px;
+	background: url(../dream/img/dream_noflash_004.jpg) no-repeat;
+}
+
+#dream_text {
+	width:710px;
+}

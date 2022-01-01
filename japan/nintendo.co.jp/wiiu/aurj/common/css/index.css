@@ -1,0 +1,412 @@
+@charset "shift_jis";
+
+
+
+/***********************************************/
+
+/* FileName: container.css                     */
+
+/* data:2013/10/17                             */
+
+/***********************************************/
+
+
+
+/*
+
+1.container
+
+2.contents
+
+3.main
+
+4.about
+
+6.pagetop
+
+7.footer
+
+*/
+
+
+
+/*1.container
+
+***************************************/
+
+#Container{
+
+
+
+	margin:0 auto;
+
+	padding:0;
+
+
+
+}
+
+#container{
+
+	min-width:960px;
+
+	width:expression(document.body.clientWidth < 960 ? "960px" : "100%");
+
+}
+
+
+
+/*2.contents
+
+***************************************/
+
+#contents{
+
+	margin:0 auto;
+
+	padding:0;
+
+	text-align:left;
+
+	overflow:hidden;
+
+	_zoom:1;
+
+
+
+
+
+}
+
+
+
+/*3.main
+
+***************************************/
+
+#contents #main{
+
+	margin:0 auto;
+
+	position:relative;
+
+	text-align:center;
+
+	/*height:890px;*/
+
+
+
+
+
+}
+
+
+
+#contents #main #flashArea{
+
+    margin: 0 auto;
+
+	padding:0;
+
+	z-index:10;
+
+	text-align:center;
+
+	width:100%;
+
+	/*height:890px;*/
+
+/*	min-height:595px;
+
+	min-width: 940px;*/
+
+	top:0;
+
+	/*background:url(../images/index/bg_main.jpg) no-repeat center top;*/
+
+	background: no-repeat center top;
+
+	text-align:center;
+
+}
+
+#contents #main #flashArea img{
+
+	border:none;
+
+	visibility: hidden;
+
+}
+
+
+
+embed, object {
+
+
+
+	width:100%;
+
+	height:100%;
+
+	min-width:960px;
+
+	width:expression(document.body.clientWidth < 960 ? "960px" : "100%");
+
+
+
+/*
+
+min-width:940px;
+
+max-width:1600px;
+
+width:expression(document.body.clientWidth < 940 ? "940px" : (1600 < document.body.clientWidth ?"1600px":"100%"));
+
+*/
+
+}
+
+/*4.nav
+
+***************************************/
+
+#contents #nav-index{
+
+	width:100%;
+
+	background:url(../images/index/bg_nav_index02.gif) repeat-x left top;
+
+	bottom:0;
+
+	z-index:2000;
+
+	overflow:visible;
+
+	}
+
+#contents #nav-index div.inline {
+
+    margin: 0 auto;
+
+	padding:0 0 0;
+
+    width: 940px;
+
+	z-index:10;
+
+	height:20px;
+
+	position:relative;
+
+	overflow:visible;
+
+	overflow:hidden;
+
+}
+
+#contents #nav-index div.inline h1{
+
+	float:left;
+
+	display:inline;
+
+	margin:0 16px 0 0;
+
+}
+
+#contents #nav-index div.inline h2{
+
+	float:left;
+
+	display:inline;
+
+	margin:23px 16px 0 0;
+
+}
+
+#contents #nav-index div.inline p{
+
+	float:left;
+
+	margin:5px 16px 0 0;
+
+	display:inline;
+
+}
+
+#contents #nav-index div.inline p.btn-more{
+
+	float:right;
+
+	margin:0;
+
+}
+
+
+
+#contents #nav-index div.inline ul{
+
+	clear:both;
+
+	list-style:none;
+
+	margin:0 ;
+
+	overflow:hidden;
+
+	_zoom:1;
+
+}
+
+#contents #nav-index div.inline ul li{
+
+	float:left;
+
+	list-style:none;
+
+	margin:0 ;
+
+	display:block;
+
+	padding-top:4px;
+
+}
+
+#contents #nav-index div.inline ul li.navline{
+
+	background:url(../images/index/bg_listnav.gif) top left no-repeat;
+
+	padding-left:10px
+
+}
+
+
+
+#contents #nav-index div.inline ul li.btn-en{
+
+	float:right;
+
+}
+
+
+
+#contents #nav-index div.inline ul li img{
+
+	vertical-align:top;
+
+}
+
+/*5.footer
+
+***************************************/
+
+#footer{
+
+    margin: 0;
+
+	padding:0;
+
+	min-width: 940px;
+
+}
+
+
+
+#footer div.nav-company {
+
+	margin:0 auto;
+
+    position: relative;
+
+	 width: 940px;
+
+	z-index:10;
+
+	position:relative;
+
+	overflow:visible;
+
+	overflow:hidden;
+
+}
+
+#footer ul.company{
+
+	display:block;
+
+	height:74px;
+
+	width:940px;
+
+    margin: 0 auto;
+
+}
+
+#footer ul.link-nav ul.company li{
+
+	margin:0;
+
+	padding:0;
+
+}
+
+#footer ul.company li.logo {
+
+    display: inline;
+
+    float: left;
+
+}
+
+
+
+#footer li.copyright {
+
+    display: block;
+
+    float: left;
+
+	width:674px;
+
+	margin-left:30px;
+
+}
+
+
+
+#footer ul.company  li.device {
+
+    display: inline;
+
+    float: right;
+
+}
+
+
+
+.iframe1{
+
+	width: 1px;
+
+	height: 1px;
+
+	visibility: hidden;
+
+	display: none;
+
+}
+
+.end_contents {
+	font-size: 85%;
+	font-weight: bold;
+	color: #0057B4;
+	text-align: center;
+	letter-spacing: 0.05em;
+	margin-top: 20px;
+}
+
+
+@media print{
+#main { display:none; }
+#contents { display:none; }
+}

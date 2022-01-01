@@ -1,0 +1,15 @@
+﻿@charset "utf-8";
+
+html,
+body {
+	height      :100%;
+	overflow    :auto;
+	margin      :0;
+	padding     :0;
+	background  :#FFFFFF;
+}
+
+
+#flashcontent {
+	position: relative;
+}

@@ -1,0 +1,428 @@
+@charset "Shift_JIS";
+
+body {font-family:"‚l‚r ‚oƒSƒVƒbƒN","Hiragino Kaku Gothic Pro","ƒqƒ‰ƒMƒmŠpƒS Pro W3",sans-serif;letter-spacing: 0.01em;}
+* html body{font-family:"‚l‚r ‚oƒSƒVƒbƒN",sans-serif;}
+*:first-child+html body{font-family:"‚l‚r ‚oƒSƒVƒbƒN",sans-serif;}
+body.mac{font-family: "Hiragino Kaku Gothic Pro","ƒqƒ‰ƒMƒmŠpƒS Pro W3",sans-serif;}
+
+html,body,div,ul,li,img,p{
+	padding:0;
+	margin:0;
+	list-style:none;
+	letter-spacing:1.4px;
+	line-height:18px;
+}
+body {
+	-webkit-text-size-adjust: none;
+}
+p{
+	font-size:11px;
+	color:#515151;
+}
+
+ul li{
+	font-size:12px;
+	color:#515151;
+}
+
+a img{
+	border:none;
+}
+
+span.small{
+	font-size:10px;
+}
+
+span.bold{
+	
+	font-size:14px;
+	
+	font-weight:bold;
+}
+
+p.cb{
+	padding:2px 0;
+	clear:both;
+}
+p a{
+	color:#515151;
+	padding-left:15px;
+	background:url(../img/list_link.gif) no-repeat 2px center;
+	text-decoration:none;
+}
+p a:hover{
+	color:#999;
+	text-decoration:underline;
+}
+
+
+/*header*/
+#header{
+	margin:0 auto;
+	width:900px;
+	height:86px;
+	position:relative;
+}
+
+#header a#logo_nintendo{
+	position:absolute;
+	top:30px;
+	left:0;
+}
+
+#header a#logo_wiiu{
+	position:absolute;
+	top:22px;
+	right:0;
+}
+
+/*content*/
+#content {
+	margin:0 auto !important;
+	width:900px;
+	background:url(../img/bg_content_01.gif) repeat-y;
+}
+
+#content span.bottom{
+	height:10px;
+	width:900px;
+	display:block;
+	background:url(../img/bg_content_02.gif);
+}
+
+#content #titleArea{
+	background:url(../img/bg_title.gif) no-repeat;
+	position:relative;
+	height:83px;
+	width:900px;
+}
+
+#content #titleArea img{
+	position:absolute;
+	top:27px;
+	left:50px;
+}
+#content #titleArea a{
+	position:absolute;
+	top:3px;
+	left:697px;
+}
+#content #ceronetwork{
+	padding-top:18px;
+	text-align:right;
+}
+
+#content #ceronetwork ul{
+	padding-right:23px;
+	list-style:none;
+}
+#content #ceronetwork ul li{
+	padding-left:10px;
+	float:right;
+	list-style:none;
+}
+#content #mainArea{
+	position:relative;
+	height:320px;
+}
+#content #mainArea img#logo{
+	position:absolute;
+	top:0px;
+	left:107px;
+}
+#content #mainArea img#packagesofticon{
+	position:absolute;
+	top:0px;
+	left:327px;
+}
+
+/*pricedata*/
+#content #priceDate{
+	padding-top:5px;
+	padding-bottom:23px;
+}
+#content #priceDate p{
+	color:#0096c8;
+}
+#content #priceDate p{
+	text-align:center;
+}
+#content #priceDate p span{
+	font-family: 'Open Sans', sans-serif;
+	font-size:22px;
+	letter-spacing:2px;
+}
+#content #priceDate span.space{
+	margin:0 20px;
+}
+
+
+
+/*download*/
+#content #download{
+	padding:0 23px 35px 23px;
+}
+#content #download.nonpdf{
+	padding-left:95px;
+}
+#content #download p.cb{
+	padding:0 0 0 15px;
+}
+#content #download p.cb .bold{
+	color: #0096c8;
+}
+#content #download #dl{
+	padding-bottom:8px;
+	float:left;
+	position:relative;
+	width:614px;
+	height:60px;
+	background:url(../img/bg_dl_01.gif) no-repeat;
+}
+#content #download.nonpdf #dl{
+	position:relative;
+	width:701px;
+	background:url(../img/bg_dl_02.gif) no-repeat;
+}
+#content #download #dl a{
+	position:absolute;
+	top:10px;
+	right:10px;
+}
+
+#content #download #pdf{
+	float:right;
+	width:220px;
+	height:60px;
+	background:url(../img/bg_exp.gif) no-repeat;
+}
+#content #download #pdf ul{
+	padding:20px 0 0 24px;
+}
+#content #download #pdf ul li {
+	padding:0;
+	margin:0;
+	height:18px;
+}
+#content #download #pdf ul li a{
+	padding:0;
+	margin:0;
+}
+
+/*detail*/
+#content #detail{
+	margin-left:24px;
+	margin-bottom:23px;
+	width:850px;
+	background:url(../img/bg_detail_02.gif) repeat-y;
+}
+#content #detail span.top{
+	height:13px;
+	width:850px;
+	display:block;
+	background:url(../img/bg_detail_01.gif) no-repeat;
+}
+#content #detail span.bottom{
+	height:13px;
+	width:850px;
+	display:block;
+	background:url(../img/bg_detail_03.gif) no-repeat;
+}
+#content #detail ul{
+	padding-top:15px;
+}
+#content #detail ul li{
+	padding:22px 15px 20px 35px;
+	float:left;
+	width:230px;
+	display:block;
+	background-position:5px 0;
+	font-size:12px;
+	color:#515151;
+}
+#content #detail ul li#play{
+	background:url(../img/content_detail_play.gif) no-repeat;
+}
+#content #detail ul li#capacity{
+	background:url(../img/content_detail_capacity.gif) no-repeat;
+}
+#content #detail ul li#sound{
+	background:url(../img/content_detail_sound.gif) no-repeat;
+}
+#content #detail ul li#genre{
+	background:url(../img/content_detail_genre.gif) no-repeat;
+	float:left;
+}
+#content #detail ul li#save{
+	background:url(../img/content_detail_save.gif) no-repeat;
+}
+#content #detail ul li#resolution{
+	background:url(../img/content_detail_resolution.gif) no-repeat;
+}
+#content #detail ul li#play,
+#content #detail ul li#capacity,
+#content #detail ul li#sound,
+#content #detail ul li#genre,
+#content #detail ul li#save,
+#content #detail ul li#resolution{
+	background-position:20px 0;
+}
+
+/*controller*/
+#content #controller{
+	padding:23px 23px 30px 23px;
+	background:url(../img/ttl_controller.gif) no-repeat 23px 0;
+}
+
+#content #controller p.cb{
+	margin-top:5px;
+	padding:0 0 0 12px;
+	height:auto;
+	clear:none;
+	width:670px;
+	display:block;
+	float:left;
+}
+
+#content #controller #diagram1{
+	padding:85px 0 0 0;
+	float:left;
+	width:670px;
+	background:url(../img/bg_controller_01.gif) no-repeat;
+}
+#content #controller #diagram1 ul{
+	background:url(../img/bg_controller_02.gif) repeat-y;
+}
+#content #controller #diagram1 ul li{
+	padding:11px 0 0 0;
+	width:111px;
+	height:16px;
+	display:block;
+	float:left;
+	font-size:10px;
+	letter-spacing:0.5px;
+	text-align:center;
+}
+#content #controller #diagram1 ul li.player{
+	font-size:12px;
+	letter-spacing:1px;
+}
+#content #controller #diagram1 ul li.line{
+	display:block;
+	width:670px;
+	height:1px;
+	border-bottom:1px solid #cfcfcf;
+}
+#content #controller #diagram1 span.bottom{
+	float:left;
+	width:670px;
+	height:10px;
+	display:block;
+	background:url(../img/bg_controller_03.gif) no-repeat;
+
+}
+
+#content #controller #diagram2{
+	float:right;
+	width:165px;
+	height:161px;
+	background:url(../img/bg_gamepad_01.gif) no-repeat;
+}
+#content #controller #diagram2 p{
+	padding-top:115px;
+	font-size:14px;
+	letter-spacing:2px;
+	text-align:center;
+}
+#content #controller #diagram2.oneLine{
+	height:123px;
+	background:url(../img/bg_gamepad_02.gif) no-repeat;
+}
+#content #controller #diagram2.oneLine p{
+	padding-top:95px;
+}
+
+/*internet*/
+#content #internet{
+	
+}
+#content #internet{
+	margin-left:24px;
+	margin-bottom:23px;
+	width:850px;
+	background:url(../img/bg_internet_02.gif) repeat-y;
+}
+#content #internet span.top{
+	height:12px;
+	width:850px;
+	display:block;
+	background:url(../img/bg_internet_01.gif) no-repeat;
+}
+#content #internet span.bottom{
+	height:12px;
+	width:850px;
+	display:block;
+	background:url(../img/bg_internet_03.gif) no-repeat;
+}
+#content #internet ul{
+	padding:8px 0 5px 230px;
+	margin-left:24px;
+	width:620px;
+	background:url(../img/ttl_internet.gif) no-repeat 0px center;
+}
+#content #internet ul li{
+	padding-left:15px;
+	background:url(../img/list_internet.gif) no-repeat 0 center;
+}
+
+/*footer*/
+#footer{
+	padding:20px 0;
+	margin:0 auto;
+	text-align:center;
+	width:900px;
+	font-size:10px;
+}
+
+#footer ul{
+	float:left;
+	width:280px;
+
+}
+
+#footer ul li{
+	float:left;
+	font-size:10px;
+}
+
+#footer ul li a{
+	color:#515151;
+	padding:0 10px 0 18px;
+	background:url(../img/list_link.gif) no-repeat 2px center;
+	text-decoration:none;
+}
+#footer ul li a:hover{
+	color:#999;
+	text-decoration:underline;
+}
+
+
+
+#footer p{
+	width:620px;
+	font-size:9px !important;
+	line-height:11px;
+	float:right;
+	display:block;
+	text-align:right;
+	
+}
+
+/*clearfix*/
+.clearfix {zoom:1;}
+.clearfix:after {
+  content: ""; 
+  display: block; 
+  clear: both;
+}
+

@@ -1,0 +1,171 @@
+@charset "shift_jis";
+
+/***********************************************/
+/* FileName: container.css                     */
+/* data:2013/10/17                             */
+/***********************************************/
+
+/*// cmpv //*/
+body{
+	/*background:#C6DCF6;*/
+	position:relative;
+	}
+#Container{
+	/*background:url(../images/cmpv/cm_bg1_s.jpg) no-repeat center top;*/
+	/*background-color:#C7DDF5;*/
+	/*height:2000px;*/
+	
+	/*padding-bottom: 300px;*/
+
+	
+}
+#Container #contents{
+	background-color:#C7DDF5;
+	padding-bottom: 150px;
+}
+.cmpv .bgimgP{
+	width:100%;
+	height:908px;
+	overflow:hidden;
+	position: absolute;
+	*top: 0;
+	*left: 0;
+	/*
+	padding-bottom:100px;
+	_padding-bottom:50px;
+	*/
+}
+
+.cmpv .bgimg{
+	position: absolute;
+	/*width:1920px;*/
+	width:960px;
+	left:50%;
+	/*margin-left: -960px;*/
+	margin-left: -480px;
+	
+	
+	/*
+	width:100%;
+	left:50%;
+	margin-left: -960px;
+	*/
+}
+#Container #contents #main{
+	width:940px;
+	position: relative;
+	top:0;
+
+}
+.cmpv .pagettl{
+	text-align:left;
+	position:relative;
+	margin: 40px 0 0 25px;
+}
+.cmpv #movarea{
+	background:url(../images/cmpv/movie_bg.png) no-repeat center top;
+	width:940px;
+	height:581px;
+	position:relative;
+	margin-top: 15px;
+}
+.cmpv .movttl{
+	text-align:left;
+	padding:40px 0 0 40px;
+	position:relative;
+	left:0;
+}
+.cmpv .btnprevp{
+	display: block;
+	width:57px;
+	height:59px;
+	position:absolute;
+	top: 260px;
+	left:40px;
+}
+.cmpv .btnnextp{
+	display: block;
+	width:57px;
+	height:59px;
+	position:absolute;
+	top: 260px;
+	right:40px;
+}
+.cmpv .movBtn{
+	display: none;
+}
+.cmpv #externalmov{
+	margin:70px 0 50px 0;
+}
+.cmpv #externalmovP{
+	margin:10px 0 50px 0;
+}
+.cmpv #cmarea{
+	width:670px;
+	float:left;
+	padding-left:23px;
+}
+.cmpv #listarea{
+	width:940px;
+}
+.cmpv #introarea{
+	width:230px;
+	float:right;
+	padding-right:10px;
+}
+.cmpv .listttl{
+	width:91px;
+	height:30px;
+}
+.cmpv h3.cmareattl{
+	*margin-left: -580px;
+}
+.cmpv h3.introttl{
+	*margin-left: -130px;
+}
+.cmpv #cmarea .listitem{
+	float:left;
+	padding:0 10px 10px 0;
+}
+.cmpv #introarea .listitem{
+	float:left;
+	padding:0 0 8px 0;
+}
+
+@media print {
+#main {
+    display: none;
+}
+#movarea {
+    display: none;
+}
+#listarea {
+    display: none;
+}
+}
+
+/*6.nav
+***************************************/
+#contents #nav{
+	position:absolute;
+	width:100%;
+	margin: 0 auto;
+	text-align:center;
+	}
+#contents #nav div.inline {
+    margin: 0 auto;
+	/*background:#FFF;*/
+}
+
+
+div#externalmov .wiiuplay img{
+	margin-top:85px
+}
+
+
+
+
+
+
+
+

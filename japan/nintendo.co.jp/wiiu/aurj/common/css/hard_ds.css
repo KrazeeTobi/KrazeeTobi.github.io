@@ -1,0 +1,99 @@
+@charset "shift_jis";
+
+/***********************************************/
+/* FileName: hard.css   DSi 3DS                */
+/* data:2013/10/25                             */
+/***********************************************/
+
+
+/*4.about
+***************************************/
+#Container .about #main{
+	background:none;
+	padding-bottom:300px;
+	}
+#Container .about div.bg-box img{
+	/*display:none;*/
+}
+#Container .about-bg01{
+	background:url(../images/about/bg_about01_ds.jpg) no-repeat center top;
+}
+#Container .about-bg01 div.noflash img{
+	display:block;
+}
+/*4.chara
+***************************************/
+#Container .chara{
+	width:100%;	
+	}
+#Container .chara #main{
+}
+#Container .chara{
+	display:block;
+}
+#main .chara-box{
+}
+#Container .bg-box{
+	/*overflow:inherit;*/
+}
+.chara div.bg-box img{
+	display:none;
+}
+
+.chara div.chara-bg02,
+.chara div.chara-bg04,
+.chara div.chara-bg06,
+.chara div.chara-bg08{
+	background:#aaccf1;
+}
+
+
+
+/*5.enjoy
+***************************************/
+#Container .enjoy{
+	background:none;
+	width:100%;
+}
+#Container .enjoy #main{
+	width:100%;
+	}
+#Container .enjoy #main .wrapper{
+	background:none;
+	width:100%;
+}
+#Container .enjoy ul li.movie-box dd div#mov-wrapper{
+	height:414px;
+	}
+#Container .enjoy h3.ttl-formal{
+	background:none;
+}
+#Container .enjoy h3.ttl-dream{
+	background:none;
+}
+#Container .enjoy p.txt-howto{
+	margin:0 auto 20px;
+	/padding: 0 0 20px 0;
+	}
+
+
+/*7.mode
+***************************************/
+	
+#Container .mode{
+	background:none;
+}
+
+
+/*6.nav
+***************************************/
+#contents #nav{
+	position:absolute;
+	width:100%;
+	margin: 0 auto;
+	text-align:center;
+	}
+#contents #nav div.inline {
+    margin: 0 auto;
+	/*background:#FFF;*/
+}

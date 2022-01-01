@@ -1,0 +1,123 @@
+@charset "Shift_JIS";
+
+/*--------------------------------------
+
+	Text Module
+
+---------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+}
+
+/*--------------------------------------
+
+	Hypertext Module
+
+--------------------------------------*/
+
+a:link,
+a:visited {
+
+	color: #666666;
+	text-decoration: none;
+}
+
+a:hover {
+
+	color: #DD0271;
+	text-decoration: underline;
+}
+
+.staybtn {
+	color: #7D0140;
+	font-weight: bold;
+}
+
+/*--------------------------------------
+
+	indent-text
+
+--------------------------------------*/
+
+/*top*/
+#top_title h1,
+#top_ds h2,
+#nindslogo,
+#nindslogo2,
+#go_top,
+#go_top1,
+#go_top3,
+#go_top4,
+#go_top5,
+#gamen,
+#touch,
+#menu,
+#menu_top ul li a,
+#go_movie a,
+#tora,
+#info ul li,
+#prod,
+#go_wii,
+#copy,
+#olympic,
+#ninten,
+#top_u_hidari p,
+/*game*/
+#game_title h1,
+#game_reed h2,
+#about_flag ul li,
+#about_flag p,
+/*player*/
+#player_title h1,
+#player_reed h2,
+#player1,
+#player2,
+#player3,
+#player4,
+#player5,
+#player6,
+#player7,
+#player8,
+#player9,
+#player10,
+#player11,
+#player12,
+#player13,
+#player14,
+#player15,
+#player16,
+/*player_more*/
+#chara_base3,
+#chara,
+#type,
+#bun,
+#status ul li,
+#ido,
+#status,
+/*dream*/
+#dream_title h1,
+#dream_reed h2,
+#dream_text,
+/*compe*/
+#compe_title h1,
+#compe_reed h2,
+#compe_text,
+#text,
+/*record*/
+#record_title h1,
+#record_reed h2,
+#vsrecord,
+/*guide*/
+#guide_btn,
+#guide_close {
+	font-size: 1%;
+	line-height: 1%;
+	text-indent: -9999px;
+}

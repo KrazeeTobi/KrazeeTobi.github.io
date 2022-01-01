@@ -1,0 +1,66 @@
+@charset "Shift_JIS";
+
+
+#record_title {
+	position: relative;
+	display: block;
+	width: 710px;
+	height: 75px;
+	background: url(../record/img/title.jpg) no-repeat;
+}
+
+#record_reed {
+	display: block;
+	width: 710px;
+	height: 101px;
+	background: url(../record/img/reed.jpg) no-repeat;
+}
+
+#vsrecord {
+	position: relative;
+	display: block;
+	width: 710px;
+	height: 394px;
+	background: url(../record/img/vsrecord.jpg) no-repeat;
+}
+
+#reco_left {
+	position: absolute;
+	top: 10px;
+	left: 30px;
+	display: block;
+	width: 315px;
+	height: 270px;
+	z-index: 1;
+}
+
+#reco_left2 {
+	position: absolute;
+	top: 280px;
+	left: 30px;
+	display: block;
+	width: 315px;
+	height: 90px;
+	z-index: 1;
+}
+
+#reco_right {
+	position: absolute;
+	top: 10px;
+	left: 370px;
+	display: block;
+	width: 315px;
+	height: 270px;
+	z-index: 1;
+}
+
+
+#reco_right2 {
+	position: absolute;
+	top: 280px;
+	left: 370px;
+	display: block;
+	width: 315px;
+	height: 90px;
+	z-index: 1;
+}

@@ -1,0 +1,77 @@
+@charset "Shift_JIS";
+
+
+#compe_title {
+	position: relative;
+	display: block;
+	width: 710px;
+	height: 75px;
+	background: url(../compe/img/title.jpg) no-repeat;
+}
+
+#compe_reed {
+	display: block;
+	width: 710px;
+	height: 124px;
+	background: url(../compe/img/reed.jpg) no-repeat;
+}
+
+#compe_flash {
+	display: block;
+	width: 710px;
+	height: 371px;
+	background: url(../compe/img/compe_noflash_001.jpg) no-repeat;
+}
+
+#compe_flash_01 {
+	display: block;
+	width: 710px;
+	height: 371px;
+	background: url(../compe/img/compe_noflash_002.jpg) no-repeat;
+}
+
+#compe_flash_02 {
+	display: block;
+	width: 710px;
+	height: 371px;
+	background: url(../compe/img/compe_noflash_003.jpg) no-repeat;
+}
+
+#compe_flash_03 {
+	display: block;
+	width: 710px;
+	height: 371px;
+	background: url(../compe/img/compe_noflash_004.jpg) no-repeat;
+}
+
+#compe_flash_04 {
+	display: block;
+	width: 710px;
+	height: 371px;
+	background: url(../compe/img/compe_noflash_005.jpg) no-repeat;
+}
+
+#compe_flash_05 {
+	display: block;
+	width: 710px;
+	height: 371px;
+	background: url(../compe/img/compe_noflash_006.jpg) no-repeat;
+}
+
+#compe_flash_06 {
+	display: block;
+	width: 710px;
+	height: 371px;
+	background: url(../compe/img/compe_noflash_007.jpg) no-repeat;
+}
+
+#compe_flash_07 {
+	display: block;
+	width: 710px;
+	height: 371px;
+	background: url(../compe/img/compe_noflash_008.jpg) no-repeat;
+}
+
+#compe_text {
+	width:710px;
+}

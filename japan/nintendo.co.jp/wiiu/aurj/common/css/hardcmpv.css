@@ -1,0 +1,33 @@
+@charset "shift_jis";
+
+/***********************************************/
+/* FileName: hard.css  WiiU Wii DS 3DS         */
+/* data:2013/10/17                             */
+/***********************************************/
+/*body{display:none;}*/
+#Container {
+	width:960px;
+	padding: 0 0 0 0;
+}
+#Container #contents{
+	width:960px;
+	height:908px;
+	overflow:inherit;
+}
+
+#Container #contents #main{
+	width:960px;
+	padding: 0 0 0 0;
+}
+
+#contents #nav{
+	position:absolute;
+	width:100%;
+	margin: 0 auto;
+	text-align:center;
+	bottom: 0;
+	}
+#contents #nav div.inline {
+	margin: 0 auto;
+	/*background:#FFF;*/
+}

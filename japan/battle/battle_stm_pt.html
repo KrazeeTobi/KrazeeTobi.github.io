@@ -1,0 +1,296 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<title>ソニックバトル</title>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+body{
+	scrollbar-base-color:#ff6600;
+	scrollbar-arrow-color:white;
+}
+-->
+</style>
+<!-------マウスと共に移動するhead---------->
+<SCRIPT LANGUAGE="Javascript">
+var Ex = 0,Ey = 0 
+function move(e) { 
+Ex = e.pageX; 
+Ey = e.pageY;} 
+function init() { 
+NC6 = IE6 = 0; 
+if (navigator.appName == "Netscape" && navigator.appVersion.charAt(0) >=4) { 
+NC6 = true; 
+document.captureEvents(Event.MOUSEMOVE); 
+document.onMouseMove=move; 
+IMGx = document.layers['sonic'].clip.width; 
+IMGy = document.layers['sonic'].clip.height;} 
+if (navigator.appName == "Microsoft Internet Explorer" 
+&& navigator.appVersion.charAt(0) >=4) { 
+IE6 = true; 
+IMGx = sonic.offsetWidth; 
+IMGy = sonic.offsetHeight;}} 
+function getCursor() { 
+if (IE6) {Ex = event.clientX; 
+Ey = event.clientY; 
+event.returnValue=false;}} 
+function openMassage() { 
+if (IE6) { 
+Sx = document.body.scrollLeft; 
+Sy = document.body.scrollTop; 
+sonic.style.posLeft += (Ex+Sx+20 - sonic.style.posLeft)/10; 
+sonic.style.posTop += (Ey+Sy+20 - sonic.style.posTop)/10;} 
+if (NC6) { 
+document.layers['sonic'].left += (Ex+20 - document.layers['sonic'].left)/10; 
+document.layers['sonic'].top += (Ey+20 - document.layers['sonic'].top)/10;}}
+//-->
+</SCRIPT>
+<!-------マウスと共に移動するheadここまで---------->
+</head>
+
+<body bgcolor="#FFCC00" background="images/bg_yellow.gif" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('images/btn2_chara1.gif','images/btn2_dl1.gif','images/btn2_bbs1.gif','images/btn2_top1.gif','images/btn2_news1.gif','images/btn2_btl_str1.gif','images/btn2_btl_btl1.gif','images/btns_back1.gif','images/btl_sys1p11.gif','images/btl_sys1p21.gif','images/btl_sys1p31.gif','images/btl_sys2p11.gif')" onmousemove="getCursor();">
+<!-------マウスと共に移動するbody---------->
+<div ID="sonic" style="position:absolute; left:-50; 
+width:33;; height: 34; top: -50" ><img src="images/cur_emerl.gif" width="48" height="48">
+</div>
+<script language="Javascript"> 
+init(); 
+interOM = setInterval('openMassage()',1) 
+</script>
+<!-------マウスと共に移動するbodyここまで---------->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="178" height="97"><img src="images/flm01.gif" width="178" height="97" border="0" usemap="#Map2"></td>
+    <td width="512"><table width="512" height="97" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td><img src="images/flm02.gif" alt="SONICTEAM" width="512" height="35" border="0" usemap="#Map"></td>
+        </tr>
+        <tr>
+          <td><img src="images/flm03_btlbtl.gif" width="305" height="62"><img src="images/btl_stm_ttl1b.gif" width="207" height="62"></td>
+        </tr>
+      </table></td>
+    <td background="images/flm05.gif"><img src="images/flm05.gif" width="16" height="97"></td>
+  </tr>
+</table>
+<map name="Map">
+  <area shape="rect" coords="405,4,484,31" href="http://www.sonicteam.com/" target="_top" alt="SONICTEAM">
+</map>
+<table width="690" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="178" valign="top"><div align="right"><a href="index.html" target="_top"><img src="images/flm06.gif" alt="ソニックバトル" width="178" height="49" border="0"></a><br>
+	<img src="../images/top/index2/alpha.gif" width="5" height="5"><br>
+        <a href="index.html" target="_top" onMouseOver="MM_swapImage('b1','','images/btn2_top1.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/btn2_top0.gif" name="b1" width="167" height="29" border="0" id="b1"></a><br>
+        <a href="news.html" target="_top" onMouseOver="MM_swapImage('b2','','images/btn2_news1.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/btn2_news0.gif" name="b2" width="167" height="29" border="0" id="b2"></a><br>
+        <a href="battle.html" target="_top"><img src="images/btn2_btl1.gif" name="b3" width="167" height="29" border="0" id="b3"></a><br>
+        <a href="battle_stm.html" target="_top"><img src="images/btn2_btl_stm1.gif" name="b3a" width="167" height="24" border="0" id="b3a"></a><br>
+        <a href="battle_str.html" target="_top" onMouseOver="MM_swapImage('b3b','','images/btn2_btl_str1.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/btn2_btl_str0.gif" name="b3b" width="148" height="24" border="0" id="b3b"></a><br>
+        <a href="battle_btl.html" target="_top" onMouseOver="MM_swapImage('b3c','','images/btn2_btl_btl1.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/btn2_btl_btl0.gif" name="b3c" width="148" height="25" border="0" id="b3c"></a><br>
+        <img src="images/btn2_ss.gif" width="148" height="8"><br>
+        <a href="chara.html" target="_top" onMouseOver="MM_swapImage('b4','','images/btn2_chara1.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/btn2_chara0.gif" name="b4" width="167" height="29" border="0" id="b4"></a><br>
+        <a href="dl.html" target="_top" onMouseOver="MM_swapImage('b5','','images/btn2_dl1.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/btn2_dl0.gif" name="b5" width="167" height="29" border="0" id="b5"></a><br>
+      </div></td>
+    <td valign="top"> <table width="512" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="32" background="images/flmwin_l.gif"><img src="images/flmwin_l.gif" width="32" height="16"></td>
+          <td background="images/flmwin_bg.gif"><img src="../images/top/index2/alpha.gif" width="6" height="5"></td>
+          <td width="162">
+<div align="right"><img src="images/btl_stm_ttl2.gif" width="169" height="26"></div></td>
+        </tr>
+      </table>
+      <table width="512" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="32" background="images/flmwin_l.gif"><img src="images/flmwin_l.gif" width="32" height="16"></td>
+          <td background="images/flmwin_bg.gif"><div align="center"><br>
+              <table width="420" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><table width="200" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td> <img src="images/wins_tsb.gif" width="200" height="12"><br> 
+                          <table width="200" border="0" cellspacing="0" cellpadding="0">
+                            <tr> 
+                              <td width="24" valign="top" background="images/wins_lb.gif"><img src="images/wins_ltb.gif" width="24" height="12"></td>
+                              <td background="images/wins_bgb.gif"> <div align="center"><font color="#FFFFFF" size="2"><strong><font color="#000000">一人ですぐに遊べるモード</font></strong><br>
+                                  <img src="../images/top/index2/alpha.gif" width="5" height="5"><br>
+                                  <a href="battle_stm.html" target="_top" onMouseOver="MM_swapImage('sys11','','images/btl_sys1p11.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/btl_sys1p10.gif" name="sys11" width="118" height="15" border="0" id="sys1"></a><br>
+                                  <a href="battle_stm_ch.html" target="_top" onMouseOver="MM_swapImage('sys21','','images/btl_sys1p21.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/btl_sys1p20.gif" name="sys21" width="118" height="15" border="0" id="sys2"></a><br>
+                                  <a href="battle_stm_tr.html" target="_top" onMouseOver="MM_swapImage('sys31','','images/btl_sys1p31.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/btl_sys1p30.gif" name="sys31" width="118" height="15" border="0" id="sys3"></a> 
+                                  </font></div></td>
+                              <td width="12" background="images/wins_rb.gif"><img src="images/wins_rb.gif" width="12" height="12"></td>
+                            </tr>
+                          </table>
+                          <img src="images/wins_bsb.gif" width="200" height="12"></td>
+                      </tr>
+                    </table></td>
+                  <td><div align="right"> 
+                      <table width="200" border="0" cellspacing="0" cellpadding="0">
+                        <tr> 
+                          <td> <img src="images/wins_tsb.gif" width="200" height="12"><br> 
+                            <table width="200" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="24" valign="top" background="images/wins_lb.gif"><img src="images/wins_ltb.gif" width="24" height="12"></td>
+                                <td background="images/wins_bgb.gif"> <div align="center"><font color="#FFFFFF" size="2"><strong><font color="#000000">みんなでﾜｲﾜｲ遊ぶモード</font></strong><br>
+                                    <img src="../images/top/index2/alpha.gif" width="5" height="5"><br>
+                                    <a href="battle_stm_btl.html" target="_top" onMouseOver="MM_swapImage('sys41','','images/btl_sys2p11.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/btl_sys2p10.gif" name="sys41" width="118" height="15" border="0" id="sys4"></a><br>
+                                    <img src="images/btl_sys2p21.gif" name="sys51" width="118" height="15" border="0" id="sys5"><br>
+                                    <img src="../images/top/index2/alpha.gif" width="5" height="15"> 
+                                    </font></div></td>
+                                <td width="12" background="images/wins_rb.gif"><img src="images/wins_rb.gif" width="12" height="12"></td>
+                              </tr>
+                            </table>
+                            <img src="images/wins_bsb.gif" width="200" height="12"></td>
+                        </tr>
+                      </table>
+                    </div></td>
+                </tr>
+              </table>
+              <br>
+              <br>
+              <table width="368" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/btl_pt_ttl.gif" width="154" height="43"></td>
+                  <td valign="bottom">
+<div align="right"></div></td>
+                </tr>
+              </table>
+              <br>
+              <table width="420" border="0" cellspacing="2" cellpadding="2">
+                <tr>
+                  <td><p><font color="#FFFFFF" size="2">『ソニックバトル』のストーリーモードを進めると、パーティモードに5つのミニゲームが登場するぞ！<br>
+                      パーティーモードの5つのゲームのうち、マインハント以外の4つはマルチカートリッジシステム！みんなでゲームボーイアドバンス本体と通信ケーブルさえ持ちよれば、ソフトは1本でみんなわいわい遊べちゃう！<br>
+                      <br>
+                      <font color="#33CCFF">&lt;ヒトクチメモ&gt;<br>
+                      「パーティーモード」にはどこかで見たことのあるキャラクターがチラっと姿を見せることがあるらしいぞ！<br>
+                      『</font></font><font color="#33CCFF" size="2">ソニックラッシュ』と『スピードデーモン』が怪しいかも…？ 
+                      </font></p>
+                    </td>
+                </tr>
+              </table>
+              <br>
+              <table width="420" border="0" cellspacing="2" cellpadding="2">
+                <tr> 
+                  <td width="240" valign="top"><img src="images/pt01.gif" width="240" height="160"></td>
+                  <td valign="top"><font size="2"><strong><font color="#FFCC00"> 
+                    『ソニックラッシュ』</font></strong><font color="#FFCC00" size="1">（2～4人）</font><br>
+                    <br>
+                    <font color="#CCCCCC">十字ボタンでソニック達を動かして、Aボタンで回転スピードアップ！<br>
+                    体当たりで相手をコーナーから落とした数が多い人が勝ち！<br>
+                    自滅しないように注意！?</font></font></td>
+                </tr>
+              </table>
+              <br>
+              <table width="420" border="0" cellspacing="2" cellpadding="2">
+                <tr> 
+                  <td>　</td>
+                  <td valign="top"><font size="2"><strong><font color="#FFCC00"> 
+                    『<font size="1">テイルスの</font>フライングゲット』<br>
+                    </font></strong><font color="#FFCC00" size="1">（</font><font size="2"><font color="#FFCC00" size="1">2～4人</font></font><font color="#FFCC00" size="1">）</font><br>
+                    <br>
+                    <font color="#CCCCCC">十字ボタンでテイルス達を動かして、Aボタン連打で上へ飛ぶぞ！<br>
+                    リングを先に20枚集めた人が勝ち！バクダンに触るとリングを落としてしまうぞ！ </font></font></td>
+                  <td width="240" valign="top"><img src="images/pt02.gif" width="240" height="160"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="420" border="0" cellspacing="2" cellpadding="2">
+                <tr> 
+                  <td width="240" valign="top"><img src="images/pt03.gif" width="240" height="160"></td>
+                  <td valign="top"><font size="2"><strong><font color="#FFCC00"> 
+                    『マインハント』</font></strong><font color="#FFCC00" size="1">（1人）</font><br>
+                    <br>
+                    <font color="#CCCCCC">十字ボタンでカーソルを動かして、Aボタンで穴を掘れ！<br>
+                    出てきた数字は、その数字のまわり8か所に全部でにいくつのバクダンが隠れているかをあらわしてるぞ！<br>
+                    バクダン全部の位置を推理して、Bボタンで目印のチャオを置こう！</font></font></td>
+                </tr>
+              </table>
+              <table width="420" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="18"><font size="2"><font color="#CCCCCC"><font size="1"><font color="#33CCFF">※マインハントは『ソニックバトル』を持っていない友達にもゲームボーイアドバンスと通信ケーブルがあればコピーできる！電源を切るまではソフトが無くても遊べるぞ！</font></font></font></font></td>
+                </tr>
+              </table>
+              <br>
+              <table width="420" border="0" cellspacing="2" cellpadding="2">
+                <tr> 
+                  <td>　</td>
+                  <td valign="top"><font size="2"><strong><font color="#FFCC00"> 
+                    『スピードデーモン』</font></strong><font color="#FFCC00" size="1">（</font><font size="2"><font color="#FFCC00" size="1">2～4人</font></font><font color="#FFCC00" size="1">）</font><br>
+                    <br>
+                    <font color="#CCCCCC">十字ボタンでソニック達を動かして、ジャンプ台に乗ったときにタイミング良くAボタンを押せばジャンプ＆スピードアップ。<br>
+                    一番早くゴールした人が勝ちだ！</font></font></td>
+                  <td width="240" valign="top"><img src="images/pt04.gif" width="240" height="160"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="420" border="0" cellspacing="2" cellpadding="2">
+                <tr> 
+                  <td width="240" valign="top"><img src="images/pt05.gif" width="240" height="160"></td>
+                  <td valign="top"><font size="2"><strong><font color="#FFCC00"> 
+                    『トレジャーアイランド』</font></strong><font color="#FFCC00" size="1"><br>
+                    （2～4人）</font><br>
+                    <br>
+                    <font color="#CCCCCC">十字ボタンでエミー達を動かして、Aボタンで地面にもぐれ！<br>
+                    ヒント矢印をたよりにエメラルドを先に3個集めよう！</font></font></td>
+                </tr>
+              </table>
+              <br>
+              <table width="300" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td>
+<div align="left"><a href="battle_stm_btl.html" target="_top" onMouseOver="MM_swapImage('bsb','','images/btns_back1.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/btns_back.gif" name="bsb" width="52" height="19" border="0" id="bsb"></a></div></td>
+                  <td width="60"><div align="right"><img src="../images/top/index2/alpha.gif" width="5" height="5"></div></td>
+                </tr>
+              </table>
+              <br>
+              <img src="images/webicon.gif" width="185" height="67" align="left"><img src="../images/top/index2/alpha.gif" width="6" height="5"><br>
+            </div></td>
+          <td width="32" background="images/flmwin_r.gif"><img src="images/flmwin_r.gif" width="32" height="16"></td>
+        </tr>
+      </table>
+      <img src="images/flmwin_btm_btl.gif" width="512" height="66"><br> <img src="images/flmwin_st.gif" width="507" height="34"><br> 
+      <table width="512" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="6" background="images/flmwin_sl.gif"><img src="images/flmwin_sl.gif" width="6" height="6"></td>
+          <td width="150" background="images/flmwin_bg.gif"><div align="center"><a href="http://segadirect.jp/Catalog/CustomPages/CustomDetail1.aspx?SKU=0101010-00036&File=sonicbattle_gba.htm" target="_blank"><img src="images/bnr_direct.gif" alt="セガダイレクト" width="98" height="54" border="0"></a></div></td>
+          <td width="6" valign="top" background="images/flmwin_sline.gif"><img src="images/flmwin_sline.gif" width="6" height="6"></td>
+          <td background="images/flmwin_bg.gif"><img src="images/alpha.gif" width="12" height="54" align="left"> 
+            <font color="#FFFFFF" size="2">セガダイレクトで注文すると、『ソニックバトル』スーパーボールをプレゼント！<font color="#999999" size="1">※無くなり次第終了となります。</font><font size="1"><br>
+            <strong><a href="http://segadirect.jp/Catalog/CustomPages/CustomDetail1.aspx?SKU=0101010-00036&File=sonicbattle_gba.htm" target="_blank"><font color="#00FF00">&gt;&gt; 
+          <font size="2">詳細はコチラ！</font></font></a></strong></font></font> <br></td>
+          <td width="6" background="images/flmwin_sr.gif"><img src="images/flmwin_sr.gif" width="6" height="6"></td>
+          <td width="5"><img src="images/alpha.gif" width="5" height="5"></td>
+        </tr>
+      </table>
+      <img src="images/flmwin_sb.gif" width="507" height="6"></td>
+  </tr>
+</table>
+<map name="Map2">
+  <area shape="rect" coords="3,55,176,96" href="index.html" target="_top" alt="ソニックバトル">
+</map>
+<img src="images/alpha.gif" width="5" height="5"> 
+</body>
+</html>

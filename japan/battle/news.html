@@ -1,0 +1,586 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<title>ソニックバトル</title>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+body{
+	scrollbar-base-color:#ff6600;
+	scrollbar-arrow-color:white;
+}
+.style1 {
+	font-size: 10px;
+	color: #FF3300;
+}
+.style2 {color: #660000}
+.style4 {
+font-size: 12px;
+color: #996600;}
+.style5 {
+	font-size: 12px;
+	color: #660000;
+}
+-->
+</style>
+<!-------マウスと共に移動するhead---------->
+<SCRIPT LANGUAGE="Javascript">
+var Ex = 0,Ey = 0 
+function move(e) { 
+Ex = e.pageX; 
+Ey = e.pageY;} 
+function init() { 
+NC6 = IE6 = 0; 
+if (navigator.appName == "Netscape" && navigator.appVersion.charAt(0) >=4) { 
+NC6 = true; 
+document.captureEvents(Event.MOUSEMOVE); 
+document.onMouseMove=move; 
+IMGx = document.layers['sonic'].clip.width; 
+IMGy = document.layers['sonic'].clip.height;} 
+if (navigator.appName == "Microsoft Internet Explorer" 
+&& navigator.appVersion.charAt(0) >=4) { 
+IE6 = true; 
+IMGx = sonic.offsetWidth; 
+IMGy = sonic.offsetHeight;}} 
+function getCursor() { 
+if (IE6) {Ex = event.clientX; 
+Ey = event.clientY; 
+event.returnValue=false;}} 
+function openMassage() { 
+if (IE6) { 
+Sx = document.body.scrollLeft; 
+Sy = document.body.scrollTop; 
+sonic.style.posLeft += (Ex+Sx+20 - sonic.style.posLeft)/10; 
+sonic.style.posTop += (Ey+Sy+20 - sonic.style.posTop)/10;} 
+if (NC6) { 
+document.layers['sonic'].left += (Ex+20 - document.layers['sonic'].left)/10; 
+document.layers['sonic'].top += (Ey+20 - document.layers['sonic'].top)/10;}}
+//-->
+</SCRIPT>
+<!-------マウスと共に移動するheadここまで---------->
+</head>
+
+<body bgcolor="#FFCC00" background="images/bg_yellow.gif" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('images/btn2_btl1.gif','images/btn2_chara1.gif','images/btn2_dl1.gif','images/btn2_bbs1.gif','images/btn2_top1.gif')" onmousemove="getCursor();">
+<!-------マウスと共に移動するbody---------->
+<div ID="sonic" style="position:absolute; left:-50; 
+width:33;; height: 34; top: -50" ><img src="images/cur_emerl.gif" width="48" height="48">
+</div>
+<script language="Javascript"> 
+init(); 
+interOM = setInterval('openMassage()',1) 
+</script>
+<!-------マウスと共に移動するbodyここまで---------->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="178" height="97"><img src="images/flm01.gif" width="178" height="97" border="0" usemap="#Map2"></td>
+    <td width="512"><table width="512" height="97" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td><img src="images/flm02.gif" alt="SONICTEAM" width="512" height="35" border="0" usemap="#Map"></td>
+        </tr>
+        <tr>
+          <td><img src="images/flm03n.gif" width="305" height="62"><img src="images/news_ttl1n.gif" width="207" height="62"></td>
+        </tr>
+      </table></td>
+    <td background="images/flm05.gif"><img src="images/flm05.gif" width="16" height="97"></td>
+  </tr>
+</table>
+<map name="Map">
+  <area shape="rect" coords="405,4,484,31" href="http://www.sonicteam.com/" target="_top" alt="SONICTEAM">
+</map>
+<table width="690" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="178" valign="top"><div align="right"><a href="index.html" target="_top"><img src="images/flm06.gif" alt="ソニックバトル" width="178" height="49" border="0"></a><br>
+        <img src="../images/top/index2/alpha.gif" width="5" height="5"><br>
+		<a href="index.html" target="_top" onMouseOver="MM_swapImage('b1','','images/btn2_top1.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/btn2_top0.gif" name="b1" width="167" height="29" border="0" id="b1"></a><br>
+        <img src="images/btn2_news1.gif" name="b2" width="167" height="29" border="0" id="b2"><br>
+        <a href="battle.html" target="_top" onMouseOver="MM_swapImage('b3','','images/btn2_btl1.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/btn2_btl0.gif" name="b3" width="167" height="29" border="0" id="b3"></a><br>
+        <a href="chara.html" target="_top" onMouseOver="MM_swapImage('b4','','images/btn2_chara1.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/btn2_chara0.gif" name="b4" width="167" height="29" border="0" id="b4"></a><br>
+        <a href="dl.html" target="_top" onMouseOver="MM_swapImage('b5','','images/btn2_dl1.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/btn2_dl0.gif" name="b5" width="167" height="29" border="0" id="b5"></a><br>
+      </div></td>
+    <td valign="top"> <table width="512" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="32" background="images/flmwin_l.gif"><img src="images/flmwin_l.gif" width="32" height="16"></td>
+          <td background="images/flmwin_bg.gif"><img src="../images/top/index2/alpha.gif" width="6" height="5"></td>
+          <td width="138"><div align="right"><img src="images/news_ttl2.gif" width="138" height="25"></div></td>
+        </tr>
+      </table>
+      <table width="512" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="32" background="images/flmwin_l.gif"><img src="images/flmwin_l.gif" width="32" height="16"></td>
+          <td background="images/flmwin_bg.gif"><div align="center"> 
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td width="25"><img src="images/new_btl1.gif" width="25" height="32" vspace="2"></td>
+                  <td><img src="images/new_btl2.gif" width="42" height="32"></td>
+                </tr>
+              </table>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td><img src="images/wins_tt.gif" width="280" height="12"><br>
+                      <table width="280" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td width="24" valign="top" background="images/wins_ltt.gif"><img src="images/wins_lttp.gif" width="24" height="12"></td>
+                          <td background="images/wins_bgt.gif"><div align="left"><font color="#660000" size="2">12/17：</font><font color="#FFFFFF" size="2"><br>
+                                  </font><span class="style5">ソニックバトルの発売１周年を記念して、<br>
+                              「コンビネーションパスワード」のすべてを一挙大公開！これで覚醒したエメルの必殺技が使えるぞ！<br>                            
+                              <br>
+                              <strong>&lt;パスワードの入力方法&gt;</strong><br>
+                              まずストーリーモードで「エメル」のエピソードをはじめる。<br>
+                              セントラルシティにある「ソニックチーム」に入れるようになったら、下のパスワードをそれぞれ入力する。<br>
+                              正しく入力されれば、スキルへんしゅう画面で「グランドパワー」に登録されているはずだ！</span><br>
+                            <span class="style1"><br>
+                            </span>
+                            <table width="220" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="48"><span class="style1"><span class="style2"><img src="images/ps_sonic.gif" width="48" height="48"></span></span></td>
+                                <td><span class="style1"><span class="style2">　 <strong>ソニックコンビネーション</strong><br>
+                                        <span class="style4">　 パスワード　７５６１９<br>
+  　 スキルID　　２３８</span></span></span></td>
+                              </tr>
+                            </table>
+                            <span class="style1"><span class="style2">                            </span></span>
+                              <table width="220" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td width="48"><span class="style1"><span class="style2"><img src="images/ps_tails.gif" width="48" height="48"></span></span></td>
+                                  <td><span class="style1"><span class="style2">　 <strong>テイルスコンビネーション</strong><br>
+                                        <span class="style4">　 パスワード　ＯＴｒＯＩ<br>
+　 スキルID　　２４６</span></span></span></td>
+                                </tr>
+                              </table>
+                            <span class="style1"><span class="style2">                            </span></span>
+                              <table width="220" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td width="48"><span class="style1"><span class="style2"><img src="images/ps_knuckles.gif" width="48" height="48"></span></span></td>
+                                  <td><span class="style1"><span class="style2">　 <strong>ナックルズコンビネーション</strong><br>
+                                        <span class="style4">　 パスワード　ｙＵ３Ｄａ<br>
+　 スキルID　　２５４</span></span></span></td>
+                                </tr>
+                              </table>
+                            <span class="style1"><span class="style2">                            </span></span>
+                              <table width="220" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td width="48"><span class="style1"><span class="style2"><img src="images/ps_rouge.gif" width="48" height="48"></span></span></td>
+                                  <td><span class="style1"><span class="style2">　 <strong>ルージュコンビネーション</strong><br>
+                                        <span class="style4">　 パスワード　ＡｈｎＶｏ<br>
+　 スキルID　　２７０</span></span></span></td>
+                                </tr>
+                              </table>
+                            <span class="style1"><span class="style2">                            </span></span>
+                              <table width="220" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td width="48"><span class="style1"><span class="style2"><img src="images/ps_amy.gif" width="48" height="48"></span></span></td>
+                                  <td><span class="style1"><span class="style2">　 <strong>エミーコンビネーション</strong><br>
+                                        <span class="style4">　 パスワード　ａｌｏｇＫ<br>
+　 スキルID　　２７８</span></span></span></td>
+                                </tr>
+                              </table>
+                            <span class="style1"><span class="style2">                            </span></span>
+                              <table width="220" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td width="48"><span class="style1"><span class="style2"><img src="images/ps_cream.gif" width="48" height="48"></span></span></td>
+                                  <td><span class="style1"><span class="style2">　 <strong>クリームコンビネーション</strong><br>
+                                        <span class="style4">　 パスワード　ＺＡｈａｎ<br>
+　 スキルID　　２８６</span></span></span></td>
+                                </tr>
+                              </table>
+                            <span class="style1"><span class="style2">                            </span></span>
+                              <table width="220" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td width="48"><span class="style1"><span class="style2"><img src="images/ps_shadow.gif" width="48" height="48"></span></span></td>
+                                  <td><span class="style1"><span class="style2">　 <strong>シャドウコンビネーション</strong><br>
+                                        <span class="style4">　 パスワード　ＡｒｍＩａ<br>
+　 スキルID　　２６２</span></span></span></td>
+                                </tr>
+                              </table>
+                            <span class="style1"><span class="style2">                            </span></span>
+                              <table width="220" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td width="48"><span class="style1"><span class="style2"><img src="images/ps_e102.gif" width="48" height="48"></span></span></td>
+                                  <td><span class="style1"><span class="style2">　 <strong>ガンマコンビネーション</strong><br>
+                                        <span class="style4">　 パスワード　ｔＳｕｅＴ<br>
+　 スキルID　　２９４</span></span></span></td>
+                                </tr>
+                              </table>
+                            <span class="style1"><span class="style2">                            </span></span>
+                              <table width="220" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td width="48"><span class="style1"><span class="style2"><img src="images/ps_chaos.gif" width="48" height="48"></span></span></td>
+                                  <td><span class="style1"><span class="style2">　 <strong>カオスコンビネーション</strong><br>
+                                        <span class="style4">　 パスワード　ＥｋｉＴａ<br>
+　 スキルID　　３０２</span></span></span></td>
+                                </tr>
+                              </table>
+                            </div></td>
+                          <td width="12" background="images/wins_rt.gif"><img src="images/wins_rt.gif" width="12" height="12"></td>
+                        </tr>
+                      </table>
+                      <img src="images/wins_bt.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tt.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ltt.gif"><img src="images/wins_lttp.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgt.gif"><font color="#660000" size="2"><a href="http://sonic.sega.jp/advance3/" target="_top"><img src="images/gmel.gif" width="65" height="100" border="0" align="right"></a>03/12：</font><font color="#FFFFFF" size="2"><br>
+                          <strong><a href="http://sonic.sega.jp/advance3/" target="_top"><font color="#FFFF00">[ソニックアドバンス3]</font></a></strong><font color="#660000">：<br>
+                          エメルとそっくりな謎のキャラクター「ジーメル」紹介！<br>
+                          詳細は<a href="http://sonic.sega.jp/advance3/" target="_top"><strong><font color="#FFFF00">『ソニックアドバンス3』</font></strong></a>のページでチェック！ 
+                        </font></font></td>
+                        <td width="12" background="images/wins_rt.gif"><img src="images/wins_rt.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bt.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tn.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ln.gif"><img src="images/wins_ltn.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgn.gif"><font color="#FFFFFF" size="2"><font color="#FFFFFF" size="2"><strong><a href="../cafe/index.html" target="_blank"></a></strong></font></font><font color="#660000" size="2">01/21：</font><font color="#FFFFFF" size="2"><br>
+                          <strong><a href="battle_stm_pt.html" target="_top"><font color="#FFFF00">[パーティーモード]</font></a></strong><font color="#660000">：5つのミニゲームを紹介</font></font></td>
+                        <td width="12" background="images/wins_rn.gif"><img src="images/wins_rn.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bn.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tn.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ln.gif"><img src="images/wins_ltn.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgn.gif"><font color="#FFFFFF" size="2"><font color="#FFFFFF" size="2"><strong><a href="../cafe/index.html" target="_blank"></a></strong></font></font><font color="#660000" size="2">01/14：<strong></strong></font><font color="#FFFFFF" size="2"><br>
+                          <strong></strong></font> <table width="240" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FF0000">
+                            <tr> 
+                              <td><div align="center"><img src="images/logo_s.gif" width="143" height="66" vspace="1"></div></td>
+                            </tr>
+                          </table>
+                          <font color="#FFFFFF" size="2"><font color="#660000"> 
+                          「第19回 次世代ワールドホビーフェア」に『ソニックバトル』を出展！<br>
+                          </font></font> <table width="220" border="0" align="center" cellpadding="1" cellspacing="1">
+                            <tr> 
+                              <td width="80"> <div align="right"><font color="#660000" size="2">大阪会場：</font></div></td>
+                              <td><font color="#660000" size="2">2004年1月18日（日）</font></td>
+                            </tr>
+                            <tr> 
+                              <td width="80" valign="top"> <div align="right"><font color="#660000" size="2">東京会場：</font></div></td>
+                              <td><font color="#660000" size="2">2004年1月24日（土）<br>
+                                2004年1月25日（日）</font></td>
+                            </tr>
+                            <tr> 
+                              <td width="80"> <div align="right"><font color="#660000" size="2">名古屋会場：</font></div></td>
+                              <td><font color="#660000" size="2">2004年2月1日（日）</font></td>
+                            </tr>
+                            <tr> 
+                              <td width="80"> <div align="right"><font color="#660000" size="2">福岡会場：</font></div></td>
+                              <td><font color="#660000" size="2">2004年2月8日（日）</font></td>
+                            </tr>
+                          </table></td>
+                        <td width="12" background="images/wins_rn.gif"><img src="images/wins_rn.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bn.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tn.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ln.gif"><img src="images/wins_ltn.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgn.gif"><font color="#FFFFFF" size="2"><font color="#FFFFFF" size="2"><strong><a href="../cafe/index.html" target="_blank"></a></strong></font></font><font color="#660000" size="2">01/14：<strong></strong></font><font color="#FFFFFF" size="2"><br>
+                          <strong><a href="chara_sh1.html" target="_top"><font color="#FFFF00">[ナカマだ！]</font></a></strong><font color="#660000">：シャドウの必殺技を紹介！<br>
+                          <strong><a href="dl.html" target="_top"><font color="#FFFF00">[オトせ！]</font></a></strong>：シャドウのｶﾍﾞｶﾞﾐ&amp;ｱｲｺﾝを追加！</font></font></td>
+                        <td width="12" background="images/wins_rn.gif"><img src="images/wins_rn.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bn.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tn.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ln.gif"><img src="images/wins_ltn.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgn.gif"><font color="#FFFFFF" size="2"><font color="#FFFFFF" size="2"><strong><a href="../cafe/index.html" target="_blank"></a></strong></font></font><font color="#660000" size="2">01/07：</font><font color="#FFFFFF" size="2"><br>
+                          <strong><a href="chara_cr1.html" target="_top"><font color="#FFFF00">[ナカマだ！]</font></a></strong><font color="#660000">：クリームの必殺技を紹介！<br>
+                          <strong><a href="dl.html" target="_top"><font color="#FFFF00">[オトせ！]</font></a></strong>：クリームのｶﾍﾞｶﾞﾐ&amp;ｱｲｺﾝを追加！</font></font></td>
+                        <td width="12" background="images/wins_rn.gif"><img src="images/wins_rn.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bn.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tn.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ln.gif"><img src="images/wins_ltn.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgn.gif"><font color="#FFFFFF" size="2"><font color="#FFFFFF" size="2"><strong><a href="http://www.sonicteam.com/cafe/index.html" target="_blank"><font color="#FFFF00"><img src="images/wp_battle.gif" width="120" height="120" border="0" align="right" alt="ソニックカフェ"></font></a></strong></font></font><font color="#660000" size="2">12/27：</font><font color="#FFFFFF" size="2"><br>
+                          <strong><a href="http://www.sonicteam.com/cafe/index.html" target="_blank"><font color="#FFFF00">[ソニックカフェ]</font></a></strong><font color="#660000">：<br>
+                        2003年12月30日より、i モード「Flashジグソーパズル」に『ソニックバトル』が無料で登場！見事完成させると待受け画像がゲットできるぞ！</font></font></td>
+                        <td width="12" background="images/wins_rn.gif"><img src="images/wins_rn.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bn.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tn.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ln.gif"><img src="images/wins_ltn.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgn.gif"><font color="#660000" size="2">12/24：</font><font color="#FFFFFF" size="2"><br>
+                          <strong><a href="chara_am1.html" target="_top"><font color="#FFFF00">[ナカマだ！]</font></a></strong><font color="#660000">：エミーの必殺技を紹介！<br>
+                          <strong><a href="dl.html" target="_top"><font color="#FFFF00">[オトせ！]</font></a></strong>：エミーのｶﾍﾞｶﾞﾐ&amp;ｱｲｺﾝを追加！</font></font></td>
+                        <td width="12" background="images/wins_rn.gif"><img src="images/wins_rn.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bn.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tn.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ln.gif"><img src="images/wins_ltn.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgn.gif"><font color="#660000" size="2">12/17：</font><font color="#FFFFFF" size="2"><br>
+                          <strong><a href="chara_rg1.html" target="_top"><font color="#FFFF00">[ナカマだ！]</font></a></strong><font color="#660000">：ルージュの必殺技を紹介！<br>
+                          <strong><a href="dl.html" target="_top"><font color="#FFFF00">[オトせ！]</font></a></strong>：ﾙｰｼﾞｭのｶﾍﾞｶﾞﾐ&amp;ｱｲｺﾝを追加！<br>
+                          <br>
+                          ●小学館より『ソニックバトル』の攻略本<br>
+                          「<strong>ｿﾆｯｸﾊﾞﾄﾙ最強攻略ガイド</strong>」好評発売中！<br>
+                          <font color="#FFFFFF" size="2"><font color="#FFFFFF">攻略本のどこかに秘密のパスワードの１つが載っているぞ！要チェック！</font></font></font></font></td>
+                        <td width="12" background="images/wins_rn.gif"><img src="images/wins_rn.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bn.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tn.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ln.gif"><img src="images/wins_ltn.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgn.gif"><font color="#660000" size="2">12/16：<strong></strong></font><font color="#FFFFFF" size="2"><font color="#660000"><br>
+                          ●12/16～22まで<strong><a href="http://www.wave-master.com/rdc/" target="_blank"><font color="#FFFF00">[ラジオDC]</font></a></strong>にて、「ソニックバトルスペシャル」の特番を放送！</font></font></td>
+                        <td width="12" background="images/wins_rn.gif"><img src="images/wins_rn.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bn.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tn.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ln.gif"><img src="images/wins_ltn.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgn.gif"><font color="#660000" size="2">12/10：</font><font color="#FFFFFF" size="2"><br>
+                          <strong><a href="chara_kn1.html" target="_top"><font color="#FFFF00">[ナカマだ！]</font></a></strong><font color="#660000">：ナックルズを紹介！<br>
+                          <strong><a href="dl.html" target="_top"><font color="#FFFF00">[オトせ！]</font></a></strong>：ﾅｯｸﾙｽﾞのｶﾍﾞｶﾞﾐ&amp;ｱｲｺﾝを追加！</font></font></td>
+                        <td width="12" background="images/wins_rn.gif"><img src="images/wins_rn.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bn.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tn.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ln.gif"><img src="images/wins_ltn.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgn.gif"><font color="#FFFFFF" size="2"><font color="#FFFFFF" size="2"><strong><a href="http://www.sonicteam.com/cafe/index.html" target="_blank"><font color="#FFFF00"><img src="images/shot.gif" width="100" height="70" border="0" align="right"></font></a></strong></font></font><font color="#660000" size="2">12/04：</font><font color="#FFFFFF" size="2"><font color="#FFFFFF" size="2"><strong><a href="../cafe/index.html" target="_blank"></a></strong></font><br>
+                          <strong><a href="http://www.sonicteam.com/cafe/index.html" target="_blank"><font color="#FFFF00">[ソニックカフェ]</font></a></strong><font color="#660000">：<br>
+                          </font><font color="#FFFFFF" size="2"><strong><a href="../cafe/index.html" target="_blank"></a></strong></font><font color="#660000"> 
+                          「パーティーモード」に収録されている『テイルスのフライングゲット』がi アプリとして無料配信！<br>
+                          その他、待受け画像や着信メロディーも！ <br>
+                          <br>
+													</font></font></td>
+                        <td width="12" background="images/wins_rn.gif"><img src="images/wins_rn.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bn.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tn.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ln.gif"><img src="images/wins_ltn.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgn.gif"><font color="#660000" size="2">12/03：</font><font color="#FFFFFF" size="2"><br>
+                          <strong><a href="chara_chaos1.html" target="_top"><font color="#FFFF00">[ナカマだ！]</font></a></strong><font color="#660000">：カオスを紹介！<br>
+                          <strong><a href="dl.html" target="_top"><font color="#FFFF00">[オトせ！]</font></a></strong>：カオスのｶﾍﾞｶﾞﾐ&amp;ｱｲｺﾝを追加！<br>
+                          <br>
+                          </font><font color="#FFFFFF" size="2"><font color="#660000">●12月5日(金)発売の<a href="http://www.nindori.com/" target="_blank"><font color="#660000">『<strong>ニンテンドードリーム</strong>　1/6号』</font></a>は『ソニックバトル』が表紙！<br>
+                          <font color="#FFFFFF">表紙＆裏表紙のどこかに1ヵ所に、『ソニックバトル』で使える重要なパスワードが隠されているようだ！</font>これは要チェック！</font></font></font></td>
+                        <td width="12" background="images/wins_rn.gif"><img src="images/wins_rn.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bn.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tn.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ln.gif"><img src="images/wins_ltn.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgn.gif"><font color="#660000" size="2">11/27：</font><font color="#FFFFFF" size="2"><br>
+                          <font color="#660000" size="2"><strong>[ニュース]</strong>：<br>
+                          「わくわくゲームパーティー」で『ソニックバトル』を体験しよう！オリジナルグッズも手に入るかも？<a href="http://www.sega.co.jp/event/ev_03waku.html" target="_blank"><font color="#660000">&gt;&gt;詳細</font></a></font></font></td>
+                        <td width="12" background="images/wins_rn.gif"><img src="images/wins_rn.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bn.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tn.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ln.gif"><img src="images/wins_ltn.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgn.gif"><font color="#660000" size="2">11/26：</font><font color="#FFFFFF" size="2"><br>
+                          <strong><a href="chara_e1021.html" target="_top"><font color="#FFFF00">[ナカマだ！]</font></a></strong><font color="#660000">：E-102 
+                          ガンマを紹介！<br>
+                          <strong><a href="dl.html" target="_top"><font color="#FFFF00">[オトせ！]</font></a></strong>：E-102 
+                          ガンマの<br>
+                          　　　　　　　 ｶﾍﾞｶﾞﾐ&amp;ｱｲｺﾝを追加！</font></font></td>
+                        <td width="12" background="images/wins_rn.gif"><img src="images/wins_rn.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bn.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tn.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ln.gif"><img src="images/wins_ltn.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgn.gif"><font color="#660000" size="2">11/19：<br>
+                          </font><font color="#FFFFFF" size="2"><strong><a href="chara_ta1.html" target="_top"><font color="#FFFF00">[ナカマだ！]</font></a></strong><font color="#660000">：テイルスの必殺技を紹介！<br>
+                          <strong><a href="dl.html" target="_top"><font color="#FFFF00">[オトせ！]</font></a></strong>：テイルスのｶﾍﾞｶﾞﾐ&amp;ｱｲｺﾝを追加</font></font><font color="#FFFFFF" size="2"><font color="#660000">！</font></font></td>
+                        <td width="12" background="images/wins_rn.gif"><img src="images/wins_rn.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bn.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tn.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ln.gif"><img src="images/wins_ltn.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgn.gif"><font color="#660000" size="2">11/14：<br>
+                          『ソニックバトル』公式サイト リニューアル！</font><font color="#FFFFFF" size="2"><br>
+                          <strong><a href="dl.html" target="_top"><font color="#FFFF00">[ 
+                          オトせ！]</font></a></strong><font color="#660000">から「ソニック」と「エメル」の<br>
+                          カベガミ&amp;アイコンがダウンロードできるぞ！</font></font></td>
+                        <td width="12" background="images/wins_rn.gif"><img src="images/wins_rn.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bn.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <table width="280" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td><img src="images/wins_tn.gif" width="280" height="12"><br> 
+                    <table width="280" border="0" cellspacing="0" cellpadding="0">
+                      <tr> 
+                        <td width="24" valign="top" background="images/wins_ln.gif"><img src="images/wins_ltn.gif" width="24" height="12"></td>
+                        <td background="images/wins_bgn.gif"><font color="#660000" size="2">05/14：<br>
+                          『ソニックバトル』公式サイト オープン！</font></td>
+                        <td width="12" background="images/wins_rn.gif"><img src="images/wins_rn.gif" width="12" height="12"></td>
+                      </tr>
+                    </table>
+                    <img src="images/wins_bn.gif" width="280" height="12"></td>
+                </tr>
+              </table>
+              <br>
+              <img src="images/webicon.gif" width="185" height="67" align="left"><img src="../images/top/index2/alpha.gif" width="6" height="5"><br>
+            </div></td>
+          <td width="32" background="images/flmwin_r.gif"><img src="images/flmwin_r.gif" width="32" height="16"></td>
+        </tr>
+      </table>
+      <img src="images/flmwin_btmn.gif" width="512" height="66"><br> <img src="images/flmwin_st.gif" width="507" height="34"><br> 
+      <table width="512" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="6" background="images/flmwin_sl.gif"><img src="images/flmwin_sl.gif" width="6" height="6"></td>
+          <td width="150" background="images/flmwin_bg.gif"><div align="center"><a href="http://segadirect.jp/Catalog/CustomPages/CustomDetail1.aspx?SKU=0101010-00036&File=sonicbattle_gba.htm" target="_blank"><img src="images/bnr_direct.gif" alt="セガダイレクト" width="98" height="54" border="0"></a></div></td>
+          <td width="6" valign="top" background="images/flmwin_sline.gif"><img src="images/flmwin_sline.gif" width="6" height="6"></td>
+          <td background="images/flmwin_bg.gif"><img src="images/alpha.gif" width="12" height="54" align="left"> 
+            <font color="#FFFFFF" size="2">セガダイレクトで注文すると、『ソニックバトル』スーパーボールをプレゼント！<font color="#999999" size="1">※無くなり次第終了となります。</font><font size="1"><br>
+            <strong><a href="http://segadirect.jp/Catalog/CustomPages/CustomDetail1.aspx?SKU=0101010-00036&File=sonicbattle_gba.htm" target="_blank"><font color="#00FF00">&gt;&gt; 
+          <font size="2">詳細はコチラ！</font></font></a></strong></font></font> <br></td>
+          <td width="6" background="images/flmwin_sr.gif"><img src="images/flmwin_sr.gif" width="6" height="6"></td>
+          <td width="5"><img src="images/alpha.gif" width="5" height="5"></td>
+        </tr>
+      </table>
+      <img src="images/flmwin_sb.gif" width="507" height="6"></td>
+  </tr>
+</table>
+<map name="Map2">
+  <area shape="rect" coords="3,55,176,96" href="index.html" target="_top" alt="ソニックバトル">
+</map>
+<img src="images/alpha.gif" width="5" height="5"> 
+</body>
+</html>

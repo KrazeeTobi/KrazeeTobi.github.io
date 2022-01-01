@@ -1,0 +1,246 @@
+@charset "Shift_JIS";
+
+/* -- YUI -- */
+
+/*
+Copyright (c) 2009, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.7.0
+*/
+
+/**
+ * YUI Fonts
+ * @module fonts
+ * @namespace yui-
+ * @requires 
+ */
+
+/**
+ * Percents could work for IE, but for backCompat purposes, we are using keywords.
+ * x-small is for IE6/7 quirks mode.
+ */
+body {
+font:13px/1.231 arial,helvetica,clean,sans-serif;
+/* for IE6/7 */ 
+*font-size:small; 
+/* for IE Quirks Mode */
+*font:x-small;
+}
+/* for IE8 */ 
+html>/**/body {  
+font-size:small\9;  
+}  
+
+/**
+ * Nudge down to get to 13px equivalent for these form elements
+ */ 
+select,
+input,
+button,
+textarea,
+button {
+font:99% arial,helvetica,clean,sans-serif;
+}
+
+/**
+ * To help tables remember to inherit
+ */
+table {
+font-size:inherit;
+font:100%;
+}
+
+/**
+ * Bump up IE to get to 13px equivalent for these fixed-width elements
+ */
+pre,
+code,
+kbd,
+samp,
+tt {
+font-family:monospace;
+*font-size:108%;
+line-height:100%;
+}
+
+/* -- END YUI -- */
+
+/*--- clearfix ---*/
+.clearfix:after{content:'';display:block;clear:both;height:0;}
+.clearfix{/zoom:1;}
+
+body {
+	background: #FFF;
+	padding: 0;
+	margin: 15px auto 15px;
+	color: #5d5d5d;
+	text-align: center;
+	line-height: 1.4;
+	font-family:"ÇlÇr ÇoÉSÉVÉbÉN","ÉqÉâÉMÉmäpÉS Pro W3","Hiragino Kaku Gothic Pro","ÉÅÉCÉäÉI","Meiryo",Osaka,verdana,arial,clean,sans-serif;
+}
+
+img {
+	border: 0;
+}
+
+hr {	
+    display:block;
+    height:1px;
+    border:0;
+	border-top: 1px solid #bebebe;	
+    margin:0 0 30px;
+    padding:0;
+}
+
+h1 {
+	text-align: center;
+	margin: 30px 0 58px 0;
+}
+
+h2 {
+	border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;  
+	margin-bottom: 20px;
+	background-color: #e5e5e5;
+	padding: 12px 0;
+	font-size: 100%;
+	letter-spacing: 0.5em;
+}
+
+h3 {
+	text-align: left;
+	border-left: 7px #bebebe solid;
+	margin-left: 7px;
+	padding: 2px 0 2px 7px;
+}
+
+a {
+	color: #5d5d5d;
+}
+
+a:hover {
+	color: #aaaaaa;
+}
+
+#win_close{
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
+#wrap {
+	width: 800px;
+	height: auto;
+	background: #FFF;	
+	margin: 0 auto 70px;
+}
+
+#hdr_logo {
+	padding-top: 15px;
+	text-align: left;
+	margin-left: 25px;
+}
+
+#hdr #hdr_date {
+	text-align: right;
+	margin: 40px 0 0 0;
+}
+
+#hdr #hdr_date p {
+	font-size: 93%;
+	margin: 0;
+	padding: 0 7px;
+	line-height: 1.7;
+}
+
+#contentsWrap p {
+	text-align: left;
+	margin: 0 0 40px;
+	padding: 0 6px;
+	font-size: 100%;
+	line-height: 1.8;
+}
+
+#contentsWrap p.text {
+	text-indent:1.0em;
+	margin-left:-1.0em;
+}
+
+#updateWrap {
+	border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+	border: 1px solid #bebebe;
+	margin-bottom: 45px;
+	padding-bottom: 5px;
+}
+
+#updateWrap h2 {
+	margin: 15px;
+}
+
+#updateWrap ul {
+	margin: 15px 15px 8px 15px;
+	padding: 0;
+}
+
+#updateWrap li {
+	text-align: left;
+	font-size: 100%;
+	line-height: 2.2;
+	list-style: none;
+	background: url(../img/listBG.png) no-repeat 22px 6px;
+	margin-left: -15px;
+	padding: 0 10px 3px 40px;
+}
+
+.flowWrap {
+	width: 100%;
+}
+
+.flowWrap .flowImage {
+	width: 320px;
+	float: left;
+	text-align: left;
+	padding-left: 2px;
+	margin-bottom: 35px;
+}
+
+.flowWrap .flowImage img {
+	margin-left: 3px;
+}
+
+.flowWrap .text {
+	float: right;
+	text-align: left;
+	margin: 0;
+	padding: 7px 0 0 0;
+	width: 475px;
+	font-size: 93%;
+	line-height: 1.8;
+}
+
+.notesWrap {
+	margin: 20px 7px 50px 20px;
+	padding: 0;
+}
+
+.notesWrap li {
+	text-align: left;
+	font-size: 93%;
+	line-height: 1.8;
+	text-indent: -1em;
+	margin-left: 1.2em;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 10px 0;
+}
+
+.copyright {
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: center;
+	font-size: 80%;
+	margin-top: -14px;
+}

@@ -1,0 +1,213 @@
+@charset "shift_jis";
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+	name : wii.css
+
+ : :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+
+/* ********************************************************************************
+ * 基本レイアウト
+ * ******************************************************************************** */
+ 
+#wiiTopWrapper {
+	background: url(../../wii/images/bg.jpg) top center no-repeat;
+}
+
+
+/* ********************************************************************************
+ * div#contents01
+ * ******************************************************************************** */
+
+div#contents01 {
+	height: 191px;
+	position: relative;
+	background: url(../../wii/images/contents01_bg.jpg) no-repeat 0 0;
+}
+body#wiiTop h1 {
+	padding-top: 9px;
+	margin-left: 44px;
+}
+
+/* ********************************************************************************
+ * div#contents02
+ * ******************************************************************************** */
+
+div#contents02 {
+	height: 298px;
+	position: relative;
+	background: url(../../wii/images/contents02_bg.jpg) no-repeat 0 0;
+}
+body#wiiTop h2 {
+	margin-left: 258px;
+}
+p#package {
+	position: absolute;
+	bottom: 0;
+	left: 44px;
+	width: 130px;
+	height: 160px;
+}
+p#catch {
+	position: absolute;
+	bottom: 22px;
+	left: 174px;
+	width: 451px;
+	height: 15px;
+}
+p#enjoy {
+	position: absolute;
+	bottom: 0px;
+	right: 32px;
+}
+
+/* ********************************************************************************
+ * div#contents03
+ * ******************************************************************************** */
+
+div#contents03 {
+	position: relative;
+	background: url(../../wii/images/contents03_bg.jpg) no-repeat 0 0;
+	padding: 0 0 13px 44px;
+}
+div#softdetail {
+	margin: 0 0 7px 29px;
+	padding: 16px 0 0 74px;
+	background: url(../../wii/images/softdetail_base.jpg) no-repeat 0 0;
+	width: 552px;
+	height: 63px;
+}
+div#softdetail p {
+	float: left;
+	margin-right: 10px;
+}
+
+/*** div#btnMiddle ***/
+div#btnMiddle {
+	width: 681px;
+	margin: 5px 0;
+}
+p#btnTvcm {
+	width: 341px;
+	height: 33px;
+	font-size: 0;
+	float: left;
+}
+p#btnTvcm a {
+	display: block;
+	width: 341px;
+	height: 33px;
+	background: url(../../wii/images/btn_tvcm.jpg) left top no-repeat;
+	text-indent: -5000px;
+}
+p#btnTvcm a:hover {
+	background-position: left bottom;
+}
+p#btnNom {
+	width: 340px;
+	height: 33px;
+	font-size: 0;
+	float: right;
+}
+p#btnNom a {
+	display: block;
+	width: 340px;
+	height: 33px;
+	background: url(../../wii/images/btn_nom.jpg) left top no-repeat;
+	text-indent: -5000px;
+}
+p#btnNom a:hover {
+	background-position: left bottom;
+}
+
+/*** p#pageTop ***/
+p#pageTop {
+	margin-left: 143px;
+	width: 400px;
+	height: 26px;
+	font-size: 0;
+}
+p#pageTop a {
+	display: block;
+	width: 400px;
+	height: 26px;
+	background: url(../../wii/images/btn_totop.jpg) left top no-repeat;
+	text-indent: -5000px;
+}
+p#pageTop a:hover {
+	background-position: left bottom;
+}
+
+ /* ********************************************************************************
+ * navi
+ * ******************************************************************************** */
+ul#navi {
+	position: relative;
+	width: 681px;
+	height: 56px;
+	font-size: 0;
+	margin-bottom: 5px;
+}
+ul#navi li {
+	position: absolute;
+	top: 0;
+	height: 56px;
+	background: url(../../wii/images/navi.jpg) no-repeat;
+	line-height: 0;
+	text-indent: -5000px;
+}
+ul#navi li#navi01 {
+	left: 0px;
+	width: 172px;
+	background-position: 0 -56px;
+}
+ul#navi li#navi02 {
+	left: 172px;
+	width: 169px;
+	background-position: -172px -56px;
+}
+ul#navi li#navi03 {
+	left: 341px;
+	width: 169px;
+	background-position: -341px -56px;
+}
+ul#navi li#navi04 {
+	left: 510px;
+	width: 171px;
+	background-position: -510px -56px;
+}
+ul#navi li a {
+	display: block;
+	height: 56px;
+	background: url(../../wii/images/navi.jpg) no-repeat;
+}
+ul#navi li#navi01 a {
+	width: 172px;
+	background-position: 0 0;
+}
+ul#navi li#navi02 a  {
+	width: 169px;
+	background-position: -172px 0;
+}
+ul#navi li#navi03 a {
+	width: 169px;
+	background-position: -341px 0;
+}
+ul#navi li#navi04 a  {
+	width: 171px;
+	background-position: -510px 0;
+}
+ul#navi li#navi01 a:hover {
+	background-position: 0 -56px;
+}
+ul#navi li#navi02 a:hover {
+	background-position: -172px -56px;
+}
+ul#navi li#navi03 a:hover {
+	background-position: -341px -56px;
+}
+ul#navi li#navi04 a:hover {
+	background-position: -510px -56px;
+}
+

@@ -1,0 +1,97 @@
+@charset "shift_jis";
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+	name : about.css
+
+ : :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+
+/* ********************************************************************************
+ * 基本レイアウト
+ * ******************************************************************************** */
+ 
+body#about div#container {
+	margin: 0 auto;
+	min-width: 768px;
+	max-width: 1280px;
+	background: url(../../about/images/bg.jpg) no-repeat top center;
+	position: relative;
+}
+*html body#about div#container {
+	width: 100%;
+}
+body#about h1 {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+	width: 88px;
+	height: 104px;
+	z-index: 1;
+}
+body#about div#contents {
+	z-index: 0;
+}
+
+/* ********************************************************************************
+ * div#contents01
+ * ******************************************************************************** */
+
+body#about div#contents01 {
+	width: 768px;
+	height: 160px;
+	position: relative;
+	background: url(../../about/images/contents01_bg.jpg) no-repeat 0 0;
+}
+body#about h2 {
+	position: absolute;
+	top: 0;
+	left: 349px;
+	width: 71px;
+	height: 138px;
+}
+body#about p#btnBack {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 78px;
+	height: 30px;
+	font-size: 0;
+}
+body#about p#btnBack a {
+	display: block;
+	width: 78px;
+	height: 30px;
+	background: url(../../about/images/btn_back.jpg) left top no-repeat;
+	text-indent: -5000px;
+}
+body#about p#btnBack a:hover {
+	background-position: left bottom;
+}
+
+
+/* ********************************************************************************
+ * div#contents02
+ * ******************************************************************************** */
+
+body#about div#contents02 {
+	width: 768px;
+	height: 340px;
+	background: url(../../about/images/contents02_bg.jpg) no-repeat 0 0;
+}
+body#about h3 {
+	margin-bottom: 27px;
+}
+body#about h4 {
+	margin: 31px 0 11px 0;
+}
+
+/* ********************************************************************************
+ * div#contents03
+ * ******************************************************************************** */
+
+body#about div#contents03 {
+	width: 768px;
+	height: 220px;
+	background: url(../../about/images/contents03_bg.jpg) no-repeat 0 0;
+}

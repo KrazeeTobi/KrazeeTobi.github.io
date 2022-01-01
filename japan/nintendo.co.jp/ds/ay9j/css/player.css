@@ -1,0 +1,204 @@
+@charset "Shift_JIS";
+
+
+#player_title {
+	position: relative;
+	display: block;
+	width: 710px;
+	height: 75px;
+	background: url(../player/img/title.jpg) no-repeat;
+}
+
+#player_reed {
+
+	display: block;
+	width: 710px;
+	height: 101px;
+	background: url(../player/img/reed.jpg) no-repeat;
+}
+
+#players {
+	display: block;
+	width: 710px;
+	height: 394px;
+	background: url(../player/img/player_base.jpg) no-repeat;
+}
+
+#chara_margin {
+	padding: 12px 24px;
+	width: 710px;
+	height: 336px;
+}
+
+#player1 a,
+#player2 a,
+#player3 a,
+#player4 a,
+#player5 a,
+#player6 a,
+#player7 a,
+#player8 a {
+	float: left;
+	display: block;
+	width: 163px;
+	height: 84px;
+}
+
+#player9 a,
+#player10 a,
+#player11 a,
+#player12 a,
+#player13 a,
+#player14 a,
+#player15 a,
+#player16 a {
+	float: left;
+	display: block;
+	width: 166px;
+	height: 84px;
+}
+
+/*================================================================
+　　　　　　マリオ、ルイージ、ピーチ、デイジー
+==================================================================*/
+
+#player1 a {
+	background: url(../player/img2/player1.gif) 0px -84px no-repeat;
+}
+
+#player1 a:hover {
+	background: url(../player/img2/player1.gif) 0px 0px no-repeat;
+}
+
+#player2 a {
+	background: url(../player/img2/player2.gif) 0px -84px no-repeat;
+}
+
+#player2 a:hover {
+	background: url(../player/img2/player2.gif) 0px 0px no-repeat;
+}
+
+#player3 a {
+	background: url(../player/img2/player3.gif) 0px -84px no-repeat;
+}
+
+#player3 a:hover {
+	background: url(../player/img2/player3.gif) 0px 0px no-repeat;
+}
+
+#player4 a {
+	background: url(../player/img2/player4.gif) 0px -84px no-repeat;
+}
+
+#player4 a:hover {
+	background: url(../player/img2/player4.gif) 0px 0px no-repeat;
+}
+
+/*================================================================
+　　　　　ヨッシー、ワリオ、ワルイージ、クッパ
+==================================================================*/
+
+#player5 a {
+	background: url(../player/img2/player5.gif) 0px -84px no-repeat;
+}
+
+#player5 a:hover {
+	background: url(../player/img2/player5.gif) 0px 0px no-repeat;
+}
+
+#player6 a {
+	background: url(../player/img2/player6.gif) 0px -84px no-repeat;
+}
+
+#player6 a:hover {
+	background: url(../player/img2/player6.gif) 0px 0px no-repeat;
+}
+
+#player7 a {
+	background: url(../player/img2/player7.gif) 0px -84px no-repeat;
+}
+
+#player7 a:hover {
+	background: url(../player/img2/player7.gif) 0px 0px no-repeat;
+}
+
+#player8 a {
+	background: url(../player/img2/player8.gif) 0px -84px no-repeat;
+}
+
+#player8 a:hover {
+	background: url(../player/img2/player8.gif) 0px 0px no-repeat;
+}
+
+/*================================================================
+　　　　　　　　ソニック、テイルス、ナックルズ、エミー
+==================================================================*/
+
+#player9 a {
+	background: url(../player/img2/player9.gif) 0px -84px no-repeat;
+}
+
+#player9 a:hover {
+	background: url(../player/img2/player9.gif) 0px 0px no-repeat;
+}
+
+#player10 a {
+	background: url(../player/img2/player10.gif) 0px -84px no-repeat;
+}
+
+#player10 a:hover {
+	background: url(../player/img2/player10.gif) 0px 0px no-repeat;
+}
+
+#player11 a {
+	background: url(../player/img2/player11.gif) 0px -84px no-repeat;
+}
+
+#player11 a:hover {
+	background: url(../player/img2/player11.gif) 0px 0px no-repeat;
+}
+
+#player12 a {
+	background: url(../player/img2/player12.gif) 0px -84px no-repeat;
+}
+
+#player12 a:hover {
+	background: url(../player/img2/player12.gif) 0px 0px no-repeat;
+}
+
+/*================================================================
+　　　　　　　シャドウ、ブレイズ、ベクター、エッグマン
+==================================================================*/
+
+#player13 a {
+	background: url(../player/img2/player13.gif) 0px -84px no-repeat;
+}
+
+#player13 a:hover {
+	background: url(../player/img2/player13.gif) 0px 0px no-repeat;
+}
+
+#player14 a {
+	background: url(../player/img2/player14.gif) 0px -84px no-repeat;
+}
+
+#player14 a:hover {
+	background: url(../player/img2/player14.gif) 0px 0px no-repeat;
+}
+
+#player15 a {
+	background: url(../player/img2/player15.gif) 0px -84px no-repeat;
+}
+
+#player15 a:hover {
+	background: url(../player/img2/player15.gif) 0px 0px no-repeat;
+}
+
+#player16 a {
+	background: url(../player/img2/player16.gif) 0px -84px no-repeat;
+}
+
+#player16 a:hover {
+	background: url(../player/img2/player16.gif) 0px 0px no-repeat;
+}
+

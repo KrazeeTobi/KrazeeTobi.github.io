@@ -1,0 +1,242 @@
+@charset "shift_jis";
+
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+	name : top.css
+
+
+
+ : :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+
+
+
+
+/* ********************************************************************************
+
+ * 基本レイアウト
+
+ * ******************************************************************************** */
+
+
+
+*:first-child+html body#top {
+
+	overflow: hidden;
+
+}
+
+body#top div#container {
+
+	margin: 0 auto;
+
+	min-width: 768px;
+
+	max-width: 1280px;
+
+	background: url(../images/bg.jpg) no-repeat top center;
+
+	position: relative;
+
+}
+
+*html body#top div#container {
+
+	width: 100%;
+
+}
+
+body#top h1 {
+
+	position: absolute;
+
+	top: 16px;
+
+	left: 16px;
+
+	width: 88px;
+
+	height: 104px;
+
+	z-index: 1;
+
+}
+
+body#top div#contents {
+
+	z-index: 0;
+
+}
+
+p#btnOlympicorg {
+
+	position: absolute;
+
+	bottom: 20px;
+
+	right: 16px;
+
+	width: 169px;
+
+	height: 17px;
+
+	font-size: 0;
+
+}
+
+p#btnOlympicorg a {
+
+	display: block;
+
+	width: 169px;
+
+	height: 17px;
+
+	background: url(../images/btn_olympic_org.jpg) left top no-repeat;
+
+	text-indent: -5000px;
+
+}
+
+p#btnOlympicorg a:hover {
+
+	background-position: left bottom;
+
+}
+
+
+
+/* ********************************************************************************
+
+ * div#contents01
+
+ * ******************************************************************************** */
+
+
+
+body#top div#contents01 {
+
+	width: 768px;
+
+	height: 211px;
+
+	position: relative;
+
+	background: url(../images/contents01_bg.jpg) no-repeat 0 0;
+
+}
+
+/* ********************************************************************************
+
+ * div#contents02
+
+ * ******************************************************************************** */
+
+
+
+body#top div#contents02 {
+
+	width: 768px;
+
+	height: 211px;
+
+	background: url(../images/contents02_bg.jpg) no-repeat 0 0;
+
+}
+
+
+
+/* ********************************************************************************
+
+ * div#contents03
+
+ * ******************************************************************************** */
+
+
+
+body#top div#contents03 {
+
+	width: 768px;
+
+	height: 298px;
+
+	background: url(../images/contents03_bg.jpg) no-repeat 0 0;
+
+	position: relative;
+
+}
+
+body#top h2 {
+
+	padding: 0 0 0 283px;
+
+}
+
+p#btnWii {
+
+	position: absolute;
+
+	top: 124px;
+
+	left: 0;
+
+	width: 283px;
+
+	height: 114px;
+
+}
+
+p#btnDs {
+
+	position: absolute;
+
+	top: 139px;
+
+	right: 0;
+
+	width: 283px;
+
+	height: 99px;
+
+}
+
+p#btnAbout {
+
+	position: absolute;
+
+	bottom: 18px;
+
+	left: 291px;
+
+	width: 190px;
+
+	height: 26px;
+
+	font-size: 0;
+
+}
+
+p#btnAbout a {
+
+	display: block;
+
+	width: 190px;
+
+	height: 26px;
+
+	background: url(../images/btn_about.jpg) left top no-repeat;
+
+	text-indent: -5000px;
+
+}
+
+p#btnAbout a:hover {
+
+	background-position: left bottom;
+
+}
+

@@ -1,0 +1,178 @@
+@charset "Shift_JIS";
+
+
+
+#top_main {
+	width: 714px;
+	height: 494px;
+	background: url(../img/top_bg.gif) repeat-y;
+}
+
+#top_title {
+	position: relative;
+	margin-top: 1px;
+	float: left;
+	width: 462px;
+	height: 433px;
+}
+
+#top_title h1 {
+	margin-left: 12px;
+	display: block;
+	width: 450px;
+	height: 419px;
+	background: url(../img/main_g.jpg) no-repeat;
+
+}
+#top_title h1.noflash {
+	background: url(../img/c_main_g.jpg) no-repeat;
+}
+
+#go_adobecom {
+	position: absolute;
+	top: 365px;
+	left: 60px;
+	width: 355px;
+	height: 40px;
+}
+
+#top_ds {
+	margin-top: 1px;
+	float: left;
+	width: 252px;
+	height: 433px;
+}
+
+#top_ds h2 {
+	margin: 38px 15px 4px 15px;
+	display: block;
+	width: 222px;
+	height: 42px;
+	background: url(../img/catch.jpg) no-repeat;
+}
+
+
+#gamen {
+	display: block;
+	width: 252px;
+	height: 288px;
+	background: url(../img/ds.jpg) no-repeat;
+}
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++
+				under_contents
++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+#top_u_hidari,
+#top_u_migi {
+	float: left;
+}
+
+#top_u_hidari {
+	width: 284px;
+	height: 104px;
+	background: url(../img/top_bgdown1.gif) no-repeat;	
+}
+
+#top_u_migi {
+	width: 430px;
+	height: 104px;
+	background: url(../img/top_bgdown2.gif) no-repeat;	
+}
+
+/*+++++++++++++++  hidariÅ@++++++++++++++++++*/
+
+#twinbtn {
+	margin-left: 12px;
+	display: block;
+	width: 272px;
+	height: 46px;
+}
+
+#twinbtn p {
+	float: left;
+	width: 136px;
+	height: 46px;
+	
+}
+
+
+#go_movie a {
+	display: block;
+	width: 136px;
+	height: 46px;
+	background: url(../img/go_movie.gif) 0px -46px no-repeat;	
+}
+
+
+#go_movie a:hover {
+	background: url(../img/go_movie.gif) 0px 0px no-repeat;	
+}
+
+#go_book a {
+	display: block;
+	width: 136px;
+	height: 46px;
+	background: url(../img/go_book.gif) 0px -46px no-repeat;	
+}
+
+#go_book a:hover {
+	background: url(../img/go_book.gif) 0px 0px no-repeat;	
+}
+
+
+#tora {
+	margin-left: 12px;
+}
+
+#tora a {
+	display: block;
+	width: 272px;
+	height: 50px;
+	background: url(../img/tora.gif) 0px -50px no-repeat;	
+}
+
+
+#tora a:hover {
+	background: url(../img/tora.gif) 0px 0px no-repeat;	
+}
+
+
+
+/*+++++++++++++++  migiÅ@++++++++++++++++++*/
+
+#info {
+	position: relative;
+	margin-top: 12px;
+	margin-left: 8px;
+	display: block;
+	width: 410px;
+	height: 48px;
+	background: url(../img/product.gif) no-repeat;	
+}
+
+#wifi {
+	position: absolute;
+	top: 8px;
+	left: 365px;
+	display: block;
+	width: 35px;
+	height: 35px;
+}
+
+#go_wii {
+	margin-top: 18px;
+	margin-left: 17px;
+}
+
+#go_wii a {
+	display: block;
+	width: 393px;
+	height: 14px;
+	background: url(../img/go_wii.gif) 0px -14px no-repeat;	
+}
+
+#go_wii a:hover {
+	background: url(../img/go_wii.gif) 0px 0px no-repeat;	
+}

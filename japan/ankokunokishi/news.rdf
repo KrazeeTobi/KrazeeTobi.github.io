@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:admin="http://webns.net/mvcb/"
+xmlns="http://purl.org/rss/1.0/">
+
+<channel rdf:about="">
+<title></title>
+<link></link>
+<description><![CDATA[]]></description>
+<dc:language>ja</dc:language>
+<dc:date>2009-04-17T00:00:00+09:00</dc:date>
+<admin:generatorAgent rdf:resource="http://www.towofu.net/soft/rsspost.php" />
+
+<items>
+<rdf:Seq>
+<rdf:li rdf:resource="#200904240000" />
+<rdf:li rdf:resource="" />
+<rdf:li rdf:resource="#200904010000" />
+<rdf:li rdf:resource="#200903271859" />
+<rdf:li rdf:resource="#200903240000" />
+<rdf:li rdf:resource="#200903191836" />
+<rdf:li rdf:resource="#200903121801" />
+<rdf:li rdf:resource="#200903061828" />
+<rdf:li rdf:resource="#200902271839" />
+<rdf:li rdf:resource="#200902251432" />
+<rdf:li rdf:resource="#200902200000" />
+</rdf:Seq>
+</items>
+
+</channel>
+<item rdf:about="#200904240000">
+<title>4月24日　公式サイト更新！</title>
+<link></link>
+<description><![CDATA[・「ファンアート」公開！]]></description>
+<dc:date>2009-04-24T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="">
+<title>4月22日　公式サイト更新！</title>
+<link></link>
+<description><![CDATA[・『ソニックと暗黒の騎士』発売記念プレゼントキャンペーンは終了いたしました。
+たくさんのご応募ありがとうございました。当選者の発表は賞品の発送をもってかえさせていただきます。]]></description>
+<dc:date>2009-04-22T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#200904010000">
+<title>4月1日　公式サイト更新！</title>
+<link></link>
+<description><![CDATA[・「ソニックの斬って走って五つ星！」公開！]]></description>
+<dc:date>2009-04-01T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#200903271859">
+<title>3月27日　公式サイト更新！</title>
+<link></link>
+<description><![CDATA[・「壁紙」追加！]]></description>
+<dc:date>2009-03-27T18:59:42+09:00</dc:date>
+</item>
+
+<item rdf:about="#200903240000">
+<title>3月24日　公式サイト更新！</title>
+<link></link>
+<description><![CDATA[・『ソニックと暗黒の騎士』発売記念プレゼントキャンペーン実施！]]></description>
+<dc:date>2009-03-24T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#200903191836">
+<title>3月19日　公式サイト更新！</title>
+<link></link>
+<description><![CDATA[・「ペーパークラフト」公開！
+・「壁紙」追加！]]></description>
+<dc:date>2009-03-19T18:36:00+09:00</dc:date>
+</item>
+
+<item rdf:about="#200903121801">
+<title>3月12日　公式サイト更新！</title>
+<link></link>
+<description><![CDATA[・本日発売！
+・「アーサーペディア」公開！
+・「マルチプレイ」公開！
+・「ランキング」公開！
+・「ムービー」追加！
+・「ダウンロード」公開！
+・「トピックス」追加！]]></description>
+<dc:date>2009-03-12T18:01:37+09:00</dc:date>
+</item>
+
+<item rdf:about="#200903061828">
+<title>3月06日　公式サイト更新！</title>
+<link></link>
+<description><![CDATA[・「あそび方」公開！
+・「スクリーンショット」追加！
+・「トピックス」追加！]]></description>
+<dc:date>2009-03-06T18:28:30+09:00</dc:date>
+</item>
+
+<item rdf:about="#200902271839">
+<title>2月27日　公式サイト更新！</title>
+<link></link>
+<description><![CDATA[・「冒険の舞台」公開！
+・「スクリーンショット」追加！]]></description>
+<dc:date>2009-02-27T18:39:44+09:00</dc:date>
+</item>
+
+<item rdf:about="#200902251432">
+<title>2月25日　公式サイト更新！</title>
+<link></link>
+<description><![CDATA[・「トピックス」追加！
+・「ムービー」追加！]]></description>
+<dc:date>2009-02-25T14:32:37+09:00</dc:date>
+</item>
+
+<item rdf:about="#200902200000">
+<title>2月20日　公式サイト更新！</title>
+<link></link>
+<description><![CDATA[・「キャラクター」公開！
+・「スクリーンショット」追加！]]></description>
+<dc:date>2009-02-20T00:00:00+09:00</dc:date>
+</item>
+
+</rdf:RDF>

@@ -1,0 +1,32 @@
+@charset "Shift_JIS";
+
+
+#game_title {
+	position: relative;
+	display: block;
+	width: 710px;
+	height: 75px;
+	background: url(../game/img/title.jpg) no-repeat;
+}
+
+#game_reed {
+	display: block;
+	width: 710px;
+	height: 101px;
+	background: url(../game/img/reed.jpg) no-repeat;
+}
+
+#game_flash {
+	display: block;
+	width: 710px;
+	height: 319px;
+}
+
+#about_flag {
+	margin-left: 33px;
+	display: block;
+	width: 644px;
+	height: 75px;
+	background: url(../game/img/kokki.gif) no-repeat;
+}
+

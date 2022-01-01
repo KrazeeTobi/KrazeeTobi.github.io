@@ -1,0 +1,15 @@
+body {	 font:10pt "‚l‚r ‚oƒSƒVƒbƒN", "Osaka";
+         font-color:"#000000";
+         text-decoration: none;
+		 }
+tr   {	 font:10pt "‚l‚r ‚oƒSƒVƒbƒN", "Osaka";
+         font-color:"#000000";
+         text-decoration: none;
+		 }
+td   {	 font:10pt "‚l‚r ‚oƒSƒVƒbƒN", "Osaka";
+		 font-color:"#000000";
+         text-decoration: none;
+		 }
+a:link{color:#ff6666}
+a:active{color:#ff6600}
+a:{text-decoration:none}

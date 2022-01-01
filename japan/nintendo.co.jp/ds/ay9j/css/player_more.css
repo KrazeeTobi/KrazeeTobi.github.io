@@ -1,0 +1,191 @@
+@charset "Shift_JIS";
+
+#chara_base1,
+#chara_base2,
+#chara_base3,
+#chara_base4,
+#chara_base5,
+#chara_base6,
+#chara_base7,
+#chara_base8,
+#chara_base9,
+#chara_base10,
+#chara_base11,
+#chara_base12,
+#chara_base13,
+#chara_base14,
+#chara_base15,
+#chara_base16 {
+	position: relative;
+	display: block;
+	width: 710px;
+	height: 394px;
+}
+
+/*/////////////////　　各キャラ　　/////////////////*/
+
+#chara_base1 {
+	background: url(../player/img3/player1.jpg) no-repeat;
+}
+
+#chara_base2 {
+	background: url(../player/img3/player2.jpg) no-repeat;
+}
+
+#chara_base3 {
+	background: url(../player/img3/player3.jpg) no-repeat;
+}
+
+#chara_base4 {
+	background: url(../player/img3/player4.jpg) no-repeat;
+}
+
+#chara_base5 {
+	background: url(../player/img3/player5.jpg) no-repeat;
+}
+
+#chara_base6 {
+	background: url(../player/img3/player6.jpg) no-repeat;
+}
+
+#chara_base7 {
+	background: url(../player/img3/player7.jpg) no-repeat;
+}
+
+#chara_base8 {
+	background: url(../player/img3/player8.jpg) no-repeat;
+}
+
+#chara_base9 {
+	background: url(../player/img3/player9.jpg) no-repeat;
+}
+
+#chara_base10 {
+	background: url(../player/img3/player10.jpg) no-repeat;
+}
+
+#chara_base11 {
+	background: url(../player/img3/player11.jpg) no-repeat;
+}
+
+#chara_base12 {
+	background: url(../player/img3/player12.jpg) no-repeat;
+}
+
+#chara_base13 {
+	background: url(../player/img3/player13.jpg) no-repeat;
+}
+
+#chara_base14 {
+	background: url(../player/img3/player14.jpg) no-repeat;
+}
+
+#chara_base15 {
+	background: url(../player/img3/player15.jpg) no-repeat;
+}
+
+#chara_base16 {
+	background: url(../player/img3/player16.jpg) no-repeat;
+}
+
+#ido {
+	position: absolute;
+	top: 326px;
+	left: 420px;
+	width: 256px;
+	height: 32px;
+
+}
+
+#idobtn0_r {
+	float: left;
+	display: block;
+	width: 55px;
+	height: 32px;
+	background: url(../player/img3/pre_stay.gif) no-repeat;
+}
+
+#idobtn0_b {
+	float: left;
+	display: block;
+	width: 55px;
+	height: 32px;
+	background: url(../player/img3/nex_stay.gif) no-repeat;
+}
+
+#idobtn1 a {
+	float: left;
+	display: block;
+	width: 55px;
+	height: 32px;
+	background: url(../player/img3/pre.gif) 0px -32px no-repeat;
+}
+
+#idobtn1 a:hover {
+	background: url(../player/img3/pre.gif) 0px 0px no-repeat;
+}
+
+
+#idobtn2 a {
+	float: left;
+	display: block;
+	width: 141px;
+	height: 32px;
+	background: url(../player/img3/go_players.gif) 0px 0px no-repeat;
+}
+
+#idobtn2 a:hover {
+	background: url(../player/img3/go_players.gif) 0px -32px no-repeat;
+}
+
+
+#idobtn3 a {
+	float: left;
+	display: block;
+	width: 55px;
+	height: 32px;
+	background: url(../player/img3/nex.gif) 0px -32px no-repeat;
+}
+
+#idobtn3 a:hover {
+	background: url(../player/img3/nex.gif) 0px 0px no-repeat;
+}
+
+
+#idobtn4 a {
+	float: left;
+	display: block;
+	width: 55px;
+	height: 32px;
+	background: url(../player/img3/pre_r.gif) 0px -32px no-repeat;
+}
+
+#idobtn4 a:hover {
+	background: url(../player/img3/pre_r.gif) 0px 0px no-repeat;
+}
+
+
+#idobtn5 a {
+	float: left;
+	display: block;
+	width: 141px;
+	height: 32px;
+	background: url(../player/img3/go_players_r.gif) 0px 0px no-repeat;
+}
+
+#idobtn5 a:hover {
+	background: url(../player/img3/go_players_r.gif) 0px -32px no-repeat;
+}
+
+
+#idobtn6 a {
+	float: left;
+	display: block;
+	width: 55px;
+	height: 32px;
+	background: url(../player/img3/nex_r.gif) 0px -32px no-repeat;
+}
+
+#idobtn6 a:hover {
+	background: url(../player/img3/nex_r.gif) 0px 0px no-repeat;
+}
