@@ -1,5 +1,0 @@
-gethit
-idle
-punch
-tailsmash
-walk
