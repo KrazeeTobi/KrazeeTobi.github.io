@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* contents-movie  ===================================================== */
+#contents-character{
+	width:880px;
+	height:600px;
+	overflow:hidden;
+	margin:0px 0 0;
+	position:relative;
+}
+
+#contents-character h1{
+	display:none;
+}
+
+#contents-character #slideTarget{
+	width:880px;
+	height:600px;
+	
+}
+#contents-character #slideTarget li{
+	width:1050px;
+	height:600px;
+
+	position:relative;
+}
+
+/* clear fix */
+#contents-character #slideTarget li{
+	zoom:1;/*for IE 5.5-7*/
+}
+#contents-character #slideTarget li:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+#contents-character #slideTarget li img{
+	position:absolute;
+	top:110px;
+	left:0;
+}
+
+/*エッグマン*/
+#contents-character li#target-03 img.charaPic{
+	top:90px;
+} 
+
+/*タイムイーター*/
+#contents-character li#target-04 img.charaPic{
+	left:-160px;
+} 
+
+#contents-character #slideTarget li h2{
+	position:absolute;
+	top:130xp;
+	left:455px;
+}
+
+#contents-character #slideTarget li p{
+	display:block;
+	color:#000;
+	position:absolute;
+	padding:1em;
+	width:340px;
+	top:300px;
+	left:470px;
+	border:2px solid #000;
+	border-radius: 10px;		/* CSS3草案 */
+	-webkit-border-radius: 10px;	/* Safari,Google Chrome用 */
+	-moz-border-radius: 10px;	/* Firefox用 */
+}
+
+/*--------------------------------------
+ナビゲーション
+--------------------------------------*/
+
+#contents-character #slideLink{
+	position:absolute;
+	top:510px;
+	left:55px;
+	z-index:100;
+}
+
+#contents-character #slideLink li{
+	width:100px;
+	height:65px;
+	display:block;
+	float:left;
+	padding:0 5px 0;
+	line-height:0em;
+	font-size:1px;
+}
+
+
+#contents-character #slideLink li a{
+	width:100px;
+	height:65px;
+	display:block;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;
+}
+
+
+#contents-character #slideLink li.comingSoon{
+	background:url(contsnts-character/slide_00.png) top no-repeat;
+}
+
+#contents-character #slideLink li#link-01 a:hover{
+	background:url(contsnts-character/slide_01.png) bottom no-repeat;
+}
+#contents-character #slideLink li#link-02 a{
+	background:url(contsnts-character/slide_02.png) top no-repeat;
+}
+#contents-character #slideLink li#link-03 a{
+	background:url(contsnts-character/slide_03.png) top no-repeat;
+}
+#contents-character #slideLink li#link-04 a{
+	background:url(contsnts-character/slide_04.png) top no-repeat;
+}
+#contents-character #slideLink li#link-05 a{
+	background:url(contsnts-character/slide_05.png) top no-repeat;
+}
+#contents-character #slideLink li#link-06 a{
+	background:url(contsnts-character/slide_06.png) top no-repeat;
+}
+#contents-character #slideLink li#link-07 a{
+	background:url(contsnts-character/slide_07.png) top no-repeat;
+}
+#contents-character #slideLink li#link-01 a{
+	background:url(contsnts-character/slide_01.png) top no-repeat;
+}
+
+
+#contents-character #slideLink li#link-01 a:hover{
+	background:url(contsnts-character/slide_01.png) bottom no-repeat;
+}
+#contents-character #slideLink li#link-02 a:hover{
+	background:url(contsnts-character/slide_02.png) bottom no-repeat;
+}
+#contents-character #slideLink li#link-03 a:hover{
+	background:url(contsnts-character/slide_03.png) bottom no-repeat;
+}
+#contents-character #slideLink li#link-04 a:hover{
+	background:url(contsnts-character/slide_04.png) bottom no-repeat;
+}
+#contents-character #slideLink li#link-05 a:hover{
+	background:url(contsnts-character/slide_05.png) bottom no-repeat;
+}
+#contents-character #slideLink li#link-06 a:hover{
+	background:url(contsnts-character/slide_06.png) bottom no-repeat;
+}
+#contents-character #slideLink li#link-07 a:hover{
+	background:url(contsnts-character/slide_07.png) bottom no-repeat;
+}

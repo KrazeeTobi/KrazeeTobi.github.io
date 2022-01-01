@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* contents-movie  ===================================================== */
+#common-contents{
+	width:100%;
+	height:830px;
+	background:url(common-contents/div.jpg) top center no-repeat;
+	overflow:hidden;
+}
+
+#contents-substance{
+	margin:0 auto 0;
+	width:1050px;
+}

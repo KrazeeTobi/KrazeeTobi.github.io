@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@import"common-contents.css";
+@import"nav.css";
+@import"contents-window.css";
+@import"contents-substance.css";
+
+@import"../../story/css/pc/contents-story.css";
+@import"../../character/css/pc/contents-character.css";
+@import"../../stage/css/pc/contents-stage.css";
+@import"../../action/css/pc/contents-action.css";
+@import"../../collection/css/pc/contents-collection.css";
+@import"../../feature/css/pc/contents-feature.css";

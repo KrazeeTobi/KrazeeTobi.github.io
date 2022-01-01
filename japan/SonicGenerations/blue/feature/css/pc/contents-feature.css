@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* contents-movie  ===================================================== */
+#contents-feature{
+	width:880px;
+	height:600px;
+	overflow:hidden;
+	margin:0px 0 0;
+	position:relative;
+}
+
+#contents-feature h1{
+	display:none;
+}
+
+
+#contents-feature h2{
+	margin:130px 0 0;
+	width:880px;
+	height:50px;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;
+	background:url(contents-feature/h2.gif) no-repeat;
+}
+
+#contents-feature div{
+	padding:20px 15px 0;
+}
+
+#contents-feature div div{
+	float:left;
+	padding:5px 13px 10px;
+	margin:0 16px;
+	display:block;
+	color:#000;
+	position:relative;
+	width:220px;
+	min-height:320px;
+	border:2px solid #000;
+	
+	border-radius: 10px;		/* CSS3草案 */
+	-webkit-border-radius: 10px;	/* Safari,Google Chrome用 */
+	-moz-border-radius: 10px;	/* Firefox用 */
+	overflow:hidden;
+}
+
+
+#contents-feature div div p{
+	display:block;
+	font-size:85%;
+}

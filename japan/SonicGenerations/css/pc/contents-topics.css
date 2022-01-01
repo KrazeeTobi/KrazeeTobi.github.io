@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* contents-movie  ===================================================== */
+#contents-topics{
+	width:100%;
+	background:url(contents-topics/div.gif) top repeat-x;
+	padding:20px 0 10px;
+}
+
+#contents-topics section{
+	width:900px;
+	margin:0 auto;
+}
+
+
+/* clear fix */
+#contents-topics section{
+	zoom:1;/*for IE 5.5-7*/
+}
+#contents-topics section:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+#contents-topics section h1{
+	width:130px;
+	float:left;
+}
+
+
+#contents-topics section #topics-load{
+	width:650px;
+	float:left;
+}
+
+#topics-load article h2{
+	width:115px;
+	float:left;
+}
+
+#topics-load article h2 time{
+	font-family: 'Georgia';
+	font-size: large;
+}
+
+#topics-load article ul{
+	padding:3px 0 0;
+	width:535px;
+	display:block;
+	float:right;
+}
+
+#topics-load article ul li{
+	list-style: disc inside;
+}

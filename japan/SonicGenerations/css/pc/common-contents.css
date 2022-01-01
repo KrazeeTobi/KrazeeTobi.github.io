@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* contents-substance ===================================================== */
+#common-contents{
+	width:100%;
+	position:relative;
+	background:url(common-contents/common-contents.jpg) no-repeat center 150px;
+}

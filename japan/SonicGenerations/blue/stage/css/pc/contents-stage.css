@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/* contents-movie  ===================================================== */
+#contents-stage{
+	width:880px;
+	height:600px;
+	overflow:hidden;
+	margin:0;
+	position:relative;
+}
+
+#contents-stage h1{
+	display:none;
+}
+
+#contents-stage #slideTarget{
+	width:880px;
+	height:600px;
+	
+}
+#contents-stage #slideTarget li{
+	width:880px;
+	height:600px;
+	position:relative;
+}
+
+
+
+/*--------------------------------------
+H2
+--------------------------------------*/
+#contents-stage #slideTarget h2{
+	width:470px;
+	float:left;
+}
+
+/*--------------------------------------
+div.bgP
+--------------------------------------*/
+#contents-stage #slideTarget div.bgP{
+	width:340px;
+	margin:100px 40px 0 0;
+	float:right;
+	padding:10px;
+	border:2px solid #000;
+	border-radius: 10px;		/* CSS3草案 */
+	-webkit-border-radius: 10px;	/* Safari,Google Chrome用 */
+	-moz-border-radius: 10px;	/* Firefox用 */
+}
+
+#contents-stage #slideTarget div.bgP p{
+	padding:0 0 0.5em;
+	font-size:95%;
+	line-height:1.4em;
+}
+
+#contents-stage #slideTarget div.bgP .originalStage{
+	float:right;
+}
+
+#contents-stage #slideTarget div.bgP h3{
+	width:auto;
+	float:none;
+	font-weight:bold;
+	background:#feff03;
+	border-left:#f00 solid 5px;
+	border-radius: 10px;		/* CSS3草案 */
+	-webkit-border-radius: 10px;	/* Safari,Google Chrome用 */
+	-moz-border-radius: 10px;	/* Firefox用 */
+	padding:0.2em 1em;
+	margin:0 0 0.5em;
+}
+
+#contents-stage #slideTarget div div p{
+	font-size:x-small;
+}
+
+/*--------------------------------------
+dl
+--------------------------------------*/
+#contents-stage #slideTarget dl{
+	margin:0 40px 0 0;
+	width:364px;
+	float:right;
+}
+
+#contents-stage #slideTarget dl dt{
+	background:#000;
+	color:#fff;	
+	border-radius: 10px;		/* CSS3草案 */
+	-webkit-border-radius: 10px;	/* Safari,Google Chrome用 */
+	-moz-border-radius: 10px;	/* Firefox用 */
+	padding:0.2em 1em;
+	margin:5px 0 2px;
+	clear:both;
+}
+
+#contents-stage #slideTarget dl dd{
+	padding:0 10px;
+	float:left;
+}
+
+
+/*--------------------------------------
+ナビゲーション
+--------------------------------------*/
+
+#contents-stage #slideLink{
+	position:absolute;
+	top:520px;
+	left:150px;
+	z-index:100;
+}
+
+#contents-stage #slideLink li{
+	float:left;
+	padding:0 2px 0;
+}
+
+#contents-stage #slideLink li,
+#contents-stage #slideLink li a{
+	width:80px;
+	height:65px;
+	display:block;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;
+}
+
+
+#contents-stage #slideLink li.comingSoon{
+	background:url(contents-stage/slide_00.png) top no-repeat;
+}
+#contents-stage #slideLink li#link-01 a{
+	background:url(contents-stage/slide_01.png) top no-repeat;
+}
+#contents-stage #slideLink li#link-02 a{
+	background:url(contents-stage/slide_02.png) top no-repeat;
+}
+#contents-stage #slideLink li#link-03 a{
+	background:url(contents-stage/slide_03.png) top no-repeat;
+}
+#contents-stage #slideLink li#link-04 a{
+	background:url(contents-stage/slide_04.png) top no-repeat;
+}
+#contents-stage #slideLink li#link-05 a{
+	background:url(contents-stage/slide_05.png) top no-repeat;
+}
+#contents-stage #slideLink li#link-06 a{
+	background:url(contents-stage/slide_06.png) top no-repeat;
+}
+#contents-stage #slideLink li#link-07 a{
+	background:url(contents-stage/slide_07.png) top no-repeat;
+}
+
+#contents-stage #slideLink li#link-01 a:hover{
+	background:url(contents-stage/slide_01.png) bottom no-repeat;
+}
+#contents-stage #slideLink li#link-02 a:hover{
+	background:url(contents-stage/slide_02.png) bottom no-repeat;
+}
+#contents-stage #slideLink li#link-03 a:hover{
+	background:url(contents-stage/slide_03.png) bottom no-repeat;
+}
+#contents-stage #slideLink li#link-04 a:hover{
+	background:url(contents-stage/slide_04.png) bottom no-repeat;
+}
+#contents-stage #slideLink li#link-05 a:hover{
+	background:url(contents-stage/slide_05.png) bottom no-repeat;
+}
+#contents-stage #slideLink li#link-06 a:hover{
+	background:url(contents-stage/slide_06.png) bottom no-repeat;
+}
+#contents-stage #slideLink li#link-07 a:hover{
+	background:url(contents-stage/slide_07.png) bottom no-repeat;
+}

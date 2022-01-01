@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* contents-movie  ===================================================== */
+#contents-substance{
+	width:1010px;
+	height:700px;
+	position:relative;
+}
+
+#substance-loader{
+	width:880px;
+	height:590px;
+	padding:0;
+	position:absolute;
+	top:0;
+	left:65px;
+
+}
+
+#substance-loading{
+	
+	width:32px;
+	height:32px;
+	position:absolute;
+	top:300px;
+	left:484px;
+	z-index:100;
+	display: none;
+}
+
+#contents-top p{
+	margin:530px 0 0;
+}

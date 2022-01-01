@@ -1,0 +1,220 @@
+@charset "UTF-8";
+/* contents-substance ===================================================== */
+#common-contents {
+	min-height:760px;
+	width:600px;
+	padding:0 0 0 300px;
+	margin:0 auto;
+	background:url(common-contents/common-contents.jpg) no-repeat left top;
+}
+
+#contents-substance strong {
+	color: red;
+}
+
+#contents-substance > h1 {
+	background:url(common-contents/h1.gif) no-repeat left top;
+	display:block;
+	width:600px;
+	height:148px;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;	
+}
+
+#contents-substance > h1 + p {
+	width:580px;
+	margin:0 0 2em 20px;
+}
+
+/*** 各セクション内 ***/
+
+#contents-substance > section,
+#contents-substance > section > div.even,
+#contents-substance > section > div.even + div {
+	border-top:#000 dotted 1px;
+	/* IE7用 */
+	*padding-bottom: 0;
+}
+
+#contents-substance > section {
+	width:580px;
+	margin-left: 20px;
+}
+
+#contents-substance > section > h1 {
+	display:block;
+	width:580px;
+	height:40px;
+	padding: 2em 0 1em 0;
+}
+
+/*** パスワード第 X 弾 ***/
+
+#contents-substance > section#substance-1st {
+	padding:2em 0 1.5em;
+}
+
+
+#contents-substance > section#substance-1st > h1{
+	padding:0 0 0.5em;
+}
+
+
+
+
+
+#contents-substance > section > h1 + p > img.first {
+	padding-right: 5px;
+}
+
+/*** パスワード入力方法 ***/
+
+#contents-substance section > div {
+	padding: 2em 0;
+}
+
+#contents-substance section > div:after {
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	line-height:0; 
+	visibility:hidden;
+}
+
+/* パスワード入力方法内の最初のdivだけ調整 */
+
+#contents-substance > section > h1 + div {
+	padding-top: 0;
+}
+
+#contents-substance > section > div > div {
+	float: right;
+	display:block;
+	width:285px;
+	padding-left: 10px;
+}
+
+#contents-substance > section > div > div > h2{
+	color: #0000ff;
+	font-size: medium;
+	font-weight: bold;
+	padding-bottom: 1em;
+}
+
+#contents-substance > section > div > div > h2:before {
+	content:"★";
+}
+
+#contents-substance > section > div > div + p{
+	float: left;
+	display:block;
+	width:285px;
+	overflow:hidden;
+}
+
+#contents-substance > section > div.even > div {
+	float: left;
+	display:block;
+	padding-left: 0;
+	padding-right: 10px;
+}
+
+#contents-substance > section > div.even > div + p {
+	float: right;
+	display:block;
+	width:285px;
+	overflow:hidden;
+}
+
+#contents-substance ul li:before {
+	content:"・";
+}
+
+#contents-substance ul.attention {
+	margin-top: 1em;
+}
+
+#contents-substance ul.attention li {
+	list-style: none;
+}
+
+#contents-substance ul.attention li:before {
+	content:"※ ";
+}
+
+#contents-substance dl dt {
+  clear: left;
+  float: left;
+}
+
+#contents-substance dl dt:before {
+	content:"・";
+}
+
+#contents-substance dl dd:before {
+	content:"：";
+}
+
+/* table */
+
+#contents-substance section table{
+	width:580px;
+	margin:0 0 2em;
+	border-bottom:1px solid #FCC;
+	border-right:1px solid #FCC;
+}
+
+#contents-substance section table th{
+	padding:5px;
+	border-top:1px solid #FFF;
+	border-left:1px solid #FFF;
+	background:#FCC;
+	font-family: 'Georgia';
+	font-size:medium;
+}
+
+#contents-substance section table th:first-child{
+	width:60px;
+}
+
+
+#contents-substance section table td{
+	border-top:1px solid #FCC;
+	border-left:1px solid #FCC;
+	padding:10px;
+}
+
+#contents-substance section table td.figureImage{
+	line-height:0;
+	width:80px;
+	margin:0;
+	padding:10px;
+}
+
+/* table first */
+
+#contents-substance section table.firstChild{
+	border-bottom:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+
+#contents-substance section table.firstChild th{
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+	background:#ffc;
+}
+
+#contents-substance section table.firstChild td{
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+}
+
+.figurePass{	
+	font-family: 'Georgia';
+	font-size:350%;
+	font-weight:bold;
+	text-align:center;
+}

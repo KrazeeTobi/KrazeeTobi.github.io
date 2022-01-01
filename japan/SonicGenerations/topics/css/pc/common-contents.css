@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/* contents-substance ===================================================== */
+#common-contents{
+	min-height:760px;
+	width:600px;
+	padding:0 0 0 300px;
+	margin:0 auto;
+	background:url(common-contents/common-contents.jpg) no-repeat left top;
+}
+
+#contents-substance h1{
+	background:url(common-contents/h1.gif) no-repeat left top;
+	display:block;
+	width:600px;
+	height:80px;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;	
+}
+
+
+#contents-substance article{
+	width:580px;
+	margin:0 0 1em 20px;
+	padding:0 0 1em 0;
+	border-top:#000 dotted 1px;
+}
+
+#contents-substance time{
+	font-family: 'Georgia';
+	font-size: large;
+}
+
+#contents-substance ul li {
+	list-style:inside disc;
+}

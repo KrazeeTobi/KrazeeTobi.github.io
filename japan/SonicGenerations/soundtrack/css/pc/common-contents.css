@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* contents-substance ===================================================== */
+#common-contents {
+	min-height:760px;
+	width:600px;
+	padding:0 0 0 300px;
+	margin:0 auto;
+	background:url(common-contents/common-contents.jpg) no-repeat left top;
+}
+
+#contents-substance strong {
+	color: red;
+}
+
+#contents-substance > h1 {
+	background:url(common-contents/h1.gif) no-repeat left top;
+	display:block;
+	width:600px;
+	height:148px;
+	text-decoration:none;
+	text-indent:-9999px;
+	overflow:hidden;
+	line-height:0em;	
+}
+
+#contents-substance > div {
+	width:580px;
+	margin:0 0 50px 20px;
+}
+
+#contents-substance > div p{
+	margin:0 0 1em;
+}
+
+#contents-substance > div .floatRight{
+	float:right;
+	padding:0 0 0em 0.5em;	
+}
+
+
+#contents-substance div table{
+	width:580px;
+	margin:0 0 2em;
+	border-bottom:1px solid #09f;
+	border-right:1px solid #09f;
+}
+
+#contents-substance div table th{
+	padding:0.5em;
+	border-top:1px solid #FFF;
+	border-left:1px solid #FFF;
+	background:#09f;
+	color:#fff;
+}
+
+#contents-substance div table td{
+	padding:0.5em;
+	border-top:1px solid #09f;
+	border-left:1px solid #09f;
+}
+
+#contents-substance div h2{
+	border-left:5px solid #09f;
+	font-size:medium;
+	padding:0.2em;
+	color:#09f;
+	margin:0 0 0.5em;
+
+}
+
+#contents-substance div ol{
+	margin-bottom:2em;
+}
+
+
+
+#contents-substance div ol li{
+	list-style:decimal-leading-zero inside;
+	padding:0.4em;
+}
+
+.liEven{
+	background:#09f;
+	color:#fff;
+}
+

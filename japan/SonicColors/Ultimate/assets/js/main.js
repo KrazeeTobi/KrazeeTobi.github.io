@@ -107,9 +107,5 @@ $(function () {
 		$(this).addClass(on);
 		}
 	});
-
-
-
 	
-
 });
