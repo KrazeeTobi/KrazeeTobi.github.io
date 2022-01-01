@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+
+
+/* newImage setting only wallpaper ========================================== */
+ul.thumbnailList li span.newImage{
+	margin:0 0 0 20px;
+}
+
+ul.thumbnailList li.newWallpaper {
+    background: url("contents-substance/thumbnaillist_bg.gif") no-repeat scroll left top transparent;
+    display: block;
+    float: left;
+    height: 161px;
+    margin-top: 1em;
+    overflow: hidden;
+    text-align: center;
+    width: 155px;
+}
