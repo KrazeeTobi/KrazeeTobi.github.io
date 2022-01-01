@@ -1,0 +1,216 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 15px;
+	line-height: 150%;
+	text-align: center;
+	background: url(../img/body_back.jpg) left top repeat-x #14448b fixed;
+}
+
+div {
+	height: auto;
+	overflow: hidden;
+}
+
+ul,
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: #ce081c;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+b {
+	font-weight: normal;
+}
+
+hr {
+	border: none;
+	border-bottom: dotted 1px #7f7f7f;
+}
+
+
+/*----------------------------------------
+common
+----------------------------------------*/
+/*---------- margin ----------*/
+/*-- top --*/
+.top_mar00 {
+	margin-top: 0px!important;
+}
+.top_mar15 {
+	margin-top: 15px!important;
+}
+.top_mar25 {
+	margin-top: 25px!important;
+}
+/*-- bottom --*/
+.bottom_mar05 {
+	margin-bottom: 5px!important;
+}
+.bottom_mar15 {
+	margin-bottom: 15px!important;
+}
+.bottom_mar25 {
+	margin-bottom: 25px!important;
+}
+
+/*---------- font ----------*/
+/*-- color --*/
+.red {
+	color: #ff0000;
+}
+/*-- size --*/
+.font90 {
+	font-size: 0.9em;
+}
+
+
+/*----------------------------------------
+container
+----------------------------------------*/
+#container {
+	margin: 0px auto 0px auto;
+	width: 1130px;
+	background: url(../img/container_-back.png) left top repeat-y;
+}
+
+body#page-home #main_contents {
+	width: 1130px;
+	min-height: 1010px;
+	background: url(../img/main_home-back.jpg) center top no-repeat;
+	position: relative;
+}
+body#page-how #main_contents,
+body#page-sys #main_contents,
+body#page-chara #main_contents,
+body#page-course #main_contents,
+body#page-mode #main_contents,
+body#page-tech #main_contents,
+body#page-movie #main_contents,
+body#page-ex #main_contents,
+body#page-review #main_contents {
+	width: 1130px;
+	min-height: 1010px;
+	background: url(../img/main_other-back.jpg) center top no-repeat;
+}
+
+/*---------- header ----------*/
+header {
+	margin: 0px auto 0px auto;
+	padding: 10px 20px 0px 20px;
+	width: 1060px;
+	height: 50px;
+}
+a.ps3,
+a.wiiu,
+a.sega {
+	display: block;
+	height: 38px;
+	text-indent: -9999px;
+}
+a.ps3 {
+	float: left;
+	width: 155px;
+	background: url(../img/ps3_logo.png) left top no-repeat;
+}
+a.wiiu {
+	float: left;
+	margin-left: 25px;
+	width: 124px;
+	background: url(../img/wiiU_logo.png) left top no-repeat;
+}
+a.sega {
+	float: right;
+	width: 105px;
+	background: url(../img/sega_logo.png) left top no-repeat;
+}
+
+/*---------- footer ----------*/
+footer {
+	margin: 0px auto 15px auto;
+	width: 1050px;
+	font-size: 12px;
+	line-height: 120%;
+	text-align: left;
+	position: relative;
+}
+body#page-home footer {
+	margin: 30px auto 15px auto;
+}
+body#page-home footer .copyright {
+	padding-top: 15px;
+	border-top: dotted 1px #333333;
+}
+body#page-how footer .copyright,
+body#page-sys footer .copyright,
+body#page-chara footer .copyright,
+body#page-course footer .copyright,
+body#page-mode footer .copyright,
+body#page-tech footer .copyright,
+body#page-movie footer .copyright,
+body#page-ex footer .copyright,
+body#page-review footer .copyright {
+	margin-top: -20px;
+	padding-top: 15px;
+	border-top: dotted 1px #333333;
+	position: inherit;
+	z-index: 1;
+}
+footer .bottom_img {
+	margin: 0px auto 0px auto;
+	width: 236px;
+	height: 168px;
+	background: url(../img/other_bottom_img.png) left top no-repeat;
+	text-indent: -9999px;
+	position: inherit;
+	z-index: 2;
+}
+body#page-home footer .bottom_img {
+	display: none;
+}
+
+/*---------- navi ----------*/
+#main-nav-holder {
+	height: 75px;
+	position: inherit;
+	z-index: 2;
+}
+#main-nav ul {
+	padding: 0px 7px 15px 7px;
+	width: 1116px;
+	height: 60px;
+	background: url(../img/navi/navi_back.png) left top no-repeat;
+}
+.sticky #main-nav {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+.sticky #main-nav ul {
+	margin: 0px auto 0px auto;
+}
+
+/*---------- contents ----------*/
+#contents {
+	width: 1130px;
+	position: inherit;
+	z-index: 1;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,545 @@
+/*----------------------------------------
+g_navi
+----------------------------------------*/
+body#page-home li.menu01,
+body#page-home li.menu02-select,
+body#page-home li.menu03-select,
+body#page-home li.menu04-select,
+body#page-home li.menu05-select,
+body#page-home li.menu06-select,
+body#page-home li.menu07-select,
+body#page-home li.menu08-select,
+body#page-home li.menu09-select,
+
+body#page-how li.menu01-select,
+body#page-how li.menu02,
+body#page-how li.menu03-select,
+body#page-how li.menu04-select,
+body#page-how li.menu05-select,
+body#page-how li.menu06-select,
+body#page-how li.menu07-select,
+body#page-how li.menu08-select,
+body#page-how li.menu09-select,
+
+body#page-sys li.menu01-select,
+body#page-sys li.menu02-select,
+body#page-sys li.menu03,
+body#page-sys li.menu04-select,
+body#page-sys li.menu05-select,
+body#page-sys li.menu06-select,
+body#page-sys li.menu07-select,
+body#page-sys li.menu08-select,
+body#page-sys li.menu09-select,
+
+body#page-chara li.menu01-select,
+body#page-chara li.menu02-select,
+body#page-chara li.menu03-select,
+body#page-chara li.menu04,
+body#page-chara li.menu05-select,
+body#page-chara li.menu06-select,
+body#page-chara li.menu07-select,
+body#page-chara li.menu08-select,
+body#page-chara li.menu09-select,
+
+body#page-course li.menu01-select,
+body#page-course li.menu02-select,
+body#page-course li.menu03-select,
+body#page-course li.menu04-select,
+body#page-course li.menu05,
+body#page-course li.menu06-select,
+body#page-course li.menu07-select,
+body#page-course li.menu08-select,
+body#page-course li.menu09-select,
+
+body#page-mode li.menu01-select,
+body#page-mode li.menu02-select,
+body#page-mode li.menu03-select,
+body#page-mode li.menu04-select,
+body#page-mode li.menu05-select,
+body#page-mode li.menu06,
+body#page-mode li.menu07-select,
+body#page-mode li.menu08-select,
+body#page-mode li.menu09-select,
+
+body#page-tech li.menu01-select,
+body#page-tech li.menu02-select,
+body#page-tech li.menu03-select,
+body#page-tech li.menu04-select,
+body#page-tech li.menu05-select,
+body#page-tech li.menu06-select,
+body#page-tech li.menu07,
+body#page-tech li.menu08-select,
+body#page-tech li.menu09-select,
+
+body#page-movie li.menu01-select,
+body#page-movie li.menu02-select,
+body#page-movie li.menu03-select,
+body#page-movie li.menu04-select,
+body#page-movie li.menu05-select,
+body#page-movie li.menu06-select,
+body#page-movie li.menu07-select,
+body#page-movie li.menu08,
+body#page-movie li.menu09-select,
+
+body#page-ex li.menu01-select,
+body#page-ex li.menu02-select,
+body#page-ex li.menu03-select,
+body#page-ex li.menu04-select,
+body#page-ex li.menu05-select,
+body#page-ex li.menu06-select,
+body#page-ex li.menu07-select,
+body#page-ex li.menu08-select,
+body#page-ex li.menu09 {
+	display: none;
+}
+
+li.menu01,
+li.menu01 a,
+li.menu01-select,
+li.menu01-select a,
+li.menu02,
+li.menu02 a,
+li.menu02-select,
+li.menu02-select a,
+li.menu03,
+li.menu03 a,
+li.menu03-select,
+li.menu03-select a,
+li.menu04,
+li.menu04 a,
+li.menu04-select,
+li.menu04-select a,
+li.menu05,
+li.menu05 a,
+li.menu05-select,
+li.menu05-select a,
+li.menu06,
+li.menu06 a,
+li.menu06-select,
+li.menu06-select a,
+li.menu07,
+li.menu07 a,
+li.menu07-select,
+li.menu07-select a,
+li.menu08,
+li.menu08 a,
+li.menu08-select,
+li.menu08-select08 a,
+li.menu09,
+li.menu09 a,
+li.menu09-select,
+li.menu09-select08 a {
+	float: left;
+	display: block;
+	width: 124px;
+	height: 60px;
+	text-indent: -9999px;
+}
+li.menu01,
+li.menu01 a {
+	background: url(../img/navi/navi_menu01.png) 0px 0px no-repeat;
+}
+li.menu02,
+li.menu02 a {
+	background: url(../img/navi/navi_menu02.png) 0px 0px no-repeat;
+}
+li.menu03,
+li.menu03 a {
+	background: url(../img/navi/navi_menu03.png) 0px 0px no-repeat;
+}
+li.menu04,
+li.menu04 a {
+	background: url(../img/navi/navi_menu04.png) 0px 0px no-repeat;
+}
+li.menu05,
+li.menu05 a {
+	background: url(../img/navi/navi_menu05.png) 0px 0px no-repeat;
+}
+li.menu06,
+li.menu06 a {
+	background: url(../img/navi/navi_menu06.png) 0px 0px no-repeat;
+}
+li.menu07,
+li.menu07 a {
+	background: url(../img/navi/navi_menu07.png) 0px 0px no-repeat;
+}
+li.menu08,
+li.menu08 a {
+	background: url(../img/navi/navi_menu08.png) 0px 0px no-repeat;
+}
+li.menu09,
+li.menu09 a {
+	background: url(../img/navi/navi_menu09.png) 0px 0px no-repeat;
+}
+li.menu01-select,
+li.menu01-select a {
+	background: url(../img/navi/navi_menu01.png) 0px -60px no-repeat;
+}
+li.menu02-select,
+li.menu02-select a {
+	background: url(../img/navi/navi_menu02.png) 0px -60px no-repeat;
+}
+li.menu03-select,
+li.menu03-select a {
+	background: url(../img/navi/navi_menu03.png) 0px -60px no-repeat;
+}
+li.menu04-select,
+li.menu04-select a {
+	background: url(../img/navi/navi_menu04.png) 0px -60px no-repeat;
+}
+li.menu05-select,
+li.menu05-select a {
+	background: url(../img/navi/navi_menu05.png) 0px -60px no-repeat;
+}
+li.menu06-select,
+li.menu06-select a {
+	background: url(../img/navi/navi_menu06.png) 0px -60px no-repeat;
+}
+li.menu07-select,
+li.menu07-select a {
+	background: url(../img/navi/navi_menu07.png) 0px -60px no-repeat;
+}
+li.menu08-select,
+li.menu08-select a {
+	background: url(../img/navi/navi_menu08.png) 0px -60px no-repeat;
+}
+li.menu09-select,
+li.menu09-select a {
+	background: url(../img/navi/navi_menu09.png) 0px -60px no-repeat;
+}
+
+li.menu01 a:hover,
+li.menu02 a:hover,
+li.menu03 a:hover,
+li.menu04 a:hover,
+li.menu05 a:hover,
+li.menu06 a:hover,
+li.menu07 a:hover,
+li.menu08 a:hover,
+li.menu09 a:hover {
+	background-position: 0px -60px;
+}
+/*li.menu07 a:hover,
+li.menu09 a:hover*/ {
+	background-position: 0px 0px;
+	cursor: default;
+}
+
+
+/*----------------------------------------
+anchor
+----------------------------------------*/
+li.anchor01,
+li.anchor01 a,
+li.anchor02,
+li.anchor02 a,
+li.anchor03,
+li.anchor03 a {
+	display: block;
+	width: 189px;
+	height: 37px;
+	text-indent: -9999px;
+}
+li.anchor01,
+li.anchor01 a {
+	background: url(../img/sys/anchor_sys01.jpg) 0px 0px no-repeat
+}
+li.anchor02,
+li.anchor02 a {
+	background: url(../img/sys/anchor_sys02.jpg) 0px 0px no-repeat
+}
+li.anchor03,
+li.anchor03 a {
+	background: url(../img/sys/anchor_sys03.jpg) 0px 0px no-repeat
+}
+li.anchor02,
+li.anchor03 {
+	margin-top: 2px;
+}
+li.anchor01 a:hover,
+li.anchor02 a:hover,
+li.anchor03 a:hover {
+	background-position: 0px -37px;
+}
+
+
+/*----------------------------------------
+tab btn
+----------------------------------------*/
+/*-- chara --*/
+#thumbA ul,
+#thumbB ul,
+#thumbC ul,
+#thumbD ul,
+#thumbE ul,
+#thumbF ul,
+#thumbG ul,
+#thumbH ul,
+#thumbI ul,
+#thumbJ ul,
+#thumbK ul,
+#thumbL ul,
+#thumbM ul,
+#thumbN ul,
+#thumbO ul {
+	z-index: 2;
+	width: 980px;
+	height: 35px;
+	position: inherit;
+	margin: 10px 0px 0px 10px;
+}
+#thumbA li,
+#thumbB li,
+#thumbC li,
+#thumbD li,
+#thumbE li,
+#thumbF li,
+#thumbG li,
+#thumbH li,
+#thumbI li,
+#thumbJ li,
+#thumbK li,
+#thumbL li,
+#thumbM li,
+#thumbN li,
+#thumbO li {
+	display: block;
+	float: left;
+	width: 140px;
+	height: 35px;
+	text-indent: -9999px;
+	position:inherit;
+}
+/*-- course --*/
+#thumb ul {
+	z-index: 2;
+	width: 940px;
+	height: 35px;
+	position: inherit;
+	margin: 10px 0px 0px 25px;
+}
+#thumb li {
+	display: block;
+	float: left;
+	width: 188px;
+	height: 35px;
+	text-indent: -9999px;
+	position:inherit;
+}
+/*-- chara/course --*/
+li {
+	margin: 0px;
+}
+/*-- chara --*/
+li.thumb01A {
+	background: url(../img/chara/btn_charaA01.jpg) left top no-repeat;
+}
+li.thumb02A {
+	background: url(../img/chara/btn_charaA02.jpg) left top no-repeat;
+}
+li.thumb03A {
+	background: url(../img/chara/btn_charaA03.jpg) left top no-repeat;
+}
+li.thumb04A {
+	background: url(../img/chara/btn_charaA04.jpg) left top no-repeat;
+}
+li.thumb05A {
+	background: url(../img/chara/btn_charaA05.jpg) left top no-repeat;
+}
+li.thumb06A {
+	background: url(../img/chara/btn_charaA06.jpg) left top no-repeat;
+}
+li.thumb07A {
+	background: url(../img/chara/btn_charaA07.jpg) left top no-repeat;
+}
+li.thumb01B {
+	background: url(../img/chara/btn_charaB01.jpg) left top no-repeat;
+}
+li.thumb02B {
+	background: url(../img/chara/btn_charaB02.jpg) left top no-repeat;
+}
+li.thumb01D {
+	background: url(../img/chara/btn_charaD01.jpg) left top no-repeat;
+}
+li.thumb02D {
+	background: url(../img/chara/btn_charaD02.jpg) left top no-repeat;
+}
+li.thumb01E {
+	background: url(../img/chara/btn_charaE01.jpg) left top no-repeat;
+}
+li.thumb02E {
+	background: url(../img/chara/btn_charaE02.jpg) left top no-repeat;
+}
+li.thumb01H {
+	background: url(../img/chara/btn_charaH01.jpg) left top no-repeat;
+}
+li.thumb02H {
+	background: url(../img/chara/btn_charaH02.jpg) left top no-repeat;
+}
+li.thumb01O {
+	background: url(../img/chara/btn_charaO01.jpg) left top no-repeat;
+}
+li.thumb02O {
+	background: url(../img/chara/btn_charaO02.jpg) left top no-repeat;
+}
+/*-- course --*/
+li.thumb01V {
+	background: url(../img/course/btn_courseV01.jpg) left top no-repeat;
+}
+li.thumb02V {
+	background: url(../img/course/btn_courseV02.jpg) left top no-repeat;
+}
+li.thumb03V {
+	background: url(../img/course/btn_courseV03.jpg) left top no-repeat;
+}
+li.thumb04V {
+	background: url(../img/course/btn_courseV04.jpg) left top no-repeat;
+}
+li.thumb05V {
+	background: url(../img/course/btn_courseV05.jpg) left top no-repeat;
+}
+/*-- chara --*/
+body#page-chara #thumbA a,
+#thumbA a.active,
+body#page-chara #thumbB a,
+#thumbB a.active,
+body#page-chara #thumbC a,
+#thumbC a.active,
+body#page-chara #thumbD a,
+#thumbD a.active,
+body#page-chara #thumbE a,
+#thumbE a.active,
+body#page-chara #thumbF a,
+#thumbF a.active,
+body#page-chara #thumbG a,
+#thumbG a.active,
+body#page-chara #thumbH a,
+#thumbH a.active,
+body#page-chara #thumbI a,
+#thumbI a.active,
+body#page-chara #thumbJ a,
+#thumbJ a.active,
+body#page-chara #thumbK a,
+#thumbK a.active,
+body#page-chara #thumbL a,
+#thumbL a.active,
+body#page-chara #thumbM a,
+#thumbM a.active {
+	display: block;
+	width: 140px;
+	height: 35px;
+	text-indent: -9999px;
+	z-index: 1;
+	position: inherit;
+}
+/*-- course --*/
+body#page-couse #thumb a,
+#thumb a.active {
+	display: block;
+	width: 188px;
+	height: 35px;
+	text-indent: -9999px;
+	z-index: 1;
+	position: inherit;
+}
+/*-- chara --*/
+body#page-chara #thumbA a:hover,
+#thumbA a.active,
+body#page-chara #thumbB a:hover,
+#thumbB a.active,
+body#page-chara #thumbC a:hover,
+#thumbC a.active,
+body#page-chara #thumbD a:hover,
+#thumbD a.active,
+body#page-chara #thumbE a:hover,
+#thumbE a.active,
+body#page-chara #thumbF a:hover,
+#thumbF a.active,
+body#page-chara #thumbG a:hover,
+#thumbG a.active,
+body#page-chara #thumbH a:hover,
+#thumbH a.active,
+body#page-chara #thumbI a:hover,
+#thumbI a.active,
+body#page-chara #thumbJ a:hover,
+#thumbJ a.active,
+body#page-chara #thumbK a:hover,
+#thumbK a.active,
+body#page-chara #thumbL a:hover,
+#thumbL a.active,
+body#page-chara #thumbM a:hover,
+#thumbM a.active,
+body#page-chara #thumbN a:hover,
+#thumbN a.active,
+body#page-chara #thumbO a:hover,
+#thumbO a.active {
+	height: 35px;
+	background: url(../img/chara/btn_chara-on.png) left top no-repeat;
+}
+/*-- course --*/
+body#page-course #thumb a:hover,
+#thumb a.active {
+	height: 35px;
+	background: url(../img/course/btn_course-on.png) left top no-repeat;
+}
+/*-- chara/course --*/
+#thumbA a.active,
+#thumbB a.active,
+#thumbC a.active,
+#thumbD a.active,
+#thumbE a.active,
+#thumbF a.active,
+#thumbG a.active,
+#thumbH a.active,
+#thumbI a.active,
+#thumbJ a.active,
+#thumbK a.active,
+#thumbL a.active,
+#thumbM a.active,
+#thumbN a.active,
+#thumbO a.active,
+#thumb a.active {
+	cursor: default;
+}
+/*-- chara --*/
+body#page-chara #thumbA span.new_chara,
+body#page-chara #thumbB span.new_chara,
+body#page-chara #thumbC span.new_chara,
+body#page-chara #thumbD span.new_chara,
+body#page-chara #thumbE span.new_chara,
+body#page-chara #thumbF span.new_chara,
+body#page-chara #thumbG span.new_chara,
+body#page-chara #thumbH span.new_chara,
+body#page-chara #thumbI span.new_chara,
+body#page-chara #thumbJ span.new_chara,
+body#page-chara #thumbK span.new_chara,
+body#page-chara #thumbL span.new_chara,
+body#page-chara #thumbM span.new_chara,
+body#page-chara #thumbN span.new_chara,
+body#page-chara #thumbO span.new_chara {
+	display: block;
+	width: 26px;
+	height: 7px;
+	background: url(../img/chara/new.png) left top no-repeat;
+	text-indent: -9999px;
+	z-index: 2;
+	position: inherit;
+	margin: -32px 0px 0px 5px;
+}
+/*-- course --*/
+body#page-course #thumb span.new_chara {
+	display: block;
+	width: 26px;
+	height: 7px;
+	background: url(../img/chara/new.png) left top no-repeat;
+	text-indent: -9999px;
+	z-index: 2;
+	position: inherit;
+	margin: -32px 0px 0px 5px;
+}
+
+
+
+
+
+

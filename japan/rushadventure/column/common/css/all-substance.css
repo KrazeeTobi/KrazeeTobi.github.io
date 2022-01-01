@@ -37,14 +37,14 @@
 	padding:10px 0 10px 0;
 	margin:0 0 0 15px;
 	width:550px;
-	background:url("../../../common/image/line_dot.gif")	no-repeat center top;
+	background:url("http://sonic.sega.jp/rushadventure/common/image/line_dot.gif")	no-repeat center top;
 }
 
 .bottomDotLine{
 	padding:5px 0 10px 0;
 	margin:0 0 0 15px;
 	width:550px;
-	background:url("../../../common/image/line_dot.gif")	no-repeat center bottom;
+	background:url("http://sonic.sega.jp/rushadventure/common/image/line_dot.gif")	no-repeat center bottom;
 }
 
 

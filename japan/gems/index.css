@@ -1,0 +1,87 @@
+body
+{
+	scrollbar-3dlight-color:#0099FF;
+	scrollbar-arrow-color:#00CCFF;
+	scrollbar-darkshadow-color:#00CCFF;
+	scrollbar-face-color:#99CCFF;
+	scrollbar-highlight-color:#0099FF;
+	scrollbar-shadow-color:#0099FF;
+	scrollbar-track-color:#0099FF;
+	scrollbar-arrow-color:#FFFFFF;
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN", Osaka;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-variant: normal;
+	color: #000000;
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFFFFF;
+	background-position: center center;
+}
+.td01 {
+	font-size: 12px;
+	font-weight: bold;
+	color: #333333;
+	background-image:  url("images/sub.gif");
+	background-repeat: no-repeat;
+
+}
+a:link {
+	font-weight: bold;
+	color: #0066FF;
+	text-decoration: none;
+}
+a:visited {
+	font-weight: bold;
+	color: #0033CC;
+	text-decoration: none;
+}
+a:hover {
+	font-weight: bold;
+	color: #FF3300;
+	text-decoration: none;
+}
+a:active {
+	font-weight: bold;
+	color: #339999;
+	text-decoration: none;
+}
+.body_top {
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	background-color: #FFFFFF;
+	font-family: "‚l‚r ‚oƒSƒVƒbƒN", Osaka;
+	background-image: url(images/bg_t1.gif);
+	background-repeat: repeat-y;
+	background-position: center center;
+	margin: 0px;
+	padding: 0px;
+}
+.f10 {
+	font-size: 10px;
+}
+.f10_b {
+	font-size: 10px;
+	font-weight: bold;
+}
+.f14w {
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.table590 {
+	font-size: 12px;
+	width: 590px;
+}
+.f14bk {
+	font-size: 14px;
+	color: #000000;
+	font-weight: bold;
+}
+.body_menu {
+	background-image: url(images/bg_m.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+}
