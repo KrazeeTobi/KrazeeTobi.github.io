@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+/* substance-title setting ===================================================== */
+ul.pageNavi{
+	width:612px;
+	padding:12px 0 0;
+	clear:both;
+	display:block;
+	text-align:right;
+}
+
+/* clear fix */
+ul.pageNavi{
+	zoom:1;/*for IE 5.5-7*/
+}
+ul.pageNavi:after{/*for modern browser*/
+	content:".";
+	display: block;
+	height:0px;
+	clear:both;
+	visibility:hidden;
+}
+
+ul.pageNavi li{
+	display:block;
+	padding:2px;
+	margin:2px 0;	
+	background: url("contents-substance/pagenavi_btn_line.gif") repeat-x left center;	
+}
+
+ul.pageNavi li.prevLink{
+	float:left;
+	margin-left:7px;
+}
+
+ul.pageNavi li.nextLink{
+	float:right;
+}
+
+ul.pageNavi li.prevLink a{
+	display:block;
+	padding:3px 5px 3px 10px;
+	width:50px;
+	text-align:right;
+	background: url("contents-substance/pagenavi_prev.gif") no-repeat left center;	
+}
+
+ul.pageNavi li.nextLink a{
+	display:block;
+	padding:3px 10px 3px 5px;
+	width:50px;
+	text-align:left;
+	background: url("contents-substance/pagenavi_next.gif") no-repeat right center;	
+}
+
+ul.pageNavi li.prevLink a:hover{
+	background: url("contents-substance/pagenavi_prev_o.gif") no-repeat left center;
+	text-decoration:none;
+}
+
+ul.pageNavi li.nextLink a:hover{
+	background: url("contents-substance/pagenavi_next_o.gif") no-repeat right center;
+	text-decoration:none;
+}
+
+
+
+
+/* thumbnailList setting ===================================================== */
+ul.thumbnailList{
+	width:620px;
+	padding:0 0 1.5em;
+	margin:0;
+	list-style:none;
+}
+ul.thumbnailList:before{
+	content: "";
+	display: block;
+	height: 0px;
+	clear: both;
+}
+ul.thumbnailList:after{
+	content: "";
+	display: block;
+	height: 0px;
+	clear: both;
+}
+
+ul.thumbnailList li{
+	display:block;
+	float:left;
+	margin-top:1em;
+	width:155px;
+	height:196px;
+	background:url("contents-substance/thumbnaillist_bg.gif") no-repeat left top;
+	text-align:center;
+	overflow:hidden;
+}
+
+ul.thumbnailList li img{
+	display:block;
+	margin:10px auto 0;
+}
+
+ul.thumbnailList li h2{
+	font-weight:bold;
+	font-size:85%;
+	margin:7px 0;
+}
+
+/* downloadList setting ===================================================== */
+ul.downloadList{
+	float:none;
+	margin:0;
+	padding:0;
+	width:155px;
+	height:auto;
+}
+
+ul.downloadList li{
+	float:none;
+	margin:0 32px;
+	padding:0;
+	width:88px;
+	height:17px;
+	background:none;
+	text-align:left;
+}
+
+ul.downloadList li a{
+	display:block;
+	width:88px;
+	height:15px;
+}
+
+
+/* downloadList a bg setting ================================================ */
+
+.down1280 a:link,
+.down1280 a:visited {
+	background:url("contents-substance/btn_1280_ot.gif") no-repeat;
+}
+.down1280 a:hover {
+	background:url("contents-substance/btn_1280_ov.gif") no-repeat;
+}
+
+.down1280x800 a:link,
+.down1280x800 a:visited {
+	background:url("contents-substance/btn_1280x800_ot.gif") no-repeat;
+}
+.down1280x800 a:hover {
+	background:url("contents-substance/btn_1280x800_ov.gif") no-repeat;
+}
+
+.down1024x768 a:link,
+.down1024x768 a:visited {
+	background:url("contents-substance/btn_1024x768_ot.gif") no-repeat;
+}
+.down1024x768 a:hover {
+	background:url("contents-substance/btn_1024x768_ov.gif") no-repeat;
+}
+
+.down1024 a:link,
+.down1024 a:visited {
+	background:url("contents-substance/btn_1024_ot.gif") no-repeat;
+}
+.down1024 a:hover {
+	background:url("contents-substance/btn_1024_ov.gif") no-repeat;
+}
+
+.down800 a:link,
+.down800 a:visited {
+	background:url("contents-substance/btn_800_ot.gif") no-repeat;
+}
+.down800 a:hover {
+	background:url("contents-substance/btn_800_ov.gif") no-repeat;
+}
+.downFile a:link,
+.downFile a:visited {
+	background:url("contents-substance/btn_file_ot.gif") no-repeat;
+}
+.downFile a:hover {
+	background:url("contents-substance/btn_file_ov.gif") no-repeat;
+}
+.downWin a:link,
+.downWin a:visited {
+	background:url("contents-substance/btn_win_ot.gif") no-repeat;
+}
+.downWin a:hover {
+	background:url("contents-substance/btn_win_ov.gif") no-repeat;
+}
+
+.downOsx a:link,
+.downOsx a:visited {
+	background:url("contents-substance/btn_osx_ot.gif") no-repeat;
+}
+.downOsx a:hover {
+	background:url("contents-substance/btn_osx_ov.gif") no-repeat;
+}
+
+.downOs9 a:link,
+.downOs9 a:visited {
+	background:url("contents-substance/btn_os9_ot.gif") no-repeat;
+}
+.downOs9 a:hover {
+	background:url("contents-substance/btn_os9_ov.gif") no-repeat;
+}
+
+ul.downloadList li a span{
+	margin:0px;
+	padding:0px;
+	width:1px;
+	height:1px;
+	position:absolute;
+	top:0px;
+	left: -999px;
+	display:run-in;
+	border-style:none;
+	overflow:hidden;
+}
+
+/* newImage setting ===================================================== */
+ul.thumbnailList li span.newImage{
+	display:block;
+	text-align:left;
+}
+
+ul.thumbnailList li  span.newImage img{
+	margin:0 0 -18px 0;
+	padding:0;
+	position:relative;
+	top:-23px;
+	z-index:100;
+}
+
+#banner-length textarea{
+	margin-bottom:15px;
+	width:320px;
+	height:100px;
+}

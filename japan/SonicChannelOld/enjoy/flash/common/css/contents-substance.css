@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+
+
+/* flash game area setting ================================================ */
+#flashArea{
+	background:url("contents-substance/flash_area_line_div.gif") no-repeat left bottom;
+	padding:0 0 10px 0;
+}
+
+#gameExposition{	
+	margin:1em 0 0;
+}
+
+#gameExposition h2{
+	color:#009900;
+	font-weight:bold;
+	margin:0.5em 0 0;
+}
+
+#gameExposition dt{	
+	clear:both;
+	float:left;
+}
+
+/* only puzzle */
+#completFig{
+	padding:0 0 2em;	
+}
+
+#completFig img{
+	border:1px solid #000;
+}

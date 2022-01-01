@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url(contents-substance/h1.gif) no-repeat;
+}
+
+
+/* page substance setting   ===================================================== */
+
+#pageSubstance{
+	width:645px;
+	margin:0 0 2em;
+}
+
+#pageSubstance:after{
+	content: "";
+	display: block;
+	height: 0px;
+	clear: both;
+}
+
+#pageSubstance div h2,
+#pageSubstance div h3,
+#pageSubstance div p,
+#pageSubstance div ul,
+#pageSubstance div textarea{
+	display:block;
+	float:right;
+	width:400px;
+}
+
+
+#pageSubstance div h3{
+	font-weight:bold;
+	padding:1.5em 0 0;
+	color:#090;
+	border-bottom:1px solic #090;	
+}
+
+
+#pageSubstance div textarea{
+	width:475px;
+}
+
+#pageSubstance div ul li{
+	list-style-position:inside;
+	list-style-type:disc;
+}
+
+
+#pageSubstance div p{
+	padding:0;
+}
+
+#pageSubstance #apli-flash{
+	float:left;
+	width:240px;
+	padding:0;
+
+}
+

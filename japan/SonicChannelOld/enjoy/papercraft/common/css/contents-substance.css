@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+
+/* page substance setting   ===================================================== */
+#pageSubstance{
+	width:645px;
+	margin:0 0 2em;
+}
+
+#pageSubstance:after{
+	content: "";
+	display: block;
+	height: 0px;
+	clear: both;
+}
+
+#pageSubstance h2,
+#pageSubstance p{
+	display:block;
+	float:right;
+	width:325px;
+}
+
+#pageSubstance p{
+	padding:1em 0 1em;
+}
+
+#pageSubstance p.completImg{
+	float:left;
+	width:320px;
+	padding:0;
+
+}
+
+#pageSubstance p.downPaper{
+	text-align:center;
+	padding:15px 0 0.5em;
+	margin-bottom:0.5em;
+	border-top:1px dashed #666;
+}

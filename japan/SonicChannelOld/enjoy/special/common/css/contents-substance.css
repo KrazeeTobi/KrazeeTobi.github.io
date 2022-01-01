@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* page title setting   ===================================================== */
+#substance-title h1{
+	background:url("contents-substance/h1.gif") no-repeat;
+}
+
+
+/* newImage setting only coloring ========================================== */
+ul.thumbnailList li span.newImage{
+	margin:0 0 0 40px;
+}
+
+/*===========================================================================*/
+ul.thumbnailList li.li-pic{
+	display:block;
+	float:left;
+	width:260px;
+	height:196px;
+	background:none;
+}
+
+ul.thumbnailList li img.img-pic{
+	display:block;
+	margin:0 auto 0;
+}
