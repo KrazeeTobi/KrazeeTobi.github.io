@@ -1,0 +1,286 @@
+@charset "UTF-8";
+/* カラー設定 */
+/* 透ける背景用設定 */
+/* 透ける背景用設定 文字読みにくい場合  */
+/* 基本テキスト色 */
+/* font関係 */
+/* フォント[size,line-height,letter-spacing] */
+/* 角丸 */
+/* margin-bottom */
+/* screenサイズ */
+/* ブレイクポイント */
+/* */
+/* z-index */
+/* カラー設定 */
+/* 透ける背景用設定 */
+/* 透ける背景用設定 文字読みにくい場合  */
+/* 基本テキスト色 */
+/* font関係 */
+/* フォント[size,line-height,letter-spacing] */
+/* 角丸 */
+/* margin-bottom */
+/* screenサイズ */
+/* ブレイクポイント */
+/* */
+/* z-index */
+/*------------------------------------------------
+	font-set([size,line-height,letter-spacing])
+  ------------------------------------------------	
+	htmlのfont-size: 62.5%にしているのなら、
+	ベースをサイズにかけなくてもよい。
+	参考)
+	http://www.webcreatorbox.com/tech/sass-mixin/
+	http://html5-css3.jp/tips/css3-rem.html
+------------------------------------------------*/
+/* CSS Transition Easing */
+/*------------------------------------------------------------
+//animation-setting
+------------------------------------------------------------*/
+@-o-keyframes blinkText {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-moz-keyframes blinkText {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-ms-keyframes blinkText {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-webkit-keyframes blinkText {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+/*------------------------------------------------------------
+//
+------------------------------------------------------------*/
+/* 旧ファンアート用の設定 */
+.fanart {
+  /*------------------------------------------mask-object*/
+  /*------------------------------------------substance-view*/ }
+  .fanart main#common-contents #contents-banner {
+    text-align: center;
+    margin: 30px; }
+  .fanart main#common-contents #contents-header .contentsNavigation {
+    background: #0093ff !important; }
+  .fanart main#common-contents #contents-header nav.fanartNavigation {
+    background: #0093ff; }
+    .fanart main#common-contents #contents-header nav.fanartNavigation ul {
+      display: block;
+      letter-spacing: -.40em;
+      /* 文字間を詰めて隙間を削除する */
+      line-height: 0;
+      text-indent: -1px;
+      background: #fff; }
+      .fanart main#common-contents #contents-header nav.fanartNavigation ul li {
+        display: inline-block;
+        padding: 0 1px;
+        font-size: 14px;
+        font-size: 1.4rem;
+        line-height: 22px;
+        line-height: 2.2rem;
+        letter-spacing: 1px;
+        background: linear-gradient(white 10%, #eee 15%, #eee 85%, white 90%); }
+        .fanart main#common-contents #contents-header nav.fanartNavigation ul li a {
+          background: #fff;
+          vertical-align: middle;
+          display: table-cell;
+          padding: 0 0.8em;
+          width: 100%;
+          height: 40px;
+          text-decoration: none;
+          color: #0093ff;
+          transition: color .2s,background .2s; }
+          .no-touch .fanart main#common-contents #contents-header nav.fanartNavigation ul li a:hover {
+            color: #fff !important;
+            background: #ff64a4; }
+          .fanart main#common-contents #contents-header nav.fanartNavigation ul li a.activeAnchor {
+            color: #fff;
+            background: #0093ff; }
+    .fanart main#common-contents #contents-header nav.fanartNavigation select {
+      background: #FFF;
+      width: 100%;
+      height: 40px;
+      margin: 0;
+      padding: 0 0 0 0.5em;
+      appearance: none;
+      line-height: 30px;
+      background: url("common-contents/select.png") no-repeat right center #fff;
+      /*IE10用 select装飾設定*/
+      /*IE9用ハック*/ }
+      .fanart main#common-contents #contents-header nav.fanartNavigation select::-ms-expand {
+        display: none; }
+      .fanart main#common-contents #contents-header nav.fanartNavigation select:not(:target) {
+        width: 130% \9; }
+  .fanart main#common-contents #contents-header nav.fanartNavigation#nav-month-ul {
+    display: block; }
+    @media only screen and (max-width: 940px) {
+      .fanart main#common-contents #contents-header nav.fanartNavigation#nav-month-ul {
+        display: block; } }
+    @media only screen and (max-width: 480px) {
+      .fanart main#common-contents #contents-header nav.fanartNavigation#nav-month-ul {
+        display: none; } }
+  .fanart main#common-contents #contents-header nav.fanartNavigation#nav-month-select {
+    display: none; }
+    @media only screen and (max-width: 940px) {
+      .fanart main#common-contents #contents-header nav.fanartNavigation#nav-month-select {
+        display: none; } }
+    @media only screen and (max-width: 480px) {
+      .fanart main#common-contents #contents-header nav.fanartNavigation#nav-month-select {
+        display: block; } }
+  .fanart main#common-contents article#contents-page {
+    min-height: 500px;
+    padding-bottom: 40px; }
+    .fanart main#common-contents article#contents-page h1 {
+      margin-bottom: 30px; }
+    .fanart main#common-contents article#contents-page #cotentes-substance dl, .fanart main#common-contents article#contents-page #cotentes-substance address {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px; }
+    .fanart main#common-contents article#contents-page #cotentes-substance dt:before {
+      content: "・"; }
+    .fanart main#common-contents article#contents-page #cotentes-substance dd {
+      padding: 0 0 2rem 2rem; }
+    .fanart main#common-contents article#contents-page #substance-thumbnail #thumbnail-list li {
+      width: 120px;
+      height: 120px;
+      display: block;
+      float: left;
+      margin: 0 20px 20px 0;
+      background: #f00;
+      line-height: 0; }
+      .fanart main#common-contents article#contents-page #substance-thumbnail #thumbnail-list li:nth-child(6n) {
+        margin: 0 0 20px 0; }
+      @media only screen and (max-width: 940px) {
+        .fanart main#common-contents article#contents-page #substance-thumbnail #thumbnail-list li {
+          width: 18%;
+          height: auto;
+          margin: 1%; }
+          .fanart main#common-contents article#contents-page #substance-thumbnail #thumbnail-list li:nth-child(6n) {
+            margin: 1%; } }
+      @media only screen and (max-width: 480px) {
+        .fanart main#common-contents article#contents-page #substance-thumbnail #thumbnail-list li {
+          width: 33%;
+          height: auto;
+          margin: 0; }
+          .fanart main#common-contents article#contents-page #substance-thumbnail #thumbnail-list li:nth-child(6n) {
+            margin: 0; }
+          .fanart main#common-contents article#contents-page #substance-thumbnail #thumbnail-list li img {
+            border-width: 1px; } }
+      .fanart main#common-contents article#contents-page #substance-thumbnail #thumbnail-list li img {
+        cursor: pointer;
+        margin: 0; }
+        .fanart main#common-contents article#contents-page #substance-thumbnail #thumbnail-list li img:hover {
+          border-color: #ff64a4; }
+    .fanart main#common-contents article#contents-page #thumbnail-loading {
+      width: 100%;
+      height: 200px;
+      text-align: center;
+      font-size: medium;
+      margin: 0px 0 0;
+      padding: 0px 0 0;
+      background: url(fanart/loading-image.gif) no-repeat center 2em; }
+  .fanart #mask-object {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+    display: none; }
+    .fanart #mask-object div {
+      width: 100%;
+      height: 100%;
+      background: #0093ff;
+      filter: alpha(opacity=90);
+      -moz-opacity: 0.9;
+      opacity: 0.9; }
+  .fanart #substance-view {
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    margin-left: -355px;
+    padding-bottom: 50px;
+    z-index: 13;
+    width: 710px;
+    display: none; }
+    @media only screen and (max-width: 940px) {
+      .fanart #substance-view {
+        margin-left: -50%;
+        padding: 15px;
+        width: 100%; } }
+    @media only screen and (max-width: 480px) {
+      .fanart #substance-view {
+        margin-left: -50%;
+        padding: 15px;
+        width: 100%; } }
+    .fanart #substance-view #view-body {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      width: 100%; }
+      .fanart #substance-view #view-body ul.boxLink {
+        margin: 0 0 20px; }
+      .fanart #substance-view #view-body #view-content dt {
+        font-size: 18px;
+        font-size: 1.8rem;
+        line-height: 29px;
+        line-height: 2.9rem;
+        letter-spacing: 1px;
+        color: #fffc00;
+        margin-bottom: 5px; }
+      .fanart #substance-view #view-body #view-content dd {
+        font-size: 14px;
+        font-size: 1.4rem;
+        line-height: 22px;
+        line-height: 2.2rem;
+        letter-spacing: 1px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 8px black;
+        background: #fff;
+        margin-bottom: 15px;
+        padding: 10px; }
+      .fanart #substance-view #view-body #view-content #view-img {
+        position: relative;
+        clear: both;
+        margin-bottom: 20px;
+        padding: 0;
+        border: 3px solid #005999;
+        background: #fff url(fanart/loading-image.gif) no-repeat center center; }
+        .fanart #substance-view #view-body #view-content #view-img img {
+          position: relative;
+          margin: 0;
+          padding: 0; }
+
+.columnFanart div h2 {
+  background: #0093ff !important;
+  color: #FFF !important;
+  padding: 5px !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  border-radius: 0  !important;
+  font-size: 14px !important;
+  font-size: 1.4rem !important;
+  line-height: 22px !important;
+  line-height: 2.2rem !important;
+  letter-spacing: 1px !important; }
+  @media only screen and (max-width: 480px) {
+    .columnFanart div h2 {
+      font-size: 12px !important;
+      font-size: 1.2rem !important;
+      line-height: 16px !important;
+      line-height: 1.6rem !important;
+      letter-spacing: 1px !important; } }
+.columnFanart div p {
+  margin-bottom: 5px !important;
+  font-size: 12px !important;
+  font-size: 1.2rem !important;
+  line-height: 16px !important;
+  line-height: 1.6rem !important;
+  letter-spacing: 1px !important; }
