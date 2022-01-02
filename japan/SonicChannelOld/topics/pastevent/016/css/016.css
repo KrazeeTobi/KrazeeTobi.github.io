@@ -49,7 +49,7 @@ div#charaList div.dotLine {
 	display:block;
 	width:488px;
 	height:20px;
-	background:url(http://sonic.sega.jp/SonicChannelOld/common/css/contents-substance/h1_line.gif) repeat-x left center;
+	background:url(../../../../common/css/contents-substance/h1_line.gif) repeat-x left center;
 	clear:both;
 }
 
