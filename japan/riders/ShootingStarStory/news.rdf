@@ -1,94 +1,121 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Start</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <link href="./nonAuth/axure_rp_page.css" type="text/css" rel="stylesheet"/>
-    <link href="./nonAuth/BTstyles.css" type="text/css" rel="stylesheet">
-    <link href="./nonAuth/m_hurl.css" type="text/css" rel="stylesheet">
-    <link href="./nonAuth/BTfont.css" type="text/css" rel="stylesheet">
-    <link rel="shortcut icon" href="../images/favicon1.ico" type="image/x-icon">
-	<link rel="icon" href="../images/favicon1.ico" type="image/x-icon">
-    <script src="./nonAuth/jquery-1.7.1.min.js"></script>
-    <script src="./nonAuth/jquery-ui-1.8.12.custom.min.js"></script>
-    <script language="JavaScript" type="text/javascript">
-    	var CGIs = [];
-    </script>
-    <script src="./nonAuth/globals.js"></script>
-    <script src="./nonAuth/Hurl.js"></script>
+<?xml version="1.0" encoding="UTF-8"?>
 
-    <script language="javascript"  type="text/javascript">
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:admin="http://webns.net/mvcb/"
+xmlns="http://purl.org/rss/1.0/">
 
-	var device_version = 0;
-	function init(){
-		pm_init();
+<channel rdf:about="">
+<title></title>
+<link></link>
+<description><![CDATA[]]></description>
+<dc:language>ja</dc:language>
+<dc:date>2008-03-14T00:00:00+09:00</dc:date>
+<admin:generatorAgent rdf:resource="http://www.towofu.net/soft/rsspost.php" />
 
-		/*PC: device_version=0, mobile: device_version > 0*/
-		if(device_version == 0){
-			var ToppestMenu;
-			ToppestMenu = ShowHurlTopMenu();
-			document.getElementById("Hurl_toppest").innerHTML = ToppestMenu;
+<items>
+<rdf:Seq>
+<rdf:li rdf:resource="" />
+<rdf:li rdf:resource="" />
+<rdf:li rdf:resource="" />
+<rdf:li rdf:resource="" />
+<rdf:li rdf:resource="" />
+<rdf:li rdf:resource="" />
+<rdf:li rdf:resource="" />
+<rdf:li rdf:resource="" />
+<rdf:li rdf:resource="" />
+<rdf:li rdf:resource="" />
+</rdf:Seq>
+</items>
 
-			setHurlInputBtn("start_troubleshooting", "hurl_sys.htm#001", "Start troubleshooting");
-			
-		}else{
-			var ToppestMenu;
-			ToppestMenu = m_ShowHurlTopMenu();
-			document.getElementById("m_Hurl_toppest").innerHTML = ToppestMenu;
-			if(device_version == 1){
-				m_setHurlInputBtn("m_start_troubleshooting", "hurl_sys.htm#001", "Start troubleshooting");
-			}else if(device_version == 2){
-				m_setHurlInputBtn("m_start_troubleshooting", "hurl_sys.htm#001", "Start troubleshooting");
-			}
-		}
-    	}
-	
-    	
-    </script>
-  </head>
+</channel>
 
-  <body onLoad="init()">
-  <FORM name="tF0" action="./cgi-bin/statusprocess.exe" method="post" target="OUTfrm">
-  	 <div id="base" style="display:none;" class="">
-  	 	<!--TopMenu-->
-	    	<div id="Hurl_toppest">
-	    	</div>
+<item rdf:about="">
+<title>3月14日　公式サイトを更新！</title>
+<link></link>
+<description><![CDATA[・『ソニックライダーズ シューティングスターストーリー』
+発売記念プレゼントキャンペーンは終了いたしました。
+たくさんのご応募ありがとうございました。
+当選者の発表は賞品の発送をもってかえさせていただきます。]]></description>
+<dc:date>2008-03-14T00:00:00+09:00</dc:date>
+</item>
 
-	    	<span class="EEtitleFont_hurl" style="position:absolute; top:80px; width:270px;">Unable to connect to the Internet</span>
-	    	<img alt="" style="position:absolute; top:113px; left:205px;"  src="../images/hurl_hub.png"/>
-	    	<img alt="" style="position:absolute; top:272px; left:545px;"  src="../images/hurl_alert.png"/>
-	    	
-	    	<span class="EEregularFont_hurl" style="position:absolute; top:330px; width:500px;">
-	    		Your EE Smart Hub has detected a problem with your internet connection.
-	    		<br><br>
-	    		We'll now take you through some simple steps to try to fix things.
-	    	</span>
-	    	
-	    	<img alt="" style="position:absolute; top:400px; width:720px; height:2px;"  src="../images/sub_menu_line_u677_line.png"/>
-	    	<label id="start_troubleshooting" style="position:absolute; top:420px; left:260px;"></label>
-  	 </div>
+<item rdf:about="">
+<title>3月7日　公式サイトを更新！</title>
+<link></link>
+<description><![CDATA[・「メイキング」追加！]]></description>
+<dc:date>2008-03-07T13:41:51+09:00</dc:date>
+</item>
 
-  	 <div id = "mobile" style="display:none;" class="mobile_width">
-  	 	<!--TopMenu-->
-	    	<div id="m_Hurl_toppest">
-	    	</div>
+<item rdf:about="">
+<title>2月29日　公式サイトを更新！</title>
+<link></link>
+<description><![CDATA[・「コース」追加！
 
-	    	<span class="m_titleFont mobile_font_size2 colorGray" style="position:absolute; top:60px; width:270px; left:10px;">Unable to connect to the Internet</span>
-	    	<img alt="" style="position:absolute; top:95px; left:30px; width:255px; height:170px;"  src="../images/hurl_hub.png"/>
-	    	<img alt="" style="position:absolute; top:225px; left:265px;"  src="../images/hurl_alert.png"/>
-	    	<div class="mobile_Swidth" style="position:absolute; top:275px;">
-		    	<span class="m_regularFont mobile_Swidth mobile_font_size2 colorGray" style="position:relative; left:10px;">
-		    		Your EE Smart Hub has detected a problem with your internet connection.
-		    		<br><br>
-		    		We'll now take you through some simple steps to try to fix things.
-		    	</span>
-		    	<img alt="" class="mobile_Swidth" style="position:relative; top:0px; left:10px; height:2px;"  src="../images/sub_menu_line_u677_line.png"/>
-		    	<label id="m_start_troubleshooting" class="hurlBtnLeft1" style="position:relative; top:10px;"></label>
-	    	</div>
-  	 </div>
-  </FORM>
-  </body>
-</html>
+・下記雑誌の情報に誤りがありましたのでお知らせいたします。
+２月２１日（木）発売：「Nintendo DREAME（ニンドリ）」「ファミ通DS+Wii（ディーエス+ウィー）」
+
+●カオスエメラルド出現条件
+（誤）ミッションＳランクオールクリア
+（正）ミッションExtremeオールクリア
+
+お客さまにご迷惑をおかけしたことを深くお詫びいたします。]]></description>
+<dc:date>2008-02-26T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="">
+<title>2月15日　公式サイトを更新！</title>
+<link></link>
+<description><![CDATA[・「エクストリームギア」「コース」「メイキング」追加！
+・『ソニックライダーズ シューティングスターストーリー』オリジナルグッズプレゼント！！]]></description>
+<dc:date>2008-02-15T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="">
+<title>2月8日　公式サイトを更新！</title>
+<link></link>
+<description><![CDATA[・「キャラクター」「エクストリームギア」「コース」追加！]]></description>
+<dc:date>2008-02-08T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="">
+<title>2月1日　公式サイトを更新！</title>
+<link></link>
+<description><![CDATA[・「キャラクター」「エクストリームギア」「コース」「ギャラリー」追加！
+・「メイキング・オブ・ソニックライダーズ」公開！]]></description>
+<dc:date>2008-02-01T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="">
+<title>1月25日　公式サイトを更新！</title>
+<link></link>
+<description><![CDATA[・「エクストリームギア」「コース」追加！]]></description>
+<dc:date>2008-01-25T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="">
+<title>1月18日　公式サイトを更新！</title>
+<link></link>
+<description><![CDATA[・「マルチモード」公開！
+・「エクストリームギア」「コース」追加！]]></description>
+<dc:date>2008-01-18T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="">
+<title>1月17日　公式サイトを更新！</title>
+<link></link>
+<description><![CDATA[・『ソニックライダーズ　シューティングスターストーリー 』発売！
+・「ランキング」公開！]]></description>
+<dc:date>2008-01-17T00:00:00+09:00</dc:date>
+</item>
+
+<item rdf:about="">
+<title>1月16日　公式サイトを更新！</title>
+<link></link>
+<description><![CDATA[・“「ランキング」とは？”　公開！]]></description>
+<dc:date>2008-01-16T00:00:00+09:00</dc:date>
+</item>
+
+</rdf:RDF>

@@ -1,94 +1,138 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Start</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <link href="./nonAuth/axure_rp_page.css" type="text/css" rel="stylesheet"/>
-    <link href="./nonAuth/BTstyles.css" type="text/css" rel="stylesheet">
-    <link href="./nonAuth/m_hurl.css" type="text/css" rel="stylesheet">
-    <link href="./nonAuth/BTfont.css" type="text/css" rel="stylesheet">
-    <link rel="shortcut icon" href="../images/favicon1.ico" type="image/x-icon">
-	<link rel="icon" href="../images/favicon1.ico" type="image/x-icon">
-    <script src="./nonAuth/jquery-1.7.1.min.js"></script>
-    <script src="./nonAuth/jquery-ui-1.8.12.custom.min.js"></script>
-    <script language="JavaScript" type="text/javascript">
-    	var CGIs = [];
-    </script>
-    <script src="./nonAuth/globals.js"></script>
-    <script src="./nonAuth/Hurl.js"></script>
-
-    <script language="javascript"  type="text/javascript">
-
-	var device_version = 0;
-	function init(){
-		pm_init();
-
-		/*PC: device_version=0, mobile: device_version > 0*/
-		if(device_version == 0){
-			var ToppestMenu;
-			ToppestMenu = ShowHurlTopMenu();
-			document.getElementById("Hurl_toppest").innerHTML = ToppestMenu;
-
-			setHurlInputBtn("start_troubleshooting", "hurl_sys.htm#001", "Start troubleshooting");
-			
-		}else{
-			var ToppestMenu;
-			ToppestMenu = m_ShowHurlTopMenu();
-			document.getElementById("m_Hurl_toppest").innerHTML = ToppestMenu;
-			if(device_version == 1){
-				m_setHurlInputBtn("m_start_troubleshooting", "hurl_sys.htm#001", "Start troubleshooting");
-			}else if(device_version == 2){
-				m_setHurlInputBtn("m_start_troubleshooting", "hurl_sys.htm#001", "Start troubleshooting");
-			}
-		}
-    	}
-	
-    	
-    </script>
-  </head>
-
-  <body onLoad="init()">
-  <FORM name="tF0" action="./cgi-bin/statusprocess.exe" method="post" target="OUTfrm">
-  	 <div id="base" style="display:none;" class="">
-  	 	<!--TopMenu-->
-	    	<div id="Hurl_toppest">
-	    	</div>
-
-	    	<span class="EEtitleFont_hurl" style="position:absolute; top:80px; width:270px;">Unable to connect to the Internet</span>
-	    	<img alt="" style="position:absolute; top:113px; left:205px;"  src="../images/hurl_hub.png"/>
-	    	<img alt="" style="position:absolute; top:272px; left:545px;"  src="../images/hurl_alert.png"/>
-	    	
-	    	<span class="EEregularFont_hurl" style="position:absolute; top:330px; width:500px;">
-	    		Your EE Smart Hub has detected a problem with your internet connection.
-	    		<br><br>
-	    		We'll now take you through some simple steps to try to fix things.
-	    	</span>
-	    	
-	    	<img alt="" style="position:absolute; top:400px; width:720px; height:2px;"  src="../images/sub_menu_line_u677_line.png"/>
-	    	<label id="start_troubleshooting" style="position:absolute; top:420px; left:260px;"></label>
-  	 </div>
-
-  	 <div id = "mobile" style="display:none;" class="mobile_width">
-  	 	<!--TopMenu-->
-	    	<div id="m_Hurl_toppest">
-	    	</div>
-
-	    	<span class="m_titleFont mobile_font_size2 colorGray" style="position:absolute; top:60px; width:270px; left:10px;">Unable to connect to the Internet</span>
-	    	<img alt="" style="position:absolute; top:95px; left:30px; width:255px; height:170px;"  src="../images/hurl_hub.png"/>
-	    	<img alt="" style="position:absolute; top:225px; left:265px;"  src="../images/hurl_alert.png"/>
-	    	<div class="mobile_Swidth" style="position:absolute; top:275px;">
-		    	<span class="m_regularFont mobile_Swidth mobile_font_size2 colorGray" style="position:relative; left:10px;">
-		    		Your EE Smart Hub has detected a problem with your internet connection.
-		    		<br><br>
-		    		We'll now take you through some simple steps to try to fix things.
-		    	</span>
-		    	<img alt="" class="mobile_Swidth" style="position:relative; top:0px; left:10px; height:2px;"  src="../images/sub_menu_line_u677_line.png"/>
-		    	<label id="m_start_troubleshooting" class="hurlBtnLeft1" style="position:relative; top:10px;"></label>
-	    	</div>
-  	 </div>
-  </FORM>
-  </body>
-</html>
+/**
+ * SWFObject v1.4.4: Flash Player detection and embed - http://blog.deconcept.com/swfobject/
+ *
+ * SWFObject is (c) 2006 Geoff Stearns and is released under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ * **SWFObject is the SWF embed script formerly known as FlashObject. The name was changed for
+ *   legal reasons.
+ */
+if(typeof deconcept=="undefined"){var deconcept=new Object();}
+if(typeof deconcept.util=="undefined"){deconcept.util=new Object();}
+if(typeof deconcept.SWFObjectUtil=="undefined"){deconcept.SWFObjectUtil=new Object();}
+deconcept.SWFObject=function(_1,id,w,h,_5,c,_7,_8,_9,_a,_b){if(!document.getElementById){return;}
+this.DETECT_KEY=_b?_b:"detectflash";
+this.skipDetect=deconcept.util.getRequestParameter(this.DETECT_KEY);
+this.params=new Object();
+this.variables=new Object();
+this.attributes=new Array();
+if(_1){this.setAttribute("swf",_1);}
+if(id){this.setAttribute("id",id);}
+if(w){this.setAttribute("width",w);}
+if(h){this.setAttribute("height",h);}
+if(_5){this.setAttribute("version",new deconcept.PlayerVersion(_5.toString().split(".")));}
+this.installedVer=deconcept.SWFObjectUtil.getPlayerVersion();
+if(c){this.addParam("bgcolor",c);}
+var q=_8?_8:"high";
+this.addParam("quality",q);
+this.setAttribute("useExpressInstall",_7);
+this.setAttribute("doExpressInstall",false);
+var _d=(_9)?_9:window.location;
+this.setAttribute("xiRedirectUrl",_d);
+this.setAttribute("redirectUrl","");
+if(_a){this.setAttribute("redirectUrl",_a);}};
+deconcept.SWFObject.prototype={setAttribute:function(_e,_f){
+this.attributes[_e]=_f;
+},getAttribute:function(_10){
+return this.attributes[_10];
+},addParam:function(_11,_12){
+this.params[_11]=_12;
+},getParams:function(){
+return this.params;
+},addVariable:function(_13,_14){
+this.variables[_13]=_14;
+},getVariable:function(_15){
+return this.variables[_15];
+},getVariables:function(){
+return this.variables;
+},getVariablePairs:function(){
+var _16=new Array();
+var key;
+var _18=this.getVariables();
+for(key in _18){_16.push(key+"="+_18[key]);}
+return _16;},getSWFHTML:function(){var _19="";
+if(navigator.plugins&&navigator.mimeTypes&&navigator.mimeTypes.length){
+if(this.getAttribute("doExpressInstall")){
+this.addVariable("MMplayerType","PlugIn");}
+_19="<embed type=\"application/x-shockwave-flash\" src=\""+this.getAttribute("swf")+"\" width=\""+this.getAttribute("width")+"\" height=\""+this.getAttribute("height")+"\"";
+_19+=" id=\""+this.getAttribute("id")+"\" name=\""+this.getAttribute("id")+"\" ";
+var _1a=this.getParams();
+for(var key in _1a){_19+=[key]+"=\""+_1a[key]+"\" ";}
+var _1c=this.getVariablePairs().join("&");
+if(_1c.length>0){_19+="flashvars=\""+_1c+"\"";}_19+="/>";
+}else{if(this.getAttribute("doExpressInstall")){this.addVariable("MMplayerType","ActiveX");}
+_19="<object id=\""+this.getAttribute("id")+"\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" width=\""+this.getAttribute("width")+"\" height=\""+this.getAttribute("height")+"\">";
+_19+="<param name=\"movie\" value=\""+this.getAttribute("swf")+"\" />";
+var _1d=this.getParams();
+for(var key in _1d){_19+="<param name=\""+key+"\" value=\""+_1d[key]+"\" />";}
+var _1f=this.getVariablePairs().join("&");
+if(_1f.length>0){_19+="<param name=\"flashvars\" value=\""+_1f+"\" />";}_19+="</object>";}
+return _19;
+},write:function(_20){
+if(this.getAttribute("useExpressInstall")){
+var _21=new deconcept.PlayerVersion([6,0,65]);
+if(this.installedVer.versionIsValid(_21)&&!this.installedVer.versionIsValid(this.getAttribute("version"))){
+this.setAttribute("doExpressInstall",true);
+this.addVariable("MMredirectURL",escape(this.getAttribute("xiRedirectUrl")));
+document.title=document.title.slice(0,47)+" - Flash Player Installation";
+this.addVariable("MMdoctitle",document.title);}}
+if(this.skipDetect||this.getAttribute("doExpressInstall")||this.installedVer.versionIsValid(this.getAttribute("version"))){
+var n=(typeof _20=="string")?document.getElementById(_20):_20;
+n.innerHTML=this.getSWFHTML();return true;
+}else{if(this.getAttribute("redirectUrl")!=""){document.location.replace(this.getAttribute("redirectUrl"));}}
+return false;}};
+deconcept.SWFObjectUtil.getPlayerVersion=function(){
+var _23=new deconcept.PlayerVersion([0,0,0]);
+if(navigator.plugins&&navigator.mimeTypes.length){
+var x=navigator.plugins["Shockwave Flash"];
+if(x&&x.description){_23=new deconcept.PlayerVersion(x.description.replace(/([a-zA-Z]|\s)+/,"").replace(/(\s+r|\s+b[0-9]+)/,".").split("."));}
+}else{try{var axo=new ActiveXObject("ShockwaveFlash.ShockwaveFlash.7");}
+catch(e){try{var axo=new ActiveXObject("ShockwaveFlash.ShockwaveFlash.6");
+_23=new deconcept.PlayerVersion([6,0,21]);axo.AllowScriptAccess="always";}
+catch(e){if(_23.major==6){return _23;}}try{axo=new ActiveXObject("ShockwaveFlash.ShockwaveFlash");}
+catch(e){}}if(axo!=null){_23=new deconcept.PlayerVersion(axo.GetVariable("$version").split(" ")[1].split(","));}}
+return _23;};
+deconcept.PlayerVersion=function(_27){
+this.major=_27[0]!=null?parseInt(_27[0]):0;
+this.minor=_27[1]!=null?parseInt(_27[1]):0;
+this.rev=_27[2]!=null?parseInt(_27[2]):0;
+};
+deconcept.PlayerVersion.prototype.versionIsValid=function(fv){
+if(this.major<fv.major){return false;}
+if(this.major>fv.major){return true;}
+if(this.minor<fv.minor){return false;}
+if(this.minor>fv.minor){return true;}
+if(this.rev<fv.rev){
+return false;
+}return true;};
+deconcept.util={getRequestParameter:function(_29){
+var q=document.location.search||document.location.hash;
+if(q){var _2b=q.substring(1).split("&");
+for(var i=0;i<_2b.length;i++){
+if(_2b[i].substring(0,_2b[i].indexOf("="))==_29){
+return _2b[i].substring((_2b[i].indexOf("=")+1));}}}
+return "";}};
+deconcept.SWFObjectUtil.cleanupSWFs=function(){if(window.opera||!document.all){return;}
+var _2d=document.getElementsByTagName("OBJECT");
+for(var i=0;i<_2d.length;i++){_2d[i].style.display="none";for(var x in _2d[i]){
+if(typeof _2d[i][x]=="function"){_2d[i][x]=function(){};}}}};
+deconcept.SWFObjectUtil.prepUnload=function(){__flash_unloadHandler=function(){};
+__flash_savedUnloadHandler=function(){};
+if(typeof window.onunload=="function"){
+var _30=window.onunload;
+window.onunload=function(){
+deconcept.SWFObjectUtil.cleanupSWFs();_30();};
+}else{window.onunload=deconcept.SWFObjectUtil.cleanupSWFs;}};
+if(typeof window.onbeforeunload=="function"){
+var oldBeforeUnload=window.onbeforeunload;
+window.onbeforeunload=function(){
+deconcept.SWFObjectUtil.prepUnload();
+oldBeforeUnload();};
+}else{window.onbeforeunload=deconcept.SWFObjectUtil.prepUnload;}
+if(Array.prototype.push==null){
+Array.prototype.push=function(_31){
+this[this.length]=_31;
+return this.length;};}
+var getQueryParamValue=deconcept.util.getRequestParameter;
+var FlashObject=deconcept.SWFObject;
+var SWFObject=deconcept.SWFObject;
