@@ -1,0 +1,222 @@
+SMALL
+{
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Helvetica, Arial;
+    FONT-SIZE: 7.5pt;
+    FONT-STYLE: normal;
+    LINE-HEIGHT: Normal;
+}
+
+P{
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Helvetica, Arial ;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: normal;
+    LINE-HEIGHT: Normal;
+    TEXT-ALIGN: Justify;
+}
+
+P.centre
+{
+    TEXT-ALIGN: Center;
+}
+
+P.menu
+{
+    LINE-HEIGHT: 1.5;
+    TEXT-ALIGN: Left;
+}
+
+P.update
+{
+    COLOR: #000000;
+    LINE-HEIGHT: Normal;
+    TEXT-ALIGN: Justify;
+    FONT-SIZE: 10pt;
+}
+
+P.intro
+{
+    TEXT-ALIGN: Center;
+    LINE-HEIGHT: Normal;
+    FONT-SIZE: 12pt;
+}
+
+P.headline
+{
+    LINE-HEIGHT: Normal;
+    TEXT-ALIGN: Center;
+    FONT-SIZE: 14pt;
+}
+
+P.section
+{
+    LINE-HEIGHT: Normal;
+    TEXT-ALIGN: Center;
+    FONT-SIZE:16pt;
+}
+
+P.title
+{
+    LINE-HEIGHT: Normal;
+    TEXT-ALIGN: Left;
+    FONT-SIZE: 16pt;
+}
+
+UL
+{
+    FONT-FAMILY: Verdana, Helvetica, Arial;
+	COLOR: #000000
+    FONT-SIZE: 9pt;
+}
+
+LI
+{
+    FONT-FAMILY:Verdana, Helvetica, Arial;
+	COLOR: #000000;
+    FONT-SIZE: 9pt;
+    TEXT-ALIGN: left
+}
+
+TD.even
+{
+    BACKGROUND: #d0d0d0;
+    BORDER-BOTTOM: 1px;
+    BORDER-LEFT: 1px;
+    BORDER-RIGHT: 1px;
+    BORDER-TOP: 1px;
+    FONT-STYLE: italic
+}
+TD.odd
+{
+    BACKGROUND: #b0b0b0;
+    BORDER-BOTTOM: 0px;
+    BORDER-LEFT: 0px;
+    BORDER-RIGHT: 0px;
+    BORDER-TOP: 0px
+}
+TD.block
+{
+    BACKGROUND: #c8ffc8
+}
+TABLE.r2
+{
+}
+BR
+{
+    LETTER-SPACING: normal;
+    LINE-HEIGHT: normal
+}
+
+A.small:link
+{
+    COLOR: Blue;
+    FONT-FAMILY: Verdana, Helvetica, Arial;
+    FONT-SIZE: 7.5pt;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+    LINE-HEIGHT: Normal;
+}
+A.small:active
+{
+    COLOR: #ff0000;
+    FONT-FAMILY: Verdana, Helvetica, Arial;
+    FONT-SIZE: 7.5pt;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none;
+}
+A.small:visited
+{
+    COLOR: Red;
+    FONT-FAMILY: Verdana, Helvetica, Arial;
+    FONT-SIZE: 7.5pt;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none;
+}
+A.small:hover
+{
+    COLOR: #ff0000;
+    TEXT-DECORATION: none;
+}
+
+A.main:link
+{
+    COLOR: Blue;
+    FONT-FAMILY: Verdana, Helvetica, Arial;
+    FONT-SIZE: 16pt;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+A.main:visited
+{
+    COLOR: #000088;
+    FONT-FAMILY: Verdana, Helvetica, Arial;
+    FONT-SIZE: 16pt;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none;
+}
+A.main:hover
+{
+    COLOR: #ff0000;
+    TEXT-DECORATION: none;
+}
+A.main:active
+{
+    COLOR: #ff0000;
+    FONT-SIZE: 16pt;
+    FONT-WEIGHT: Normal;
+    TEXT-DECORATION: none;
+}
+    
+A:link
+{
+    COLOR: Blue;
+    FONT-FAMILY: Verdana, Helvetica, Arial;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+    LINE-HEIGHT: Normal;
+}
+A:visited
+{
+    COLOR: Red;
+    FONT-FAMILY: Verdana, Helvetica, Arial;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none;
+}
+A:hover
+{
+    COLOR: #ff0000;
+    TEXT-DECORATION: none;
+}
+A:active
+{
+    COLOR: #ff0000;
+    FONT-FAMILY: Verdana, Helvetica, Arial;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none;
+}
+
+A.menu:link
+{
+    COLOR: #FF0000;
+    FONT-FAMILY: Verdana, Helvetica, Arial;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+A.menu:visited
+{   
+    COLOR: #FF0000;
+}
+A.menu:hover
+{
+    COLOR: #00FFFF;
+}
+A.menu:active
+{
+    COLOR: #00FFFF;
+    FONT-WEIGHT: normal;
+}
