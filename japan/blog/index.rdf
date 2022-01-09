@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:content="http://purl.org/rss/1.0/modules/content/"
+ xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+ xmlns:admin="http://webns.net/mvcb/"
+ xmlns:atom="http://www.w3.org/2005/Atom"
+>
+<channel rdf:about="http://blog.sonic-channel.jp/">
+<title>ソニックチャンネル スタッフブログ</title>
+<link>http://blog.sonic-channel.jp/</link>
+<description>ソニック公式ポータルサイト「SONIC CHANNEL（ソニックチャンネル）」のスタッフがソニック最新情報をお届け！
+</description>
+<dc:language>ja</dc:language>
+<admin:generatorAgent rdf:resource="http://blog.livedoor.com/?v=2.0" />
+<atom:link rel="hub" href="http://pubsubhubbub.appspot.com" />
+<items>
+ <rdf:Seq>
+  <rdf:li rdf:resource="http://blog.sonic-channel.jp/archives/51958991.html" />
+  <rdf:li rdf:resource="http://blog.sonic-channel.jp/archives/51958748.html" />
+  <rdf:li rdf:resource="http://blog.sonic-channel.jp/archives/51957862.html" />
+  <rdf:li rdf:resource="http://blog.sonic-channel.jp/archives/51957651.html" />
+  <rdf:li rdf:resource="http://blog.sonic-channel.jp/archives/51955451.html" />
+  <rdf:li rdf:resource="http://blog.sonic-channel.jp/archives/51955235.html" />
+  <rdf:li rdf:resource="http://blog.sonic-channel.jp/archives/51954393.html" />
+  <rdf:li rdf:resource="http://blog.sonic-channel.jp/archives/51954120.html" />
+  <rdf:li rdf:resource="http://blog.sonic-channel.jp/archives/51952979.html" />
+  <rdf:li rdf:resource="http://blog.sonic-channel.jp/archives/51951620.html" />
+  <rdf:li rdf:resource="http://blog.sonic-channel.jp/archives/51950436.html" />
+  <rdf:li rdf:resource="http://blog.sonic-channel.jp/archives/51949363.html" />
+  <rdf:li rdf:resource="http://blog.sonic-channel.jp/archives/51949121.html" />
+  <rdf:li rdf:resource="http://blog.sonic-channel.jp/archives/51947977.html" />
+  <rdf:li rdf:resource="http://blog.sonic-channel.jp/archives/51947731.html" />
+ </rdf:Seq>
+</items>
+</channel>
+<item rdf:about="http://blog.sonic-channel.jp/archives/51958991.html">
+<title>カレンダークイズの答え合わせとカレンダー・かべがみ追加更新！</title>
+<link>http://blog.sonic-channel.jp/archives/51958991.html</link>
+<description>みなさんこんにちは
+ソニックチャンネル スタッフです★
+
+お待たせいたしました
+カレンダー登場キャラ当てクイズの答え合わせです
+いつもたくさん回答していただきまして、ありがとうございます。
+
+クイズ画像はこちらでした。
+
+
+
+それでは正解を発表します。
+
+
+
+正解のキャ...</description>
+<dc:creator>sonic_channel</dc:creator>
+<dc:date>2017-07-20T21:04:18+09:00</dc:date>
+<dc:subject></dc:subject>
+<content:encoded><![CDATA[みなさんこんにちは<br>
+<img src="https://common.blogimg.jp/emoji/109874.gif" width="20" height="20" />ソニックチャンネル スタッフです★<br>
+<br>
+お待たせいたしました<br>
+カレンダー登場キャラ当てクイズの答え合わせです<br>
+いつもたくさん回答していただきまして、ありがとうございます。<br>
+<br>
+クイズ画像はこちらでした。<br>
+<br>
+<a href="http://livedoor.blogimg.jp/sonic_channel/imgs/3/6/36a972cb.jpg" title="aaaaaaaaaaaaaaaaa" target="_blank"><img src="http://livedoor.blogimg.jp/sonic_channel/imgs/3/6/36a972cb-s.jpg" width="640" height="640" border="0" alt="aaaaaaaaaaaaaaaaa" hspace="5" class="pict"  /></a><br /><br>
+<br>
+それでは正解を発表します。<br>
+<br>
+<br>
+<br>
+正解のキャラクターはこちら…<br>
+・<br>
+<br>
+・<br>
+<br>
+・<br>
+<br>
+じゃじゃ～ん<br>
+<br>
+<img src="http://livedoor.blogimg.jp/sonic_channel/imgs/c/0/c0dc2b40.png" width="640" height="640" border="0" alt="8月ナックルズ_レイヤー" hspace="5" class="pict"  /><br /><br>
+<br>
+「ナックルズ」でした！<br>
+<br>
+<br>
+次回のキャラクタークイズも、みなさんの参加をお待ちしております！<br>
+<br>
+そして本日の「ソニックチャンネル」更新はこちら！<br>
+<br>
+2017/07/20<br>
+・[おたのしみ　かべがみ]：かべがみ2点追加<br>
+・[おたのしみ　卓上カレンダー]：8月カレンダー追加<br>
+・[ファンアート]：2017年09月掲載分のテーマは「マニア」応募締め切りは 08/21まで<br>
+<br>
+「マニア」...物事に熱狂的に情熱を注ぐ人の事を言うようですが、もしソニック達が熱狂的に注ぐ情熱は一体何に対してでしょうか？ぜひ皆さん考えてみてくださいね。<br>
+みなさんぜひ描いてみてくださいね！♪<br>
+<br>
+また、月ごとのテーマ以外のファンアートも随時募集していますので、みなさんドシドシご応募下さい。<br>
+<br>
+<a href="http://sonic.sega.jp/SonicChannel" target="_blank" title="">ソニック公式ポータルサイト「ソニック チャンネル」</a>
+]]>
+</content:encoded>
+</item>
+<item rdf:about="http://blog.sonic-channel.jp/archives/51958748.html">
+<title>2017年8月のカレンダークイズ</title>
+<link>http://blog.sonic-channel.jp/archives/51958748.html</link>
+<description>みなさんこんにちは
+ソニックチャンネル スタッフです★
+
+カレンダー登場キャラ当てクイズ！
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ 
+
+バラバラになった絵はすべて見えているのですが……
+さて、どのキャ...</description>
+<dc:creator>sonic_channel</dc:creator>
+<dc:date>2017-07-14T16:09:46+09:00</dc:date>
+<dc:subject></dc:subject>
+<content:encoded><![CDATA[<img src="https://common.blogimg.jp/emoji/109874.gif" width="20" height="20" />みなさんこんにちは<br>
+ソニックチャンネル スタッフです★<br>
+<br>
+カレンダー登場キャラ当てクイズ！<br>
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ <br>
+<br>
+バラバラになった絵はすべて見えているのですが……<br>
+さて、どのキャラクターが登場するか、考えてみて下さいね★<br>
+<br>
+<a href="http://livedoor.blogimg.jp/sonic_channel/imgs/3/6/36a972cb.jpg" title="aaaaaaaaaaaaaaaaa" target="_blank"><img src="http://livedoor.blogimg.jp/sonic_channel/imgs/3/6/36a972cb-s.jpg" width="640" height="640" border="0" alt="aaaaaaaaaaaaaaaaa" hspace="5" class="pict"  /></a><br /><br>
+<br>
+クイズの正解発表は07/20に行います。 <br>
+<br>
+クイズの回答はコメントにて受け付けております。<br>
+お気軽に参加くださいね。<br>
+<br>
+他の方の書き込みがヒントになってしまうのを避けるため、こちらのクイズにご回答いただいたコメントのUPは、カレンダー更新終了後の予定といたします☆<br>
+<br>
+<a href="http://sonic.sega.jp/SonicChannel/" target="_blank" title="">ソニック公式ポータルサイト「ソニック チャンネル」</a>
+]]>
+</content:encoded>
+</item>
+<item rdf:about="http://blog.sonic-channel.jp/archives/51957862.html">
+<title>カレンダークイズの答え合わせとカレンダー・かべがみ追加更新！</title>
+<link>http://blog.sonic-channel.jp/archives/51957862.html</link>
+<description>みなさんこんにちは
+ソニックチャンネル スタッフです★
+
+
+お待たせいたしました
+カレンダー登場キャラ当てクイズの答え合わせです
+いつもたくさん回答していただきまして、ありがとうございます。
+
+クイズ画像はこちらでした。
+
+
+
+
+それでは正解を発表します。
+
+
+
+正解のキ...</description>
+<dc:creator>sonic_channel</dc:creator>
+<dc:date>2017-06-20T21:19:39+09:00</dc:date>
+<dc:subject>「SONIC CHANNEL」</dc:subject>
+<content:encoded><![CDATA[みなさんこんにちは<br>
+<img src="https://common.blogimg.jp/emoji/109874.gif" width="20" height="20" />ソニックチャンネル スタッフです★<br>
+<br>
+<br>
+お待たせいたしました<br>
+カレンダー登場キャラ当てクイズの答え合わせです<br>
+いつもたくさん回答していただきまして、ありがとうございます。<br>
+<br>
+クイズ画像はこちらでした。<br>
+<br>
+<a href="http://livedoor.blogimg.jp/sonic_channel/imgs/0/1/01633b9a.jpg" title="07" target="_blank"><img src="http://livedoor.blogimg.jp/sonic_channel/imgs/0/1/01633b9a-s.jpg" width="640" height="640" border="0" alt="07" hspace="5" class="pict"  /></a><br /><br>
+<br>
+<br>
+それでは正解を発表します。<br>
+<br>
+<br>
+<br>
+正解のキャラクターはこちら…<br>
+・<br>
+<br>
+・<br>
+<br>
+・<br>
+<br>
+じゃじゃ～ん<br>
+<br>
+<img src="http://livedoor.blogimg.jp/sonic_channel/imgs/c/c/cc80c71c.jpg" width="640" height="640" border="0" alt="7月ブレイズ" hspace="5" class="pict"  /><br>
+<br>
+「ブレイズ」でした！<br>
+<br>
+<br>
+次回のキャラクタークイズも、みなさんの参加をお待ちしております！<br>
+<br>
+そして本日の「ソニックチャンネル」更新はこちら！<br>
+<br>
+2017/06/20<br>
+・[おたのしみ　かべがみ]：かべがみ2点追加<br>
+・[おたのしみ　卓上カレンダー]：7月カレンダー追加<br>
+・[ファンアート]：2017年08月掲載分のテーマは「夏休み」応募締め切りは 07/20まで<br>
+<br>
+8月といえば夏休み！ソニック達はどんな夏を満喫するんでしょうか？<br>
+みなさんぜひ描いてみてくださいね！♪<br>
+<br>
+また、月ごとのテーマ以外のファンアートも随時募集していますので、みなさんドシドシご応募下さい。<br>
+<br>
+<a href="http://sonic.sega.jp/SonicChannel" target="_blank" title="">ソニック公式ポータルサイト「ソニック チャンネル」</a>
+]]>
+</content:encoded>
+</item>
+<item rdf:about="http://blog.sonic-channel.jp/archives/51957651.html">
+<title>2017年7月のカレンダークイズ</title>
+<link>http://blog.sonic-channel.jp/archives/51957651.html</link>
+<description>みなさんこんにちは
+ソニックチャンネル スタッフです★
+
+カレンダー登場キャラ当てクイズ！
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ 
+
+バラバラになった絵はすべて見えているのですが……
+さて、どのキャ...</description>
+<dc:creator>sonic_channel</dc:creator>
+<dc:date>2017-06-15T20:05:55+09:00</dc:date>
+<dc:subject>「SONIC CHANNEL」</dc:subject>
+<content:encoded><![CDATA[<img src="https://common.blogimg.jp/emoji/109874.gif" width="20" height="20" />みなさんこんにちは<br>
+ソニックチャンネル スタッフです★<br>
+<br>
+カレンダー登場キャラ当てクイズ！<br>
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ <br>
+<br>
+バラバラになった絵はすべて見えているのですが……<br>
+さて、どのキャラクターが登場するか、考えてみて下さいね★<br>
+<br>
+<a href="http://livedoor.blogimg.jp/sonic_channel/imgs/0/1/01633b9a.jpg" title="07" target="_blank"><img src="http://livedoor.blogimg.jp/sonic_channel/imgs/0/1/01633b9a-s.jpg" width="640" height="640" border="0" alt="07" hspace="5" class="pict"  /></a><br /><br>
+<br>
+クイズの正解発表は06/20に行います。 <br>
+<br>
+クイズの回答はコメントにて受け付けております。<br>
+お気軽に参加くださいね。<br>
+<br>
+他の方の書き込みがヒントになってしまうのを避けるため、こちらのクイズにご回答いただいたコメントのUPは、カレンダー更新終了後の予定といたします☆<br>
+<br>
+<a href="http://sonic.sega.jp/SonicChannel/" target="_blank" title="">ソニック公式ポータルサイト「ソニック チャンネル」</a>
+]]>
+</content:encoded>
+</item>
+<item rdf:about="http://blog.sonic-channel.jp/archives/51955451.html">
+<title>カレンダークイズの答え合わせとカレンダー・かべがみ追加更新！</title>
+<link>http://blog.sonic-channel.jp/archives/51955451.html</link>
+<description>みなさんこんにちは
+ソニックチャンネル スタッフです★
+
+
+お待たせいたしました
+カレンダー登場キャラ当てクイズの答え合わせです
+いつもたくさん回答していただきまして、ありがとうございます。
+
+クイズ画像はこちらでした。
+
+
+
+
+それでは正解を発表します。
+
+
+
+正解のキ...</description>
+<dc:creator>sonic_channel</dc:creator>
+<dc:date>2017-04-20T19:29:25+09:00</dc:date>
+<dc:subject>「SONIC CHANNEL」</dc:subject>
+<content:encoded><![CDATA[みなさんこんにちは<br>
+<img src="https://common.blogimg.jp/emoji/109874.gif" width="20" height="20" />ソニックチャンネル スタッフです★<br>
+<br>
+<br>
+お待たせいたしました<br>
+カレンダー登場キャラ当てクイズの答え合わせです<br>
+いつもたくさん回答していただきまして、ありがとうございます。<br>
+<br>
+クイズ画像はこちらでした。<br>
+<br>
+<a href="http://livedoor.blogimg.jp/sonic_channel/imgs/2/e/2eefd3ef.png" title="5月" target="_blank"><img src="http://livedoor.blogimg.jp/sonic_channel/imgs/2/e/2eefd3ef-s.png" width="640" height="640" border="0" alt="5月" hspace="5" class="pict"  /></a><br>
+<br>
+<br>
+それでは正解を発表します。<br>
+<br>
+<br>
+<br>
+正解のキャラクターはこちら…<br>
+・<br>
+<br>
+・<br>
+<br>
+・<br>
+<br>
+じゃじゃ～ん<br>
+<br>
+<img src="http://livedoor.blogimg.jp/sonic_channel/imgs/c/f/cf996aea.gif" width="640" height="640" border="0" alt="5月ルージュ" hspace="5" class="pict"  /><br>
+<br>
+「ルージュ」でした！<br>
+<br>
+<br>
+次回のキャラクタークイズも、みなさんの参加をお待ちしております！<br>
+<br>
+そして本日の「ソニックチャンネル」更新はこちら！<br>
+<br>
+2017/04/20<br>
+・[おたのしみ　かべがみ]：かべがみ2点追加<br>
+・[おたのしみ　卓上カレンダー]：5月カレンダー追加<br>
+・[ファンアート]：2017年06月掲載分のテーマは「Happy Birthday SONIC!」応募締め切りは 05/20まで<br>
+<br>
+6月といえばソニックの誕生日！みなさまのおかげで26周年を迎えることになりました！！さてそのソニックですが、今年はどのような誕生日を過ごすのでしょうか？みなさんぜひ描いてみてくださいね！♪<br>
+<br>
+また、月ごとのテーマ以外のファンアートも随時募集していますので、みなさんドシドシご応募下さい。<br>
+<br>
+<a href="http://sonic.sega.jp/SonicChannel" target="_blank" title="">ソニック公式ポータルサイト「ソニック チャンネル」</a>
+]]>
+</content:encoded>
+</item>
+<item rdf:about="http://blog.sonic-channel.jp/archives/51955235.html">
+<title>2017年5月のカレンダークイズ</title>
+<link>http://blog.sonic-channel.jp/archives/51955235.html</link>
+<description>みなさんこんにちは
+ソニックチャンネル スタッフです★
+
+カレンダー登場キャラ当てクイズ！
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ 
+
+バラバラになった絵はすべて見えているのですが……
+さて、どのキャ...</description>
+<dc:creator>sonic_channel</dc:creator>
+<dc:date>2017-04-14T20:04:16+09:00</dc:date>
+<dc:subject></dc:subject>
+<content:encoded><![CDATA[<img src="https://common.blogimg.jp/emoji/109874.gif" width="20" height="20" />みなさんこんにちは<br>
+ソニックチャンネル スタッフです★<br>
+<br>
+カレンダー登場キャラ当てクイズ！<br>
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ <br>
+<br>
+バラバラになった絵はすべて見えているのですが……<br>
+さて、どのキャラクターが登場するか、考えてみて下さいね★<br>
+<br>
+<a href="http://livedoor.blogimg.jp/sonic_channel/imgs/2/e/2eefd3ef.png" title="5月" target="_blank"><img src="http://livedoor.blogimg.jp/sonic_channel/imgs/2/e/2eefd3ef-s.png" width="640" height="640" border="0" alt="5月" hspace="5" class="pict"  /></a><br>
+<br>
+クイズの正解発表は04/20に行います。 <br>
+<br>
+クイズの回答はコメントにて受け付けております。<br>
+お気軽に参加くださいね。<br>
+<br>
+他の方の書き込みがヒントになってしまうのを避けるため、こちらのクイズにご回答いただいたコメントのUPは、カレンダー更新終了後の予定といたします☆<br>
+<br>
+<a href="http://sonic.sega.jp/SonicChannel/" target="_blank" title="">ソニック公式ポータルサイト「ソニック チャンネル」</a>
+]]>
+</content:encoded>
+</item>
+<item rdf:about="http://blog.sonic-channel.jp/archives/51954393.html">
+<title>カレンダークイズの答え合わせとカレンダー・かべがみ追加更新！</title>
+<link>http://blog.sonic-channel.jp/archives/51954393.html</link>
+<description>みなさんこんにちは
+ソニックチャンネル スタッフです★
+
+
+お待たせいたしました
+カレンダー登場キャラ当てクイズの答え合わせです
+いつもたくさん回答していただきまして、ありがとうございます。
+
+クイズ画像はこちらでした。
+
+
+
+それでは正解を発表します。
+
+
+
+正解のキャ...</description>
+<dc:creator>sonic_channel</dc:creator>
+<dc:date>2017-03-22T17:43:07+09:00</dc:date>
+<dc:subject>「SONIC CHANNEL」</dc:subject>
+<content:encoded><![CDATA[みなさんこんにちは<br>
+<img src="https://common.blogimg.jp/emoji/109874.gif" width="20" height="20" />ソニックチャンネル スタッフです★<br>
+<br>
+<br>
+お待たせいたしました<br>
+カレンダー登場キャラ当てクイズの答え合わせです<br>
+いつもたくさん回答していただきまして、ありがとうございます。<br>
+<br>
+クイズ画像はこちらでした。<br>
+<br>
+<a href="http://livedoor.blogimg.jp/sonic_channel/imgs/c/0/c0c30230.png" title="クイズ" target="_blank"><img src="http://livedoor.blogimg.jp/sonic_channel/imgs/c/0/c0c30230-s.png" width="640" height="640" border="0" alt="クイズ" hspace="5" class="pict"  /></a><br /><br>
+<br>
+それでは正解を発表します。<br>
+<br>
+<br>
+<br>
+正解のキャラクターはこちら…<br>
+・<br>
+<br>
+・<br>
+<br>
+・<br>
+<br>
+じゃじゃ～ん<br>
+<br>
+<img src="http://livedoor.blogimg.jp/sonic_channel/imgs/1/1/11429d12.png" width="640" height="640" border="0" alt="640" hspace="5" class="pict"  /><br /><br>
+<br>
+「クリーム＆チーズ」でした！<br>
+<br>
+<br>
+次回のキャラクタークイズも、みなさんの参加をお待ちしております！<br>
+<br>
+そして本日の「ソニックチャンネル」更新はこちら！<br>
+<br>
+2017/03/22<br>
+<a href="http://sonic.sega.jp/SonicChannel/enjoy/wallpaper/" target="_blank" title="">・[おたのしみ　かべがみ]：かべがみ2点追加</a><br>
+<a href="http://sonic.sega.jp/SonicChannel/enjoy/calendar/" target="_blank" title="">・[おたのしみ　卓上カレンダー]：4月カレンダー追加</a><br>
+<a href="http://sonic.sega.jp/SonicChannel/fanart/apply.html" target="_blank" title="">・[ファンアート]：2017年05月掲載分のテーマは「ゴールデンウィーク」応募締め切りは 04/20まで</a><br>
+<br>
+５月公開のファンアートは「ゴールデンウィーク」！5月と言えば大型連休、ゴールデンウィーク！ソニック達はこの連休をどのように過ごすのでしょうか？旅行へ行ったり、いつも通り過ごしたり......。それぞれの過ごし方を想像してみてくださいね♪<br>
+<br>
+また、月ごとのテーマ以外のファンアートも随時募集していますので、みなさんドシドシご応募下さい。<br>
+<br>
+<a href="http://sonic.sega.jp/SonicChannel/" target="_blank" title="">ソニック公式ポータルサイト「ソニック チャンネル」</a>
+]]>
+</content:encoded>
+</item>
+<item rdf:about="http://blog.sonic-channel.jp/archives/51954120.html">
+<title>2017年4月のカレンダークイズ</title>
+<link>http://blog.sonic-channel.jp/archives/51954120.html</link>
+<description>みなさんこんにちは
+ソニックチャンネル スタッフです★
+
+カレンダー登場キャラ当てクイズ！
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ 
+
+バラバラになった絵はすべて見えているのですが……
+さて、どのキャ...</description>
+<dc:creator>sonic_channel</dc:creator>
+<dc:date>2017-03-15T18:22:02+09:00</dc:date>
+<dc:subject>「SONIC CHANNEL」</dc:subject>
+<content:encoded><![CDATA[<img src="https://common.blogimg.jp/emoji/109874.gif" width="20" height="20" />みなさんこんにちは<br>
+ソニックチャンネル スタッフです★<br>
+<br>
+カレンダー登場キャラ当てクイズ！<br>
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ <br>
+<br>
+バラバラになった絵はすべて見えているのですが……<br>
+さて、どのキャラクターが登場するか、考えてみて下さいね★<br>
+<br>
+<a href="http://livedoor.blogimg.jp/sonic_channel/imgs/c/0/c0c30230.png" title="クイズ" target="_blank"><img src="http://livedoor.blogimg.jp/sonic_channel/imgs/c/0/c0c30230-s.png" width="640" height="640" border="0" alt="クイズ" hspace="5" class="pict"  /></a><br>
+<br>
+クイズの正解発表は03/22に行います。 <br>
+<br>
+クイズの回答はコメントにて受け付けております。<br>
+お気軽に参加くださいね。<br>
+<br>
+他の方の書き込みがヒントになってしまうのを避けるため、こちらのクイズにご回答いただいたコメントのUPは、カレンダー更新終了後の予定といたします☆
+]]>
+</content:encoded>
+</item>
+<item rdf:about="http://blog.sonic-channel.jp/archives/51952979.html">
+<title>2017年3月のカレンダークイズ</title>
+<link>http://blog.sonic-channel.jp/archives/51952979.html</link>
+<description>みなさんこんにちは
+ソニックチャンネル スタッフです★
+
+カレンダー登場キャラ当てクイズ！
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ 
+
+バラバラになった絵はすべて見えているのですが……
+さて、どのキャ...</description>
+<dc:creator>sonic_channel</dc:creator>
+<dc:date>2017-02-15T16:49:07+09:00</dc:date>
+<dc:subject>「SONIC CHANNEL」</dc:subject>
+<content:encoded><![CDATA[<img src="https://common.blogimg.jp/emoji/109874.gif" width="20" height="20" />みなさんこんにちは<br>
+ソニックチャンネル スタッフです<span style="color: #FF6600;">★</span><br>
+<br>
+カレンダー登場キャラ当てクイズ！<br>
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ <br>
+<br>
+バラバラになった絵はすべて見えているのですが……<br>
+さて、どのキャラクターが登場するか、考えてみて下さいね<span style="color: #FF6600;">★</span><br>
+<br>
+<a href="http://livedoor.blogimg.jp/sonic_channel/imgs/2/a/2a6310bb.png" title="3月" target="_blank"><img src="http://livedoor.blogimg.jp/sonic_channel/imgs/2/a/2a6310bb-s.png" width="640" height="640" border="0" alt="3月" hspace="5" class="pict"  /></a><br>
+<br>
+クイズの正解発表は02/20に行います。 <br>
+<br>
+クイズの回答はコメントにて受け付けております。<br>
+お気軽に参加くださいね。<br>
+<br>
+他の方の書き込みがヒントになってしまうのを避けるため、こちらのクイズにご回答いただいたコメントのUPは、カレンダー更新終了後の予定といたします☆
+]]>
+</content:encoded>
+</item>
+<item rdf:about="http://blog.sonic-channel.jp/archives/51951620.html">
+<title>2017年2月のカレンダークイズ</title>
+<link>http://blog.sonic-channel.jp/archives/51951620.html</link>
+<description>みなさんこんにちは
+ソニックチャンネル スタッフです★
+
+カレンダー登場キャラ当てクイズ！
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ 
+
+すべて見えているのですが……
+さて、どのキャラクターが登場するか...</description>
+<dc:creator>sonic_channel</dc:creator>
+<dc:date>2017-01-13T18:45:06+09:00</dc:date>
+<dc:subject></dc:subject>
+<content:encoded><![CDATA[<img src="https://common.blogimg.jp/emoji/109874.gif" width="20" height="20" />みなさんこんにちは<br>
+ソニックチャンネル スタッフです<span style="color: #FF6600;">★</span><br>
+<br>
+カレンダー登場キャラ当てクイズ！<br>
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ <br>
+<br>
+すべて見えているのですが……<br>
+さて、どのキャラクターが登場するか、考えてみて下さいね<span style="color: #FF6600;">★</span><br>
+<br>
+<a href="http://livedoor.blogimg.jp/sonic_channel/imgs/f/f/ff4a74ad.png" title="グラデーション有" target="_blank"><img src="http://livedoor.blogimg.jp/sonic_channel/imgs/f/f/ff4a74ad-s.png" width="640" height="640" border="0" alt="グラデーション有" hspace="5" class="pict"  /></a><br>
+<br>
+クイズの正解発表は01/20に行います。 <br>
+<br>
+クイズの回答はコメントにて受け付けております。<br>
+お気軽に参加くださいね。<br>
+<br>
+他の方の書き込みがヒントになってしまうのを避けるため、こちらのクイズにご回答いただいたコメントのUPは、カレンダー更新終了後の予定といたします☆
+]]>
+</content:encoded>
+</item>
+<item rdf:about="http://blog.sonic-channel.jp/archives/51950436.html">
+<title>2017年1月のカレンダークイズ</title>
+<link>http://blog.sonic-channel.jp/archives/51950436.html</link>
+<description>みなさんこんにちは
+ソニックチャンネル スタッフです★
+
+カレンダー登場キャラ当てクイズ！
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ 
+
+恒例のカレンダークイズですが来月は2017年という事で、今までとク...</description>
+<dc:creator>sonic_channel</dc:creator>
+<dc:date>2016-12-15T21:56:11+09:00</dc:date>
+<dc:subject>「SONIC CHANNEL」</dc:subject>
+<content:encoded><![CDATA[みなさんこんにちは<br>
+<img src="https://common.blogimg.jp/emoji/109874.gif" width="20" height="20" />ソニックチャンネル スタッフです★<br>
+<br>
+カレンダー登場キャラ当てクイズ！<br>
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ <br>
+<br>
+恒例のカレンダークイズですが来月は2017年という事で、今までとクイズの形式が少し変ります。<br>
+<br>
+キャラクターの一部ではなく、すべて見えているのですが……<br>
+さて、どのキャラクターが登場するか、考えてみて下さいね★。<br>
+<br>
+<img src="http://livedoor.blogimg.jp/sonic_channel/imgs/8/0/8064b834.jpg" width="640" height="640" border="0" alt="02" hspace="5" class="pict"  /><br>
+<br>
+クイズの正解発表は12/20に行います。 <br>
+<br>
+クイズの回答はコメントにて受け付けております。<br>
+お気軽に参加くださいね。<br>
+<br>
+<br>
+他の方の書き込みがヒントになってしまうのを避けるため、こちらのクイズにご回答いただいたコメントのＵＰは、カレンダー更新終了後の予定といたします☆
+]]>
+</content:encoded>
+</item>
+<item rdf:about="http://blog.sonic-channel.jp/archives/51949363.html">
+<title>カレンダークイズの答え合わせとカレンダー・かべがみ追加更新！</title>
+<link>http://blog.sonic-channel.jp/archives/51949363.html</link>
+<description>みなさんこんにちは
+ソニックチャンネル スタッフです★
+
+
+お待たせいたしました
+カレンダー登場キャラ当てクイズの答え合わせです
+いつもたくさん回答していただきまして、ありがとうございます。
+
+クイズ画像はこちらでした。
+
+
+
+それでは正解を発表します。
+
+
+
+正解のキャ...</description>
+<dc:creator>sonic_channel</dc:creator>
+<dc:date>2016-11-21T20:03:46+09:00</dc:date>
+<dc:subject>「SONIC CHANNEL」</dc:subject>
+<content:encoded><![CDATA[みなさんこんにちは<br>
+<img src="https://common.blogimg.jp/emoji/109874.gif" width="20" height="20" />ソニックチャンネル スタッフです<span style="color: #FF6600;">★</span><br>
+<br>
+<br>
+お待たせいたしました<br>
+カレンダー登場キャラ当てクイズの答え合わせです<br>
+いつもたくさん回答していただきまして、ありがとうございます。<br>
+<br>
+クイズ画像はこちらでした。<br>
+<br>
+<div align="center"><img src="http://livedoor.blogimg.jp/sonic_channel/imgs/d/9/d905c1c9.jpg" width="440" height="200" border="0" alt="クイズ" hspace="5" class="pict"  /></div><br>
+<br>
+それでは正解を発表します。<br>
+<br>
+<br>
+<br>
+正解のキャラクターはこちら…<br>
+・<br>
+<br>
+・<br>
+<br>
+・<br>
+<br>
+じゃじゃ～ん<br>
+<br>
+<a href="http://livedoor.blogimg.jp/sonic_channel/imgs/d/2/d2d9a608.png" title="2016_12_braze" target="_blank"><img src="http://livedoor.blogimg.jp/sonic_channel/imgs/d/2/d2d9a608-s.png" width="640" height="400" border="0" alt="2016_12_braze" hspace="5" class="pict"  /></a><br>
+<br>
+<br>
+「キャンドルライトを手にクリスマスプレゼントを配るブレイズ」でした！<br>
+<br>
+<br>
+次回のキャラクタークイズも、みなさんの参加をお待ちしております！<br>
+<br>
+そして本日の「ソニックチャンネル」更新はこちら！<br>
+<br>
+2016/11/21<br>
+・[おたのしみ　かべがみ]：かべがみ1点追加<br>
+・[おたのしみ　卓上カレンダー]：12月カレンダー追加<br>
+・[ファンアート]：2017年1月掲載分のテーマは「Happy New Year!」応募締め切りは 12/20まで<br>
+<br>
+2016年も残すところあとわずかとなりました。ソニックたちはどのように新しい年を迎えるのでしょうか??「Happy New Year」のソニックたちの過ごし方や様子など、みなさんいろいろ表現してみて下さいね。<br>
+<br>
+また、月ごとのテーマ以外のファンアートも随時募集していますので、みなさんドシドシご応募下さい。<br>
+<br>
+<br>
+<a href="http://sonic.sega.jp/SonicChannel/" target="_blank" title="">ソニック公式ポータルサイト「ソニック チャンネル」  </a>
+]]>
+</content:encoded>
+</item>
+<item rdf:about="http://blog.sonic-channel.jp/archives/51949121.html">
+<title>12月のカレンダークイズ</title>
+<link>http://blog.sonic-channel.jp/archives/51949121.html</link>
+<description>みなさんこんにちは
+ソニックチャンネル スタッフです★
+
+カレンダー登場キャラ当てクイズです☆
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ 
+
+次の月に登場するキャラクターを表す絵を見て、どのキャラクタ...</description>
+<dc:creator>sonic_channel</dc:creator>
+<dc:date>2016-11-15T19:08:39+09:00</dc:date>
+<dc:subject>「SONIC CHANNEL」</dc:subject>
+<content:encoded><![CDATA[みなさんこんにちは<br>
+<img src="https://common.blogimg.jp/emoji/109874.gif" width="20" height="20" />ソニックチャンネル スタッフです<span style="color: #FF9900;">★</span><br>
+<br>
+カレンダー登場キャラ当てクイズです☆<br>
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ <br>
+<br>
+次の月に登場するキャラクターを表す絵を見て、どのキャラクターが登場するかコメントに答えてね。 <br>
+<br>
+<img src="http://livedoor.blogimg.jp/sonic_channel/imgs/d/9/d905c1c9.jpg" width="440" height="200" border="0" alt="クイズ" hspace="5" class="pict"  /><br>
+<br>
+12月のカレンダーに登場するキャラクターは一体誰でしょう？どんな装飾物やシーンが描かれているのかも想像してみてくださいね♪ <br>
+クイズの正解発表は11/21（月）に行います。 <br>
+<br>
+クイズの回答はコメントにて受け付けております。<br>
+お気軽に参加くださいね。<br>
+<br>
+例）<br>
+------------------------------------------------ <br>
+・秋の味覚を手にしながらも、体重も気になるルージュ<br>
+------------------------------------------------ <br>
+<br>
+他の方の書き込みがヒントになってしまうのを避けるため、こちらのクイズにご回答いただいたコメントのＵＰは、カレンダー更新終了後の予定といたします☆<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="http://sonic.sega.jp/SonicChannel/index.html" target="_blank" title="">ソニック公式ポータルサイト「ソニック チャンネル」</a>
+]]>
+</content:encoded>
+</item>
+<item rdf:about="http://blog.sonic-channel.jp/archives/51947977.html">
+<title>カレンダークイズの答え合わせとカレンダー・かべがみ追加更新！</title>
+<link>http://blog.sonic-channel.jp/archives/51947977.html</link>
+<description>みなさんこんにちは
+ソニックチャンネル スタッフです★
+
+
+お待たせいたしました
+カレンダー登場キャラ当てクイズの答え合わせです
+いつもたくさん回答していただきまして、ありがとうございます。
+
+クイズ画像はこちらでした。
+
+
+
+それでは正解を発表します。
+
+
+
+正解のキャ...</description>
+<dc:creator>sonic_channel</dc:creator>
+<dc:date>2016-10-20T19:39:13+09:00</dc:date>
+<dc:subject>「SONIC CHANNEL」</dc:subject>
+<content:encoded><![CDATA[みなさんこんにちは<br>
+<img src="https://common.blogimg.jp/emoji/109874.gif" width="20" height="20" />ソニックチャンネル スタッフです★<br>
+<br>
+<br>
+お待たせいたしました<br>
+カレンダー登場キャラ当てクイズの答え合わせです<br>
+いつもたくさん回答していただきまして、ありがとうございます。<br>
+<br>
+クイズ画像はこちらでした。<br>
+<br>
+<div align="center"><img src="http://livedoor.blogimg.jp/sonic_channel/imgs/5/3/536ce462.jpg" width="440" height="200" border="0" alt="クイズ" hspace="5" class="pict"  /></div><br>
+<br>
+それでは正解を発表します。<br>
+<br>
+<br>
+<br>
+正解のキャラクターはこちら…<br>
+・<br>
+<br>
+・<br>
+<br>
+・<br>
+<br>
+じゃじゃ～ん<br>
+<br>
+<a href="http://livedoor.blogimg.jp/sonic_channel/imgs/8/1/81208b51.png" title="wallpaper_144_rouge_10_pc" target="_blank"><img src="http://livedoor.blogimg.jp/sonic_channel/imgs/8/1/81208b51-s.png" width="640" height="400" border="0" alt="wallpaper_144_rouge_10_pc" hspace="5" class="pict"  /></a><br>
+<br>
+「秋の味覚を手にしながらも、体重も気になるルージュ」でした！<br>
+<br>
+<br>
+次回のキャラクタークイズも、みなさんの参加をお待ちしております！<br>
+<br>
+そして本日の「ソニックチャンネル」更新はこちら！<br>
+<br>
+2016/10/20<br>
+・<a href="http://sonic.sega.jp/SonicChannel/enjoy/wallpaper/" target="_blank" title="">[おたのしみ　かべがみ]：かべがみ1点追加</a><br>
+・<a href="http://sonic.sega.jp/SonicChannel/enjoy/calendar/" target="_blank" title="">[おたのしみ　卓上カレンダー]：11月カレンダー追加</a><br>
+・<a href="http://sonic.sega.jp/SonicChannel/fanart/apply.html" target="_blank" title="">[ファンアート]：2016年12月掲載分のテーマは「クリスマス」応募締め切りは 11/18まで</a><br>
+・<a href="http://sonic.sega.jp/SonicChannel/topics/information/20161020_001191/" target="_blank" title="">『ソニックトゥーン ファイアー＆アイス』発売記念生放送、配信決定！</a><br>
+<br>
+12月公開のファンアートは「クリスマス」！12月と言えばやはりクリスマスですよね？！ソニックたちもクリスマスパーティーをしているのでしょうか？ぜひみなさん想像してみて下さいね。<br>
+<br>
+<br>
+また、月ごとのテーマ以外のファンアートも随時募集していますので、みなさんドシドシご応募下さい。<br>
+<br>
+<a href="http://sonic.sega.jp/SonicChannel/" target="_blank" title="">ソニック公式ポータルサイト「ソニック チャンネル」 </a>
+]]>
+</content:encoded>
+</item>
+<item rdf:about="http://blog.sonic-channel.jp/archives/51947731.html">
+<title>11月のカレンダークイズ</title>
+<link>http://blog.sonic-channel.jp/archives/51947731.html</link>
+<description>みなさんこんにちは
+ソニックチャンネル スタッフです★
+
+カレンダー登場キャラ当てクイズです☆
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ 
+
+次の月に登場するキャラクターを表す絵を見て、どのキャラクタ...</description>
+<dc:creator>sonic_channel</dc:creator>
+<dc:date>2016-10-14T19:25:58+09:00</dc:date>
+<dc:subject>「SONIC CHANNEL」</dc:subject>
+<content:encoded><![CDATA[みなさんこんにちは<br>
+<img src="https://common.blogimg.jp/emoji/109874.gif" width="20" height="20" />ソニックチャンネル スタッフです★<br>
+<br>
+カレンダー登場キャラ当てクイズです☆<br>
+このクイズは「ソニックチャンネル」で毎月配布されるカレンダーに登場するキャラクターを当てるクイズです！ <br>
+<br>
+次の月に登場するキャラクターを表す絵を見て、どのキャラクターが登場するかコメントに答えてね。 <br>
+<br>
+<div align="center"><img src="http://livedoor.blogimg.jp/sonic_channel/imgs/5/3/536ce462.jpg" width="440" height="200" border="0" alt="クイズ" hspace="5" class="pict"  /></div><br>
+11月のカレンダーに登場するキャラクターは一体誰でしょう？どんな装飾物やシーンが描かれているのかも想像してみてくださいね♪ <br>
+クイズの正解発表は10/20（木）に行います。 <br>
+<br>
+クイズの回答はコメントにて受け付けております。<br>
+お気軽に参加くださいね。<br>
+<br>
+例）<br>
+------------------------------------------------ <br>
+・仮装してハロウィンを楽しむシルバー<br>
+------------------------------------------------ <br>
+<br>
+他の方の書き込みがヒントになってしまうのを避けるため、こちらのクイズにご回答いただいたコメントのＵＰは、カレンダー更新終了後の予定といたします☆<br>
+<br>
+<br>
+<a href="http://sonic.sega.jp/SonicChannel/index.html" target="_blank" title="">ソニック公式ポータルサイト「ソニック チャンネル」</a>
+]]>
+</content:encoded>
+</item>
+
+</rdf:RDF>
