@@ -8,6 +8,20 @@
 	<subtitle>ソニック公式ポータルサイト「ソニックチャンネル」へようこそ！</subtitle>
 	<generator uri="http://www.sixapart.com/movabletype/">Movable Type Pro 7.6.0</generator>
 	<entry>
+		<title>TikTok ソニックコラボスペシャルゲームエフェクト</title>
+		<link rel="alternate" type="text/html" href="/SonicChannel/topics/event/20220111_002797/" />
+		<id>tag:ohsaki.ec2.sega.co.jp,2022:/sonic.sega.jp/SonicChannel//2.2797</id>
+		<published>2022-01-11T09:19:14Z</published>
+		<updated>2022-01-07T12:21:19Z</updated>
+		<summary> ソニックシリーズをTikTok流にアレンジした、スペシャルゲームエフェクトが2...</summary>
+		<author>
+			<name>(C)SEGA</name>
+		</author>
+			<category term="イベント" scheme="http://www.sixapart.com/ns/types#category" />
+		<content type="html" xml:lang="ja" xml:base="/SonicChannel/">
+		</content>
+	</entry>
+	<entry>
 		<title>2022年01月「Happy New Year!」</title>
 		<link rel="alternate" type="text/html" href="/SonicChannel/fanart/20211228_002795/" />
 		<id>tag:ohsaki.ec2.sega.co.jp,2021:/sonic.sega.jp/SonicChannel//2.2795</id>
@@ -63,22 +77,6 @@
 		</author>
 			<category term="かべがみ大喜利" scheme="http://www.sixapart.com/ns/types#category" />
 			<category term="スペシャル" scheme="http://www.sixapart.com/ns/types#category" />
-		<content type="html" xml:lang="ja" xml:base="/SonicChannel/">
-		</content>
-	</entry>
-	<entry>
-		<title>「ROCK &apos;N&apos; SONIC THE HEDGEHOG」グッズ</title>
-		<link rel="alternate" type="text/html" href="/SonicChannel/topics/goods/20211220_002776/" />
-		<id>tag:ohsaki.ec2.sega.co.jp,2021:/sonic.sega.jp/SonicChannel//2.2776</id>
-		<published>2021-12-20T13:48:26Z</published>
-		<updated>2021-12-20T02:50:06Z</updated>
-		<summary>ギタープレイ中のソニックの描き下ろしアートワークを使用した新グッズ、「ROCK ...</summary>
-		<author>
-			<name>(C)SEGA</name>
-		</author>
-			<category term="インフォメーション" scheme="http://www.sixapart.com/ns/types#category" />
-			<category term="グッズ" scheme="http://www.sixapart.com/ns/types#category" />
-			<category term="トピックス" scheme="http://www.sixapart.com/ns/types#category" />
 		<content type="html" xml:lang="ja" xml:base="/SonicChannel/">
 		</content>
 	</entry>
