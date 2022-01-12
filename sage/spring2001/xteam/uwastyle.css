@@ -1,0 +1,150 @@
+/* Based on a page design by Made by James Bromberger for the UWA CWIS Project */
+
+BODY { BACKGROUND: white;
+	MARGIN-TOP: 0;
+	MARGIN: 0, 0, 0, 0;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+/*	FONT-STYLE: normal; */
+/*	FONT-VARIANT: normal; */
+/*	FONT-WEIGHT: normal; */
+	FONT-SIZE: medium;
+	COLOR: black;
+/*	BACKGROUND-IMAGE: url(images/check.gif);/* url(uwaback.jpg);*/*/
+/*	BACKGROUND-REPEAT: repeat-y; */
+	BACKGROUND-POSITION: 0%,0%;
+/*	WORD-SPACING: normal; */
+/*	LETTER-SPACING: normal; */
+/*	TEXT-DECORATION: none; */
+/*	TEXT-TRANSFORM: none; */
+/*	TEXT-ALIGN: left; */
+	TEXT-INDENT: 0;*/	LINE-HEIGHT: normal; */
+	}
+.SIDE-HEADING {
+	COLOR:	green;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: small;
+	}
+A:VISITED {
+	COLOR: #666699;
+	text-decoration: none
+	}
+A:HOVER {
+	COLOR: #CBA900;
+/*	COLOR: #CC9900;*/
+	text-decoration: underline
+	}
+
+A:LINK {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	COLOR: #192F76;
+/*	COLOR: #000066;*/
+	text-decoration: underline 
+	}
+
+DL	{
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	FONT-SIZE: small;
+	}
+
+P {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	FONT-SIZE: small;
+	COLOR:	black;
+	}
+
+H1 {
+/*	LINE-HEIGHT: 150%; */
+	vertical-align: bottom;
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	COLOR: "#000066";
+	}
+
+H2 {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	LINE-HEIGHT: 110%;
+	COLOR: "#000066";
+	FONT-SIZE: medium;
+	}
+
+H3 {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	LINE-HEIGHT: 120%;
+	COLOR: "#000066";
+	}
+
+LI {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	FONT-SIZE: 12;
+	}
+
+UL {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	FONT-SIZE: small;
+	}
+
+
+#LEFT-COL {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	}
+
+#DocumentHeadingShort {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+
+	FONT-WEIGHT: bold;
+	FONT-SIZE: large;
+
+	COLOR: "#000066";
+/*	LINE-HEIGHT: 100%; */
+	}
+
+#Navlink {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	COLOR: "#000066";
+	FONT-SIZE: small;
+	}
+
+#FacultyOrGroupName {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	COLOR: "#000066";
+	FONT-SIZE: small;
+	}
+
+
+#TopOfPageLink {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	COLOR="#CC9900";
+	FONT-SIZE: x-small;
+	}
+.SMALLTABLE {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+
+	FONT-SIZE: x-small;
+	}
+
+TABLE.SMALLTABLE TD {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	FONT-SIZE: small;
+	}
+
+.ROWSHADE1 {
+	BACKGROUND-COLOR: #CCCCCC;
+	}
+.ROWSHADE2 {
+	BACKGROUND-COLOR: #DDDDDD;
+	}
+
+BLOCKQUOTE {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	FONT-SIZE: small;
+	}
+
+ADDRESS {
+	FONT-FAMILY: verdana, arial, helvetica, sans-serif;
+	TEXT-ALIGN: right;
+/*	FONT-STYLE: normal; */
+	FONT-VARIANT: normal;
+/*	FONT-WEIGHT: normal; */
+	FONT-SIZE: x-small;
+COLOR: "#000066";
+	}
+

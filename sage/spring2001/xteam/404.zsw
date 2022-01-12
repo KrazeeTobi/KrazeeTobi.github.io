@@ -1,0 +1,73 @@
+<?php
+  // One of four situations produces a 404 error.
+  if ( ! is_dir($DOCUMENT_ROOT) ) {
+
+    // 1. This is just an alias for some other site
+    $sites = file('/sites/aliases.txt');
+    list($sub,$domain) = split('\.',$SERVER_NAME, 2);
+
+    foreach ( $sites as $site ) {
+      list($oldsite,$newsite) = split("[[:space:]]+",$site);
+
+      if ( $oldsite == $domain ) {
+        header("HTTP/1.0 301 Moved Permanently");
+        header("Location: http://$sub.$newsite");
+        exit;
+      }
+    }
+
+    // 2. This site has moved
+    $sites = file('/sites/moves.txt');
+
+    foreach ( $sites as $site ) {
+      list($oldsite,$newsite) = split("[[:space:]]+",$site);
+
+      if ( $oldsite == $SERVER_NAME ) {
+        include 'moved.php';
+        exit;
+      }
+    }
+
+  }
+
+  if ( $REQUEST_URI == '/' ) {
+    // 3. There is no site yet
+    echo <<<END
+<head><title>Coming Soon!</title></head><body>
+<table border="0" width="100%" height="100%"><tr>
+<td width="100%" align=center><BIG>
+  <B>$SERVER_NAME</B><P>hahahaComing soon to a browser near you
+</BIG></td></tr></table>
+</body>
+END;
+    exit;
+  }
+
+// 4. This is just a normal 404
+header("HTTP/1.0 404 Not Found");
+echo "<TITLE>404 - File not found</TITLE>\n",
+     "<BODY BGCOLOR=FFFFFF>\n";
+virtual("/cgi-bin/add-ad.pl");
+echo "<BR>hahahaThe file you requested, $REQUEST_URI, does not exist.<P>\n";
+
+if ( ereg("^http://$HTTP_HOST(/.*)", $HTTP_REFERER, $paths) ) {
+  $REFERER_PATH = $paths[0];
+  echo  "hahahaThe file has probably been moved to a new location.\n",
+        "Please inform the webmaster that the link to\n",
+        "$REQUEST_URI on $REFERER_PATH is no longer valid.<P>\n",
+        "<A HREF=\"/\">Return home</A>\n";
+}
+elseif ( ereg("^http://", $HTTP_REFERER) ) {
+  echo  "hahahaThe file has probably been moved to a new location.\n",
+        "Please inform the webmaster in charge of $HTTP_REFERER\n",
+        "that their link to $REQUEST_URI is no longer valid and should\n",
+        "be updated.  In the mean time, you should be able to find the\n",
+        "file by going through the\n",
+        "<A HREF=\"/\">main page</A> of this site.";
+}
+else {
+  echo  "hahahaPlease verify that you have entered the correct URL and ",
+        "try again or find it through the\n",
+        "<A HREF=\"/\">main page</A> of this site.";
+}
+?>
