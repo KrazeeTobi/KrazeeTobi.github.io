@@ -1,0 +1,41 @@
+SONIC3D
+b_flickie_eps.jpg
+
+SONICJAM
+jamop.gif (?)
+
+SONICADV
+chao/img/chaoshot1009.jpg
+dload/dt_withchao_1024.lzh (contents show up but they cannot be extracted)
+dload/advmov1009.mpg
+dload/cf1_amy.mpg
+dload/cf1_big.mpg
+dload/cf1_e102.mpg
+dload/cf1_egg.mpg
+dload/cf1_knuck.mpg
+dload/cf1_sonic.mpg
+dload/cf1_tails.mpg
+info/img0716/sonic1280.zip
+info/img0716/foruma0.gif (?)
+info/img0821/nan4_2.jpg
+info/img1225/HATSU01.jpg
+info/img1225/HATSU04.jpg
+info/sndfile/theme0817.mp3 (?)
+shot/ic04.jpg
+shot/advss/officed068.jpg
+sndfile/graphic/back_cd1.jpg
+sndfile/graphic/back_cd2.jpg
+sndfile/graphic/back_dj.jpg (?)
+sndfile/graphic/cd_1.jpg
+sndfile/graphic/lyrics_3.jpg
+sndfile/graphic/top_lyrc.jpg
+sndfile/graphic/top_mcd.jpg
+sndfile/graphic/top_snd.jpg
+sndfile/jacket/rare_11.jpg
+sndfile/jacket/rare_14.jpg
+sndfile/jacket/rare_15.jpg
+sndfile/jacket/rare_16.jpg
+sndfile/jacket/rare_18.jpg
+
+SONICADV2
+mov/adv2_trailer_sample.mpg
