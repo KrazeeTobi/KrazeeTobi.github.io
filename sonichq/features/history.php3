@@ -1,8 +1,9 @@
 <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
 <html>
 <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-   <title>Sonic Internet History</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Sonic Internet History</title>
+<LINK REL="SHORTCUT ICON" HREF="favicon.ico">
 <style type="text/css">
 <!-- a:hover {text-decoration: underline}
 A{text-decoration:none} -->
@@ -18,19 +19,19 @@ document.write('<link rel=stylesheet href=/sonichq/css/' + theme + '.css type="t
 </noscript>
 </head>
 
-<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
+<body text="#000000" bgcolor="white" link=3366ff vlink=3366ff background="/sonichq/images/backgrounds/TailsGrayBG.gif" bgproperties="fixed">
 
 <br>
 
 <center>
-<IFRAME SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO"
-MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
-<SCRIPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top&JS=Y&TARGET=_blank">
-</SCRIPT>
+<IFRAME SRC="https://web.archive.org/20020115000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top-nopop&TARGET=_blank" HEIGHT="60" WIDTH="468" SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
+<SCRIPT LANGUAGE="JavaScript">document.write('<SCR'+'IPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20020115000000/http://ads1.ad-flow.com/?DC=ztnet-ron-top-nopop&JS=Y&TARGET=_blank"></SCR'+'IPT>');</SCRIPT>
 <NOSCRIPT>
-<A HREF="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top" TARGET="_blank" HEIGHT="60" WIDTH="468"><IMG SRC="https://web.archive.org/20011101000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y"></A>
+<A HREF="https://web.archive.org/20020115000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-top-nopop" TARGET="_blank"><IMG SRC="https://web.archive.org/20020115000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-top&SC=Y" HEIGHT="60" WIDTH="468"></A>
 </NOSCRIPT>
 </IFRAME>
+<script language="javascript">whdAffiliate=79</script>
+<script language="javascript" src="https://web.archive.org/20020115000000/http://www.webhitsdirect.com/whd.js"></script>
 </center>
 
 <p><span class=pathlinks><table class=glow>
@@ -63,7 +64,7 @@ document.write(titlepic)
 <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100% class=maintable><tr>
 
 <td VALIGN=TOP WIDTH="70%" bgcolor=ffffff class=itemtable>
-<font face=Arial size=-1 color=black>
+<font face=Arial size=2 class=itemtable>
 
 <!sections>
 <div class=titlebar><table class=glow>
@@ -75,9 +76,9 @@ Below is the hit count records set by Sonic page, the first 3 are not sure bets,
 <p>First Sonic page to hit 1,000 - <a href="/ratsonic/sonic/">RAT.ORG</a><br>
 First Sonic page to hit 10,000 - <a href="/ratsonic/sonic/">RAT.ORG</a><br> 
 First Sonic page to hit 20,000 - <a href="/ratsonic/sonic/">RAT.ORG</a><br> 
-First Sonic page to hit 30,000 - <a href="https://web.archive.org/20011101000000/http://www.teamartail.com">Artail Productions/Team Artail</a><br> 
-First Sonic page to hit 40,000 - <a href="https://web.archive.org/20011101000000/http://www.teamartail.com">Artail Productions/Team Artail</a><br>
-First Sonic page to hit 50,000 - <a href="https://web.archive.org/20011101000000/http://www.teamartail.com">Artail Productions/Team Artail</a><br>
+First Sonic page to hit 30,000 - <a href="https://web.archive.org/20020115000000/http://www.teamartail.com">Artail Productions/Team Artail</a><br> 
+First Sonic page to hit 40,000 - <a href="https://web.archive.org/20020115000000/http://www.teamartail.com">Artail Productions/Team Artail</a><br>
+First Sonic page to hit 50,000 - <a href="https://web.archive.org/20020115000000/http://www.teamartail.com">Artail Productions/Team Artail</a><br>
 First Sonic page to hit 60,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
 First Sonic page to hit 70,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
 First Sonic page to hit 80,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
@@ -94,7 +95,7 @@ First Sonic page to hit 180,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
 First Sonic page to hit 190,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
 First Sonic page to hit 200,000 - <a href="/sonichq/main.htm">Sonic HQ</a><br>
 
-<p>Honorable mention - <a href="https://web.archive.org/20011101000000/http://kedziek.simplenet.com/">The Sonic Foundation</a>, this page has tens of hits, just didn't break any records.<p>
+<p>Honorable mention - <a href="https://web.archive.org/20020115000000/http://kedziek.simplenet.com/">The Sonic Foundation</a>, this page has tens of hits, just didn't break any records.<p>
 </div><div class=titlebar><table class=glow>
 Timeline - updated 7-10-99
 </table></div>
@@ -155,6 +156,14 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 <center><u>Sonic Internet History</u></center>
 
 <p>In this page, you'll find pages that just can't/won't fit on the other pages. We have more sections planned, so stay tuned.
+<p><center><IFRAME SRC="https://web.archive.org/20020115000000/http://ads1.ad-flow.com/?DC=ztnet-ron-rst&TARGET=_blank" HEIGHT="125" WIDTH="125" SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" VSPACE="0" HSPACE="0">
+<SCRIPT LANGUAGE="JavaScript">document.write('<SCR'+'IPT LANGUAGE="JavaScript" SRC="https://web.archive.org/20020115000000/http://ads1.ad-flow.com/?DC=ztnet-ron-rst&JS=Y&TARGET=_blank"></SCR'+'IPT>');</SCRIPT>
+<NOSCRIPT>
+<A HREF="https://web.archive.org/20020115000000/http://ads1.ad-flow.com/?SHT=ztnet-ron-rst" TARGET="_blank"><IMG SRC="https://web.archive.org/20020115000000/http://ads1.ad-flow.com/?SIT=ztnet-ron-rst" HEIGHT="125" WIDTH="125"></A>
+</NOSCRIPT>
+</IFRAME>
+</center>
+
 </font></td></tr>
 </table>
 <!end main table middle>
@@ -162,7 +171,7 @@ document.write('<center>MIDI: ' + caption + '<br><a href="#" onClick="MidiPlayer
 <!main table bottom>
 <table border=0 cellspacing=0 cellpadding=0 width=100% class=maintable><tr>
 <td><img SRC="/sonichq/bottomleft.gif" BORDER=0 height=20></td>
-<td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2000 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
+<td width=99% bgcolor=000000><font color="white" size=-3 face="arial"><center>Page is ©1996-2002 Sonic HQ.  Sonic & Co. are © Sega.</center></font></td>
 <td><img SRC="/sonichq/bottomright.gif" BORDER=0 height=20></td>
 </tr></table>
 <!end main table bottom>
