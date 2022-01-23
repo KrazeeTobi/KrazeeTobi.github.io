@@ -13,11 +13,10 @@ info/img0821/nan4_2.jpg
 info/img1225/HATSU01.jpg
 info/img1225/HATSU04.jpg
 info/sndfile/theme0817.mp3 (?)
-sndfile/graphic/cd_1.jpg
-sndfile/graphic/top_lyrc.jpg
-sndfile/graphic/top_mcd.jpg
-sndfile/graphic/top_snd.jpg
-sndfile/jacket/rare_14.jpg
+snd/graphic/cd_1.jpg
+snd/graphic/top_lyrc.jpg
+snd/graphic/top_mcd.jpg
+snd/graphic/top_snd.jpg
 
 SONICADV2
 mov/adv2_trailer_sample.mpg
