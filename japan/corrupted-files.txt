@@ -9,11 +9,10 @@ chao/img/chaoshot1009.jpg
 dload/dt_withchao_1024.lzh (contents show up but they cannot be extracted)
 dload/advmov1009.mpg
 info/img0716/foruma0.gif (?)
-info/img0821/nan4_2.jpg
+info/img0821/nan4_2.jpg - 22-01-24 still corrupted, but better than it was
 info/img1225/HATSU01.jpg
 info/img1225/HATSU04.jpg
 info/sndfile/theme0817.mp3 (?)
-snd/graphic/cd_1.jpg
 snd/graphic/top_lyrc.jpg
 snd/graphic/top_mcd.jpg
 snd/graphic/top_snd.jpg
