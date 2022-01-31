@@ -1,3 +1,0 @@
-<!--
-document.write('<td ' + tablebg + '>')
-// -->
